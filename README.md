@@ -1,6 +1,6 @@
 # ZURB Template for FM Responsive Redesign
 
-[![devDependency Status](https://david-dm.org/zurb/foundation-zurb-template/dev-status.svg)](https://david-dm.org/zurb/foundation-zurb-template#info=devDependencies)  
+[![npm version](https://badge.fury.io/js/foundation-sites.svg)](https://badge.fury.io/js/foundation-sites) [![Bower version](https://badge.fury.io/bo/foundation-sites.svg)](https://badge.fury.io/bo/foundation-sites) [![devDependency Status](https://david-dm.org/zurb/foundation-sites/dev-status.svg)](https://david-dm.org/zurb/foundation-sites#info=devDependencies) 
 
 **Please open all issues with this template on the main [Foundation for Sites](https://github.com/zurb/foundation-sites/issues) repo.**
 
@@ -10,9 +10,10 @@ This is based on the official ZURB Template for use with [Foundation for Sites](
 - Sass compilation and prefixing
 - JavaScript concatenation
 - Built-in BrowserSync server
+- Style Sherpa style guide generator
 - For production builds:
   - CSS compression
-  - JavaScript compression
+  - JavaScript compression & concatenation
   - Image compression
 
 ## Installation
@@ -24,13 +25,15 @@ To use this template, your computer needs:
 
 ### Setup
 
-To manually set up the template, first download it with Git:
+To manually set up the template, first download it with Git. If you have are behind a corporate firewall and have trouble with Git, update your proxy settings:
 
 ```bash
 git clone https://github.com/SCarrero/fmzurb.git fmzurb
 ```
 
-Then open the fmzurb folder in your command line, and install the needed dependencies:
+
+
+Then open the fmzurb folder in your command line, and install the needed dependencies. If you have are behind a corporate firewall and have trouble with npm or bower, update your proxy settings:
 
 ```bash
 cd fmzurb
@@ -45,7 +48,7 @@ sudo npm install
 bower install --allow-root
 ```
 
-Finally, run `npm start` (or `sudo npm start` if you have admin restrictions) to run Gulp. Your finished site will be created in a folder called `dist`, viewable at this URL:
+Finally, run `npm start` to run Gulp. Your finished site will be created in a folder called `dist`, viewable at this URL:
 
 ```
 http://localhost:8000
