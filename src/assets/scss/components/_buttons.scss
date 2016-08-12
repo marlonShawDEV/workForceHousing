@@ -1,0 +1,67 @@
+.button {
+	border-color: transparent;
+	border-style: solid;
+	border-radius: 20px;
+	font-weight: $global-weight-bold;
+	text-transform: uppercase;
+	transition: all 0.3s ease;
+	&.large {
+		border-radius: 30px;
+		@include breakpoint(medium) {
+			font-size: rem-calc(22);
+		}
+	}
+
+	&.large, .button-group.large & {
+		border-width: 3px;
+	}
+	&.small, .button-group.small &,
+	&.tiny, .button-group.tiny & {
+		border-width: 1px;
+	}
+
+	&:hover {
+		&.primary, &.secondary {
+			background: $white;
+		}
+		&.primary {
+			border-color: $primary-color;
+			color: $primary-color;
+		}
+		&.secondary {
+			border-color: $secondary-color;
+			color: $secondary-color;
+		}
+	}
+	
+	&.hollow {
+		border-color: $white;
+		border-width: 2px;
+		color: $white;
+		&:hover {
+			border-color: $white;
+			background: $white;
+			color: $primary-color;
+		}
+		&.darken {
+			border-color: $fm-gray;
+			color: $fm-gray;
+			&:hover {
+				border-color: $fm-gray;
+				background: $fm-gray;
+				color: $white;
+			}
+		}
+	}
+
+	&.inverted {
+		background: $white;
+		color: $primary-color;
+		&:hover {
+			background: transparent;
+			border-color: $white;
+			color: $white;
+		}
+	}
+}
+ 

@@ -1,0 +1,157 @@
+.cta-block {
+	background: $white;
+	position: relative;
+	z-index: 3;
+	>div {
+		padding: 30px 20px 40px;
+	}
+	// @include breakpoint(medium) {
+	// 	height: 290px;
+	// }
+
+	&__category {
+		display: block;
+		font-size: rem-calc(14);
+		font-weight: $global-weight-bold;
+		text-transform: uppercase;
+		@include breakpoint(medium) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__img-wrapper {
+		padding: 16px 0 30px;
+		@include breakpoint(medium) {
+			padding: 25px 0 35px;
+		}
+		@include breakpoint(medium only) {
+			float: left;
+		}
+	}
+
+	h3 {
+		font-size: rem-calc(22);
+		margin-bottom: 15px;
+		@include breakpoint(medium) {
+			margin-bottom: 20px;
+		}
+		a {
+			color: $dark-gray;
+		}
+	}
+
+	p {
+		a {
+			color: $dark-gray;
+		}
+	}
+
+	&_alabaster {
+		background: $alabaster;
+	}
+	&_buttercup {
+		background: $buttercup;
+	}
+	&_cerulean {
+		background: $cerulean;
+		color: $white;
+	}
+	&_sushi {
+		background: $sushi;
+	}
+	&_celery {
+		background: $celery;
+	}
+
+	&_buttercup, &_cerulean, &_sushi, &_celery {
+		color: $white;
+		h3, p {
+			a {
+				color: $white;
+			}
+		}
+	}
+
+	&_centered {
+		> * {
+			text-align: center;
+		}
+		.cta-block__category {
+			text-align: left;
+		}
+	}
+
+	&_lg-title {
+		h3 {
+			font-size: rem-calc(34);
+			line-height: 1;
+			margin-top: 30px;
+			text-transform: uppercase;
+			word-break: break-word;
+		}
+	}
+
+	&_xlg-thin-title {
+		h3 {
+			font-size: rem-calc(32);
+			font-weight: $global-weight-light;
+			line-height: 1.2;
+			margin-bottom: 33px;
+			@include breakpoint(large) {
+				font-size: rem-calc(45);
+			}
+		}
+	}
+
+	&_tall {
+		@include breakpoint(medium) {
+			>div {
+				padding-top: 20px;
+			}
+			.button.hollow {
+				padding-right: 1.5em;
+				padding-left: 1.5em;
+			}
+		}
+	}
+
+	&.no-desc-mobile {
+		p {
+			display: none;
+			@include breakpoint(medium) {
+				display: block;
+			}
+		}
+	}
+
+}
+
+.home-grid.row.collapse {
+	@include breakpoint(small only) {
+		margin: 0 -10px;
+	}
+	@include breakpoint(large) {
+		display: table;
+		width: 100%;
+		>div {
+			display: table-cell;
+			float: none;
+			vertical-align: bottom;
+		}
+	}
+}
+
+.grid__top {
+	@include breakpoint(medium) {
+		background: $alabaster;
+	}
+}
+
+.grid__bottom {
+	@include breakpoint(medium) {
+		background: $sushi;
+	}
+}
+
+
+

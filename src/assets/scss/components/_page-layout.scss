@@ -1,0 +1,70 @@
+.page-buffer {
+	padding: 0 20px;
+}
+
+.two-column-layout {
+	>.page-buffer {
+		@include breakpoint(small only) {
+			padding: 0; 
+		}
+	}
+
+	main {
+		>.page-buffer {
+			@include breakpoint(medium) {
+				padding: 0;
+			}
+		}
+	}
+
+	aside {
+		position: relative;
+		z-index: 2;
+		&.columns {
+			@include breakpoint(small only) {
+				padding: 0;
+			}
+		}
+		
+		.page-buffer {
+			margin: 0;
+			padding: 0 30px;
+		}
+	}
+
+	&_interior {
+		aside {
+			@include breakpoint(medium) {
+				margin-top: -60px;
+			}
+		}
+	}
+}
+
+main {
+	font-weight: $global-weight-light;
+	padding: 50px 0;
+	h2 {
+		font-size: rem-calc(22);
+		margin: 2rem 0 1rem;
+	}
+
+	.button-group {
+		margin: 2rem 0;
+	}
+
+	figure {
+		margin: 2rem 0;
+		img {
+			margin: 0 0 1rem;
+		}
+		figcaption {
+			font-size: rem-calc(14);
+			@include breakpoint(medium) {
+				font-size: rem-calc(12);
+			}
+		}
+	}
+}
+
+

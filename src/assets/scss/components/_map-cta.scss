@@ -1,0 +1,22 @@
+.map-cta {
+	background: url('/images/homepage/map-bg-mobile.jpg') no-repeat center;
+	background-size: cover;
+	padding: 90px 0 85px;
+	text-align: center;
+	@include breakpoint(medium) {
+		background-image: url('/images/homepage/map-bg-desktop.jpg');
+		padding: 340px 0 415px;
+	}
+	h2 {
+		font-size: rem-calc(32);
+		font-weight: $global-weight-light;
+		margin-bottom: 2rem;
+		@include breakpoint(medium) {
+			font-size: rem-calc(48);
+		}
+		span {
+			color: $niagara;
+			font-weight: $global-weight-medium;
+		}
+	}
+}

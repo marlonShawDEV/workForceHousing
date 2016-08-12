@@ -1,0 +1,36 @@
+// custom styles for anchors
+/// secured anchor links display a padlock icon
+.secured {
+  position:relative;
+  &::after {
+    content: "";
+    display:inline-block;
+    height: 1rem; 
+    width: 1rem;
+    background: transparent url("/images/linkmarker_sprite.png") no-repeat 1px -35px;
+  }
+}
+
+// forward links include a forward angle
+a.forward {
+  &::after {
+    content: ">";
+    padding-left: .5em;
+  }
+}
+
+// anchor states for the item and the marker should have identical styles
+a.forward, 
+a.forward::after { 
+  color: $blaze; 
+  &:hover,
+  &:focus {
+    color: scale-color($blaze, $lightness: -10%);    
+    @if $anchor-text-decoration-hover != $anchor-text-decoration {
+      text-decoration: $anchor-text-decoration-hover;
+    }
+  }
+  :active & {
+    color: scale-color($blaze, $lightness: -20%);
+  }
+}

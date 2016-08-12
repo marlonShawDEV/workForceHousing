@@ -1,0 +1,16 @@
+.avatar {
+	display: table;
+	margin: 2.5em 0 0;
+	>div {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	img {
+		border-radius: 50%;
+		margin: 0 10px 0 0;
+	}
+	figcaption {
+		font-size: rem-calc(14);
+		line-height: 1.2;
+	}
+}

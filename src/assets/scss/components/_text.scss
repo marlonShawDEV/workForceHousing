@@ -1,0 +1,17 @@
+.feature-txt {
+	font-size: rem-calc(18);
+	font-weight: $global-weight-medium;
+	&_bolder {
+		font-weight: $global-weight-bold;
+	}
+}
+
+.callout-txt {
+	color: $primary-color;
+	font-size: rem-calc(30);
+	line-height: 1.2;
+	margin: 2rem 0;
+	@include breakpoint(medium) {
+		font-size: rem-calc(48);
+	}
+}

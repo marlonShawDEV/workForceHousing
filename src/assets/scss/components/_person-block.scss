@@ -1,0 +1,27 @@
+/// person-block
+.person-block {   
+  @for $i from 1 through 4 {
+    div:nth-child(#{$i}) > figure {
+      border-bottom: 3px solid adjust-hue($fm-green, -(18deg/4 * $i)); 
+    }
+  }  
+  figure {
+    margin: 0 0 $global-margin;       
+  } 
+  figcaption { 
+    text-align: center; 
+    margin: $global-margin $global-margin 0;
+    min-height: rem-calc(120px);
+  }
+  [itemprop=name] {    
+    display: block;
+    font-size: rem-calc(22px);
+    font-weight: $global-weight-medium; 
+  }
+  [itemprop=jobTitle] {    
+    display: block;
+    font-size: rem-calc(14px);
+    font-weight: $global-weight-light;
+    color: $fm-gray;
+  }
+}

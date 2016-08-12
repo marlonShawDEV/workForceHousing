@@ -1,0 +1,51 @@
+/// Adds styles for the active accordion item. 
+@mixin accordion-item-active {
+  &.is-active .accordion-title {
+    background-color:$accordion-content-background;
+    color: $primary-color;
+  }
+}
+
+/// Change +/- to up down carets item. 
+@mixin accordion-pointers {  
+}
+
+
+///styles for .accordion-pointer
+.accordion-pointer {
+  box-shadow: 0px 1px 3px scale-color($accordion-background, $lightness: -5%);
+  @include accordion-container;
+  
+  .accordion-item {
+    @include accordion-item-active;
+    &.is-active > .accordion-title::before {
+      content: '\276F';
+      transform: rotate(90deg);
+    }    
+  }
+
+  .accordion-title {
+    @include accordion-title; 
+    color: $dark-gray;    
+    text-transform: uppercase;
+    font-size: 1rem;
+    &::before {
+      content: '\276E';
+      transform: rotate(90deg);
+    }  
+    :last-child:not(.is-active) > & {
+      border-bottom: 0;
+    }
+    &:hover,
+    &:focus {
+      color: scale-color($accordion-item-color, $lightness: -50%);
+    }
+  }
+  .accordion-content {
+    @include accordion-content;
+    border-top: 0;
+    
+  }
+}
+
+

@@ -1,0 +1,206 @@
+/// Default margin of the tab bar.
+/// @type Number
+$tab-margin: 0 !default;
+
+/// Default background color of a tab bar.
+/// @type Color
+$tab-background: $light-gray !default;
+
+/// active background color of a tab bar.
+/// @type Color
+$tab-background-active: $light-gray !default;
+
+/// Font size of tab items.
+/// @type Number
+$tab-item-font-size: rem-calc(16) !default;
+
+/// Default background color on hover for items in a Menu.
+$tab-item-background-hover: $white !default;
+
+/// Default padding of a tab item.
+/// @type Number
+$tab-item-padding: 1.25rem 1.5rem !default;
+
+/// Maximum number of `expand-n` classes to include in the CSS.
+/// @type Number
+$tab-expand-max: 6 !default;
+
+/// Default background color of tab content.
+/// @type Color
+$tab-content-background: $white !default;
+
+/// Default border color of tab content.
+/// @type Color
+$tab-content-border: $light-gray !default;
+
+/// Default padding for tab content.
+/// @type Number | List
+$tab-content-padding: 1rem !default;
+
+/// Default text color of tab item.
+/// @type Color
+$tab-item-color: scale-color($medium-gray, $lightness: 26%);
+
+/// Default text color of active tab item.
+/// @type Color
+$tab-item-hover-color: $medium-gray !default;
+
+/// Default text color of active tab item.
+/// @type Color
+$tab-item-active-color: $primary-color !default;
+
+// Sizes child elements so that `$n` number of items appear on each row.
+///
+/// @param {Number} $n - Number of elements to display per row.
+@mixin block-tabs($n) {
+  width: percentage(1/$n);
+}
+
+/// Adds styles for a tab container. Apply this to a `<ul>`.
+@mixin tabs-container {
+  @include clearfix;
+  margin: $tab-margin;
+  list-style-type: none;
+  background: $tab-background;
+  border: 1px solid $tab-content-border;
+}
+
+/// Augments a tab container to have vertical tabs. Use this in conjunction with `tabs-container()`.
+@mixin tabs-container-vertical {
+  > li {
+    width: auto;
+    float: none;
+    display: block; 
+    border-bottom-width: 0;  
+    border-right: 2px solid $tab-background;   
+    &:hover,
+    &:focus {
+      border-color: $tab-item-hover-color;
+    }
+    &.is-active{
+      border-color: $tab-item-active-color;
+    } 
+          
+    > a { 
+      text-align: left;      
+    }
+    
+  }
+}
+
+/// Adds styles for the links within a tab container. Apply this to the `<li>` elements inside a tab container.
+@mixin tabs-title {
+  border-bottom: 2px solid $tab-background;    
+  float: #{$global-left};
+  > a {
+    display: block;
+    padding: $tab-item-padding;
+    line-height: 1;
+    font-size: 1rem;
+    text-transform: uppercase;
+    background: $tab-background;
+    color: $tab-item-color;
+    text-align: center; 
+
+    &:hover,
+    &:focus {
+      background: scale-color($tab-background, $lightness: -5%);
+      color: $tab-item-hover-color;
+    }
+
+    &[aria-selected='true'] {
+      background: $tab-background-active;
+      color: $tab-item-active-color;
+    }
+  }
+  &:hover,
+  &:focus {
+    border-color: $tab-item-hover-color;
+  }
+  &.is-active{
+    border-color: $tab-item-active-color;
+  }
+   
+}
+
+/// Adds styles for the wrapper that surrounds a tab group's content panes.
+@mixin tabs-content {
+  background: $tab-content-background;
+  transition: all 0.5s ease;  
+}
+
+/// Augments a tab content container to have a vertical style, by shifting the border around. Use this in conjunction with `tabs-content()`.
+@mixin tabs-content-vertical {  
+  border-top: 1px solid $tab-content-border;
+  .tabs-panel {
+    border-top-width: 1px;
+  }
+}
+
+/// Adds styles for an individual tab content panel within the tab content container.
+@mixin tabs-panel {
+  display: none;
+  padding: $tab-content-padding;
+
+  &.is-active {
+    display: block;
+  }
+}
+
+
+.tabs {
+  @include tabs-container;
+  border-width: 0;
+  &.stacked-for-small {
+    @include breakpoint(small down) { 
+      @include tabs-container-vertical;
+    }
+  }
+  &.stacked-for-medium {
+    @include breakpoint(medium down) { 
+      @include tabs-container-vertical;
+    }
+  } 
+}
+
+// Vertical
+.tabs.vertical {
+  @include tabs-container-vertical;
+}
+
+// Simple
+.tabs.simple {
+  > li > a {
+    padding: 0;
+
+    &:hover {
+      background: transparent;
+    }
+  }
+}
+
+.tabs-title {
+  @include tabs-title;
+  // Block tabs
+  @for $i from 1 through $tab-expand-max {
+    .small-up-#{$i} &, .medium-up-#{$i} & {
+      @include block-tabs($i);
+    }      
+  }
+}
+
+.tabs-content {
+  @include tabs-content;
+}
+
+.tabs-content.vertical {
+  @include tabs-content-vertical;
+}
+
+.tabs-panel {
+  @include tabs-panel;
+  border-top: 0;
+}
+.tab-wrapper {
+  box-shadow: 0px 1px 3px scale-color($tab-background, $lightness: -5%);
+}

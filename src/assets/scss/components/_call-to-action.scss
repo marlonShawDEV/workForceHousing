@@ -1,0 +1,157 @@
+.page-cta {
+	background: $primary-color;
+	color: $white;
+	padding: 55px 0 40px;
+	position: relative;
+	@include breakpoint(large) {
+		padding: 75px 0 70px;
+	}
+
+	&_niagara {
+		background: $niagara;
+	}
+	&_buttercup {
+		background: $buttercup;
+	}
+
+	&__overlay {
+		background: $primary-color;
+		opacity: 0.8;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+
+	&__cat {
+		font-size: rem-calc(14);
+		font-weight: $global-weight-bold;
+		margin-bottom: 0.5rem;
+		text-transform: uppercase;
+	}
+
+	h3 {
+		font-size: rem-calc(32);
+		font-weight: $global-weight-medium;
+		line-height: 1.2;
+		@include breakpoint(large) {
+			font-size: rem-calc(52);
+		}
+	}
+
+	p {
+		font-size: rem-calc(22);
+		font-weight: $global-weight-light;
+		margin: 1.5em 0;
+		@include breakpoint(large) {
+			margin-bottom: 0;
+		}
+	}
+
+	&__wrapper {
+		position: relative;
+		z-index: 2;
+		@include breakpoint(large) {
+			display: table;
+			width: 100%;
+		}
+	}
+
+	&__txt {
+		@include breakpoint(large) {
+			@include grid-col-size(7);
+			display: table-cell;
+			float: none;
+		}
+	}
+
+	&__btn {
+		text-align: center;
+		@include breakpoint(large) {
+			@include grid-col-size(5);
+			display: table-cell;
+			float: none !important;
+			text-align: right;
+			vertical-align: middle;
+		}
+
+		input {
+			@include breakpoint(large) {
+				float: right;
+				max-width: 304px;
+			}
+		}
+
+		.expanded {
+			@include breakpoint(medium) {
+				display: inline-block;
+				width: auto;
+			}
+		}
+
+		.input-btn-respond {
+			@include breakpoint(small down) {
+				display: block;
+				> div {
+					display: block;
+					&:last-child {
+						white-space: normal;
+					}
+				}
+			}
+			@include breakpoint(medium) {
+				>div:first-child {
+					padding-right: 20px;
+				}
+			}
+		}
+	}
+
+	&_sidebar {
+		padding: 30px 0 20px;
+		h3 {
+			font-size: rem-calc(32);
+			margin-bottom: .5rem;
+		}
+		p {
+			font-size: rem-calc(16);
+			margin-top: 0;
+		}
+		.page-cta__wrapper {
+			display: block;
+			@include breakpoint(large) {
+				max-width: 305px;
+			}
+		}
+		.page-cta__txt,
+		.page-cta__btn {
+			@include grid-col-size(12);
+			display: block;
+			text-align: left;
+		}
+		.page-cta__btn {
+			margin-top: 2rem;
+		}
+		.input-btn-respond {
+			display: block;
+			>div {
+				display: block;
+				white-space: normal;
+			}
+			input {
+				float: none;
+			}
+		}
+	}
+
+	&_feature {
+		background: url('/images/feature-bg.jpg') no-repeat center;
+		background-size: cover;
+		min-height: 383px;
+		h3 {
+			font-weight: $global-weight-bold;
+		}
+	}
+}
