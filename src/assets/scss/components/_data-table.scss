@@ -34,9 +34,13 @@ table {
     background: $table-foot-background;
     tr {
       background: transparent;
+      color: $body-font-color;
     }
     th {
       text-align: #{$global-left};
+    }
+    td {
+      font-weight: inherit;
     }
   }
 }
