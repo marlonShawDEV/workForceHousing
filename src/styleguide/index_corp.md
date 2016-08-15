@@ -1269,40 +1269,60 @@ Form elements are styled based on their type attribute rather than a class. Inpu
 
 
 
+# Thumbnail
+
+If you're going to use an image as an anchor, we've got you covered.  The `.thumbnail` class can be applied directly to an `<img>` element, but for best accessibility, apply it to the `<a>` that wraps the image to style the image on hover and focus.    
+
+```html
+<a class="thumbnail" href="#"><img alt="photo of David Brickman" src="/images/exec_david_brickman.jpg"></a>
+```
+
+<div class="row">
+  <div class="small-6 medium-3 columns">
+    <a class="thumbnail" href="#"><img alt="photo of David Brickman" src="/images/exec_david_brickman.jpg"></a>
+  </div>
+  <div class="small-6 medium-9 columns">    
+  </div>
+</div>
+
+
+
+
 # Media Objects  
 
-<p class="lead">Meida Objects are used to associate a blurb with a media element, such as an iamge or video.</p>
+<p class="lead">Media objects are super useful components for displaying an item, usually an image, alongside some content, usually text. You could put lists, grids, or even other media objects inside.</p>
 
 ## Basics
 
-A media object is a container with the class `.media-object`, and two or three sections with the class `.media-object-section`.  Each section aligns to the top by default, but individual sections can also be middle- or bottom-aligned by adding a `.middle` or `.bottom` class to `.media-object-section`.
+A media object is a container with the class `.media-object`, and two or three sections with the class `.media-object-section`.  Each section aligns to the top by default, but individual sections can also be middle- or bottom-aligned by adding a `.middle` or `.bottom` class to `.media-object-section`.  If you nest a media object into the media-object-section section, it will indent to be inside the parent media object. 
 
+If you are going to make the image a link,  [add the `.thumbnail` class](#thumbnail) to style the image on hover and focus. 
 
 ```html_example
-<div class="media-object">
-  <div class="media-object-section">
-    <div class="thumbnail">
-      <img src= "http://www.freddiemac.com/images/blog/sean_becketti_md.jpg" alt="sean Becketti">
+<div class="large-9 large-centered columns">
+  <div class="media-object">
+    <div class="media-object-section">
+      <a class="thumbnail" href="#"><img src= "http://www.freddiemac.com/images/blog/sean_becketti_md.jpg" alt="sean Becketti"></a>
+    </div>
+    <div class="media-object-section">
+      <h4><a href="#">Are Baby Boomers the Key to the Single-Family Market?</a></h4>
+      <p>One of the most important keys to today's single-family housing market is homeowners who were born before the first-ever episode of Star Trek aired in the 1960s. Today, more than 50 years later, Baby Boomers and other homeowners over the age of 55 control almost two-thirds of the nation's home equity.</p>
     </div>
   </div>
-  <div class="media-object-section">
-    <h4>Are Baby Boomers the Key to the Single-Family Market?</h4>
-    <p>One of the most important keys to today's single-family housing market is homeowners who were born before the first-ever episode of Star Trek aired in the 1960s. Today, more than 50 years later, Baby Boomers and other homeowners over the age of 55 control almost two-thirds of the nation's home equity.</p>
-  </div>
-</div>
+</div>  
 ```
 
 ## Stack on Small Options
 
 By adding the `.stack-for-small` class, you can make your media object responsive and stack the media item and the associated blurb. Images will get a width of 100%, but this can be changed.
 
+If you are going to make the image a link,  [add the `.thumbnail` class](#thumbnail) to style the image on hover and focus. 
+
 ```html_example
-<div class="large-10 large-centered medium-12 columns">
+<div class="large-9 large-centered columns">
   <div class="media-object stack-for-small">
     <div class="media-object-section">
-      <div class="thumbnail">
-        <img src="http://www.freddiemac.com/blog/images/homesteps.jpg" alt="HomeSteps - house sold sign">
-      </div>
+      <a class="thumbnail" href="http://www.freddiemac.com/blog/homeownership/20160630_home_searches_made_easier.html"><img src="http://www.freddiemac.com/blog/images/homesteps.jpg" alt="HomeSteps - house sold sign"></a>
     </div>
     <div class="media-object-section">
       <h4>Home Searches Made Easier</h4>
@@ -1311,9 +1331,7 @@ By adding the `.stack-for-small` class, you can make your media object responsiv
   </div>
   <div class="media-object stack-for-small">
     <div class="media-object-section">
-      <div class="thumbnail">
-        <img src="http://www.freddiemac.com/blog/images/fm_blog_usda_returns.jpg" alt="Harp - act now!">
-      </div>
+      <a class="thumbnail" href="http://www.freddiemac.com/blog/homeownership/20160628_harp_get_the_facts.html"><img src="http://www.freddiemac.com/blog/images/fm_blog_usda_returns.jpg" alt="Harp - act now!"></a>
     </div>
     <div class="media-object-section">
       <h4>HARP: Get the Facts and Act Fast</h4>
@@ -1501,7 +1519,7 @@ Once you put it all together, here's what you get for vertical tabs!
       </div>
       <div class="tabs-panel" id="panel3vB">
         <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
-        <img class="thumbnail" src= "http://www.freddiemac.com/images/blog/sean_becketti_md.jpg" alt="sean Becketti">
+        <img src= "http://www.freddiemac.com/images/blog/sean_becketti_md.jpg" alt="sean Becketti">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <div class="clearfix"></div>
@@ -1578,56 +1596,6 @@ Once you put it all together, here's what you get for a stacked table with hover
   </tbody>
 </table>
 ```
-
-
-
-# Float Classes
-
-<p class="lead">Foundation includes a handful of helpful float classes to add common positioning behaviors to elements.</p>
-
----
-
-## Float Left/Right
-
-You can change the float behavior of an element by adding the `.float-left` or `.float-right` classes to an element. To clear floats, add the class `.clearfix` to the parent element.
-
-
-```html_example
-<div class="callout clearfix">
-  <a class="button float-left">Left</a>
-  <a class="button float-right">Right</a>
-</div>
-```
-
----
-
-## Float Center
-
-Okay, it's not *really* a float, but you can add the `.float-center` class to an element to engage the automatic margin centering trick. Note that this will only work on elements with an absolute width, which means not a percentage or `auto` width.
-
-```html_example
-<img src="http://www.freddiemac.com/blog/images/fm_blog_usda_returns.jpg" alt="Harp - act now!" class="float-center">
-```
-
-
-
-# Twitter 
-
----
-
-## Twitter Basic
-```html_example
-<div class="twitter-block">
-  <div class="twitter-block__overlay"></div>
-  <div class="twitter-block__txt">
-    <h4>Diana Olick</h4>
-    <h5><a href="#">@dianaolick</a></h5>
-    <p>30 yr fixed rate #mortgage averaged 3.66% for week ending June 2, up from 3.64% previous week, but down from 3.87% one yr ago <strong><a href="#">@FreddieMac</a></strong></p>
-  </div>
-</div>
-```
-
----
 
 ## Scrolling Table
 
@@ -1738,11 +1706,59 @@ Got a lot of tabular data? Add the class `.scroll` to the table itself to enable
 </table>
 ```
 
+
+
+# Float Classes
+
+<p class="lead">Foundation includes a handful of helpful float classes to add common positioning behaviors to elements.</p>
+
+---
+
+## Float Left/Right
+
+You can change the float behavior of an element by adding the `.float-left` or `.float-right` classes to an element. To clear floats, add the class `.clearfix` to the parent element.
+
+
+```html_example
+<div class="callout clearfix">
+  <a class="button float-left">Left</a>
+  <a class="button float-right">Right</a>
+</div>
+```
+
+---
+
+## Float Center
+
+Okay, it's not *really* a float, but you can add the `.float-center` class to an element to engage the automatic margin centering trick. Note that this will only work on elements with an absolute width, which means not a percentage or `auto` width.
+
+```html_example
+<img src="http://www.freddiemac.com/blog/images/fm_blog_usda_returns.jpg" alt="Harp - act now!" class="float-center">
+```
+
+
+
+# Twitter 
+
+---
+
+## Twitter Basic
+```html_example
+<div class="twitter-block">
+  <div class="twitter-block__overlay"></div>
+  <div class="twitter-block__txt">
+    <h4>Diana Olick</h4>
+    <h5><a href="#">@dianaolick</a></h5>
+    <p>30 yr fixed rate #mortgage averaged 3.66% for week ending June 2, up from 3.64% previous week, but down from 3.87% one yr ago <strong><a href="#">@FreddieMac</a></strong></p>
+  </div>
+</div>
+```
+
 ---
 
 ## Twitter with Image
 ```html_example
-<div class="twitter-block twitter-block_img" style="background-image: url('/images/blog-2.jpg')">
+<div class="twitter-block twitter-block_img" style="background-image: url('/images/blog/blog-2.jpg')">
   <div class="twitter-block__overlay"></div>
   <div class="twitter-block__txt">
     <h4>Freddie Mac</h4>
@@ -1755,6 +1771,9 @@ Got a lot of tabular data? Add the class `.scroll` to the table itself to enable
 
 
 # Footer
+
+**Note:** The corporate footer will automatically be inserted via the template - do not include this code in your page. 
+
 ```html_example
 <footer>
   <div class="row page-buffer">
@@ -1763,7 +1782,6 @@ Got a lot of tabular data? Add the class `.scroll` to the table itself to enable
         <li><a href="#">Careers</a></li>
         <li><a href="#">Investor Relations</a></li>
         <li><a href="#">Vendors &amp; Suppliers</a></li>
-        <li><a href="#">Our Other Sites</a></li>
       </ul>
     </div>
     <div class="footer__bottom">
