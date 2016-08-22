@@ -1,0 +1,41 @@
+/// duplicating out this routine so we can tweak breakpoints to be less than 1px
+/// away from each other to solve issues with multiple breakpoints overlapping when zoomed in.
+///  only change made was to override value on lines 7 from (1/16) to (0.25/16) 
+
+@mixin show-for($size) {
+  $size: map-get($breakpoints, $size);
+  $size: -zf-bp-to-em($size) - (0.25 / 16);
+
+  @include breakpoint($size down) {
+    display: none !important;
+  }
+}
+
+/// duplicating out this routine so we can tweak breakpoints to be less than 1px
+/// away from each other to solve issues with multiple breakpoints overlapping when zoomed in.
+///  only changes made was to override value on lines 22 from (1/16) to (0.25/16) 
+@mixin show-for-only($size) {
+  $lower-bound-size: map-get($breakpoints, $size);
+  $upper-bound-size: -zf-map-next($breakpoints, $size);
+
+  // more often than not this will be correct, just one time round the loop it won't so set in scope here
+  $lower-bound: -zf-bp-to-em($lower-bound-size) - (0.25 / 16);
+  // test actual lower-bound-size, if 0 set it to 0em
+  @if strip-unit($lower-bound-size) == 0 {
+    $lower-bound: -zf-bp-to-em($lower-bound-size);
+  }
+
+  @if $upper-bound-size == null {
+    @media screen and (max-width: $lower-bound) {
+      display: none !important;
+    }
+  }
+  @else {
+    $upper-bound: -zf-bp-to-em($upper-bound-size);
+
+    @media screen and (max-width: $lower-bound), screen and (min-width: $upper-bound) {
+      display: none !important;
+    }
+  }
+}
+
