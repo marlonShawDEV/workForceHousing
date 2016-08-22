@@ -1,28 +1,70 @@
-<div class="top-bar">  
+<header class="top-bar" id="ribbon"  data-toggler=".expanded">  
   <div class="row page-buffer">
-    <div class="top-bar-title">
-      <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
-        <button class="menu-icon dark" type="button" data-toggle></button>
-      </span> 
-    </div>
-    <div id="responsive-menu">
-      <div class="top-bar-right">
-        <ul class="dropdown menu" data-dropdown-menu>
-          <li><a href="/corporate/index.html">FreddieMac.com</a></li>
-          <li><a href="/singlefamily/index.html">Single-Family</a></li>
-          <li><a href="/multifamily/index.html">Multifamily</a></li>
-          <li><a href="/investments/index.html">Investments</a></li>
-          <li><a href="#">Renters, Buyers, &amp; Owners</a>
-            <ul class="menu">
-              <li><a href="#">One</a></li>
-              <li><a href="#">Two</a></li>
-              <li><a href="#">Three</a></li>
-            </ul>
-          </li> 
-          <li><input type="search" placeholder="Search"></li>
-          <li><button type="button" class="button">Search</button></li>
-        </ul>        
-      </div>  
-    </div>
+    <div class="top-bar-title hide-for-large" id="top-bar-title" data-responsive-toggle="ribbon-nav" data-hide-for="large">
+      <div class="float-right">
+        <button class="menu-icon" type="button" data-toggle="ribbon" aria-label="toggle menu"></button>
+      </div>
+        <a href="/"><span>Freddie Mac Home</span><img class="mobile-logo" src="/images/fm-logo-mobile.png" alt="Freddie Mac logo"></a>
+    </div>        
+    <form action="http://search.freddiemac.com/search" method="get" accept-charset="utf-8">
+      <input type="hidden" name="entqr" value="0">
+      <input type="hidden" name="output" value="xml_no_dtd">
+      <input type="hidden" name="sort" value="date:D:L:d1">
+      <input type="hidden" name="client" value="default_frontend">
+      <input type="hidden" name="ud" value="1">
+      <input type="hidden" name="oe" value="UTF-8">
+      <input type="hidden" name="ie" value="UTF-8">
+      <input type="hidden" name="proxystylesheet" value="default_frontend">
+      <input type="hidden" name="getfields" value="description">
+      <input type="hidden" name="site" value="default_collection">    
+      <div id="ribbon-nav">
+        <div class="mobile-search hide-for-large input-group">
+          <input type="search" placeholder="Search" name="q" class="input-group-field">		
+          <div class="input-group-button">
+            <button type="submit" class="button" aria-label="submit search"></button>
+          </div>
+        </div>   
+        <nav class="top-bar-right">
+          <ul class="menu dropdown" data-responsive-menu="accordion large-dropdown">
+            <li class="show-for-large" id="desktop-corporate-home"><a href="/corporate/">Freddie Mac Home</a></li>
+            <li class="show-for-large" id="desktop-singlefamily-home"><a href="/singlefamily/">Single-Family</a></li>
+            <li class="show-for-large" id="desktop-multifamily-home"><a href="/multifamily/">Multifamily</a></li>
+            <li class="show-for-large" id="desktop-investments-home"><a href="/investments/">Investments</a></li>
+            <li class="hide-for-large"><a href="#">Our Businesses</a>
+              <ul class="menu">
+                <li><a href="/singlefamily/">Single-Family</a></li>
+                <li><a href="/multifamily/">Multifamily</a></li>
+                <li><a href="/investments/">Investments</a></li>
+              </ul>
+            </li>
+            <li class="future-drop-down"><a href="#">Renters, Buyers, &amp; Owners</a>
+              <ul class="menu">
+                <li><a href="http://myhome.freddiemac.com/"><h4>My Home by Freddie Mac<sup>&reg;</sup></h4>
+                <p class="show-for-large">Resources to help you rent, buy and own your home.</p></a>
+                </li>
+                <li><a href="https://ww3.freddiemac.com/loanlookup/"><h4>Do we own your mortgage?</h4>
+                <p class="show-for-large">Find out if Freddie Mac owns your loan using our secured lookup tool.</p></a>
+                </li>
+                <li><a href="https://www.homesteps.com/"><h4>Homes for Sale</h4>
+                <p class="show-for-large">Buy a home from HomeSteps<sup>&reg;</sup>, the real estate sales unit of Freddie Mac.</p></a>
+                </li>
+              </ul>
+            </li> 
+            <li class="show-for-large">
+              <div class="input-group">
+                <input type="search" placeholder="Search" name="q" class="input-group-field">	                
+                <div class="input-group-button">
+                  <button type="submit" class="button" aria-label="submit search"></button>
+                </div>
+              </div>  
+            </li>
+          </ul>        
+        </nav>
+      </div>        
+    </form>
   </div>
-</div>
+</header>
+
+
+
+

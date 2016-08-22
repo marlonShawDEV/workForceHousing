@@ -58,16 +58,18 @@
         display: block;
         padding: 1rem;
         margin-bottom: 1.5rem;
+        opacity: 1;
       }
     .docs-code-toggle {
-        display: block;
+        display: inline-block;
         margin-bottom: 1rem;
         font-weight: bold; 
         color: #2199e8;
-    } 
-    .docs-code-toggle:focus {
-        outline: none; 
-    }  
+    }
+    code { 
+      font-size: 0.875rem;
+      opacity: 0.6;
+    }
     </style>
   </head>
   <body>
@@ -114,7 +116,7 @@
       $ks.find('.ss-code').each(function() {
         var $code = $(this).find('pre');
 
-        $link = $('<a class="docs-code-toggle">&lt; Toggle Code Display &gt;</a>');
+        $link = $('<a class="docs-code-toggle" href="javascript:void(0);">&lt; Toggle Code Display &gt;</a>');
         $link.on('click', function() {
           $code.slideToggle(250);
         });

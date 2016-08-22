@@ -3,6 +3,8 @@
 @import 'settings_sf';
 @import 'foundation';
 @import 'motion-ui';
+@import 'components/breakpoint';
+@import 'components/visibility';
 
 @include foundation-global-styles;
 @include foundation-grid;
@@ -67,3 +69,4 @@
 @import 'components/popular-items';
 @import 'components/text';
 @import 'components/anchors';
+@import 'components/ribbon';

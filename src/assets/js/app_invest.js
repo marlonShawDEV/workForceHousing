@@ -1,19 +1,19 @@
-Foundation.Accordion.defaults.multiExpand = true;
-Foundation.Accordion.defaults.allowAllClosed = true;
-Foundation.Tabs.matchHeight = true;
+//Foundation.Accordion.defaults.multiExpand = true;
+//Foundation.Accordion.defaults.allowAllClosed = true;
+//Foundation.Tabs.matchHeight = true;
+// add highlighting to parent link in desktop nav
+$('#desktop-investments-home').addClass('active');
 $(document).foundation();
 
 function init () {
 	// call functions
-  equalHeights.init();
   adjustSidebar.init();
 
   // call functions on resize
   $(window).on('resize', function() {
-  	equalHeights.init();
   	adjustSidebar.init();
   });
 
 }  
   
-$(document).ready(init);
+//$(document).ready(init);

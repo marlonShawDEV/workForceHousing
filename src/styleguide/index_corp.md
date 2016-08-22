@@ -1901,3 +1901,70 @@ The news release lists are automated by MarketWire.
 </section>
 ```
 
+
+
+# Tooltip
+
+By default, a tooltip appears below the defined term on hover or focus, and clicking on a tooltip will leave it open until you click somewhere else. Tooltips should be short, and cannot contain HTML markup.  You can use “curly quotes” if needed. 
+
+```html_example
+<p>The <span data-tooltip aria-haspopup="true" class="has-tip" tabindex="0" title="A “scarabaeus” is an outdated 
+term for an object in the form of a scarab beetle. The scarab was a popular form of amulet in Ancient 
+Egypt.">scarabaeus</span> hung clear of any branches, and, if allowed to fall, would have fallen at our feet. </p>
+```
+
+
+
+# Visibility Classes
+
+Visibility classes let you show or hide elements based on screen size or device orientation. You can also use visibility classes to control which elements users see depending on their browsing environment.
+
+<div class="callout primary">
+  <p>There are no classes to detect touchscreen devices, as both desktop and mobile browsers inconsistently report touch support. Learn more here: <a href="http://www.stucox.com/blog/you-cant-detect-a-touchscreen/">You Can't Detect a Touchscreen</a></p>
+</div>
+
+## Show/Hide by Screen Size/Orientation
+
+There are `.show-for-xxx` and `.hide-for-xxx` visibility classes to control the visiblity of an element based on the device on which users view a page. If their browser meets the class's conditions, the element will be shown. If not, it will be hidden.
+
+```html_example
+<p>You are on a small screen or larger.</p>
+<p class="show-for-medium">You are on a medium screen or larger.</p>
+<p class="show-for-large">You are on a large screen or larger.</p>
+<p class="show-for-small-only">You are <em>definitely</em> on a small screen.</p>
+<p class="show-for-medium-only">You are <em>definitely</em> on a medium screen.</p>
+<p class="show-for-large-only">You are <em>definitely</em> on a large screen.</p>
+<p class="hide-for-medium">You are <em>not</em> on a medium screen or larger.</p>
+<p class="hide-for-large">You are <em>not</em> on a large screen or larger.</p>
+<p class="hide-for-small-only">You are <em>definitely not</em> on a small screen.</p>
+<p class="hide-for-medium-only">You are <em>definitely not</em> on a medium screen.</p>
+<p class="hide-for-large-only">You are <em>definitely not</em> on a large screen.</p>
+<p class="show-for-landscape">You are in landscape orientation.</p>
+<p class="show-for-portrait">You are in portrait orientation.</p>
+```
+
+---
+
+### Show/Hide for Screen Readers
+
+And if you really just need something hidden no matter what, there are classes for that as well. The `.hide` and `.invisible` classes respectively set `display: none` and `visibility: hidden` on an element. Note that both of these classes hide content from screen readers. 
+
+To visually hide content, while still allowing assistive technology to read it, add the class `.show-for-sr`.  To hide text from assistive technology, while still keeping it visible, add the attribute `aria-hidden="true"`. This doesn't affect how the element looks, but screen readers will skip over it.  
+
+Use the class `.show-on-focus` to hide an element, except when it has focus. Adding tabindex="0" to the target element makes if focusable.
+
+```html_example
+<p class="hide">Hidden for all users.</p>
+<p class="invisible">Not visible for all users, but still occupies space on screen.</p>
+<p class="show-for-sr">This text can only be read by a screen reader.</p>
+<p>There's a line of text above this one, you just can't see it because it is only shown to screen readers.</p>
+<p aria-hidden="true">This text can be seen, but won't be read by a screen reader.</p>
+
+<p>Click on this sentence and then hit tab to see the skip link appear while it has focus.</p>
+<p><a name="skiplink" class="show-on-focus" href="#sampleContent">Skip to Content</a></p>
+
+<div id="sampleContent" role="main" tabindex="0" style="min-height: 1rem;">
+</div>
+```
+
+---

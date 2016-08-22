@@ -74,7 +74,7 @@ $fm-green: #88BD45;
 $fm-gray: #777874;
 $body-background: $white;
 $body-font-color: $medium-gray;
-$body-font-family: 'Roboto', sans-serif;
+$body-font-family: 'Roboto', Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -309,7 +309,7 @@ $drilldown-background: $white;
 
 $dropdown-padding: 1rem;
 $dropdown-border: 1px solid $medium-gray;
-$dropdown-font-size: 1rem;
+$dropdown-font-size: .875rem;
 $dropdown-width: 300px;
 $dropdown-radius: $global-radius;
 $dropdown-sizes: (
@@ -322,10 +322,10 @@ $dropdown-sizes: (
 // -----------------
 
 $dropdownmenu-arrows: true;
-$dropdownmenu-arrow-color: $anchor-color;
-$dropdownmenu-min-width: 200px;
+$dropdownmenu-arrow-color: $blaze;
+$dropdownmenu-min-width: 340px;
 $dropdownmenu-background: $white;
-$dropdownmenu-border: 1px solid $medium-gray;
+$dropdownmenu-border: 0px;
 
 // 18. Flex Video
 // --------------
@@ -392,11 +392,11 @@ $mediaobject-image-width-stacked: 100%;
 // --------
 
 $menu-margin: 0;
-$menu-margin-nested: 1rem;
-$menu-item-padding: 0.7rem 1rem;
-$menu-item-color-active: $white;
-$menu-item-background-active: map-get($foundation-palette, primary);
-$menu-icon-spacing: 0.25rem;
+$menu-margin-nested: 0;
+$menu-item-padding: 0.65rem 1.31rem;  // at more than 1.31 there's some jiggling right before the switch to mobile nav.
+$menu-item-color-active: $blaze;
+$menu-item-background-active: $white;
+$menu-icon-spacing: 1rem;
 
 // 23. Meter
 // ---------
@@ -542,7 +542,7 @@ $tab-content-padding: 1rem;
 $thumbnail-border: 0px;  //solid 4px $white;
 $thumbnail-margin-bottom: $global-margin;
 $thumbnail-shadow: 0px;  //0 0 0 1px rgba($black, 0.2);
-$thumbnail-shadow-hover: 0 0 6px 3px rgba($primary-color, 0.5);
+$thumbnail-shadow-hover: 0 0 6px 1px rgba($primary-color, 0.5);
 $thumbnail-transition: box-shadow 200ms ease-out;
 $thumbnail-radius: $global-radius;
 
@@ -553,16 +553,16 @@ $titlebar-background: $black;
 $titlebar-color: $white;
 $titlebar-padding: 0.5rem;
 $titlebar-text-font-weight: bold;
-$titlebar-icon-color: $white;
-$titlebar-icon-color-hover: $medium-gray;
-$titlebar-icon-spacing: 0.25rem;
+$titlebar-icon-color: $cerulean;
+$titlebar-icon-color-hover: $cerulean;
+$titlebar-icon-spacing: 3rem;
 
 // 35. Tooltip
 // -----------
 
-$has-tip-font-weight: $global-weight-bold;
+$has-tip-font-weight: $global-weight-normal;
 $has-tip-border-bottom: dotted 1px $dark-gray;
-$tooltip-background-color: $black;
+$tooltip-background-color: $dark-gray;
 $tooltip-color: $white;
 $tooltip-padding: 0.75rem;
 $tooltip-font-size: $small-font-size;
@@ -573,9 +573,9 @@ $tooltip-radius: $global-radius;
 // 36. Top Bar
 // -----------
 
-$topbar-padding: 0.5rem;
-$topbar-background: $light-gray;
-$topbar-submenu-background: $topbar-background;
-$topbar-title-spacing: 1rem;
+$topbar-padding: 0;
+$topbar-background: $alabaster;
+$topbar-submenu-background: $white;
+$topbar-title-spacing: 0;
 $topbar-input-width: 200px;
-$topbar-unstack-breakpoint: medium;
+$topbar-unstack-breakpoint: large;

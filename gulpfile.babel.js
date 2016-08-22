@@ -113,7 +113,7 @@ function sass() {
 // Combine JavaScript into one file
 // In production, the file is minified
 function javascript(done) {
-  return gulp.src(PATHS.javascriptcorp)
+  gulp.src(PATHS.javascriptcorp)
     .pipe($.sourcemaps.init())
     .pipe($.babel())
     .pipe($.concat('app_corp.js'))
@@ -122,7 +122,7 @@ function javascript(done) {
     ))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/js'));
-  return gulp.src(PATHS.javascriptsf)
+  gulp.src(PATHS.javascriptsf)
     .pipe($.sourcemaps.init())
     .pipe($.babel())
     .pipe($.concat('app_sf.js'))
@@ -131,7 +131,7 @@ function javascript(done) {
     ))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/js'));
-  return gulp.src(PATHS.javascriptmf)
+  gulp.src(PATHS.javascriptmf)
     .pipe($.sourcemaps.init())
     .pipe($.babel())
     .pipe($.concat('app_mf.js'))
