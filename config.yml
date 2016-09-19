@@ -20,10 +20,8 @@ PATHS:
   dist: "dist"  
   # Paths to static assets that aren't images, CSS, or JavaScript
   assets:
-    - "src/assets/**/*"
-    - "src/assets/js/vendor/*"
-    - "!src/assets/{img,scss}/**/*"
-    - "!src/assets/js/!(app)*"
+    # "src/assets/**/**/*"
+    - "src/assets/**/vendor/*"
   # Paths to Sass libraries, which can then be loaded with @import
   sass:
     - "bower_components/foundation-sites/scss"
