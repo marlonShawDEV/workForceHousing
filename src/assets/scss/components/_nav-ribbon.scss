@@ -1,0 +1,87 @@
+// faking the look of a 1px bottom border so that the active tab can just overlay without having to adjust all the other measurements.
+$ribbon-edge: adjust-hue(saturate(darken($alabaster, 7.3%), 51%), 77deg);
+$ribbon-background-desktop: linear-gradient(to bottom, $alabaster 0%, $alabaster 97.25%, $ribbon-edge 100%);
+
+#ribbon {display: none;}
+
+@media screen and (min-width: 64em) and (max-width: 67em) {
+  .top-bar {  
+    .top-bar-right > .menu > li > a {
+      padding: 0.65rem 1rem;  // prevent wrapping at slightly above large breakpoint
+    }
+  }  
+}
+@include breakpoint(large) {
+  #ribbon {
+    display: block;
+  }
+  .ribbon {
+    font-size: .875rem; 
+    border-width: 0;
+    z-index: 500;
+    position: relative;
+    background: $ribbon-background-desktop;  
+    .ribbon-nav {
+      z-index: 501;
+    }
+    li.is-dropdown-submenu-parent > a {
+      z-index: 502;
+      position: relative;
+    }
+    .submenu {      
+        z-index: 499;
+    }
+    li.active > a {
+      box-shadow: none;
+      border-left: 1px solid $ribbon-edge;
+      border-right: 1px solid $ribbon-edge;
+    }      
+    .menu:not(.submenu) {
+      background: $ribbon-background-desktop;
+       .active > a {
+        color: $fm-green;
+        font-weight: 500;
+      }
+      >  li:not(.active):hover > a,
+      > li:not(.active) > a:focus,
+      > li.is-active > a  {
+       @include nav-submenu-parent-hover;      
+      }
+    }    
+    .input-group { 
+      margin-bottom: 0.0625rem;
+    }      
+    [type="search"] {
+      font-size: inherit;
+      border-width: 0;
+      color: $fm-gray;
+      height: 2.1875rem;
+      padding: 0.25rem 1rem;
+      margin-left: 0.25rem;
+      box-shadow: none;
+      &:focus {
+        box-shadow: none; 
+      }
+      &::placeholder { 
+        color: lighten($medium-gray, 20%);
+      }  
+    } 
+    .button {
+      border-width: 0; 
+      background: $buttercup url("/images/icon-search.png")  no-repeat center center / 50% 50%;
+      height: 2.1875rem;
+      width: 2.1875rem;
+      padding: 0.25rem 1.25rem;
+      transition: none;
+      &:hover,
+      &:focus {
+        background-color: scale-color($buttercup, $lightness: -10%);
+      }
+      &:active {
+        background-color: scale-color($buttercup, $lightness: -15%);
+      }    
+    }   
+  }
+} 
+
+

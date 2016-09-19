@@ -1,0 +1,67 @@
+$tertiary-gap: rem-calc(30px);
+$tertiary-border-color: scale-color($light-gray, $lightness: -5%);
+
+.tertiary-nav {
+  background: $fm-green;
+  color: $fm-gray;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.875rem;
+  font-size: 1.125rem;  
+  h2 {
+    color: $white;
+    padding: 0;
+    margin: 0;
+    font-weight: 300;
+  }
+  a {
+    color: inherit;
+    display: block;
+    padding: $tertiary-gap;
+    @include disable-mouse-outline;
+  }
+  nav {
+    background: $white;
+    border-left: 1px solid $tertiary-border-color;
+    border-right: 1px solid $tertiary-border-color;
+  }
+  ul {
+    margin: 0;    
+    a {
+      text-transform: uppercase;
+      &:hover,
+      &:focus {
+        color: $fm-green;
+        background: $alabaster;
+      }
+      &.active {
+        color: $fm-green;
+        background: $alabaster;
+        font-weight: 900;
+      }    
+    }
+    li + li::before {     
+        content: ""; 
+        display: block;    
+        border-top: 1px solid $tertiary-border-color;
+    }
+    ul {
+      a {
+        text-transform: initial;
+        padding: $tertiary-gap/2 $tertiary-gap;
+        font-weight: 300;
+        &.active {
+          font-weight: 700;
+        }      
+      }
+      li + li::before {      
+        margin: 0 $tertiary-gap; 
+      }
+    }
+  }
+  li.expanded {
+    background: $alabaster;  
+    > a {  
+      padding-bottom: $tertiary-gap/4;
+    }
+  }
+}

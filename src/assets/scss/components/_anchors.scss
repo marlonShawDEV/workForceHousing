@@ -1,5 +1,6 @@
 // custom styles for anchors
 /// secured anchor links display a padlock icon
+/// temporarily usding old image until Jon decides about icons
 .secured {
   position:relative;
   &::after {
@@ -20,8 +21,7 @@ a.forward {
 }
 
 // anchor states for the item and the marker should have identical styles
-a.forward, 
-a.forward::after { 
+a.forward { 
   color: $blaze; 
   &:hover,
   &:focus {
@@ -32,5 +32,8 @@ a.forward::after {
   }
   :active & {
     color: scale-color($blaze, $lightness: -20%);
+  }
+  &::after { 
+  color: inherit; 
   }
 }

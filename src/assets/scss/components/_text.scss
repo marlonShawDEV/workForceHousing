@@ -1,7 +1,7 @@
-.feature-txt {
-	font-size: rem-calc(18);
+// replacing .feature-txt with .lead, since it's a built in style for Foundation, replaced .lead_bolder with just <b> or <strong> inside .lead.
+.lead {
 	font-weight: $global-weight-medium;
-	&_bolder {
+	strong, b {
 		font-weight: $global-weight-bold;
 	}
 }
@@ -14,4 +14,30 @@
 	@include breakpoint(medium) {
 		font-size: rem-calc(48);
 	}
+}
+
+blockquote {
+  font-size: rem-calc(18);
+  font-weight: $global-weight-medium;
+  @include breakpoint(medium) {
+    font-size: rem-calc(20);
+  }
+  footer { 
+    font-weight: $global-weight-normal;
+    font-style: italic;
+    font-size: 1rem;
+    padding: 0;
+    &:before {
+    content: "\2014 \2009";
+    }
+  }
+  :last-child {
+    margin-bottom: 0;
+  }
+}
+cite { 
+  display: inline;
+  &::before {
+    content: none;
+  }
 }

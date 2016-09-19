@@ -1,16 +1,15 @@
+$gradient-edge: lighten(saturate(adjust-hue($celery, -9.8793), 10.8380), 0.9804);
+
 .gradient-info {
 	color: $white;
 	@include breakpoint(medium) {
-		background: linear-gradient(to right, transparent 0%,transparent 70%,lighten(saturate(adjust-hue($celery, -(3.75 * 6)), 9.8403), 1.1765) 71%,lighten(saturate(adjust-hue($celery, -(3.75 * 6)), 9.8403), 1.1765) 100%);
+		background: linear-gradient(to right, transparent 0%,transparent 70%, $gradient-edge 71%, $gradient-edge 100%);
 		margin-top: -220px;
 	}
 
-	.columns:nth-child(1) {
-		background: $celery;
-	}
-	@for $i from 2 through 5 {
+	@for $i from 1 through 5 {
     .columns:nth-child(#{$i}) {
-      background: lighten(saturate(adjust-hue($celery, -(3.75 * $i)), 9.8403), 1.1765);
+      background: color-shift($celery, $gradient-edge, 5, $i);
     }
   } 
 

@@ -1,0 +1,12 @@
+.callout {
+  &.success,
+  &.primary  {
+    a {
+      color: darken($cerulean, 10%);
+      &:hover,
+      &:active {
+        color: darken($cerulean, 15%);
+      }
+    }  
+  }
+}

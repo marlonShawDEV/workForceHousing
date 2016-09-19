@@ -11,15 +11,20 @@
     <link rel="stylesheet" href="/ss/app_corp.css" />
   </head>
   <body>
+  <header id="header-nav">  
     {{> ribbon}}
-    {{> header-corp}}
+    {{> nav-corp-primary}}
+    {{> nav-corp-secondary}}
+  </header>  
 
     {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
     {{> body}}
-
+{{> header-corp}}
     {{> footer-corp}}
 
     <span id="isMobile"></span>
+    <span id="isTablet"></span>
+    <span id="isDesktop"></span>
 
     <!--[if lt IE 9]>
     <script>window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"><\/'+'script>')</script>

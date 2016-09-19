@@ -1,51 +1,59 @@
-/// Adds styles for the active accordion item. 
-@mixin accordion-item-active {
-  &.is-active .accordion-title {
-    background-color:$accordion-content-background;
-    color: $primary-color;
+/// styles for the accordion item when active/expanded
+@mixin accordion-pointers-active($color: $primary-color, $background: $accordion-content-background) {
+  background:$background;
+  color: $color;
+  &::before {
+    content: '\276E';
+    transform: rotate(90deg);
+  }
+}
+// the standard  non-active state of the item
+@mixin accordion-pointers-title($color: $dark-gray, $background-hover: $accordion-item-background-hover, $transform: true) {
+  @include accordion-title; 
+  color: $color;    
+  @if $transform {  
+    text-transform: uppercase;
+  }  
+  font-size: 1rem;
+  &::before {
+    content: '\276F';
+    transform: rotate(90deg);
+  }  
+  :last-child:not(.is-active) > & {
+    border-bottom: 0;
+  }
+  &:hover,
+  &:focus {
+    color: scale-color($color, $lightness: -20%);
+    background: $background-hover;
   }
 }
 
 /// Change +/- to up down carets item. 
 @mixin accordion-pointers {  
-}
-
-
-///styles for .accordion-pointer
-.accordion-pointer {
   box-shadow: 0px 1px 3px scale-color($accordion-background, $lightness: -5%);
   @include accordion-container;
-  
-  .accordion-item {
-    @include accordion-item-active;
-    &.is-active > .accordion-title::before {
-      content: '\276F';
-      transform: rotate(90deg);
-    }    
-  }
-
   .accordion-title {
-    @include accordion-title; 
-    color: $dark-gray;    
-    text-transform: uppercase;
-    font-size: 1rem;
-    &::before {
-      content: '\276E';
-      transform: rotate(90deg);
-    }  
-    :last-child:not(.is-active) > & {
-      border-bottom: 0;
-    }
-    &:hover,
-    &:focus {
-      color: scale-color($accordion-item-color, $lightness: -50%);
-    }
+    @include accordion-pointers-title;
+  }
+  .accordion-item {
+    &.is-active {
+      .accordion-title {
+        @include accordion-pointers-active;
+      }       
+    }    
   }
   .accordion-content {
     @include accordion-content;
     border-top: 0;
     
   }
+}
+
+
+///styles for .accordion-pointer
+.accordion-pointer {
+  @include accordion-pointers;
 }
 
 

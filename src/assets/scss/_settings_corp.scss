@@ -57,6 +57,7 @@ $buttercup: #ffb718;
 $cerulean: #00a6e2;
 $sushi: #97bb35;
 $celery: #a4c745;
+$pear: #c9d732; 
 $alabaster: #f9f9f9;
 $blaze: #ff6c00;
 $crimson: #cf0a2c;
@@ -66,9 +67,9 @@ $wisteria: #725090;
 $foundation-palette: (
   primary: $cerulean,
   secondary: $blaze,
-  success: #3adb76,
-  warning: #ffae00,
-  alert: #ec5840
+  success: #40CC5A,
+  warning: #FF970F,
+  alert: #DC3232
 );
 $fm-green: #88BD45;
 $fm-gray: #777874;
@@ -170,11 +171,11 @@ $list-nested-side-margin: 1.25rem;
 $defnlist-margin-bottom: 1rem;
 $defnlist-term-weight: $global-weight-bold;
 $defnlist-term-margin-bottom: 0.3rem;
-$blockquote-color: $dark-gray;
-$blockquote-padding: rem-calc(9 20 0 19);
-$blockquote-border: 1px solid $medium-gray;
-$cite-font-size: rem-calc(13);
-$cite-color: $dark-gray;
+$blockquote-color: inherit;
+$blockquote-padding: rem-calc(8 18 9 30);
+$blockquote-border: 5px solid $fm-green;
+$cite-font-size: inherit;
+$cite-color: inherit;
 $keystroke-font: $font-family-monospace;
 $keystroke-color: $black;
 $keystroke-background: $light-gray;
@@ -185,7 +186,7 @@ $abbr-underline: 1px dotted $black;
 // 5. Typography Helpers
 // ---------------------
 
-$lead-font-size: $global-font-size * 1.25;
+$lead-font-size: 112.5%;
 $lead-lineheight: 1.6;
 $subheader-lineheight: 1.4;
 $subheader-color: $dark-gray;
@@ -221,8 +222,8 @@ $accordion-content-padding: 0.5rem 1rem 1rem;
 // 8. Accordion Menu
 // -----------------
 
-$accordionmenu-arrows: true;
-$accordionmenu-arrow-color: $primary-color;
+$accordionmenu-arrows: false;
+$accordionmenu-arrow-color: $white;
 
 // 9. Badge
 // --------
@@ -276,14 +277,14 @@ $buttongroup-expand-max: 6;
 // -----------
 
 $callout-background: $white;
-$callout-background-fade: 85%;
+$callout-background-fade: 80%;
 $callout-border: 1px solid rgba($black, 0.25);
 $callout-margin: 0 0 1rem 0;
 $callout-padding: 1rem;
 $callout-font-color: $body-font-color;
 $callout-font-color-alt: $body-background;
 $callout-radius: $global-radius;
-$callout-link-tint: 30%;
+$callout-link-tint: 90%; 
 
 // 14. Close Button
 // ----------------
@@ -291,9 +292,9 @@ $callout-link-tint: 30%;
 $closebutton-position: right top;
 $closebutton-offset-horizontal: 1rem;
 $closebutton-offset-vertical: 0.5rem;
-$closebutton-size: 2em;
+$closebutton-size: 2.5rem;
 $closebutton-lineheight: 1;
-$closebutton-color: $dark-gray;
+$closebutton-color: $medium-gray;
 $closebutton-color-hover: $black;
 
 // 15. Drilldown
@@ -321,9 +322,9 @@ $dropdown-sizes: (
 // 17. Dropdown Menu
 // -----------------
 
-$dropdownmenu-arrows: true;
+$dropdownmenu-arrows: false;
 $dropdownmenu-arrow-color: $blaze;
-$dropdownmenu-min-width: 340px;
+$dropdownmenu-min-width: rem-calc(340px);
 $dropdownmenu-background: $white;
 $dropdownmenu-border: 0px;
 
@@ -393,7 +394,7 @@ $mediaobject-image-width-stacked: 100%;
 
 $menu-margin: 0;
 $menu-margin-nested: 0;
-$menu-item-padding: 0.65rem 1.31rem;  // at more than 1.31 there's some jiggling right before the switch to mobile nav.
+$menu-item-padding: 0.7rem 1rem;  
 $menu-item-color-active: $blaze;
 $menu-item-background-active: $white;
 $menu-icon-spacing: 1rem;
@@ -424,10 +425,10 @@ $maincontent-shadow: 0 0 10px rgba($black, 0.5);
 // 25. Orbit
 // ---------
 
-$orbit-bullet-background: $medium-gray;
-$orbit-bullet-background-active: $dark-gray;
-$orbit-bullet-diameter: 1.2rem;
-$orbit-bullet-margin: 0.1rem;
+$orbit-bullet-background: $fm-gray;
+$orbit-bullet-background-active: $cerulean;
+$orbit-bullet-diameter: 1rem;
+$orbit-bullet-margin: 0.2rem;
 $orbit-bullet-margin-top: 0.8rem;
 $orbit-bullet-margin-bottom: 0.8rem;
 $orbit-caption-background: rgba($black, 0.5);
@@ -466,7 +467,7 @@ $progress-radius: $global-radius;
 // ----------
 
 $reveal-background: $white;
-$reveal-width: 600px;
+$reveal-width: 75%;
 $reveal-max-width: $global-width;
 $reveal-padding: $global-padding;
 $reveal-border: 1px solid $medium-gray;
@@ -534,7 +535,7 @@ $tab-expand-max: 6;
 $tab-content-background: $white;
 $tab-content-border: $light-gray;
 $tab-content-color: foreground($tab-background, $primary-color);
-$tab-content-padding: 1rem;
+$tab-content-padding: 1rem 0;
 
 // 33. Thumbnail
 // -------------
@@ -549,23 +550,23 @@ $thumbnail-radius: $global-radius;
 // 34. Title Bar
 // -------------
 
-$titlebar-background: $black;
+$titlebar-background: inherit;
 $titlebar-color: $white;
-$titlebar-padding: 0.5rem;
-$titlebar-text-font-weight: bold;
+$titlebar-padding: 0;
+$titlebar-text-font-weight: inherit;
 $titlebar-icon-color: $cerulean;
 $titlebar-icon-color-hover: $cerulean;
-$titlebar-icon-spacing: 3rem;
+$titlebar-icon-spacing: 1.75rem 1.125rem 1.125rem;
 
 // 35. Tooltip
 // -----------
 
 $has-tip-font-weight: $global-weight-normal;
 $has-tip-border-bottom: dotted 1px $dark-gray;
-$tooltip-background-color: $dark-gray;
+$tooltip-background-color: $fm-gray;
 $tooltip-color: $white;
 $tooltip-padding: 0.75rem;
-$tooltip-font-size: $small-font-size;
+$tooltip-font-size: 85%;
 $tooltip-pip-width: 0.75rem;
 $tooltip-pip-height: $tooltip-pip-width * 0.866;
 $tooltip-radius: $global-radius;
@@ -574,7 +575,7 @@ $tooltip-radius: $global-radius;
 // -----------
 
 $topbar-padding: 0;
-$topbar-background: $alabaster;
+$topbar-background: $white;
 $topbar-submenu-background: $white;
 $topbar-title-spacing: 0;
 $topbar-input-width: 200px;

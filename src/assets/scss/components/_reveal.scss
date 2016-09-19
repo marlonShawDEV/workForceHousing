@@ -1,0 +1,106 @@
+$overlay-palette: (
+  green: $fm-green,
+  orange: $blaze,
+  yellow: $buttercup,
+  red: $crimson,
+  purple: $wisteria,
+  blue: $steel,
+  teal: $niagara,
+  gray: $medium-gray
+);
+
+.reveal {
+  max-width: rem-calc(960px);
+  &.medium { 
+    max-width: rem-calc(720px);
+  }  
+  &.large { 
+    max-width: $global-width;
+  }  
+  @include breakpoint(medium) { 
+    &.small { 
+      max-width: rem-calc(480px);
+    }
+  } 
+// Full-screen mode colors
+  @each $name, $color in $overlay-palette {    
+    &.full.overlay-#{$name} {      
+      background-color: $color;
+      color: foreground($color, $dark-gray, $white);      
+      a:not(.button) { 
+        color: foreground($color, $anchor-color, $white);  
+        text-decoration: underline;
+      } 
+      .close-button-large {
+        background-color: foreground($color, $dark-gray, $white);
+        color: foreground($color, $white, $color);
+      }
+    }
+  } 
+  > div { 
+    position: relative;
+  }
+  > .flex-video {
+    margin: $global-margin * 2  0 0;
+  } 
+  &.full {
+    @include breakpoint(medium) {
+      padding: 3rem 0;
+    }  
+  }
+}
+
+.reveal-image {
+  top: 0;
+  background: transparent;
+  border-width: 0;
+  max-height: 100vh;
+  .reveal-image-inner {
+    overflow: none;
+    padding: 2vh 2vw;
+    margin: 0 auto; 
+    position: relative;     
+  }
+  > .close-button-large {
+    background-color: $white;
+    color: $dark-gray;
+  }
+  figure {
+    margin: 0 auto;   
+    max-height: 92vh;
+    max-width: 92vw;
+    overflow: hidden;
+    position: relative;   
+    img {
+      @include orbit-image;      
+      display: block; 
+      border: $reveal-border; 
+    }
+    figcaption { 
+      @extend .orbit-caption;
+      font-size: inherit;
+      text-align: center;      
+      font-size: rem-calc(18);
+      font-weight: $global-weight-medium;
+      @include breakpoint(medium) {
+        font-size: rem-calc(20);
+      }
+      :last-child { margin-bottom: 0;}
+    }    
+  }
+  .gallery-previous {  
+    @extend %orbit-control;
+    @include orbit-previous;
+    z-index: 1009;
+  }
+  .gallery-next  {
+    @extend %orbit-control;
+    @include orbit-next;
+    z-index: 1010;
+    }
+  .gallery-previous,
+  .gallery-next {  
+    font-size: 1.5rem;
+    background-color: rgba($black, 0.4);
+  } 
+}

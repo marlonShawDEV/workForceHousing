@@ -46,7 +46,9 @@
 		font-weight: $global-weight-light;
 		margin: 1.5em 0;
 		@include breakpoint(large) {
-			margin-bottom: 0;
+			&:not(.lead) {
+        margin-bottom: 0;
+      }
 		}
 	}
 
@@ -116,7 +118,6 @@
 			margin-bottom: .5rem;
 		}
 		p {
-			font-size: rem-calc(16);
 			margin-top: 0;
 		}
 		.page-cta__wrapper {

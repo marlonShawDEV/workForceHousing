@@ -1,0 +1,122 @@
+#secondary-nav  {
+    position: relative;
+}
+.secondary-nav {
+  font-weight: 500;
+  position: relative;
+  width: 100%;
+  &.on {    
+    background: $light-gray;
+    border: 1px solid darken($light-gray, 9.8039);
+    border-width: 1px 0px;
+  }
+  .row {
+    position: relative;
+  }
+  .no-bullet {
+    margin: 0;
+  }
+  a {
+    color: $medium-gray;
+  }
+}
+
+@include breakpoint(medium down) {    
+  .secondary-nav {    
+    &.on {
+      .no-bullet {
+        @include accordion-container;  
+        width: 100%;
+        margin: 0;
+        > li {
+          border: 1px solid darken($light-gray, 9.8039);
+          border-radius: 0.3125rem;      
+          position: relative;
+          margin: 1.125rem;
+          > a {
+            @include accordion-pointers-title($medium-gray, $light-gray, false);
+            font-size: 1rem;
+          }
+        }
+        .menu {
+          @include accordion-content;
+          background: inherit;
+          padding: 0;
+          > li {
+            display: block;
+            > a {
+              padding: 1rem;
+            }
+          }
+        }  
+      }       
+    }
+    &.expanded {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index:494;
+      .no-bullet {
+        > li > a {
+           @include accordion-pointers-active($medium-gray, $light-gray);  
+        }
+        .menu {
+          display: block;
+          position: relative;
+          z-index:495;
+        }
+      }
+    } 
+  }
+}
+
+@include breakpoint(large) {       
+  .secondary-nav { 
+    z-index: 480;
+    .no-bullet:not(.hide) {
+     position: relative;
+     z-index: 485;
+    }
+    &.highlight {  
+      background: $fm-green; 
+      border-top-color: $fm-green;
+      z-index: 490;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 0;
+      min-height: 3rem;
+      .row {
+        z-index: 492;
+        .current-hover {
+          position: relative;
+          min-height: 3rem;
+          z-index: 493;
+        }
+      }
+      .subnav-bottom {
+          position: relative;
+          @include mosaic-fill;
+          height: 8px;
+      }
+      .menu {
+        float: right;
+         > li > a {
+          color: $white;
+          padding: 1.875rem 1.25rem 1.75rem;
+          &:hover,
+          &:active {
+            color: $white;
+          }
+        }      
+      }
+    }
+    .menu > li {
+      > a {
+        @include nav-desktop-link();  
+        padding: 2rem 1.25rem;
+        color: $fm-gray;
+      }
+    } 
+  }
+} 

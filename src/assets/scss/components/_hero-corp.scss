@@ -45,20 +45,76 @@
 		}
 	}
 }
-
-
-.blue-hero {
-	background: url('/images/blog/hero-2-mobile.jpg') no-repeat top center;
-	background-size: cover;
-	color: $white;
+ // breaking our the hero details by their purpose, since we have several that are tall, short, blue or left.
+ 
+.perspectives-landing-hero {
+	background: url('/images/hero-5-mobile.jpg') no-repeat top center;
 	height: 219px;
-	position: relative;
+	@include breakpoint(medium) {
+		background-image: url('/images/hero-5-desktop.jpg');
+		height: 345px;
+		text-align: center;
+	}
+} 
+.blog-landing-hero {
+	background: url('/images/blog/hero-2-mobile.jpg') no-repeat top center;
+	height: 219px;
 	@include breakpoint(medium) {
 		background-image: url('/images/blog/hero-2-desktop.jpg');
 		height: 345px;
 		text-align: center;
 	}
+}
+.media-landing-hero {
+	background: url('/images/hero-6-mobile.jpg') no-repeat top left;
+	height: 219px;
+	@include breakpoint(medium) {
+		background-image: url('/images/hero-6-desktop.jpg');
+		height: 345px;
+		text-align: center;
+	}
+} 
+.research-landing-hero { //pending graphic from Jon
+	background: url('/images/hero-7-mobile.jpg') no-repeat top left;
+	height: 219px;
+	@include breakpoint(medium) {
+		background-image: url('/images/hero-7-desktop.jpg');
+		height: 345px;
+		text-align: center;
+	}
+} 
+.about-landing-hero {  //pending graphic from Jon
+	background: url('/images/hero-7-mobile.jpg') no-repeat top left;
+	height: 219px;
+	@include breakpoint(medium) {
+		background-image: url('/images/hero-7-desktop.jpg');
+		height: 345px;
+		text-align: center;
+	}
+} 
+.perspectives-detail-hero {
+	background: url('/images/hero-5-mobile.jpg') no-repeat top center;
+	height: 38x;
+	@include breakpoint(medium) {
+		background-image: url('/images/hero-5-desktop.jpg');
+		height: 518px;
+		text-align: center;
+	}
+} 
+.blog-detail-hero {
+  background-image: url('/images/blog/hero-4-mobile.jpg') no-repeat top center;
+  height: 389px;
+  @include breakpoint(medium) {
+    background-image: url('/images/blog/hero-4-desktop.jpg');
+    height: 518px;
+  }
+}
 
+
+.blue-hero {
+	position: relative;
+  background-size: cover;
+	color: $white;
 	.page-buffer {
 		position: absolute;
 		left: 50%;
@@ -78,7 +134,7 @@
 		width: 100%;
 		z-index: 1;
 	}
-
+  // default center aligned hero
 	&__txt {
 		@include grid-column;
 		@include breakpoint(medium) {
@@ -91,63 +147,51 @@
 		}
 		h1 {
 			line-height: 1.2;
-			margin-bottom: 2rem;
+      font-size: 2rem;
+			@include breakpoint(medium) {				
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+			}
+			@include breakpoint(large) {
+				font-size: 3.25rem;
+        margin-bottom: 2rem;
+			}
 		}
 		p {
 			@include breakpoint(medium) {
-				font-size: rem-calc(28);
+				font-size: 1.375rem;
+			}
+			@include breakpoint(large) {
+				font-size: 1.75rem;
 			}
 		}
 	}
-
+  // add this class when hero is left aligned
+	&__left {
+    float: left;
+    text-align: left;
+    @include breakpoint(large) {
+      @include grid-column(8);
+    }
+    @include breakpoint(xlarge) {
+      @include grid-column(7);
+    }
+		}
 	.button-group {
 		.button {
 			margin-bottom: 15px;
 		}
 	}
-
 	.avatar {
 		margin: 0;
 	}
-
 	&__date {
 		font-size: rem-calc(16);
 		font-weight: $global-weight-light;
-		margin-bottom: 1rem;
 		text-transform: uppercase;
 		@include breakpoint(medium) {
-			font-size: rem-calc(22);
-		}
-	}
-
-	&_short {
-		background-image: url('/images/hero-3-mobile.jpg');
-		height: 239px;
-		@include breakpoint(medium) {
-			background-image: url('/images/hero-3-desktop.jpg');
-			height: 274px;
-		}
-	}
-
-	&_tall {
-		background-image: url('/images/hero-4-mobile.jpg');
-		height: 389px;
-		@include breakpoint(medium) {
-			background-image: url('/images/hero-4-desktop.jpg');
-			height: 518px;
-		}
-	}
-
-	&_left-align {
-		.blue-hero__txt {
-			float: left;
-			text-align: left;
-			@include breakpoint(large) {
-				@include grid-column(8);
-			}
-			@include breakpoint(xlarge) {
-				@include grid-column(7);
-			}
+			font-size: 1.375rem;
+      margin-bottom: 1rem;
 		}
 	}
 }

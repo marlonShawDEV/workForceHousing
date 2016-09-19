@@ -65,7 +65,11 @@
 @import 'components/page-title';
 @import 'components/tabbed-component';
 @import 'components/data-table';
-@import 'components/footer_corp';
+@import 'components/nav-ribbon';
+@import 'components/nav-footer';
+@import 'components/nav-primary-corp';
+@import 'components/nav-secondary-corp';
+@import 'components/nav-tertiary';
 @import 'components/map-cta';
 @import 'components/posts';
 @import 'components/person-block';
@@ -74,4 +78,8 @@
 @import 'components/twitter';
 @import 'components/anchors';
 @import 'components/gradient-info';
-@import 'components/ribbon';
+@import 'components/reveal';
+@import 'components/orbit';
+@import 'components/close-button';
+@import 'components/tooltips';
+@import 'components/callouts';

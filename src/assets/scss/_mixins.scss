@@ -1,17 +1,109 @@
 // text underline transition
 @mixin underline-transition($color, $width) {
-  &:after {
+  &::after {
     content: '';
     border-bottom: $width solid transparent;
     display: block;
-    transition: 0.5s ease;
+    transition: 0.35s ease;
     width: 0;
     white-space: nowrap;
   }
-  &:hover {
-    &:after {
+  &:hover,
+  &:focus  {
+    &::after {
       border-bottom: $width solid $color;
       width: 100%;
     }
   }
 }
+
+// desktop dropdown items from ribbon and corp nav
+@mixin nav-submenu-list($padding: $menu-item-padding) {
+  background: $white;
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.37);
+  & > li > a { 
+    padding: $padding;     
+    color: $medium-gray;  
+    text-transform: initial; 
+    font-weight: 300;
+    border-bottom-width: 0; 
+    transition: background-color 0.2s ease 0s, color 0.15s ease 0s;
+  }
+  & > li:hover > a, 
+  & a:focus { 
+    background: $buttercup;
+    color: $white;
+  } 
+}
+
+// desktop hover states for parent of dropdowns
+@mixin nav-submenu-parent-hover(){
+  color: $blaze;
+  background: $white;
+  border-bottom-color: $white;
+  box-shadow: 0 -5px 5px 0 rgba(0,0,0,0.37);
+  transition: color 0.15s ease 0s;
+}
+
+// link style for primary and secondary nav but not ribbon
+@mixin nav-desktop-link(){  
+  color: $fm-gray;
+  transition: color 0.25s ease 0s, border-bottom-color 0.25s ease 0s;   
+  &:hover,
+  &:focus,
+  &.active  {
+    color: $fm-green;
+    border-bottom-color: $fm-green;              
+  }
+}
+
+// staggered mosiac full pattern used below secondary nav/hover and footer:
+@mixin mosaic-fill {
+  background: linear-gradient(to right, 
+    color-shift($celery, $pear, 6, 1) 0%, 
+    color-shift($celery, $pear, 6, 1) 35%, 
+    color-shift($celery, $pear, 6, 2) 35%, 
+    color-shift($celery, $pear, 6, 2) 48%, 
+    color-shift($celery, $pear, 6, 3) 48%, 
+    color-shift($celery, $pear, 6, 3) 61%, 
+    color-shift($celery, $pear, 6, 4) 61%, 
+    color-shift($celery, $pear, 6, 4) 74%, 
+    color-shift($celery, $pear, 6, 5) 74%,  
+    color-shift($celery, $pear, 6, 5) 87%, 
+    color-shift($celery, $pear, 6, 6) 87%, 
+    color-shift($celery, $pear, 6, 6) 100%);
+}
+
+// calculate color differences from beginning and ending color acorss number of steps, and return color at particular step
+// just pass a start color/end color, number of steps from one to the other, and the current step to get the color.
+@function color-shift($a, $b, $steps, $step) {
+  @if $step == 1 or $steps < 2 { 
+    @return $a;
+  }
+  @else if $step >= $steps {
+    @return $b;
+  }
+  @else {  
+    $shift: $step / $steps;
+    $sat: saturation($a) - saturation($b);
+    $lig: lightness($a) -  lightness($b);
+    $hue: hue($a) - hue($b);
+    @if $hue > 180 {
+      $hue: $hue - 360; 
+    }  
+    @else if $hue <= -180 {
+      $hue: $hue + 360;      
+    }
+    $hue2: adjust-hue($a, -$hue * $shift);
+    $sat2: if($sat > 0, desaturate($hue2, abs($sat) * $shift), saturate($hue2, abs($sat) * $shift));
+    $lig2:  if($lig > 0, darken($sat2, abs($lig) * $shift), lighten($sat2, abs($lig) * $shift));
+    @return $lig2;
+  }
+}
+ 
+
+ 
+ 
+ 
+    
+   

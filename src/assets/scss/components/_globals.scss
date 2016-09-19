@@ -33,3 +33,7 @@ h2 {
 		display: block;
 	}
 }
+// reseting odd margins that are part of Foundation default
+figure { 
+ margin: $global-margin;
+}

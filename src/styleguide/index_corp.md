@@ -123,6 +123,52 @@ As you've probably noticed in the examples above, you have access to a small, me
   <div class="small-9 columns">9, last</div>
 </div>
 
+---
+
+## Two Column Layout with Buffer
+
+```html
+<section class="two-column-layout">
+  <div class="row page-buffer">
+    <div class="row">
+      <main class="medium-7 large-8 columns">
+        <div class="page-buffer">
+          <p>Main content. Sed semper tempus justo, ac volutpat ipsum, tempor ullamcorper odio.</p>					
+        </div>
+      </main> 
+      <aside class="medium-5 large-4 columns">
+        <section>
+          <div class="row page-buffer">
+            <h2>Sidebar Content</h2>            
+            <p>Sed semper tempus justo, ac volutpat ipsum, tempor ullamcorper odio.</p>
+          </div>
+        </section>      
+      </aside>
+    </div>
+  </div>
+</section>
+```
+
+<section class="two-column-layout">
+	<div class="row page-buffer">
+		<div class="row display">
+			<main class="medium-7 large-8 columns">
+				<div class="page-buffer">
+					<p>Main content. Sed semper tempus justo, ac volutpat ipsum, tempor ullamcorper odio.</p>					
+				</div>
+			</main>
+			<aside class="medium-5 large-4 columns">
+        <section>
+          <div class="row page-buffer">
+            <h2>Sidebar Content</h2>            
+            <p>Sed semper tempus justo, ac volutpat ipsum, tempor ullamcorper odio.</p>
+          </div>
+        </section>      
+			</aside>
+		</div>
+	</div>
+</section>
+
 
 
 # Colors
@@ -136,7 +182,21 @@ As you've probably noticed in the examples above, you have access to a small, me
     <div class="color-block">
       <span style="background: #00a6e2"></span>
       #00a6e2<br>
-      $cerulean
+      $cerulean, $primary-color
+    </div>
+  </div>
+  <div class="column">
+    <div class="color-block">
+      <span style="background: #ff6c00"></span>
+      #ff6c00<br>
+      $blaze, $secondary-color
+    </div>
+  </div>
+  <div class="column">
+    <div class="color-block">
+      <span style="background: #88BD45"></span>
+      #88BD45<br>
+      $fm-green
     </div>
   </div>
   <div class="column">
@@ -153,28 +213,21 @@ As you've probably noticed in the examples above, you have access to a small, me
       $celery
     </div>
   </div>
-  <div class="column">
-    <div class="color-block">
-      <span style="background: #ffb718"></span>
-      #ffb718<br>
-      $buttercup
-    </div>
-  </div>
-  <div class="column">
-    <div class="color-block">
-      <span style="background: #ff6c00"></span>
-      #ff6c00<br>
-      $blaze
-    </div>
-  </div>
 </div>
 <br>
 <div class="row up-1 medium-up-3 large-up-5">
   <div class="column">
     <div class="color-block">
-      <span style="background: #cf0a2c"></span>
-      #cf0a2c<br>
-      $crimson
+      <span style="background: #457bbe"></span>
+      #457bbe<br>
+      $steel
+    </div>
+  </div>
+  <div class="column">
+    <div class="color-block">
+      <span style="background: #ffb718"></span>
+      #ffb718<br>
+      $buttercup
     </div>
   </div>
   <div class="column">
@@ -186,9 +239,9 @@ As you've probably noticed in the examples above, you have access to a small, me
   </div>
   <div class="column">
     <div class="color-block">
-      <span style="background: #457bbe"></span>
-      #457bbe<br>
-      $steel
+      <span style="background: #cf0a2c"></span>
+      #cf0a2c<br>
+      $crimson
     </div>
   </div>
   <div class="column">
@@ -196,13 +249,6 @@ As you've probably noticed in the examples above, you have access to a small, me
       <span style="background: #725090"></span>
       #725090<br>
       $wisteria
-    </div>
-  </div>
-  <div class="column">
-    <div class="color-block">
-      <span style="background: #000000"></span>
-      #000000<br>
-      $black
     </div>
   </div>
 </div>
@@ -224,6 +270,13 @@ As you've probably noticed in the examples above, you have access to a small, me
   </div>
   <div class="column">
     <div class="color-block">
+      <span style="background: #777874"></span>
+      #777874<br>
+      $fm-gray
+    </div>
+  </div>
+  <div class="column">
+    <div class="color-block">
       <span style="background: #f4f4f4"></span>
       #f4f4f4<br>
       $light-gray
@@ -234,6 +287,37 @@ As you've probably noticed in the examples above, you have access to a small, me
       <span style="background: #f9f9f9"></span>
       #f9f9f9<br>
       $alabaster
+    </div>
+  </div>
+</div>
+<br>
+<div class="row up-1 medium-up-3 large-up-5">
+  <div class="column">
+    <div class="color-block">
+      <span style="background: #40CC5A"></span>
+      #40CC5A<br>
+      $success-color
+    </div>
+  </div>
+  <div class="column">
+    <div class="color-block">
+      <span style="background: #FF970F"></span>
+      #FF970F<br>
+      $warning-color
+    </div>
+  </div>
+  <div class="column">
+    <div class="color-block">
+      <span style="background: #DC3232"></span>
+      #DC3232<br>
+      $alert-color
+    </div>
+  </div>
+  <div class="column">
+    <div class="color-block">
+      <span style="background: #000000"></span>
+      #000000<br>
+      $black
     </div>
   </div>
   <div class="column">
@@ -379,12 +463,15 @@ A definition list (`<dl>`) is used to display name-value pairs, like metadata or
 
 ## Blockquotes
 
-Sometimes other people say smart things, and you may want to mention those things with a quote. Be sure to cite the source for the quote.
+Sometimes other people say smart things, and you may want to mention those things with a quote. 
+
+- Do **not** use a blockquote simply to decorate text that isn't a quotation.  Try using a [call out]{#call-out-txt} for that purpose.
+- Include the source for the quote in a `footer` and include the author, title or work in a `cite`.
 
 ```html_example
-<blockquote>
-  Those people who think they know everything are a great annoyance to those of us who do.
-  <cite>Isaac Asimov</cite>
+<blockquote> 
+  <p>Cowards die many times before their deaths; the <strong>valiant</strong> never taste of death but once.</p>
+  <footer><cite>William Shakespeare</cite> in <cite>King Henry the Fifth</cite></footer>
 </blockquote>
 ```
 
@@ -415,7 +502,7 @@ Remember to escape angle brackets when printing HTML: <code>&lt;div&gt;</code>
 Use the `<kbd>` element to annotate a key stroke or combination.
 
 ```html_example
-<p>Press <kbd>Cmd+Q</kbd> (or <kbd>Ctrl+Q</kbd> on Windows) to play Half-Life 3.</p>
+<p>Press <kbd>Cmd+Q</kbd> (or <kbd>Ctrl+Q</kbd> on Windows) to exit.</p>
 ```
 
 ---
@@ -434,48 +521,50 @@ Prefer using actual text over text inside a graphic. Assistive technologies can'
 
 ---
 
-## <span id="helper">Typography Helper Classes</span>
+## Typography Helper Classes <span id="helper"></span>
 
-<p class="lead">The helper classes allow you to scaffold certain typographic styles faster.</p>
+<p class="lead">These helper classes allow you to scaffold certain typographic styles faster.</p>
 
 ---
 
 ### Text Alignment
 
-You can change the text alignment of an element by adding `.text-left`, `.text-right`, `.text-center` or `.text-justify` to an element.
+The default text alignment for most containers is left.
+- You can change the text alignment of an element by adding `.text-left`, `.text-right`, or `.text-center` to an element.
+- You can shift alignment at different breakpoints by adding a breakpoint to the front of a text alignment class. For example, `.medium-text-center` will keep text left-aligned on the smallest screens, but switch to center-aligned on medium screens and larger.
 
-Adding a breakpoint to the front of a text alignment class will cause it to only be applied on that size screen or larger. For example, `.medium-text-center` will keep text left-aligned on the smallest screens, but switch to center-aligned on medium screens and larger.
-
-```html
-<p class="text-left"><!-- ... --></p>
-<p class="text-right"><!-- ... --></p>
-<p class="text-center"><!-- ... --></p>
-<p class="text-justify"><!-- ... --></p>
+```html_example
+<p class="text-left"><strong>This text is left-aligned.</strong> </p>
+<p class="medium-text-right"><strong>This text is right-aligned</strong> at medium screen widths and larger.</p>
+<p class="text-center"><strong>This text is center-aligned.</strong> </p>
 ```
-
-<p class="text-left"><strong>This text is left-aligned.</strong> Set in the year 0 F.E. ("Foundation Era"), The Psychohistorians opens on Trantor, the capital of the 12,000-year-old Galactic Empire. Though the empire appears stable and powerful, it is slowly decaying in ways that parallel the decline of the Western Roman Empire.</p>
-
-<p class="text-right"><strong>This text is right-aligned.</strong> Set in the year 0 F.E. ("Foundation Era"), The Psychohistorians opens on Trantor, the capital of the 12,000-year-old Galactic Empire. Though the empire appears stable and powerful, it is slowly decaying in ways that parallel the decline of the Western Roman Empire.</p>
-
-<p class="text-center"><strong>This text is center-aligned.</strong> Set in the year 0 F.E. ("Foundation Era"), The Psychohistorians opens on Trantor, the capital of the 12,000-year-old Galactic Empire. Though the empire appears stable and powerful, it is slowly decaying in ways that parallel the decline of the Western Roman Empire.</p>
-
-<p class="text-justify"><strong>This text is justified.</strong> Set in the year 0 F.E. ("Foundation Era"), The Psychohistorians opens on Trantor, the capital of the 12,000-year-old Galactic Empire. Though the empire appears stable and powerful, it is slowly decaying in ways that parallel the decline of the Western Roman Empire.</p>
 
 ---
 
 ### Lead Paragraph
 
-A slightly-larger-than-normal block of text, useful for decks, blurbs, or other descriptive text.
+A slightly-larger-than-normal block of text, useful for introductory blurbs, or other emphasized text. The `.lead` text is a slightly heavier weight than standard text.
 
 ```html_example
 <p class="lead">What are your cats <em>really</em> dreaming about while they sleep?</p>
+<p class="lead"><strong>Use strong tag for <em>extra</em> emphasis.</strong></p>
+```
+
+---
+
+### Call Out Paragraph <span id="call-out-txt"></span>
+
+A brief, attention-catching key phrase, in a distinctive typeface and color, used as a graphic element, serving to entice readers into the article or to highlight a key topic.
+
+```html_example
+<p class="callout-txt">Visit lots of websites like Realtor, Zillow, Trulia, Homesnap, Redfin, and individual broker websites.</p>
 ```
 
 ---
 
 ### Un-bulleted List
 
-In Foundation, the `<ul>` is a bulleted list by default, but you can add the class `.no-bullet` to remove the bullets from that list.
+The `<ul>` is a bulleted list by default, but you can add the class `.no-bullet` to remove the bullets from that list.
 
 ```html_example
 <ul class="no-bullet">
@@ -531,7 +620,7 @@ These buttons are used for less important, secondary actions on a page.
 ## Hollow Buttons
 
 ```html_example
-<div style="background: #00a6e2">
+<div  class="cta-block_cerulean column">
   <br>
   <a href="#" class="hollow large button">Large button</a>
   <a href="#" class="hollow button">Regular button</a>
@@ -557,7 +646,7 @@ These buttons are used for less important, secondary actions on a page.
 ## Inverted Buttons
 
 ```html_example
-<div style="background: #00a6e2">
+<div class="cta-block_cerulean column">
   <br>
   <a href="#" class="inverted large button">Large button</a>
   <a href="#" class="inverted button">Regular button</a>
@@ -566,6 +655,52 @@ These buttons are used for less important, secondary actions on a page.
   <br>
 </div>
 ```
+
+
+## Close Button <span id="close-button"></span>
+
+A close button is a `<button>` element with the class `.close-button`. We use the multiplication symbol (`&times;`) as the X icon. This icon is wrapped in a `<span>` with the attribute `aria-hidden="true"`, so screen readers don't read the X icon.
+
+The button is also labeled with `aria-label` to clarify what the button's purpose is.
+
+```html_example
+<div class="callout">
+  <button class="close-button" aria-label="Close alert" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <p>Look at this close button!</p>
+</div>
+```
+
+---
+
+### Making Something Closable
+
+
+The close button on its own doesn't close elements, but you can use it with other plugins that have open and close behaviors.
+
+
+<div class="primary callout">
+  <p>Any element can be used as a close trigger, not just close button. Adding the attribute <code>data-close</code> to any element within the callout will turn it into a close trigger.</p>
+</div>
+
+The below example pairs the callout with the close button component and `data-closable` attribute to create a dismissible alert box.
+
+```html_example
+<div class="callout" data-closable>
+  <p>You can so totally close this!</p>
+  <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="success callout" data-closable="slide-out-right">
+  <p>You can close me too, and I close using a Motion UI animation.</p>
+  <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+```
+
 
 
 
@@ -700,7 +835,7 @@ These buttons are used for less important, secondary actions on a page.
         </div>
       </div>
       <div class="medium-8 columns cta-block cta-block_celery" data-equalizer-watch>
-        <div class="">
+        <div>
           <span class="cta-block__category">Freddie Mac Research</span>
           <h3><a href="#">Housing will have its best year in a decade or more. </a></h3>
           <p><a href="#">We think the outlook for global growth will improve—or at least stabilize—throughout the balance of this year and the downward pressure on U.S. rates will abate.</a></p>
@@ -711,7 +846,7 @@ These buttons are used for less important, secondary actions on a page.
   <div class="large-3 columns cta-block cta-block_cerulean cta-block_centered cta-block_xlg-thin-title cta-block_tall">
     <div>
       <span class="cta-block__category">Doing Business With Us</span>
-      <div class="cta-block__img-wrapper"><img src="img/lightbulb.png" alt="lightbulb" /></div>
+      <div class="cta-block__img-wrapper"><img src="/images/lightbulb.png" alt="lightbulb" /></div>
       <h3><a href="#">A Brighter Idea in Loan Production</a></h3>
       <div><a class="hollow large button" href="#">Loan Advisor Suite</a></div>
     </div>
@@ -736,7 +871,7 @@ These buttons are used for less important, secondary actions on a page.
   </a>
   <div class="blog-block__date">May 13, 2016</div>
   <h3><a href="#">Down Payments: There's Help for That</a></h3>
-  <div class="blog-block__cat">Home Ownership</div>
+  <div class="blog-block__cat">Homeownership</div>
   <p>Sed quis mauris at leo blandit cursus. Sed tempor gravida augue. Ut dictum enim velit, in elementum mauris vehicula sed. </p>
 </div>
 ```
@@ -790,7 +925,7 @@ These buttons are used for less important, secondary actions on a page.
     <div class="small-6 large-8 columns">
       <div class="blog-block__date">May 13, 2016</div>
       <h3><a href="#">Down Payments: There's Help for That</a></h3>
-      <div class="blog-block__cat">Home Ownership</div>
+      <div class="blog-block__cat">Homeownership</div>
     </div>
   </div>
 </div>
@@ -887,6 +1022,130 @@ These buttons are used for less important, secondary actions on a page.
 
 
 
+# Call Out
+
+<p class="lead">A callout is just an element with a `.callout` class applied. You can put any kind of content inside.</p>
+
+```html
+<div class="callout">
+  <p>This is a callout.</p>
+</div>
+```
+---
+
+## Coloring
+
+Callouts can be colored using the `.secondary`, `.primary`, `.success`, `.warning`, or `.alert` classes. 
+
+```html_example
+<div class="row">
+  <div class="large-12 columns">
+    <div class="large-4 medium-6 columns">
+      <div class="callout">
+        <h5>This is a default callout.</h5>
+        <p>It has an easy to override visual style, and is appropriately subdued.</p>
+      </div> 
+    </div> 
+    <div class="large-4 medium-6 columns">     
+      <div class="callout success">
+        <h5>This is a callout with class of success</h5>
+        <p>It has an easy to override visual style, and is appropriately subdued.</p>
+      </div>
+    </div>
+    <div class="large-4 medium-6 columns">       
+      <div class="callout primary">
+        <h5>This is a callout with class of primary.</h5>
+        <p>It has an easy to override visual style, and is appropriately subdued.</p>
+      </div> 
+    </div> 
+    <div class="large-4 medium-6 columns">   
+      <div class="callout warning">
+        <h5>This is a callout with class of warning.</h5>
+        <p>It has an easy to override visual style, and is appropriately subdued.</p>
+      </div>
+    </div>
+    <div class="large-4 medium-6 columns">  
+      <div class="callout secondary">
+        <h5>This is a callout with class of secondary.</h5>
+        <p>It has an easy to override visual style, and is appropriately subdued.</p>
+      </div> 
+    </div> 
+    <div class="large-4 medium-6 columns">  
+      <div class="callout alert">
+        <h5>This is a callout with class of alert.</h5>
+        <p>It has an easy to override visual style, and is appropriately subdued.</p>
+      </div>
+    </div>
+  </div>
+</div>  
+```
+ 
+ ---
+
+## Sizing
+
+Callouts can be sized using the `.small` and `.large` classes. These will affect the padding around content to be smaller and larger respectively.
+
+
+```html_example  
+<div class="row">
+  <div class="large-12 columns">
+    <div class="large-6 columns">
+      <div class="callout large">
+        <h5>This is a callout with class of large.</h5>
+        <p>It can support any of the callout color classes shown above.</p>
+      </div>
+    </div> 
+    <div class="large-6 columns">    
+      <div class="callout small">
+        <h5>This is a callout with class of small.</h5>
+        <p>It can support any of the callout color classes shown above.</p>
+      </div>
+    </div>
+  </div>  
+</div>
+```
+
+---
+
+## Making Callouts Closable
+
+Pair the callout with the [close button](#close-button) component and `data-closable` attribute to create a dismissable alert box.
+
+<div class="primary callout">
+  <p>Any element can be used as a close trigger, not just close button. Adding the attribute <code>data-close</code> to any element within the callout will turn it into a close trigger.</p>
+  <p>When using the <code>data-closable</code> attribute, you can optionally add <a href="http://foundation.zurb.com/sites/docs/motion-ui.html">Motion UI</a> classes to the attribute to change the closing animation. If no class is added, the plugin defaults to jQuery's <code>.fadeOut()</code> function.</p>
+</div>
+
+```html_example
+<div class="row">
+  <div class="large-12 columns"> 
+    <div class="large-6 columns">   
+      <div class="alert callout" data-closable>
+        <h5>This is Important!</h5>
+        <p>When you're done reading it, click the close button in the corner to dismiss this alert.</p>
+        <p>I'm using the default <code>data-closable</code> parameters, and simply fade out.</p>
+        <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    </div>
+    <div class="large-6 columns">
+      <div class="success callout" data-closable="slide-out-right">
+        <h5>This a friendly message.</h5>
+        <p>When you're done reading it, click the close button in the corner to dismiss this message.</p>
+        <p>And when you're done with me, I close using a Motion UI animation.</p>
+        <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    </div>
+  </div> 
+</div>  
+``` 
+
+
+
 # Accordions
 
 <p class="lead">Accordions are elements that help you organize and navigate multiple panes of content in a single container.</p>
@@ -948,138 +1207,6 @@ Once you put it all together, here's what you get!
   </li>
 </ul>    
 ```
-
-
-
-# Call Out
-
-<p class="lead">A callout is just an element with a `.callout` class applied. You can put any kind of content inside.</p>
-
-```html
-<div class="callout">
-  <p>This is a callout.</p>
-</div>
-```
----
-
-## Coloring
-
-Callouts can be colored using the `.secondary`, `.primary`, `.success`, `.warning`, or `.alert` classes. 
-
-
-```html_example
-<div class="row">
-  <div class="large-12 columns">
-    <div class="large-4 medium-6 columns">
-      <div class="callout">
-        <h5>This is a callout.</h5>
-        <p>It has an easy to override visual style, and is appropriately subdued.</p>
-        <a href="http://www.lolcats.com/popular/19863-its-dangerous-to-go-alone-take-this.html">It's dangerous to go alone, take this.</a>
-      </div> 
-    </div> 
-    <div class="large-4 medium-6 columns">     
-      <div class="callout success">
-        <h5>This is a callout with class of success</h5>
-        <p>It has an easy to override visual style, and is appropriately subdued.</p>
-        <a href="http://www.lolcats.com/popular/19863-its-dangerous-to-go-alone-take-this.html">It's dangerous to go alone, take this.</a>
-      </div>
-    </div>
-    <div class="large-4 medium-6 columns">       
-      <div class="callout primary">
-        <h5>This is a callout with class of primary.</h5>
-        <p>It has an easy to override visual style, and is appropriately subdued.</p>
-        <a href="http://www.lolcats.com/popular/19863-its-dangerous-to-go-alone-take-this.html">It's dangerous to go alone, take this.</a>
-      </div> 
-    </div> 
-    <div class="large-4 medium-6 columns">   
-      <div class="callout warning">
-        <h5>This is a callout with class of warning.</h5>
-        <p>It has an easy to override visual style, and is appropriately subdued.</p>
-        <a href="http://www.lolcats.com/popular/19863-its-dangerous-to-go-alone-take-this.html">It's dangerous to go alone, take this.</a>
-      </div>
-    </div>
-    <div class="large-4 medium-6 columns">  
-      <div class="callout secondary">
-        <h5>This is a callout with class of secondary.</h5>
-        <p>It has an easy to override visual style, and is appropriately subdued.</p>
-        <a href="http://www.lolcats.com/popular/19863-its-dangerous-to-go-alone-take-this.html">It's dangerous to go alone, take this.</a>
-      </div> 
-    </div> 
-    <div class="large-4 medium-6 columns">  
-      <div class="callout alert">
-        <h5>This is a callout with class of alert.</h5>
-        <p>It has an easy to override visual style, and is appropriately subdued.</p>
-        <a href="http://www.lolcats.com/popular/19863-its-dangerous-to-go-alone-take-this.html">It's dangerous to go alone, take this.</a>
-      </div>
-    </div>
-  </div>
-</div>  
-```
- 
- ---
-
-## Sizing
-
-Callouts can be sized using the `.small` and `.large` classes. These will affect the padding around content to be smaller and larger respectively.
-
-
-```html_example  
-<div class="row">
-  <div class="large-12 columns">
-    <div class="large-6 columns">
-      <div class="callout large">
-        <h5>This is a callout with class of large.</h5>
-        <p>It can support any of the callout color classes shown above.</p>
-      </div>
-    </div> 
-    <div class="large-6 columns">    
-      <div class="callout small">
-        <h5>This is a callout with class of small.</h5>
-        <p>It can support any of the callout color classes shown above.</p>
-      </div>
-    </div>
-  </div>  
-</div>
-```
-
----
-
-## Making Closable
-
-Pair the callout with the [close button](#close-button) component and `data-closable` attribute to create a dismissable alert box.
-
-<div class="primary callout">
-  <p>Any element can be used as a close trigger, not just close button. Adding the attribute <code>data-close</code> to any element within the callout will turn it into a close trigger.</p>
-  <p>When using the <code>data-closable</code> attribute, you can optionally add <a href="http://foundation.zurb.com/sites/docs/motion-ui.html">Motion UI</a> classes to the attribute to change the closing animation. If no class is added, the plugin defaults to jQuery's <code>.fadeOut()</code> function.</p>
-</div>
-
-
-```html_example
-<div class="row">
-  <div class="large-12 columns"> 
-    <div class="large-6 columns">   
-      <div class="alert callout" data-closable>
-        <h5>This is Important!</h5>
-        <p>When you're done reading it, click the close button in the corner to dismiss this alert.</p>
-        <p>I'm using the default <code>data-closable</code> parameters, and simply fade out.</p>
-        <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-    </div>
-    <div class="large-6 columns">
-      <div class="success callout" data-closable="slide-out-right">
-        <h5>This a friendly message.</h5>
-        <p>When you're done reading it, click the close button in the corner to dismiss this message.</p>
-        <p>And when you're done with me, I close using a Motion UI animation.</p>
-        <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-    </div>
-  </div> 
-</div>  
-``` 
 
 
 
@@ -1191,74 +1318,87 @@ Form elements are styled based on their type attribute rather than a class. Inpu
 
 # Heros
 
+<p class="lead">There are several different hero styles, depending upon page type.  For pages that aren't landing pages or relying on a blog-like format, you should use a [page title](#page-title) instead of a hero.</p>
+
 ---
 
-## Default
+## Landing Page Heros
+
+Landing Pages are those pages that are linked from the primary navigation. Add one of the following classes to the `.blue-hero` container to specify the background for a particular landing page: `.perspectives-landing-hero`, `.research-landing-hero`, `.blog-landing-hero`, `.media-landing-hero`, `.about-landing-hero`.
+
+
 ```html_example
-<section class="blue-hero">
+<section class="media-landing-hero blue-hero">
   <div class="blue-hero__overlay"></div>
   <div class="row page-buffer">
-    <div class="row">
-      <div class="blue-hero__txt">
-        <h1>Page title</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-    </div>
-  </div>
+  	<div class="row">
+		  <div class="blue-hero__txt">
+		    <h1>Media Room</h1>
+		  </div>
+		</div>
+	</div>
 </section>
 ```
 
 ---
 
-## Short
+## Blog Detail Heros
+
+Use this hero on Blog article pages.  
+ 
 ```html_example
-<section class="blue-hero blue-hero_short">
+<section class="blog-detail-hero blue-hero">
   <div class="blue-hero__overlay"></div>
   <div class="row page-buffer">
-    <div class="row">
-      <div class="blue-hero__txt">
-        <h1>Page title</h1>
-      </div>
-    </div>
-  </div>
+	  <div class="row">
+		  <div class="blue-hero__txt blue-hero__left">
+		  	<div class="blue-hero__date">May 9, 2016</div>
+		    <h1>Take the Anxiety Out of Your First Home Offer</h1>
+		    <div class="small button-group">
+		    	<a href="#" class="inverted button">Homeownership</a>
+		    </div>
+		  </div>
+		</div>
+	</div>
 </section>
 ```
 
 ---
 
-## Tall
+## Executive Perspectives Heros
+
+Use this hero on Executive Perspectives article pages.  
+ 
 ```html_example
-<section class="blue-hero blue-hero_tall">
+<section class="perspectives-detail-hero blue-hero">
   <div class="blue-hero__overlay"></div>
   <div class="row page-buffer">
-    <div class="row">
-      <div class="blue-hero__txt">
-        <h1>Page title</h1>
-      </div>
-    </div>
-  </div>
+	  <div class="row">
+		  <div class="blue-hero__txt  blue-hero__left">
+		  	<div class="blue-hero__date">August 9, 2016</div>
+		    <h1>Three Reasons Why Baby Boomer Homeowners are a Market to Watch</h1>
+		    <figure class="avatar">
+		      <div>
+		        <img src="/images/exec_david_brickman.jpg" alt="Avatar img" />
+		      </div>
+		      <div>
+		        <figcaption>Article By<br><strong>David Brickman, EVP Multifamily Business</strong></figcaption>
+		      </div>
+		    </figure>
+		  </div>
+		</div>
+	</div>
 </section>
 ```
 
----
 
-## Left Align
-```html_example
-<section class="blue-hero blue-hero_tall blue-hero_left-align">
-  <div class="blue-hero__overlay"></div>
-  <div class="row page-buffer">
-    <div class="row">
-      <div class="blue-hero__txt">
-        <h1>Page title</h1>
-      </div>
-    </div>
-  </div>
-</section>
-```
 
 
 
 # Page Title
+
+Every page should use either a [hero element](#heros) or a page title.
+
 ```html_example
 <section class="page-title">
   <div class="row page-buffer">
@@ -1738,47 +1878,15 @@ Okay, it's not *really* a float, but you can add the `.float-center` class to an
 
 
 
-# Twitter 
-
----
-
-## Twitter Basic
-```html_example
-<div class="twitter-block">
-  <div class="twitter-block__overlay"></div>
-  <div class="twitter-block__txt">
-    <h4>Diana Olick</h4>
-    <h5><a href="#">@dianaolick</a></h5>
-    <p>30 yr fixed rate #mortgage averaged 3.66% for week ending June 2, up from 3.64% previous week, but down from 3.87% one yr ago <strong><a href="#">@FreddieMac</a></strong></p>
-  </div>
-</div>
-```
-
----
-
-## Twitter with Image
-```html_example
-<div class="twitter-block twitter-block_img" style="background-image: url('/images/blog/blog-2.jpg')">
-  <div class="twitter-block__overlay"></div>
-  <div class="twitter-block__txt">
-    <h4>Freddie Mac</h4>
-    <h5><a href="#">@freddiemac</a></h5>
-    <p>Mortgage rates up a bit, but we'll see how markets react on tomorrow's jobs report. <strong><a href="#">http://bit.ly/25CJp9P</a></strong></p>
-  </div>
-</div>
-```
-
-
-
 # Footer
 
 **Note:** The corporate footer will automatically be inserted via the template - do not include this code in your page. 
 
 ```html_example
-<footer>
+<footer class="footer">
   <div class="row page-buffer">
     <div class="footer__top">
-      <ul>
+      <ul class="no-bullet">
         <li><a href="#">Careers</a></li>
         <li><a href="#">Investor Relations</a></li>
         <li><a href="#">Vendors &amp; Suppliers</a></li>
@@ -1787,7 +1895,7 @@ Okay, it's not *really* a float, but you can add the `.float-center` class to an
     <div class="footer__bottom">
       <div class="row">
         <div class="medium-6 columns">
-          <ul>
+          <ul class="no-bullet">
             <li><a href="#">Terms of Use</a></li>
             <li><a href="#">Privacy Policy</a></li>
             <li><a href="#">Sitemap</a></li>
@@ -1806,6 +1914,7 @@ Okay, it's not *really* a float, but you can add the `.float-center` class to an
 
 
 # Popular List Items
+
 ```html_example
 <section class="popular-items">
   <div class="row page-buffer">
@@ -1824,13 +1933,14 @@ Okay, it's not *really* a float, but you can add the `.float-center` class to an
 ---
 
 ## RSS
+
 ```html_example
 <section class="popular-items popular-items_rss">
   <div class="row page-buffer">
     <h2>RSS Blog Feeds</h2>
     <ul>
       <li><a href="#">All Posts</a></li>
-      <li><a href="#">Home Ownership</a></li>
+      <li><a href="#">Homeownership</a></li>
       <li><a href="#">Rental Housing</a></li>
       <li><a href="#">Research &amp; Analysis</a></li>
       <li><a href="#">Notable</a></li>
@@ -1839,12 +1949,11 @@ Okay, it's not *really* a float, but you can add the `.float-center` class to an
 </section>
 ```
 
-
 ---
 
 ## News
 
-The news release lists are automated by MarketWire.
+Note: The news release lists are automated by MarketWire.
 
 
 ```html_example
@@ -1863,6 +1972,8 @@ The news release lists are automated by MarketWire.
 
 
 # Gradient Information
+
+<p class="lead clearfix">For use on the corporate homepage.</p>
 
 ```html_example
 <section class="gradient-info">
@@ -1964,6 +2075,531 @@ Use the class `.show-on-focus` to hide an element, except when it has focus. Add
 <p><a name="skiplink" class="show-on-focus" href="#sampleContent">Skip to Content</a></p>
 
 <div id="sampleContent" role="main" tabindex="0" style="min-height: 1rem;">
+</div>
+```
+
+
+
+# Modals
+
+A standard modal dialog is just an empty container, so you can put any kind of content inside it, from text to forms to images to an entire grid.  At small screen sizes, all modals are full width, and the default for medium or larger is 75%.  To create a modal, 
+
+- Add the attributes `data-open` and `aria-controls` to to the link that opens the modal. The value of both should be the ID of the modal.
+- To the modal container, add the class `.reveal`, the attribute `data-reveal`, and a unique ID (which is used by any link that launches the modal).  
+- Modals by default are accessible through the use of various ARIA attributes.  To make a modal even more accessible, designate a label to the modal by adding an `id` attribute on the elment you want to designate as the label (such as a heading inside the modal) and then adding the same value into an `aria-labelledby` attribute on the modal container.
+
+```html
+<a data-open="customModal" aria-controls="customModal">Link to a modal</a>
+
+<div class="reveal" id="customModal" data-reveal" aria-labelledby="customModalLabel">
+  <h2 id="customModalLabel">Modal Title</h2>
+  // modal contents
+</div>
+
+```
+
+---
+
+## Modal Sizing
+
+Below the medium breakpoint, *all* modals are full screen.  Use the following classes to adjust a modal's size:
+
+|Class    |Below Medium Breakpoint| Between Medium and Large   | Large Breakpoint and up     |
+|---------|:---------------------:|:--------------------------:|:---------------------------:|
+|`.small` |100% w x 100% h        |50% w (max 480p) x content h|480p w x content h           |
+|`.medium`|100% w x 100% h        |75% w (max 720p) x content h|720p w x content h           |
+|(default)|100% w x 100% h        |75% w (max 960p) x content h|960p w x content h           |
+|`.large` |100% w x 100% h        |90% w x content h           |90% w (max 1400p) x content h|
+|`.full`  |100% w x 100% h        |100% w x 100% h             |100% w x 100% h              |
+
+```html_example
+<ol>
+  <li><a data-open="exampleModal5" aria-controls="exampleModal5">View a standard modal at small width</a>. 
+    <div class="small reveal" id="exampleModal5" data-reveal aria-labelledby="Modal5-label">
+      <div class="row">
+        <h3 id="Modal5-label">I'm a small width modal.</h3>
+        <p> I can contain any normal markup, from <a href="/">links</a> to images.  </p>
+        <img src="http://placekitten.com/200/160" alt="kitty">
+      </div>
+    </div>
+  </li>
+  
+  <li><a data-open="exampleModal6" aria-controls="exampleModal6">View a standard modal at medium width</a>.
+    <div class="medium reveal" id="exampleModal6" data-reveal aria-labelledby="Modal6-label">
+      <div class="row">
+        <h3 id="Modal6-label">I'm a medium width modal.</h3>
+        <p> I can contain any normal markup, from <a href="/">links</a> to images.  </p>
+        <img src="http://placekitten.com/200/160" alt="kitty">
+      </div>
+    </div>  
+  </li>  
+  
+  <li><a data-open="exampleModal2" aria-controls="exampleModal2">View a standard modal at default width</a>.
+    <div class="reveal" id="exampleModal2" data-reveal>
+      <div class="row">
+        <p>I'm a modal at the default width.</p>
+        <p> I can contain any normal markup, from <a href="/">links</a> to images.  </p>
+        <img src="http://placekitten.com/200/160" alt="kitty">
+        <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+      </div>
+    </div>
+  </li>
+  
+  <li><a data-open="exampleModal7" aria-controls="exampleModal7">View a standard modal at large width</a>.  
+    <div class="large reveal" id="exampleModal7" data-reveal>
+      <div class="row">
+        <p>I'm a large width modal.</p>
+        <p> I can contain any normal markup, from <a href="/">links</a> to images.  </p>
+        <img src="http://placekitten.com/200/160" alt="kitty">
+      </div>
+    </div>
+  </li>
+  
+  <li><a data-open="exampleModal8" aria-controls="exampleModal8">View a standard modal at full width/height</a> (you'll likely want to add a color overlay - see below).
+    <div class="full reveal" id="exampleModal8" data-reveal>
+      <div class="row">
+        <p>I'm a full width modal.</p>
+        <p> I can contain any normal markup, from <a href="/">links</a> to images.  </p>
+        <img src="http://placekitten.com/200/160" alt="kitty">
+      </div> 
+    </div>    
+  </li>
+</ol>
+```
+
+---
+
+## Color Overlays
+
+Modals can be done with a variety of background colors by adding an `.overlay-xxx` class (where xxx is green, orange, blue, teal, gray, yellow, red, purple) on the `.reveal` element.
+
+```html_example
+<ol>
+  <li><a data-open="fullModal1" aria-controls="fullModal1">View a full width/height modal on green</a>. 
+    <div class="full reveal overlay-green" id="fullModal1" data-reveal aria-labelledby="Modal1-label">
+      <div class="row"> 
+        <h3 id="Modal1-label">I'm a full width modal.</h3>
+        <p> I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
+        <img src="http://placekitten.com/200/160" alt="kitty">
+      </div>  
+    </div>
+  </li>
+  
+  <li><a data-open="fullModal2" aria-controls="fullModal2">View a full width/height modal on orange</a>.
+    <div class="full reveal overlay-orange" id="fullModal2" data-reveal aria-labelledby="Modal2-label">
+      <div class="row"> 
+        <h3 id="Modal1-label">I'm a full width modal.</h3>
+        <p> I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
+        <img src="http://placekitten.com/200/160" alt="kitty">
+      </div>  
+    </div>  
+  </li>  
+  
+  <li><a data-open="fullModal3">View a full width/height modal on blue</a>.  
+    <div class="full reveal overlay-blue" id="fullModal3" data-reveal>
+      <div class="row"> 
+        <h3 id="Modal1-label">I'm a full width modal.</h3>
+        <p> I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
+        <img src="http://placekitten.com/200/160" alt="kitty">
+      </div>  
+    </div>
+  </li>  
+  
+  <li><a data-open="fullModal4">View a full width/height modal on teal</a>.  
+    <div class="full reveal overlay-teal" id="fullModal4" data-reveal>
+      <div class="row"> 
+        <h3 id="Modal1-label">I'm a full width modal.</h3>
+        <p> I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
+        <img src="http://placekitten.com/200/160" alt="kitty">
+      </div>  
+    </div>
+  </li>
+  
+  <li><a data-open="fullModal5">View a full width/height modal on gray</a>.  
+    <div class="full reveal overlay-gray" id="fullModal5" data-reveal>
+      <div class="row"> 
+        <h3 id="Modal1-label">I'm a full width modal.</h3>
+        <p> I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
+        <img src="http://placekitten.com/200/160" alt="kitty">
+      </div>  
+    </div>
+  </li>
+  
+  <li><a data-open="fullModal7">View a full width/height modal on yellow</a>.  
+    <div class="full reveal overlay-yellow" id="fullModal7" data-reveal>
+      <p>I'm a full width modal.</p>
+      <p> I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
+      <img src="http://placekitten.com/200/160" alt="kitty">
+    </div>
+  </li>
+  
+  <li><a data-open="fullModal8">View a full width/height modal on red</a>
+    <div class="full reveal overlay-red" id="fullModal8" data-reveal>
+      <div class="row"> 
+        <h3 id="Modal1-label">I'm a full width modal.</h3>
+        <p> I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
+        <img src="http://placekitten.com/200/160" alt="kitty">
+      </div>  
+    </div>  
+  </li>
+  
+  <li><a data-open="fullModal9">View a full width/height modal on purple</a>
+    <div class="full reveal overlay-purple" id="fullModal9" data-reveal>
+      <div class="row"> 
+        <h3 id="Modal1-label">I'm a full width modal.</h3>
+        <p> I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
+        <img src="http://placekitten.com/200/160" alt="kitty">
+      </div>  
+    </div>  
+  </li>
+</ol>
+```
+
+---
+
+## Nested Modal
+
+It's possible for modals to open other modals. Create a second modal with a unique ID, and then add a click trigger with `data-open` inside the first modal.
+
+```html_example
+<ul>
+  <li><a data-open="exampleModalA" aria-controls="exampleModalA">View a modal</a> that launches a second modal</li>
+</ul>
+
+<!-- This is the first modal -->
+<div class="reveal" id="exampleModalA" data-reveal>
+  <div class="row"> 
+    <h2>Awesome!</h2>
+    <p class="lead">I have another modal inside of me!</p>
+    <p><a class="button secondary" data-open="exampleModalB" aria-controls="exampleModalB">View another modal!</a></p>
+  </div>
+</div>
+
+<!-- This is the nested modal -->
+<div class="reveal" id="exampleModalB" data-reveal>
+  <div class="row"> 
+    <h2>ANOTHER MODAL!!!</h2>
+    <p>I took the place of the first modal.</p>
+  </div>
+</div>
+```
+
+---
+
+## Video Modal
+
+Embedded videos won't maintain their aspect ratio as the width of the screen changes. To avoid squished videos, wrap them in a container with the class `.flex-video`. 
+The default ratio is 4:3. Add the `.widescreen` class to change it to 16:9.  
+
+- If the video is hosted by Vimeo, you should also add the class `.vimeo`.
+- To prevent a video from continuing to play after a modal is closed, add `data-reset-on-close="true"`.
+- To provide a non-javascript fallback link, include the url of the video page in the `href` attribute.
+
+
+```html_example
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=26OUQIjRRbc" data-open="exampleModalC" aria-controls="exampleModalC">View a modal with a (4:3 ratio) video</a>.</li>
+</ul> 
+
+<div class="reveal" id="exampleModalC" data-reveal data-reset-on-close="true">
+  <div class="flex-video">
+    <iframe width="420" height="315" frameborder="0" allowfullscreen src="//www.youtube-nocookie.com/embed/26OUQIjRRbc?rel=0&amp;wmode=transparent"></iframe>
+  </div>
+</div>
+
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=tCg9285bJnY" data-open="exampleModalD" aria-controls="exampleModalD">View a modal with a widescreen (16:9 ratio) video</a>.</li>
+</ul>
+
+<div class="reveal" id="exampleModalD" data-reveal data-reset-on-close="true">
+  <div class="flex-video widescreen">
+    <iframe width="549" height="309" frameborder="0" allowfullscreen src="//www.youtube-nocookie.com/embed/tCg9285bJnY?rel=0&amp;wmode=transparent"></iframe>
+  </div>
+</div>
+```
+
+---
+
+## Image Modal
+
+Image modals are those that contain only an image and a caption, and the image stretches/shrinks to fill the width of the container.  To prevent images from distorting at higher resolutions, the maximum container width for image modals (regardless of size) is the width of the grid (1400px). 
+- To create an image modal, add class `.reveal-image` to the .`reveal` container, and include a `figure` with `img` and `figcaption`. 
+- To provide a non-javascript fallback link, include the url of the larger image in the `href` attribute.  
+- If the modal is being launched from a link on an image, utilize the [`.thumbnail` class](#thumbnail) to provide a focus and hover state on the image.  Below are examples of an image modal being launched from a text link and from a link on a thumbnail image.  
+- 
+
+
+```html_example
+ 
+<ul>
+  <li><a data-open="exampleModalE" href="http://placekitten.com/2300/1600" aria-controls="exampleModalE">View an image modal</a>.</li>
+</ul>
+  
+<div class="reveal reveal-image" id="exampleModalE" data-reveal>
+  <div class="reveal-image-inner">
+    <figure>
+      <img src="http://placekitten.com/2200/1600" alt="kitty">
+      <figcaption>Pretty Kitty!</figcaption>
+    </figure>
+  </div>
+</div>
+
+<ul>
+  <li>View an image modal by clicking the following thumbnail image.<br><a data-open="exampleModalF" class="thumbnail" 
+  href="http://placekitten.com/2300/1600" aria-controls="exampleModalF"><img src="http://placekitten.com/200/160" alt="kitty"></a></li>
+</ul>
+  
+<div class="reveal reveal-image" id="exampleModalF" data-reveal>
+  <div class="reveal-image-inner">
+    <figure>
+      <img src="http://placekitten.com/2300/1600" alt="kitty">
+      <figcaption>Who Doesn't Love Kitties?</figcaption>
+    </figure>
+  </div>  
+</div>
+```
+
+---
+
+## Image Gallery Modal <span id="igallery"></span>
+
+Combine the image modal and the nested modal to achieve an image gallery where the user can navigation through the images one at a time.
+
+```html_example
+<ul>
+  <li><a data-open="galleryModalA" aria-controls="galleryModalA" href="/images/plant1.jpg">View a modal</a> that launches an image gallery</li>
+</ul>
+
+<!-- This is the first modal -->
+<div class="large reveal reveal-image" id="galleryModalA" data-reveal>
+  <div class="reveal-image-inner">
+    <figure>
+      <img src="/images/plant1.jpg" alt="plant 1">
+      <figcaption>Default - center aligned caption.</figcaption>
+      <a class="gallery-previous" data-open="galleryModalD" aria-controls="galleryModalD"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</a>
+      <a class="gallery-next" data-open="galleryModalB" aria-controls="galleryModalB"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</a>
+    </figure>
+  </div>
+</div>
+
+<!-- This is the second modal -->
+<div class="large reveal reveal-image" id="galleryModalB" data-reveal>
+  <div class="reveal-image-inner">
+    <figure>
+      <img src="/images/plant2.jpg" alt="plant 2">
+      <figcaption><p class="text-left">Left-aligned caption.</p><p class="text-left">With more than one paragraph.</p></figcaption>
+      <a class="gallery-previous" data-open="galleryModalA" aria-controls="galleryModalA"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</a>
+      <a class="gallery-next" data-open="galleryModalC" aria-controls="galleryModalC"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</a>
+    </figure>
+  </div>
+</div>
+
+<!-- This is the third modal -->
+<div class="large reveal reveal-image" id="galleryModalC" data-reveal>
+  <div class="reveal-image-inner">
+    <figure>
+      <img src="/images/plant3.jpg" alt="plant 3">
+      <figcaption>
+        <p class="text-left show-for-medium">(example below is how a blockquote would appear - borrowed the idea from My Home.) </p>
+        <blockquote>
+          <p>"The lights burn blue. It is now dead midnight."</p>
+          <footer><cite>William Shakespeare</cite> in <cite>King Henry the Sixth</cite></footer>
+        </blockquote>
+      </figcaption>
+      <a class="gallery-previous" data-open="galleryModalB" aria-controls="galleryModalB"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</a>
+      <a class="gallery-next" data-open="galleryModalD" aria-controls="galleryModalD"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</a>
+    </figure>
+  </div>
+</div>
+
+<!-- This is the fourth modal -->
+<div class="large reveal reveal-image" id="galleryModalD" data-reveal>
+  <div class="reveal-image-inner">
+    <figure>
+      <img src="/images/plant4.jpg" alt="plant 4">
+      <figcaption>This caption is longer than the others to show how things look when the caption is very long, and it contains a <a href="#">hyperlink</a> and formatting such as  <em>emphasis</em> and <strong>strong</strong>, so we can see how they look in a caption. 
+      </figcaption>
+      <a class="gallery-previous" data-open="galleryModalC" aria-controls="galleryModalC"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</a>
+      <a class="gallery-next" data-open="galleryModalA" aria-controls="galleryModalA"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</a>
+    </figure>
+  </div>
+</div>
+```
+
+
+
+# Carousels
+
+<p class="lead">Each carousel is made up of multiple slides.</p>
+
+- The default animation for the carousel is slide out the existing slide while sliding in the replacement slide (direction based on whether you are moving forward or backward through the slides).  See below for [other animation options](#slide_animation).
+- The wrapper for the carousel should use the `.orbit` class and contain a `data-orbit` attribute and a `role="region"` attribute.  For assistive technology, provide an `aria-label` attribute that describes the carousel contents.  The wrapper groups the slides and the slide navigation together.
+- The container for the slides is a `ul` with the class `.orbit-container` (for image carousels, use a `div` with class `.orbit-container`).
+- Each slide is an `li` with the class `.orbit-slide` (for image carousels use a `figure`).
+- By default, slides transition every 5 seconds.  You can stop the auto-play functionality by adding the attribute `data-auto-play="false"`.  
+- Slides can be done with a variety of background colors by adding an `.orbit-slide-xxx` class (where xxx is green, orange, blue, teal, gray, yellow, red, purple) on the `.orbit-slide` element.
+- To shift the dot navigation so that it appears inside the panel, add class `.bullets-overlay` to the `.orbit` element.
+
+```html_example
+<div class="orbit bullets-overlay" role="region" aria-label="Favorite Text Ever" data-orbit data-auto-play="false">
+  <ul class="orbit-container"> 
+    <li class="orbit-slide orbit-slide-yellow">
+      <section>
+        <h3>Slide One</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="text-right"><a class="button orbit-button">Button Link</a></p>
+      </section>
+    </li>
+    <li class="orbit-slide orbit-slide-green">
+      <section>
+        <h3>Slide Two</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="text-center"><a class="button orbit-button">Button Link</a></p>
+      </section>
+    </li>
+    <li class="orbit-slide orbit-slide-orange">
+      <section>
+        <h3>Slide Three</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="text-right"><a class="button orbit-button large">Button Link</a></p>
+      </section>
+    </li>
+    <li class="orbit-slide orbit-slide-red">
+      <section>
+        <h3>Slide Four</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
+        <ul>
+        <li>Duis aute irure dolor in reprehenderit in voluptate.</li>
+        <li>Velit esse cillum dolore eu fugiat nulla pariatur.</li>
+        </ul>
+        <p><a class="button orbit-button">Button Link</a></p>
+      </section>
+    </li>
+    <li class="orbit-slide orbit-slide-purple">
+      <section>
+        <h3>Slide Five</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="text-right"><a class="button tiny orbit-button">Button Link</a></p>
+      </section>
+    </li>
+    <li class="orbit-slide orbit-slide-blue">
+      <section>
+        <h3>Slide Six - Example Without a Button</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </section>
+    </li>
+    <li class="orbit-slide orbit-slide-teal">
+      <section>
+        <h3>Slide Seven</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        <p class="text-right"><a class="button orbit-button">Button Link</a></p>
+      </section>
+    </li>
+    <li class="orbit-slide orbit-slide-gray">
+      <section>
+        <h3>Slide Nine</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p class="text-right"><a class="button orbit-button">Button Link</a></p>
+      </section>
+    </li>
+  </ul>
+</div>
+```
+
+---
+
+## Image Carousel
+
+For an image carousel, each slide consists of a `figure`, `img` and optional `figcaption`.  
+
+- Try to make sure your images are all similar in size and proportion.
+- Each image should still have an `alt` attribute, even if it has an associated caption.  
+- Captions can contain additional markup -- from blockquotes to paragraphs to text formatting.
+- Image carousels **cannot** be used inside a modal window -- instead refer to [Image Gallery Modal](#igallery).
+
+```html_example
+<div class="orbit" role="region" aria-label="Favorite Flower Pictures" data-orbit>
+  <div class="orbit-container">
+    <figure class="orbit-slide">
+      <img src="/images/plant1.jpg" alt="plant 1">
+      <figcaption>Default - center aligned caption.</figcaption>
+    </figure>
+    <figure class="orbit-slide">
+      <img src="/images/plant2.jpg" alt="plant 2">
+      <figcaption><p class="text-left">Left-aligned caption.</p><p class="text-left">With more than one paragraph.</p></figcaption>
+    </figure>
+    <figure class="orbit-slide">
+      <img src="/images/plant3.jpg" alt="plant 3">
+      <figcaption>
+        <p class="text-left show-for-medium">(example below is how a blockquote would appear - borrowed the idea from My Home.) </p>
+        <blockquote>
+          <p>"The lights burn blue. It is now dead midnight."</p>
+          <footer><cite>William Shakespeare</cite> in <cite>King Henry the Sixth</cite></footer>
+        </blockquote>
+      </figcaption>
+    </figure>
+    <figure class="orbit-slide">
+      <img src="/images/plant4.jpg" alt="plant 4">
+      <figcaption>This caption is longer than the others to show how things look when the caption is very long, and it contains a <a href="#">hyperlink</a> and formatting such as  <em>emphasis</em> and <strong>strong</strong>, so we can see how they look in a caption. </figcaption>
+    </figure>
+  </div>
+</div>
+```
+
+---
+
+## Changing the Slide Animation <span id="slide_animation"></span>
+
+Orbit uses [Motion UI](http://foundation.zurb.com/sites/docs/motion-ui.html) CSS classes to animate slides around.  There are four plugin options you can set to change the default effects:
+
+- `data-anim-in-from-left`: transition to play when a slide comes *in from the left*.
+- `data-anim-in-from-right`: transition to play when a slide comes *in from the right*.
+- `data-anim-out-from-left`: transition to play when a slide comes *out from the left*.
+- `data-anim-out-from-right`: transition to play when a slide comes *out from the right*.
+
+Since those option names are pretty *long*, you can also set them all in one HTML attribute, using `data-options`:
+
+```html
+<div class="orbit" role="region" aria-label="Favorite Flower Pictures" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
+```
+
+Below is an example of the same image carousel shown above, but with a fade-in/fade-out animation.
+
+<div class="orbit" role="region" aria-label="Favorite Flower Pictures" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
+  <div class="orbit-container">
+    <figure class="orbit-slide">
+      <img src="/images/plant1.jpg" alt="plant 1">
+      <figcaption>Default - center aligned caption.</figcaption>
+    </figure>
+    <figure class="orbit-slide">
+      <img src="/images/plant2.jpg" alt="plant 2">
+      <figcaption><p class="text-left">Left-aligned caption.</p><p class="text-left">With more than one paragraph.</p></figcaption>
+    </figure>
+    <figure class="orbit-slide">
+      <img src="/images/plant3.jpg" alt="plant 3">
+      <figcaption>
+        <p class="text-left show-for-medium">(example below is how a blockquote would appear - borrowed the idea from My Home.) </p>
+        <blockquote>
+          <p>"The lights burn blue. It is now dead midnight."</p>
+          <footer><cite>William Shakespeare</cite> in <cite>King Henry the Sixth</cite></footer>
+        </blockquote>
+      </figcaption>
+    </figure>
+    <figure class="orbit-slide">
+      <img src="/images/plant4.jpg" alt="plant 4">
+      <figcaption>This caption is longer than the others to show how things look when the caption is very long, and it contains a <a href="#">hyperlink</a> and formatting such as  <em>emphasis</em> and <strong>strong</strong>, so we can see how they look in a caption. </figcaption>
+    </figure>
+  </div>
+</div>
+
+---
+
+### Disabling Transition Animation
+
+To disable the animation, set the `data-use-m-u-i` attribute to `false`.  To stop the auto-play functionality, add the attribute `data-auto-play="false"`.
+
+```html
+<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit data-use-m-u-i="false" data-auto-play="false">
 </div>
 ```
 

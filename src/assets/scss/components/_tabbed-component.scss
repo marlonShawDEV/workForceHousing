@@ -131,9 +131,10 @@ $tab-item-active-color: $primary-color !default;
 
 /// Augments a tab content container to have a vertical style, by shifting the border around. Use this in conjunction with `tabs-content()`.
 @mixin tabs-content-vertical {  
-  border-top: 1px solid $tab-content-border;
+  // border-top: 1px solid $tab-content-border;
+  padding: 0 0 0 1rem;
   .tabs-panel {
-    border-top-width: 1px;
+    // border-top-width: 1px;
   }
 }
 
@@ -202,5 +203,5 @@ $tab-item-active-color: $primary-color !default;
   border-top: 0;
 }
 .tab-wrapper {
-  box-shadow: 0px 1px 3px scale-color($tab-background, $lightness: -5%);
+// box-shadow: 0px 1px 3px scale-color($tab-background, $lightness: -5%);
 }

@@ -1,0 +1,139 @@
+$orbit-palette: (
+  green: $fm-green,
+  orange: $blaze,
+  yellow: $buttercup,
+  red: $crimson,
+  purple: $wisteria,
+  blue: $steel,
+  teal: $niagara,
+  gray: $medium-gray
+);
+
+// temporary fix until Zurb fixes height of carousels on resize
+@include breakpoint(medium down) {
+  ul.orbit-container {
+      height: auto !important;
+  }
+  li.orbit-slide {
+      max-height: none !important;
+  }
+}
+
+.bullets-overlay {
+  .orbit-bullets {
+   top: $global-padding * -4;
+   margin: 0 0 $global-margin * 2;
+    button {
+      background-color: rgba($white, 0.5);
+      &:hover,
+      &:focus,
+      &.is-active {
+        background-color: $white;
+      }
+    }
+    .orbit-previous,
+    .orbit-next {
+      position: relative;
+      line-height: 1;
+      padding: 0;
+      display: inline-block; 
+      width: 1.6rem;     
+      height: 1.6rem;
+      top: 0.5rem;
+      margin: 0 0.5rem;
+      transform: none;
+      &:hover,
+      &:focus {
+        background: none;
+      }
+      &::after {
+        color: $white;
+        content: '\276F';
+        font-size: 1.6rem;
+      }
+    }
+    .orbit-previous::after {
+      content: '\276E';
+    }
+  }
+  .orbit-slide {
+    padding-bottom: $global-padding * 4;
+  }
+}
+.orbit-container {
+  figure.orbit-slide {
+    margin: 0;
+    position: relative;
+    font-size: 1rem;
+    height: 100%;
+    img {
+      @include orbit-image;
+    }
+  } 
+  li.orbit-slide {
+    font-size: rem-calc(18); 
+    @include breakpoint(large) {
+      height: 100%;
+    } 
+  }
+}
+.orbit-slide {
+  .row div:last-child {
+    padding: $global-padding $global-padding * 3 0 $global-padding;
+  }
+  section {
+    position: relative;
+    height: 100%;
+    padding: $global-padding * 2 $global-padding * 4 0;
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+  ul, ol, dl {
+    margin-bottom: $global-margin;
+  }
+  .row {
+    margin-right: 0;
+    height: 100%;
+  } 
+  .orbit-button {
+    border: 3px solid $white; 
+    background: transparent; 
+    &:hover, 
+    &:focus {
+     background: rgba($white, 0.15);
+    }    
+  }
+  figcaption { 
+    @extend .orbit-caption;
+    font-size: inherit;
+    text-align: center;
+    font-size: rem-calc(18);
+    font-weight: $global-weight-medium;
+    @include breakpoint(medium) {
+      font-size: rem-calc(20);
+    }
+    :last-child { margin-bottom: 0;}
+  } 
+  @each $name, $color in $orbit-palette {    
+    &.orbit-slide-#{$name} {      
+      background-color: $color;
+      section {
+        color: foreground($color, $dark-gray, $white);      
+        // only add this when white doesn't work
+        @if (lightness($color) > 60%) {
+          .orbit-button {
+            color: $dark-gray;
+            border-color: $dark-gray;
+          }
+        }  
+        @else {
+           a:not(.button) { 
+             color: $white;
+             text-decoration: underline;
+           }
+        }
+      }  
+    }
+  }
+}
