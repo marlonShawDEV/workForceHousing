@@ -30,6 +30,9 @@ $ribbon-background-desktop: linear-gradient(to bottom, $alabaster 0%, $alabaster
     }
     .submenu {      
         z-index: 499;
+        p {
+          line-height: 1.3;
+        }
     }
     li.active > a {
       box-shadow: none;

@@ -183,6 +183,8 @@
     }
     .top-bar-right > .menu:not(.submenu) {
       z-index: 496;
+      text-transform: uppercase;
+      letter-spacing: 1px;
       > li {
         padding: 0 1.75rem;                 
         > a {
@@ -222,8 +224,13 @@
     .submenu {
       z-index: 496;
       margin-top: -1px;
+      letter-spacing: normal;
       @include nav-submenu-list(1.75rem 1.5rem 0.75rem 1.75rem);
       min-width: rem-calc(250px);
+    }
+    p {
+      font-size: 1rem;
+      line-height: 1.3;
     }
   }
 } 
