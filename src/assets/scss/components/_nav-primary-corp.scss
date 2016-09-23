@@ -146,11 +146,11 @@
   .dropdown.menu > li.is-dropdown-submenu-parent {
     > a::before {
       content: ' ';      
-      height: 0.9em;    
+      height: 0.75em;    
       width: 1em;      
       display: inline-block;
       position: relative;
-      top: 0.125em;
+      top: 0.05em;
       margin-right: 0.5rem;
       background: transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgdmlld0JveD0iMCAwIDUxMiA1MTIiPgo8cGF0aCBmaWxsPSIjZmY2YzAwIiBkPSJNMjU2IDI5OC4zTDI1NiAyOTguMyAyNTYgMjk4LjNsMTc0LjItMTY3LjJjNC4zLTQuMiAxMS40LTQuMSAxNS44IDAuMmwzMC42IDI5LjljNC40IDQuMyA0LjUgMTEuMyAwLjIgMTUuNUwyNjQuMSAzODAuOWMtMi4yIDIuMi01LjIgMy4yLTguMSAzIC0zIDAuMS01LjktMC45LTguMS0zTDM1LjIgMTc2LjdjLTQuMy00LjItNC4yLTExLjIgMC4yLTE1LjVMNjYgMTMxLjNjNC40LTQuMyAxMS41LTQuNCAxNS44LTAuMkwyNTYgMjk4LjN6Ii8+Cjwvc3ZnPg==") no-repeat center center;
     }
