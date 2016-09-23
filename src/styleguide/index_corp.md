@@ -1035,45 +1035,55 @@ The below example pairs the callout with the close button component and `data-cl
 
 ## Coloring
 
-Callouts can be colored using the `.secondary`, `.primary`, `.success`, `.warning`, or `.alert` classes. 
+Callouts can be colored using the `.secondary`, `.primary`, `.success`, `.warning`, or `.alert` classes.
 
 ```html_example
 <div class="row">
-  <div class="large-12 columns">
-    <div class="large-4 medium-6 columns">
+  <div class="medium-12 columns">    
+    <div class="medium-6 columns">
       <div class="callout">
-        <h5>This is a default callout.</h5>
-        <p>It has an easy to override visual style, and is appropriately subdued.</p>
-      </div> 
-    </div> 
-    <div class="large-4 medium-6 columns">     
+        <p>This is a default <a href="#">callout</a>.</p>
+      </div>   
+      <div class="callout hollow">
+        <p>This is a <a href="#">callout</a> with a class of hollow.</p>
+      </div>   
       <div class="callout success">
-        <h5>This is a callout with class of success</h5>
-        <p>It has an easy to override visual style, and is appropriately subdued.</p>
-      </div>
-    </div>
-    <div class="large-4 medium-6 columns">       
+        <p>This is a <a href="#">callout</a> with class of success.</p>
+      </div>       
       <div class="callout primary">
-        <h5>This is a callout with class of primary.</h5>
-        <p>It has an easy to override visual style, and is appropriately subdued.</p>
-      </div> 
-    </div> 
-    <div class="large-4 medium-6 columns">   
+        <p>This is a <a href="#">callout</a> with class of primary.</p>
+      </div>   
       <div class="callout warning">
-        <h5>This is a callout with class of warning.</h5>
-        <p>It has an easy to override visual style, and is appropriately subdued.</p>
+        <p>This is a <a href="#">callout</a> with class of warning.</p>
+      </div>  
+      <div class="callout secondary">
+        <p>This is a <a href="#">callout</a> with class of secondary.</p>
+      </div> 
+      <div class="callout alert">
+        <p>This is a <a href="#">callout</a> with class of alert.</p>
       </div>
     </div>
-    <div class="large-4 medium-6 columns">  
-      <div class="callout secondary">
-        <h5>This is a callout with class of secondary.</h5>
-        <p>It has an easy to override visual style, and is appropriately subdued.</p>
+    <div class="medium-6 columns">     
+      <div class="callout callout-green">
+        <p>This is a <a href="#">callout</a> with a class of callout-green.</p>
+      </div>    
+      <div class="callout callout-yellow">
+        <p>This is a <a href="#">callout</a> with callout-yellow</p>
+      </div>  
+      <div class="callout callout-red">
+        <p>This is a <a href="#">callout</a> with class of callout-red.</p>
       </div> 
-    </div> 
-    <div class="large-4 medium-6 columns">  
-      <div class="callout alert">
-        <h5>This is a callout with class of alert.</h5>
-        <p>It has an easy to override visual style, and is appropriately subdued.</p>
+      <div class="callout callout-purple">
+        <p>This is a <a href="#">callout</a> with class of callout-purple.</p>
+      </div>
+      <div class="callout callout-blue">
+        <p>This is a <a href="#">callout</a> with class of callout-blue.</p>
+      </div> 
+      <div class="callout callout-teal">
+        <p>This is a <a href="#">callout</a> with class of callout-purple.</p>
+      </div>
+      <div class="callout callout-gray">
+        <p>This is a <a href="#">callout</a> with class of callout-gray.</p>
       </div>
     </div>
   </div>
@@ -1091,15 +1101,13 @@ Callouts can be sized using the `.small` and `.large` classes. These will affect
 <div class="row">
   <div class="large-12 columns">
     <div class="large-6 columns">
-      <div class="callout large">
-        <h5>This is a callout with class of large.</h5>
-        <p>It can support any of the callout color classes shown above.</p>
+      <div class="callout callout-purple large">
+        <p>This is a callout with class of large.</p>
       </div>
     </div> 
     <div class="large-6 columns">    
-      <div class="callout small">
-        <h5>This is a callout with class of small.</h5>
-        <p>It can support any of the callout color classes shown above.</p>
+      <div class="callout callout-purple small">
+        <p>This is a callout with class of small.</p>
       </div>
     </div>
   </div>  
@@ -1121,7 +1129,7 @@ Pair the callout with the [close button](#close-button) component and `data-clos
 <div class="row">
   <div class="large-12 columns"> 
     <div class="large-6 columns">   
-      <div class="alert callout" data-closable>
+      <div class="callout callout-red" data-closable>
         <h5>This is Important!</h5>
         <p>When you're done reading it, click the close button in the corner to dismiss this alert.</p>
         <p>I'm using the default <code>data-closable</code> parameters, and simply fade out.</p>
@@ -1131,7 +1139,7 @@ Pair the callout with the [close button](#close-button) component and `data-clos
       </div>
     </div>
     <div class="large-6 columns">
-      <div class="success callout" data-closable="slide-out-right">
+      <div class="callout success" data-closable="slide-out-right">
         <h5>This a friendly message.</h5>
         <p>When you're done reading it, click the close button in the corner to dismiss this message.</p>
         <p>And when you're done with me, I close using a Motion UI animation.</p>
@@ -2227,9 +2235,11 @@ Modals can be done with a variety of background colors by adding an `.overlay-xx
   
   <li><a data-open="fullModal7">View a full width/height modal on yellow</a>.  
     <div class="full reveal overlay-yellow" id="fullModal7" data-reveal>
-      <p>I'm a full width modal.</p>
-      <p> I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
-      <img src="http://placekitten.com/200/160" alt="kitty">
+      <div class="row"> 
+        <p>I'm a full width modal.</p>
+        <p> I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
+        <img src="http://placekitten.com/200/160" alt="kitty">
+      </div>  
     </div>
   </li>
   

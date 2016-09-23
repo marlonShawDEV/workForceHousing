@@ -26,14 +26,13 @@ $overlay-palette: (
   @each $name, $color in $overlay-palette {    
     &.full.overlay-#{$name} {      
       background-color: $color;
-      color: foreground($color, $dark-gray, $white);      
-      a:not(.button) { 
-        color: foreground($color, $anchor-color, $white);  
-        text-decoration: underline;
+      color: $white;      
+      a {
+        @include anchor-on-dark;
       } 
       .close-button-large {
-        background-color: foreground($color, $dark-gray, $white);
-        color: foreground($color, $white, $color);
+        background-color: $white;
+        color: $color;
       }
     }
   } 
@@ -85,7 +84,10 @@ $overlay-palette: (
       @include breakpoint(medium) {
         font-size: rem-calc(20);
       }
-      :last-child { margin-bottom: 0;}
+      :last-child { margin-bottom: 0;}          
+      a {
+        @include anchor-on-dark;
+      } 
     }    
   }
   .gallery-previous {  

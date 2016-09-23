@@ -1,12 +1,52 @@
+$callout-palette: (
+  green: $fm-green,
+  orange: $blaze,
+  yellow: $buttercup,
+  red: $crimson,
+  purple: $wisteria,
+  blue: $steel,
+  teal: $niagara,
+  gray: $medium-gray
+);
+
 .callout {
-  &.success,
-  &.primary  {
-    a {
-      color: darken($cerulean, 10%);
-      &:hover,
-      &:active {
-        color: darken($cerulean, 15%);
-      }
-    }  
+  margin: $callout-margin;
+  padding: $callout-padding;
+  background-color: $callout-background;
+  position: relative;
+  > :first-child {
+    margin-top: 0;
+  }
+  > :last-child {
+    margin-bottom: 0;
+  }        
+  .close-button {
+    color: currentColor;
+  }
+  @each $name, $color in $callout-palette {    
+    &.callout-#{$name} {      
+      background-color: $color;
+      color: $white;
+      border-radius: 0.3rem;
+      a {
+        @include anchor-on-dark;
+      } 
+    }
+  }
+  &.hollow {
+    background: $white;
+    border: $callout-border;
+  }
+  &.small {
+    padding: 0.5rem 1rem;
+  }
+
+  &.large {
+    padding: 1.5rem 2rem;
+  }
+  @each $name, $color in $foundation-palette {
+    &.#{$name} {
+      background-color: scale-color($color, $lightness: $callout-background-fade);
+    }
   }
 }
