@@ -1,0 +1,19 @@
+{ "pages": [
+   {  
+      "name":"Styleguides",
+      "url":"/styleguide/"
+   },
+   {  
+       "name":"Simple Content",
+       "url":"/simple-content.html"
+   },
+   {  
+       "name":"Annual Meeting",
+       "url":"/corporate/annual-meeting.html"
+   },
+   {  
+       "name":"Executive Leadership",
+       "url":"/corporate/executive-leadership.html"
+   }
+  ] 
+} 

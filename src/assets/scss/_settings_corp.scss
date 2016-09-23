@@ -425,8 +425,8 @@ $maincontent-shadow: 0 0 10px rgba($black, 0.5);
 // 25. Orbit
 // ---------
 
-$orbit-bullet-background: $fm-gray;
-$orbit-bullet-background-active: $cerulean;
+$orbit-bullet-background: currentColor;
+$orbit-bullet-background-active: currentColor;
 $orbit-bullet-diameter: 1rem;
 $orbit-bullet-margin: 0.2rem;
 $orbit-bullet-margin-top: 0.8rem;
@@ -556,7 +556,7 @@ $titlebar-padding: 0;
 $titlebar-text-font-weight: inherit;
 $titlebar-icon-color: $cerulean;
 $titlebar-icon-color-hover: $cerulean;
-$titlebar-icon-spacing: 1.75rem 1.125rem 1.125rem;
+$titlebar-icon-spacing: 1.25rem;
 
 // 35. Tooltip
 // -----------

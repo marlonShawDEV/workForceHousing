@@ -71,10 +71,10 @@ $ribbon-background-desktop: linear-gradient(to bottom, $alabaster 0%, $alabaster
     } 
     .button {
       border-width: 0; 
-      background: $buttercup url("/images/icon-search.png")  no-repeat center center / 50% 50%;
+      background: $buttercup url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDUxMiA1MTIiPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik00NDUgMzg2LjdsLTg0LjgtODUuOWMxMy44LTI0LjEgMjEtNTAuOSAyMS03Ny45IDAtODcuNi03MS4yLTE1OC45LTE1OC42LTE1OC45QzEzNS4yIDY0IDY0IDEzNS4zIDY0IDIyMi45YzAgODcuNiA3MS4yIDE1OC45IDE1OC42IDE1OC45IDI3LjkgMCA1NS41LTcuNyA4MC4xLTIyLjRsODQuNCA4NS42YzEuOSAxLjkgNC42IDMuMSA3LjMgMy4xIDIuNyAwIDUuNC0xLjEgNy4zLTMuMWw0My4zLTQzLjhDNDQ5IDM5Ny4xIDQ0OSAzOTAuNyA0NDUgMzg2Ljd6TTIyMi42IDEyNS45YzUzLjQgMCA5Ni44IDQzLjUgOTYuOCA5NyAwIDUzLjUtNDMuNCA5Ny05Ni44IDk3IC01My40IDAtOTYuOC00My41LTk2LjgtOTdDMTI1LjggMTY5LjQgMTY5LjIgMTI1LjkgMjIyLjYgMTI1Ljl6Ii8+PC9zdmc+") no-repeat center center;
       height: 2.1875rem;
-      width: 2.1875rem;
-      padding: 0.25rem 1.25rem;
+      width: 2.25rem;
+      padding: 0;
       transition: none;
       &:hover,
       &:focus {

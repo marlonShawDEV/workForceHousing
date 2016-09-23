@@ -18,19 +18,31 @@ $orbit-palette: (
       max-height: none !important;
   }
 }
-
+.orbit {
+  color: $white;
+  .orbit-bullets {
+   color: $dark-gray;
+  } 
+  button {
+    opacity: 0.45;
+    &:hover,
+    &:focus{
+      opacity: 0.75;
+    }
+    &.is-active {
+      opacity: 1;
+    }
+  }
+  .orbit-previous,
+  .orbit-next {
+    opacity: 1; 
+  }
+}
 .bullets-overlay {
   .orbit-bullets {
+   color: $white;
    top: $global-padding * -4;
-   margin: 0 0 $global-margin * 2;
-    button {
-      background-color: rgba($white, 0.5);
-      &:hover,
-      &:focus,
-      &.is-active {
-        background-color: $white;
-      }
-    }
+   margin: 0 0 $global-margin * 2;    
     .orbit-previous,
     .orbit-next {
       position: relative;
@@ -78,6 +90,31 @@ $orbit-palette: (
   }
 }
 .orbit-slide {
+  color: $white;  
+  a:not(.button) { 
+    color: currentColor;
+    text-decoration: underline;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0; 
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: currentColor;
+      opacity: 0;   
+      transition: opacity 0.3s ease 0s;      
+    }
+    &:hover::after,
+    &:focus::after  {
+      opacity: 0.25;
+    }
+    &:active::after  {
+      opacity: 0.4;
+      transition: none;
+    }
+  }
   .row div:last-child {
     padding: $global-padding $global-padding * 3 0 $global-padding;
   }
@@ -97,12 +134,15 @@ $orbit-palette: (
     height: 100%;
   } 
   .orbit-button {
-    border: 3px solid $white; 
+    border: 3px solid currentColor; 
     background: transparent; 
     &:hover, 
     &:focus {
-     background: rgba($white, 0.15);
-    }    
+      background: rgba($white, 0.25);
+    }
+    &:active {
+      background: rgba($white, 0.4);
+    }
   }
   figcaption { 
     @extend .orbit-caption;
@@ -118,22 +158,6 @@ $orbit-palette: (
   @each $name, $color in $orbit-palette {    
     &.orbit-slide-#{$name} {      
       background-color: $color;
-      section {
-        color: foreground($color, $dark-gray, $white);      
-        // only add this when white doesn't work
-        @if (lightness($color) > 60%) {
-          .orbit-button {
-            color: $dark-gray;
-            border-color: $dark-gray;
-          }
-        }  
-        @else {
-           a:not(.button) { 
-             color: $white;
-             text-decoration: underline;
-           }
-        }
-      }  
     }
   }
 }

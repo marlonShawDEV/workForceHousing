@@ -85,11 +85,9 @@
 			opacity: .8;
 		}
 		.blog-block__txt {
-			left: 50%;
-			top: 50%;
+      @include absolute-center;
 			bottom: auto;
 			text-align: center;
-			transform: translate(-50%, -50%);
 			width: 60%;
 			visibility: visible;
 			h3 {

@@ -15,6 +15,15 @@
     {{> ribbon}}
     
     {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+
+{{#if event}}    
+ <ul>
+  {{#each event.pages}}
+    <li class="item-name"><a href="{{url}}">{{name}}</a></li> 
+  {{/each}}
+</ul>
+{{/if}}
+
     {{> body}}
 
     <span id="isMobile"></span>
