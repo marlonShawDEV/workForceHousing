@@ -1,0 +1,27 @@
+{ "page": [
+   {  
+      "name":"Corporate Site (Responsive)",
+      "url":"/styleguide/styleguide_corp.html"
+   },
+   {  
+       "name":"Multifamily Site",
+       "url":"http://www.freddiemac.com/special/style_guide/mf/"
+   },
+   {  
+       "name":"Single-family Site (old Corp template)",
+       "url":"http://www.freddiemac.com/special/style_guide/fm/"
+   },
+   {  
+       "name":"Capital Markets (old Corp template)",
+       "url":"http://www.freddiemac.com/special/style_guide/fm/"
+   },
+   {  
+       "name":"My Home by Freddie Mac",
+       "url":"http://myhome.freddiemac.com/style_guide/"
+   },
+   {  
+       "name":"Web Based Applications Template",
+       "url":"http://www.freddiemac.com/terms/brand_standards/"
+   }
+  ] 
+} 

@@ -1,39 +1,46 @@
-// custom styles for anchors
-/// secured anchor links display a padlock icon
-/// temporarily usding old image until Jon decides about icons
-.secured {
-  position:relative;
-  &::after {
-    content: "";
-    display:inline-block;
-    height: 1rem; 
-    width: 1rem;
-    background: transparent url("/images/linkmarker_sprite.png") no-repeat 1px -35px;
+a.overlay  {
+  display: inline-block;  
+  background: $primary-color;  
+  max-width: 100%;
+  transition: 0.3s ease;
+  &:hover,
+  &:focus,
+  &:active {
+    img {
+      opacity: 0.22;
+    }
   }
 }
 
-// forward links include a forward angle
-a.forward {
-  &::after {
-    content: ">";
-    padding-left: .5em;
-  }
-}
-
+// forward links include a forward chevron marker
 // anchor states for the item and the marker should have identical styles
 a.forward { 
-  color: $blaze; 
+  color: $blaze;   
+  &::after {
+    width: 1em;
+    height: 1em;
+    margin-left: 0.25em; 
+    margin-bottom: -2px;
+    background-size: cover;
+    display: inline-block;
+    content: "";
+    background-image: icon(chevron-right, $blaze);
+    background-size: cover;
+  }
   &:hover,
   &:focus {
     color: scale-color($blaze, $lightness: -10%);    
     @if $anchor-text-decoration-hover != $anchor-text-decoration {
       text-decoration: $anchor-text-decoration-hover;
     }
+    &::after {
+      background-image: icon(chevron-right, scale-color($blaze, $lightness: -10%));
+    }
   }
-  :active & {
+  &:active {
     color: scale-color($blaze, $lightness: -20%);
-  }
-  &::after { 
-  color: inherit; 
+    &::after {
+      background-image: icon(chevron-right, scale-color($blaze, $lightness: -20%));
+    }
   }
 }

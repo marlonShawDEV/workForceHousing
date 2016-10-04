@@ -14,29 +14,7 @@
 [type='color'], 
 textarea {
 	&.outline {
-		background: $buttercup;
 		border: 1px solid $white;
-		border-radius: 5px;
-		color: $white;
-		font-weight: $global-weight-medium;
-		height: 43px;
-
-		&::-webkit-input-placeholder { 
-		  color: $white;
-		}
-		&::-moz-placeholder { 
-		  color: $white;
-		}
-		&:-ms-input-placeholder { 
-		  color: $white;
-		}
-		&:-moz-placeholder { 
-		  color: $white;
-		}
-
-		&.primary {
-			background: $primary-color;
-		}
 	}
 }
 
@@ -51,5 +29,8 @@ textarea {
 			white-space: nowrap;
 		}
 	}
+  [type='email'] {
+    margin-bottom: 0;
+  }
 }
 

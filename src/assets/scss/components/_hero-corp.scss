@@ -174,14 +174,6 @@
       @include grid-column(7);
     }
 		}
-	.button-group {
-		.button {
-			margin-bottom: 15px;
-		}
-	}
-	.avatar {
-		margin: 0;
-	}
 	&__date {
 		font-size: rem-calc(16);
 		font-weight: $global-weight-light;

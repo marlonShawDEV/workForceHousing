@@ -6,14 +6,22 @@ $callout-palette: (
   purple: $wisteria,
   blue: $steel,
   teal: $niagara,
-  gray: $medium-gray
+  gray: $medium-gray,
+  primary: $primary-color
 );
 
 .callout {
   margin: $callout-margin;
-  padding: $callout-padding;
   background-color: $callout-background;
+  border-radius: 0.3rem;
   position: relative;
+  padding: $callout-padding;
+  &.large {
+    padding: $callout-padding * 2;
+  }
+  &.small {
+    padding: $callout-padding * 0.5;
+  }
   > :first-child {
     margin-top: 0;
   }
@@ -23,26 +31,18 @@ $callout-palette: (
   .close-button {
     color: currentColor;
   }
+  &.hollow {
+    background-color: $white;
+    border: 0.1875rem solid $callout-background;
+  }
   @each $name, $color in $callout-palette {    
     &.callout-#{$name} {      
       background-color: $color;
       color: $white;
-      border-radius: 0.3rem;
       a {
         @include anchor-on-dark;
       } 
     }
-  }
-  &.hollow {
-    background: $white;
-    border: $callout-border;
-  }
-  &.small {
-    padding: 0.5rem 1rem;
-  }
-
-  &.large {
-    padding: 1.5rem 2rem;
   }
   @each $name, $color in $foundation-palette {
     &.#{$name} {

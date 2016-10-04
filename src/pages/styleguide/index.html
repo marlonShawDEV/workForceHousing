@@ -16,14 +16,13 @@
 
     <div class="column row">
       <h1>Style Guides for Freddie Mac Sites</h1>
-      <ul>
-      <li><a href="styleguide_corp.html">Corporate Site</a></li>
-      <li><a href="http://www.freddiemac.com/special/style_guide/mf/">Multifamily Site</a></li>
-      <li><a href="http://www.freddiemac.com/special/style_guide/fm/">Single-family Site</a></li>
-      <li><a href="http://www.freddiemac.com/special/style_guide/fm/">Investments Site</a></li>
-      <li><a href="http://myhome.freddiemac.com/style_guide/">My Home by Freddie Mac<sup>SM</sup></a></li>
-      <li><a href="http://www.freddiemac.com/terms/brand_standards/">Web Based Applications Template</a></li>
-      </ul>
+          {{#if guides}}    
+           <ul>
+            {{#each guides.page}}
+              <li class="item-name"><a href="{{url}}">{{name}}</a></li> 
+            {{/each}}
+          </ul>
+          {{/if}}
     </div>
 
 

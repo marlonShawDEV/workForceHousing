@@ -62,8 +62,10 @@
 	&_celery {
 		background: $celery;
 	}
-
-	&_buttercup, &_cerulean, &_sushi, &_celery {
+	&_niagara {
+		background: $niagara;
+	}
+	&_buttercup, &_cerulean, &_sushi, &_celery, &_niagara {
 		color: $white;
 		h3, p {
 			a {
@@ -108,22 +110,8 @@
 			>div {
 				padding-top: 20px;
 			}
-			.button.hollow {
-				padding-right: 1.5em;
-				padding-left: 1.5em;
-			}
 		}
 	}
-
-	&.no-desc-mobile {
-		p {
-			display: none;
-			@include breakpoint(medium) {
-				display: block;
-			}
-		}
-	}
-
 }
 
 .home-grid.row.collapse {
@@ -152,6 +140,3 @@
 		background: $sushi;
 	}
 }
-
-
-

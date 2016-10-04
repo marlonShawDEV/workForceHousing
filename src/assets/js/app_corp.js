@@ -128,7 +128,9 @@ function navHoverOff(){
     $('.primary-nav').find('.current-hover').removeClass('current-hover');  
     $('.secondary-nav').removeClass('highlight').find('.current-hover').removeClass('current-hover').addClass('hide');
 }
-
+function navExpandAccordions() {
+    $("#main-nav").find(".is-accordion-submenu-parent").find("a").click();     
+}
 function init() {
 	// call functions
   adjustSidebar.init();
@@ -149,5 +151,6 @@ $('#nav-perspectives, #nav-research, #nav-blog, #nav-news, #nav-about, #subnav-p
   $(this).mouseenter(function(){var id = $(this).attr('id'), i = id.match(/^sub/) ? id.replace(/^subnav/,"nav") : id; navHoverOn(i);}
   ).mouseleave(function(){ navHoverOff();})
 });
-$(document).foundation();  
+$(document).foundation(); 
+$("#primary-nav").on('toggle.zf.trigger', navExpandAccordions); 
 $(document).ready(init);

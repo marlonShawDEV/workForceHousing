@@ -43,7 +43,7 @@ $ribbon-background-desktop: linear-gradient(to bottom, $alabaster 0%, $alabaster
       background: $ribbon-background-desktop;
        .active > a {
         color: $fm-green;
-        font-weight: 500;
+        font-weight: $global-weight-medium;
       }
       >  li:not(.active):hover > a,
       > li:not(.active) > a:focus,

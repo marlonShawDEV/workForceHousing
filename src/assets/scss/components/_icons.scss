@@ -1,0 +1,74 @@
+// add parameters to path
+@function svg-path($path, $parameters) {
+  $fill: '';
+  $stroke: '';
+  $style: '';
+  @if (map-get($parameters, fill) != '') { $fill: ' fill="#{map-get($parameters, color)}"'; }
+  @if (map-get($parameters, stroke-width) != 0) { $stroke: ' stroke="#{map-get($parameters, stroke-color)}" stroke-width="#{map-get($parameters, stroke-width)}"';  }
+  @if (map-get($parameters, css) != '') { $style: ' style="#{map-get($parameters, css)}"'; }
+  $icon: '<path#{$fill}#{$stroke}#{$style} d="#{$path}" />';
+  @return $icon;
+}
+
+// build svg icon markup
+@function svg-icon($path,$w,$h,$x,$y,$vw,$vh) {
+  $icon: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{$w}" height="#{$h}" viewBox="#{$x} #{$y} #{$vw} #{$vh}">#{$path}</svg>';
+  @return $icon;
+}
+
+//
+//  Function to replace characters in a string
+//
+@function str-replace($string, $search, $replace: '') {
+    $index: str-index($string, $search); 
+    @if $index { @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace); }
+    @return $string; 
+}
+
+//
+//  Function to create an optimized svg url
+//  (may need a few extra replacements)
+//
+@function svg-url($svg){
+    $svg: str-replace($svg,'"',"%22"); 
+    $svg: str-replace($svg,'<','%3C');
+    $svg: str-replace($svg,'>','%3E');
+    $svg: str-replace($svg,'&','%26');
+    $svg: str-replace($svg,'#','%23');
+    $svg: str-replace($svg,' ','%20');
+    @return url("data:image/svg+xml;charset=utf8,#{$svg}");   
+}
+
+
+@function icon($icon-name, $color, $width: 1rem, $height: 1rem, $vbox-min-x: 0, $vbox-min-y: 0, $vbox-width: 512, $vbox-height: 512, $stroke-color: '', $stroke-width: 0, $css: ''){
+    $parameters: ('color': $color,'stroke-color': $stroke-color,'stroke-width': $stroke-width,'css': $css);    
+    $icons: (
+      chevron-down: svg-path('M256 298.3l174.2-167.2c4.3-4.2 11.4-4.1 15.8.2l30.6 29.9c4.4 4.3 4.5 11.3.2 15.5L264.1 380.9c-2.2 2.2-5.2 3.2-8.1 3-3 .1-5.9-.9-8.1-3L35.2 176.7c-4.3-4.2-4.2-11.2.2-15.5L66 131.3c4.4-4.3 11.5-4.4 15.8-.2L256 298.3z', $parameters),
+      chevron-up: svg-path('M256 213.7L256 213.7 256 213.7l174.2 167.2c4.3 4.2 11.4 4.1 15.8-0.2l30.6-29.9c4.4-4.3 4.5-11.3 0.2-15.5L264.1 131.1c-2.2-2.2-5.2-3.2-8.1-3 -3-0.1-5.9 0.9-8.1 3L35.2 335.3c-4.3 4.2-4.2 11.2 0.2 15.5L66 380.7c4.4 4.3 11.5 4.4 15.8 0.2L256 213.7z', $parameters),
+      chevron-right: svg-path('M298.3 256L131.1 81.9c-4.2-4.3-4.1-11.4.2-15.8l29.9-30.6c4.3-4.4 11.3-4.5 15.5-.2L380.9 248c2.2 2.2 3.2 5.2 3 8.1.1 3-.9 5.9-3 8.1L176.7 476.8c-4.2 4.3-11.2 4.2-15.5-.2L131.3 446c-4.3-4.4-4.4-11.5-.2-15.8L298.3 256z', $parameters),
+      close: svg-path('M443.6 387.1L312.4 255.4l131.5-130c5.4-5.4 5.4-14.2 0-19.6l-37.4-37.6c-2.6-2.6-6.1-4-9.8-4 -3.7 0-7.2 1.5-9.8 4L256 197.8 124.9 68.3c-2.6-2.6-6.1-4-9.8-4 -3.7 0-7.2 1.5-9.8 4L68 105.9c-5.4 5.4-5.4 14.2 0 19.6l131.5 130L68.4 387.1c-2.6 2.6-4.1 6.1-4.1 9.8 0 3.7 1.4 7.2 4.1 9.8l37.4 37.6c2.7 2.7 6.2 4.1 9.8 4.1 3.5 0 7.1-1.3 9.8-4.1L256 313.1l130.7 131.1c2.7 2.7 6.2 4.1 9.8 4.1 3.5 0 7.1-1.3 9.8-4.1l37.4-37.6c2.6-2.6 4.1-6.1 4.1-9.8C447.7 393.2 446.2 389.7 443.6 387.1z', $parameters),
+      close-circle: svg-path('M256 33C132.3 33 32 133.3 32 257c0 123.7 100.3 224 224 224 123.7 0 224-100.3 224-224C480 133.3 379.7 33 256 33zM364.3 332.5c1.5 1.5 2.3 3.5 2.3 5.6 0 2.1-0.8 4.2-2.3 5.6l-21.6 21.7c-1.6 1.6-3.6 2.3-5.6 2.3-2 0-4.1-0.8-5.6-2.3L256 289.8l-75.4 75.7c-1.5 1.6-3.6 2.3-5.6 2.3-2 0-4.1-0.8-5.6-2.3l-21.6-21.7c-1.5-1.5-2.3-3.5-2.3-5.6 0-2.1 0.8-4.2 2.3-5.6l75.7-76-75.9-75c-3.1-3.1-3.1-8.2 0-11.3l21.6-21.7c1.5-1.5 3.5-2.3 5.6-2.3 2.1 0 4.1 0.8 5.6 2.3l75.7 74.7 75.7-74.7c1.5-1.5 3.5-2.3 5.6-2.3 2.1 0 4.1 0.8 5.6 2.3l21.6 21.7c3.1 3.1 3.1 8.2 0 11.3l-75.9 75L364.3 332.5z', $parameters),
+      search: svg-path('M445 386.7l-84.8-85.9c13.8-24.1 21-50.9 21-77.9 0-87.6-71.2-158.9-158.6-158.9C135.2 64 64 135.3 64 222.9c0 87.6 71.2 158.9 158.6 158.9 27.9 0 55.5-7.7 80.1-22.4l84.4 85.6c1.9 1.9 4.6 3.1 7.3 3.1 2.7 0 5.4-1.1 7.3-3.1l43.3-43.8C449 397.1 449 390.7 445 386.7zM222.6 125.9c53.4 0 96.8 43.5 96.8 97 0 53.5-43.4 97-96.8 97 -53.4 0-96.8-43.5-96.8-97C125.8 169.4 169.2 125.9 222.6 125.9z', $parameters)
+    );
+
+    $icon: svg-icon(map-get($icons, $icon-name), $width, $height, $vbox-min-x, $vbox-min-y, $vbox-width, $vbox-height);
+    @return svg-url('#{$icon}');
+  }
+ 
+
+.icon-chevron-down::after {
+  background-image: icon(chevron-down, $black);
+}
+.icon-chevron-up {
+  background-image: icon(chevron-up, $black);
+}
+.icon-close {
+  background-image: icon(close-circle, $fm-gray);
+}
+.icon-close-circle {
+  background-image: icon(close-circle, $white);
+}
+.icon-search {
+  background-image: icon(search, $white);
+
+}

@@ -1,12 +1,11 @@
 .button {
 	border-color: transparent;
 	border-style: solid;
-	border-radius: 20px;
+	border-radius: 999em;  //guaranteed pill shape at all sizes
 	font-weight: $global-weight-bold;
 	text-transform: uppercase;
 	transition: all 0.3s ease;
 	&.large {
-		border-radius: 30px;
 		@include breakpoint(medium) {
 			font-size: rem-calc(22);
 		}
@@ -25,24 +24,31 @@
 			background: $white;
 		}
 		&.primary {
-			border-color: $primary-color;
 			color: $primary-color;
+			border-color: currentColor;
 		}
 		&.secondary {
-			border-color: $secondary-color;
 			color: $secondary-color;
+			border-color: currentColor;
 		}
 	}
 	
 	&.hollow {
-		border-color: $white;
 		border-width: 2px;
-		color: $white;
-		&:hover {
-			border-color: $white;
-			background: $white;
-			color: $primary-color;
-		}
+		color: $white; 
+		border-color: $white;
+    background: transparent; 
+    &:hover, 
+    &:focus {
+      background: rgba($black, 0.14);
+      color: rgba($white, 0.85); 
+      border-color: rgba($white, 0.85);
+    }
+    &:active {
+      background: rgba($black, 0.22);
+      color: rgba($white, 0.75); 
+      border-color: rgba($white, 0.75);
+    }
 		&.darken {
 			border-color: $fm-gray;
 			color: $fm-gray;
@@ -57,11 +63,21 @@
 	&.inverted {
 		background: $white;
 		color: $primary-color;
-		&:hover {
+		&:hover,
+    &:focus  {
 			background: transparent;
 			border-color: $white;
 			color: $white;
 		}
 	}
+  
+  svg { 
+    fill: currentColor;
+    height: 1em;
+    width: 1em;
+  }
+}
+.button-group .button {
+  border-radius: 0;
 }
  

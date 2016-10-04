@@ -1,0 +1,59 @@
+{ "page": [
+   {  
+      "name":"Homepage",
+      "url":"/corporate/"
+   },
+   {  
+       "name":"Simple Content",
+       "url":"/simple-content.html"
+   },
+   {  
+       "name":"Executive Leadership",
+       "url":"/corporate/executive-leadership.html"
+   },
+   {  
+       "name":"Blog Landing",
+       "url":"/corporate/blog-landing.html"
+   },
+   {  
+       "name":"Blog Detail",
+       "url":"/corporate/blog-detail.html"
+   },
+   {  
+       "name":"Perspectives Landing",
+       "url":"/corporate/perspectives-landing.html"
+   },
+   {  
+       "name":"Perspectives Detail",
+       "url":"/corporate/perspectives-detail.html"
+   },
+   {  
+       "name":"Media Landing",
+       "url":"/corporate/media-landing.html"
+   },
+   {  
+       "name":"Media Detail",
+       "url":"/corporate/modia-and-press.html"
+   },
+   {  
+       "name":"About Landing",
+       "url":"/corporate/about-landing.html"
+   },
+   {  
+       "name":"Governance (About subpage)",
+       "url":"/corporate/tertiary-nav.html"
+   },
+   {  
+       "name":"Annual Meeting (About sub-subpage)",
+       "url":"/corporate/annual-meeting.html"
+   },
+   {  
+       "name":"Agenda (About sub-sub-subpage)",
+       "url":"/corporate/tertiary-nav3.html"
+   },
+   {  
+       "name":"Style Guides",
+       "url":"/styleguide/"
+   }
+  ] 
+} 

@@ -2,7 +2,7 @@
     position: relative;
 }
 .secondary-nav {
-  font-weight: 500;
+  font-weight: $global-weight-medium;
   position: relative;
   width: 100%;
   &.on {    
@@ -20,10 +20,10 @@
     color: $medium-gray;
   }
 }
-
+// .secondary-nav.expanded .no-bullet > li > a
 @include breakpoint(medium down) {    
   .secondary-nav {    
-    &.on {
+    &.on {      
       .no-bullet {
         @include accordion-container;  
         width: 100%;
@@ -36,11 +36,17 @@
           > a {
             @include accordion-pointers-title($medium-gray, $light-gray, false);
             font-size: 1rem;
+            background: $white;
+            &:hover,
+            &:focus,
+            &:active {
+              background: $white;
+            }
           }
         }
         .menu {
           @include accordion-content;
-          background: inherit;
+          background: $white;
           padding: 0;
           > li {
             display: block;
@@ -58,7 +64,13 @@
       z-index:494;
       .no-bullet {
         > li > a {
-           @include accordion-pointers-active($medium-gray, $light-gray);  
+          @include accordion-pointers-active($medium-gray, $light-gray);  
+          background: $white;
+          &:hover,
+          &:focus,
+          &:active {
+            background: $white;
+          }
         }
         .menu {
           display: block;

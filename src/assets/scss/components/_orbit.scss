@@ -23,7 +23,7 @@ $orbit-palette: (
   .orbit-bullets {
    color: $dark-gray;
   } 
-  button {
+  button:not(.button) {
     opacity: 0.45;
     &:hover,
     &:focus{
@@ -101,9 +101,6 @@ $orbit-palette: (
     position: relative;
     height: 100%;
     padding: $global-padding * 2 $global-padding * 4 0;
-    :last-child {
-      margin-bottom: 0;
-    }
   }
   ul, ol, dl {
     margin-bottom: $global-margin;
@@ -112,17 +109,6 @@ $orbit-palette: (
     margin-right: 0;
     height: 100%;
   } 
-  .orbit-button {
-    border: 3px solid currentColor; 
-    background: transparent; 
-    &:hover, 
-    &:focus {
-      background: rgba($white, 0.25);
-    }
-    &:active {
-      background: rgba($white, 0.4);
-    }
-  }
   figcaption { 
     @extend .orbit-caption;
     font-size: inherit;

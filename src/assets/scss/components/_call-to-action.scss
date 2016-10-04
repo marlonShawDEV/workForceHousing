@@ -1,3 +1,4 @@
+
 .page-cta {
 	background: $primary-color;
 	color: $white;
@@ -12,17 +13,6 @@
 	}
 	&_buttercup {
 		background: $buttercup;
-	}
-
-	&__overlay {
-		background: $primary-color;
-		opacity: 0.8;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: 1;
 	}
 
 	&__cat {
@@ -41,17 +31,6 @@
 		}
 	}
 
-	p {
-		font-size: rem-calc(22);
-		font-weight: $global-weight-light;
-		margin: 1.5em 0;
-		@include breakpoint(large) {
-			&:not(.lead) {
-        margin-bottom: 0;
-      }
-		}
-	}
-
 	&__wrapper {
 		position: relative;
 		z-index: 2;
@@ -62,28 +41,33 @@
 	}
 
 	&__txt {
-		@include breakpoint(large) {
-			@include grid-col-size(7);
+    @include breakpoint(medium) {
+    }
+    @include breakpoint(large) {
+			@include grid-col-size(8);
+      padding-right: 7rem;
 			display: table-cell;
-			float: none;
+      p {
+        font-size: rem-calc(22);
+        font-weight: $global-weight-light;
+        margin: 1.5em 0;
+        @include breakpoint(large) {
+          &:not(.lead) {
+            margin-bottom: 0;
+          }
+        }
+      }      
 		}
 	}
 
 	&__btn {
-		text-align: center;
+    @include breakpoint(medium) {
+      text-align: right;
+    }
 		@include breakpoint(large) {
-			@include grid-col-size(5);
+			@include grid-col-size(4);
 			display: table-cell;
-			float: none !important;
-			text-align: right;
 			vertical-align: middle;
-		}
-
-		input {
-			@include breakpoint(large) {
-				float: right;
-				max-width: 304px;
-			}
 		}
 
 		.expanded {
@@ -92,6 +76,9 @@
 				width: auto;
 			}
 		}
+    input {
+      max-width: rem-calc(300px);
+    }
 
 		.input-btn-respond {
 			@include breakpoint(small down) {
@@ -117,9 +104,6 @@
 			font-size: rem-calc(32);
 			margin-bottom: .5rem;
 		}
-		p {
-			margin-top: 0;
-		}
 		.page-cta__wrapper {
 			display: block;
 			@include breakpoint(large) {
@@ -134,17 +118,14 @@
 		}
 		.page-cta__btn {
 			margin-top: 2rem;
+      text-align: left;
 		}
 		.input-btn-respond {
 			display: block;
-			>div {
-				display: block;
-				white-space: normal;
-			}
-			input {
-				float: none;
-			}
 		}
+    p {
+      font-size: rem-calc(18);
+    }
 	}
 
 	&_feature {
@@ -156,3 +137,4 @@
 		}
 	}
 }
+

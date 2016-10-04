@@ -2,12 +2,32 @@
   <div class="top-bar row page-buffer"> 
     <div class="title-bar hide-for-large" id="top-bar-title" data-responsive-toggle="main-nav" data-hide-for="large">
       <div class="float-right">
-        <button class="menu-icon" type="button" data-toggle="primary-nav" aria-label="toggle menu"></button>
+        <button class="toggle-icon" type="button" data-toggle="primary-nav" aria-label="toggle menu"></button>
       </div>
         <a href="/"><span>Freddie Mac Home</span><img class="mobile-logo" src="/images/fm-logo-mobile.png" alt="Freddie Mac logo"></a>
     </div>
     <nav class="top-bar-right" id="main-nav">      
-      <ul class="menu" data-responsive-menu="accordion large-dropdown">
+      <ul class="menu" data-responsive-menu="accordion large-dropdown">       
+        <li class="hide-for-large">              
+          <form action="http://search.freddiemac.com/search" method="get" accept-charset="utf-8">
+            <input type="hidden" name="entqr" value="0">
+            <input type="hidden" name="output" value="xml_no_dtd">
+            <input type="hidden" name="sort" value="date:D:L:d1">
+            <input type="hidden" name="client" value="default_frontend">
+            <input type="hidden" name="ud" value="1">
+            <input type="hidden" name="oe" value="UTF-8">
+            <input type="hidden" name="ie" value="UTF-8">
+            <input type="hidden" name="proxystylesheet" value="default_frontend">
+            <input type="hidden" name="getfields" value="description">
+            <input type="hidden" name="site" value="default_collection">
+            <div class="input-group">
+              <input type="search" placeholder="Search" name="q" class="input-group-field">	                
+              <div class="input-group-button">
+                <button type="submit" class="button" aria-label="submit search"></button>
+              </div>
+            </div> 
+          </form>  
+        </li>
         <li id="nav-perspectives"><a href="/corporate/perspectives-landing.html">Perspectives</a>
         </li>
         <li id="nav-research"><a href="#">Research</a>

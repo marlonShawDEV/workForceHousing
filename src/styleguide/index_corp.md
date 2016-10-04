@@ -342,7 +342,7 @@ As you've probably noticed in the examples above, you have access to a small, me
 
 Foundation includes styles for all headings&mdash;they're balanced and sized along a modular scale.
 
-<div class="callout primary">
+<div class="callout">
   <p>Avoid skipping heading levels when structuring your document, as it confuses screen readers. For example, after using an <code>&lt;h2&gt;</code> in your code, the next heading used should be either <code>&lt;h2&gt;</code> or <code>&lt;h3&gt;</code>. If you need a heading to match a specific style, use one of the custom Header classes.</p>
 </div>
 
@@ -363,7 +363,7 @@ This is a paragraph. Paragraphs are preset with a font size, line height and spa
 
 Refer to [helper](#helper) classes for additional style options.
 
-<div class="callout primary">
+<div class="callout">
   <p>If the emphasis of a phrase is important, don't make the emphasis purely visual&mdash;use the `<em>` or `<strong>` tags to mark it as well. Both of these tags have built-in styles, but there's no harm in adding additional styles in specific contexts.</p>
 </div>
 
@@ -382,7 +382,7 @@ Refer to [helper](#helper) classes for additional style options.
 </ul>
 ```
 
-<div class="callout primary">
+<div class="callout">
   <p>To make links screen reader-friendly, avoid using vague words like "here" or "read more" within link text. The text of the link itself should adequately describe where the link goes.</p>
 </div>
 
@@ -587,46 +587,68 @@ The `<ul>` is a bulleted list by default, but you can add the class `.no-bullet`
 
 # Buttons
 
-<p class="lead">Buttons are tied to an action of some kind, whether that button is on a cheese dispenser or launches the rocket that you're strapped to. On the web, we follow similar conventions.</p>
+<p class="lead">The following `.button` styles can be used either on anchor links or on actual <code>button</code> tags.  The size can be adjusted by adding a class of `.tiny`, `.small`, or `.large`.</p>
 
 ---
 
 ## Primary Buttons
 
-These buttons are primary calls to action and should be used sparingly. Their size can be adjusted with the `.tiny`, `.small`, and `.large` classes.
+Use class `.primary`, for buttons used for primary calls-to-action.  Use sparingly; there shouldn't be multiple calls-to-action on a single web page. 
 
 ```html_example
-<a href="#" class="primary large button">Large button</a>
-<a href="#" class="primary button">Regular button</a>
-<a href="#" class="primary small button">Small button</a>
-<a href="#" class="primary tiny button">Tiny button</a>
+<p>
+  <a href="#" class="primary large button">Large button</a>
+  <a href="#" class="primary button">Regular button</a>
+  <a href="#" class="primary small button">Small button</a>
+  <a href="#" class="primary tiny button">Tiny button</a>
+</p>
 ```
 
 ---
 
 ## Secondary Buttons
 
-These buttons are used for less important, secondary actions on a page.
+Use class `.secondary` for buttons used for less important, secondary actions on a page.
 
 ```html_example
-<a href="#" class="secondary large button">Large button</a>
-<a href="#" class="secondary button">Regular button</a>
-<a href="#" class="secondary small button">Small button</a>
-<a href="#" class="secondary tiny button">Tiny button</a>
+<p>
+  <a href="#" class="secondary large button">Large button</a>
+  <a href="#" class="secondary button">Regular button</a>
+  <a href="#" class="secondary small button">Small button</a>
+  <a href="#" class="secondary tiny button">Tiny button</a>
+</p>
 ```
 
 ---
 
 ## Hollow Buttons
 
+Use class `.hollow` to create white buttons for use on darker backgrounds.
+
 ```html_example
-<div  class="cta-block_cerulean column">
-  <br>
-  <a href="#" class="hollow large button">Large button</a>
-  <a href="#" class="hollow button">Regular button</a>
-  <a href="#" class="hollow small button">Small button</a>
-  <a href="#" class="hollow tiny button">Tiny button</a>
-  <br>
+<div class="callout callout-purple">
+  <p>
+    <a href="#" class="hollow large button">Large button</a>
+    <a href="#" class="hollow button">Regular button</a>
+    <a href="#" class="hollow small button">Small button</a>
+    <a href="#" class="hollow tiny button">Tiny button</a>
+  </p>
+</div>
+<div class="callout callout-teal">
+  <p>
+    <a href="#" class="hollow large button">Large button</a>
+    <a href="#" class="hollow button">Regular button</a>
+    <a href="#" class="hollow small button">Small button</a>
+    <a href="#" class="hollow tiny button">Tiny button</a>
+  </p>
+</div>
+<div class="callout callout-yellow">
+  <p>
+    <a href="#" class="hollow large button">Large button</a>
+    <a href="#" class="hollow button">Regular button</a>
+    <a href="#" class="hollow small button">Small button</a>
+    <a href="#" class="hollow tiny button">Tiny button</a>
+  </p>
 </div>
 ```
 
@@ -634,28 +656,51 @@ These buttons are used for less important, secondary actions on a page.
 
 ## Hollow Darken Buttons
 
+Limit the usage of the `.hollow` and `.darken` combined styles to usage on light backgrounds.
+
 ```html_example
-<a href="#" class="hollow darken large button">Large button</a>
-<a href="#" class="hollow darken button">Regular button</a>
-<a href="#" class="hollow darken small button">Small button</a>
-<a href="#" class="hollow darken tiny button">Tiny button</a>
+<p>
+  <a href="#" class="hollow darken large button">Large button</a>
+  <a href="#" class="hollow darken button">Regular button</a>
+  <a href="#" class="hollow darken small button">Small button</a>
+  <a href="#" class="hollow darken tiny button">Tiny button</a>
+</p>
 ```
 
 ---
 
 ## Inverted Buttons
 
+This `.inverted` style button is intended for category tags on hero blocks (used in the blog). For other backgrounds, use the `.hollow` style instead.
+
 ```html_example
-<div class="cta-block_cerulean column">
-  <br>
-  <a href="#" class="inverted large button">Large button</a>
-  <a href="#" class="inverted button">Regular button</a>
-  <a href="#" class="inverted small button">Small button</a>
-  <a href="#" class="inverted tiny button">Tiny button</a>
-  <br>
-</div>
+<div class="callout callout-primary">
+  <p>
+    <a href="#" class="inverted small button">Homeownership</a>
+  </p>
+</div> 
 ```
 
+---
+
+## Buttons with Icons
+
+Any single-color filled svg icon can be included in a button, and it will inherit the current TEXT color as it's fill color, and will adjust to match the text's hover state. 
+Use a tool like <a href="https://jakearchibald.github.io/svgomg/">SVGOMG</a> to optimize the svg markup.
+
+```html_example
+<p>
+  <a href="#" class="button primary">Log In <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 450"><path d="M86.4 480h339.2c12.3 0 22.4-9.9 22.4-22.1V246c0-12.2-10-22-22.4-22H404v-30.9c0-41.5-16.2-87.6-42.6-115.4-26.3-27.8-64-45.7-105.3-45.7h-.2c-41.3 0-79 17.9-105.3 45.6C124.2 105.4 108 151.5 108 193v31H86.4C74 224 64 233.9 64 246v211.9c0 12.2 10 22.1 22.4 22.1zM161 193.1c0-27.3 9.9-61.1 28.1-80.3v-.3C206.7 93.9 231 83 255.9 83h.2c24.9 0 49.2 10.9 66.8 29.5v.2l-.1.1c18.3 19.2 28.1 53 28.1 80.3V224H161v-30.9z" /></svg></a>
+  
+   <a href="#" class="button secondary">Continue <svg xmlns="http://www.w3.org/2000/svg" viewBox="60 55 360 360"><path d="M184.7 413.1l2.1-1.8 156.5-136c5.3-4.6 8.6-11.5 8.6-19.2 0-7.7-3.4-14.6-8.6-19.2L187.1 101l-2.6-2.3C182 97 179 96 175.8 96c-8.7 0-15.8 7.4-15.8 16.6v286.8c0 9.2 7.1 16.6 15.8 16.6 3.3 0 6.4-1.1 8.9-2.9z"/></svg></a>
+   
+   
+  <a href="#" class="hollow darken button">Hey There! <svg xmlns="http://www.w3.org/2000/svg" viewBox="60 60 350 350"><path d="M363.3 363.9c-12.9-4.6-31.4-6.2-43.2-8.8-6.8-1.5-16.7-5.3-20-9.2-3.3-4-1.3-40.9-1.3-40.9s6.1-9.6 9.4-18 6.9-31.4 6.9-31.4 6.8 0 9.2-11.9c2.6-13 6.6-18.4 6.1-28.1-.5-9-5.2-9.5-5.7-9.5 0 0 4.9-13.6 5.6-42.4C331.1 129.6 305 96 256 96s-75 33.5-74.3 67.6c.6 28.7 5.6 42.4 5.6 42.4-.5 0-5.2.5-5.7 9.5-.5 9.7 3.6 14.9 6.1 27.9 2.4 11.9 9.2 12 9.2 12s3.6 23.1 6.9 31.5c3.3 8.5 9.4 18 9.4 18s2 36.9-1.3 40.9-13.2 7.7-20 9.2c-11.9 2.6-30.3 4.3-43.2 8.9C135.8 368.5 96 384 96 416h320c0-32-39.8-47.5-52.7-52.1z"/></svg></a>
+  
+</p>
+```
+
+---
 
 ## Close Button <span id="close-button"></span>
 
@@ -664,7 +709,7 @@ A close button is a `<button>` element with the class `.close-button`. We use th
 The button is also labeled with `aria-label` to clarify what the button's purpose is.
 
 ```html_example
-<div class="callout">
+<div class="callout success">
   <button class="close-button" aria-label="Close alert" type="button">
     <span aria-hidden="true">&times;</span>
   </button>
@@ -680,33 +725,96 @@ The button is also labeled with `aria-label` to clarify what the button's purpos
 The close button on its own doesn't close elements, but you can use it with other plugins that have open and close behaviors.
 
 
-<div class="primary callout">
+<div class="callout">
   <p>Any element can be used as a close trigger, not just close button. Adding the attribute <code>data-close</code> to any element within the callout will turn it into a close trigger.</p>
 </div>
 
 The below example pairs the callout with the close button component and `data-closable` attribute to create a dismissible alert box.
 
 ```html_example
-<div class="callout" data-closable>
-  <p>You can so totally close this!</p>
-  <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
-    <span aria-hidden="true">&times;</span>
-  </button>
+<div class="row">
+  <div class="large-12 columns"> 
+    <div class="large-6 columns"> 
+      <div class="alert callout" data-closable>
+        <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <p>You can so totally close this!</p>
+      </div>
+    </div>  
+    <div class="large-6 columns">     
+      <div class="success callout" data-closable="slide-out-right">
+        <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <p>You can close me too, and I close using a Motion UI animation.</p>
+      </div>
+    </div> 
+  </div>
+</div>  
+```
+
+
+
+# Button Group
+
+<p class="lead">Button groups are containers for related action items. They're great when you need to display a group of actions in a bar. </p>
+
+Add the `.button-group` class to a container, and inside it place any number of buttons. The buttons are separated by a small border.
+
+```html_example
+<div class="button-group">
+  <a class="button">One</a>
+  <a class="button">Two</a>
+  <a class="button">Three</a>
 </div>
-<div class="success callout" data-closable="slide-out-right">
-  <p>You can close me too, and I close using a Motion UI animation.</p>
-  <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
-    <span aria-hidden="true">&times;</span>
-  </button>
+```
+
+---
+
+## Coloring
+
+Buttons within a button group can be colored individually with the `.success`, `.warning`, and `.alert` classes.
+
+```html_example
+<div class="button-group">
+  <a class="button">View</a>
+  <a class="success button">Edit</a>
+  <a class="warning button">Share</a>
+  <a class="alert button">Delete</a>
+</div>
+```
+
+---
+
+The entire group can also be colored using the same classes.
+
+```html_example
+<div class="button-group secondary">
+  <a class="button">View</a>
+  <a class="button">Edit</a>
+  <a class="button">Share</a>
+  <a class="button">Delete</a>
+</div>
+```
+
+---
+
+## Even-width Group
+
+Add the `.expanded` class to the container to make a full-width button group. Each item will automatically size itself based on how many buttons there are, up to a maximum of six.
+
+```html_example
+<div class="expanded button-group">
+  <a class="button">Expanded</a>
+  <a class="button">Button</a>
+  <a class="button">Group</a>
 </div>
 ```
 
 
 
-
 # Homepage Grid
-
----
 
 ## CTA Blocks
 
@@ -863,16 +971,18 @@ The below example pairs the callout with the close button component and `data-cl
 ## Basic Blog Block
 
 ```html_example
-<div class="blog-block">
-  <a class="blog-block__img" href="#">
-    <img src="/images/blog/blog-2.jpg" alt="Blog Img" />
-    <div class="blog-block__overlay"></div>
-    <div class="blog-block__txt"></div>
-  </a>
-  <div class="blog-block__date">May 13, 2016</div>
-  <h3><a href="#">Down Payments: There's Help for That</a></h3>
-  <div class="blog-block__cat">Homeownership</div>
-  <p>Sed quis mauris at leo blandit cursus. Sed tempor gravida augue. Ut dictum enim velit, in elementum mauris vehicula sed. </p>
+<div class="row medium-up-2 large-up-3">
+  <div class="column">
+    <div class="blog-block">
+      <a class="overlay" href="#">
+        <img src="/images/blog/blog-2.jpg" alt="Blog Img" />
+      </a>
+      <div class="blog-block__date">May 13, 2016</div>
+      <h3><a href="#">Down Payments: There's Help for That</a></h3>
+      <div class="blog-block__cat">Homeownership</div>
+      <p>Sed quis mauris at leo blandit cursus. Sed tempor gravida augue. Ut dictum enim velit, in elementum mauris vehicula sed. </p>
+    </div>
+  </div>  
 </div>
 ```
 
@@ -881,15 +991,17 @@ The below example pairs the callout with the close button component and `data-cl
 ## Blog Block Title Only
 
 ```html_example
-<div class="blog-block blog-block_title-only">
-  <a class="blog-block__img" href="#">
-    <img src="/images/blog/blog-2.jpg" alt="Blog Img" />
-    <div class="blog-block__overlay"></div>
-    <div class="blog-block__txt"></div>
-  </a>
-  <div class="blog-block__date">May 13, 2016</div>
-  <h3><a href="#">Down Payments: There's Help for That</a></h3>
-</div>
+<div class="row medium-up-2 large-up-3">
+  <div class="column">
+    <div class="blog-block blog-block_title-only">
+      <a class="overlay" href="#">
+        <img src="/images/blog/blog-2.jpg" alt="Blog Img" />
+      </a>
+      <div class="blog-block__date">May 13, 2016</div>
+      <h3><a href="#">Down Payments: There's Help for That</a></h3>
+    </div>
+  </div>  
+</div>  
 ```
 
 ---
@@ -897,39 +1009,109 @@ The below example pairs the callout with the close button component and `data-cl
 ## Blog Block Large
 
 ```html_example
-<div class="blog-block blog-block_lg">
-  <a class="blog-block__img" href="#">
-    <img src="/images/blog/blog-lg-1.jpg" alt="Blog Img" />
-    <div class="blog-block__overlay"></div>
-    <div class="blog-block__txt">
-      <h3>What Do Renters Save For?</h3>
+<div class="row medium-up-1">
+  <div class="column">
+    <div class="blog-block blog-block_lg">
+      <a class="overlay" href="#">
+        <img src="/images/blog/blog-lg-1.jpg" alt="Blog Img" />
+        <div class="blog-block__txt">
+          <h3>What Do Renters Save For?</h3>
+        </div>
+      </a>
     </div>
-  </a>
-</div>
+  </div>
+</div> 
 ```
 
 ---
 
 ## Blog Block Sidebar
 
-```html_example
-<div class="blog-block blog-block_sidebar">
-  <div class="row">
-    <div class="small-6 large-4 columns">
-      <a class="blog-block__img" href="#">
-        <img src="/images/blog/blog-2.jpg" alt="Blog Img" />
-        <div class="blog-block__overlay"></div>
-        <div class="blog-block__txt"></div>
-      </a>
+```html
+<ul class="posts">
+  <li>
+    <div class="blog-block blog-block_sidebar">
+      <div class="row">
+        <div class="small-6 large-4 columns">
+          <a class="overlay" href="#">
+            <img src="/images/blog/post-1.jpg" alt="Post Img" />
+          </a>
+        </div>
+        <div class="small-6 large-8 columns">
+          <div class="blog-block__date">May 9, 2016</div>
+          <h3><a href="#">Homework and a Home Purchase</a></h3>
+          <div class="blog-block__cat">Home Ownership</div>
+        </div>
+      </div>
     </div>
-    <div class="small-6 large-8 columns">
-      <div class="blog-block__date">May 13, 2016</div>
-      <h3><a href="#">Down Payments: There's Help for That</a></h3>
-      <div class="blog-block__cat">Homeownership</div>
+  </li>
+  <li>
+    <div class="blog-block blog-block_sidebar">
+      <div class="row">
+        <div class="small-6 large-4 columns">
+          <a class="overlay" href="#">
+            <img src="/images/blog/post-2.jpg" alt="Post Img" />
+          </a>
+        </div>
+        <div class="small-6 large-8 columns">
+          <div class="blog-block__date">May 2, 2016</div>
+          <h3><a href="#">Law Enforcement Cracking Down on Home Rental Scams</a></h3>
+          <div class="blog-block__cat">Rental Housing</div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+  </li>
+</ul>
 ```
+
+<section class="two-column-layout">
+	<div class="row page-buffer">
+		<div class="row">
+			<aside class="medium-offset-6 medium-6 large-offset-7 large-5 columns adjust-sidebar">				
+        <section class="posts-wrapper bg_light-gray">
+          <div class="row page-buffer">
+            <h2>Recent Posts</h2>
+            <ul class="posts">
+              <li>
+                <div class="blog-block blog-block_sidebar">
+                  <div class="row">
+                    <div class="small-6 large-4 columns">
+                      <a class="overlay" href="#">
+                        <img src="/images/blog/post-1.jpg" alt="Post Img" />
+                      </a>
+                    </div>
+                    <div class="small-6 large-8 columns">
+                      <div class="blog-block__date">May 9, 2016</div>
+                      <h3><a href="#">Homework and a Home Purchase</a></h3>
+                      <div class="blog-block__cat">Home Ownership</div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="blog-block blog-block_sidebar">
+                  <div class="row">
+                    <div class="small-6 large-4 columns">
+                      <a class="overlay" href="#">
+                        <img src="/images/blog/post-2.jpg" alt="Post Img" />
+                      </a>
+                    </div>
+                    <div class="small-6 large-8 columns">
+                      <div class="blog-block__date">May 2, 2016</div>
+                      <h3><a href="#">Law Enforcement Cracking Down on Home Rental Scams</a></h3>
+                      <div class="blog-block__cat">Rental Housing</div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+			</aside>
+		</div>
+	</div>
+</section>
+
 
 
 
@@ -990,7 +1172,7 @@ The below example pairs the callout with the close button component and `data-cl
       </div>
       <div class="page-cta__btn">
         <div class="input-btn-respond">
-          <div><input type="email" class="primary outline" placeholder="Your Email Address"></div>
+          <div><input type="email" class="outline" placeholder="Your Email Address"></div>
           <div><a class="secondary button expanded" href="#">Sign Up</a></div>
         </div>
       </div>
@@ -1039,53 +1221,57 @@ Callouts can be colored using the `.secondary`, `.primary`, `.success`, `.warnin
 
 ```html_example
 <div class="row">
-  <div class="medium-12 columns">    
-    <div class="medium-6 columns">
-      <div class="callout">
-        <p>This is a default <a href="#">callout</a>.</p>
-      </div>   
-      <div class="callout hollow">
-        <p>This is a <a href="#">callout</a> with a class of hollow.</p>
-      </div>   
-      <div class="callout success">
-        <p>This is a <a href="#">callout</a> with class of success.</p>
-      </div>       
-      <div class="callout primary">
-        <p>This is a <a href="#">callout</a> with class of primary.</p>
-      </div>   
-      <div class="callout warning">
-        <p>This is a <a href="#">callout</a> with class of warning.</p>
-      </div>  
-      <div class="callout secondary">
-        <p>This is a <a href="#">callout</a> with class of secondary.</p>
-      </div> 
-      <div class="callout alert">
-        <p>This is a <a href="#">callout</a> with class of alert.</p>
-      </div>
+  <div class="medium-6 columns">
+    <div class="callout">
+      <p>This is a default <a href="#">callout</a>.</p>
+    </div> 
+    <div class="callout alert">
+      <p>This is a <a href="#">callout</a> with class of alert.</p>
+    </div>  
+    <div class="callout warning">
+      <p>This is a <a href="#">callout</a> with class of warning.</p>
+    </div>       
+    <div class="callout success">
+      <p>This is a <a href="#">callout</a> with class of success.</p>
+    </div>       
+    <div class="callout primary">
+      <p>This is a <a href="#">callout</a> with class of primary.</p>
+    </div>   
+    <div class="callout secondary">
+      <p>This is a <a href="#">callout</a> with class of secondary.</p>
+    </div> 
+    <div class="callout hollow">
+      <p>This is a <a href="#">callout</a> with a class of hollow.</p>
+    </div>   
+    <div class="callout callout-gray">
+      <p>This is a <a href="#">callout</a> with class of callout-gray.</p>
     </div>
-    <div class="medium-6 columns">     
-      <div class="callout callout-green">
-        <p>This is a <a href="#">callout</a> with a class of callout-green.</p>
-      </div>    
-      <div class="callout callout-yellow">
-        <p>This is a <a href="#">callout</a> with callout-yellow</p>
-      </div>  
-      <div class="callout callout-red">
-        <p>This is a <a href="#">callout</a> with class of callout-red.</p>
-      </div> 
-      <div class="callout callout-purple">
-        <p>This is a <a href="#">callout</a> with class of callout-purple.</p>
-      </div>
-      <div class="callout callout-blue">
-        <p>This is a <a href="#">callout</a> with class of callout-blue.</p>
-      </div> 
-      <div class="callout callout-teal">
-        <p>This is a <a href="#">callout</a> with class of callout-purple.</p>
-      </div>
-      <div class="callout callout-gray">
-        <p>This is a <a href="#">callout</a> with class of callout-gray.</p>
-      </div>
+  </div>
+  <div class="medium-6 columns">     
+    <div class="callout callout-green">
+      <p>This is a <a href="#">callout</a> with a class of callout-green.</p>
+    </div>    
+    <div class="callout callout-orange">
+      <p>This is a <a href="#">callout</a> with a class of callout-orange.</p>
+    </div> 
+    <div class="callout callout-yellow">
+      <p>This is a <a href="#">callout</a> with callout-yellow</p>
+    </div>  
+    <div class="callout callout-purple">
+      <p>This is a <a href="#">callout</a> with class of callout-purple.</p>
     </div>
+    <div class="callout callout-primary">
+      <p>This is a <a href="#">callout</a> with class of callout-primary.</p>
+    </div>
+    <div class="callout callout-blue">
+      <p>This is a <a href="#">callout</a> with class of callout-blue.</p>
+    </div> 
+    <div class="callout callout-teal">
+      <p>This is a <a href="#">callout</a> with class of callout-teal.</p>
+    </div>
+    <div class="callout callout-red">
+      <p>This is a <a href="#">callout</a> with class of callout-red.</p>
+    </div> 
   </div>
 </div>  
 ```
@@ -1099,18 +1285,16 @@ Callouts can be sized using the `.small` and `.large` classes. These will affect
 
 ```html_example  
 <div class="row">
-  <div class="large-12 columns">
-    <div class="large-6 columns">
-      <div class="callout callout-purple large">
-        <p>This is a callout with class of large.</p>
-      </div>
-    </div> 
-    <div class="large-6 columns">    
-      <div class="callout callout-purple small">
-        <p>This is a callout with class of small.</p>
-      </div>
+  <div class="medium-6 columns">
+    <div class="callout callout-purple large">
+      <p>This is a callout with class of large. It has more padding between the contents and the edge of the container.</p>
     </div>
-  </div>  
+  </div> 
+  <div class="medium-6 columns">    
+    <div class="callout callout-purple small">
+      <p>This is a callout with class of small. It has less padding between the contents and the edge of the container.</p>
+    </div>
+  </div>
 </div>
 ```
 
@@ -1120,35 +1304,33 @@ Callouts can be sized using the `.small` and `.large` classes. These will affect
 
 Pair the callout with the [close button](#close-button) component and `data-closable` attribute to create a dismissable alert box.
 
-<div class="primary callout">
+<div class="callout">
   <p>Any element can be used as a close trigger, not just close button. Adding the attribute <code>data-close</code> to any element within the callout will turn it into a close trigger.</p>
   <p>When using the <code>data-closable</code> attribute, you can optionally add <a href="http://foundation.zurb.com/sites/docs/motion-ui.html">Motion UI</a> classes to the attribute to change the closing animation. If no class is added, the plugin defaults to jQuery's <code>.fadeOut()</code> function.</p>
 </div>
 
 ```html_example
 <div class="row">
-  <div class="large-12 columns"> 
-    <div class="large-6 columns">   
-      <div class="callout callout-red" data-closable>
-        <h5>This is Important!</h5>
-        <p>When you're done reading it, click the close button in the corner to dismiss this alert.</p>
-        <p>I'm using the default <code>data-closable</code> parameters, and simply fade out.</p>
-        <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
+  <div class="medium-6 columns">   
+    <div class="callout callout-red" data-closable>
+      <h5>This is Important!</h5>
+      <p>When you're done reading it, click the close button in the corner to dismiss this alert.</p>
+      <p>I'm using the default <code>data-closable</code> parameters, and simply fade out.</p>
+      <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+        <span aria-hidden="true">&times;</span>
+      </button>
     </div>
-    <div class="large-6 columns">
-      <div class="callout success" data-closable="slide-out-right">
-        <h5>This a friendly message.</h5>
-        <p>When you're done reading it, click the close button in the corner to dismiss this message.</p>
-        <p>And when you're done with me, I close using a Motion UI animation.</p>
-        <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
+  </div>
+  <div class="medium-6 columns">
+    <div class="callout success" data-closable="slide-out-right">
+      <h5>This a friendly message.</h5>
+      <p>When you're done reading it, click the close button in the corner to dismiss this message.</p>
+      <p>And when you're done with me, I close using a Motion UI animation.</p>
+      <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+        <span aria-hidden="true">&times;</span>
+      </button>
     </div>
-  </div> 
+  </div>
 </div>  
 ``` 
 
@@ -1261,7 +1443,7 @@ Form elements are styled based on their type attribute rather than a class. Inpu
 ```html_example
 <form>
   <div class="row">
-    <div class="large-12 columns">
+    <div class="small-12 columns">
       <label>Label</label>
       <input type="text" placeholder="placeholder">
     </div>
@@ -1282,7 +1464,7 @@ Form elements are styled based on their type attribute rather than a class. Inpu
     </div>
   </div>
   <div class="row">
-    <div class="large-12 columns">
+    <div class="small-12 columns">
       <label>Select Box</label>
       <select>
         <option value="good">Good</option>
@@ -1292,19 +1474,19 @@ Form elements are styled based on their type attribute rather than a class. Inpu
     </div>
   </div>
   <div class="row">
-    <div class="large-6 columns">
+    <div class="medium-6 columns">
       <label>Choose Your Favorite</label>
       <input type="radio" name="radio1" value="radio1" id="radio1"><label for="radio1">Red</label>
       <input type="radio" name="radio2" value="radio2" id="radio2"><label for="radio2">Blue</label>
     </div>
-    <div class="large-6 columns">
+    <div class="medium-6 columns">
       <label>Check these out</label>
       <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
       <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
     </div>
   </div>
   <div class="row">
-    <div class="large-12 columns">
+    <div class="small-12 columns">
       <label>Textarea Label</label>
       <textarea placeholder="placeholder"></textarea>
     </div>
@@ -1316,10 +1498,47 @@ Form elements are styled based on their type attribute rather than a class. Inpu
 </form>
 ```
 
+---
+
 ## Outline Text Input Example
+
+Add `.outline` to the class when the form appears on a dark background.
+
 ```html_example
-<input type="text" class="outline" placeholder="Placeholder Text">
-<input type="text" class="outline primary" placeholder="Placeholder Text">
+<div class="callout callout-primary">
+  <label>Label</label>
+  <input type="text" class="outline" placeholder="placeholder">
+  
+  <div class="row">
+    <div class="medium-6 columns">
+      <label>Choose Your Favorite</label>
+      <input type="radio" name="radio1" value="radio1" id="radio1"><label for="radio1">Red</label>
+      <input type="radio" name="radio2" value="radio2" id="radio2"><label for="radio2">Blue</label>
+    </div>
+    <div class="medium-6 columns">
+      <label>Check these out</label>
+      <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+      <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
+    </div>
+  </div>
+</div>
+<div class="callout callout-yellow">
+  <label>Label</label>
+  <input type="text" class="outline" placeholder="Placeholder Text">
+  
+  <div class="row">
+    <div class="medium-6 columns">
+      <label>Choose Your Favorite</label>
+      <input type="radio" name="radio1" value="radio1" id="radio1"><label for="radio1">Red</label>
+      <input type="radio" name="radio2" value="radio2" id="radio2"><label for="radio2">Blue</label>
+    </div>
+    <div class="medium-6 columns">
+      <label>Check these out</label>
+      <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+      <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
+    </div>
+  </div>
+</div>
 ```
 
 
@@ -1417,22 +1636,19 @@ Every page should use either a [hero element](#heros) or a page title.
 
 
 
-# Thumbnail
+# Overlay
 
-If you're going to use an image as an anchor, we've got you covered.  The `.thumbnail` class can be applied directly to an `<img>` element, but for best accessibility, apply it to the `<a>` that wraps the image to style the image on hover and focus.    
+If you're going to use an image as an anchor, we've got you covered.  Apply the `.overlay` class to the `<a>` that wraps the image to style the image with a blue overlay on hover and focus.    
 
 ```html
-<a class="thumbnail" href="#"><img alt="photo of David Brickman" src="/images/exec_david_brickman.jpg"></a>
+<a class="overlay" href="#"><img alt="photo of David Brickman" src="/images/exec_david_brickman.jpg"></a>
 ```
 
 <div class="row">
-  <div class="small-6 medium-3 columns">
-    <a class="thumbnail" href="#"><img alt="photo of David Brickman" src="/images/exec_david_brickman.jpg"></a>
-  </div>
-  <div class="small-6 medium-9 columns">    
+  <div class="small-6 medium-3 columns small-centered">
+    <a class="overlay" href="#"><img alt="photo of David Brickman" src="/images/exec_david_brickman.jpg"></a> 
   </div>
 </div>
-
 
 
 
@@ -1444,13 +1660,13 @@ If you're going to use an image as an anchor, we've got you covered.  The `.thum
 
 A media object is a container with the class `.media-object`, and two or three sections with the class `.media-object-section`.  Each section aligns to the top by default, but individual sections can also be middle- or bottom-aligned by adding a `.middle` or `.bottom` class to `.media-object-section`.  If you nest a media object into the media-object-section section, it will indent to be inside the parent media object. 
 
-If you are going to make the image a link,  [add the `.thumbnail` class](#thumbnail) to style the image on hover and focus. 
+If you are going to make the image a link,  [add the `.overlay` class](#overlay) to style the image on hover and focus. 
 
 ```html_example
 <div class="large-9 large-centered columns">
   <div class="media-object">
     <div class="media-object-section">
-      <a class="thumbnail" href="#"><img src= "http://www.freddiemac.com/images/blog/sean_becketti_md.jpg" alt="sean Becketti"></a>
+      <a class="overlay" href="#"><img src= "http://www.freddiemac.com/images/blog/sean_becketti_md.jpg" alt="sean Becketti"></a>
     </div>
     <div class="media-object-section">
       <h4><a href="#">Are Baby Boomers the Key to the Single-Family Market?</a></h4>
@@ -1464,13 +1680,13 @@ If you are going to make the image a link,  [add the `.thumbnail` class](#thumbn
 
 By adding the `.stack-for-small` class, you can make your media object responsive and stack the media item and the associated blurb. Images will get a width of 100%, but this can be changed.
 
-If you are going to make the image a link,  [add the `.thumbnail` class](#thumbnail) to style the image on hover and focus. 
+If you are going to make the image a link,  [add the `.overlay` class](#overlay) to style the image on hover and focus. 
 
 ```html_example
 <div class="large-9 large-centered columns">
   <div class="media-object stack-for-small">
     <div class="media-object-section">
-      <a class="thumbnail" href="http://www.freddiemac.com/blog/homeownership/20160630_home_searches_made_easier.html"><img src="http://www.freddiemac.com/blog/images/homesteps.jpg" alt="HomeSteps - house sold sign"></a>
+      <a class="overlay" href="http://www.freddiemac.com/blog/homeownership/20160630_home_searches_made_easier.html"><img src="http://www.freddiemac.com/blog/images/homesteps.jpg" alt="HomeSteps - house sold sign"></a>
     </div>
     <div class="media-object-section">
       <h4>Home Searches Made Easier</h4>
@@ -1479,7 +1695,7 @@ If you are going to make the image a link,  [add the `.thumbnail` class](#thumbn
   </div>
   <div class="media-object stack-for-small">
     <div class="media-object-section">
-      <a class="thumbnail" href="http://www.freddiemac.com/blog/homeownership/20160628_harp_get_the_facts.html"><img src="http://www.freddiemac.com/blog/images/fm_blog_usda_returns.jpg" alt="Harp - act now!"></a>
+      <a class="overlay" href="http://www.freddiemac.com/blog/homeownership/20160628_harp_get_the_facts.html"><img src="http://www.freddiemac.com/blog/images/fm_blog_usda_returns.jpg" alt="Harp - act now!"></a>
     </div>
     <div class="media-object-section">
       <h4>HARP: Get the Facts and Act Fast</h4>
@@ -1749,7 +1965,7 @@ Once you put it all together, here's what you get for a stacked table with hover
 
 Got a lot of tabular data? Add the class `.scroll` to the table itself to enable horizontal scrolling.
 
-<div class="primary callout">
+<div class="callout">
   <p>Note: this method doesn't work great with Internet Explorer 9.</p>
 </div>
 
@@ -2038,7 +2254,7 @@ Egypt.">scarabaeus</span> hung clear of any branches, and, if allowed to fall, w
 
 Visibility classes let you show or hide elements based on screen size or device orientation. You can also use visibility classes to control which elements users see depending on their browsing environment.
 
-<div class="callout primary">
+<div class="callout">
   <p>There are no classes to detect touchscreen devices, as both desktop and mobile browsers inconsistently report touch support. Learn more here: <a href="http://www.stucox.com/blog/you-cant-detect-a-touchscreen/">You Can't Detect a Touchscreen</a></p>
 </div>
 
@@ -2335,7 +2551,7 @@ The default ratio is 4:3. Add the `.widescreen` class to change it to 16:9.
 Image modals are those that contain only an image and a caption, and the image stretches/shrinks to fill the width of the container.  To prevent images from distorting at higher resolutions, the maximum container width for image modals (regardless of size) is the width of the grid (1400px). 
 - To create an image modal, add class `.reveal-image` to the .`reveal` container, and include a `figure` with `img` and `figcaption`. 
 - To provide a non-javascript fallback link, include the url of the larger image in the `href` attribute.  
-- If the modal is being launched from a link on an image, utilize the [`.thumbnail` class](#thumbnail) to provide a focus and hover state on the image.  Below are examples of an image modal being launched from a text link and from a link on a thumbnail image.  
+- If the modal is being launched from a link on an image, utilize the [`.overlay` class](#overlay) to provide a focus and hover state on the image.  Below are examples of an image modal being launched from a text link and from a link on an overlay image.  
 - 
 
 
@@ -2355,7 +2571,7 @@ Image modals are those that contain only an image and a caption, and the image s
 </div>
 
 <ul>
-  <li>View an image modal by clicking the following thumbnail image.<br><a data-open="exampleModalF" class="thumbnail" 
+  <li>View an image modal by clicking the following image.<br><a data-open="exampleModalF" class="overlay" 
   href="http://placekitten.com/2300/1600" aria-controls="exampleModalF"><img src="http://placekitten.com/200/160" alt="kitty"></a></li>
 </ul>
   
@@ -2457,21 +2673,21 @@ Combine the image modal and the nested modal to achieve an image gallery where t
       <section>
         <h3>Slide One</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="text-right"><a class="button orbit-button">Button Link</a></p>
+        <p class="text-right"><a class="button hollow">Button Link</a></p>
       </section>
     </li>
     <li class="orbit-slide orbit-slide-green">
       <section>
         <h3>Slide Two</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="text-center"><a class="button orbit-button">Button Link</a></p>
+        <p class="text-center"><a class="button hollow">Button Link</a></p>
       </section>
     </li>
     <li class="orbit-slide orbit-slide-orange">
       <section>
         <h3>Slide Three</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="text-right"><a class="button orbit-button large">Button Link</a></p>
+        <p class="text-right"><a class="button hollow large">Button Link</a></p>
       </section>
     </li>
     <li class="orbit-slide orbit-slide-red">
@@ -2482,14 +2698,14 @@ Combine the image modal and the nested modal to achieve an image gallery where t
         <li>Duis aute irure dolor in reprehenderit in voluptate.</li>
         <li>Velit esse cillum dolore eu fugiat nulla pariatur.</li>
         </ul>
-        <p><a class="button orbit-button">Button Link</a></p>
+        <p><a class="button hollow">Button Link</a></p>
       </section>
     </li>
     <li class="orbit-slide orbit-slide-purple">
       <section>
         <h3>Slide Five</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="text-right"><a class="button tiny orbit-button">Button Link</a></p>
+        <p class="text-right"><a class="button hollow tiny">Button Link</a></p>
       </section>
     </li>
     <li class="orbit-slide orbit-slide-blue">
@@ -2502,14 +2718,46 @@ Combine the image modal and the nested modal to achieve an image gallery where t
       <section>
         <h3>Slide Seven</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-        <p class="text-right"><a class="button orbit-button">Button Link</a></p>
+        <p class="text-right"><a class="button hollow">Button Link</a></p>
       </section>
     </li>
     <li class="orbit-slide orbit-slide-gray">
       <section>
         <h3>Slide Nine</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <p class="text-right"><a class="button orbit-button">Button Link</a></p>
+        <p class="text-right"><a class="button hollow">Button Link</a></p>
+      </section>
+    </li>
+  </ul>
+</div>
+```
+
+---
+
+## Vertical Navigation Bullets
+
+```html_example
+<div class="orbit bullets-vertical" role="region" aria-label="Favorite Text Ever" data-orbit data-auto-play="false">
+  <ul class="orbit-container"> 
+    <li class="orbit-slide orbit-slide-yellow">
+      <section>
+        <h3>Slide One</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="text-right"><a class="button hollow">Button Link</a></p>
+      </section>
+    </li>
+    <li class="orbit-slide orbit-slide-green">
+      <section>
+        <h3>Slide Two</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="text-center"><a class="button hollow">Button Link</a></p>
+      </section>
+    </li>
+    <li class="orbit-slide orbit-slide-orange">
+      <section>
+        <h3>Slide Three</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="text-right"><a class="button hollow large">Button Link</a></p>
       </section>
     </li>
   </ul>

@@ -25,7 +25,7 @@
     padding: $padding;     
     color: $medium-gray;  
     text-transform: initial; 
-    font-weight: 300;
+    font-weight: $global-weight-light;
     border-bottom-width: 0; 
     transition: background-color 0.2s ease 0s, color 0.15s ease 0s;
   }
@@ -85,20 +85,20 @@
 }
 
 // staggered mosiac full pattern used below secondary nav/hover and footer:
-@mixin mosaic-fill {
-  background: linear-gradient(to right, 
-    color-shift($celery, $pear, 6, 1) 0%, 
-    color-shift($celery, $pear, 6, 1) 35%, 
-    color-shift($celery, $pear, 6, 2) 35%, 
-    color-shift($celery, $pear, 6, 2) 48%, 
-    color-shift($celery, $pear, 6, 3) 48%, 
-    color-shift($celery, $pear, 6, 3) 61%, 
-    color-shift($celery, $pear, 6, 4) 61%, 
-    color-shift($celery, $pear, 6, 4) 74%, 
-    color-shift($celery, $pear, 6, 5) 74%,  
-    color-shift($celery, $pear, 6, 5) 87%, 
-    color-shift($celery, $pear, 6, 6) 87%, 
-    color-shift($celery, $pear, 6, 6) 100%);
+@mixin mosaic-fill($a: $celery, $b: $pear, $direction: to right) {
+  background: linear-gradient($direction, 
+    color-shift($a, $b, 6, 1) 0%, 
+    color-shift($a, $b, 6, 1) 35%, 
+    color-shift($a, $b, 6, 2) 35%, 
+    color-shift($a, $b, 6, 2) 48%, 
+    color-shift($a, $b, 6, 3) 48%, 
+    color-shift($a, $b, 6, 3) 61%, 
+    color-shift($a, $b, 6, 4) 61%, 
+    color-shift($a, $b, 6, 4) 74%, 
+    color-shift($a, $b, 6, 5) 74%,  
+    color-shift($a, $b, 6, 5) 87%, 
+    color-shift($a, $b, 6, 6) 87%, 
+    color-shift($a, $b, 6, 6) 100%);
 }
 
 // calculate color differences from beginning and ending color acorss number of steps, and return color at particular step

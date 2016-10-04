@@ -4,7 +4,7 @@
   }
 }
 .primary-nav {
-  font-weight: 500;
+  font-weight: $global-weight-medium;
   position: relative;
   h4 {
     font-size: inherit;
@@ -166,7 +166,7 @@
     }
     h4 {
       font-size: 1.125rem;
-      font-weight: 400;
+      font-weight: $global-weight-normal;
     } 
     .menu {
       .submenu {
@@ -194,7 +194,7 @@
   }
   .primary-nav {  
     font-size: rem-calc(17px); 
-    font-weight: 500;
+    font-weight: $global-weight-medium;
     border-width: 0;
     > .page-buffer {
       padding-right: 0;

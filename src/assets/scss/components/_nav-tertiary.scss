@@ -11,7 +11,7 @@ $tertiary-border-color: scale-color($light-gray, $lightness: -5%);
     color: $white;
     padding: 0;
     margin: 0;
-    font-weight: 300;
+    font-weight: $global-weight-light;
   }
   a {
     color: inherit;
@@ -36,7 +36,7 @@ $tertiary-border-color: scale-color($light-gray, $lightness: -5%);
       &.active {
         color: $fm-green;
         background: $alabaster;
-        font-weight: 900;
+        font-weight: $global-weight-black;
       }    
     }
     li + li::before {     
@@ -48,9 +48,9 @@ $tertiary-border-color: scale-color($light-gray, $lightness: -5%);
       a {
         text-transform: initial;
         padding: $tertiary-gap/2 $tertiary-gap;
-        font-weight: 300;
+        font-weight: $global-weight-light;
         &.active {
-          font-weight: 700;
+          font-weight: $global-weight-bold;
         }      
       }
       li + li::before {      

@@ -145,7 +145,7 @@ $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
 $header-text-rendering: optimizeLegibility;
 $small-font-size: 80%;
-$header-small-font-color: $medium-gray;
+$header-small-font-color: inherit;
 $paragraph-lineheight: 1.6;
 $paragraph-margin-bottom: 1rem;
 $paragraph-text-rendering: optimizeLegibility;
@@ -249,8 +249,8 @@ $breadcrumbs-item-slash: true;
 // 11. Button
 // ----------
 
-$button-padding: 0.85em 2em;
-$button-margin: 0 0 $global-margin 0;
+$button-padding: 0.85em 1.5em;
+$button-margin: 0 0 0 0;
 $button-fill: solid;
 $button-background: $primary-color;
 $button-background-hover: scale-color($button-background, $lightness: -15%);
@@ -268,8 +268,8 @@ $button-opacity-disabled: 0.25;
 // 12. Button Group
 // ----------------
 
-$buttongroup-margin: 1rem;
-$buttongroup-spacing: 20px;
+$buttongroup-margin: 1rem 0;
+$buttongroup-spacing: 2px;
 $buttongroup-child-selector: '.button';
 $buttongroup-expand-max: 6;
 
@@ -311,7 +311,7 @@ $drilldown-background: $white;
 $dropdown-padding: 1rem;
 $dropdown-border: 1px solid $medium-gray;
 $dropdown-font-size: .875rem;
-$dropdown-width: 300px;
+$dropdown-width: rem-calc(300px);
 $dropdown-radius: $global-radius;
 $dropdown-sizes: (
   tiny: 100px,
@@ -342,7 +342,7 @@ $fieldset-border: 1px solid $medium-gray;
 $fieldset-padding: rem-calc(20);
 $fieldset-margin: rem-calc(18 0);
 $legend-padding: rem-calc(0 3);
-$form-spacing: rem-calc(16);
+$form-spacing: rem-calc(18);
 $helptext-color: $black;
 $helptext-font-size: rem-calc(13);
 $helptext-font-style: italic;
@@ -350,28 +350,28 @@ $input-prefix-color: $black;
 $input-prefix-background: $light-gray;
 $input-prefix-border: 1px solid $medium-gray;
 $input-prefix-padding: 1rem;
-$form-label-color: $black;
-$form-label-font-size: rem-calc(14);
-$form-label-font-weight: $global-weight-normal;
+$form-label-color: inherit;
+$form-label-font-size: rem-calc(16);
+$form-label-font-weight: 500;
 $form-label-line-height: 1.8;
-$select-background: $white;
+$select-background: inherit;
 $select-triangle-color: $dark-gray;
-$select-radius: $global-radius;
-$input-color: $black;
-$input-placeholder-color: $medium-gray;
+$select-radius: 5px;
+$input-color: inherit;
+$input-placeholder-color: inherit;
 $input-font-family: inherit;
 $input-font-size: rem-calc(16);
-$input-background: $white;
-$input-background-focus: $white;
+$input-background: inherit;
+$input-background-focus: inherit;
 $input-background-disabled: $light-gray;
 $input-border: 1px solid $medium-gray;
 $input-border-focus: 1px solid $dark-gray;
 $input-shadow: inset 0 1px 2px rgba($black, 0.1);
-$input-shadow-focus: 0 0 5px $medium-gray;
+$input-shadow-focus: 0 0 4px rgba($black, 0.2);
 $input-cursor-disabled: default;
 $input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
 $input-number-spinners: true;
-$input-radius: $global-radius;
+$input-radius: 5px;
 
 // 20. Label
 // ---------
