@@ -1581,8 +1581,8 @@ Use this hero on Blog article pages.
 		  <div class="blue-hero__txt blue-hero__left">
 		  	<div class="blue-hero__date">May 9, 2016</div>
 		    <h1>Take the Anxiety Out of Your First Home Offer</h1>
-		    <div class="small button-group">
-		    	<a href="#" class="inverted button">Homeownership</a>
+		    <div>
+		    	<a href="#" class="inverted button small">Homeownership</a>
 		    </div>
 		  </div>
 		</div>
@@ -1656,8 +1656,6 @@ If you're going to use an image as an anchor, we've got you covered.  Apply the 
 
 <p class="lead">Media objects are super useful components for displaying an item, usually an image, alongside some content, usually text. You could put lists, grids, or even other media objects inside.</p>
 
-## Basics
-
 A media object is a container with the class `.media-object`, and two or three sections with the class `.media-object-section`.  Each section aligns to the top by default, but individual sections can also be middle- or bottom-aligned by adding a `.middle` or `.bottom` class to `.media-object-section`.  If you nest a media object into the media-object-section section, it will indent to be inside the parent media object. 
 
 If you are going to make the image a link,  [add the `.overlay` class](#overlay) to style the image on hover and focus. 
@@ -1675,6 +1673,8 @@ If you are going to make the image a link,  [add the `.overlay` class](#overlay)
   </div>
 </div>  
 ```
+
+---
 
 ## Stack on Small Options
 
@@ -1911,6 +1911,8 @@ Need to spiff up the table just a tad? Just add the class `.table--hover` to lig
 </table>
 ```
 
+---
+
 ## Stacking Tables
 
 To stack a table on small screens, add the class `.stack`.
@@ -1960,6 +1962,8 @@ Once you put it all together, here's what you get for a stacked table with hover
   </tbody>
 </table>
 ```
+
+---
 
 ## Scrolling Table
 
