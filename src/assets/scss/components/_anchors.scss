@@ -1,46 +1,35 @@
-a.overlay  {
+.overlay  {
   display: inline-block;  
+	position: relative;
   background: $primary-color;  
+  color: $white;
   max-width: 100%;
   transition: 0.3s ease;
   &:hover,
   &:focus,
   &:active {
+    color: $white;
     img {
       opacity: 0.22;
     }
   }
 }
 
-// forward links include a forward chevron marker
-// anchor states for the item and the marker should have identical styles
-a.forward { 
-  color: $blaze;   
-  &::after {
-    width: 1em;
+.icon {
+  &.secondary { 
+    color: $blaze;  
+    &:hover,
+    &:focus {
+      color: scale-color($blaze, $lightness: -10%);   
+    }
+    &:active {
+      color: scale-color($blaze, $lightness: -20%);
+    }
+  }
+  svg { 
+    fill: currentColor;
     height: 1em;
-    margin-left: 0.25em; 
-    margin-bottom: -2px;
-    background-size: cover;
-    display: inline-block;
-    content: "";
-    background-image: icon(chevron-right, $blaze);
-    background-size: cover;
-  }
-  &:hover,
-  &:focus {
-    color: scale-color($blaze, $lightness: -10%);    
-    @if $anchor-text-decoration-hover != $anchor-text-decoration {
-      text-decoration: $anchor-text-decoration-hover;
-    }
-    &::after {
-      background-image: icon(chevron-right, scale-color($blaze, $lightness: -10%));
-    }
-  }
-  &:active {
-    color: scale-color($blaze, $lightness: -20%);
-    &::after {
-      background-image: icon(chevron-right, scale-color($blaze, $lightness: -20%));
-    }
+    width: 1em;
   }
 }
+

@@ -56,6 +56,7 @@
   height: 1rem;  
   background: $celery;
   @include breakpoint(small) {
-    @include mosaic-fill($celery, $pear);
+    @include mosaic-fill(#7AB629, #F1EC01);
   }  
 }
+

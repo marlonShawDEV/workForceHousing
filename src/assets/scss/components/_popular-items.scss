@@ -28,7 +28,18 @@
 		background: $fm-gray;
 		ul {
 			li {
-				border-color: lighten($fm-gray, 10%);
+				border-color: lighten($fm-gray, 10%); 
+          position: relative;
+        a::before {
+          content: " ";
+          background-image: icon(rss-white, $white, '', '', 0, 0, 500, 460);
+          display: inline-block;
+          width: 1em;
+          height: 1em;
+          margin-right: 0.375em;
+          position: relative;
+          bottom: -0.1em;
+        }         
 			}
 		}
 	}

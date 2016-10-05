@@ -31,36 +31,33 @@
 		}
 	}
 
-	&__wrapper {
-		position: relative;
-		z-index: 2;
-		@include breakpoint(large) {
-			display: table;
-			width: 100%;
-		}
-	}
-
+  &__overlay {
+    background-color: $primary-color;
+    height: 100%;
+    left: 0;
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
 	&__txt {
-    @include breakpoint(medium) {
-    }
+    position: relative;
+    z-index: 2;
     @include breakpoint(large) {
 			@include grid-col-size(8);
-      padding-right: 7rem;
+      padding-right: 6rem;
 			display: table-cell;
       p {
         font-size: rem-calc(22);
         font-weight: $global-weight-light;
-        margin: 1.5em 0;
-        @include breakpoint(large) {
-          &:not(.lead) {
-            margin-bottom: 0;
-          }
-        }
+        margin: 1.5rem 0;
       }      
 		}
 	}
-
 	&__btn {
+    position: relative;
+    z-index: 3;
     @include breakpoint(medium) {
       text-align: right;
     }
@@ -102,19 +99,14 @@
 		padding: 30px 0 20px;
 		h3 {
 			font-size: rem-calc(32);
-			margin-bottom: .5rem;
-		}
-		.page-cta__wrapper {
-			display: block;
-			@include breakpoint(large) {
-				max-width: 305px;
-			}
+			margin-bottom: 0.5rem;
 		}
 		.page-cta__txt,
 		.page-cta__btn {
 			@include grid-col-size(12);
 			display: block;
 			text-align: left;
+      width: 100%;
 		}
 		.page-cta__btn {
 			margin-top: 2rem;
@@ -129,12 +121,17 @@
 	}
 
 	&_feature {
-		background: url('/images/feature-bg.jpg') no-repeat center;
+    // background will be different for each one, so moving to inline
+    background-repeat: no-repeat;
 		background-size: cover;
+    background-position: center;
 		min-height: 383px;
 		h3 {
 			font-weight: $global-weight-bold;
 		}
+    .lead { 
+      font-size: rem-calc(22);
+    }
 	}
 }
 

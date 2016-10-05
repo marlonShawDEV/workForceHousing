@@ -97,7 +97,7 @@
 	height: 389px;
 	@include breakpoint(medium) {
 		background-image: url('/images/hero-5-desktop.jpg');
-		height: 518px;
+		height: 468px;
 		text-align: center;
 	}
 } 
@@ -106,7 +106,7 @@
   height: 389px;
   @include breakpoint(medium) {
     background-image: url('/images/blog/hero-4-desktop.jpg');
-    height: 518px;
+    height: 468px;
   }
 }
 

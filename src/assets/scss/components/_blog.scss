@@ -1,14 +1,16 @@
 .blog-block {
 	margin-bottom: $global-margin * 2.0625;  
+  &_lg {
+    margin-bottom: 0.25rem; // basically $grid-column-gutter - $global-margin; 
+  }
 	.overlay {
-		margin-bottom: $global-margin * 1.0625;
-		position: relative;
 		width: 100%;
-		img {
-			width: 100%;
-		}
+    max-width: initial;
+    margin-bottom: $global-margin;
+    img {
+      width: 100%;
+    }
 		.blog-block__txt {
-			color: $white;
 			position: absolute;
 			bottom: 0%;
 			text-align: center;
@@ -29,6 +31,7 @@
 		font-size: rem-calc(14);
 		font-weight: $global-weight-light;
 		text-transform: uppercase;
+		color: adjust-hue($fm-gray, -15);
 	}
 
 	h3 {
@@ -46,7 +49,7 @@
 	}
 
 	&__cat {
-		color: #7e868c;
+		color: adjust-hue($fm-gray, -15);
 		font-size: rem-calc(14);
 		font-weight: $global-weight-bold;
 		margin-bottom: $global-margin * 0.625;
@@ -59,27 +62,19 @@
 	}
 
 	&_title-only {
-		.blog-block__date {
-			color: #7e868c;
-		}
 		h3 {
 			font-size: rem-calc(22);
 		}
 	}
 
 	&_sidebar {
-		.blog-block__date {
-			color: #7e868c;
-		}
 		h3 {
 			font-size: rem-calc(14);
-			font-weight: $global-weight-medium;
 			@include breakpoint(large) {
 				font-size: rem-calc(18);
 			}
 		}
 		.blog-block__cat {
-			font-size: rem-calc(14);
 			margin: 0;
 		}
 	}

@@ -371,14 +371,15 @@ Refer to [helper](#helper) classes for additional style options.
 
 ## Links
 
-<p>Links are very standard, and the color is preset to the Foundation primary color. In addition, there are some custom link styles, such as  `.secured` and `.forward`.</p>
+<p>Links are very standard, and the color is preset to the Foundation primary color. In addition, there are some custom link styles, such as  `.icon` (when you want to include an svg icon and have it inherit its size and color states from the link) and `.secondary` when you want the link to be secondary color isntead of primary. </p>
 
 
 ```html_example
 <ul class="no-bullet">
 <li><a href="#">standard link</a></li>
-<li><a href="#" class="forward">forward link</a></li>
-<li><a href="#" class="secured">secured link</a></li>
+<li><a href="#" class="icon">link with icon <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500"><path d="M86.4 480h339.2c12.3 0 22.4-9.9 22.4-22.1V246c0-12.2-10-22-22.4-22H404v-30.9c0-41.5-16.2-87.6-42.6-115.4-26.3-27.8-64-45.7-105.3-45.7h-.1-.1c-41.3 0-79 17.9-105.3 45.6C124.2 105.4 108 151.5 108 193v31H86.4C74 224 64 233.9 64 246v211.9c0 12.2 10 22.1 22.4 22.1zM161 193.1c0-27.3 9.9-61.1 28.1-80.3v-.3C206.7 93.9 231 83 255.9 83h.2c24.9 0 49.2 10.9 66.8 29.5v.2l-.1.1c18.3 19.2 28.1 53 28.1 80.3V224H161v-30.9z"/></svg></a></li>
+<li><a href="#" class="icon secondary">secondary link with icon <svg xmlns="http://www.w3.org/2000/svg" viewBox="60 0 450 480"><path d="M298.3 256L131.1 81.9c-4.2-4.3-4.1-11.4.2-15.8l29.9-30.6c4.3-4.4 11.3-4.5 15.5-.2L380.9 248c2.2 2.2 3.2 5.2 3 8.1.1 3-.9 5.9-3 8.1L176.7 476.8c-4.2 4.3-11.2 4.2-15.5-.2L131.3 446c-4.3-4.4-4.4-11.5-.2-15.8L298.3 256z"/></svg></a></li>
+
 </ul>
 ```
 
