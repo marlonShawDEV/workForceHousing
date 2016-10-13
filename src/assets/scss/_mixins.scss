@@ -31,14 +31,14 @@
   }
   & > li:hover > a, 
   & a:focus { 
-    background: $buttercup;
+    background: $fm-yellow;
     color: $white;
   } 
 }
 
 // desktop hover states for parent of dropdowns
 @mixin nav-submenu-parent-hover(){
-  color: $blaze;
+  color: $fm-orange;
   background: $white;
   border-bottom-color: $white;
   box-shadow: 0 -5px 5px 0 rgba(0,0,0,0.37);
@@ -85,7 +85,11 @@
 }
 
 // staggered mosiac full pattern used below secondary nav/hover and footer:
-@mixin mosaic-fill($a: $sushi, $b: $celery, $direction: to right) {
+@mixin mosaic-fill(
+  $a: $mosaic-start, 
+  $b: $mosaic-end, 
+  $direction: to right
+  ) {
   background: linear-gradient($direction, 
     color-shift($a, $b, 20, 1) 0%, 
     color-shift($a, $b, 20, 1) 10%, 
@@ -135,10 +139,5 @@
     @return $lig2;
   }
 }
- 
-
- 
- 
- 
-    
+   
    

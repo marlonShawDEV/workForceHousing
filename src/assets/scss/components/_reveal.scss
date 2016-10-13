@@ -1,11 +1,11 @@
 $overlay-palette: (
   green: $fm-green,
-  orange: $blaze,
-  yellow: $buttercup,
-  red: $crimson,
-  purple: $wisteria,
-  blue: $steel,
-  teal: $niagara,
+  orange: $fm-orange,
+  yellow: $fm-yellow,
+  red: $fm-red,
+  purple: $fm-purple,
+  blue: $fm-dark-blue,
+  teal: $fm-teal,
   gray: $medium-gray
 );
 
@@ -33,7 +33,15 @@ $overlay-palette: (
       .close-button-large {
         background-color: $white;
         color: $color;
-      }
+      }      
+      .button.hollow {
+        color: $white;
+        &:hover, 
+        &:active,
+        &:focus {
+          color: $color;
+        }
+      } 
     }
   } 
   > div { 

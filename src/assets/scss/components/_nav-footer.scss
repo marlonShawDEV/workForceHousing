@@ -1,6 +1,6 @@
 // changed from <footer> element to .footer class so that footers used inside other elements don't inherit these styles
 .footer {
-	background: darken($primary-color, 3%);
+	background: darken($fm-blue, 3%);
 	color: $white;
 	padding: 0.5rem 0 0.75rem;
 	@include breakpoint(medium) {
@@ -9,7 +9,7 @@
 	a {
 		color: currentColor; 
     display: inline-block; 
-    @include underline-transition($white, 1px);    
+    @include underline-transition($white, 1px);
     &.connect-link {
       margin-right: 0.375rem;
       > svg {
@@ -38,7 +38,7 @@
     }
   }
 	.footer__top {
-		border-bottom: 1px solid lighten($primary-color, 3%); 
+		border-bottom: 1px solid lighten($fm-blue, 3%); 
 		ul {
       font-weight: $global-weight-medium;
       text-transform: uppercase;
@@ -56,7 +56,7 @@
   height: 1rem;  
   background: $celery;
   @include breakpoint(small) {
-    @include mosaic-fill(#7AB629, #F1EC01);
+    @include mosaic-fill($mosaic-start, $mosaic-end, to right);
   }  
 }
 

@@ -1,5 +1,6 @@
 .posts-wrapper {
 	padding: 35px 0 50px;
+  background: $light-gray;
 	@include breakpoint(medium) {
 		padding-bottom: 20px;
 	}

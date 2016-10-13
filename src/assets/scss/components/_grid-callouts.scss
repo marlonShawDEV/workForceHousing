@@ -1,3 +1,5 @@
+
+
 .cta-block {
 	background: $white;
 	position: relative;
@@ -5,9 +7,6 @@
 	>div {
 		padding: 30px 20px 40px;
 	}
-	// @include breakpoint(medium) {
-	// 	height: 290px;
-	// }
 
 	&__category {
 		display: block;
@@ -28,7 +27,9 @@
 			float: left;
 		}
 	}
-
+  .button.hollow {
+    color: $white;
+  }
 	h3 {
 		font-size: rem-calc(22);
 		margin-bottom: 15px;
@@ -47,13 +48,13 @@
 	}
 
 	&_alabaster {
-		background: $alabaster;
+		background: $offwhite;
 	}
 	&_buttercup {
-		background: $buttercup;
+		background: $fm-yellow;
 	}
 	&_cerulean {
-		background: $cerulean;
+		background: $fm-blue;
 		color: $white;
 	}
 	&_sushi {
@@ -63,7 +64,7 @@
 		background: $celery;
 	}
 	&_niagara {
-		background: $niagara;
+		background: $fm-teal;
 	}
 	&_buttercup, &_cerulean, &_sushi, &_celery, &_niagara {
 		color: $white;
@@ -131,7 +132,7 @@
 
 .grid__top {
 	@include breakpoint(medium) {
-		background: $alabaster;
+		background: $offwhite;
 	}
 }
 

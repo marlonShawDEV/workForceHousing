@@ -2,10 +2,6 @@ h2 {
 	margin-bottom: 3rem;
 }
 
-.bg_light-gray {
-	background: $light-gray;
-}
-
 .section_padding {
 	padding: 60px 0 65px;
 	@include breakpoint(medium) {

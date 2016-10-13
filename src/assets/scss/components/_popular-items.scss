@@ -1,5 +1,5 @@
 .popular-items {
-	background: $buttercup;
+	background: $fm-yellow;
 	color: $white;
 	padding: 20px 0;
 	h2 {
@@ -14,7 +14,7 @@
 		list-style-type: none;
 		margin: 0;
 		li {
-			border-bottom: 1px solid lighten($buttercup, 10%);
+			border-bottom: 1px solid lighten($fm-yellow, 10%);
 			font-size: rem-calc(18);
 			font-weight: $global-weight-normal;
 			padding: 0.5rem 0;
@@ -51,7 +51,7 @@
 			color: lighten($medium-gray, 25%);
 		}    
     a {
-      color: $primary-color;
+      color: $fm-blue;
     }
 		ul {
 			li {

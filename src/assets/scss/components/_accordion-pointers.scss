@@ -1,5 +1,5 @@
 /// styles for the accordion item when active/expanded
-@mixin accordion-pointers-active($color: $primary-color, $background: $accordion-content-background) {
+@mixin accordion-pointers-active($color: $fm-blue, $background: $accordion-content-background) {
   background:$background;
   color: $color;
   &::before {

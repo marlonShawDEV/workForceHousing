@@ -31,11 +31,11 @@ $tertiary-border-color: scale-color($light-gray, $lightness: -5%);
       &:hover,
       &:focus {
         color: $fm-green;
-        background: $alabaster;
+        background: $offwhite;
       }
       &.active {
         color: $fm-green;
-        background: $alabaster;
+        background: $offwhite;
         font-weight: $global-weight-black;
       }    
     }
@@ -59,7 +59,7 @@ $tertiary-border-color: scale-color($light-gray, $lightness: -5%);
     }
   }
   li.expanded {
-    background: $alabaster;  
+    background: $offwhite;  
     > a {  
       padding-bottom: $tertiary-gap/4;
     }

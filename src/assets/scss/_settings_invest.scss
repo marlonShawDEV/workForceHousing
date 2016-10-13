@@ -53,26 +53,29 @@ $medium-gray: #464645;
 $dark-gray: #333333;
 $black: #000000;
 $white: #ffffff;
-$buttercup: #ffb718;
-$cerulean: #00a6e2;
-$sushi: #97bb35;
-$celery: #a4c745;
-$pear: #c9d732; 
-$alabaster: #f9f9f9;
-$blaze: #ff6c00;
-$crimson: #cf0a2c;
-$niagara: #00a19a;
-$steel: #457bbe;
-$wisteria: #725090;
-$foundation-palette: (
-  primary: $cerulean,
-  secondary: $blaze,
-  success: #3adb76,
-  warning: #ffae00,
-  alert: #ec5840
-);
+$fm-yellow: #ffb718;
+$fm-blue: #00a6e2;
+$fm-orange: #ff6c00;
+$fm-red: #cf0a2c;
+$fm-teal: #00a19a;
+$fm-dark-blue: #457bbe;
+$fm-purple: #725090;
 $fm-green: #88BD45;
 $fm-gray: #777874;
+$sushi: #97bb35;
+$celery: #a4c745; 
+$offwhite: #f9f9f9;
+$mosaic-start: #7AB629;
+$mosaic-end: #FCEE1C;
+
+$primary-color: $fm-blue;
+$secondary-color: $fm-orange;
+$success-color: $fm-gray;
+$warning-color: $fm-yellow;
+$alert-color: $fm-red;
+$foundation-palette: (
+  primary: $primary-color
+); // primary is required in the map, even if we don't want it.
 $body-background: $white;
 $body-font-color: $medium-gray;
 $body-font-family: 'Roboto', Arial, sans-serif;
@@ -89,7 +92,7 @@ $global-text-direction: ltr;
 $global-flexbox: false;
 $print-transparent-backgrounds: true;
 
-@include add-foundation-colors;
+
 
 // 2. Breakpoints
 // --------------
@@ -145,7 +148,7 @@ $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
 $header-text-rendering: optimizeLegibility;
 $small-font-size: 80%;
-$header-small-font-color: $medium-gray;
+$header-small-font-color: inherit;
 $paragraph-lineheight: 1.6;
 $paragraph-margin-bottom: 1rem;
 $paragraph-text-rendering: optimizeLegibility;
@@ -171,11 +174,11 @@ $list-nested-side-margin: 1.25rem;
 $defnlist-margin-bottom: 1rem;
 $defnlist-term-weight: $global-weight-bold;
 $defnlist-term-margin-bottom: 0.3rem;
-$blockquote-color: $dark-gray;
-$blockquote-padding: rem-calc(9 20 0 19);
-$blockquote-border: 1px solid $medium-gray;
-$cite-font-size: rem-calc(13);
-$cite-color: $dark-gray;
+$blockquote-color: inherit;
+$blockquote-padding: rem-calc(8 18 9 30);
+$blockquote-border: 5px solid $fm-green;
+$cite-font-size: inherit;
+$cite-color: inherit;
 $keystroke-font: $font-family-monospace;
 $keystroke-color: $black;
 $keystroke-background: $light-gray;
@@ -186,7 +189,7 @@ $abbr-underline: 1px dotted $black;
 // 5. Typography Helpers
 // ---------------------
 
-$lead-font-size: $global-font-size * 1.25;
+$lead-font-size: 112.5%;
 $lead-lineheight: 1.6;
 $subheader-lineheight: 1.4;
 $subheader-color: $dark-gray;
@@ -200,9 +203,9 @@ $stat-font-size: 2.5rem;
 
 $abide-inputs: true;
 $abide-labels: true;
-$input-background-invalid: map-get($foundation-palette, alert);
-$form-label-color-invalid: map-get($foundation-palette, alert);
-$input-error-color: map-get($foundation-palette, alert);
+$input-background-invalid: $fm-red;
+$form-label-color-invalid: $fm-red;
+$input-error-color: $fm-red;
 $input-error-font-size: rem-calc(12);
 $input-error-font-weight: $global-weight-bold;
 
@@ -222,8 +225,8 @@ $accordion-content-padding: 0.5rem 1rem 1rem;
 // 8. Accordion Menu
 // -----------------
 
-$accordionmenu-arrows: true;
-$accordionmenu-arrow-color: $primary-color;
+$accordionmenu-arrows: false;
+$accordionmenu-arrow-color: $white;
 
 // 9. Badge
 // --------
@@ -249,14 +252,14 @@ $breadcrumbs-item-slash: true;
 // 11. Button
 // ----------
 
-$button-padding: 0.85em 2em;
-$button-margin: 0 0 $global-margin 0;
+$button-padding: 0.85em 1.5em;
+$button-margin: 0 0 0 0;
 $button-fill: solid;
-$button-background: $primary-color;
+$button-background: $fm-gray;
 $button-background-hover: scale-color($button-background, $lightness: -15%);
 $button-color: $white;
 $button-color-alt: $black;
-$button-radius: $global-radius;
+$button-radius: 999em;   //guaranteed pill shape at all heights
 $button-sizes: (
   tiny: 0.6rem,
   small: 0.75rem,
@@ -268,23 +271,23 @@ $button-opacity-disabled: 0.25;
 // 12. Button Group
 // ----------------
 
-$buttongroup-margin: 1rem;
-$buttongroup-spacing: 20px;
+$buttongroup-margin: 1rem 0;
+$buttongroup-spacing: 2px;
 $buttongroup-child-selector: '.button';
 $buttongroup-expand-max: 6;
 
 // 13. Callout
 // -----------
 
-$callout-background: $white;
-$callout-background-fade: 85%;
-$callout-border: 1px solid rgba($black, 0.25);
-$callout-margin: 0 0 1rem 0;
+$callout-background: $light-gray;
+$callout-background-fade: 80%;
+$callout-border: 2px solid rgba($black, 0.2);
+$callout-margin: 1rem 0;
 $callout-padding: 1rem;
-$callout-font-color: $body-font-color;
-$callout-font-color-alt: $body-background;
+$callout-font-color: currentColor;
+$callout-font-color-alt: currentColor;
 $callout-radius: $global-radius;
-$callout-link-tint: 30%;
+$callout-link-tint: false; 
 
 // 14. Close Button
 // ----------------
@@ -292,9 +295,9 @@ $callout-link-tint: 30%;
 $closebutton-position: right top;
 $closebutton-offset-horizontal: 1rem;
 $closebutton-offset-vertical: 0.5rem;
-$closebutton-size: 2em;
+$closebutton-size: 2.5rem;
 $closebutton-lineheight: 1;
-$closebutton-color: $dark-gray;
+$closebutton-color: $medium-gray;
 $closebutton-color-hover: $black;
 
 // 15. Drilldown
@@ -310,8 +313,8 @@ $drilldown-background: $white;
 
 $dropdown-padding: 1rem;
 $dropdown-border: 1px solid $medium-gray;
-$dropdown-font-size: 1rem;
-$dropdown-width: 300px;
+$dropdown-font-size: .875rem;
+$dropdown-width: rem-calc(300px);
 $dropdown-radius: $global-radius;
 $dropdown-sizes: (
   tiny: 100px,
@@ -322,9 +325,9 @@ $dropdown-sizes: (
 // 17. Dropdown Menu
 // -----------------
 
-$dropdownmenu-arrows: true;
-$dropdownmenu-arrow-color: $blaze;
-$dropdownmenu-min-width: 340px;
+$dropdownmenu-arrows: false;
+$dropdownmenu-arrow-color: $fm-orange;
+$dropdownmenu-min-width: rem-calc(340px);
 $dropdownmenu-background: $white;
 $dropdownmenu-border: 0px;
 
@@ -342,7 +345,7 @@ $fieldset-border: 1px solid $medium-gray;
 $fieldset-padding: rem-calc(20);
 $fieldset-margin: rem-calc(18 0);
 $legend-padding: rem-calc(0 3);
-$form-spacing: rem-calc(16);
+$form-spacing: rem-calc(18);
 $helptext-color: $black;
 $helptext-font-size: rem-calc(13);
 $helptext-font-style: italic;
@@ -350,28 +353,28 @@ $input-prefix-color: $black;
 $input-prefix-background: $light-gray;
 $input-prefix-border: 1px solid $medium-gray;
 $input-prefix-padding: 1rem;
-$form-label-color: $black;
-$form-label-font-size: rem-calc(14);
-$form-label-font-weight: $global-weight-normal;
+$form-label-color: inherit;
+$form-label-font-size: rem-calc(16);
+$form-label-font-weight: 500;
 $form-label-line-height: 1.8;
-$select-background: $white;
+$select-background: inherit;
 $select-triangle-color: $dark-gray;
-$select-radius: $global-radius;
-$input-color: $black;
-$input-placeholder-color: $medium-gray;
+$select-radius: 5px;
+$input-color: inherit;
+$input-placeholder-color: inherit;
 $input-font-family: inherit;
 $input-font-size: rem-calc(16);
-$input-background: $white;
-$input-background-focus: $white;
+$input-background: inherit;
+$input-background-focus: inherit;
 $input-background-disabled: $light-gray;
 $input-border: 1px solid $medium-gray;
 $input-border-focus: 1px solid $dark-gray;
 $input-shadow: inset 0 1px 2px rgba($black, 0.1);
-$input-shadow-focus: 0 0 5px $medium-gray;
+$input-shadow-focus: 0 0 4px rgba($black, 0.2);
 $input-cursor-disabled: default;
 $input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
 $input-number-spinners: true;
-$input-radius: $global-radius;
+$input-radius: 5px;
 
 // 20. Label
 // ---------
@@ -393,21 +396,21 @@ $mediaobject-image-width-stacked: 100%;
 // --------
 
 $menu-margin: 0;
-$menu-margin-nested: 1rem;
-$menu-item-padding: 0.7rem 1rem;
-$menu-item-color-active: $white;
-$menu-item-background-active: map-get($foundation-palette, primary);
-$menu-icon-spacing: 0.25rem;
+$menu-margin-nested: 0;
+$menu-item-padding: 0.7rem 1rem;  
+$menu-item-color-active: $fm-orange;
+$menu-item-background-active: $white;
+$menu-icon-spacing: 1rem;
 
 // 23. Meter
 // ---------
 
-$menu-margin: 0;
-$menu-margin-nested: 0;
-$menu-item-padding: 0.65rem 1.31rem;  // at more than 1.31 there's some jiggling right before the switch to mobile nav.
-$menu-item-color-active: $blaze;
-$menu-item-background-active: $white;
-$menu-icon-spacing: 1rem;
+$meter-height: 1rem;
+$meter-radius: $global-radius;
+$meter-background: $medium-gray;
+$meter-fill-good: $fm-green;
+$meter-fill-medium: $fm-yellow;
+$meter-fill-bad: $fm-red;
 
 // 24. Off-canvas
 // --------------
@@ -425,10 +428,10 @@ $maincontent-shadow: 0 0 10px rgba($black, 0.5);
 // 25. Orbit
 // ---------
 
-$orbit-bullet-background: $medium-gray;
-$orbit-bullet-background-active: $dark-gray;
-$orbit-bullet-diameter: 1.2rem;
-$orbit-bullet-margin: 0.1rem;
+$orbit-bullet-background: currentColor;
+$orbit-bullet-background-active: currentColor;
+$orbit-bullet-diameter: 1rem;
+$orbit-bullet-margin: 0.2rem;
 $orbit-bullet-margin-top: 0.8rem;
 $orbit-bullet-margin-bottom: 0.8rem;
 $orbit-caption-background: rgba($black, 0.5);
@@ -467,7 +470,7 @@ $progress-radius: $global-radius;
 // ----------
 
 $reveal-background: $white;
-$reveal-width: 600px;
+$reveal-width: 75%;
 $reveal-max-width: $global-width;
 $reveal-padding: $global-padding;
 $reveal-border: 1px solid $medium-gray;
@@ -508,17 +511,17 @@ $switch-paddle-transition: all 0.25s ease-out;
 // 31. Table
 // ---------
 
-$table-background: scale-color($steel, $lightness: 100%);
+$table-background: scale-color($fm-dark-blue, $lightness: 100%);
 $table-color-scale: 4%;
-$table-border: 1px solid scale-color($steel, $lightness: 90%);
+$table-border: 1px solid scale-color($fm-dark-blue, $lightness: 90%);
 $table-padding: rem-calc(8 10 10);
 $table-hover-scale: 1%;
-$table-row-hover: scale-color($steel, $lightness: 98%);
-$table-row-stripe-hover: scale-color($steel, $lightness: 90%);
-$table-striped-background: scale-color($steel, $lightness: 93%);
+$table-row-hover: scale-color($fm-dark-blue, $lightness: 98%);
+$table-row-stripe-hover: scale-color($fm-dark-blue, $lightness: 90%);
+$table-striped-background: scale-color($fm-dark-blue, $lightness: 93%);
 $table-stripe: even;
-$table-head-background: $steel;
-$table-foot-background: scale-color($steel, $lightness: 80%);
+$table-head-background: $fm-dark-blue;
+$table-foot-background: scale-color($fm-dark-blue, $lightness: 80%);
 $table-head-font-color: $white;
 $show-header-for-stacked: false;
 
@@ -535,14 +538,14 @@ $tab-expand-max: 6;
 $tab-content-background: $white;
 $tab-content-border: $light-gray;
 $tab-content-color: foreground($tab-background, $primary-color);
-$tab-content-padding: 1rem;
+$tab-content-padding: 1rem 0;
 
 // 33. Thumbnail
 // -------------
 
-$thumbnail-border: solid 4px $white;
+$thumbnail-border: 0px;  //solid 4px $white;
 $thumbnail-margin-bottom: $global-margin;
-$thumbnail-shadow: 0 0 0 1px rgba($black, 0.2);
+$thumbnail-shadow: 0px;  //0 0 0 1px rgba($black, 0.2);
 $thumbnail-shadow-hover: 0 0 6px 1px rgba($primary-color, 0.5);
 $thumbnail-transition: box-shadow 200ms ease-out;
 $thumbnail-radius: $global-radius;
@@ -550,23 +553,23 @@ $thumbnail-radius: $global-radius;
 // 34. Title Bar
 // -------------
 
-$titlebar-background: $black;
+$titlebar-background: inherit;
 $titlebar-color: $white;
-$titlebar-padding: 0.5rem;
-$titlebar-text-font-weight: bold;
-$titlebar-icon-color: $white;
-$titlebar-icon-color-hover: $medium-gray;
-$titlebar-icon-spacing: 0.25rem;
+$titlebar-padding: 0;
+$titlebar-text-font-weight: inherit;
+$titlebar-icon-color: $primary-color;
+$titlebar-icon-color-hover: $primary-color;
+$titlebar-icon-spacing: 1.25rem;
 
 // 35. Tooltip
 // -----------
 
-$has-tip-font-weight: $global-weight-bold;
+$has-tip-font-weight: $global-weight-normal;
 $has-tip-border-bottom: dotted 1px $dark-gray;
-$tooltip-background-color: $black;
+$tooltip-background-color: $fm-gray;
 $tooltip-color: $white;
 $tooltip-padding: 0.75rem;
-$tooltip-font-size: $small-font-size;
+$tooltip-font-size: 85%;
 $tooltip-pip-width: 0.75rem;
 $tooltip-pip-height: $tooltip-pip-width * 0.866;
 $tooltip-radius: $global-radius;
@@ -575,7 +578,7 @@ $tooltip-radius: $global-radius;
 // -----------
 
 $topbar-padding: 0;
-$topbar-background: $alabaster;
+$topbar-background: $white;
 $topbar-submenu-background: $white;
 $topbar-title-spacing: 0;
 $topbar-input-width: 200px;

@@ -1,7 +1,7 @@
 .overlay  {
   display: inline-block;  
 	position: relative;
-  background: $primary-color;  
+  background: $fm-blue;  
   color: $white;
   max-width: 100%;
   transition: 0.3s ease;
@@ -17,13 +17,13 @@
 
 .icon {
   &.secondary { 
-    color: $blaze;  
+    color: $fm-orange;  
     &:hover,
     &:focus {
-      color: scale-color($blaze, $lightness: -10%);   
+      color: scale-color($fm-orange, $lightness: -10%);   
     }
     &:active {
-      color: scale-color($blaze, $lightness: -20%);
+      color: scale-color($fm-orange, $lightness: -20%);
     }
   }
   svg { 

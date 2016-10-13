@@ -1,13 +1,13 @@
 $callout-palette: (
   green: $fm-green,
-  orange: $blaze,
-  yellow: $buttercup,
-  red: $crimson,
-  purple: $wisteria,
-  blue: $steel,
-  teal: $niagara,
+  orange: $fm-orange,
+  yellow: $fm-yellow,
+  purple: $fm-purple,
+  blue: $fm-dark-blue,
+  teal: $fm-teal,
   gray: $medium-gray,
-  primary: $primary-color
+  alert: $fm-red,
+  primary: $fm-blue
 );
 
 .callout {
@@ -18,9 +18,10 @@ $callout-palette: (
   padding: $callout-padding;
   &.large {
     padding: $callout-padding * 2;
+    font-size: $global-font-size * 1.2;
   }
   &.small {
-    padding: $callout-padding * 0.5;
+    padding: $callout-padding * 0.5 $callout-padding * 0.75;
   }
   > :first-child {
     margin-top: 0;
@@ -31,7 +32,7 @@ $callout-palette: (
   .close-button {
     color: currentColor;
   }
-  &.hollow {
+  &.callout-hollow {
     background-color: $white;
     border: 0.1875rem solid $callout-background;
   }
@@ -41,12 +42,78 @@ $callout-palette: (
       color: $white;
       a {
         @include anchor-on-dark;
-      } 
+      }       
+      .button.hollow {
+        color: $white;
+        &:hover, 
+        &:active,
+        &:focus {
+          color: $color;
+        }
+      }
     }
   }
-  @each $name, $color in $foundation-palette {
-    &.#{$name} {
-      background-color: scale-color($color, $lightness: $callout-background-fade);
+  &.footerband {
+    border-radius: 0;    
+    padding: 2.5rem 0;
+    margin: 0;
+    @include breakpoint(large) {
+      padding: 4.375rem 0;
+    }    
+    p {
+      font-size: rem-calc(22);
+      font-weight: $global-weight-light;
+      margin: 1.5rem 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
+    h3 {
+      font-size: rem-calc(32);
+      font-weight: $global-weight-medium;
+      line-height: 1.2;
+      @include breakpoint(large) {
+        font-size: rem-calc(52);
+      }
+    }
+    form {      
+      display: table;
+      width: 100%;
+      > :not(:last-child) {
+        max-width: 18rem;
+        margin-right: 1rem;
+      }
+      > * {
+        display: table-cell;
+        vertical-align: middle;
+        margin-bottom: 0;
+      }
+    }
+    > .row {
+      > div + div:last-child {
+        text-align: center;
+        padding: $global-padding 0;
+      }
+    }   
+		@include breakpoint(large) {    
+      > .row {
+        width: 100%;
+        > div {
+          display: table-cell;
+          vertical-align: middle;  
+          float: none;   
+          min-width: 29rem;
+          text-align: left;
+          &:not(:last-child) {
+            > * {              
+              padding-right: 6rem;
+            }
+          }
+          & + div:last-child {
+            text-align: right;            
+          }
+        } 
+      }
+		}
   }
 }

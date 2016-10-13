@@ -53,26 +53,29 @@ $medium-gray: #464645;
 $dark-gray: #333333;
 $black: #000000;
 $white: #ffffff;
-$buttercup: #ffb718;
-$cerulean: #00a6e2;
-$sushi: #97bb35;
-$celery: #a4c745;
-$pear: #c9d732; 
-$alabaster: #f9f9f9;
-$blaze: #ff6c00;
-$crimson: #cf0a2c;
-$niagara: #00a19a;
-$steel: #457bbe;
-$wisteria: #725090;
-$foundation-palette: (
-  primary: $cerulean,
-  secondary: $blaze,
-  success: #40CC5A,
-  warning: #FF970F,
-  alert: #DC3232
-);
+$fm-yellow: #ffb718;
+$fm-blue: #00a6e2;
+$fm-orange: #ff6c00;
+$fm-red: #cf0a2c;
+$fm-teal: #00a19a;
+$fm-dark-blue: #457bbe;
+$fm-purple: #725090;
 $fm-green: #88BD45;
 $fm-gray: #777874;
+$sushi: #97bb35;
+$celery: #a4c745; 
+$offwhite: #f9f9f9;
+$mosaic-start: #7AB629;
+$mosaic-end: #FCEE1C;
+
+$primary-color: $fm-blue;
+$secondary-color: $fm-orange;
+$success-color: $fm-gray;
+$warning-color: $fm-yellow;
+$alert-color: $fm-red;
+$foundation-palette: (
+  primary: $primary-color
+); // primary is required in the map, even if we don't want it.
 $body-background: $white;
 $body-font-color: $medium-gray;
 $body-font-family: 'Roboto', Arial, sans-serif;
@@ -89,7 +92,7 @@ $global-text-direction: ltr;
 $global-flexbox: false;
 $print-transparent-backgrounds: true;
 
-@include add-foundation-colors;
+
 
 // 2. Breakpoints
 // --------------
@@ -200,9 +203,9 @@ $stat-font-size: 2.5rem;
 
 $abide-inputs: true;
 $abide-labels: true;
-$input-background-invalid: map-get($foundation-palette, alert);
-$form-label-color-invalid: map-get($foundation-palette, alert);
-$input-error-color: map-get($foundation-palette, alert);
+$input-background-invalid: $fm-red;
+$form-label-color-invalid: $fm-red;
+$input-error-color: $fm-red;
 $input-error-font-size: rem-calc(12);
 $input-error-font-weight: $global-weight-bold;
 
@@ -252,11 +255,11 @@ $breadcrumbs-item-slash: true;
 $button-padding: 0.85em 1.5em;
 $button-margin: 0 0 0 0;
 $button-fill: solid;
-$button-background: $primary-color;
+$button-background: $fm-gray;
 $button-background-hover: scale-color($button-background, $lightness: -15%);
 $button-color: $white;
 $button-color-alt: $black;
-$button-radius: $global-radius;
+$button-radius: 999em;   //guaranteed pill shape at all heights
 $button-sizes: (
   tiny: 0.6rem,
   small: 0.75rem,
@@ -323,7 +326,7 @@ $dropdown-sizes: (
 // -----------------
 
 $dropdownmenu-arrows: false;
-$dropdownmenu-arrow-color: $blaze;
+$dropdownmenu-arrow-color: $fm-orange;
 $dropdownmenu-min-width: rem-calc(340px);
 $dropdownmenu-background: $white;
 $dropdownmenu-border: 0px;
@@ -395,7 +398,7 @@ $mediaobject-image-width-stacked: 100%;
 $menu-margin: 0;
 $menu-margin-nested: 0;
 $menu-item-padding: 0.7rem 1rem;  
-$menu-item-color-active: $blaze;
+$menu-item-color-active: $fm-orange;
 $menu-item-background-active: $white;
 $menu-icon-spacing: 1rem;
 
@@ -405,9 +408,9 @@ $menu-icon-spacing: 1rem;
 $meter-height: 1rem;
 $meter-radius: $global-radius;
 $meter-background: $medium-gray;
-$meter-fill-good: $success-color;
-$meter-fill-medium: $warning-color;
-$meter-fill-bad: $alert-color;
+$meter-fill-good: $fm-green;
+$meter-fill-medium: $fm-yellow;
+$meter-fill-bad: $fm-red;
 
 // 24. Off-canvas
 // --------------
@@ -508,17 +511,17 @@ $switch-paddle-transition: all 0.25s ease-out;
 // 31. Table
 // ---------
 
-$table-background: scale-color($steel, $lightness: 100%);
+$table-background: scale-color($fm-dark-blue, $lightness: 100%);
 $table-color-scale: 4%;
-$table-border: 1px solid scale-color($steel, $lightness: 90%);
+$table-border: 1px solid scale-color($fm-dark-blue, $lightness: 90%);
 $table-padding: rem-calc(8 10 10);
 $table-hover-scale: 1%;
-$table-row-hover: scale-color($steel, $lightness: 98%);
-$table-row-stripe-hover: scale-color($steel, $lightness: 90%);
-$table-striped-background: scale-color($steel, $lightness: 93%);
+$table-row-hover: scale-color($fm-dark-blue, $lightness: 98%);
+$table-row-stripe-hover: scale-color($fm-dark-blue, $lightness: 90%);
+$table-striped-background: scale-color($fm-dark-blue, $lightness: 93%);
 $table-stripe: even;
-$table-head-background: $steel;
-$table-foot-background: scale-color($steel, $lightness: 80%);
+$table-head-background: $fm-dark-blue;
+$table-foot-background: scale-color($fm-dark-blue, $lightness: 80%);
 $table-head-font-color: $white;
 $show-header-for-stacked: false;
 
@@ -554,8 +557,8 @@ $titlebar-background: inherit;
 $titlebar-color: $white;
 $titlebar-padding: 0;
 $titlebar-text-font-weight: inherit;
-$titlebar-icon-color: $cerulean;
-$titlebar-icon-color-hover: $cerulean;
+$titlebar-icon-color: $primary-color;
+$titlebar-icon-color-hover: $primary-color;
 $titlebar-icon-spacing: 1.25rem;
 
 // 35. Tooltip

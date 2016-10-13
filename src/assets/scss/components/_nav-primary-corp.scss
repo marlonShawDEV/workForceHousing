@@ -25,7 +25,7 @@
     height: 2.5rem;
     width: 2.5rem;
     margin: $titlebar-icon-spacing;
-    background: transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyMyIgdmlld0JveD0iMCAwIDI0IDIzIj48ZyBmaWxsPSIjMDBhNmUyIj48cmVjdCB3aWR0aD0iMjQiIGhlaWdodD0iMyIvPjxyZWN0IHk9IjEwIiB3aWR0aD0iMjQiIGhlaWdodD0iMyIvPjxyZWN0IHk9IjIwIiB3aWR0aD0iMjQiIGhlaWdodD0iMyIvPjwvZz48L3N2Zz4=") no-repeat center center;         
+    background: transparent icon(menu, $fm-blue, 24, 23, 0, 0, 24, 23) no-repeat center center;   
   }  
 }
 @include breakpoint(medium down) {      
@@ -90,7 +90,7 @@
     }     
     &.expanded {
       .title-bar {
-        background: $cerulean none repeat scroll 0 0;
+        background: $fm-blue none repeat scroll 0 0;
         color: $white;
         transition: background-color 0.35s ease 0s, background-image 0.35s ease 0s;
         span {
@@ -101,14 +101,15 @@
         }
       } 
       .toggle-icon {
-        background: transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDUxMiA1MTIiPjxwYXRoIGQ9Ik00NDMuNiAzODcuMUwzMTIuNCAyNTUuNGwxMzEuNS0xMzBjNS40LTUuNCA1LjQtMTQuMiAwLTE5LjZsLTM3LjQtMzcuNmMtMi42LTIuNi02LjEtNC05LjgtNCAtMy43IDAtNy4yIDEuNS05LjggNEwyNTYgMTk3LjggMTI0LjkgNjguM2MtMi42LTIuNi02LjEtNC05LjgtNCAtMy43IDAtNy4yIDEuNS05LjggNEw2OCAxMDUuOWMtNS40IDUuNC01LjQgMTQuMiAwIDE5LjZsMTMxLjUgMTMwTDY4LjQgMzg3LjFjLTIuNiAyLjYtNC4xIDYuMS00LjEgOS44IDAgMy43IDEuNCA3LjIgNC4xIDkuOGwzNy40IDM3LjZjMi43IDIuNyA2LjIgNC4xIDkuOCA0LjEgMy41IDAgNy4xLTEuMyA5LjgtNC4xTDI1NiAzMTMuMWwxMzAuNyAxMzEuMWMyLjcgMi43IDYuMiA0LjEgOS44IDQuMSAzLjUgMCA3LjEtMS4zIDkuOC00LjFsMzcuNC0zNy42YzIuNi0yLjYgNC4xLTYuMSA0LjEtOS44QzQ0Ny43IDM5My4yIDQ0Ni4yIDM4OS43IDQ0My42IDM4Ny4xeiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==") no-repeat center center; 
+        background: transparent icon(menu-close, $white, 24, 24) no-repeat center center; 
       }      
     }
     .input-group {
       height: 5rem;
       margin-bottom: 0;
       padding: 0;
-      background: $buttercup;
+      background: $fm-yellow;
+      color: $white;
     }
     .button { 
       height: 2.5rem;
@@ -116,12 +117,13 @@
       margin: $titlebar-icon-spacing;
       padding: 0;
       transition: none;
-      background: $buttercup url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDUxMiA1MTIiPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik00NDUgMzg2LjdsLTg0LjgtODUuOWMxMy44LTI0LjEgMjEtNTAuOSAyMS03Ny45IDAtODcuNi03MS4yLTE1OC45LTE1OC42LTE1OC45QzEzNS4yIDY0IDY0IDEzNS4zIDY0IDIyMi45YzAgODcuNiA3MS4yIDE1OC45IDE1OC42IDE1OC45IDI3LjkgMCA1NS41LTcuNyA4MC4xLTIyLjRsODQuNCA4NS42YzEuOSAxLjkgNC42IDMuMSA3LjMgMy4xIDIuNyAwIDUuNC0xLjEgNy4zLTMuMWw0My4zLTQzLjhDNDQ5IDM5Ny4xIDQ0OSAzOTAuNyA0NDUgMzg2Ljd6TTIyMi42IDEyNS45YzUzLjQgMCA5Ni44IDQzLjUgOTYuOCA5NyAwIDUzLjUtNDMuNCA5Ny05Ni44IDk3IC01My40IDAtOTYuOC00My41LTk2LjgtOTdDMTI1LjggMTY5LjQgMTY5LjIgMTI1LjkgMjIyLjYgMTI1Ljl6Ii8+PC9zdmc+") no-repeat center center;
+      background: $fm-yellow icon(search, $white, 24, 24) no-repeat center center; 
+      border-width: 0;
       
     }
     input[type="search"] {
       max-width: 100%;
-      background: $buttercup;
+      background: $fm-yellow;
       box-shadow: none;
       border: 0;
       color: $white;
@@ -152,11 +154,11 @@
       position: relative;
       top: 0.05em;
       margin-right: 0.5rem;
-      background: transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgdmlld0JveD0iMCAwIDUxMiA1MTIiPgo8cGF0aCBmaWxsPSIjZmY2YzAwIiBkPSJNMjU2IDI5OC4zTDI1NiAyOTguMyAyNTYgMjk4LjNsMTc0LjItMTY3LjJjNC4zLTQuMiAxMS40LTQuMSAxNS44IDAuMmwzMC42IDI5LjljNC40IDQuMyA0LjUgMTEuMyAwLjIgMTUuNUwyNjQuMSAzODAuOWMtMi4yIDIuMi01LjIgMy4yLTguMSAzIC0zIDAuMS01LjktMC45LTguMS0zTDM1LjIgMTc2LjdjLTQuMy00LjItNC4yLTExLjIgMC4yLTE1LjVMNjYgMTMxLjNjNC40LTQuMyAxMS41LTQuNCAxNS44LTAuMkwyNTYgMjk4LjN6Ii8+Cjwvc3ZnPg==") no-repeat center center;
+      background: transparent icon(chevron-down, $fm-orange, 14, 14) no-repeat center center;
     }
     &.is-active {
       > a::before {
-        background: transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgdmlld0JveD0iMCAwIDUxMiA1MTIiPgo8cGF0aCBmaWxsPSIjZmY2YzAwIiBkPSJNMjU2IDIxMy43TDI1NiAyMTMuNyAyNTYgMjEzLjdsMTc0LjIgMTY3LjJjNC4zIDQuMiAxMS40IDQuMSAxNS44LTAuMmwzMC42LTI5LjljNC40LTQuMyA0LjUtMTEuMyAwLjItMTUuNUwyNjQuMSAxMzEuMWMtMi4yLTIuMi01LjItMy4yLTguMS0zIC0zLTAuMS01LjkgMC45LTguMSAzTDM1LjIgMzM1LjNjLTQuMyA0LjItNC4yIDExLjIgMC4yIDE1LjVMNjYgMzgwLjdjNC40IDQuMyAxMS41IDQuNCAxNS44IDAuMkwyNTYgMjEzLjd6Ii8+Cjwvc3ZnPg==") no-repeat center center;
+        background: transparent icon(chevron-up, $fm-orange, 14, 14) no-repeat center center;
       }
     }
   }  
@@ -233,7 +235,7 @@
             z-index: 497;
             transition: color 0.25s ease 0s;
             &:focus  {
-              color: $blaze;
+              color: $fm-orange;
             }
           }        
         }      

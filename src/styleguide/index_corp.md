@@ -173,160 +173,144 @@ As you've probably noticed in the examples above, you have access to a small, me
 
 # Colors
 
-<p class="lead">Below you can find the different values we created that support the primary color variable you can change at any time in <code>\_settings.scss</code></p>
+<p class="lead">Below you can find the different values we created that support the color variables you can change at any time in <code>\_settings.scss</code></p>
 
 ---
 
-<div class="row up-1 medium-up-3 large-up-5">
+<div class="row up-1 medium-up-3 large-up-4">
   <div class="column">
     <div class="color-block">
       <span style="background: #00a6e2"></span>
-      #00a6e2<br>
-      $cerulean, $primary-color
+      $fm-blue<br>
+      $primary-color
     </div>
   </div>
   <div class="column">
     <div class="color-block">
       <span style="background: #ff6c00"></span>
-      #ff6c00<br>
-      $blaze, $secondary-color
+      $fm-orange<br>
+      $secondary-color
     </div>
   </div>
   <div class="column">
     <div class="color-block">
       <span style="background: #88BD45"></span>
-      #88BD45<br>
-      $fm-green
-    </div>
-  </div>
-  <div class="column">
-    <div class="color-block">
-      <span style="background: #97bb35"></span>
-      #97bb35<br>
-      $sushi
-    </div>
-  </div>
-  <div class="column">
-    <div class="color-block">
-      <span style="background: #a4c745"></span>
-      #a4c745<br>
-      $celery
-    </div>
-  </div>
-</div>
-<br>
-<div class="row up-1 medium-up-3 large-up-5">
-  <div class="column">
-    <div class="color-block">
-      <span style="background: #457bbe"></span>
-      #457bbe<br>
-      $steel
+      $fm-green<br>
+      $success-color
     </div>
   </div>
   <div class="column">
     <div class="color-block">
       <span style="background: #ffb718"></span>
-      #ffb718<br>
-      $buttercup
+      $fm-yellow<br>
+      $warning-color
     </div>
   </div>
+</div>
+<br>
+<div class="row up-1 medium-up-3 large-up-4">
   <div class="column">
     <div class="color-block">
       <span style="background: #00a19a"></span>
-      #00a19a<br>
-      $niagara
+      $fm-teal
     </div>
   </div>
   <div class="column">
     <div class="color-block">
       <span style="background: #cf0a2c"></span>
-      #cf0a2c<br>
-      $crimson
+      $fm-red<br>
+      $alert-color
     </div>
   </div>
   <div class="column">
     <div class="color-block">
       <span style="background: #725090"></span>
-      #725090<br>
-      $wisteria
+      $fm-purple
+    </div>
+  </div>
+  <div class="column">
+    <div class="color-block">
+      <span style="background: #457bbe"></span>
+      $fm-dark-blue
     </div>
   </div>
 </div>
 <br>
-<div class="row up-1 medium-up-3 large-up-5">
+<div class="row up-1 medium-up-3 large-up-4">
   <div class="column">
     <div class="color-block">
       <span style="background: #333333"></span>
-      #333333<br>
       $dark-gray
     </div>
   </div>
   <div class="column">
     <div class="color-block">
       <span style="background: #464645"></span>
-      #464645<br>
       $medium-gray
     </div>
   </div>
   <div class="column">
     <div class="color-block">
       <span style="background: #777874"></span>
-      #777874<br>
       $fm-gray
     </div>
   </div>
   <div class="column">
     <div class="color-block">
+      <span style="background: #000000"></span>
+      $black
+    </div>
+  </div>
+</div>
+<br>
+<div class="row up-1 medium-up-3 large-up-4">  
+  <div class="column">
+    <div class="color-block">
       <span style="background: #f4f4f4"></span>
-      #f4f4f4<br>
       $light-gray
     </div>
   </div>
   <div class="column">
     <div class="color-block">
       <span style="background: #f9f9f9"></span>
-      #f9f9f9<br>
-      $alabaster
-    </div>
-  </div>
-</div>
-<br>
-<div class="row up-1 medium-up-3 large-up-5">
-  <div class="column">
-    <div class="color-block">
-      <span style="background: #40CC5A"></span>
-      #40CC5A<br>
-      $success-color
-    </div>
-  </div>
-  <div class="column">
-    <div class="color-block">
-      <span style="background: #FF970F"></span>
-      #FF970F<br>
-      $warning-color
-    </div>
-  </div>
-  <div class="column">
-    <div class="color-block">
-      <span style="background: #DC3232"></span>
-      #DC3232<br>
-      $alert-color
-    </div>
-  </div>
-  <div class="column">
-    <div class="color-block">
-      <span style="background: #000000"></span>
-      #000000<br>
-      $black
+      $offwhite
     </div>
   </div>
   <div class="column">
     <div class="color-block">
       <span style="background: #ffffff"></span>
-      #ffffff<br>
       $white
     </div>
   </div>
+</div>
+<br>
+<h3>Mosaic Colors:</h3>
+<div class="row up-1 medium-up-3 large-up-4">  
+  <div class="column">
+    <div class="color-block">
+      <span style="background: #97bb35"></span>
+      $sushi
+    </div>
+  </div>
+  <div class="column">
+    <div class="color-block">
+      <span style="background: #a4c745"></span>
+      celery
+    </div>
+  </div>
+  <div class="column">
+    <div class="color-block">
+      <span style="background: #7AB629"></span>
+      $mosaic-start
+    </div>
+  </div>
+  <div class="column">
+    <div class="color-block">
+      <span style="background: #FCEE1C"></span>
+      $mosaic-end
+    </div>
+  </div>
+  , 
 </div>
 
 
@@ -586,15 +570,114 @@ The `<ul>` is a bulleted list by default, but you can add the class `.no-bullet`
 
 
 
+# Visibility Classes
+
+Visibility classes let you show or hide elements based on screen size or device orientation. You can also use visibility classes to control which elements users see depending on their browsing environment.
+
+<div class="callout">
+  <p>There are no classes to detect touchscreen devices, as both desktop and mobile browsers inconsistently report touch support. Learn more here: <a href="http://www.stucox.com/blog/you-cant-detect-a-touchscreen/">You Can't Detect a Touchscreen</a></p>
+</div>
+
+## Show/Hide by Screen Size/Orientation
+
+There are `.show-for-xxx` and `.hide-for-xxx` visibility classes to control the visiblity of an element based on the device on which users view a page. If their browser meets the class's conditions, the element will be shown. If not, it will be hidden.
+
+```html_example
+<p>You are on a small screen or larger.</p>
+<p class="show-for-medium">You are on a medium screen or larger.</p>
+<p class="show-for-large">You are on a large screen or larger.</p>
+<p class="show-for-small-only">You are <em>definitely</em> on a small screen.</p>
+<p class="show-for-medium-only">You are <em>definitely</em> on a medium screen.</p>
+<p class="show-for-large-only">You are <em>definitely</em> on a large screen.</p>
+<p class="hide-for-medium">You are <em>not</em> on a medium screen or larger.</p>
+<p class="hide-for-large">You are <em>not</em> on a large screen or larger.</p>
+<p class="hide-for-small-only">You are <em>definitely not</em> on a small screen.</p>
+<p class="hide-for-medium-only">You are <em>definitely not</em> on a medium screen.</p>
+<p class="hide-for-large-only">You are <em>definitely not</em> on a large screen.</p>
+<p class="show-for-landscape">You are in landscape orientation.</p>
+<p class="show-for-portrait">You are in portrait orientation.</p>
+```
+
+---
+
+### Show/Hide for Screen Readers
+
+And if you really just need something hidden no matter what, there are classes for that as well. The `.hide` and `.invisible` classes respectively set `display: none` and `visibility: hidden` on an element. Note that both of these classes hide content from screen readers. 
+
+To visually hide content, while still allowing assistive technology to read it, add the class `.show-for-sr`.  To hide text from assistive technology, while still keeping it visible, add the attribute `aria-hidden="true"`. This doesn't affect how the element looks, but screen readers will skip over it.  
+
+Use the class `.show-on-focus` to hide an element, except when it has focus. Adding tabindex="0" to the target element makes if focusable.
+
+```html_example
+<p class="hide">Hidden for all users.</p>
+<p class="invisible">Not visible for all users, but still occupies space on screen.</p>
+<p class="show-for-sr">This text can only be read by a screen reader.</p>
+<p>There's a line of text above this one, you just can't see it because it is only shown to screen readers.</p>
+<p aria-hidden="true">This text can be seen, but won't be read by a screen reader.</p>
+
+<p>Click on this sentence and then hit tab to see the skip link appear while it has focus.</p>
+<p><a name="skiplink" class="show-on-focus" href="#sampleContent">Skip to Content</a></p>
+
+<div id="sampleContent" role="main" tabindex="0" style="min-height: 1rem;">
+</div>
+```
+
+
+
+# Float Classes
+
+<p class="lead">Foundation includes a handful of helpful float classes to add common positioning behaviors to elements.</p>
+
+---
+
+## Float Left/Right
+
+You can change the float behavior of an element by adding the `.float-left` or `.float-right` classes to an element. To clear floats, add the class `.clearfix` to the parent element.
+
+
+```html_example
+<div class="callout clearfix">
+  <a class="button float-left">Left</a>
+  <a class="button float-right">Right</a>
+</div>
+```
+
+---
+
+## Float Center
+
+Okay, it's not *really* a float, but you can add the `.float-center` class to an element to engage the automatic margin centering trick. Note that this will only work on elements with an absolute width, which means not a percentage or `auto` width.
+
+```html_example
+<img src="http://www.freddiemac.com/blog/images/fm_blog_usda_returns.jpg" alt="Harp - act now!" class="float-center">
+```
+
+
+
 # Buttons
 
 <p class="lead">The following `.button` styles can be used either on anchor links or on actual <code>button</code> tags.  The size can be adjusted by adding a class of `.tiny`, `.small`, or `.large`.</p>
 
 ---
 
+## Default Buttons
+
+Use default buttons for actions like resetting a form or cancelling a request.
+
+```html_example
+<p>
+  <a href="#" class="large button">Large button</a>
+  <a href="#" class="button">Regular button</a>
+  <a href="#" class="small button">Small button</a>
+  <a href="#" class="tiny button">Tiny button</a>
+</p>
+```
+
+---
+
 ## Primary Buttons
 
-Use class `.primary`, for buttons used for primary calls-to-action.  Use sparingly; there shouldn't be multiple calls-to-action on a single web page. 
+Use class `.primary`, for buttons used for primary calls-to-action, like submitting a form.  Use sparingly; there shouldn't be multiple calls-to-action on a single web page. 
 
 ```html_example
 <p>
@@ -622,11 +705,34 @@ Use class `.secondary` for buttons used for less important, secondary actions on
 
 ---
 
-## Hollow Buttons
+## Tertiary Buttons
 
-Use class `.hollow` to create white buttons for use on darker backgrounds.
+Use class `.tertiary` for buttons used for less important, incidental actions on a page.
 
 ```html_example
+<p>
+  <a href="#" class="tertiary large button">Large button</a>
+  <a href="#" class="tertiary button">Regular button</a>
+  <a href="#" class="tertiary small button">Small button</a>
+  <a href="#" class="tertiary tiny button">Tiny button</a>
+</p>
+```
+
+---
+
+## Hollow Buttons
+
+Use class `.hollow` for non-solid buttons.
+
+```html_example
+
+
+  <p>
+    <a href="#" class="hollow large button">Large button</a>
+    <a href="#" class="hollow button">Regular button</a>
+    <a href="#" class="hollow small button">Small button</a>
+    <a href="#" class="hollow tiny button">Tiny button</a>
+  </p>
 <div class="callout callout-purple">
   <p>
     <a href="#" class="hollow large button">Large button</a>
@@ -655,21 +761,6 @@ Use class `.hollow` to create white buttons for use on darker backgrounds.
 
 ---
 
-## Hollow Darken Buttons
-
-Limit the usage of the `.hollow` and `.darken` combined styles to usage on light backgrounds.
-
-```html_example
-<p>
-  <a href="#" class="hollow darken large button">Large button</a>
-  <a href="#" class="hollow darken button">Regular button</a>
-  <a href="#" class="hollow darken small button">Small button</a>
-  <a href="#" class="hollow darken tiny button">Tiny button</a>
-</p>
-```
-
----
-
 ## Inverted Buttons
 
 This `.inverted` style button is intended for category tags on hero blocks (used in the blog). For other backgrounds, use the `.hollow` style instead.
@@ -691,12 +782,12 @@ If you use a one-color svg icon without a fill color, css will allow it to inher
 
 ```html_example
 <p>
-  <a href="#" class="button primary">Log In <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 450"><path d="M86.4 480h339.2c12.3 0 22.4-9.9 22.4-22.1V246c0-12.2-10-22-22.4-22H404v-30.9c0-41.5-16.2-87.6-42.6-115.4-26.3-27.8-64-45.7-105.3-45.7h-.2c-41.3 0-79 17.9-105.3 45.6C124.2 105.4 108 151.5 108 193v31H86.4C74 224 64 233.9 64 246v211.9c0 12.2 10 22.1 22.4 22.1zM161 193.1c0-27.3 9.9-61.1 28.1-80.3v-.3C206.7 93.9 231 83 255.9 83h.2c24.9 0 49.2 10.9 66.8 29.5v.2l-.1.1c18.3 19.2 28.1 53 28.1 80.3V224H161v-30.9z" /></svg></a>
+  <a href="#" class="button tertiary">Log In <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 450"><path d="M86.4 480h339.2c12.3 0 22.4-9.9 22.4-22.1V246c0-12.2-10-22-22.4-22H404v-30.9c0-41.5-16.2-87.6-42.6-115.4-26.3-27.8-64-45.7-105.3-45.7h-.2c-41.3 0-79 17.9-105.3 45.6C124.2 105.4 108 151.5 108 193v31H86.4C74 224 64 233.9 64 246v211.9c0 12.2 10 22.1 22.4 22.1zM161 193.1c0-27.3 9.9-61.1 28.1-80.3v-.3C206.7 93.9 231 83 255.9 83h.2c24.9 0 49.2 10.9 66.8 29.5v.2l-.1.1c18.3 19.2 28.1 53 28.1 80.3V224H161v-30.9z" /></svg></a>
    
    
   <a href="#" class="hollow darken button">Hey There! <svg xmlns="http://www.w3.org/2000/svg" viewBox="60 60 350 350"><path d="M363.3 363.9c-12.9-4.6-31.4-6.2-43.2-8.8-6.8-1.5-16.7-5.3-20-9.2-3.3-4-1.3-40.9-1.3-40.9s6.1-9.6 9.4-18 6.9-31.4 6.9-31.4 6.8 0 9.2-11.9c2.6-13 6.6-18.4 6.1-28.1-.5-9-5.2-9.5-5.7-9.5 0 0 4.9-13.6 5.6-42.4C331.1 129.6 305 96 256 96s-75 33.5-74.3 67.6c.6 28.7 5.6 42.4 5.6 42.4-.5 0-5.2.5-5.7 9.5-.5 9.7 3.6 14.9 6.1 27.9 2.4 11.9 9.2 12 9.2 12s3.6 23.1 6.9 31.5c3.3 8.5 9.4 18 9.4 18s2 36.9-1.3 40.9-13.2 7.7-20 9.2c-11.9 2.6-30.3 4.3-43.2 8.9C135.8 368.5 96 384 96 416h320c0-32-39.8-47.5-52.7-52.1z"/></svg></a>
   
-   <a href="#" class="button secondary">Continue <svg xmlns="http://www.w3.org/2000/svg" viewBox="40 40 350 350"><path d="M322.7 128.4l100.3 105c6 5.8 9 13.7 9 22.4s-3 16.5-9 22.4L322.7 383.6c-11.9 12.5-31.3 12.5-43.2 0-11.9-12.5-11.9-32.7 0-45.2l48.2-50.4h-217c-17 0-30.7-14.3-30.7-32s13.7-32 30.6-32h217l-48.2-50.4c-11.9-12.5-11.9-32.7 0-45.2 12-12.5 31.3-12.5 43.3 0z" fill="#ffb718"/></svg></a>
+   <a href="#" class="button primary">Continue <svg xmlns="http://www.w3.org/2000/svg" viewBox="40 40 400 400"><path d="M322.7 128.4l100.3 105c6 5.8 9 13.7 9 22.4s-3 16.5-9 22.4L322.7 383.6c-11.9 12.5-31.3 12.5-43.2 0-11.9-12.5-11.9-32.7 0-45.2l48.2-50.4h-217c-17 0-30.7-14.3-30.7-32s13.7-32 30.6-32h217l-48.2-50.4c-11.9-12.5-11.9-32.7 0-45.2 12-12.5 31.3-12.5 43.3 0z" fill="#ffb718"/></svg></a>
   
 </p>
 ```
@@ -710,7 +801,7 @@ A close button is a `<button>` element with the class `.close-button`. We use th
 The button is also labeled with `aria-label` to clarify what the button's purpose is.
 
 ```html_example
-<div class="callout success">
+<div class="callout callout-yellow">
   <button class="close-button" aria-label="Close alert" type="button">
     <span aria-hidden="true">&times;</span>
   </button>
@@ -736,7 +827,7 @@ The below example pairs the callout with the close button component and `data-cl
 <div class="row">
   <div class="large-12 columns"> 
     <div class="large-6 columns"> 
-      <div class="alert callout" data-closable>
+      <div class="callout" data-closable>
         <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
           <span aria-hidden="true">&times;</span>
         </button>
@@ -744,7 +835,7 @@ The below example pairs the callout with the close button component and `data-cl
       </div>
     </div>  
     <div class="large-6 columns">     
-      <div class="success callout" data-closable="slide-out-right">
+      <div class="callout" data-closable="slide-out-right">
         <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
           <span aria-hidden="true">&times;</span>
         </button>
@@ -761,108 +852,122 @@ The below example pairs the callout with the close button component and `data-cl
 
 <p class="lead">Button groups are containers for related action items. They're great when you need to display a group of actions in a bar. </p>
 
-Add the `.button-group` class to a container, and inside it place any number of buttons. The buttons are separated by a small border.
+Add the `.button-group` class to a container, and inside it place any number of buttons. The buttons are separated by a small border.  
 
-```html_example
-<div class="button-group">
-  <a class="button">One</a>
-  <a class="button">Two</a>
-  <a class="button">Three</a>
-</div>
-```
-
----
-
-## Coloring
-
-Buttons within a button group can be colored individually with the `.success`, `.warning`, and `.alert` classes.
+Add the `.expanded` class to the container to make a full-width button group. Each item will automatically size itself based on how many buttons there are, up to a maximum of four.
 
 ```html_example
 <div class="button-group">
   <a class="button">View</a>
-  <a class="success button">Edit</a>
-  <a class="warning button">Share</a>
-  <a class="alert button">Delete</a>
+  <a class="primary button">Edit</a>
+  <a class="secondary button">Share</a>
+  <a class="tertiary button">Delete</a>
 </div>
-```
-
----
-
-The entire group can also be colored using the same classes.
-
-```html_example
-<div class="button-group secondary">
-  <a class="button">View</a>
-  <a class="button">Edit</a>
-  <a class="button">Share</a>
-  <a class="button">Delete</a>
-</div>
-```
-
----
-
-## Even-width Group
-
-Add the `.expanded` class to the container to make a full-width button group. Each item will automatically size itself based on how many buttons there are, up to a maximum of six.
-
-```html_example
+<br>
 <div class="expanded button-group">
-  <a class="button">Expanded</a>
-  <a class="button">Button</a>
-  <a class="button">Group</a>
+  <a class="button">View</a>
+  <a class="primary button">Edit</a>
+  <a class="secondary button">Share</a>
+  <a class="tertiary button">Delete</a>
 </div>
 ```
 
 
 
-# Homepage Grid
+# Heros
 
-## CTA Blocks
+<p class="lead">There are several different hero styles, depending upon page type.  For pages that aren't landing pages or relying on a blog-like format, you should use a [page title](#page-title) instead of a hero.</p>
+
+---
+
+## Landing Page Heros
+
+Landing Pages are those pages that are linked from the primary navigation. Add one of the following classes to the `.blue-hero` container to specify the background for a particular landing page: `.perspectives-landing-hero`, `.research-landing-hero`, `.blog-landing-hero`, `.media-landing-hero`, `.about-landing-hero`.
+
 
 ```html_example
-<div class="cta-block">
-  <div>
-    <span class="cta-block__category">Our Perspective</span>
-    <h3><a href="#">We're helping expand access to homeownership with technology</a></h3>
-    <p>We think the outlook for global growth will improve—or at least stabilize—throughout the.</p>
-  </div>
-</div>
-<div class="cta-block cta-block_alabaster">
-  <div>
-    <span class="cta-block__category">Our Perspective</span>
-    <h3><a href="#">We're helping expand access to homeownership with technology</a></h3>
-    <p>We think the outlook for global growth will improve—or at least stabilize—throughout the.</p>
-  </div>
-</div>
-<div class="cta-block cta-block_buttercup">
-  <div>
-    <span class="cta-block__category">Our Perspective</span>
-    <h3><a href="#">We're helping expand access to homeownership with technology</a></h3>
-    <p>We think the outlook for global growth will improve—or at least stabilize—throughout the.</p>
-  </div>
-</div>
-<div class="cta-block cta-block_cerulean">
-  <div>
-    <span class="cta-block__category">Our Perspective</span>
-    <h3><a href="#">We're helping expand access to homeownership with technology</a></h3>
-    <p>We think the outlook for global growth will improve—or at least stabilize—throughout the.</p>
-  </div>
-</div>
-<div class="cta-block cta-block_sushi">
-  <div>
-    <span class="cta-block__category">Our Perspective</span>
-    <h3><a href="#">We're helping expand access to homeownership with technology</a></h3>
-    <p>We think the outlook for global growth will improve—or at least stabilize—throughout the.</p>
-  </div>
-</div>
-<div class="cta-block cta-block_celery">
-  <div>
-    <span class="cta-block__category">Our Perspective</span>
-    <h3><a href="#">We're helping expand access to homeownership with technology</a></h3>
-    <p>We think the outlook for global growth will improve—or at least stabilize—throughout the.</p>
-  </div>
-</div>
+<section class="media-landing-hero blue-hero">
+  <div class="blue-hero__overlay"></div>
+  <div class="row page-buffer">
+  	<div class="row">
+		  <div class="blue-hero__txt">
+		    <h1>Media Room</h1>
+		  </div>
+		</div>
+	</div>
+</section>
 ```
+
+---
+
+## Blog Detail Heros
+
+Use this hero on Blog article pages.  
+ 
+```html_example
+<section class="blog-detail-hero blue-hero">
+  <div class="blue-hero__overlay"></div>
+  <div class="row page-buffer">
+	  <div class="row">
+		  <div class="blue-hero__txt blue-hero__left">
+		  	<div class="blue-hero__date">May 9, 2016</div>
+		    <h1>Take the Anxiety Out of Your First Home Offer</h1>
+		    <div>
+		    	<a href="#" class="inverted button small">Homeownership</a>
+		    </div>
+		  </div>
+		</div>
+	</div>
+</section>
+```
+
+---
+
+## Executive Perspectives Heros
+
+Use this hero on Executive Perspectives article pages.  
+ 
+```html_example
+<section class="perspectives-detail-hero blue-hero">
+  <div class="blue-hero__overlay"></div>
+  <div class="row page-buffer">
+	  <div class="row">
+		  <div class="blue-hero__txt  blue-hero__left">
+		  	<div class="blue-hero__date">August 9, 2016</div>
+		    <h1>Three Reasons Why Baby Boomer Homeowners are a Market to Watch</h1>
+		    <figure class="avatar">
+		      <div>
+		        <img src="/images/exec_david_brickman.jpg" alt="Avatar img" />
+		      </div>
+		      <div>
+		        <figcaption>Article By<br><strong>David Brickman, EVP Multifamily Business</strong></figcaption>
+		      </div>
+		    </figure>
+		  </div>
+		</div>
+	</div>
+</section>
+```
+
+
+
+
+
+# Page Title
+
+Every page should use either a [hero element](#heros) or a page title.
+
+```html_example
+<section class="page-title">
+  <div class="row page-buffer">
+    <h1>Page title</h1>
+  </div>
+</section>
+```
+
+
+<!--
+# Homepage Grid
 
 ---
 
@@ -905,63 +1010,50 @@ Add the `.expanded` class to the container to make a full-width button group. Ea
   </div>
 </div>
 ```
+-->
+<!--
 
----
+# Gradient Information
 
-## Grid Layout
+<p class="lead clearfix">For use on the corporate homepage.</p>
 
 ```html_example
-<div class="row collapse home-grid">
-  <div class="large-9 columns">
-    <div class="row medium-up-3 collapse grid__top" data-equalizer data-equalize-on="medium">
-      <div class="column cta-block" data-equalizer-watch>
-        <div>
-          <span class="cta-block__category">Our Perspective</span>
-          <h3><a href="#">We're helping expand access to homeownership with technology</a></h3>
-        </div> 
-      </div>
-      <div class="column cta-block cta-block_alabaster no-desc-mobile" data-equalizer-watch>
-        <div>
-          <span class="cta-block__category">Housing News</span>
-          <h3><a href="#">Purchases of previously owned homes rebounded</a></h3>
-          <p>We think the outlook for global growth will improve—or at least stabilize—throughout the.</p>
+<section class="gradient-info">
+  <div class="row page-buffer">
+    <div class="row collapse gradient-info__wrapper" data-equalizer data-equalize-on="medium">
+      <div class="medium-6 large-4 large-push-2 columns" data-equalizer-watch>
+        <div class="gradient-info__feature">
+          <h3>We're Tracking The Market</h3>
+          <p>Freddie Mac surveys lenders each week on the rates, fees and points for the most popular mortgage products. Average Mortgage Rates as of April 28, 2016</p>
+          <a href="#" class="secondary button">Get Weekly Surveys</a>
         </div>
       </div>
-      <div class="column cta-block cta-block_buttercup cta-block_centered cta-block_lg-title" data-equalizer-watch>
-        <div>
-          <span class="cta-block__category">By the Numbers</span>
-          <h3>1.6 Americans Helped</h3>
-          <p>We’ve provided over $400 billion in mortgage funding in 2015 for American families</p>
+      <div class="medium-2 large-push-2 columns" data-equalizer-watch>
+        <div class="gradient-info__stat">
+          <h3>30-Yr FRM</h3>
+          <p>3.66%</p>
+          <span>0.6 Fees/Points</span>
         </div>
       </div>
-    </div>
-    <div class="row collapse grid__bottom" data-equalizer data-equalize-on="medium">
-      <div class="medium-4 columns cta-block cta-block_sushi no-desc-mobile" data-equalizer-watch>
-        <div>
-          <span class="cta-block__category">Freddie Mac Blog</span>
-          <h3><a href="#">Almost $1b in sold in the 20th STACR<sup>®</sup> offering</a></h3>
-          <p>We think the outlook for global growth will improve—or at least stabilize—throughout the.</p>
+      <div class="medium-2 large-push-2 columns" data-equalizer-watch>
+        <div class="gradient-info__stat">
+          <h3>30-Yr FRM</h3>
+          <p>3.66%</p>
+          <span>0.6 Fees/Points</span>
         </div>
       </div>
-      <div class="medium-8 columns cta-block cta-block_celery" data-equalizer-watch>
-        <div>
-          <span class="cta-block__category">Freddie Mac Research</span>
-          <h3><a href="#">Housing will have its best year in a decade or more. </a></h3>
-          <p><a href="#">We think the outlook for global growth will improve—or at least stabilize—throughout the balance of this year and the downward pressure on U.S. rates will abate.</a></p>
+      <div class="medium-2 large-push-2 columns end" data-equalizer-watch>
+        <div class="gradient-info__stat">
+          <h3>30-Yr FRM</h3>
+          <p>3.66%</p>
+          <span>0.6 Fees/Points</span>
         </div>
       </div>
     </div>
   </div>
-  <div class="large-3 columns cta-block cta-block_cerulean cta-block_centered cta-block_xlg-thin-title cta-block_tall">
-    <div>
-      <span class="cta-block__category">Doing Business With Us</span>
-      <div class="cta-block__img-wrapper"><img src="/images/lightbulb.png" alt="lightbulb" /></div>
-      <h3><a href="#">A Brighter Idea in Loan Production</a></h3>
-      <div><a class="hollow large button" href="#">Loan Advisor Suite</a></div>
-    </div>
-  </div>
-</div>
+</section>
 ```
+-->
 
 
 
@@ -1116,98 +1208,9 @@ Add the `.expanded` class to the container to make a full-width button group. Ea
 
 
 
-# Call To Action
+# Call Outs
 
-```html_example
-<section class="page-cta">
-  <div class="row page-buffer">
-    <div class="page-cta__wrapper">
-      <div class="page-cta__txt">
-        <h3>Getting To Know Freddie Mac</h3>
-        <p>Every day, Freddie Mac employees ensure mortgage credit is available for America’s families and help rebuild the nation’s housing finance system. Learn how Our Mission is making a positive impact.</p>
-      </div>
-      <div class="page-cta__btn">
-        <a class="hollow large button" href="#">Our Mission</a>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="page-cta page-cta_niagara">
-  <div class="row page-buffer">
-    <div class="page-cta__wrapper">
-      <div class="page-cta__txt">
-        <h3>Getting To Know Freddie Mac</h3>
-        <p>Every day, Freddie Mac employees ensure mortgage credit is available for America’s families and help rebuild the nation’s housing finance system. Learn how Our Mission is making a positive impact.</p>
-      </div>
-      <div class="page-cta__btn">
-        <a class="hollow large button" href="#">Our Mission</a>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="page-cta page-cta_buttercup">
-  <div class="row page-buffer">
-    <div class="page-cta__wrapper">
-      <div class="page-cta__txt">
-        <h3>Getting To Know Freddie Mac</h3>
-        <p>Every day, Freddie Mac employees ensure mortgage credit is available for America’s families and help rebuild the nation’s housing finance system. Learn how Our Mission is making a positive impact.</p>
-      </div>
-      <div class="page-cta__btn">
-        <a class="hollow large button" href="#">Our Mission</a>
-      </div>
-    </div>
-  </div>
-</section>
-```
-
----
-
-## Call To Action Sidebar
-```html_example
-<section class="page-cta page-cta_sidebar">
-  <div class="row page-buffer">
-    <div class="page-cta__wrapper">
-      <div class="page-cta__txt">
-        <h3>Getting To Know Freddie Mac</h3>
-        <p>Every day, Freddie Mac employees ensure mortgage credit is available for America’s families and help rebuild the nation’s housing finance system. Learn how Our Mission is making a positive impact.</p>
-      </div>
-      <div class="page-cta__btn">
-        <div class="input-btn-respond">
-          <div><input type="email" class="outline" placeholder="Your Email Address"></div>
-          <div><a class="secondary button expanded" href="#">Sign Up</a></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-```
-
----
-
-## Call To Action Feature
-```html_example
-<section class="page-cta page-cta_sidebar page-cta_feature">
-  <div class="row page-buffer">
-    <div class="page-cta__overlay"></div>
-    <div class="page-cta__wrapper">
-      <div class="page-cta__txt">
-        <div class="page-cta__cat">Featured Insight</div>
-        <h3>Life's a Beach</h3>
-        <p>So you've always dreamed of living at the beach, but you're discouraged by the high price of beachfront property? Not to worry. We've found just the place for you.  </p>
-      </div>
-      <div class="page-cta__btn">
-        <a class="hollow expanded button" href="#">Read More</a>
-      </div>
-    </div>
-  </div>
-</section>
-```
-
-
-
-# Call Out
-
-<p class="lead">A callout is just an element with a `.callout` class applied. You can put any kind of content inside.</p>
+<p class="lead">A callout is just a container with a `.callout` class applied. You can put any kind of content inside.  There are two types of callouts -- the ones shown below are for use within the content area, and the [footer band](#callout-footer-band) for use below your content.</p>
 
 ```html
 <div class="callout">
@@ -1218,7 +1221,18 @@ Add the `.expanded` class to the container to make a full-width button group. Ea
 
 ## Coloring
 
-Callouts can be colored using the `.secondary`, `.primary`, `.success`, `.warning`, or `.alert` classes.
+The background of the callout can be chnaged by including any of the following classes: 
+
+* `callout-hollow`
+* `callout-gray`
+* `.callout-blue`
+* `.callout-green`
+* `.callout-orange`
+* `.callout-yellow`
+* `.callout-purple`
+* `.callout-teal`
+* `.callout-primary`
+* `.callout-alert`
 
 ```html_example
 <div class="row">
@@ -1226,32 +1240,20 @@ Callouts can be colored using the `.secondary`, `.primary`, `.success`, `.warnin
     <div class="callout">
       <p>This is a default <a href="#">callout</a>.</p>
     </div> 
-    <div class="callout alert">
-      <p>This is a <a href="#">callout</a> with class of alert.</p>
-    </div>  
-    <div class="callout warning">
-      <p>This is a <a href="#">callout</a> with class of warning.</p>
-    </div>       
-    <div class="callout success">
-      <p>This is a <a href="#">callout</a> with class of success.</p>
-    </div>       
-    <div class="callout primary">
-      <p>This is a <a href="#">callout</a> with class of primary.</p>
-    </div>   
-    <div class="callout secondary">
-      <p>This is a <a href="#">callout</a> with class of secondary.</p>
-    </div> 
-    <div class="callout hollow">
+    <div class="callout callout-hollow">
       <p>This is a <a href="#">callout</a> with a class of hollow.</p>
     </div>   
     <div class="callout callout-gray">
       <p>This is a <a href="#">callout</a> with class of callout-gray.</p>
     </div>
-  </div>
-  <div class="medium-6 columns">     
+    <div class="callout callout-blue">
+      <p>This is a <a href="#">callout</a> with class of callout-blue.</p>
+    </div> 
     <div class="callout callout-green">
       <p>This is a <a href="#">callout</a> with a class of callout-green.</p>
-    </div>    
+    </div> 
+  </div>
+  <div class="medium-6 columns">        
     <div class="callout callout-orange">
       <p>This is a <a href="#">callout</a> with a class of callout-orange.</p>
     </div> 
@@ -1261,18 +1263,15 @@ Callouts can be colored using the `.secondary`, `.primary`, `.success`, `.warnin
     <div class="callout callout-purple">
       <p>This is a <a href="#">callout</a> with class of callout-purple.</p>
     </div>
-    <div class="callout callout-primary">
-      <p>This is a <a href="#">callout</a> with class of callout-primary.</p>
-    </div>
-    <div class="callout callout-blue">
-      <p>This is a <a href="#">callout</a> with class of callout-blue.</p>
-    </div> 
     <div class="callout callout-teal">
       <p>This is a <a href="#">callout</a> with class of callout-teal.</p>
     </div>
-    <div class="callout callout-red">
-      <p>This is a <a href="#">callout</a> with class of callout-red.</p>
-    </div> 
+    <div class="callout callout-primary">
+      <p>This is a <a href="#">callout</a> with class of callout-primary.</p>
+    </div>
+    <div class="callout callout-alert">
+      <p>This is a <a href="#">callout</a> with class of callout-alert.</p>
+    </div>
   </div>
 </div>  
 ```
@@ -1286,12 +1285,12 @@ Callouts can be sized using the `.small` and `.large` classes. These will affect
 
 ```html_example  
 <div class="row">
-  <div class="medium-6 columns">
+  <div class="medium-8 columns">
     <div class="callout callout-purple large">
-      <p>This is a callout with class of large. It has more padding between the contents and the edge of the container.</p>
+      <p>This is a callout with class of large. It has more padding between the contents and the edge of the container. And the text is 20% larger.</p>
     </div>
   </div> 
-  <div class="medium-6 columns">    
+  <div class="medium-4 columns">    
     <div class="callout callout-purple small">
       <p>This is a callout with class of small. It has less padding between the contents and the edge of the container.</p>
     </div>
@@ -1313,7 +1312,7 @@ Pair the callout with the [close button](#close-button) component and `data-clos
 ```html_example
 <div class="row">
   <div class="medium-6 columns">   
-    <div class="callout callout-red" data-closable>
+    <div class="callout callout-orange" data-closable>
       <h5>This is Important!</h5>
       <p>When you're done reading it, click the close button in the corner to dismiss this alert.</p>
       <p>I'm using the default <code>data-closable</code> parameters, and simply fade out.</p>
@@ -1323,7 +1322,7 @@ Pair the callout with the [close button](#close-button) component and `data-clos
     </div>
   </div>
   <div class="medium-6 columns">
-    <div class="callout success" data-closable="slide-out-right">
+    <div class="callout callout-green" data-closable="slide-out-right">
       <h5>This a friendly message.</h5>
       <p>When you're done reading it, click the close button in the corner to dismiss this message.</p>
       <p>And when you're done with me, I close using a Motion UI animation.</p>
@@ -1334,6 +1333,281 @@ Pair the callout with the [close button](#close-button) component and `data-clos
   </div>
 </div>  
 ``` 
+
+
+
+# Call Out Footer Band
+
+A Callout Footer Band is a full width band of content that goes immediately above the footer.  Never use more than one call out footer band per page, and limit the content of the footer band to a single concept and link.  The first `div` should contain the supporting text, and the second `div` should contain the link or a one-field form, if appropriate.   Use these classes to specify the background color for the callout footer bands:
+
+* `callout-gray`
+* `.callout-primary`
+* `.callout-blue`
+* `.callout-green`
+* `.callout-orange`
+* `.callout-yellow`
+* `.callout-purple`
+* `.callout-teal`
+
+```html_example
+<div class="callout callout-primary footerband">
+  <div class="row page-buffer">
+      <div>
+        <h3>Getting To Know Freddie Mac</h3>
+        <p>Every day, Freddie Mac employees ensure mortgage credit is available for America’s families and help rebuild the nation’s housing finance system.</p>
+        <p>Learn how Our Mission is making a positive impact.</p>
+      </div>
+      <div>
+        <a class="hollow large button" href="#">Our Mission</a>
+      </div>
+  </div>
+</div>
+<div class="callout callout-teal footerband">
+  <div class="row page-buffer">
+      <div>
+        <h3>Getting To Know Freddie Mac</h3>
+        <p>Every day, Freddie Mac employees ensure mortgage credit is available for America’s families and help rebuild the nation’s housing finance system.</p>
+        <p>Learn how Our Mission is making a positive impact.</p>
+      </div>
+      <div>
+        <a class="hollow large button" href="#">Our Mission</a>
+      </div>
+  </div>
+</div>
+<div class="callout callout-yellow footerband">
+  <div class="row page-buffer">
+      <div>
+        <h3>Getting To Know Freddie Mac</h3>
+        <p>Every day, Freddie Mac employees ensure mortgage credit is available for America’s families and help rebuild the nation’s housing finance system.</p>
+        <p>Learn how Our Mission is making a positive impact.</p>
+      </div>
+      <div>
+        <a class="hollow large button" href="#">Our Mission</a>
+      </div>
+  </div>
+</div>
+```
+
+
+
+#  Sidebar Modules
+
+<p class="lead">There are a variety of modules available for use in a side bar, when you are using the Two Column Layout with Buffer.</p> 
+
+---
+
+## Popular List Items
+
+```html
+<section class="popular-items">
+  <div class="row page-buffer">
+    <h2>Trending Now</h2>
+    <ul>
+      <li><a href="#">Credit Smart</a></li>
+      <li><a href="#">Education &amp; Tools</a></li>
+      <li><a href="#">Fraud</a></li>
+      <li><a href="#">HARP</a></li>
+      <li><a href="#">MiMi</a></li>
+    </ul>
+  </div>
+</section>
+```
+
+<section class="two-column-layout">
+  <div class="row page-buffer">
+    <div class="row">
+      <main class="medium-6 large-7 columns">
+      </main> 
+      <aside class="medium-6 large-5 columns">
+        <section class="popular-items">
+          <div class="row page-buffer">
+            <h2>Trending Now</h2>
+            <ul>
+              <li><a href="#">Credit Smart</a></li>
+              <li><a href="#">Education &amp; Tools</a></li>
+              <li><a href="#">Fraud</a></li>
+              <li><a href="#">HARP</a></li>
+              <li><a href="#">MiMi</a></li>
+            </ul>
+          </div>
+        </section>   
+      </aside>
+    </div>
+  </div>
+</section>
+
+---
+
+## Call To Action
+
+```html
+<section class="sidebar-cta">
+  <div class="row page-buffer">
+    <div class="page-cta__wrapper">
+      <div class="sidebar-cta__txt">
+        <h3>Getting To Know Freddie Mac</h3>
+        <p>Every day, Freddie Mac employees ensure mortgage credit is available for America’s families and help rebuild the nation’s housing finance system. Learn how Our Mission is making a positive impact.</p>
+      </div>
+      <div class="sidebar-cta__btn">
+        <div class="input-btn-respond">
+          <div><input type="email" class="outline" placeholder="Your Email Address"></div>
+          <div><a class="primary button expanded" href="#">Sign Up</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+```
+
+<section class="two-column-layout">
+  <div class="row page-buffer">
+    <div class="row">
+      <main class="medium-6 large-7 columns">
+      </main> 
+      <aside class="medium-6 large-5 columns">
+        <section class="sidebar-cta">
+          <div class="row page-buffer">
+            <div class="page-cta__wrapper">
+              <div class="sidebar-cta__txt">
+                <h3>Getting To Know Freddie Mac</h3>
+                <p>Every day, Freddie Mac employees ensure mortgage credit is available for America’s families and help rebuild the nation’s housing finance system. Learn how Our Mission is making a positive impact.</p>
+              </div>
+              <div class="sidebar-cta__btn">
+                <div class="input-btn-respond">
+                  <div><input type="email" class="outline" placeholder="Your Email Address"></div>
+                  <div><a class="primary button expanded" href="#">Sign Up</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>   
+      </aside>
+    </div>
+  </div>
+</section>
+
+---
+
+## RSS
+
+```html
+<section class="popular-items popular-items_rss">
+  <div class="row page-buffer">
+    <h2>RSS Blog Feeds</h2>
+    <ul>
+      <li><a href="#">All Posts</a></li>
+      <li><a href="#">Homeownership</a></li>
+      <li><a href="#">Rental Housing</a></li>
+      <li><a href="#">Research &amp; Analysis</a></li>
+      <li><a href="#">Notable</a></li>
+    </ul>
+  </div>
+</section>
+```
+
+<section class="two-column-layout">
+  <div class="row page-buffer">
+    <div class="row">
+      <main class="medium-6 large-7 columns">
+      </main> 
+      <aside class="medium-6 large-5 columns">
+        <section class="popular-items popular-items_rss">
+          <div class="row page-buffer">
+            <h2>RSS Blog Feeds</h2>
+            <ul>
+              <li><a href="#">All Posts</a></li>
+              <li><a href="#">Homeownership</a></li>
+              <li><a href="#">Rental Housing</a></li>
+              <li><a href="#">Research &amp; Analysis</a></li>
+              <li><a href="#">Notable</a></li>
+            </ul>
+          </div>
+        </section>   
+      </aside>
+    </div>
+  </div>
+</section>
+
+---
+
+## News List
+
+Note: The news release lists are automated by MarketWire.
+
+
+```html
+<section class="popular-items popular-items_news">
+  <div class="row page-buffer">
+    <h2>Recent Press Releases</h2>
+    <ul>
+      <li><a href="#">Freddie Mac Issues Dodd-Frank Stress Test Results </a><br>08/08/16 -  MCLEAN, VA--(Marketwired - Aug 8, 2016) - &nbsp;Freddie Mac (OTCQB: FMCC) today issued the company's stress test results for the severely adverse scenario conducted under FHFA's rule...</li>
+      <li><a href="#">Freddie Mac Reports Second Quarter 2016 Financial Results </a><br>08/02/16 -  MCLEAN, VA--(Marketwired - Aug 2, 2016) -  Freddie Mac (OTCQB: FMCC) today reported its second quarter 2016 financial results and filed its quarterly Form 10-Q with the U.S. Securities...</li>
+      <li><a href="#">Freddie Mac Sets Release Date for Second Quarter 2016 Financial Results</a><br>Jul 29, 2016 - MCLEAN, VA--(Marketwired - Jul 29, 2016) -  Freddie Mac (OTCQB: FMCC) announced today that it plans to report its second quarter 2016 financial results before the U.S. financial markets...</li>	
+    </ul>    
+  </div>
+</section>
+```
+
+<section class="two-column-layout">
+  <div class="row page-buffer">
+    <div class="row">
+      <main class="medium-6 large-7 columns">
+      </main> 
+      <aside class="medium-6 large-5 columns">
+        <section class="popular-items popular-items_news">
+          <div class="row page-buffer">
+            <h2>Recent Press Releases</h2>
+            <ul>
+              <li><a href="#">Freddie Mac Issues Dodd-Frank Stress Test Results </a><br>08/08/16 -  MCLEAN, VA--(Marketwired - Aug 8, 2016) - &nbsp;Freddie Mac (OTCQB: FMCC) today issued the company's stress test results for the severely adverse scenario conducted under FHFA's rule...</li>
+              <li><a href="#">Freddie Mac Reports Second Quarter 2016 Financial Results </a><br>08/02/16 -  MCLEAN, VA--(Marketwired - Aug 2, 2016) -  Freddie Mac (OTCQB: FMCC) today reported its second quarter 2016 financial results and filed its quarterly Form 10-Q with the U.S. Securities...</li>
+              <li><a href="#">Freddie Mac Sets Release Date for Second Quarter 2016 Financial Results</a><br>Jul 29, 2016 - MCLEAN, VA--(Marketwired - Jul 29, 2016) -  Freddie Mac (OTCQB: FMCC) announced today that it plans to report its second quarter 2016 financial results before the U.S. financial markets...</li>	
+            </ul>    
+          </div>
+        </section>  
+      </aside>
+    </div>
+  </div>
+</section>
+
+---
+
+## Featured Article
+
+```html
+<section class="sidebar-cta feature">
+  <div class="feature-background" style="background-image: url('/images/feature-bg.jpg')"></div>
+  <div class="row page-buffer">
+      <div class="sidebar-cta__txt">
+        <div class="page-cta__cat">Featured Insight</div>
+        <h3>Life's a Beach</h3>
+        <p class="lead">So you've always dreamed of living at the beach, but you're discouraged by the high price of beachfront property? Not to worry. We've found just the place for you.  </p>
+      </div>
+        <p><a class="hollow button expand" href="#">Read More</a></p>
+  </div>
+</section>
+```
+
+<section class="two-column-layout">
+  <div class="row page-buffer">
+    <div class="row">
+      <main class="medium-6 large-7 columns">
+      </main> 
+      <aside class="medium-6 large-5 columns">
+        <section class="sidebar-cta feature">
+          <div class="feature-background" style="background-image: url('/images/feature-bg.jpg')"></div>
+          <div class="row page-buffer">
+              <div class="sidebar-cta__txt">
+                <div class="page-cta__cat">Featured Insight</div>
+                <h3>Life's a Beach</h3>
+                <p class="lead">So you've always dreamed of living at the beach, but you're discouraged by the high price of beachfront property? Not to worry. We've found just the place for you.  </p>
+              </div>
+                <p><a class="hollow button expand" href="#">Read More</a></p>
+          </div>
+        </section>   
+      </aside>
+    </div>
+  </div>
+</section>
 
 
 
@@ -1494,145 +1768,40 @@ Form elements are styled based on their type attribute rather than a class. Inpu
   </div>  
   <div class="row">
     <button class="button primary" type="submit">Submit</button> 
-    <button class="button secondary" type="reset">Reset</button>
+    <button class="button" type="reset">Reset</button>
   </div>  
 </form>
 ```
 
 ---
 
-## Outline Text Input Example
+### Dark background Example
 
-Add `.outline` to the class when the form appears on a dark background.
+When the form appears on a dark background, add the class `.outline` and one of the following classes to specify a background color for hte form that matches the background color of the container:
+
+* `outline-gray`
+* `.outline-primary`
+* `.outline-blue`
+* `.outline-green`
+* `.outline-orange`
+* `.outline-yellow`
+* `.outline-purple`
+* `.outline-teal`
+
 
 ```html_example
 <div class="callout callout-primary">
-  <label>Label</label>
-  <input type="text" class="outline" placeholder="placeholder">
-  
-  <div class="row">
-    <div class="medium-6 columns">
-      <label>Choose Your Favorite</label>
-      <input type="radio" name="radio1" value="radio1" id="radio1"><label for="radio1">Red</label>
-      <input type="radio" name="radio2" value="radio2" id="radio2"><label for="radio2">Blue</label>
-    </div>
-    <div class="medium-6 columns">
-      <label>Check these out</label>
-      <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-      <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
-    </div>
-  </div>
+  <form action="#" class="outline outline-primary">
+    <label>Label</label>
+    <input type="text" placeholder="placeholder">
+  </form>  
 </div>
 <div class="callout callout-yellow">
-  <label>Label</label>
-  <input type="text" class="outline" placeholder="Placeholder Text">
-  
-  <div class="row">
-    <div class="medium-6 columns">
-      <label>Choose Your Favorite</label>
-      <input type="radio" name="radio1" value="radio1" id="radio1"><label for="radio1">Red</label>
-      <input type="radio" name="radio2" value="radio2" id="radio2"><label for="radio2">Blue</label>
-    </div>
-    <div class="medium-6 columns">
-      <label>Check these out</label>
-      <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-      <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
-    </div>
-  </div>
+  <form action="#" class="outline outline-yellow">
+    <label>Label</label>
+    <input type="text" placeholder="placeholder">
+  </form>  
 </div>
-```
-
-
-
-# Heros
-
-<p class="lead">There are several different hero styles, depending upon page type.  For pages that aren't landing pages or relying on a blog-like format, you should use a [page title](#page-title) instead of a hero.</p>
-
----
-
-## Landing Page Heros
-
-Landing Pages are those pages that are linked from the primary navigation. Add one of the following classes to the `.blue-hero` container to specify the background for a particular landing page: `.perspectives-landing-hero`, `.research-landing-hero`, `.blog-landing-hero`, `.media-landing-hero`, `.about-landing-hero`.
-
-
-```html_example
-<section class="media-landing-hero blue-hero">
-  <div class="blue-hero__overlay"></div>
-  <div class="row page-buffer">
-  	<div class="row">
-		  <div class="blue-hero__txt">
-		    <h1>Media Room</h1>
-		  </div>
-		</div>
-	</div>
-</section>
-```
-
----
-
-## Blog Detail Heros
-
-Use this hero on Blog article pages.  
- 
-```html_example
-<section class="blog-detail-hero blue-hero">
-  <div class="blue-hero__overlay"></div>
-  <div class="row page-buffer">
-	  <div class="row">
-		  <div class="blue-hero__txt blue-hero__left">
-		  	<div class="blue-hero__date">May 9, 2016</div>
-		    <h1>Take the Anxiety Out of Your First Home Offer</h1>
-		    <div>
-		    	<a href="#" class="inverted button small">Homeownership</a>
-		    </div>
-		  </div>
-		</div>
-	</div>
-</section>
-```
-
----
-
-## Executive Perspectives Heros
-
-Use this hero on Executive Perspectives article pages.  
- 
-```html_example
-<section class="perspectives-detail-hero blue-hero">
-  <div class="blue-hero__overlay"></div>
-  <div class="row page-buffer">
-	  <div class="row">
-		  <div class="blue-hero__txt  blue-hero__left">
-		  	<div class="blue-hero__date">August 9, 2016</div>
-		    <h1>Three Reasons Why Baby Boomer Homeowners are a Market to Watch</h1>
-		    <figure class="avatar">
-		      <div>
-		        <img src="/images/exec_david_brickman.jpg" alt="Avatar img" />
-		      </div>
-		      <div>
-		        <figcaption>Article By<br><strong>David Brickman, EVP Multifamily Business</strong></figcaption>
-		      </div>
-		    </figure>
-		  </div>
-		</div>
-	</div>
-</section>
-```
-
-
-
-
-
-# Page Title
-
-Every page should use either a [hero element](#heros) or a page title.
-
-```html_example
-<section class="page-title">
-  <div class="row page-buffer">
-    <h1>Page title</h1>
-  </div>
-</section>
 ```
 
 
@@ -2077,172 +2246,6 @@ Got a lot of tabular data? Add the class `.scroll` to the table itself to enable
 
 
 
-# Float Classes
-
-<p class="lead">Foundation includes a handful of helpful float classes to add common positioning behaviors to elements.</p>
-
----
-
-## Float Left/Right
-
-You can change the float behavior of an element by adding the `.float-left` or `.float-right` classes to an element. To clear floats, add the class `.clearfix` to the parent element.
-
-
-```html_example
-<div class="callout clearfix">
-  <a class="button float-left">Left</a>
-  <a class="button float-right">Right</a>
-</div>
-```
-
----
-
-## Float Center
-
-Okay, it's not *really* a float, but you can add the `.float-center` class to an element to engage the automatic margin centering trick. Note that this will only work on elements with an absolute width, which means not a percentage or `auto` width.
-
-```html_example
-<img src="http://www.freddiemac.com/blog/images/fm_blog_usda_returns.jpg" alt="Harp - act now!" class="float-center">
-```
-
-
-
-# Footer
-
-**Note:** The corporate footer will automatically be inserted via the template - do not include this code in your page. 
-
-```html_example
-<footer class="footer">
-  <div class="row page-buffer">
-    <div class="footer__top">
-      <ul class="no-bullet">
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">Investor Relations</a></li>
-        <li><a href="#">Vendors &amp; Suppliers</a></li>
-      </ul>
-    </div>
-    <div class="footer__bottom">
-      <div class="row">
-        <div class="medium-6 columns">
-          <ul class="no-bullet">
-            <li><a href="#">Terms of Use</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Sitemap</a></li>
-            <li><a href="#">Contact Us</a></li>
-          </ul>
-        </div>
-        <div class="medium-6 columns">
-          <p>Copyright &copy; 2016 <strong>Freddie Mac</strong>. All rights reserved.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-```
-
-
-
-# Popular List Items
-
-```html_example
-<section class="popular-items">
-  <div class="row page-buffer">
-    <h2>Trending Now</h2>
-    <ul>
-      <li><a href="#">Credit Smart</a></li>
-      <li><a href="#">Education &amp; Tools</a></li>
-      <li><a href="#">Fraud</a></li>
-      <li><a href="#">HARP</a></li>
-      <li><a href="#">MiMi</a></li>
-    </ul>
-  </div>
-</section>
-```
-
----
-
-## RSS
-
-```html_example
-<section class="popular-items popular-items_rss">
-  <div class="row page-buffer">
-    <h2>RSS Blog Feeds</h2>
-    <ul>
-      <li><a href="#">All Posts</a></li>
-      <li><a href="#">Homeownership</a></li>
-      <li><a href="#">Rental Housing</a></li>
-      <li><a href="#">Research &amp; Analysis</a></li>
-      <li><a href="#">Notable</a></li>
-    </ul>
-  </div>
-</section>
-```
-
----
-
-## News
-
-Note: The news release lists are automated by MarketWire.
-
-
-```html_example
-<section class="popular-items popular-items_news">
-  <div class="row page-buffer">
-    <h2>Recent Press Releases</h2>
-    <ul>
-      <li><a href="#">Freddie Mac Issues Dodd-Frank Stress Test Results </a><br>08/08/16 -  MCLEAN, VA--(Marketwired - Aug 8, 2016) - &nbsp;Freddie Mac (OTCQB: FMCC) today issued the company's stress test results for the severely adverse scenario conducted under FHFA's rule...</li>
-      <li><a href="#">Freddie Mac Reports Second Quarter 2016 Financial Results </a><br>08/02/16 -  MCLEAN, VA--(Marketwired - Aug 2, 2016) -  Freddie Mac (OTCQB: FMCC) today reported its second quarter 2016 financial results and filed its quarterly Form 10-Q with the U.S. Securities...</li>
-      <li><a href="#">Freddie Mac Sets Release Date for Second Quarter 2016 Financial Results</a><br>Jul 29, 2016 - MCLEAN, VA--(Marketwired - Jul 29, 2016) -  Freddie Mac (OTCQB: FMCC) announced today that it plans to report its second quarter 2016 financial results before the U.S. financial markets...</li>	
-    </ul>    
-  </div>
-</section>
-```
-
-
-
-# Gradient Information
-
-<p class="lead clearfix">For use on the corporate homepage.</p>
-
-```html_example
-<section class="gradient-info">
-  <div class="row page-buffer">
-    <div class="row collapse gradient-info__wrapper" data-equalizer data-equalize-on="medium">
-      <div class="medium-6 large-4 large-push-2 columns" data-equalizer-watch>
-        <div class="gradient-info__feature">
-          <h3>We're Tracking The Market</h3>
-          <p>Freddie Mac surveys lenders each week on the rates, fees and points for the most popular mortgage products. Average Mortgage Rates as of April 28, 2016</p>
-          <a href="#" class="secondary button">Get Weekly Surveys</a>
-        </div>
-      </div>
-      <div class="medium-2 large-push-2 columns" data-equalizer-watch>
-        <div class="gradient-info__stat">
-          <h3>30-Yr FRM</h3>
-          <p>3.66%</p>
-          <span>0.6 Fees/Points</span>
-        </div>
-      </div>
-      <div class="medium-2 large-push-2 columns" data-equalizer-watch>
-        <div class="gradient-info__stat">
-          <h3>30-Yr FRM</h3>
-          <p>3.66%</p>
-          <span>0.6 Fees/Points</span>
-        </div>
-      </div>
-      <div class="medium-2 large-push-2 columns end" data-equalizer-watch>
-        <div class="gradient-info__stat">
-          <h3>30-Yr FRM</h3>
-          <p>3.66%</p>
-          <span>0.6 Fees/Points</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-```
-
-
-
 # Tooltip
 
 By default, a tooltip appears below the defined term on hover or focus, and clicking on a tooltip will leave it open until you click somewhere else. Tooltips should be short, and cannot contain HTML markup.  You can use “curly quotes” if needed. 
@@ -2251,60 +2254,6 @@ By default, a tooltip appears below the defined term on hover or focus, and clic
 <p>The <span data-tooltip aria-haspopup="true" class="has-tip" tabindex="0" title="A “scarabaeus” is an outdated 
 term for an object in the form of a scarab beetle. The scarab was a popular form of amulet in Ancient 
 Egypt.">scarabaeus</span> hung clear of any branches, and, if allowed to fall, would have fallen at our feet. </p>
-```
-
-
-
-# Visibility Classes
-
-Visibility classes let you show or hide elements based on screen size or device orientation. You can also use visibility classes to control which elements users see depending on their browsing environment.
-
-<div class="callout">
-  <p>There are no classes to detect touchscreen devices, as both desktop and mobile browsers inconsistently report touch support. Learn more here: <a href="http://www.stucox.com/blog/you-cant-detect-a-touchscreen/">You Can't Detect a Touchscreen</a></p>
-</div>
-
-## Show/Hide by Screen Size/Orientation
-
-There are `.show-for-xxx` and `.hide-for-xxx` visibility classes to control the visiblity of an element based on the device on which users view a page. If their browser meets the class's conditions, the element will be shown. If not, it will be hidden.
-
-```html_example
-<p>You are on a small screen or larger.</p>
-<p class="show-for-medium">You are on a medium screen or larger.</p>
-<p class="show-for-large">You are on a large screen or larger.</p>
-<p class="show-for-small-only">You are <em>definitely</em> on a small screen.</p>
-<p class="show-for-medium-only">You are <em>definitely</em> on a medium screen.</p>
-<p class="show-for-large-only">You are <em>definitely</em> on a large screen.</p>
-<p class="hide-for-medium">You are <em>not</em> on a medium screen or larger.</p>
-<p class="hide-for-large">You are <em>not</em> on a large screen or larger.</p>
-<p class="hide-for-small-only">You are <em>definitely not</em> on a small screen.</p>
-<p class="hide-for-medium-only">You are <em>definitely not</em> on a medium screen.</p>
-<p class="hide-for-large-only">You are <em>definitely not</em> on a large screen.</p>
-<p class="show-for-landscape">You are in landscape orientation.</p>
-<p class="show-for-portrait">You are in portrait orientation.</p>
-```
-
----
-
-### Show/Hide for Screen Readers
-
-And if you really just need something hidden no matter what, there are classes for that as well. The `.hide` and `.invisible` classes respectively set `display: none` and `visibility: hidden` on an element. Note that both of these classes hide content from screen readers. 
-
-To visually hide content, while still allowing assistive technology to read it, add the class `.show-for-sr`.  To hide text from assistive technology, while still keeping it visible, add the attribute `aria-hidden="true"`. This doesn't affect how the element looks, but screen readers will skip over it.  
-
-Use the class `.show-on-focus` to hide an element, except when it has focus. Adding tabindex="0" to the target element makes if focusable.
-
-```html_example
-<p class="hide">Hidden for all users.</p>
-<p class="invisible">Not visible for all users, but still occupies space on screen.</p>
-<p class="show-for-sr">This text can only be read by a screen reader.</p>
-<p>There's a line of text above this one, you just can't see it because it is only shown to screen readers.</p>
-<p aria-hidden="true">This text can be seen, but won't be read by a screen reader.</p>
-
-<p>Click on this sentence and then hit tab to see the skip link appear while it has focus.</p>
-<p><a name="skiplink" class="show-on-focus" href="#sampleContent">Skip to Content</a></p>
-
-<div id="sampleContent" role="main" tabindex="0" style="min-height: 1rem;">
-</div>
 ```
 
 
@@ -2462,16 +2411,6 @@ Modals can be done with a variety of background colors by adding an `.overlay-xx
         <img src="http://placekitten.com/200/160" alt="kitty">
       </div>  
     </div>
-  </li>
-  
-  <li><a data-open="fullModal8">View a full width/height modal on red</a>
-    <div class="full reveal overlay-red" id="fullModal8" data-reveal>
-      <div class="row"> 
-        <h3 id="Modal1-label">I'm a full width modal.</h3>
-        <p> I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
-        <img src="http://placekitten.com/200/160" alt="kitty">
-      </div>  
-    </div>  
   </li>
   
   <li><a data-open="fullModal9">View a full width/height modal on purple</a>
@@ -2739,38 +2678,6 @@ Combine the image modal and the nested modal to achieve an image gallery where t
 
 ---
 
-## Vertical Navigation Bullets
-
-```html_example
-<div class="orbit bullets-vertical" role="region" aria-label="Favorite Text Ever" data-orbit data-auto-play="false">
-  <ul class="orbit-container"> 
-    <li class="orbit-slide orbit-slide-yellow">
-      <section>
-        <h3>Slide One</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="text-right"><a class="button hollow">Button Link</a></p>
-      </section>
-    </li>
-    <li class="orbit-slide orbit-slide-green">
-      <section>
-        <h3>Slide Two</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="text-center"><a class="button hollow">Button Link</a></p>
-      </section>
-    </li>
-    <li class="orbit-slide orbit-slide-orange">
-      <section>
-        <h3>Slide Three</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="text-right"><a class="button hollow large">Button Link</a></p>
-      </section>
-    </li>
-  </ul>
-</div>
-```
-
----
-
 ## Image Carousel
 
 For an image carousel, each slide consists of a `figure`, `img` and optional `figcaption`.  
@@ -2864,6 +2771,41 @@ To disable the animation, set the `data-use-m-u-i` attribute to `false`.  To sto
 ```html
 <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit data-use-m-u-i="false" data-auto-play="false">
 </div>
+```
+
+
+
+# Footer
+
+**Note:** The footer will automatically be inserted via the template - do not include this code in your page. 
+
+```html_example
+<footer class="footer">
+	<div class="row page-buffer">
+		<div class="footer__top">
+        <ul class="no-bullet">
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Investor Relations</a></li>
+          <li><a href="#">Vendors &amp; Suppliers</a></li>
+          <li><span class="show-for-sr">Follow us on social media</span>
+            <a aria-label="YouTube" href="https://www.youtube.com/freddiemac" class="connect-link"><svg viewBox="8 8 125 125" xmlns="http://www.w3.org/2000/svg"><path d="M72 14.2C40.1 14.2 14.2 40.1 14.2 72c0 31.9 25.9 57.8 57.8 57.8 31.9 0 57.8-25.9 57.8-57.8C129.9 40.1 104 14.2 72 14.2zM104.4 85c0 4.4-3.6 8.1-8 8.1 0 0-6.9 1-24.7 1 -18 0-24.3-1-24.3-1 -4.4 0-8.1-3.6-8.1-8V58.5c0-4.4 3.6-8 8.1-8 0 0 6.3-1 24.3-1 17.9 0 24.8 1 24.8 1 4.4 0 8 3.6 8 8.1V85z" fill="#fff"/><polygon points="62 84.5 84 71.8 62 59.1 " fill="#fff"/></svg></a>
+            <a aria-label="Facebook" href="https://www.facebook.com/FreddieMac" class="connect-link"><svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg"><path d="M29.8 50.3h6.7V34h4.5l0.6-5.6h-5.1l0-2.8c0-1.5 0.1-2.3 2.2-2.3h2.8V17.7h-4.5c-5.4 0-7.3 2.7-7.3 7.3v3.4h-3.4v5.6h3.4V50.3zM34 64C17.4 64 4 50.6 4 34 4 17.4 17.4 4 34 4s30 13.4 30 30C64 50.6 50.6 64 34 64z" fill="#fff"/></svg></a>
+            <a aria-label="LinkedIn" href="https://www.linkedin.com/company/3140" class="connect-link"><svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg"><path d="M50.8 48.1V36.4c0-6.3-3.3-9.2-7.8-9.2 -3.6 0-5.2 2-6.1 3.4V27.7h-6.8c0.1 1.9 0 20.4 0 20.4h6.8V36.7c0-0.6 0-1.2 0.2-1.7 0.5-1.2 1.6-2.5 3.5-2.5 2.5 0 3.4 1.9 3.4 4.6v10.9H50.8zM23 24.9c2.4 0 3.8-1.6 3.8-3.5 0-2-1.5-3.5-3.8-3.5s-3.8 1.5-3.8 3.5c0 2 1.5 3.5 3.8 3.5H23zM34 64C17.4 64 4 50.6 4 34 4 17.4 17.4 4 34 4s30 13.4 30 30C64 50.6 50.6 64 34 64zM26.4 48.1V27.7h-6.8v20.4H26.4z" fill="#fff"/></svg></a>
+            <a aria-label="Twitter" href="https://twitter.com/FreddieMac" class="connect-link"><svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg"><path d="M38.2 22.3c-2.6 1-4.3 3.4-4.1 6.1l0.1 1 -1-0.1c-3.8-0.5-7.1-2.1-10-4.9l-1.4-1.4 -0.4 1c-0.8 2.3-0.3 4.7 1.3 6.3 0.8 0.9 0.6 1-0.8 0.5 -0.5-0.2-0.9-0.3-1-0.2 -0.1 0.1 0.4 2.1 0.8 2.8 0.5 1.1 1.7 2.1 2.9 2.7l1 0.5 -1.2 0c-1.2 0-1.2 0-1.1 0.5 0.4 1.4 2.1 2.8 3.9 3.5l1.3 0.4 -1.1 0.7c-1.7 1-3.6 1.5-5.6 1.6C20.8 43.3 20 43.3 20 43.4c0 0.2 2.6 1.4 4 1.9 4.5 1.4 9.8 0.8 13.7-1.6 2.8-1.7 5.7-5 7-8.2 0.7-1.7 1.4-4.9 1.4-6.4 0-1 0.1-1.1 1.2-2.3 0.7-0.7 1.3-1.4 1.5-1.6 0.2-0.4 0.2-0.4-0.9 0 -1.8 0.6-2 0.6-1.2-0.4 0.6-0.7 1.4-1.9 1.4-2.3 0-0.1-0.3 0-0.7 0.2 -0.4 0.2-1.2 0.5-1.8 0.7l-1.1 0.4 -1-0.7c-0.6-0.4-1.4-0.8-1.8-0.9C40.8 21.9 39.1 21.9 38.2 22.3zM34 64C17.4 64 4 50.6 4 34 4 17.4 17.4 4 34 4s30 13.4 30 30C64 50.6 50.6 64 34 64z" fill="#fff"/></svg></a>
+          </li>
+        </ul>
+		</div>
+		<div class="footer__bottom">
+      <ul class="no-bullet">
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li>&copy; 2016 Freddie Mac</li>
+      </ul>
+    </div>
+	</div>
+</footer>
+<div class="footer__bottom-edge"> </div>
 ```
 
 ---

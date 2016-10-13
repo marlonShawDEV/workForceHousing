@@ -43,7 +43,7 @@
       &:hover,
       &:focus,
       &:active {
-        color: $primary-color;
+        color: $fm-blue;
       }
 		}
 	}
@@ -85,17 +85,18 @@
 .medium-up-1 {  
   > div:first-child {
     .blog-block__txt {
-      background: rgba($niagara, 0.8);
+      background: rgba($fm-teal, 0.8);
     }
   }
   > div:last-child {
     .blog-block__txt {
-      background: rgba($wisteria, 0.8);
+      background: rgba($fm-purple, 0.8);
     }
   }  
 }
 
 .recommended-wrapper {
+  background: $light-gray;
 	h2 {
 		color: $fm-gray;
 		font-size: rem-calc(28);

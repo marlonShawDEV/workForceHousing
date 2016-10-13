@@ -48,7 +48,7 @@
  // breaking our the hero details by their purpose, since we have several that are tall, short, blue or left.
  
 .perspectives-landing-hero {
-	background: $primary-color url('/images/hero-5-mobile.jpg') no-repeat top center;
+	background: $fm-blue url('/images/hero-5-mobile.jpg') no-repeat top center;
 	height: 219px;
 	@include breakpoint(medium) {
 		background-image: url('/images/hero-5-desktop.jpg');
@@ -57,7 +57,7 @@
 	}
 } 
 .blog-landing-hero {
-	background: $primary-color url('/images/blog/hero-2-mobile.jpg') no-repeat top center;
+	background: $fm-blue url('/images/blog/hero-2-mobile.jpg') no-repeat top center;
 	height: 219px;
 	@include breakpoint(medium) {
 		background-image: url('/images/blog/hero-2-desktop.jpg');
@@ -66,7 +66,7 @@
 	}
 }
 .media-landing-hero {
-	background: $primary-color url('/images/hero-6-mobile.jpg') no-repeat top left;
+	background: $fm-blue url('/images/hero-6-mobile.jpg') no-repeat top left;
 	height: 219px;
 	@include breakpoint(medium) {
 		background-image: url('/images/hero-6-desktop.jpg');
@@ -75,7 +75,7 @@
 	}
 } 
 .research-landing-hero { //pending graphic from Jon
-	background: $primary-color url('/images/hero-7-mobile.jpg') no-repeat top left;
+	background: $fm-blue url('/images/hero-7-mobile.jpg') no-repeat top left;
 	height: 219px;
 	@include breakpoint(medium) {
 		background-image: url('/images/hero-7-desktop.jpg');
@@ -84,7 +84,7 @@
 	}
 } 
 .about-landing-hero {  //pending graphic from Jon
-	background: $primary-color url('/images/hero-7-mobile.jpg') no-repeat top left;
+	background: $fm-blue url('/images/hero-7-mobile.jpg') no-repeat top left;
 	height: 219px;
 	@include breakpoint(medium) {
 		background-image: url('/images/hero-7-desktop.jpg');
@@ -93,7 +93,7 @@
 	}
 } 
 .perspectives-detail-hero {
-	background: $primary-color url('/images/hero-5-mobile.jpg') no-repeat top center;
+	background: $fm-blue url('/images/hero-5-mobile.jpg') no-repeat top center;
 	height: 389px;
 	@include breakpoint(medium) {
 		background-image: url('/images/hero-5-desktop.jpg');
@@ -102,7 +102,7 @@
 	}
 } 
 .blog-detail-hero {
-  background: $primary-color url('/images/blog/hero-4-mobile.jpg') no-repeat top center;
+  background: $fm-blue url('/images/blog/hero-4-mobile.jpg') no-repeat top center;
   height: 389px;
   @include breakpoint(medium) {
     background-image: url('/images/blog/hero-4-desktop.jpg');
@@ -122,7 +122,7 @@
 	}
 
 	&__overlay {
-		background: $primary-color;
+		background: $fm-blue;
 		height: 100%;
 		opacity: .8;
 		position: absolute;
