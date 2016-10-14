@@ -21,11 +21,14 @@ h2 {
 	@include breakpoint(medium only) {
 		display: block;
 	}
+	@include breakpoint(large only) {
+		display: block;
+	}
 }
 
 #isDesktop {
 	display: none;
-	@include breakpoint(large) {
+	@include breakpoint(xlarge) {
 		display: block;
 	}
 }

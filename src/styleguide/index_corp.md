@@ -133,16 +133,16 @@ As you've probably noticed in the examples above, you have access to a small, me
     <div class="row">
       <main class="medium-7 large-8 columns">
         <div class="page-buffer">
-          <p>Main content. Sed semper tempus justo, ac volutpat ipsum, tempor ullamcorper odio.</p>					
+          <p>Main content. Sed semper tempus justo, ac volutpat ipsum, tempor ullamcorper odio.</p>
         </div>
-      </main> 
+      </main>
       <aside class="medium-5 large-4 columns">
         <section>
           <div class="row page-buffer">
-            <h2>Sidebar Content</h2>            
+            <h2>Sidebar Content</h2>
             <p>Sed semper tempus justo, ac volutpat ipsum, tempor ullamcorper odio.</p>
           </div>
-        </section>      
+        </section>
       </aside>
     </div>
   </div>
@@ -154,16 +154,16 @@ As you've probably noticed in the examples above, you have access to a small, me
 		<div class="row display">
 			<main class="medium-7 large-8 columns">
 				<div class="page-buffer">
-					<p>Main content. Sed semper tempus justo, ac volutpat ipsum, tempor ullamcorper odio.</p>					
+					<p>Main content. Sed semper tempus justo, ac volutpat ipsum, tempor ullamcorper odio.</p>
 				</div>
 			</main>
 			<aside class="medium-5 large-4 columns">
         <section>
           <div class="row page-buffer">
-            <h2>Sidebar Content</h2>            
+            <h2>Sidebar Content</h2>
             <p>Sed semper tempus justo, ac volutpat ipsum, tempor ullamcorper odio.</p>
           </div>
-        </section>      
+        </section>
 			</aside>
 		</div>
 	</div>
@@ -263,7 +263,7 @@ As you've probably noticed in the examples above, you have access to a small, me
   </div>
 </div>
 <br>
-<div class="row up-1 medium-up-3 large-up-4">  
+<div class="row up-1 medium-up-3 large-up-4">
   <div class="column">
     <div class="color-block">
       <span style="background: #f4f4f4"></span>
@@ -285,7 +285,7 @@ As you've probably noticed in the examples above, you have access to a small, me
 </div>
 <br>
 <h3>Mosaic Colors:</h3>
-<div class="row up-1 medium-up-3 large-up-4">  
+<div class="row up-1 medium-up-3 large-up-4">
   <div class="column">
     <div class="color-block">
       <span style="background: #97bb35"></span>
@@ -300,17 +300,17 @@ As you've probably noticed in the examples above, you have access to a small, me
   </div>
   <div class="column">
     <div class="color-block">
-      <span style="background: #7AB629"></span>
+      <span style="background: #88BD45"></span>
       $mosaic-start
     </div>
   </div>
   <div class="column">
     <div class="color-block">
-      <span style="background: #FCEE1C"></span>
+      <span style="background: #E4F118"></span>
       $mosaic-end
     </div>
   </div>
-  , 
+  ,
 </div>
 
 
@@ -385,7 +385,7 @@ Use dividers to define thematic breaks between paragraphs. To denote the end of 
 
 ## Unordered Lists
 
-Use an unordered list to... *list things*, if the order of the items doesn't matter.  
+Use an unordered list to... *list things*, if the order of the items doesn't matter.
 
 Refer to [helper](#helper) classes for additional style options.
 
@@ -448,13 +448,13 @@ A definition list (`<dl>`) is used to display name-value pairs, like metadata or
 
 ## Blockquotes
 
-Sometimes other people say smart things, and you may want to mention those things with a quote. 
+Sometimes other people say smart things, and you may want to mention those things with a quote.
 
 - Do **not** use a blockquote simply to decorate text that isn't a quotation.  Try using a [call out]{#call-out-txt} for that purpose.
 - Include the source for the quote in a `footer` and include the author, title or work in a `cite`.
 
 ```html_example
-<blockquote> 
+<blockquote>
   <p>Cowards die many times before their deaths; the <strong>valiant</strong> never taste of death but once.</p>
   <footer><cite>William Shakespeare</cite> in <cite>King Henry the Fifth</cite></footer>
 </blockquote>
@@ -602,9 +602,9 @@ There are `.show-for-xxx` and `.hide-for-xxx` visibility classes to control the 
 
 ### Show/Hide for Screen Readers
 
-And if you really just need something hidden no matter what, there are classes for that as well. The `.hide` and `.invisible` classes respectively set `display: none` and `visibility: hidden` on an element. Note that both of these classes hide content from screen readers. 
+And if you really just need something hidden no matter what, there are classes for that as well. The `.hide` and `.invisible` classes respectively set `display: none` and `visibility: hidden` on an element. Note that both of these classes hide content from screen readers.
 
-To visually hide content, while still allowing assistive technology to read it, add the class `.show-for-sr`.  To hide text from assistive technology, while still keeping it visible, add the attribute `aria-hidden="true"`. This doesn't affect how the element looks, but screen readers will skip over it.  
+To visually hide content, while still allowing assistive technology to read it, add the class `.show-for-sr`.  To hide text from assistive technology, while still keeping it visible, add the attribute `aria-hidden="true"`. This doesn't affect how the element looks, but screen readers will skip over it.
 
 Use the class `.show-on-focus` to hide an element, except when it has focus. Adding tabindex="0" to the target element makes if focusable.
 
@@ -677,7 +677,7 @@ Use default buttons for actions like resetting a form or cancelling a request.
 
 ## Primary Buttons
 
-Use class `.primary`, for buttons used for primary calls-to-action, like submitting a form.  Use sparingly; there shouldn't be multiple calls-to-action on a single web page. 
+Use class `.primary`, for buttons used for primary calls-to-action, like submitting a form.  Use sparingly; there shouldn't be multiple calls-to-action on a single web page.
 
 ```html_example
 <p>
@@ -770,7 +770,7 @@ This `.inverted` style button is intended for category tags on hero blocks (used
   <p>
     <a href="#" class="inverted small button">Homeownership</a>
   </p>
-</div> 
+</div>
 ```
 
 ---
@@ -783,12 +783,12 @@ If you use a one-color svg icon without a fill color, css will allow it to inher
 ```html_example
 <p>
   <a href="#" class="button tertiary">Log In <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 450"><path d="M86.4 480h339.2c12.3 0 22.4-9.9 22.4-22.1V246c0-12.2-10-22-22.4-22H404v-30.9c0-41.5-16.2-87.6-42.6-115.4-26.3-27.8-64-45.7-105.3-45.7h-.2c-41.3 0-79 17.9-105.3 45.6C124.2 105.4 108 151.5 108 193v31H86.4C74 224 64 233.9 64 246v211.9c0 12.2 10 22.1 22.4 22.1zM161 193.1c0-27.3 9.9-61.1 28.1-80.3v-.3C206.7 93.9 231 83 255.9 83h.2c24.9 0 49.2 10.9 66.8 29.5v.2l-.1.1c18.3 19.2 28.1 53 28.1 80.3V224H161v-30.9z" /></svg></a>
-   
-   
+
+
   <a href="#" class="hollow darken button">Hey There! <svg xmlns="http://www.w3.org/2000/svg" viewBox="60 60 350 350"><path d="M363.3 363.9c-12.9-4.6-31.4-6.2-43.2-8.8-6.8-1.5-16.7-5.3-20-9.2-3.3-4-1.3-40.9-1.3-40.9s6.1-9.6 9.4-18 6.9-31.4 6.9-31.4 6.8 0 9.2-11.9c2.6-13 6.6-18.4 6.1-28.1-.5-9-5.2-9.5-5.7-9.5 0 0 4.9-13.6 5.6-42.4C331.1 129.6 305 96 256 96s-75 33.5-74.3 67.6c.6 28.7 5.6 42.4 5.6 42.4-.5 0-5.2.5-5.7 9.5-.5 9.7 3.6 14.9 6.1 27.9 2.4 11.9 9.2 12 9.2 12s3.6 23.1 6.9 31.5c3.3 8.5 9.4 18 9.4 18s2 36.9-1.3 40.9-13.2 7.7-20 9.2c-11.9 2.6-30.3 4.3-43.2 8.9C135.8 368.5 96 384 96 416h320c0-32-39.8-47.5-52.7-52.1z"/></svg></a>
-  
+
    <a href="#" class="button primary">Continue <svg xmlns="http://www.w3.org/2000/svg" viewBox="40 40 400 400"><path d="M322.7 128.4l100.3 105c6 5.8 9 13.7 9 22.4s-3 16.5-9 22.4L322.7 383.6c-11.9 12.5-31.3 12.5-43.2 0-11.9-12.5-11.9-32.7 0-45.2l48.2-50.4h-217c-17 0-30.7-14.3-30.7-32s13.7-32 30.6-32h217l-48.2-50.4c-11.9-12.5-11.9-32.7 0-45.2 12-12.5 31.3-12.5 43.3 0z" fill="#ffb718"/></svg></a>
-  
+
 </p>
 ```
 
@@ -825,25 +825,25 @@ The below example pairs the callout with the close button component and `data-cl
 
 ```html_example
 <div class="row">
-  <div class="large-12 columns"> 
-    <div class="large-6 columns"> 
+  <div class="large-12 columns">
+    <div class="large-6 columns">
       <div class="callout" data-closable>
         <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
           <span aria-hidden="true">&times;</span>
         </button>
         <p>You can so totally close this!</p>
       </div>
-    </div>  
-    <div class="large-6 columns">     
+    </div>
+    <div class="large-6 columns">
       <div class="callout" data-closable="slide-out-right">
         <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
           <span aria-hidden="true">&times;</span>
         </button>
         <p>You can close me too, and I close using a Motion UI animation.</p>
       </div>
-    </div> 
+    </div>
   </div>
-</div>  
+</div>
 ```
 
 
@@ -852,7 +852,7 @@ The below example pairs the callout with the close button component and `data-cl
 
 <p class="lead">Button groups are containers for related action items. They're great when you need to display a group of actions in a bar. </p>
 
-Add the `.button-group` class to a container, and inside it place any number of buttons. The buttons are separated by a small border.  
+Add the `.button-group` class to a container, and inside it place any number of buttons. The buttons are separated by a small border.
 
 Add the `.expanded` class to the container to make a full-width button group. Each item will automatically size itself based on how many buttons there are, up to a maximum of four.
 
@@ -902,8 +902,8 @@ Landing Pages are those pages that are linked from the primary navigation. Add o
 
 ## Blog Detail Heros
 
-Use this hero on Blog article pages.  
- 
+Use this hero on Blog article pages.
+
 ```html_example
 <section class="blog-detail-hero blue-hero">
   <div class="blue-hero__overlay"></div>
@@ -925,8 +925,8 @@ Use this hero on Blog article pages.
 
 ## Executive Perspectives Heros
 
-Use this hero on Executive Perspectives article pages.  
- 
+Use this hero on Executive Perspectives article pages.
+
 ```html_example
 <section class="perspectives-detail-hero blue-hero">
   <div class="blue-hero__overlay"></div>
@@ -1057,7 +1057,7 @@ Every page should use either a [hero element](#heros) or a page title.
 
 
 
-# Blog Blocks 
+# Blog Blocks
 
 ---
 
@@ -1075,7 +1075,7 @@ Every page should use either a [hero element](#heros) or a page title.
       <div class="blog-block__cat">Homeownership</div>
       <p>Sed quis mauris at leo blandit cursus. Sed tempor gravida augue. Ut dictum enim velit, in elementum mauris vehicula sed. </p>
     </div>
-  </div>  
+  </div>
 </div>
 ```
 
@@ -1093,8 +1093,8 @@ Every page should use either a [hero element](#heros) or a page title.
       <div class="blog-block__date">May 13, 2016</div>
       <h3><a href="#">Down Payments: There's Help for That</a></h3>
     </div>
-  </div>  
-</div>  
+  </div>
+</div>
 ```
 
 ---
@@ -1113,7 +1113,7 @@ Every page should use either a [hero element](#heros) or a page title.
       </a>
     </div>
   </div>
-</div> 
+</div>
 ```
 
 ---
@@ -1160,7 +1160,7 @@ Every page should use either a [hero element](#heros) or a page title.
 <section class="two-column-layout">
 	<div class="row page-buffer">
 		<div class="row">
-			<aside class="medium-offset-6 medium-6 large-offset-7 large-5 columns adjust-sidebar">				
+			<aside class="medium-offset-6 medium-6 large-offset-7 large-5 columns adjust-sidebar">
         <section class="posts-wrapper bg_light-gray">
           <div class="row page-buffer">
             <h2>Recent Posts</h2>
@@ -1221,7 +1221,7 @@ Every page should use either a [hero element](#heros) or a page title.
 
 ## Coloring
 
-The background of the callout can be chnaged by including any of the following classes: 
+The background of the callout can be chnaged by including any of the following classes:
 
 * `callout-hollow`
 * `callout-gray`
@@ -1239,27 +1239,27 @@ The background of the callout can be chnaged by including any of the following c
   <div class="medium-6 columns">
     <div class="callout">
       <p>This is a default <a href="#">callout</a>.</p>
-    </div> 
+    </div>
     <div class="callout callout-hollow">
       <p>This is a <a href="#">callout</a> with a class of hollow.</p>
-    </div>   
+    </div>
     <div class="callout callout-gray">
       <p>This is a <a href="#">callout</a> with class of callout-gray.</p>
     </div>
     <div class="callout callout-blue">
       <p>This is a <a href="#">callout</a> with class of callout-blue.</p>
-    </div> 
+    </div>
     <div class="callout callout-green">
       <p>This is a <a href="#">callout</a> with a class of callout-green.</p>
-    </div> 
+    </div>
   </div>
-  <div class="medium-6 columns">        
+  <div class="medium-6 columns">
     <div class="callout callout-orange">
       <p>This is a <a href="#">callout</a> with a class of callout-orange.</p>
-    </div> 
+    </div>
     <div class="callout callout-yellow">
       <p>This is a <a href="#">callout</a> with callout-yellow</p>
-    </div>  
+    </div>
     <div class="callout callout-purple">
       <p>This is a <a href="#">callout</a> with class of callout-purple.</p>
     </div>
@@ -1273,9 +1273,9 @@ The background of the callout can be chnaged by including any of the following c
       <p>This is a <a href="#">callout</a> with class of callout-alert.</p>
     </div>
   </div>
-</div>  
+</div>
 ```
- 
+
  ---
 
 ## Sizing
@@ -1283,14 +1283,14 @@ The background of the callout can be chnaged by including any of the following c
 Callouts can be sized using the `.small` and `.large` classes. These will affect the padding around content to be smaller and larger respectively.
 
 
-```html_example  
+```html_example
 <div class="row">
   <div class="medium-8 columns">
     <div class="callout callout-purple large">
       <p>This is a callout with class of large. It has more padding between the contents and the edge of the container. And the text is 20% larger.</p>
     </div>
-  </div> 
-  <div class="medium-4 columns">    
+  </div>
+  <div class="medium-4 columns">
     <div class="callout callout-purple small">
       <p>This is a callout with class of small. It has less padding between the contents and the edge of the container.</p>
     </div>
@@ -1311,7 +1311,7 @@ Pair the callout with the [close button](#close-button) component and `data-clos
 
 ```html_example
 <div class="row">
-  <div class="medium-6 columns">   
+  <div class="medium-6 columns">
     <div class="callout callout-orange" data-closable>
       <h5>This is Important!</h5>
       <p>When you're done reading it, click the close button in the corner to dismiss this alert.</p>
@@ -1331,8 +1331,8 @@ Pair the callout with the [close button](#close-button) component and `data-clos
       </button>
     </div>
   </div>
-</div>  
-``` 
+</div>
+```
 
 
 
@@ -1392,7 +1392,7 @@ A Callout Footer Band is a full width band of content that goes immediately abov
 
 #  Sidebar Modules
 
-<p class="lead">There are a variety of modules available for use in a side bar, when you are using the Two Column Layout with Buffer.</p> 
+<p class="lead">There are a variety of modules available for use in a side bar, when you are using the Two Column Layout with Buffer.</p>
 
 ---
 
@@ -1417,7 +1417,7 @@ A Callout Footer Band is a full width band of content that goes immediately abov
   <div class="row page-buffer">
     <div class="row">
       <main class="medium-6 large-7 columns">
-      </main> 
+      </main>
       <aside class="medium-6 large-5 columns">
         <section class="popular-items">
           <div class="row page-buffer">
@@ -1430,7 +1430,7 @@ A Callout Footer Band is a full width band of content that goes immediately abov
               <li><a href="#">MiMi</a></li>
             </ul>
           </div>
-        </section>   
+        </section>
       </aside>
     </div>
   </div>
@@ -1463,7 +1463,7 @@ A Callout Footer Band is a full width band of content that goes immediately abov
   <div class="row page-buffer">
     <div class="row">
       <main class="medium-6 large-7 columns">
-      </main> 
+      </main>
       <aside class="medium-6 large-5 columns">
         <section class="sidebar-cta">
           <div class="row page-buffer">
@@ -1480,7 +1480,7 @@ A Callout Footer Band is a full width band of content that goes immediately abov
               </div>
             </div>
           </div>
-        </section>   
+        </section>
       </aside>
     </div>
   </div>
@@ -1509,7 +1509,7 @@ A Callout Footer Band is a full width band of content that goes immediately abov
   <div class="row page-buffer">
     <div class="row">
       <main class="medium-6 large-7 columns">
-      </main> 
+      </main>
       <aside class="medium-6 large-5 columns">
         <section class="popular-items popular-items_rss">
           <div class="row page-buffer">
@@ -1522,7 +1522,7 @@ A Callout Footer Band is a full width band of content that goes immediately abov
               <li><a href="#">Notable</a></li>
             </ul>
           </div>
-        </section>   
+        </section>
       </aside>
     </div>
   </div>
@@ -1542,8 +1542,8 @@ Note: The news release lists are automated by MarketWire.
     <ul>
       <li><a href="#">Freddie Mac Issues Dodd-Frank Stress Test Results </a><br>08/08/16 -  MCLEAN, VA--(Marketwired - Aug 8, 2016) - &nbsp;Freddie Mac (OTCQB: FMCC) today issued the company's stress test results for the severely adverse scenario conducted under FHFA's rule...</li>
       <li><a href="#">Freddie Mac Reports Second Quarter 2016 Financial Results </a><br>08/02/16 -  MCLEAN, VA--(Marketwired - Aug 2, 2016) -  Freddie Mac (OTCQB: FMCC) today reported its second quarter 2016 financial results and filed its quarterly Form 10-Q with the U.S. Securities...</li>
-      <li><a href="#">Freddie Mac Sets Release Date for Second Quarter 2016 Financial Results</a><br>Jul 29, 2016 - MCLEAN, VA--(Marketwired - Jul 29, 2016) -  Freddie Mac (OTCQB: FMCC) announced today that it plans to report its second quarter 2016 financial results before the U.S. financial markets...</li>	
-    </ul>    
+      <li><a href="#">Freddie Mac Sets Release Date for Second Quarter 2016 Financial Results</a><br>Jul 29, 2016 - MCLEAN, VA--(Marketwired - Jul 29, 2016) -  Freddie Mac (OTCQB: FMCC) announced today that it plans to report its second quarter 2016 financial results before the U.S. financial markets...</li>
+    </ul>
   </div>
 </section>
 ```
@@ -1552,7 +1552,7 @@ Note: The news release lists are automated by MarketWire.
   <div class="row page-buffer">
     <div class="row">
       <main class="medium-6 large-7 columns">
-      </main> 
+      </main>
       <aside class="medium-6 large-5 columns">
         <section class="popular-items popular-items_news">
           <div class="row page-buffer">
@@ -1560,10 +1560,10 @@ Note: The news release lists are automated by MarketWire.
             <ul>
               <li><a href="#">Freddie Mac Issues Dodd-Frank Stress Test Results </a><br>08/08/16 -  MCLEAN, VA--(Marketwired - Aug 8, 2016) - &nbsp;Freddie Mac (OTCQB: FMCC) today issued the company's stress test results for the severely adverse scenario conducted under FHFA's rule...</li>
               <li><a href="#">Freddie Mac Reports Second Quarter 2016 Financial Results </a><br>08/02/16 -  MCLEAN, VA--(Marketwired - Aug 2, 2016) -  Freddie Mac (OTCQB: FMCC) today reported its second quarter 2016 financial results and filed its quarterly Form 10-Q with the U.S. Securities...</li>
-              <li><a href="#">Freddie Mac Sets Release Date for Second Quarter 2016 Financial Results</a><br>Jul 29, 2016 - MCLEAN, VA--(Marketwired - Jul 29, 2016) -  Freddie Mac (OTCQB: FMCC) announced today that it plans to report its second quarter 2016 financial results before the U.S. financial markets...</li>	
-            </ul>    
+              <li><a href="#">Freddie Mac Sets Release Date for Second Quarter 2016 Financial Results</a><br>Jul 29, 2016 - MCLEAN, VA--(Marketwired - Jul 29, 2016) -  Freddie Mac (OTCQB: FMCC) announced today that it plans to report its second quarter 2016 financial results before the U.S. financial markets...</li>
+            </ul>
           </div>
-        </section>  
+        </section>
       </aside>
     </div>
   </div>
@@ -1591,7 +1591,7 @@ Note: The news release lists are automated by MarketWire.
   <div class="row page-buffer">
     <div class="row">
       <main class="medium-6 large-7 columns">
-      </main> 
+      </main>
       <aside class="medium-6 large-5 columns">
         <section class="sidebar-cta feature">
           <div class="feature-background" style="background-image: url('/images/feature-bg.jpg')"></div>
@@ -1603,7 +1603,7 @@ Note: The news release lists are automated by MarketWire.
               </div>
                 <p><a class="hollow button expand" href="#">Read More</a></p>
           </div>
-        </section>   
+        </section>
       </aside>
     </div>
   </div>
@@ -1670,7 +1670,7 @@ Once you put it all together, here's what you get!
       Panel 3. Lorem ipsum dolor.
     </div>
   </li>
-</ul>    
+</ul>
 ```
 
 
@@ -1679,28 +1679,10 @@ Once you put it all together, here's what you get!
 
 <p class="lead">Use forms to allow users to interact with the site and provide information to the company.</p>
 
----
-
-## Elements of a Form
-
-A form should be marked up using its default HTML properties. The ones we make use of include (in hierarchical order):
-
-- Form
-- Label
-- Input
-- Select
-- Text area
-- Button
-
----
-
-## How to Use
-
-Make forms great and easy to use with the following rules:
-
-- Wrap checkboxes and radio buttons within labels for larger hit areas, and be sure to set the for, name, and id attributes for all applicable elements.
-- Series of checkboxes and radio buttons below within a `<ul class="inline-list">`.
-- Before selecting any set of fields to use for a required input, explore other options (e.g., radio buttons over select lists).
+Make forms easy to use with the following rules:
+* Wrap checkboxes and radio buttons within labels for larger hit areas, and be sure to set the <code>for</code>, <code>name</code>, and <code>id</code> attributes for all applicable elements.
+* Series of checkboxes and radio buttons below within a `<ul class="inline-list">`.
+* Required content should include <code>required</code>.
 
 ---
 
@@ -1708,107 +1690,269 @@ Make forms great and easy to use with the following rules:
 
 Form elements are styled based on their type attribute rather than a class. Inputs have another major advantage — they are full width by default. That means that inputs will run as wide as the column that contains them. However, you have two options which make these forms extremely versatile:
 
-- You can size inputs using column sizes, like `.medium-6`, `.small-6`.
-- You can create row elements inside your form and use columns for the form, including inputs, labels and more. Rows inside a form inherit some special padding to even up input spacing.
-
 ---
 
 ## Form Example
 
 ```html_example
-<form>
-  <div class="row">
-    <div class="small-12 columns">
-      <label>Label</label>
-      <input type="text" placeholder="placeholder">
+<div class="row">
+  <form class="form" action="#">
+    <div class="row column">
+      <div class="small-12 columns">
+        <label for="">Label</label>
+        <input id="" type="text" placeholder="placeholder">
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="large-6 columns">
-      <label>Label</label>
-      <input type="text" placeholder="placeholder">
+    <div class="row column">
+      <div class="small-12 columns">
+        <label for="pw">Password with Sample Help Text</label>
+        <input id="pw" type="password" aria-describedby="passwordHelpText" placeholder="***">
+        <p class="help-text" id="passwordHelpText">Your password must have at least 10 characters, a number, and a symbol.</p>
+      </div>
     </div>
-    <div class="large-6 columns">
-      <div class="row collapse">
-        <label>Label</label>
-        <div class="input-group">
-          <input class="input-group-field" type="text" placeholder="placeholder">
-          <span class="input-group-label">.com</span>
+    <div class="row column">
+      <div class="medium-7 columns">
+        <label for="">Email</label>
+        <input id="" type="email" placeholder="name@company.com">
+      </div>
+      <div class="medium-5 columns">
+        <div class="row collapse">
+          <label>Height (combo field example)</label>
+          <div class="input-group">
+            <input id="feet" class="input-group-field" type="number" placeholder="5" min="0" max="12">
+            <label for="feet" class="input-group-label">ft.</label>
+            <input id="inches" class="input-group-field" type="number" placeholder="8" min="0" max="12">
+            <label for="inches" class="input-group-label">in.</label>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="small-12 columns">
-      <label>Select Box</label>
-      <select>
-        <option value="good">Good</option>
-        <option value="better">Better</option>
-        <option value="best">Best</option>
-      </select>
+    <div class="row column">
+      <div class="small-12 columns">
+        <label for="">Select Box</label>
+        <select>
+          <option value="good">Good</option>
+          <option value="better">Better</option>
+          <option value="best">Best</option>
+        </select> 
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="medium-6 columns">
-      <label>Choose Your Favorite</label>
-      <input type="radio" name="radio1" value="radio1" id="radio1"><label for="radio1">Red</label>
-      <input type="radio" name="radio2" value="radio2" id="radio2"><label for="radio2">Blue</label>
+    <div class="row column"> 
+      <div class="small-12 columns">  
+        <label for="">Multiple Select Box</label>
+        <select multiple>
+          <option value="showboat">Showboat</option>
+          <option value="redwing">Redwing</option>
+          <option value="narcho">Narcho</option>
+          <option value="hardball">Hardball</option>
+        </select>
+      </div>
     </div>
-    <div class="medium-6 columns">
-      <label>Check these out</label>
-      <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-      <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
+    <div class="row column">
+      <div class="medium-6 columns">
+        <fieldset>
+          <legend>Choose Your Favorite</legend>
+          <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Red</label>
+          <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Blue</label>
+          <input type="radio" name="pokemon" value="Yellow" id="pokemonYellow"><label for="pokemonYellow">Yellow</label>
+        </fieldset>
+      </div>
+      <div class="medium-6 columns">
+        <fieldset>
+          <legend>Check these out</legend>
+          <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+          <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
+          <input id="checkbox3" type="checkbox"><label for="checkbox3">Checkbox 3</label>
+        </fieldset>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="small-12 columns">
-      <label>Textarea Label</label>
-      <textarea placeholder="placeholder"></textarea>
+    <div class="row column">
+      <div class="small-12 columns">
+        <fieldset class="fieldset">
+          <legend>Styled Fieldset</legend>
+          <input id="checkbox12" type="checkbox"><label for="checkbox12">Checkbox 1</label>
+          <input id="checkbox22" type="checkbox"><label for="checkbox22">Checkbox 2</label>
+          <input id="checkbox32" type="checkbox"><label for="checkbox32">Checkbox 3</label>
+        </fieldset>
+      </div>
     </div>
-  </div>  
-  <div class="row">
-    <button class="button primary" type="submit">Submit</button> 
-    <button class="button" type="reset">Reset</button>
-  </div>  
-</form>
+    <div class="row column">
+      <div class="small-12 columns">
+        <label for="">How many items?</label>
+        <input id="" type="number" value="100">      
+        <label for="">Textarea Label</label>
+        <textarea placeholder="placeholder" rows="3"></textarea>
+      </div>
+    </div>
+    <div class="row column">
+      <div class="small-12 columns">
+        <button class="button primary" type="submit">Submit</button>
+        <button class="button" type="reset">Reset</button>
+      </div>
+    </div>
+  </form>
+</div>
 ```
 
 ---
 
-### Dark background Example
+### Example with labels next to fields
 
-When the form appears on a dark background, add the class `.outline` and one of the following classes to specify a background color for hte form that matches the background color of the container:
+Sometimes you want a form with labels to the left of your inputs. Piece of cake! You can put the label inside a different column to the left of the input. Then use the class `.text-right` to realign the label.  Add the `.middle` class to vertically align the first line of the label with its input. In this example, for medium screen sizes and up, the labels are 3 columns wide and the fields are 9 columns wide; and the column with buttons is pushed 3 columns over to line up with the fields.
 
-* `outline-gray`
+```html_example
+<div class="row">
+  <form class="form" action="#">
+    <div class="row column">
+      <div class="medium-3 columns">
+        <label for="side-label" class="text-right middle">Side Label</label>
+      </div>
+      <div class="medium-9 columns">
+        <input type="text" id="side-label" placeholder="short label that is vertically aligned to middle of field">
+      </div>
+    </div>
+    <div class="row column">
+      <div class="medium-3 columns">
+        <label for="side-label2" class="text-right">A much longer side label for comparison</label>
+      </div>
+      <div class="medium-9 columns">
+        <input type="text" id="side-label2" placeholder="longer label with default alignment">
+      </div>
+    </div>
+    <div class="row column">
+      <div class="medium-9 medium-push-3 columns">      
+        <button class="button primary" type="submit">Submit</button>
+        <button class="button" type="reset">Reset</button>
+      </div>
+    </div>
+  </form>
+```
+
+---
+
+### Example of single field form all in 1 row
+
+If a form has only a single field, you can combine the label, field, and submit button into a single element using the `.input-group` class.
+
+```html_example
+<div class="row">
+  <form class="form" action="#">
+    <div class="medium-8 columns">
+      <div class="input-group">    
+        <label for="emailxx" class="input-group-label">Get Notified</label>
+        <input id="emailxx" class="input-group-field" type="email" placeholder="name@company.com">
+        <div class="input-group-button">
+          <button class="button tertiary" type="submit">Subscribe</button>
+        </div>
+      </div> 
+    </div>
+  </form>
+</div>  
+```
+
+---
+
+### Example on different background colors
+
+When the form appears on a different background, add the class `.outline` and one of the following classes to specify a background color for the form that matches the background color of the container (typically a [callout](#callout), but not red, green or orange to avoid conflicting with error/success messages and primary buttons):
+
 * `.outline-primary`
+* `.outline-gray`
 * `.outline-blue`
-* `.outline-green`
-* `.outline-orange`
 * `.outline-yellow`
 * `.outline-purple`
 * `.outline-teal`
 
-
-```html_example
-<div class="callout callout-primary">
-  <form action="#" class="outline outline-primary">
-    <label>Label</label>
-    <input type="text" placeholder="placeholder">
-  </form>  
-</div>
-<div class="callout callout-yellow">
-  <form action="#" class="outline outline-yellow">
-    <label>Label</label>
-    <input type="text" placeholder="placeholder">
-  </form>  
-</div>
+```html
+<form action="#" class="form outline outline-yellow">
+  <label for="">Label</label>
+  <input type="text" placeholder="placeholder">
+  <button class="button primary">Submit</button>
+</form>
 ```
+
+<div class="row">
+  <div class="medium-6 columns">
+    <div class="callout callout-primary">
+      <form action="#" class="form outline outline-primary">
+        <label for="">Label</label>
+        <input type="text" placeholder="placeholder">
+        <button class="button primary">Submit</button>
+      </form>
+    </div>
+  </div>
+  <div class="medium-6 columns">
+    <div class="callout callout-yellow">
+      <form action="#" class="form outline outline-yellow">
+        <label for="">Select One</label>
+        <select>
+          <option value="good">Good</option>
+          <option value="better">Better</option>
+          <option value="best">Best</option>
+        </select>
+        <button class="button primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="medium-6 columns">
+    <div class="callout callout-teal">
+      <form action="#" class="form outline outline-teal">
+        <fieldset>
+          <legend>Check a box or two</legend>
+          <input id="checkbox13" type="checkbox"><label for="checkbox13">Checkbox 1</label>
+          <input id="checkbox23" type="checkbox"><label for="checkbox23">Checkbox 2</label>
+        </fieldset>
+        <button class="button primary">Submit</button>
+      </form>
+    </div>
+  </div>
+  <div class="medium-6 columns">
+    <div class="callout callout-purple">
+      <form action="#" class="form outline outline-purple">
+        <fieldset>
+          <legend>Choose Your Favorite</legend>
+          <input type="radio" name="coloropt" value="Red" id="colorRed"><label for="colorRed">Red</label>
+          <input type="radio" name="coloropt" value="Blue" id="colorBlue"><label for="colorBlue">Blue</label>
+          <input type="radio" name="coloropt" value="Yellow" id="colorYellow"><label for="colorYellow">Yellow</label>
+        </fieldset>
+        <button class="button primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="medium-6 columns">
+    <div class="callout callout-gray">
+      <form action="#" class="form outline outline-gray">
+        <label for="">Height</label>
+          <div class="input-group">
+            <input id="feet" class="input-group-field" type="number" placeholder="5" min="0" max="12">
+            <label for="feet" class="input-group-label">ft.</label>
+            <input id="inches" class="input-group-field" type="number" placeholder="8" min="0" max="12">
+            <label for="inches" class="input-group-label">in.</label>
+          </div>
+        <button class="button primary">Submit</button>
+      </form>
+    </div>
+  </div>
+  <div class="medium-6 columns">
+    <div class="callout callout-blue">
+      <form action="#" class="form outline outline-blue">
+        <label for="">Email</label>
+        <input id="" type="email" placeholder="name@company.com">
+        <button class="button primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
 
 
 
 # Overlay
 
-If you're going to use an image as an anchor, we've got you covered.  Apply the `.overlay` class to the `<a>` that wraps the image to style the image with a blue overlay on hover and focus.    
+If you're going to use an image as an anchor, we've got you covered.  Apply the `.overlay` class to the `<a>` that wraps the image to style the image with a blue overlay on hover and focus.
 
 ```html
 <a class="overlay" href="#"><img alt="photo of David Brickman" src="/images/exec_david_brickman.jpg"></a>
@@ -1816,19 +1960,19 @@ If you're going to use an image as an anchor, we've got you covered.  Apply the 
 
 <div class="row">
   <div class="small-6 medium-3 columns small-centered">
-    <a class="overlay" href="#"><img alt="photo of David Brickman" src="/images/exec_david_brickman.jpg"></a> 
+    <a class="overlay" href="#"><img alt="photo of David Brickman" src="/images/exec_david_brickman.jpg"></a>
   </div>
 </div>
 
 
 
-# Media Objects  
+# Media Objects
 
 <p class="lead">Media objects are super useful components for displaying an item, usually an image, alongside some content, usually text. You could put lists, grids, or even other media objects inside.</p>
 
-A media object is a container with the class `.media-object`, and two or three sections with the class `.media-object-section`.  Each section aligns to the top by default, but individual sections can also be middle- or bottom-aligned by adding a `.middle` or `.bottom` class to `.media-object-section`.  If you nest a media object into the media-object-section section, it will indent to be inside the parent media object. 
+A media object is a container with the class `.media-object`, and two or three sections with the class `.media-object-section`.  Each section aligns to the top by default, but individual sections can also be middle- or bottom-aligned by adding a `.middle` or `.bottom` class to `.media-object-section`.  If you nest a media object into the media-object-section section, it will indent to be inside the parent media object.
 
-If you are going to make the image a link,  [add the `.overlay` class](#overlay) to style the image on hover and focus. 
+If you are going to make the image a link,  [add the `.overlay` class](#overlay) to style the image on hover and focus.
 
 ```html_example
 <div class="large-9 large-centered columns">
@@ -1841,7 +1985,7 @@ If you are going to make the image a link,  [add the `.overlay` class](#overlay)
       <p>One of the most important keys to today's single-family housing market is homeowners who were born before the first-ever episode of Star Trek aired in the 1960s. Today, more than 50 years later, Baby Boomers and other homeowners over the age of 55 control almost two-thirds of the nation's home equity.</p>
     </div>
   </div>
-</div>  
+</div>
 ```
 
 ---
@@ -1850,7 +1994,7 @@ If you are going to make the image a link,  [add the `.overlay` class](#overlay)
 
 By adding the `.stack-for-small` class, you can make your media object responsive and stack the media item and the associated blurb. Images will get a width of 100%, but this can be changed.
 
-If you are going to make the image a link,  [add the `.overlay` class](#overlay) to style the image on hover and focus. 
+If you are going to make the image a link,  [add the `.overlay` class](#overlay) to style the image on hover and focus.
 
 ```html_example
 <div class="large-9 large-centered columns">
@@ -1885,10 +2029,10 @@ If you are going to make the image a link,  [add the `.overlay` class](#overlay)
 
 ## Basics
 
-There are two pieces to a tabbed interface: the tabs themselves, and the content for each tab. 
+There are two pieces to a tabbed interface: the tabs themselves, and the content for each tab.
 
-The tabs are grouped within an element with the classes `.tabs` and `.horizontal`, the attribute `data-tabs`, and a unique `id` attribute.  
-- Each tab has the class `.tabs-title` and contains a link to a tab. The `href` of each link should match the ID of a tab.  
+The tabs are grouped within an element with the classes `.tabs` and `.horizontal`, the attribute `data-tabs`, and a unique `id` attribute.
+- Each tab has the class `.tabs-title` and contains a link to a tab. The `href` of each link should match the ID of a tab.
 - To mark which tab is the default, add the class `.is-active` to the tab, and `aria-selected="true"` to the `<a>` element.
 
 ```html
@@ -1898,7 +2042,7 @@ The tabs are grouped within an element with the classes `.tabs` and `.horizontal
 </ul>
 ```
 
-The tab content container has the class `.tabs-content` and a ` data-tabs-content` attribute that matches the ID of the coordinating tabs element, while each section has the class `.tabs-panel`. 
+The tab content container has the class `.tabs-content` and a ` data-tabs-content` attribute that matches the ID of the coordinating tabs element, while each section has the class `.tabs-panel`.
 - Each content pane also has a unique ID, which is targeted by a link in the tabstrip.
 - To mark which pane is the default, add the class `.is-active` to that pane.
 
@@ -1942,18 +2086,18 @@ Once you put it all together, here's what you get for standard horizontal tabs!
       <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
     </div>
     <div class="tabs-panel" id="panelh2">
-      <p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>      
-      <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
-    </div>    
-    <div class="tabs-panel" id="panelh3">
-      <p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>      
       <p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
-    </div>    
+      <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+    </div>
+    <div class="tabs-panel" id="panelh3">
+      <p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+      <p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+    </div>
     <div class="tabs-panel" id="panelh4">
       <p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
       <p><img src="http://www.freddiemac.com/blog/images/fm_blog_usda_returns.jpg" alt="Harp - act now!"></p>
     </div>
-  </div>  
+  </div>
 </div>
 ```
 
@@ -1968,7 +2112,7 @@ For fixed-sized horizontal tabs (where all tabs are the same width):
 3. Add attribute `data-equalizer-watch` to each link to insure they remain the same height.
 
 ```html
-<div class="tab-wrapper" data-equalizer data-equalize-on="small"> 
+<div class="tab-wrapper" data-equalizer data-equalize-on="small">
   <ul class="tabs horizontal small-up-3" data-tabs>
     <li class="tabs-title is-active"><a href="#panelsample1" aria-selected="true" data-equalizer-watch>Tab</a></li>
     <li class="tabs-title"><a href="#panelsample2" data-equalizer-watch>Tab</a></li>
@@ -1981,7 +2125,7 @@ Once you put it all together, here's what you get for equal width tabs!
 
 
 ```html_example
-<div class="tab-wrapper" data-equalizer data-equalize-on="small">      
+<div class="tab-wrapper" data-equalizer data-equalize-on="small">
   <ul class="tabs small-up-3 horizontal" data-tabs id="example-tabsB">
     <li class="tabs-title is-active"><a href="#panel1B" aria-selected="true" data-equalizer-watch>Tab one</a></li>
     <li class="tabs-title"><a href="#panel2B" data-equalizer-watch>Tab two Longer</a></li>
@@ -1997,12 +2141,12 @@ Once you put it all together, here's what you get for equal width tabs!
       <p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
 
       <p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
-    </div>    
+    </div>
     <div class="tabs-panel" id="panel3B">
       <p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
 
       <p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
-    </div>  
+    </div>
   </div>
 </div>
 ```
@@ -2027,9 +2171,9 @@ Once you put it all together, here's what you get for vertical tabs!
     <ul class="tabs vertical" id="example-vert-tabsB" data-tabs data-equalizer-watch>
       <li class="tabs-title is-active"><a href="#panel1vB" aria-selected="true">Tab one</a></li>
       <li class="tabs-title"><a href="#panel2vB">Tab two</a></li>
-      <li class="tabs-title"><a href="#panel3vB">Tab three</a> 
+      <li class="tabs-title"><a href="#panel3vB">Tab three</a>
       </li>
-    </ul> 
+    </ul>
     <div class="clearfix"></div>
   </div>
   <div class="large-10 medium-9 columns">
@@ -2248,11 +2392,11 @@ Got a lot of tabular data? Add the class `.scroll` to the table itself to enable
 
 # Tooltip
 
-By default, a tooltip appears below the defined term on hover or focus, and clicking on a tooltip will leave it open until you click somewhere else. Tooltips should be short, and cannot contain HTML markup.  You can use “curly quotes” if needed. 
+By default, a tooltip appears below the defined term on hover or focus, and clicking on a tooltip will leave it open until you click somewhere else. Tooltips should be short, and cannot contain HTML markup.  You can use “curly quotes” if needed.
 
 ```html_example
-<p>The <span data-tooltip aria-haspopup="true" class="has-tip" tabindex="0" title="A “scarabaeus” is an outdated 
-term for an object in the form of a scarab beetle. The scarab was a popular form of amulet in Ancient 
+<p>The <span data-tooltip aria-haspopup="true" class="has-tip" tabindex="0" title="A “scarabaeus” is an outdated
+term for an object in the form of a scarab beetle. The scarab was a popular form of amulet in Ancient
 Egypt.">scarabaeus</span> hung clear of any branches, and, if allowed to fall, would have fallen at our feet. </p>
 ```
 
@@ -2260,10 +2404,10 @@ Egypt.">scarabaeus</span> hung clear of any branches, and, if allowed to fall, w
 
 # Modals
 
-A standard modal dialog is just an empty container, so you can put any kind of content inside it, from text to forms to images to an entire grid.  At small screen sizes, all modals are full width, and the default for medium or larger is 75%.  To create a modal, 
+A standard modal dialog is just an empty container, so you can put any kind of content inside it, from text to forms to images to an entire grid.  At small screen sizes, all modals are full width, and the default for medium or larger is 75%.  To create a modal,
 
 - Add the attributes `data-open` and `aria-controls` to to the link that opens the modal. The value of both should be the ID of the modal.
-- To the modal container, add the class `.reveal`, the attribute `data-reveal`, and a unique ID (which is used by any link that launches the modal).  
+- To the modal container, add the class `.reveal`, the attribute `data-reveal`, and a unique ID (which is used by any link that launches the modal).
 - Modals by default are accessible through the use of various ARIA attributes.  To make a modal even more accessible, designate a label to the modal by adding an `id` attribute on the elment you want to designate as the label (such as a heading inside the modal) and then adding the same value into an `aria-labelledby` attribute on the modal container.
 
 ```html
@@ -2292,7 +2436,7 @@ Below the medium breakpoint, *all* modals are full screen.  Use the following cl
 
 ```html_example
 <ol>
-  <li><a data-open="exampleModal5" aria-controls="exampleModal5">View a standard modal at small width</a>. 
+  <li><a data-open="exampleModal5" aria-controls="exampleModal5">View a standard modal at small width</a>.
     <div class="small reveal" id="exampleModal5" data-reveal aria-labelledby="Modal5-label">
       <div class="row">
         <h3 id="Modal5-label">I'm a small width modal.</h3>
@@ -2301,7 +2445,7 @@ Below the medium breakpoint, *all* modals are full screen.  Use the following cl
       </div>
     </div>
   </li>
-  
+
   <li><a data-open="exampleModal6" aria-controls="exampleModal6">View a standard modal at medium width</a>.
     <div class="medium reveal" id="exampleModal6" data-reveal aria-labelledby="Modal6-label">
       <div class="row">
@@ -2309,9 +2453,9 @@ Below the medium breakpoint, *all* modals are full screen.  Use the following cl
         <p> I can contain any normal markup, from <a href="/">links</a> to images.  </p>
         <img src="http://placekitten.com/200/160" alt="kitty">
       </div>
-    </div>  
-  </li>  
-  
+    </div>
+  </li>
+
   <li><a data-open="exampleModal2" aria-controls="exampleModal2">View a standard modal at default width</a>.
     <div class="reveal" id="exampleModal2" data-reveal>
       <div class="row">
@@ -2322,8 +2466,8 @@ Below the medium breakpoint, *all* modals are full screen.  Use the following cl
       </div>
     </div>
   </li>
-  
-  <li><a data-open="exampleModal7" aria-controls="exampleModal7">View a standard modal at large width</a>.  
+
+  <li><a data-open="exampleModal7" aria-controls="exampleModal7">View a standard modal at large width</a>.
     <div class="large reveal" id="exampleModal7" data-reveal>
       <div class="row">
         <p>I'm a large width modal.</p>
@@ -2332,15 +2476,15 @@ Below the medium breakpoint, *all* modals are full screen.  Use the following cl
       </div>
     </div>
   </li>
-  
+
   <li><a data-open="exampleModal8" aria-controls="exampleModal8">View a standard modal at full width/height</a> (you'll likely want to add a color overlay - see below).
     <div class="full reveal" id="exampleModal8" data-reveal>
       <div class="row">
         <p>I'm a full width modal.</p>
         <p> I can contain any normal markup, from <a href="/">links</a> to images.  </p>
         <img src="http://placekitten.com/200/160" alt="kitty">
-      </div> 
-    </div>    
+      </div>
+    </div>
   </li>
 </ol>
 ```
@@ -2353,74 +2497,74 @@ Modals can be done with a variety of background colors by adding an `.overlay-xx
 
 ```html_example
 <ol>
-  <li><a data-open="fullModal1" aria-controls="fullModal1">View a full width/height modal on green</a>. 
+  <li><a data-open="fullModal1" aria-controls="fullModal1">View a full width/height modal on green</a>.
     <div class="full reveal overlay-green" id="fullModal1" data-reveal aria-labelledby="Modal1-label">
-      <div class="row"> 
+      <div class="row">
         <h3 id="Modal1-label">I'm a full width modal.</h3>
         <p> I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
         <img src="http://placekitten.com/200/160" alt="kitty">
-      </div>  
+      </div>
     </div>
   </li>
-  
+
   <li><a data-open="fullModal2" aria-controls="fullModal2">View a full width/height modal on orange</a>.
     <div class="full reveal overlay-orange" id="fullModal2" data-reveal aria-labelledby="Modal2-label">
-      <div class="row"> 
+      <div class="row">
         <h3 id="Modal1-label">I'm a full width modal.</h3>
         <p> I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
         <img src="http://placekitten.com/200/160" alt="kitty">
-      </div>  
-    </div>  
-  </li>  
-  
-  <li><a data-open="fullModal3">View a full width/height modal on blue</a>.  
+      </div>
+    </div>
+  </li>
+
+  <li><a data-open="fullModal3">View a full width/height modal on blue</a>.
     <div class="full reveal overlay-blue" id="fullModal3" data-reveal>
-      <div class="row"> 
+      <div class="row">
         <h3 id="Modal1-label">I'm a full width modal.</h3>
         <p> I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
         <img src="http://placekitten.com/200/160" alt="kitty">
-      </div>  
+      </div>
     </div>
-  </li>  
-  
-  <li><a data-open="fullModal4">View a full width/height modal on teal</a>.  
+  </li>
+
+  <li><a data-open="fullModal4">View a full width/height modal on teal</a>.
     <div class="full reveal overlay-teal" id="fullModal4" data-reveal>
-      <div class="row"> 
+      <div class="row">
         <h3 id="Modal1-label">I'm a full width modal.</h3>
         <p> I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
         <img src="http://placekitten.com/200/160" alt="kitty">
-      </div>  
+      </div>
     </div>
   </li>
-  
-  <li><a data-open="fullModal5">View a full width/height modal on gray</a>.  
+
+  <li><a data-open="fullModal5">View a full width/height modal on gray</a>.
     <div class="full reveal overlay-gray" id="fullModal5" data-reveal>
-      <div class="row"> 
+      <div class="row">
         <h3 id="Modal1-label">I'm a full width modal.</h3>
         <p> I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
         <img src="http://placekitten.com/200/160" alt="kitty">
-      </div>  
+      </div>
     </div>
   </li>
-  
-  <li><a data-open="fullModal7">View a full width/height modal on yellow</a>.  
+
+  <li><a data-open="fullModal7">View a full width/height modal on yellow</a>.
     <div class="full reveal overlay-yellow" id="fullModal7" data-reveal>
-      <div class="row"> 
+      <div class="row">
         <p>I'm a full width modal.</p>
         <p> I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
         <img src="http://placekitten.com/200/160" alt="kitty">
-      </div>  
+      </div>
     </div>
   </li>
-  
+
   <li><a data-open="fullModal9">View a full width/height modal on purple</a>
     <div class="full reveal overlay-purple" id="fullModal9" data-reveal>
-      <div class="row"> 
+      <div class="row">
         <h3 id="Modal1-label">I'm a full width modal.</h3>
         <p> I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
         <img src="http://placekitten.com/200/160" alt="kitty">
-      </div>  
-    </div>  
+      </div>
+    </div>
   </li>
 </ol>
 ```
@@ -2438,7 +2582,7 @@ It's possible for modals to open other modals. Create a second modal with a uniq
 
 <!-- This is the first modal -->
 <div class="reveal" id="exampleModalA" data-reveal>
-  <div class="row"> 
+  <div class="row">
     <h2>Awesome!</h2>
     <p class="lead">I have another modal inside of me!</p>
     <p><a class="button secondary" data-open="exampleModalB" aria-controls="exampleModalB">View another modal!</a></p>
@@ -2447,7 +2591,7 @@ It's possible for modals to open other modals. Create a second modal with a uniq
 
 <!-- This is the nested modal -->
 <div class="reveal" id="exampleModalB" data-reveal>
-  <div class="row"> 
+  <div class="row">
     <h2>ANOTHER MODAL!!!</h2>
     <p>I took the place of the first modal.</p>
   </div>
@@ -2458,8 +2602,8 @@ It's possible for modals to open other modals. Create a second modal with a uniq
 
 ## Video Modal
 
-Embedded videos won't maintain their aspect ratio as the width of the screen changes. To avoid squished videos, wrap them in a container with the class `.flex-video`. 
-The default ratio is 4:3. Add the `.widescreen` class to change it to 16:9.  
+Embedded videos won't maintain their aspect ratio as the width of the screen changes. To avoid squished videos, wrap them in a container with the class `.flex-video`.
+The default ratio is 4:3. Add the `.widescreen` class to change it to 16:9.
 
 - If the video is hosted by Vimeo, you should also add the class `.vimeo`.
 - To prevent a video from continuing to play after a modal is closed, add `data-reset-on-close="true"`.
@@ -2469,7 +2613,7 @@ The default ratio is 4:3. Add the `.widescreen` class to change it to 16:9.
 ```html_example
 <ul>
   <li><a href="https://www.youtube.com/watch?v=26OUQIjRRbc" data-open="exampleModalC" aria-controls="exampleModalC">View a modal with a (4:3 ratio) video</a>.</li>
-</ul> 
+</ul>
 
 <div class="reveal" id="exampleModalC" data-reveal data-reset-on-close="true">
   <div class="flex-video">
@@ -2492,19 +2636,19 @@ The default ratio is 4:3. Add the `.widescreen` class to change it to 16:9.
 
 ## Image Modal
 
-Image modals are those that contain only an image and a caption, and the image stretches/shrinks to fill the width of the container.  To prevent images from distorting at higher resolutions, the maximum container width for image modals (regardless of size) is the width of the grid (1400px). 
-- To create an image modal, add class `.reveal-image` to the .`reveal` container, and include a `figure` with `img` and `figcaption`. 
-- To provide a non-javascript fallback link, include the url of the larger image in the `href` attribute.  
-- If the modal is being launched from a link on an image, utilize the [`.overlay` class](#overlay) to provide a focus and hover state on the image.  Below are examples of an image modal being launched from a text link and from a link on an overlay image.  
-- 
+Image modals are those that contain only an image and a caption, and the image stretches/shrinks to fill the width of the container.  To prevent images from distorting at higher resolutions, the maximum container width for image modals (regardless of size) is the width of the grid (1400px).
+- To create an image modal, add class `.reveal-image` to the .`reveal` container, and include a `figure` with `img` and `figcaption`.
+- To provide a non-javascript fallback link, include the url of the larger image in the `href` attribute.
+- If the modal is being launched from a link on an image, utilize the [`.overlay` class](#overlay) to provide a focus and hover state on the image.  Below are examples of an image modal being launched from a text link and from a link on an overlay image.
+-
 
 
 ```html_example
- 
+
 <ul>
   <li><a data-open="exampleModalE" href="http://placekitten.com/2300/1600" aria-controls="exampleModalE">View an image modal</a>.</li>
 </ul>
-  
+
 <div class="reveal reveal-image" id="exampleModalE" data-reveal>
   <div class="reveal-image-inner">
     <figure>
@@ -2515,17 +2659,17 @@ Image modals are those that contain only an image and a caption, and the image s
 </div>
 
 <ul>
-  <li>View an image modal by clicking the following image.<br><a data-open="exampleModalF" class="overlay" 
+  <li>View an image modal by clicking the following image.<br><a data-open="exampleModalF" class="overlay"
   href="http://placekitten.com/2300/1600" aria-controls="exampleModalF"><img src="http://placekitten.com/200/160" alt="kitty"></a></li>
 </ul>
-  
+
 <div class="reveal reveal-image" id="exampleModalF" data-reveal>
   <div class="reveal-image-inner">
     <figure>
       <img src="http://placekitten.com/2300/1600" alt="kitty">
       <figcaption>Who Doesn't Love Kitties?</figcaption>
     </figure>
-  </div>  
+  </div>
 </div>
 ```
 
@@ -2587,7 +2731,7 @@ Combine the image modal and the nested modal to achieve an image gallery where t
   <div class="reveal-image-inner">
     <figure>
       <img src="/images/plant4.jpg" alt="plant 4">
-      <figcaption>This caption is longer than the others to show how things look when the caption is very long, and it contains a <a href="#">hyperlink</a> and formatting such as  <em>emphasis</em> and <strong>strong</strong>, so we can see how they look in a caption. 
+      <figcaption>This caption is longer than the others to show how things look when the caption is very long, and it contains a <a href="#">hyperlink</a> and formatting such as  <em>emphasis</em> and <strong>strong</strong>, so we can see how they look in a caption.
       </figcaption>
       <a class="gallery-previous" data-open="galleryModalC" aria-controls="galleryModalC"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</a>
       <a class="gallery-next" data-open="galleryModalA" aria-controls="galleryModalA"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</a>
@@ -2606,13 +2750,13 @@ Combine the image modal and the nested modal to achieve an image gallery where t
 - The wrapper for the carousel should use the `.orbit` class and contain a `data-orbit` attribute and a `role="region"` attribute.  For assistive technology, provide an `aria-label` attribute that describes the carousel contents.  The wrapper groups the slides and the slide navigation together.
 - The container for the slides is a `ul` with the class `.orbit-container` (for image carousels, use a `div` with class `.orbit-container`).
 - Each slide is an `li` with the class `.orbit-slide` (for image carousels use a `figure`).
-- By default, slides transition every 5 seconds.  You can stop the auto-play functionality by adding the attribute `data-auto-play="false"`.  
+- By default, slides transition every 5 seconds.  You can stop the auto-play functionality by adding the attribute `data-auto-play="false"`.
 - Slides can be done with a variety of background colors by adding an `.orbit-slide-xxx` class (where xxx is green, orange, blue, teal, gray, yellow, red, purple) on the `.orbit-slide` element.
 - To shift the dot navigation so that it appears inside the panel, add class `.bullets-overlay` to the `.orbit` element.
 
 ```html_example
 <div class="orbit bullets-overlay" role="region" aria-label="Favorite Text Ever" data-orbit data-auto-play="false">
-  <ul class="orbit-container"> 
+  <ul class="orbit-container">
     <li class="orbit-slide orbit-slide-yellow">
       <section>
         <h3>Slide One</h3>
@@ -2637,7 +2781,7 @@ Combine the image modal and the nested modal to achieve an image gallery where t
     <li class="orbit-slide orbit-slide-red">
       <section>
         <h3>Slide Four</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <ul>
         <li>Duis aute irure dolor in reprehenderit in voluptate.</li>
         <li>Velit esse cillum dolore eu fugiat nulla pariatur.</li>
@@ -2680,10 +2824,10 @@ Combine the image modal and the nested modal to achieve an image gallery where t
 
 ## Image Carousel
 
-For an image carousel, each slide consists of a `figure`, `img` and optional `figcaption`.  
+For an image carousel, each slide consists of a `figure`, `img` and optional `figcaption`.
 
 - Try to make sure your images are all similar in size and proportion.
-- Each image should still have an `alt` attribute, even if it has an associated caption.  
+- Each image should still have an `alt` attribute, even if it has an associated caption.
 - Captions can contain additional markup -- from blockquotes to paragraphs to text formatting.
 - Image carousels **cannot** be used inside a modal window -- instead refer to [Image Gallery Modal](#igallery).
 
@@ -2777,7 +2921,7 @@ To disable the animation, set the `data-use-m-u-i` attribute to `false`.  To sto
 
 # Footer
 
-**Note:** The footer will automatically be inserted via the template - do not include this code in your page. 
+**Note:** The footer will automatically be inserted via the template - do not include this code in your page.
 
 ```html_example
 <footer class="footer">

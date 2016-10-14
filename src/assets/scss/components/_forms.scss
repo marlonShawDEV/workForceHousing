@@ -1,0 +1,161 @@
+// difficult to apply class names to fields with our form inserter -- easier to apply it to the form container itself.
+$form-palette: (
+  green: $fm-green,
+  yellow: $fm-yellow,
+  purple: $fm-purple,
+  blue: $fm-dark-blue,
+  teal: $fm-teal,
+  gray: $medium-gray,
+  primary: $fm-blue
+);
+
+select:not([multiple]) {
+  position: relative;   
+  background-image: icon(triangle-down, $fm-gray, 12, 9, 0, 0, 16, 12);
+  background-position: $global-right center;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+}
+input[type='email'] {
+  position: relative;          
+  background-image: icon(email, $fm-gray, 24, 24, 0, 3, 24, 24);
+  background-position: $global-right center;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+}
+fieldset {
+  margin-bottom: rem-calc(18); 
+  &.fieldset  {
+    border-radius: $input-radius;
+    legend {
+      background: inherit; // override foundation default
+    }
+    label {
+      font-weight: $global-weight-normal;
+    }
+  }
+}  
+legend {
+  font-weight: $form-label-font-weight;
+} 
+.help-text  {
+  opacity: 0.8;
+  margin-top: ($form-spacing * 0.75) * -1;
+} 
+[type="checkbox"] + label, [type="radio"] + label {
+  font-weight: 400;
+}
+.form {
+  margin: $fieldset-margin;
+  [type='radio'] ,  
+  [type='checkbox'] {
+    @include element-invisible;
+    + label::before {    
+      background: inherit;
+      border: 2px solid $fm-gray;
+      content: '\2003';
+      display: inline-block;
+      font-weight: 700;
+      height: 1.25em;
+      width: 1.25em;
+      font-size: 1em;
+      line-height: 1;
+      margin: 0 0.5em;
+      text-align: center;
+    }
+    &:checked + label {
+      color: $fm-green;
+      &::before {
+        color: white;
+        background-color: $fm-green;
+        border-color: $fm-green;
+      }
+    }  
+  }
+  [type='radio'] + label::before {
+    border-radius: 50%;  
+  } 
+  [type='checkbox']:checked + label::before {
+      content: '\00d7';  
+  }
+  &.outline { 
+    input[type='email'] {
+      position: relative;          
+      background-image: icon(email, $white, 24, 24, 0, 3, 24, 24);
+    } 
+    select {
+      background-image: icon(triangle-down, $white, 12, 9, 0, 0, 16, 12);
+    }
+    ::placeholder {
+      color: rgba($white, 0.5);
+    }
+    // supporting having the focxused fields display the background text color
+    @each $name, $color in $form-palette {    
+      &-#{$name} {         
+        [type='text'], 
+        [type='password'], 
+        [type='date'], 
+        [type='datetime'], 
+        [type='datetime-local'], 
+        [type='month'], 
+        [type='week'], 
+        [type='email'], 
+        [type='number'], 
+        [type='search'], 
+        [type='tel'], 
+        [type='time'], 
+        [type='url'], 
+        [type='color'],
+        select,
+        textarea {
+          border: 1px solid $white;
+          background-color: $color;
+         &:active,
+         &:focus {
+            background-color: $white;
+            color: $color;  
+            ::placeholder {
+              color: rgba($color, 0.5);
+            }        
+          }
+        }
+        .fieldset,
+        .input-group-label, 
+        [type=radio] + label::before,
+        [type='checkbox'] + label::before {
+          border-color: $white;
+        }
+        [type=radio]:checked + label,
+        [type='checkbox']:checked + label {
+          color: $white;
+        }
+        [type=email] {        
+          &:active,
+          &:focus {
+            background-image: icon(email, $color, 24, 24, 0, 3, 24, 24);
+          }
+        }
+        select {          
+          &:active,
+          &:focus {
+            background-image: icon(triangle-down, $color, 12, 9, 0, 0, 16, 12);
+          }
+        }
+      }  
+    }
+  } 
+  .input-group {
+    > :first-child {
+      border-radius: $input-radius 0 0 $input-radius;
+    }
+    > :last-child {
+      border-radius: 0 $input-radius $input-radius 0;
+      > * {
+        border-radius: 0 $input-radius $input-radius 0;
+      }
+    }
+    .input-group-field {
+      height: 2.6125rem;      
+    }
+  }
+}

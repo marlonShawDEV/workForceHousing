@@ -21,7 +21,7 @@
   }
 }
 // .secondary-nav.expanded .no-bullet > li > a
-@include breakpoint(medium down) {    
+@include breakpoint(large down) {    
   .secondary-nav {    
     &.on {      
       .no-bullet {
@@ -82,7 +82,7 @@
   }
 }
 
-@include breakpoint(large) {       
+@include breakpoint(xlarge) {       
   .secondary-nav { 
     z-index: 480;
     .no-bullet:not(.hide) {

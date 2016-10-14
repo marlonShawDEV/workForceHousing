@@ -1,7 +1,47 @@
+ 
+  @for $i from 1 through 4 {
+    .column:nth-child(#{$i}) > div.blog-block {
+      border-bottom: 3px solid color-shift($fm-green, #b5dc2a, 4, $i);
+    }
+  }  
+
+
 .blog-block {
 	margin-bottom: $global-margin * 2.0625;  
+  @include breakpoint(large) {
+    min-height: rem-calc(570);
+  }
   &_lg {
-    margin-bottom: 0.25rem; // basically $grid-column-gutter - $global-margin; 
+    border-bottom-width: 0px !important;
+    min-height: auto;
+    a {
+      position: relative;
+      display: block;
+      color: $white;
+    }
+    .blog-block__txt {
+      position: absolute;
+      bottom: 0%;
+      text-align: center;
+      width: 100%;
+      padding: $global-padding 20%;
+      transition: visibility 0.3s ease;
+      h3 {
+        font-size: rem-calc(28);
+        font-weight: $global-weight-light;
+        line-height: 1.2;
+        @include breakpoint(large) {
+          font-size: rem-calc(48);
+        }  
+      }
+    }
+    a:hover {
+      .blog-block__txt {
+        top: 0;
+        padding: 30% 20%;
+      }
+    }
+    
   }
 	.overlay {
 		width: 100%;
@@ -9,24 +49,9 @@
     margin-bottom: $global-margin;
     img {
       width: 100%;
-    }
-		.blog-block__txt {
-			position: absolute;
-			bottom: 0%;
-			text-align: center;
-			width: 100%;
-      padding: $global-padding 20%;
-			transition: visibility 0.3s ease;
-			h3 {
-				font-size: rem-calc(28);
-				font-weight: $global-weight-light;
-				line-height: 1.2;
-				@include breakpoint(large) {
-					font-size: rem-calc(48);
-        }  
-			}
-		}  
+    }  
 	}
+
 	&__date {
 		font-size: rem-calc(14);
 		font-weight: $global-weight-light;
@@ -68,6 +93,7 @@
 	}
 
 	&_sidebar {
+    min-height: auto;
 		h3 {
 			font-size: rem-calc(14);
 			@include breakpoint(large) {

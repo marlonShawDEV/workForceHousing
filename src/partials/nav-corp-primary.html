@@ -1,14 +1,17 @@
 <div class="primary-nav" id="primary-nav" data-toggler=".expanded">
   <div class="top-bar row page-buffer"> 
-    <div class="title-bar hide-for-large" id="top-bar-title" data-responsive-toggle="main-nav" data-hide-for="large">
+    <div class="title-bar hide-for-xlarge" id="top-bar-title" data-responsive-toggle="main-nav" data-hide-for="xlarge">
       <div class="float-right">
         <button class="toggle-icon" type="button" data-toggle="primary-nav" aria-label="toggle menu"></button>
       </div>
-        <a href="/"><span>Freddie Mac Home</span><img class="mobile-logo" src="/images/fm-logo-mobile.png" alt="Freddie Mac logo"></a>
+        <a href="/"><span>Freddie Mac Home</span><img class="logo-mobile" src="/images/fm-logo-mobile.png" alt="Freddie Mac logo"></a>
+    </div>
+    <div class="top-bar-left show-for-xlarge">
+      <a href="/"><img alt="Fredd Mac logo" src="/images/logo.png" class="logo-desktop"></a>
     </div>
     <nav class="top-bar-right" id="main-nav">      
-      <ul class="menu" data-responsive-menu="accordion large-dropdown">       
-        <li class="hide-for-large">              
+      <ul class="menu" data-responsive-menu="accordion xlarge-dropdown">       
+        <li class="hide-for-xlarge">              
           <form action="http://search.freddiemac.com/search" method="get" accept-charset="utf-8">
             <input type="hidden" name="entqr" value="0">
             <input type="hidden" name="output" value="xml_no_dtd">
@@ -41,14 +44,14 @@
         <li class="is-dropdown-submenu-parent"><a href="#">Our Businesses</a>
           <ul class="menu vertical">
             <li><a href="/singlefamily/"><h4>Single-Family</h4>
-                  <p class="show-for-large">Mortgage Products, technology &amp; servicing.</p></a></li>
+                  <p class="show-for-xlarge">Mortgage Products, technology &amp; servicing.</p></a></li>
             <li><a href="/multifamily/"><h4>Multifamily</h4>
-                  <p class="show-for-large">Description about what multifamily is.</p></a></li>
+                  <p class="show-for-xlarge">Description about what multifamily is.</p></a></li>
             <li><a href="/investments/"><h4>Capital Markets</h4>
-                  <p class="show-for-large">Description about what captial markets are.</p></a></li>
+                  <p class="show-for-xlarge">Description about what captial markets are.</p></a></li>
           </ul>
         </li>        
-        <li class="is-dropdown-submenu-parent hide-for-large"><a id="nav-mobile-rbo-link" href="#">Renters, Buyers, &amp; Owners</a>
+        <li class="is-dropdown-submenu-parent hide-for-xlarge"><a id="nav-mobile-rbo-link" href="#">Renters, Buyers, &amp; Owners</a>
           <ul class="menu vertical" id="nav-mobile-rbo">
             <li><a href="http://myhome.freddiemac.com/">My Home by Freddie Mac<sup>&reg;</sup></a>
             </li>

@@ -65,8 +65,8 @@ $fm-gray: #777874;
 $sushi: #97bb35;
 $celery: #a4c745; 
 $offwhite: #f9f9f9;
-$mosaic-start: #7AB629;
-$mosaic-end: #FCEE1C;
+$mosaic-start: #88BD45;
+$mosaic-end: #E4F118;
 
 $primary-color: $fm-blue;
 $secondary-color: $fm-orange;
@@ -104,7 +104,7 @@ $breakpoints: (
   xlarge: 1200px,
   xxlarge: 1440px,
 );
-$breakpoint-classes: (small medium large);
+$breakpoint-classes: (small medium large xlarge);
 
 // 3. The Grid
 // -----------
@@ -343,11 +343,11 @@ $flexvideo-ratio-widescreen: 16 by 9;
 
 $fieldset-border: 1px solid $medium-gray;
 $fieldset-padding: rem-calc(20);
-$fieldset-margin: rem-calc(18 0);
+$fieldset-margin: rem-calc(8 0 18 0);
 $legend-padding: rem-calc(0 3);
 $form-spacing: rem-calc(18);
-$helptext-color: $black;
-$helptext-font-size: rem-calc(13);
+$helptext-color: inherit;
+$helptext-font-size: rem-calc(14);
 $helptext-font-style: italic;
 $input-prefix-color: $black;
 $input-prefix-background: $light-gray;
@@ -355,13 +355,13 @@ $input-prefix-border: 1px solid $medium-gray;
 $input-prefix-padding: 1rem;
 $form-label-color: inherit;
 $form-label-font-size: rem-calc(16);
-$form-label-font-weight: 500;
-$form-label-line-height: 1.8;
+$form-label-font-weight: $global-weight-medium;
+$form-label-line-height: 1.6;
 $select-background: inherit;
-$select-triangle-color: $dark-gray;
+$select-triangle-color: transparent;
 $select-radius: 5px;
 $input-color: inherit;
-$input-placeholder-color: inherit;
+$input-placeholder-color: rgba($body-font-color, 0.5);
 $input-font-family: inherit;
 $input-font-size: rem-calc(16);
 $input-background: inherit;
@@ -373,7 +373,7 @@ $input-shadow: inset 0 1px 2px rgba($black, 0.1);
 $input-shadow-focus: 0 0 4px rgba($black, 0.2);
 $input-cursor-disabled: default;
 $input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
-$input-number-spinners: true;
+$input-number-spinners: false; // maybe true once IE supports spinners?
 $input-radius: 5px;
 
 // 20. Label
@@ -582,4 +582,4 @@ $topbar-background: $white;
 $topbar-submenu-background: $white;
 $topbar-title-spacing: 0;
 $topbar-input-width: 200px;
-$topbar-unstack-breakpoint: large;
+$topbar-unstack-breakpoint: xlarge;

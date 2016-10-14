@@ -4,14 +4,7 @@ $ribbon-background-desktop: linear-gradient(to bottom, $offwhite 0%, $offwhite 9
 
 #ribbon {display: none;}
 
-@media screen and (min-width: 64em) and (max-width: 67em) {
-  .top-bar {  
-    .top-bar-right > .menu > li > a {
-      padding: 0.65rem 1rem;  // prevent wrapping at slightly above large breakpoint
-    }
-  }  
-}
-@include breakpoint(large) {
+@include breakpoint(xlarge) {
   #ribbon {
     display: block;
   }
@@ -53,6 +46,7 @@ $ribbon-background-desktop: linear-gradient(to bottom, $offwhite 0%, $offwhite 9
     }    
     .input-group { 
       margin-bottom: 0.0625rem;
+      background: #fff;
     }      
     [type="search"] {
       font-size: inherit;

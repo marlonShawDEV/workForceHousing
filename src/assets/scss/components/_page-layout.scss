@@ -36,13 +36,19 @@
 			margin: 0;
 			padding: 0 30px;
 		}
+    
+    &.adjust-sidebar {
+      @media print {
+        padding-top: 300px; // counteract the negative top margin when printing
+      }
+    }
 	}
 
 	&_interior {
 		aside {
-			@include breakpoint(medium) {
-				margin-top: -60px;
-			}
+      @media screen and #{breakpoint(large)} {
+        margin-top: -60px;
+      }
 		}
 	}
 }

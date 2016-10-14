@@ -91,26 +91,19 @@
   $direction: to right
   ) {
   background: linear-gradient($direction, 
-    color-shift($a, $b, 20, 1) 0%, 
-    color-shift($a, $b, 20, 1) 10%, 
-    color-shift($a, $b, 20, 3) 10%, 
-    color-shift($a, $b, 20, 2) 20%, 
-    color-shift($a, $b, 20, 4) 20%, 
-    color-shift($a, $b, 20, 3) 30%, 
-    color-shift($a, $b, 20, 5) 30%, 
-    color-shift($a, $b, 20, 4) 40%, 
-    color-shift($a, $b, 20, 7) 40%,  
-    color-shift($a, $b, 20, 6) 50%, 
-    color-shift($a, $b, 20, 9) 50%,  
-    color-shift($a, $b, 20, 8) 60%, 
-    color-shift($a, $b, 20, 11) 60%, 
-    color-shift($a, $b, 20, 10) 70%, 
-    color-shift($a, $b, 20, 12) 70%,  
-    color-shift($a, $b, 20, 11) 80%, 
-    color-shift($a, $b, 20, 15) 80%,   
-    color-shift($a, $b, 20, 14) 90%, 
-    color-shift($a, $b, 20, 20) 90%,   
-    color-shift($a, $b, 20, 19) 100%);
+    color-shift($a, $b, 12, 2) 0%, 
+    color-shift($a, $b, 12, 1) 17%, 
+    color-shift($a, $b, 12, 4) 17%, 
+    color-shift($a, $b, 12, 3) 33%, 
+    color-shift($a, $b, 12, 6) 33%, 
+    color-shift($a, $b, 12, 5) 50%, 
+    color-shift($a, $b, 12, 8) 50%, 
+    color-shift($a, $b, 12, 7) 67%, 
+    color-shift($a, $b, 12, 10) 67%,  
+    color-shift($a, $b, 12, 9) 83%, 
+    color-shift($a, $b, 12, 12) 83%,  
+    color-shift($a, $b, 12, 11) 100%
+    );
 }
 
 // calculate color differences from beginning and ending color acorss number of steps, and return color at particular step

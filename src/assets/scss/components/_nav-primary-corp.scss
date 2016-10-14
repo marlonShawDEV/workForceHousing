@@ -28,7 +28,7 @@
     background: transparent icon(menu, $fm-blue, 24, 23, 0, 0, 24, 23) no-repeat center center;   
   }  
 }
-@include breakpoint(medium down) {      
+@include breakpoint(large down) {      
   .is-accordion-submenu-parent > a {
     position: relative;
     &::after {
@@ -50,7 +50,7 @@
     h4 {
       font-weight: inherit;
     }
-    .mobile-logo { 
+    .logo-mobile { 
       margin: 1rem;
     } 
     .page-buffer {
@@ -96,7 +96,7 @@
         span {
           display: inline-block;
         }
-        .mobile-logo {
+        .logo-mobile {
             display: none;
         }
       } 
@@ -143,7 +143,7 @@
   }
 }
 
-@include breakpoint(large) {       
+@include breakpoint(xlarge) {       
   // angle pointer instead of triangle
   .dropdown.menu > li.is-dropdown-submenu-parent {
     > a::before {
@@ -187,12 +187,7 @@
     }
   }
   .logo-desktop {
-    padding: 0;
-    border-width: 0;
-    display: inline-block;
-    img {
       padding: 1.3125rem 0 1rem;
-    }
   }
   .primary-nav {  
     font-size: rem-calc(17px); 

@@ -1,6 +1,6 @@
 @charset 'utf-8';
 
-@import 'settings_sf';
+@import 'settings_corp';
 @import 'foundation';
 @import 'motion-ui';
 @import 'components/breakpoint';
@@ -10,7 +10,7 @@
 @include foundation-grid;
 // @include foundation-flex-grid;
 @include foundation-typography;
-@include foundation-button;
+// @include foundation-button;
 @include foundation-forms;
 // @include foundation-range-input;
 @include foundation-accordion;
@@ -18,7 +18,7 @@
 @include foundation-badge;
 @include foundation-breadcrumbs;
 @include foundation-button-group;
-@include foundation-callout;
+// @include foundation-callout;
 @include foundation-close-button;
 @include foundation-menu;
 @include foundation-menu-icon;
@@ -40,7 +40,7 @@
 @include foundation-switch;
 @include foundation-table;
 // @include foundation-tabs;
-@include foundation-thumbnail;
+// @include foundation-thumbnail;
 @include foundation-title-bar;
 @include foundation-tooltip;
 @include foundation-top-bar;
@@ -52,24 +52,27 @@
 @include motion-ui-animations;
 
 @import 'mixins';
+@import 'components/icons';
 @import 'components/globals';
 @import 'components/page-layout';
 @import 'components/buttons';
 @import 'components/grid-callouts';
+@import 'components/callouts';
 @import 'components/call-to-action';
 @import 'components/accordion-pointers';
-@import 'components/inputs';
-@import 'components/avatar';
+@import 'components/forms';
 @import 'components/page-title';
 @import 'components/tabbed-component';
 @import 'components/data-table';
-@import 'components/map-cta';
+@import 'components/nav-ribbon';
+@import 'components/nav-footer';
+@import 'components/nav-tertiary';
 @import 'components/posts';
 @import 'components/person-block';
 @import 'components/popular-items';
 @import 'components/text';
 @import 'components/anchors';
-@import 'components/nav-footer';
-@import 'components/nav-ribbon';
 @import 'components/reveal';
 @import 'components/orbit';
+@import 'components/close-button';
+@import 'components/tooltips';

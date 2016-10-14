@@ -1,186 +1,191 @@
-.hero {
-	background: url('/images/homepage/hero-mobile.jpg') no-repeat top center;
-	position: relative;
-	@include breakpoint(medium) {
-		background-image: url('/images/homepage/hero-desktop.jpg');
-		background-size: cover;
-		height: 930px;
-	}
+// don't print the giant hero stuff, just the text contents
+@media screen {
+  .hero {
+    background: url('/images/homepage/hero-mobile.jpg') no-repeat top center;
+    position: relative;
+    @include breakpoint(medium) {
+      background-image: url('/images/homepage/hero-desktop.jpg');
+      background-size: cover;
+      height: 930px;
+    }
 
-	&__overlay {
-		background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
-		height: 595px;
-		left: 0;
-		position: absolute;
-		top: 0;
-		width: 100%;
-		z-index: 1;
-		@include breakpoint(medium) {
-			display: none;
-		}
-	}
+    &__overlay {
+      background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+      height: 595px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+      @include breakpoint(medium) {
+        display: none;
+      }
+    }
 
-	&__txt {
-		color: $white;
-		padding: 100px 0 50px;
-		position: relative;
-		z-index: 2;
-		@include breakpoint(medium) {
-			color: $medium-gray;
-			padding: 146px 0 65px;
-		}
-		h1, .hero__subtitle {
-			line-height: 1.3;
-		}
-		h1 {
-			margin-bottom: 0.75em;
-			@include breakpoint(medium) {
-				margin-bottom: 0.25em;
-			}
-		}
-		.hero__subtitle {
-			font-size: rem-calc(22);
-			font-weight: $global-weight-bold;
-			margin-bottom: 1em;
-		}
-	}
-}
- // breaking our the hero details by their purpose, since we have several that are tall, short, blue or left.
- 
-.perspectives-landing-hero {
-	background: $fm-blue url('/images/hero-5-mobile.jpg') no-repeat top center;
-	height: 219px;
-	@include breakpoint(medium) {
-		background-image: url('/images/hero-5-desktop.jpg');
-		height: 345px;
-		text-align: center;
-	}
-} 
-.blog-landing-hero {
-	background: $fm-blue url('/images/blog/hero-2-mobile.jpg') no-repeat top center;
-	height: 219px;
-	@include breakpoint(medium) {
-		background-image: url('/images/blog/hero-2-desktop.jpg');
-		height: 345px;
-		text-align: center;
-	}
-}
-.media-landing-hero {
-	background: $fm-blue url('/images/hero-6-mobile.jpg') no-repeat top left;
-	height: 219px;
-	@include breakpoint(medium) {
-		background-image: url('/images/hero-6-desktop.jpg');
-		height: 345px;
-		text-align: center;
-	}
-} 
-.research-landing-hero { //pending graphic from Jon
-	background: $fm-blue url('/images/hero-7-mobile.jpg') no-repeat top left;
-	height: 219px;
-	@include breakpoint(medium) {
-		background-image: url('/images/hero-7-desktop.jpg');
-		height: 345px;
-		text-align: center;
-	}
-} 
-.about-landing-hero {  //pending graphic from Jon
-	background: $fm-blue url('/images/hero-7-mobile.jpg') no-repeat top left;
-	height: 219px;
-	@include breakpoint(medium) {
-		background-image: url('/images/hero-7-desktop.jpg');
-		height: 345px;
-		text-align: center;
-	}
-} 
-.perspectives-detail-hero {
-	background: $fm-blue url('/images/hero-5-mobile.jpg') no-repeat top center;
-	height: 389px;
-	@include breakpoint(medium) {
-		background-image: url('/images/hero-5-desktop.jpg');
-		height: 468px;
-		text-align: center;
-	}
-} 
-.blog-detail-hero {
-  background: $fm-blue url('/images/blog/hero-4-mobile.jpg') no-repeat top center;
-  height: 389px;
-  @include breakpoint(medium) {
-    background-image: url('/images/blog/hero-4-desktop.jpg');
-    height: 468px;
+    &__txt {
+      color: $white;
+      padding: 100px 0 50px;
+      position: relative;
+      z-index: 2;
+      @include breakpoint(medium) {
+        color: $medium-gray;
+        padding: 146px 0 65px;
+      }
+      h1, .hero__subtitle {
+        line-height: 1.3;
+      }
+      h1 {
+        margin-bottom: 0.75em;
+        @include breakpoint(medium) {
+          margin-bottom: 0.25em;
+        }
+      }
+      .hero__subtitle {
+        font-size: rem-calc(22);
+        font-weight: $global-weight-bold;
+        margin-bottom: 1em;
+      }
+    }
   }
-}
 
+  .blue-hero {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: $fm-blue;
+    color: $white;
+    .page-buffer {
+      @include absolute-center;
+      width: 100%;
+      z-index: 2;
+    }
 
-.blue-hero {
-	position: relative;
-  background-size: cover;
-	color: $white;
-	.page-buffer {
-		@include absolute-center;
-		width: 100%;
-		z-index: 2;
-	}
-
-	&__overlay {
-		background: $fm-blue;
-		height: 100%;
-		opacity: .8;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		z-index: 1;
-	}
-  // default center aligned hero
-	&__txt {
-		@include grid-column;
-		@include breakpoint(medium) {
-			@include grid-column(10);
-			@include grid-column-position(center);
-		}
-		@include breakpoint(xlarge) {
-			@include grid-column(7);
-			@include grid-column-position(center);
-		}
-		h1 {
-			line-height: 1.2;
-      font-size: 2rem;
-			@include breakpoint(medium) {				
-        font-size: 2.5rem;
+    &__overlay {
+      background: $fm-blue;
+      height: 100%;
+      opacity: .8;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+    }
+    // default center aligned hero
+    &__txt {
+      @include grid-column;
+      @include breakpoint(medium) {
+        @include grid-column(10);
+        @include grid-column-position(center);
+      }
+      @include breakpoint(xlarge) {
+        @include grid-column(7);
+        @include grid-column-position(center);
+      }
+      h1 {
+        line-height: 1.2;
+        font-size: 2rem;
+        @include breakpoint(medium) {				
+          font-size: 2.5rem;
+          margin-bottom: 1rem;
+        }
+        @include breakpoint(large) {
+          font-size: 3.25rem;
+          margin-bottom: 2rem;
+        }
+      }
+      p {
+        @include breakpoint(medium) {
+          font-size: 1.375rem;
+        }
+        @include breakpoint(large) {
+          font-size: 1.75rem;
+        }
+      }
+    }
+    // add this class when hero is left aligned
+    &__left {
+      float: left;
+      text-align: left;
+      @include breakpoint(large) {
+        @include grid-column(8);
+      }
+      @include breakpoint(xlarge) {
+        @include grid-column(7);
+      }
+      }
+    &__date {
+      font-size: rem-calc(16);
+      font-weight: $global-weight-light;
+      text-transform: uppercase;
+      @include breakpoint(medium) {
+        font-size: 1.375rem;
         margin-bottom: 1rem;
-			}
-			@include breakpoint(large) {
-				font-size: 3.25rem;
-        margin-bottom: 2rem;
-			}
-		}
-		p {
-			@include breakpoint(medium) {
-				font-size: 1.375rem;
-			}
-			@include breakpoint(large) {
-				font-size: 1.75rem;
-			}
-		}
-	}
-  // add this class when hero is left aligned
-	&__left {
-    float: left;
-    text-align: left;
-    @include breakpoint(large) {
-      @include grid-column(8);
+      }
     }
-    @include breakpoint(xlarge) {
-      @include grid-column(7);
+     // breaking our the hero details by their purpose, since we have several that are tall, short, blue or left.
+   
+    &.perspectives-landing-hero {
+      background-image: url('/images/hero-5-mobile.jpg');
+      height: 219px;
+      @include breakpoint(medium) {
+        background-image: url('/images/hero-5-desktop.jpg');
+        height: 345px;
+        text-align: center;
+      }
+    } 
+    &.blog-landing-hero {
+      background-image: url('/images/blog/hero-2-mobile.jpg');
+      height: 219px;
+      @include breakpoint(medium) {
+        background-image: url('/images/blog/hero-2-desktop.jpg');
+        height: 345px;
+        text-align: center;
+      }
     }
-		}
-	&__date {
-		font-size: rem-calc(16);
-		font-weight: $global-weight-light;
-		text-transform: uppercase;
-		@include breakpoint(medium) {
-			font-size: 1.375rem;
-      margin-bottom: 1rem;
-		}
-	}
+    &.media-landing-hero {
+      background-image: url('/images/hero-6-mobile.jpg');
+      height: 219px;
+      @include breakpoint(medium) {
+        background-image: url('/images/hero-6-desktop.jpg');
+        height: 345px;
+        text-align: center;
+      }
+    } 
+    &.research-landing-hero { //pending graphic from Jon
+      background-image: url('/images/hero-7-mobile.jpg');
+      height: 219px;
+      @include breakpoint(medium) {
+        background-image: url('/images/hero-7-desktop.jpg');
+        height: 345px;
+        text-align: center;
+      }
+    } 
+    &.about-landing-hero {  //pending graphic from Jon
+      background-image: url('/images/hero-7-mobile.jpg');
+      height: 219px;
+      @include breakpoint(medium) {
+        background-image: url('/images/hero-7-desktop.jpg');
+        height: 345px;
+        text-align: center;
+      }
+    } 
+    &.perspectives-detail-hero {
+      background-image: url('/images/hero-5-mobile.jpg');
+      height: 389px;
+      @include breakpoint(medium) {
+        background-image: url('/images/hero-5-desktop.jpg');
+        height: 468px;
+        text-align: center;
+      }
+    } 
+    &.blog-detail-hero {
+      background-image: url('/images/blog/hero-4-mobile.jpg');
+      height: 389px;
+      @include breakpoint(medium) {
+        background-image: url('/images/blog/hero-4-desktop.jpg');
+        height: 468px;
+      }
+    }
+  }
 }
