@@ -4,7 +4,7 @@ $gradient-edge: lighten(saturate(adjust-hue($celery, -9.8793), 10.8380), 0.9804)
 	color: $white;
 	@include breakpoint(medium) {
 		background: linear-gradient(to right, transparent 0%,transparent 70%, $gradient-edge 71%, $gradient-edge 100%);
-		margin-top: -220px;
+		
 	}
 
 	@for $i from 1 through 5 {

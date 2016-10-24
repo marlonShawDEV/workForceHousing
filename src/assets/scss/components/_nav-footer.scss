@@ -55,8 +55,6 @@
 .footer__bottom-edge {
   height: 1rem;  
   background: $celery;
-  @include breakpoint(small) {
-    @include mosaic-fill($mosaic-start, $mosaic-end, to right);
-  }  
+  @include mosaic-fill($mosaic-start, $mosaic-end, to right); 
 }
 
