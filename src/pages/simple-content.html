@@ -3,56 +3,59 @@ title: Simple Content
 layout: corporate
 ---
 <section class="page-title">
-  <div class="row page-buffer">
-    <h1>Mortgage Rates</h1>
+  <div class="row">
+    <div class="column">
+      <h1>Mortgage Rates</h1>
+    <div>
   </div>
 </section>
 
-<!-- START TWO COLUMN LAYOUT WITH HERO -->
-<section class="two-column-layout two-column-layout_interior">
-  <div class="row page-buffer">
-    <div class="row">
-      <!-- START MAIN PAGE CONTENT -->
-      <main class="medium-7 large-8 columns">
-        <div class="page-buffer">
-          <p class="lead"><strong>Mortgage Rates Trending Up</strong></p>
+<!-- START TWO COLUMN LAYOUT NO HERO -->
+<section class="two-column-layout">  
+  <!-- START MAIN PAGE CONTENT -->
+  <main>
+  <div class="column">
+    <p class="lead"><strong>Mortgage Rates Trending Up</strong></p>
 
-          <p class="lead">Treasury yields marched higher this week. As a result, the 30-year mortgage rate jumped 7 basis points to 3.66 percent. The Federal Reserve’s decision to leave the Federal funds rate unchanged triggered a 9 basis point drop in the 10-year Treasury yield on Wednesday, however the drop occurred too late to impact this week’s survey.</p>
+    <p class="lead">Treasury yields marched higher this week. As a result, the 30-year mortgage rate jumped 7 basis points to 3.66 percent. The Federal Reserve’s decision to leave the Federal funds rate unchanged triggered a 9 basis point drop in the 10-year Treasury yield on Wednesday, however the drop occurred too late to impact this week’s survey.</p>
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
 
-          <p>
-            <a href="#" class="button">Survey Archive</a>
-          </p>
+    <p>
+      <a href="#" class="button">Survey Archive</a>
+    </p>
 
-          <figure class="jut">
-            <img src="/images/graph.jpg" alt="Graph" />
-            <figcaption><strong>Survey data is current as of April 28, 2016.</strong> Aliquam tempus tempor libero vitae commodo. Morbi viverra faucibus tellus, a mollis sapien suscipit sit amet. Mauris justo risus, euismod at urna eu, lacinia iaculis nulla. Phasellus vel pretium dui. </figcaption>
-          </figure>
-        </div>
-      </main>
-      <!-- END MAIN PAGE CONTENT -->
-      <!-- START RIGHT SIDEBAR -->
-      <aside class="medium-5 large-4 columns">
-        {{> cta-sidebar-feature}}
-        {{> news-recent-headlines}}
-      </aside>
-      <!-- END RIGHT SIDEBAR -->
-    </div>
+    <figure class="jut">
+      <img src="/images/graph.jpg" alt="Graph" />
+      <figcaption><strong>Survey data is current as of April 28, 2016.</strong> Aliquam tempus tempor libero vitae commodo. Morbi viverra faucibus tellus, a mollis sapien suscipit sit amet. Mauris justo risus, euismod at urna eu, lacinia iaculis nulla. Phasellus vel pretium dui. </figcaption>
+    </figure>
+  </div>  
+  </main>
+    <!-- END MAIN PAGE CONTENT -->
+    <!-- START RIGHT SIDEBAR -->
+    <aside>    
+      {{> sidebar-featured-post}}
+      {{> sidebar-headlines}}      
+    </aside>
+    <!-- END RIGHT SIDEBAR -->
   </div>
 </section>
-<!-- END TWO COLUMN LAYOUT WITH HERO -->
+<!-- END TWO COLUMN LAYOUT  -->
 
-<div class="callout callout-teal footerband">
-  <div class="row page-buffer">
-      <div>
-        <h3>About The Survey</h3>
-        <p>The <strong>Freddie Mac Primary Mortgage Market Survey<sup>®</sup> (PMMS<sup>®</sup>)</strong> has evolved since its inception in April 1971 into the foremost reliable, representative source of regional and national mortgage rate trends and is relied upon by the mortgage industry and the public in gauging market conditions and evaluating mortgage loan options.</p>
+
+{{> share-widget}}
+<div class="callout callout-teal callout-fullwidth">
+  <div class="row" data-equalizer data-equalize-on="large">
+      <div class="columns large-8" data-equalizer-watch>
+        <h3 class="callout-footer-title">About The Survey</h3>
+        <p>The <strong>Freddie Mac Primary Mortgage Market Survey<sup>&reg;</sup> (PMMS<sup>&reg;</sup>)</strong> has evolved since its inception in April 1971 into the foremost reliable, representative source of regional and national mortgage rate trends and is relied upon by the mortgage industry and the public in gauging market conditions and evaluating mortgage loan options.</p>    
       </div>
-      <div>
-        <a class="hollow large button" href="#">Our Mission</a>
+      <div class="columns large-offset-1 large-3 position-relative" data-equalizer-watch>
+        <div class="callout-fullwidth-cta">
+        <a class="hollow large button" href="#">Learn More</a>
+        </div>
       </div>
   </div>
 </div>

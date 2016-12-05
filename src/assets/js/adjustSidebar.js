@@ -1,12 +1,21 @@
 var adjustSidebar = {
 	init: function() {
-		if( mediaBreakpoints.desktop() ) {
-			var sectionHeight = $('.adjust-sidebar').find('section:first').outerHeight();
-			$('.adjust-sidebar').css('margin-top', -sectionHeight);
-		} else if ( mediaBreakpoints.tablet() ) {
-			$('.adjust-sidebar').css('margin-top', -60);
+		if( Foundation.MediaQuery.atLeast('large') ) {
+			var sectionHeight = $('.sidebar-article-offset').find('section:first').outerHeight();
+			$('.sidebar-article-offset').css('margin-top', -sectionHeight);
 		} else {
-			$('.adjust-sidebar').css('margin-top', 0);
+			$('.sidebar-article-offset').css('margin-top', 0);
 		}
 	}
 };
+function initSidebar() {
+  adjustSidebar.init();
+  $(window).on('changed.zf.mediaquery', function() {
+    adjustSidebar.init();
+  });
+}  
+
+if($('.sidebar-article-offset').length) {
+  $(document).ready(initSidebar);  
+}
+

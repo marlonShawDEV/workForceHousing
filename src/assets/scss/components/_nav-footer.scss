@@ -37,22 +37,15 @@
       }
     }
   }
-	.footer__top {
+	.footer-top {
 		border-bottom: 1px solid lighten($fm-blue, 3%); 
 		ul {
       font-weight: $global-weight-medium;
       text-transform: uppercase;
-      @include breakpoint(medium) {
-        font-size: rem-calc(18);      
-      }
 		}
 	}
-	.footer__bottom {
-		font-size: rem-calc(14);
-		padding-top: 0.5rem;
-	}
 }
-.footer__bottom-edge {
+.footer-bottom-edge {
   height: 1rem;  
   background: $celery;
   @include mosaic-fill($mosaic-start, $mosaic-end, to right); 

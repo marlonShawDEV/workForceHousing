@@ -1,7 +1,11 @@
 { "page": [
    {  
-      "name":"Homepage",
+      "name":"Homepage w/WHMTM",
       "url":"/corporate/"
+   },
+   {  
+      "name":"Homepage w/Careers",
+      "url":"/corporate/index-careers.html"
    },
    {  
        "name":"Simple Content",
@@ -16,7 +20,19 @@
        "url":"/corporate/blog-landing.html"
    },
    {  
-       "name":"Blog Detail",
+       "name":"Blog Category Listing",
+       "url":"/corporate/blog-homeownership.html"
+   },
+   {  
+       "name":"Blog Tag listing",
+       "url":"/corporate/blog-harp.html"
+   },
+   {
+       "name":"Blog Archive",
+       "url":"/corporate/blog-archive.html"
+   },
+   {  
+       "name":"Blog Article",
        "url":"/corporate/blog-detail.html"
    },
    {  

@@ -16,42 +16,13 @@
     {{> ribbon}}
     {{> nav-corp-primary}}
     {{> nav-corp-secondary}}
-  </header>  
-
-
-    
-    <!-- navigation to other sample pages-->  
-    <!--   commenting out for now.
-    {{#if samples}}  
-    <section class="two-column-layout">
-      <div class="row page-buffer">
-        <div class="row">
-          <main class="medium-7 large-8 columns">
-            <div class="page-buffer">  
-               <ul>
-                {{#each samples.page}}
-                  <li class="item-name"><a href="{{url}}">{{name}}</a></li> 
-                {{/each}}
-              </ul>
-              {{/if}}
-            </div>
-          </main>
-          <aside class="medium-5 large-4 columns">
-          </aside>
-        </div>
-      </div>
-    </section> 
-    -->
-    
-    {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+  </header>      
+   
     {{> body}}
     
     {{> footer-corp}}
 
-    <span id="isMobile"></span>
-    <span id="isTablet"></span>
-    <span id="isDesktop"></span>
-
+    
     <!--[if lt IE 9]>
     <script>window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"><\/'+'script>')</script>
     <![endif]-->

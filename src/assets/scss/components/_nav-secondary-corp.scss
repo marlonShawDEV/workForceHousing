@@ -7,8 +7,7 @@
   width: 100%;
   &.on {    
     background: $light-gray;
-    border: 1px solid darken($light-gray, 9.8039);
-    border-width: 1px 0px;
+    border-top: 1px solid darken($light-gray, 9.8039);
   }
   .row {
     position: relative;
@@ -20,7 +19,7 @@
     color: $medium-gray;
   }
 }
-// .secondary-nav.expanded .no-bullet > li > a
+// .secondary-nav.data-expanded .no-bullet > li > a
 @include breakpoint(large down) {    
   .secondary-nav {    
     &.on {      
@@ -32,16 +31,10 @@
           border: 1px solid darken($light-gray, 9.8039);
           border-radius: 0.3125rem;      
           position: relative;
-          margin: 1.125rem;
+          margin: 1.125rem 0;
           > a {
             @include accordion-pointers-title($medium-gray, $light-gray, false);
-            font-size: 1rem;
-            background: $white;
-            &:hover,
-            &:focus,
-            &:active {
-              background: $white;
-            }
+            font-size: $global-font-size;
           }
         }
         .menu {
@@ -57,7 +50,7 @@
         }  
       }       
     }
-    &.expanded {
+    &.data-expanded {
       position: absolute;
       top: 0;
       left: 0;
@@ -86,12 +79,12 @@
   .secondary-nav { 
     z-index: 480;
     .no-bullet:not(.hide) {
-     position: relative;
-     z-index: 485;
+      position: relative;
+      z-index: 485;
     }
     &.highlight {  
       background: $fm-green; 
-      border-top-color: $fm-green;
+      border-top: 1px solid $fm-green;
       z-index: 490;
       position: absolute;
       width: 100%;
@@ -113,22 +106,31 @@
       }
       .menu {
         float: right;
-         > li > a {
+         > li > a {          
           color: $white;
-          padding: 1.875rem 1.25rem 1.75rem;
           &:hover,
           &:active {
             color: $white;
           }
-        }      
+          
+        }  
       }
     }
     .menu > li {
       > a {
         @include nav-desktop-link();  
-        padding: 2rem 1.25rem;
+        padding: 1.875rem 1.25rem 1.75rem;
         color: $fm-gray;
+      }      
+      &:first-of-type > a {
+        padding-left: 0;
       }
     } 
   }
+  .secondary-nav-bottom {
+    position: relative;
+    @include mosaic-fill;
+    height: 8px;
+  }
 } 
+

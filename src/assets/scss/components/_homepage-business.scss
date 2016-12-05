@@ -1,0 +1,86 @@
+.homepage-business-lines {
+  background: $light-gray;  
+  padding: $global-padding 0;
+	@include breakpoint(large) {
+		padding: $global-padding * 2.375 0;
+	}  
+  box-shadow: 0px 10px 9px 0px rgba(0,0,0,0.15);
+  // needed to allow the box shadow to appear above the next section
+  z-index: 600;
+  position: relative;
+}
+.homepage-business-lines-heading {
+  font-size: rem-calc(24px);
+  color: $fm-gray;
+  font-weight: $global-weight-medium;
+  text-align: center;
+  padding: 0 0 $global-padding;
+  @include breakpoint(xlarge) {
+    text-align: left;
+    padding: $global-padding 0;
+    font-size: calc( 24px + (28 - 24) * ( (100vw - 1180px) / (1400 - 1180) ));
+  }
+  @include breakpoint(xxlarge) {
+      font-size: 28px;
+  }
+}
+
+@include breakpoint(xlarge) {
+  .homepage-business-lines-label {
+    width: 22vw; 
+    max-width:  30%;  
+    float: left;
+  }
+  .homepage-business-lines-content {
+    width: 58vw; 
+    max-width:  70%; 
+    float: right;
+  }
+} 
+
+.homepage-business-lines-icons {
+  display: block;
+  text-align: center;
+  @media (min-width: 800px) {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.business-line-icon {
+  color: $fm-blue;
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: $global-weight-medium;
+  font-size: rem-calc(18px);  
+  margin: auto;
+  padding: $global-padding * .5;  
+  @include breakpoint(medium) {
+    font-size: rem-calc(20px);
+  }  
+  @include breakpoint(xlarge) {
+    font-size: rem-calc(22px);
+    padding: $global-padding * .5 0;
+    margin: initial;
+  }
+  a {
+    color: inherit;
+  }
+  svg { 
+    padding: 0 $global-padding * .5 $global-padding * .5;
+  }
+}
+.homepage-business-highlight {
+  margin: 0;
+  background-image: linear-gradient(to left top, transparent 46%, rgba(0,0,0,0.07) 46%, rgba(0,0,0,0.07) 54%,  transparent 54%);
+  background-size: 10px 10px;  
+  @include breakpoint(xlarge) {
+    > .row {
+      padding-bottom: 25rem;
+    }
+  }
+  &.callout { 
+    padding-top: $global-padding * 5;
+  }
+}

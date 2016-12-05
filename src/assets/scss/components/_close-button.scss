@@ -1,25 +1,2 @@
 
-
-.close-button-large {
-  @include close-button;
-  font-size: 3rem;
-  top: 1rem;
-  border-radius: 50%;
-  background-color: rgba($dark-gray, 0.4);
-  content: "";
-  display: block;
-  width: 3rem;
-  height: 3rem;
-  color: $white;
-  span {
-    position: absolute;    
-    right: 25%;
-    top: -2%; // magic number to vertically align the &times; symbol 
-  }
-  &:hover,
-  &:focus,
-  &:active {
-    color: $white;
-    background-color: $orbit-control-background-hover;
-  }
-}
+// gone

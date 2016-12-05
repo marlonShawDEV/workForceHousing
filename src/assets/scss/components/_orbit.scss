@@ -76,7 +76,7 @@ $orbit-palette: (
   figure.orbit-slide {
     margin: 0;
     position: relative;
-    font-size: 1rem;
+    font-size: $global-font-size;
     height: 100%;
     img {
       @include orbit-image;
@@ -111,11 +111,11 @@ $orbit-palette: (
   } 
   figcaption { 
     @extend .orbit-caption;
-    font-size: inherit;
     text-align: center;
-    font-size: rem-calc(18);
     font-weight: $global-weight-medium;
-    @include breakpoint(medium) {
+    font-size: $global-font-size;
+    font-size: calc(16px +  4 * (100vw - 320px)/1080);
+    @include breakpoint(xxlarge) {
       font-size: rem-calc(20);
     }
     :last-child { margin-bottom: 0;}

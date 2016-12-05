@@ -1,0 +1,98 @@
+// variations of green backgrounds used for homepage finance blocks
+$finance-bg1: darken(saturate(adjust-hue($celery, 0.2490), 2.5563), 0.9804);
+$finance-bg2: lighten(saturate(adjust-hue($celery, -3.9799), 4.2642), 0.7843);
+
+.finance-offset {
+  position: relative;
+  @include breakpoint(xlarge) {
+    margin-top: -20rem;	
+    min-height: 40rem;
+  }
+}
+.finance-buffer {
+  padding-left: 0;
+  padding-right: 0;
+	@include breakpoint(large) {
+    padding-left: $gutter;
+    padding-right:  $gutter;
+  }
+}
+.finance-housing-research {
+  background: $finance-bg1;  
+  color: $white;
+	@include breakpoint(xlarge) {
+		background: linear-gradient(to right, transparent 0%,transparent 30%, $finance-bg1 30%, $finance-bg1 100%);	
+	}
+}
+.finance-row1 {
+  background: $finance-bg1;
+  padding: $global-padding 0.625rem 0;
+  @include breakpoint(medium) {
+    padding: $global-padding;
+  }
+	@include breakpoint(xlarge) {
+		padding: $global-padding * 2.375 $global-padding $global-padding * 2.375 $global-padding * 3.75;
+	}  
+}
+.finance-housing-research-column {   
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.finance-row2 {
+  padding: $global-padding 0.625rem $global-padding;
+  @include breakpoint(medium) {
+    padding: $global-padding;
+  }
+}
+.finance-mortgage-market {
+  padding: 0;
+  color: $white;
+  @include breakpoint(medium only) {
+     background: linear-gradient(to right, color-shift($finance-bg2, $pear, 5, 2) 0%, color-shift($finance-bg2, $pear, 5, 2) 33.33%, color-shift($finance-bg2, $pear, 5, 3) 33.33%, color-shift($finance-bg2, $pear, 5, 3) 66.667%, color-shift($finance-bg2, $pear, 5, 4) 66.667%, color-shift($finance-bg2, $pear, 5, 4) 100%);	
+  }
+  @include breakpoint(large only) {
+     background: linear-gradient(to right, $finance-bg2 0%, $finance-bg2 41.7%, color-shift($finance-bg2, $pear, 5, 2) 41.7%, color-shift($finance-bg2, $pear, 5, 2) 58.33333%, color-shift($finance-bg2, $pear, 5, 3) 58.33333%, color-shift($finance-bg2, $pear, 5, 3) 75%, color-shift($finance-bg2, $pear, 5, 4) 75%, color-shift($finance-bg2, $pear, 5, 4) 100%);	
+  }  
+	@include breakpoint(xlarge) {
+		background: linear-gradient(to right, transparent 0%,transparent 30%, $pear 30%, $pear 100%);	
+	}
+}
+.finance-grid {  
+  .columns {
+    padding-top: $global-padding;
+    @include breakpoint(medium) {
+      padding: $global-padding;
+    }   
+    @include breakpoint(large) {
+      padding: $global-padding * 2.5 $global-padding;
+    }  
+    @include breakpoint(xlarge) {
+      padding: $global-padding * 5.25 $global-padding * 2;
+    }  
+  }
+  .finance-grid-block2 {         
+    @for $i from 1 through 3 {
+      div:nth-child(#{$i}) {
+        background: color-shift($finance-bg1, $pear, 6, $i+2);         
+      }
+    }    
+  }
+  .stat {
+    font-weight: $global-weight-light;
+    strong {
+      font-weight: $global-weight-black;
+    }
+  }
+  .finance-grid-block1 {
+    background: color-shift($finance-bg1, $pear, 6, 2);
+    p { 
+      margin-bottom: rem-calc(18);
+    }
+    @include breakpoint(xlarge) { 
+      padding-right: $global-padding * 4;
+      padding-left: $global-padding * 3.75;
+    }  
+  }
+} 

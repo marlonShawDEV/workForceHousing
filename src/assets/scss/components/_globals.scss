@@ -1,38 +1,41 @@
-h2 {
-	margin-bottom: 3rem;
+body {
+  min-width: 320px;
 }
-
-.section_padding {
-	padding: 60px 0 65px;
-	@include breakpoint(medium) {
-		padding: 55px 0;
-	}
-}
-
-#isMobile {
-	display: none;
-	@include breakpoint(small only) {
-		display: block;
-	}
-}
-
-#isTablet {
-	display: none;
-	@include breakpoint(medium only) {
-		display: block;
-	}
-	@include breakpoint(large only) {
-		display: block;
-	}
-}
-
-#isDesktop {
-	display: none;
-	@include breakpoint(xlarge) {
-		display: block;
-	}
+// prevent padding on svg from distorting the aspect ratio, and defaulting to middle alignment for inline svgs
+svg {
+  box-sizing: content-box;
+  vertical-align: middle;
 }
 // reseting odd margins that are part of Foundation default
 figure { 
  margin: $global-margin;
 }
+
+cite { 
+  display: inline;
+  &::before {
+    content: none;
+  }
+}
+
+blockquote {
+  font-size: rem-calc(17); 
+  font-weight: $global-weight-medium;
+  font-size: calc(17px +  3 * (100vw - 320px)/1080);
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(20);
+  }
+  footer { 
+    font-weight: $global-weight-normal;
+    font-style: italic;
+    font-size: $global-font-size;
+    padding: 0;
+    &:before {
+    content: "\2014 \2009";
+    }
+  }
+  :last-child {
+    margin-bottom: 0;
+  }
+}
+

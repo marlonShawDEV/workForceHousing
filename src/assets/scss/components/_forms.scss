@@ -1,14 +1,3 @@
-// difficult to apply class names to fields with our form inserter -- easier to apply it to the form container itself.
-$form-palette: (
-  green: $fm-green,
-  yellow: $fm-yellow,
-  purple: $fm-purple,
-  blue: $fm-dark-blue,
-  teal: $fm-teal,
-  gray: $medium-gray,
-  primary: $fm-blue
-);
-
 select:not([multiple]) {
   position: relative;   
   background-image: icon(triangle-down, $fm-gray, 12, 9, 0, 0, 16, 12);
@@ -23,6 +12,9 @@ input[type='email'] {
   background-repeat: no-repeat;
   background-origin: content-box;
 }
+legend {
+  font-weight: $form-label-font-weight;
+} 
 fieldset {
   margin-bottom: rem-calc(18); 
   &.fieldset  {
@@ -35,18 +27,19 @@ fieldset {
     }
   }
 }  
-legend {
-  font-weight: $form-label-font-weight;
-} 
 .help-text  {
   opacity: 0.8;
   margin-top: ($form-spacing * 0.75) * -1;
 } 
-[type="checkbox"] + label, [type="radio"] + label {
+[type="checkbox"] + label, 
+[type="radio"] + label {
   font-weight: 400;
 }
 .form {
   margin: $fieldset-margin;
+  aside & {
+    padding-top: $global-padding;
+  }
   [type='radio'] ,  
   [type='checkbox'] {
     @include element-invisible;
@@ -66,7 +59,7 @@ legend {
     &:checked + label {
       color: $fm-green;
       &::before {
-        color: white;
+        color: $white;
         background-color: $fm-green;
         border-color: $fm-green;
       }
@@ -77,73 +70,7 @@ legend {
   } 
   [type='checkbox']:checked + label::before {
       content: '\00d7';  
-  }
-  &.outline { 
-    input[type='email'] {
-      position: relative;          
-      background-image: icon(email, $white, 24, 24, 0, 3, 24, 24);
-    } 
-    select {
-      background-image: icon(triangle-down, $white, 12, 9, 0, 0, 16, 12);
-    }
-    ::placeholder {
-      color: rgba($white, 0.5);
-    }
-    // supporting having the focxused fields display the background text color
-    @each $name, $color in $form-palette {    
-      &-#{$name} {         
-        [type='text'], 
-        [type='password'], 
-        [type='date'], 
-        [type='datetime'], 
-        [type='datetime-local'], 
-        [type='month'], 
-        [type='week'], 
-        [type='email'], 
-        [type='number'], 
-        [type='search'], 
-        [type='tel'], 
-        [type='time'], 
-        [type='url'], 
-        [type='color'],
-        select,
-        textarea {
-          border: 1px solid $white;
-          background-color: $color;
-         &:active,
-         &:focus {
-            background-color: $white;
-            color: $color;  
-            ::placeholder {
-              color: rgba($color, 0.5);
-            }        
-          }
-        }
-        .fieldset,
-        .input-group-label, 
-        [type=radio] + label::before,
-        [type='checkbox'] + label::before {
-          border-color: $white;
-        }
-        [type=radio]:checked + label,
-        [type='checkbox']:checked + label {
-          color: $white;
-        }
-        [type=email] {        
-          &:active,
-          &:focus {
-            background-image: icon(email, $color, 24, 24, 0, 3, 24, 24);
-          }
-        }
-        select {          
-          &:active,
-          &:focus {
-            background-image: icon(triangle-down, $color, 12, 9, 0, 0, 16, 12);
-          }
-        }
-      }  
-    }
-  } 
+  }  
   .input-group {
     > :first-child {
       border-radius: $input-radius 0 0 $input-radius;
@@ -157,5 +84,50 @@ legend {
     .input-group-field {
       height: 2.6125rem;      
     }
+  } 
+}
+.outline { 
+  [type='text'], 
+  [type='password'], 
+  [type='date'], 
+  [type='datetime'], 
+  [type='datetime-local'], 
+  [type='month'], 
+  [type='week'], 
+  [type='email'], 
+  [type='number'], 
+  [type='search'], 
+  [type='tel'], 
+  [type='time'], 
+  [type='url'], 
+  [type='color'],
+  select,
+  textarea {
+    border: 1px solid $white;
+    background-color: transparent;
+    &:active,
+    &:focus {
+      background-color: $white;
+    }
+  }
+  input[type='email']:not(:focus) {
+    background-image: icon(email, $white, 24, 24, 0, 3, 24, 24);
+  } 
+  select:not([multiple]):not(:focus) {
+    background-image: icon(triangle-down, $white, 12, 9, 0, 0, 16, 12);
+  }
+  .fieldset,
+  .input-group-label, 
+  [type=radio] + label::before,
+  [type='checkbox'] + label::before {
+    border-color: $white;
+  }
+  [type=radio]:checked + label,
+  [type='checkbox']:checked + label {
+    color: $white;
+  }    
+  input::placeholder,
+  textarea::placeholder {
+    color: rgba($white, 0.8);
   }
 }

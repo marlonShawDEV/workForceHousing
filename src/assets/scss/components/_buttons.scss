@@ -110,10 +110,10 @@ $button-opacity-disabled: 0.25 !default;
   // Sizes
   @each $size, $value in map-remove($button-sizes, default) {
     &.#{$size} {
-      font-size: $value;
+      font-size: $value;     
       @if $size == large {
         border-width: 3px;
-        @include breakpoint(medium) {
+        @include breakpoint(xlarge) {
           font-size: rem-calc(22);
         }
       }
@@ -180,7 +180,11 @@ $button-opacity-disabled: 0.25 !default;
 			color: $white;
 		}
 	}
-  
+	&.inverted-hollow {
+		background: transparent;
+		color: $white;
+    border-color: $white;
+	}  
   // Disabled style
   &.disabled,
   &[disabled] {

@@ -1,75 +1,237 @@
-// front the pattern library
+// fluid font formula
+// calc( min-font-size-px + (max-font-size - min-font-size) * (100vw - min-screen-size-px)/(max-screen-size - min-screen-size) )
+// thus if you want 16px at 400 wide, scaling up to 24px at 800 wide, then you'd use
+// calc(16px + (24-16) * (100vw - 400px)/(800-400))
+// 1080 denominator is based on 1400 - 320;
 
+
+h1 {
+    font-size: calc(30px +  12 * (100vw - 320px) / 1080); 
+}
+h2 {
+    font-size: calc(22px +  10 * (100vw - 320px) / 1080); 
+}
+h3 {
+    font-size: calc(20px +  8 * (100vw - 320px) / 1080); 
+}
+h4 {
+    font-size: calc(18px +  7 * (100vw - 320px) / 1080); 
+}
+h5 {
+    font-size: calc(16px +  5 * (100vw - 320px) / 1080); 
+}
+h6 {
+    font-size: calc(15px +  2 * (100vw - 320px) / 1080); 
+}
+
+@include breakpoint(xxlarge) {
+  h1 {
+      font-size: rem-calc(42); 
+  }
+  h2 {
+      font-size: rem-calc(32);  
+  }
+  h3 {
+      font-size: rem-calc(28); 
+  }
+  h4 {
+      font-size: rem-calc(25); 
+  }
+  h5 {
+      font-size: rem-calc(21); 
+  }
+  h6 {
+      font-size: rem-calc(17); 
+  }
+}
 .call-to-action {
-  font-size: rem-calc(48);
-  font-weight: 500;
+  font-size: rem-calc(30);
+  font-weight: $global-weight-medium;
   color: inherit;
-  a {
-    color: inherit;
-  }
-}
-.call-to-action-light {
-  font-size: rem-calc(48);
-  font-weight: 300;
-  color: inherit;
-  a {
-    color: inherit;
-  }
-}
-.page-title {
-  font-size: rem-calc(42);
-  font-weight: 700;
-  color: $fm-green;
-}
-.sub-title {
-  font-size: rem-calc(32);
-  font-weight: 700;
-}
-.section-title {
-  font-size: rem-calc(28);
-  font-weight: 900;
-  color: inherit;
-  opacity: 0.8;
-  text-transform: uppercase;
-}
-.article-headline {
-  font-size: rem-calc(16);
-  font-weight: 500;
-  margin-bottom: 0;  
-	@include breakpoint(medium) {
-		font-size: rem-calc(22);
+	font-size: calc(30px +  18 * (100vw - 320px)/1080);
+	@include breakpoint(xxlarge) {
+		font-size: rem-calc(48);
 	}
   a {
     color: inherit;
   }
 }
-.article-headline-sidebar {
-  font-size: rem-calc(18);
-  font-weight: 500;
+.call-to-action-light {
+  font-size: rem-calc(30);
+  font-size: calc(30px +  18 * (100vw - 320px)/1080); 
+  font-weight: $global-weight-light;
+  color: inherit;
+	@include breakpoint(xxlarge) {
+		font-size: rem-calc(48);
+	}
   a {
     color: inherit;
   }
-
+}
+.callout-footer-title {
+  font-size: rem-calc(32);
+  font-size: calc(32px +  20 * (100vw - 320px)/1080); 
+  font-weight: $global-weight-medium;
+  line-height: 1.2;
+	@include breakpoint(xxlarge) {
+    font-size: rem-calc(52);
+  }
+}
+.hero-title {
+  font-size: rem-calc(32);
+  font-size: calc(32px +  20 * (100vw - 320px)/1080); 
+  margin-bottom: 0.5em;
+  font-weight: $global-weight-black;
+  line-height: 1.2;
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(52);
+    margin-bottom: 2rem;
+  }
+}
+.subtitle {
+  font-size: rem-calc(18);
+  font-size: calc(18px +  12 * (100vw - 320px)/1080); 
+  font-weight: $global-weight-bold;
+  margin: 0 0 0.375em;
+  line-height: 1.2;
+  @include breakpoint(xxlarge) {
+		font-size: rem-calc(30);
+	}
+}
+.homepage-headline {
+  font-size: rem-calc(22);
+  font-size: calc(22px +  10 * (100vw - 320px)/1080); 
+  font-weight: $global-weight-bold;
+  margin: 0 0 0.375em;
+  line-height: 1.2;
+  @include breakpoint(xxlarge) {
+		font-size: rem-calc(32);
+	}
+}
+.section-subtitle {
+  font-size: rem-calc(18);
+  font-size: calc(18px +  4 * (100vw - 320px)/1080);
+  font-weight: $global-weight-medium;
+  color: inherit;
+  margin-bottom: 1em;
+  line-height: 1.2;
+  @include breakpoint(xxlarge) {
+		font-size: rem-calc(22);
+	}
+}
+.article-headline {
+  font-size: rem-calc(16);
+  font-size: calc(16px +  6 * (100vw - 320px)/1080); 
+  font-weight: $global-weight-medium;
+  margin-bottom: 0;  
+  @include breakpoint(xxlarge) {
+		font-size: rem-calc(22);
+	}
+}
+.article-headline-sidebar {
+  font-size: rem-calc(15);
+  font-size: calc(15px +  3 * (100vw - 320px)/1080); 
+  font-weight: $global-weight-medium;
+  @include breakpoint(xxlarge) {
+		font-size: rem-calc(18);
+	}
 }
 .article-category {
-  font-size: rem-calc(14);
-  font-weight: 700;
+  font-size: rem-calc(13);
+  font-weight: $global-weight-bold;
   color: inherit;
   opacity: 0.75;
   text-transform: uppercase;
-  margin: 0.5em 0;
-  a {
-    color: inherit;
-  }
+  margin: 0.25em 0;
+	@include breakpoint(medium) {
+		font-size: rem-calc(14);
+	}
 }
 .article-date {
-  font-size: rem-calc(14);
-  font-weight: 300;
+  font-size: rem-calc(13);
+  font-weight: $global-weight-light;
   color: inherit;
   opacity: 0.75;
   text-transform: uppercase;
+	@include breakpoint(medium) {
+		font-size: rem-calc(14);
+	}
 }
-
+.article-date-lg {
+  font-size: rem-calc(14);
+  font-weight: $global-weight-medium;
+  color: inherit;
+  text-transform: uppercase;
+  opacity: 0.75;
+	@include breakpoint(medium) {
+		font-size: rem-calc(18);
+	}
+}
+.hero-subtitle {
+  font-size: rem-calc(20); 
+  font-size: calc(20px +  8 * (100vw - 320px)/1080);
+  font-weight: $global-weight-medium;
+  margin-bottom: $global-margin * 2;
+  line-height: 1.2;
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(28);
+  }
+}
+.hero-date {
+  font-size: rem-calc(16);
+  font-size: calc(16px +  6 * (100vw - 320px)/1080); 
+  font-weight: $global-weight-light;
+  text-transform: uppercase;
+  margin-bottom: 0.7em;
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(22);
+  }
+}
+.callout-txt {
+	color: $fm-blue;
+	font-size: rem-calc(30);
+  font-size: calc(30px +  18 * (100vw - 320px)/1080);
+	line-height: 1.2;
+	margin: 2rem 0;
+  @include breakpoint(xxlarge) {
+		font-size: rem-calc(48);
+	}
+}
+.finance-grid-title {
+  font-size: rem-calc(26);
+  font-size: calc(26px +  6 * (100vw - 320px)/1080);
+  font-weight: $global-weight-bold;
+  text-transform: uppercase;
+	line-height: 1.2;
+  margin-bottom: $global-margin;
+  @include breakpoint(xxlarge) {
+		font-size: rem-calc(32);
+	}
+}
+.finance-row1-title {
+  font-weight: $global-weight-light;
+  font-size: rem-calc(26);
+  font-size: calc(26px +  12 * (100vw - 320px)/1080);
+  line-height: 1.2;
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(38);
+  }  
+}
+.homepage-business-highlight-title {
+  font-size: rem-calc(24);
+  font-size: calc(24px +  14 * (100vw - 320px)/1080); 
+  font-weight: $global-weight-black;
+  @include breakpoint(xlarge) {
+		font-size: rem-calc(38);
+	}
+}
+.stat {
+	font-size: 24px;
+  font-size: calc(24px +  (52 - 24) * (100vw - 320px)/1080);  
+  @include breakpoint(xxlarge) { 
+    font-size: rem-calc(52);
+  }
+}
 
 // replacing .feature-txt with .lead, since it's a built in style for Foundation, replaced .lead_bolder with just <b> or <strong> inside .lead.
 .lead {
@@ -81,39 +243,19 @@
 .lightest-weight {
   font-weight: $global-weight-light;
 }
-.callout-txt {
-	color: $fm-blue;
-	font-size: rem-calc(30);
-	line-height: 1.2;
-	margin: 2rem 0;
-	@include breakpoint(medium) {
-		font-size: rem-calc(48);
-	}
+.heaviest-weight {
+  font-weight: $global-weight-black;
 }
-
-blockquote {
-  font-size: rem-calc(18);
-  font-weight: $global-weight-medium;
-  @include breakpoint(medium) {
-    font-size: rem-calc(20);
-  }
-  footer { 
-    font-weight: $global-weight-normal;
-    font-style: italic;
-    font-size: 1rem;
-    padding: 0;
-    &:before {
-    content: "\2014 \2009";
-    }
-  }
-  :last-child {
-    margin-bottom: 0;
-  }
+.uppercase { 
+  text-transform: uppercase;
 }
-cite { 
-  display: inline;
-  &::before {
-    content: none;
-  }
+.reduce {
+  font-size: 0.875em;
+}
+.enlarge {
+  font-size: 1.125em;
+}
+.initial-color {
+ color: initial;
 }
 

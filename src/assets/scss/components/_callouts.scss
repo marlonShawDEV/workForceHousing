@@ -36,6 +36,10 @@ $callout-palette: (
     background-color: $white;
     border: 0.1875rem solid $callout-background;
   }
+  &.callout-concrete {
+    background: $light-gray;
+    color: $body-font-color;
+  }
   @each $name, $color in $callout-palette {    
     &.callout-#{$name} {      
       background-color: $color;
@@ -53,27 +57,21 @@ $callout-palette: (
       }
     }
   }
-  &.footerband {
+  &.callout-fullwidth {
     border-radius: 0;    
     padding: 2.5rem 0;
     margin: 0;
+    font-size: rem-calc(22);    
     @include breakpoint(large) {
       padding: 4.375rem 0;
     }    
     p {
-      font-size: rem-calc(22);
       font-weight: $global-weight-light;
       margin: 1.5rem 0;
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-    h3 {
-      font-size: rem-calc(32);
-      font-weight: $global-weight-medium;
-      line-height: 1.2;
-      @include breakpoint(large) {
-        font-size: rem-calc(52);
+      @include breakpoint(large) {   
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
     form {      
@@ -86,34 +84,18 @@ $callout-palette: (
       > * {
         display: table-cell;
         vertical-align: middle;
-        margin-bottom: 0;
+        margin: 0.25rem 0;
       }
     }
-    > .row {
-      > div + div:last-child {
-        text-align: center;
-        padding: $global-padding 0;
-      }
-    }   
-		@include breakpoint(large) {    
-      > .row {
-        width: 100%;
-        > div {
-          display: table-cell;
-          vertical-align: middle;  
-          float: none;   
-          min-width: 29rem;
-          text-align: left;
-          &:not(:last-child) {
-            > * {              
-              padding-right: 6rem;
-            }
-          }
-          & + div:last-child {
-            text-align: right;            
-          }
-        } 
-      }
-		}
+  }
+  .callout-fullwidth-cta {   
+    text-align: center;
+    width: 100%;      
+    @include breakpoint(large) {              
+      @include vertical-center;
+      right: 0;
+      text-align: right;
+      position: relative;
+    }
   }
 }

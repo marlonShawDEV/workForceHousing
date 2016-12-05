@@ -1,13 +1,17 @@
 /// person-block
-$last-person-block-border: lighten(saturate(adjust-hue($fm-green, -16.6266), 18.7675), 2.7451);
+
 .person-block {   
   @for $i from 1 through 4 {
     div:nth-child(#{$i}) > figure {
-      border-bottom: 3px solid color-shift($fm-green, $last-person-block-border, 4, $i);
+      border-bottom: 3px solid color-shift($fm-green, #b5dc2a, 4, $i);
     }
-  }  
+  } 
   figure {
-    margin: 0 0 $global-margin;       
+    margin: 0 0 $global-margin; 
+    @include breakpoint(small only) {  
+      max-width: 500px;
+      margin: 0 auto $global-margin;
+    }      
   } 
   figcaption { 
     text-align: center; 

@@ -1,0 +1,126 @@
+.homepage-testimonials {
+  position: relative;
+  padding: 2rem 0 0;
+  @include breakpoint (xlarge) {
+    padding: 6.25rem 0 0;
+  }
+}
+.background-quote::before {
+  content: "\201D";
+  font-size: 9rem;
+  font-size: calc(144px +  144 * (100vw - 320px)/(1180 - 320)); 
+  opacity: 0.2;
+  display: block;
+  float: right;
+  width: 0.45em;
+  position: relative;
+  top: 0.25em;
+  padding-left: 0.05em;
+  font-family: 'Lucida Sans', 'Lucida Sans Typewriter', 'Lucida Console', monospace;
+  line-height: 0.25em;
+  @include breakpoint(xlarge) {
+    font-size: 18rem;
+  }
+}
+.testimonials-quote {
+  position: relative;  
+}
+.testimonials-picture {
+  position: relative;
+  text-align: center;
+  padding: 0 $global-padding * 2;
+  @include breakpoint(medium) {
+    padding: 0;
+  }  
+}
+
+.testimonials-image-rotate {
+  text-align: center;  
+  @include breakpoint(large) {
+    text-align: right;
+  }  
+  img {
+    transform: rotate(3deg);
+    @include breakpoint(medium) {
+    transform: rotate(4deg);
+    transform-origin: center bottom;
+    }  
+    @include breakpoint(large) {
+      transform: rotate(4.8deg);
+      transform-origin: 50% 20%;
+      padding-left: 2rem;
+    }  
+  }
+}
+.testimonial-image-offset {
+  @include breakpoint(xlarge) {
+    margin-top: -9.5rem;
+  }
+}
+.testimonials-single {
+  position: relative;
+  padding-bottom: $global-padding;
+}
+.testimonials-multi { 
+  position: relative;
+  .testimonials-quote {
+    width: 100%;
+    @include breakpoint(medium) {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  } 
+  .title-testimonial  {
+    @include breakpoint(medium) {
+      max-width: 55%;
+    }
+  }
+  .testimonial-image-offset {
+    max-width: 85%;  
+    @include breakpoint(large) {
+      max-width: 97%;
+    }
+    @include breakpoint(xlarge) {
+      max-width: 100%;
+    }  
+  }
+}
+
+.title-testimonial {
+  position: relative;  
+  font-size: rem-calc(32);
+  font-size: calc(32px +  20 * (100vw - 320px)/1080); 
+  margin-bottom: 0.5em;
+  font-weight: $global-weight-black;
+  line-height: 1.2;
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(52);
+    margin-bottom: 2rem;
+  }
+}
+.testimonials-thumbnails {
+  text-align: center;
+  padding: 1rem 0;
+  float: left;
+  width: 100%;
+  @include breakpoint(large) {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 12rem;
+    padding: 0;
+    float: none;
+  } 
+}
+.testimonials-thumbnail {
+  @include breakpoint(small only) {
+    @include grid-column(4);
+  }
+  @include breakpoint(medium only) {
+    @include grid-column(4);
+  }
+  @include breakpoint(large) {
+    margin: 0 0 $gutter $gutter;
+  }
+}

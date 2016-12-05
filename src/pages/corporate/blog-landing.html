@@ -1,60 +1,73 @@
 ---
-title: Blog Landing
+title: Blog
 layout: corporate
 ---
 
-<section class="blog-landing-hero blue-hero">
-  <div class="blue-hero__overlay"></div>
-  <div class="row page-buffer">
-    <div class="row">
-      <div class="blue-hero__txt">
-        <h1>Freddie Mac Blog</h1>
+<section class="blog-landing-hero hero-blended">
+  <div class="row vertical-center-full">
+    <div class="columns">
+      <div class="hero-blended-content">
+        <h1 class="hero-title">Freddie Mac Blog</h1>
         <p>Discussions on <strong>owning</strong> or <strong>renting a home</strong>, <strong>the housing market</strong>, or <strong>housing finance</strong>.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section_padding">  
-	<div class="row page-buffer">
-		<h2>From The Blog</h2>
-    <div class="row medium-up-2">
-      <div class="column">
-        <div class="blog-block blog-block_lg">
-          <a href="/corporate/blog-detail.html">
-            <img src="/images/blog/blog-lg-1.jpg" alt="Blog Img" />
-            <div class="block-covertext">
-              <h3 class="sub-title lightest-weight">What Do Renters Save For?</h3>
-            </div>
-          </a>
+<section class="section-padding">  
+  <div class="row">
+    <div class="columns">
+      <h2>From The Blog</h2>
+      <div class="row">
+        <div class="columns large-6">
+          <div class="blog-block blog-block-lg">
+            <a href="/corporate/blog-detail.html" class="overlay overlay-dark">
+              <img src="/images/blog/feature-1.jpg" alt="Blog Img"/>
+              <div class="overlay-contents">
+                <div class="article-date-lg">October 18, 2016</div>
+                <h3 class="subtitle">Baby Boomer Myths: Up-Close and Personal with Sean Becketti, Chief Economist</h3>
+                <div class="button inverted-hollow">Research &amp; Analysis</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="columns large-6">
+          <div class="blog-block blog-block-lg">
+            <a href="/corporate/blog-detail.html" class="overlay overlay-dark">
+              <img src="/images/blog/feature-2.jpg" alt="Blog Img"/>
+              <div class="overlay-contents">
+                <div class="article-date-lg">Oct 13, 2016</div>
+                <h3 class="subtitle">Don't Be Spoofed</h3>
+                <div class="button inverted-hollow">Notable</div>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
-      <div class="column">
-        <div class="blog-block blog-block_lg">
-          <a href="/corporate/blog-detail.html">
-            <img src="/images/blog/blog-lg-2.jpg" alt="Blog Img" />
-            <div class="block-covertext">
-              <h3 class="sub-title lightest-weight">Building A Better System</h3>
-            </div>
-          </a>
-        </div>
-      </div>
+      {{> blog-grid}}
+	  </div>
+  </div>
+  <div class="row">
+    <div class="columns">
+      <a class="button float-left primary">Previous</a>
+      <a class="button float-right primary">Next</a>
     </div>
-	  {{> blog-grid}}
-	</div>
+  </div>  
 </section>
-
-<div class="callout callout-yellow footerband">
-  <div class="row page-buffer">
-      <div>
-        <h3>The Weekly Round Up</h3>
+{{> share-widget}}
+<div class="callout callout-yellow callout-fullwidth">
+  <div class="row" data-equalizer data-equalize-on="large">
+      <div class="columns large-7" data-equalizer-watch>
+        <h3 class="callout-footer-title">The Weekly Round Up</h3>
         <p><strong>Lorem ipsum dolor sit amet</strong>, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis. adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
       </div>
-      <div>
-        <form action="#"  class="form outline outline-yellow">
-          <input type="email" placeholder="Your Email Address">
-          <button class="primary button" href="#">Sign Up</button>
-        </form>
+      <div class="columns large-offset-1 large-4 position-relative" data-equalizer-watch>
+        <div class="callout-fullwidth-cta">         
+          <form action="#" class="form outline outline-yellow">
+            <input type="email" placeholder="Your Email Address">
+            <button class="primary button" href="#">Sign Up</button>
+          </form>
+        </div>
       </div>
   </div>
 </div>

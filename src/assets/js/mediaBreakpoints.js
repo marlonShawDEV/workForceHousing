@@ -1,20 +1,30 @@
+
+// no longer used for now, replaced calls with built in Foundation.MediaQuery
+
 var mediaBreakpoints = {
-	mobile: function() {
-		if ( $('#isMobile').css('display') == 'block' ) {
+	small: function() {
+		if ( $('#isSmallBP').css('display') == 'block' ) {
       return true;
     } else {
       return false;
     }
 	},
-	tablet: function() {
-		if ( $('#isTablet').css('display') == 'block' ) {
+	medium: function() {
+		if ( $('#ismediumBP').css('display') == 'block' ) {
       return true;
     } else {
       return false;
     }
 	},
-	desktop: function() {
-		if ( $('#isDesktop').css('display') == 'block' ) {
+	large: function() {
+		if ( $('#isLargeBP').css('display') == 'block' ) {
+      return true;
+    } else {
+      return false;
+    }
+	},
+	xlarge: function() {
+		if ( $('#isXLargeBP').css('display') == 'block' ) {
       return true;
     } else {
       return false;

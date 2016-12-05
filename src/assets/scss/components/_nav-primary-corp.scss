@@ -9,6 +9,15 @@
   h4 {
     font-size: inherit;
   }
+  .button { 
+    height: 2.5rem;
+    width: 1.5rem;
+    margin: $titlebar-icon-spacing;
+    padding: 0;
+    transition: none;
+    border-width: 0;
+    border-radius: 0;      
+  }
   @include foundation-title-bar;
   .title-bar {
     min-height: 5rem;
@@ -20,13 +29,13 @@
       font-size: 1.375rem;
       padding: 1.4375rem 1rem; 
     }
-  }
+  }   
   .toggle-icon {
-    height: 2.5rem;
-    width: 2.5rem;
-    margin: $titlebar-icon-spacing;
     background: transparent icon(menu, $fm-blue, 24, 23, 0, 0, 24, 23) no-repeat center center;   
-  }  
+  }
+  .button-search {
+    background: $fm-yellow icon(search, $white, 24, 24) no-repeat center center;     
+  }
 }
 @include breakpoint(large down) {      
   .is-accordion-submenu-parent > a {
@@ -51,9 +60,10 @@
       font-weight: inherit;
     }
     .logo-mobile { 
-      margin: 1rem;
+      margin: $gutter;
+      margin-bottom: 0;
     } 
-    .page-buffer {
+    .column {
       padding: 0;
     }
     a {
@@ -88,7 +98,7 @@
         } 
       }
     }     
-    &.expanded {
+    &.data-expanded {
       .title-bar {
         background: $fm-blue none repeat scroll 0 0;
         color: $white;
@@ -111,16 +121,6 @@
       background: $fm-yellow;
       color: $white;
     }
-    .button { 
-      height: 2.5rem;
-      width: 2.5rem;
-      margin: $titlebar-icon-spacing;
-      padding: 0;
-      transition: none;
-      background: $fm-yellow icon(search, $white, 24, 24) no-repeat center center; 
-      border-width: 0;
-      
-    }
     input[type="search"] {
       max-width: 100%;
       background: $fm-yellow;
@@ -130,17 +130,12 @@
       height: 3rem;  
       font-size: 1.125rem;
       margin: 1.25rem 1.125rem 1.35rem 1rem;
+      padding-left: 0;
       &::placeholder { 
         color: rgba(255,255,255,.9);
       }
     }  
   }  
-}
-
-@media screen and (max-width: 66em) {
-  .primary-nav .page-buffer {
-    padding: 0;
-  }
 }
 
 @include breakpoint(xlarge) {       
@@ -190,12 +185,9 @@
       padding: 1.3125rem 0 1rem;
   }
   .primary-nav {  
-    font-size: rem-calc(17px); 
+    font-size: rem-calc(17); 
     font-weight: $global-weight-medium;
     border-width: 0;
-    > .page-buffer {
-      padding-right: 0;
-    }
     .top-bar-right > .menu:not(.submenu) {
       z-index: 496;
       text-transform: uppercase;
@@ -225,7 +217,7 @@
           padding-left: 0;      
           > a {
             padding-left: 1.375rem;
-            padding-right: 20px; // same as page buffer
+            padding-right: 1.25rem;            
             position: relative;
             z-index: 497;
             transition: color 0.25s ease 0s;
@@ -244,8 +236,16 @@
       min-width: rem-calc(250px);
     }
     p {
-      font-size: 1rem;
+      font-size: $global-font-size;
       line-height: 1.3;
     }
   }
 } 
+
+.row.column {
+  &.primarynav-buffer {  
+    @include breakpoint(xlarge) {  
+        padding-right: 0px;    
+    }
+  }
+}  

@@ -1,0 +1,33 @@
+.share-wrapper {
+  background: $light-gray;
+  padding-top: $global-padding;
+  padding-bottom: $global-padding;
+  .hero-blended > &  {
+    background: none; 
+    padding: 0;
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    right: 0;  
+    text-align: left;
+  }
+}
+.share-widget {
+  padding: 0 $global-padding;
+  background: $fm-green;
+  display: inline-block;
+  border-radius: $button-radius;
+  line-height: 1;
+  a {
+    display: inline-block;
+    padding: 3px;
+    &:hover {
+      background: rgba(0, 0, 0, 0.1);
+    }
+  }
+  svg {
+    fill: $white;
+    height: 2rem;
+    width: 2rem;
+  }
+}

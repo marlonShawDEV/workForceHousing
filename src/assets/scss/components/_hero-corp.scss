@@ -1,4 +1,7 @@
 // don't print the giant hero stuff, just the text contents
+$hero-opacity: 0.8;
+$hero-blend-color: $fm-blue;
+
 @media screen {
   .hero {
     background: transparent url('/images/homepage/hero-mobile.jpg') no-repeat top center fixed;
@@ -21,55 +24,23 @@
       max-width: rem-calc(627px);   
     } 
   }
-  .hero-title {
-    font-size: rem-calc(36);
-    font-weight: 900;
-    line-height: 1.1;
-    color: inherit;
-    margin-bottom: 0.5em;
-    @include breakpoint(large) {
-      font-size: rem-calc(52px);
-    }  
-  }
-  .hero-subtitle {
-    font-size: rem-calc(28);
-    font-weight: $global-weight-medium;
-    margin-bottom: $global-margin * 2;
-    line-height: 1.2;
-  }
   .hero-edge {
     height: rem-calc(14);  
     background: $celery;
     @include mosaic-fill($mosaic-start, $celery, to right); 
   }
-  .blue-hero {
+  .hero-blended {
+    background-color: $hero-blend-color;
+    color: $white;
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
-    background-color: $fm-blue;
-    color: $white;
-    .page-buffer {
-      @include absolute-center;
-      width: 100%;
-      z-index: 2;
-    }
-
-  }
-  .blue-hero__overlay {
-    background: $fm-blue;
-    height: 100%;
-    opacity: .8;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1;
   }
   // default center aligned hero
-  .blue-hero__txt {
+  .hero-blended-content {
     @include grid-column;
-    @include breakpoint(medium) {
+    @include breakpoint(large) {
       @include grid-column(10);
       @include grid-column-position(center);
     }
@@ -77,108 +48,83 @@
       @include grid-column(7);
       @include grid-column-position(center);
     }
-    h1 {
-      line-height: 1.2;
-      font-size: 2rem;
-      @include breakpoint(medium) {				
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-      }
-      @include breakpoint(large) {
-        font-size: 3.25rem;
-        margin-bottom: 2rem;
-      }
-    }
     p {
-      @include breakpoint(medium) {
-        font-size: 1.375rem;
-      }
-      @include breakpoint(large) {
-        font-size: 1.75rem;
+      font-size: calc(18px +  10 * (100vw - 320px)/1080);
+      @include breakpoint(xxlarge) {
+        font-size: rem-calc(28);
       }
     }
   }
   // add this class when hero is left aligned
-  .blue-hero__left {
-    float: left;
+  .hero-blended-left {
     text-align: left;
+    margin-left: 0;
     @include breakpoint(large) {
-      @include grid-column(8);
-    }
-    @include breakpoint(xlarge) {
-      @include grid-column(7);
-    }
-    }
-  .blue-hero__date {
-    font-size: rem-calc(16);
-    font-weight: $global-weight-light;
-    text-transform: uppercase;
-    @include breakpoint(medium) {
-      font-size: 1.375rem;
-      margin-bottom: 1rem;
+      @include grid-column(7.3);
     }
   }
    // breaking our the hero details by their purpose, since we have several that are tall, short, blue or left.
+   // layering 2 backgrounds -- blue and image to avoid extra markup
  
   &.perspectives-landing-hero {
-    background-image: url('/images/hero-5-mobile.jpg');
+    background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero-5-mobile.jpg');
     height: 219px;
     @include breakpoint(medium) {
-      background-image: url('/images/hero-5-desktop.jpg');
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero-5-desktop.jpg');
       height: 345px;
       text-align: center;
     }
   } 
   &.blog-landing-hero {
-    background-image: url('/images/blog/hero-2-mobile.jpg');
+    background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/blog/hero-2-mobile.jpg');
     height: 219px;
     @include breakpoint(medium) {
-      background-image: url('/images/blog/hero-2-desktop.jpg');
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/blog/hero-2-desktop.jpg');
       height: 345px;
       text-align: center;
     }
   }
   &.media-landing-hero {
-    background-image: url('/images/hero-6-mobile.jpg');
+    background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero-6-mobile.jpg');
     height: 219px;
     @include breakpoint(medium) {
-      background-image: url('/images/hero-6-desktop.jpg');
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero-6-desktop.jpg');
       height: 345px;
       text-align: center;
     }
   } 
   &.research-landing-hero { //pending graphic from Jon
-    background-image: url('/images/hero-7-mobile.jpg');
+    background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero-7-mobile.jpg');
     height: 219px;
     @include breakpoint(medium) {
-      background-image: url('/images/hero-7-desktop.jpg');
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero-7-desktop.jpg');
       height: 345px;
       text-align: center;
     }
   } 
   &.about-landing-hero {  //pending graphic from Jon
-    background-image: url('/images/hero-7-mobile.jpg');
+    background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero-7-mobile.jpg');
     height: 219px;
     @include breakpoint(medium) {
-      background-image: url('/images/hero-7-desktop.jpg');
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero-7-desktop.jpg');
       height: 345px;
       text-align: center;
     }
   } 
   &.perspectives-detail-hero {
-    background-image: url('/images/hero-5-mobile.jpg');
+    background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero-5-mobile.jpg');
     height: 389px;
     @include breakpoint(medium) {
-      background-image: url('/images/hero-5-desktop.jpg');
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero-5-desktop.jpg');
       height: 468px;
       text-align: center;
     }
   } 
   &.blog-detail-hero {
-    background-image: url('/images/blog/hero-4-mobile.jpg');
+    background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/blog/hero-4-mobile.jpg');
     height: 389px;
     @include breakpoint(medium) {
-      background-image: url('/images/blog/hero-4-desktop.jpg');
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/blog/hero-4-desktop.jpg');
       height: 468px;
     }
   }

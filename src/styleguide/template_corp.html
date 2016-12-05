@@ -10,15 +10,20 @@
 
     <!-- Style guide-specific CSS goes here. -->
     <style>
+    /* make style guide wider than standard page, so that right side nav doesn't screw up layouts */
+    .row {  
+      max-width: 106rem; 
+    }
     /* This styles individual sections of the style guide */
     .ss-section:not(:last-child) {
       padding-bottom: 4rem;
       border-bottom: 2px solid #ccc;
       margin-bottom: 4rem;
+      clear: both;
     }
 
     /* This styles the example rows used in the grid documentation. */
-    .row.display {
+    .row.display  {
       background: #eee;
       font-size: 11px;
       margin-bottom: 10px;
@@ -31,6 +36,11 @@
       .row.display .columns.color-end {
         background: #d4d4d4; }
 
+    ,
+    .display > main,
+    .display > aside {
+       border: solid 1px #c6c6c6;
+    }
     /* This styles the color blocks used in the color documentation. */
     .color-block {
       border-radius: 2px;
@@ -60,7 +70,15 @@
         margin-bottom: 1.5rem;
         opacity: 1;
       }
-    .ss-code-live .gradient-info { margin-top: 0; }
+    
+    .ss-code-live::before,
+    .ss-code-live::after {
+      content: ' ';
+      display: table;
+    }
+    .ss-code-live::after {
+      clear: both;
+    }  
     .docs-code-toggle {
         display: inline-block;
         margin-bottom: 1rem;
@@ -75,34 +93,30 @@
   </head>
   <body>
 
-  <header id="header-nav">  
-    {{> ribbon}}
-  </header>  
-<section class="page-title">
-  <div class="row page-buffer">
-    <h1>Corporate Style Guide</h1>
-  </div>
-</section>
-    <div class="row page-buffer">
+  <section class="page-title">
     <div class="row">
-
-      <div class="large-2 medium-3 columns" data-sticky-container>
-        <ul class="vertical menu">
-          {{#each pages}}
-            <li><a href="#{{ anchor }}">{{ title }}</a></li>
-          {{/each}}
-        </ul>
+      <div class="column">
+        <h1>Corporate Style Guide</h1>
       </div>
-
-      <div class="large-10 medium-9 columns" id="code-content">
+    </div>
+  </section>
+  <div class="row">
+    <div class="large-2 medium-3 columns" data-sticky-container>
+      <ul class="vertical menu">
         {{#each pages}}
-          <section class="ss-section" id="{{ anchor }}">
-            {{ body }}
-          </section>
+          <li><a href="#{{ anchor }}">{{ title }}</a></li>
         {{/each}}
-      </div>
-
-    </div></div>
+      </ul>
+    </div>
+    <div class="large-10 medium-9 columns" id="code-content">
+      {{#each pages}}
+        <section class="ss-section" id="{{ anchor }}">
+          {{ body }}
+        </section>
+      {{/each}}
+    </div>
+  </div>
+    
     <!--[if lt IE 9]>
     <script>window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"><\/'+'script>')</script>
     <![endif]-->

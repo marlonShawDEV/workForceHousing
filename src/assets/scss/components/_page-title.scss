@@ -1,16 +1,11 @@
+
 .page-title {
-	background: #f9f9f9;
-	border-bottom: 1px solid #e5e5e5;
-	padding: 55px 0;
-	@include breakpoint(medium) {
-		border-bottom: none;
-		padding: 53px 0 47px;
-	}
-	h1 {
-		color: $fm-green;
-		margin: 0;
-		@include breakpoint(medium) {
-			font-size: rem-calc(42);
-		}
-	}
+	background: $offwhite;
+  font-weight: $global-weight-bold;
+  color: $fm-green;
+  line-height: 1.2;
+	padding: 44px 0 44px;
+  h1 {
+    margin: 0;
+  }
 }

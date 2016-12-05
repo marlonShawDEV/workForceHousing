@@ -1,72 +1,43 @@
-.page-buffer {
-	padding: 0 20px;
+// trying to solve for the fact that design want the full gutter to the left and right, not half a gutter, like Foundation defaults to.
+.row {
+  padding-left: $gutter/2;
+  padding-right:  $gutter/2;
+  &.column {
+    padding-left: $gutter;
+    padding-right: $gutter;
+  }
 }
-
-.two-column-layout {
-	>.page-buffer {
-		@include breakpoint(small only) {
-			padding: 0; 
-		}
-	}
-
-	main {
-    @include breakpoint(medium) {
-      >.page-buffer {
-				padding: 0;
-        // larger gap in 2 col layout, applies to everything, except when we don't want it to -- override with class of .jut
-        > *:not(.jut) {
-            // max is 50rem, but when under 50rem, keep a 2rem margin
-            margin-right: 2rem; 
-            max-width: 50rem;
-        }
-			}
-		}
-	}
-
-	aside {
-		position: relative;
-		z-index: 2;
-		&.columns {
-			@include breakpoint(small only) {
-				padding: 0;
-			}
-		}
-		
-		.page-buffer {
-			margin: 0;
-			padding: 0 30px;
-		}
-    
-    &.adjust-sidebar {
-      @media print {
-        padding-top: 300px; // counteract the negative top margin when printing
-      }
-    }
-	}
-
-	&_interior {
-		aside {
-      @media screen and #{breakpoint(large)} {
-        margin-top: -60px;
-      }
-		}
+.row .column .row {
+  padding-right: 0;
+  padding-left: 0;
+}
+.section-padding {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+	@include breakpoint(xlarge) {
+    padding-top: rem-cal(55px);
+    padding-bottom: rem-calc(45px);
 	}
 }
-
+.position-relative {
+  position: relative;
+}
+/// Vertically centers the element inside of its first non-static parent
+.vertical-center-full {
+  @include vertical-center;
+  right: 0;
+  left: 0;
+  position: relative;
+}
+/// Horizontally centers the element inside of its first non-static parent
+.horizontal-center {
+  @include horizontal-center;
+}
 main {
 	font-weight: $global-weight-light;
-	padding: 50px 0;
-	h2 {
-		font-size: rem-calc(22);
-		margin: 2rem 0 1rem;
-	}
-
-	.button-group {
-		margin: 2rem 0;
-	}
-
+	padding: $gutter * 2.5 $gutter/2;
 	figure {
-		margin: 2rem 0;
+		margin: $global-margin * 2 0;
 		img {
 			margin: 0 0 1rem;
 		}
@@ -77,6 +48,78 @@ main {
 			}
 		}
 	}
+}
+
+.two-column-layout {
+  @include clearfix;
+  @include breakpoint(large) { 
+    @include grid-column-row($gutter);
+  }
+	main {
+    @include breakpoint(large) { 
+      float: left;
+      width: calc(100% - 350px);
+      padding-left: 0;
+      padding-right: 0;      
+    }
+    @include breakpoint(xlarge) {
+      width: 66.666666%;
+    }
+    > .column {
+      @include breakpoint(medium) {      
+        padding-right: 2rem; 
+        max-width: 50rem;  
+      }
+      > .row {    
+        margin-left: -0.625rem;
+        margin-right: -0.625rem;
+        padding-right: 0;
+        padding-left: 0;
+        max-width: none;  
+      } 
+      .jut {
+        @include breakpoint(xxlarge) { 
+          width: 115%;
+        }
+      }      
+    }
+	}
+	aside {
+    clear: both;
+    @include breakpoint(large) {
+      clear: initial;
+      float: right;
+      width: calc(350px);
+    }
+    @include breakpoint(xlarge) {
+      width: 33.333333%;
+    }
+		position: relative;
+		z-index: 2;
+    @include breakpoint(large) {
+      padding-top: $gutter * 2.5;
+      padding-bottom: $gutter * 2.5;
+    }
+    section {
+      padding: $gutter $gutter/2;
+      @include breakpoint(xlarge) { 
+        padding: $gutter * 1.5 $gutter;
+      }  
+      margin: 0;
+      > .row {
+        margin: 0;
+      }
+    }
+  }  
+  .sidebar-article-offset {
+    padding-top: 0;
+  }
+}
+
+.sidebar-article-offset {
+  @media print and #{breakpoint(large)} {
+    padding-top: 300px; // counteract the negative top margin when printing
+  }
 }
 
 

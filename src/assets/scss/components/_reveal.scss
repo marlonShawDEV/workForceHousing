@@ -9,31 +9,49 @@ $overlay-palette: (
   gray: $medium-gray
 );
 
-.reveal {
-  max-width: rem-calc(960px);
-  &.medium { 
-    max-width: rem-calc(720px);
-  }  
-  &.large { 
-    max-width: $global-width;
-  }  
-  @include breakpoint(medium) { 
-    &.small { 
-      max-width: rem-calc(480px);
+
+.reveal {  
+  &:not(.overlay-video) {
+    @include breakpoint(medium) {
+      padding: 3rem 0;
     }
-  } 
+  }
+  .close-button {
+    @include close-button;
+    background-color: $white;
+    color: $dark-gray;
+    font-size: 3rem;
+    top: 1rem;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    span {
+      position: absolute;    
+      right: 25%;
+      top: -2%; // magic number to vertically align the &times; symbol 
+    }
+  }  
+  &.overlay-video {
+    padding: 2.5rem 2.5rem 0;
+    .close-button {
+      font-size: 2.5rem;
+      top: 0;
+      right: 0;
+      width: 2.5rem;
+      height: 2.5rem;    
+    }
+  }
+  
 // Full-screen mode colors
   @each $name, $color in $overlay-palette {    
-    &.full.overlay-#{$name} {      
+    &.overlay-#{$name} {      
       background-color: $color;
-      color: $white;      
+      color: $white;
       a {
         @include anchor-on-dark;
-      } 
-      .close-button-large {
-        background-color: $white;
-        color: $color;
-      }      
+      }     
       .button.hollow {
         color: $white;
         &:hover, 
@@ -47,14 +65,6 @@ $overlay-palette: (
   > div { 
     position: relative;
   }
-  > .flex-video {
-    margin: $global-margin * 2  0 0;
-  } 
-  &.full {
-    @include breakpoint(medium) {
-      padding: 3rem 0;
-    }  
-  }
 }
 
 .reveal-image {
@@ -67,10 +77,6 @@ $overlay-palette: (
     padding: 2vh 2vw;
     margin: 0 auto; 
     position: relative;     
-  }
-  > .close-button-large {
-    background-color: $white;
-    color: $dark-gray;
   }
   figure {
     margin: 0 auto;   
