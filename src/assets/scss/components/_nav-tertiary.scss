@@ -1,4 +1,4 @@
-$tertiary-gap: rem-calc(30px);
+$tertiary-gap: $gutter * 1.5;
 $tertiary-border-color: scale-color($light-gray, $lightness: -5%);
 
 

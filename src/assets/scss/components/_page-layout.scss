@@ -58,7 +58,7 @@ main {
 	main {
     @include breakpoint(large) { 
       float: left;
-      width: calc(100% - 350px);
+      width: calc(100% - 23em);
       padding-left: 0;
       padding-right: 0;      
     }
@@ -68,7 +68,7 @@ main {
     > .column {
       @include breakpoint(medium) {      
         padding-right: 2rem; 
-        max-width: 50rem;  
+        max-width: 51.25rem;  
       }
       > .row {    
         margin-left: -0.625rem;
@@ -89,17 +89,14 @@ main {
     @include breakpoint(large) {
       clear: initial;
       float: right;
-      width: calc(350px);
+      width: 23em;
+      padding: $gutter * 2.5 $gutter/2;
     }
     @include breakpoint(xlarge) {
       width: 33.333333%;
     }
 		position: relative;
 		z-index: 2;
-    @include breakpoint(large) {
-      padding-top: $gutter * 2.5;
-      padding-bottom: $gutter * 2.5;
-    }
     section {
       padding: $gutter $gutter/2;
       @include breakpoint(xlarge) { 

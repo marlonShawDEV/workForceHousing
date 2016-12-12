@@ -1,4 +1,4 @@
-# The Grid
+﻿# The Grid
 
 The grid is built around two key elements: rows and columns. Rows create a max-width and contain the columns, and columns create the final structure. Everything on your page that you don't give a specific structural style to should be within a row or column.
 In the Grid you can nest columns down as far as you'd like. Just embed rows inside columns and go from there. Each embedded row can contain up to 12 columns.
@@ -340,19 +340,31 @@ Foundation includes styles for all headings&mdash;they're balanced and sized alo
 These styles can be applied to most HTML elements, such as `H1` - `H6`, `span`, `div`, or `p`. 
 
 ```html
+<p>For use in main content area.</p>
 <h3 class="subtitle">This is a subtitle</h3>
 <h3 class="section-subtitle">This is a section-subtitle</h3>
-<h3 class="article-headline">This is an article-headline</h3>
-<h3 class="article-headline-sidebar">This is an article-headline-sidebar</h3>
-<div class="article-category">This is an article-category</div>
-<div class="article-date">This is an article-date</div>
-<div class="article-date-lg">This is an article-date-lg</div>
 <h3 class="call-to-action">This is a call-to-action</h3>
 <h3 class="call-to-action-light">This is a call-to-action-light</h3>
+<p class="lead">This is class lead</p>
+<p class="callout-txt">This is class callout-txt</p>
 
+<p>These are for article pages (news, blog, ep)</p>
+<h3 class="headline-article">This is a headline-article (use in news, blog)</h3>
+<h3 class="headline-perspectives">This is a headline-perspectives (variation for EP)</h3>
+<div class="article-category">This is an article-category</div>
+<div class="article-date">This is an article-date</div>
+<div class="article-date-lg">This is an article-date-lg (use in featured blog/EP)</div>
+<div class="article-blurb">This is article-blurb (use in news, EP)</div>
+<div class="article-blurb-blog">This is article-blurb-blog (use in blog)</div>
+<div class="article-blurb-lg">This is article-blurb-lg (use in featured EP)</div>
+<dic class="article-author">This is article-author <span class="uppercase">(Uppercase in EP)</span></div>
+
+<p>For use in aside (sidebar) content area.</p>
+<h3 class="sidebar-subtitle">This is a sidebar-subtitle</h3>
+<h3 class="headline-article-sidebar">This is a headline-article-sidebar</h3>
+ 
 <p>This should only be used inside Call Out Fullwidth Bands.</p>
 <h3 class="callout-footer-title">This is callout-footer-title</h3>
-
 
 <p>These should only be used inside HERO elements.</p>
 <div class="hero-date">This is hero-date</div>
@@ -364,40 +376,27 @@ These styles can be applied to most HTML elements, such as `H1` - `H6`, `span`, 
 <h2 class="homepage-business-highlight-title">This is homepage-business-highlight-title</h2>
 <h3 class="finance-grid-title">This is finance-grid-title</h3>
 <h3 class="finance-row1-title">This is finance-row1-title</h3>    
+<p class="stat-sm">This is stat-sm <strong>(3%)</strong></p>
+<p class="stat-points">This is stat-points</p>
 <p class="title-testimonial">This is title-testimonial</p>
 ```
 
 <div class="row">
-  <div class="columns large-6">
+  <div class="columns">
+    <p>For use in main content area.</p>
     <div class="callout">
       <h3 class="subtitle">This is a subtitle</h3>
       <h3 class="section-subtitle">This is a section-subtitle</h3>
-      <h3 class="article-headline">This is an article-headline</h3>
-      <h3 class="article-headline-sidebar">This is an article-headline-sidebar</h3>
-      <div class="article-category">This is an article-category</div>
-      <div class="article-date">This is an article-date</div>
-      <div class="article-date-lg">This is an article-date-lg</div>
       <h3 class="call-to-action">This is a call-to-action</h3>
       <h3 class="call-to-action-light">This is a call-to-action-light</h3>
+      <p class="lead">This is class lead</p>
+      <p class="callout-txt">This is class callout-txt</p>
     </div>  
-  </div>
-  <div class="columns large-6">
-    <div class="callout callout-blue">
-      <h3 class="subtitle">This is a subtitle</h3>
-      <h3 class="section-subtitle">This is a section-subtitle</h3>
-      <h3 class="article-headline">This is an article-headline</h3>
-      <h3 class="article-headline-sidebar">This is an article-headline-sidebar</h3>
-      <div class="article-category">This is an article-category</div>
-      <div class="article-date">This is an article-date</div>
-      <div class="article-date-lg">This is an article-date-lg</div>
-      <h3 class="call-to-action">This is a call-to-action</h3>
-      <h3 class="call-to-action-light">This is a call-to-action-light</h3>
-    </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="columns">
+    <p>For use in aside (sidebar) content area.</p>
+    <div class="callout">
+      <h3 class="sidebar-subtitle">This is a sidebar-subtitle</h3>
+      <h3 class="headline-article-sidebar">This is a headline-article-sidebar</h3>
+    </div>  
     <p>This should <strong>only</strong> be used inside <a href="#call-out-fullwidth-band">Call Out Fullwidth Bands</a>.</p>
     <div class="callout callout-blue">
       <h3 class="callout-footer-title">This is callout-footer-title</h3>
@@ -413,7 +412,9 @@ These styles can be applied to most HTML elements, such as `H1` - `H6`, `span`, 
       <h2 class="homepage-headline">This is homepage-headline</h2>
       <h2 class="homepage-business-highlight-title">This is homepage-business-highlight-title</h2>
       <h3 class="finance-grid-title">This is finance-grid-title</h3>
-      <h3 class="finance-row1-title">This is finance-row1-title</h3>
+      <h3 class="finance-row1-title">This is finance-row1-title</h3>    
+      <p class="stat-sm">This is stat-sm <strong>(3%)</strong></p>
+      <p class="stat-points">This is stat-points</p>
       <p class="title-testimonial">This is title-testimonial</p>
     </div>
   </div>
@@ -618,12 +619,28 @@ The `<ul>` is a bulleted list by default, but you can add the class `.no-bullet`
 </ul>
 ```
 
+---
+
+### Divided Lists
+
+To add dividers between items in a list, add the class `.list-divided` to the list tag.  Most sidebar containers will automatically include the dividers.
+
+```html_example
+<ul class="no-bullet list-divided">
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+</ul>
+```
+
 
 
 # Anchor Links
 
 <p>Links are very standard, and the color is preset to the Foundation primary color. In addition, there are some custom link styles, such as  `.icon` (when you want to include an svg icon and have it inherit its size and color states from the link) and `.secondary` when you want the link to be secondary color isntead of primary. </p>
-<p>Links inside <a href="#sidebar-modules">sidebar modules</a> and links inside <a href="#blog-blocks">Blog Blocks</a> inherit the existing text color to blend in better.</p>
+<p>Links inside <a href="#sidebar-modules">sidebar modules</a> and links inside <a href="#article-blocks">Article Blocks</a> inherit the existing text color to blend in better.</p>
 <p>Refer to <a href="#modals">Modals</a> if you are looking for information on how to make a link launch a video, image, or content block inside a modal.</p>
 <div class="callout">
   <p>To make links screen reader-friendly, avoid using vague words like "here" or "read more" within link text. The text of the link itself should adequately describe where the link goes.</p>
@@ -838,12 +855,25 @@ Use class `.hollow` for non-solid buttons.  By default, hollow buttons are gray,
 
 ---
 
-## Inverted Buttons
+## Reverse Buttons
 
-The `.inverted` style button is intended for category tags in the blog hero section only. For any other usage, choose a different button style.
+Use the `.reverse` style button when you need a hollow button on a dark background or over a photo, but you aren't placing it in a [callout](#callouts) or [carousel](#carousels) -- in those locations the button text will match the background of the callout/carousel on hover, whereas this button's hover state reverses to gray on white. 
 
 ```html_example
-<p>Inverted</p>
+<div style="background: black; padding: 1rem;">
+  <a href="#" class="reverse large button">Large button</a>
+  <a href="#" class="reverse button">Regular button</a>
+  <a href="#" class="reverse small button">Small button</a>
+</div>
+```
+
+---
+
+## Inverted Buttons
+
+The `.invert-to-blue` style button is intended for category tags in the blog hero section only. For <strong>any other usage</strong>, choose a different button style.
+
+```html_example
 <section class="hero-blended blog-detail-hero">
   <div class="row vertical-center-full">
 	  <div class="columns">
@@ -851,35 +881,12 @@ The `.inverted` style button is intended for category tags in the blog hero sect
 		  	<div class="hero-date">May 9, 2016</div>
 		    <h1 class="hero-title">Take the Anxiety Out of Your First Home Offer</h1>
 		    <div>
-		    	<a href="#" class="inverted button small">Homeownership</a>
+		    	<a href="#" class="invert-to-blue button small">Homeownership</a>
 		    </div>
 		  </div>
 		</div>
 	</div>
 </section>
-```
-
----
-
-## Inverted Hollow Buttons
-
-The `inverted-hollow` style button is intended for category tags in the featured blog posts only. For any other usage, choose a different button style.
-
-```html_example
-<div class="row medium-up-2">
-  <div class="column">
-    <div class="blog-block blog-block-lg">
-    <a href="#" class="overlay-dark">
-      <img src="/images/blog/feature-1.jpg" alt="Blog Img"/>
-      <div class="overlay-contents">
-        <div class="article-date-lg">October 18, 2016</div>
-        <h3 class="subtitle">Baby Boomer Myths: Up-Close and Personal with Sean Becketti, Chief Economist</h3>
-        <div class="button inverted-hollow small">Research &amp; Analysis</div>
-      </div>
-    </a>
-    </div>
-  </div>
-</div>
 ```
 
 ---
@@ -1021,7 +1028,7 @@ Use this hero on Blog article pages.
 		  	<div class="hero-date">May 9, 2016</div>
 		    <h1 class="hero-title">Take the Anxiety Out of Your First Home Offer</h1>
 		    <div>
-		    	<a href="#" class="inverted button small">Homeownership</a>
+		    	<a href="#" class="invert-to-blue button small">Homeownership</a>
 		    </div>
 		  </div>
 		</div>
@@ -1115,97 +1122,99 @@ For pages with a tertiary nav, the column with the title must wrap at the 8 colu
 
 
 
-# Blog Blocks
+# Article Blocks
 
-Blog Blocks are a grouping of blog entries, that include an image, headline and blurb for each entry.
+Article Blocks are a grouping of article entries, that include an image, headline, date, and optional blurb, category or author for each entry.
+
+## Blog Blocks
 
 ```html_example
 <div class="row medium-up-2 large-up-4" data-equalizer data-equalize-on="medium">
 	<div class="column">
-		<div class="blog-block" data-equalizer-watch>
+		<div class="article-block" data-equalizer-watch>
 		  <a class="overlay" href="#">
 		    <img src="/images/blog/blog-2.jpg" alt="Blog Img" />
 		  </a>
-      <div class="clippings-gridblock">
+      <div class="clippings-block-blog">
         <div class="article-date">May 13, 2016</div>
-        <h3 class="article-headline"><a href="#">Down Payments: There's Help for That</a></h3>
+        <h3 class="headline-article"><a href="#">Down Payments: There's Help for That</a></h3>
         <div class="article-category">Homeownership</div>
-        <p>Sed quis mauris at leo blandit cursus. Sed tempor gravida augue. Ut dictum enim velit, in elementum mauris vehicula sed. </p>
+        <p class="article-blurb-blog">Sed quis mauris at leo blandit cursus. Sed tempor gravida augue. Ut dictum enim velit, in elementum mauris vehicula sed. </p>
       </div>
 		</div>
 	</div>
 	<div class="column">
-		<div class="blog-block" data-equalizer-watch>
+		<div class="article-block" data-equalizer-watch>
 		  <a class="overlay" href="#">
 		    <img src="/images/blog/blog-3.jpg" alt="Blog Img" />
 		  </a>
-      <div class="clippings-gridblock">
+      <div class="clippings-block-blog">
         <div class="article-date">May 27, 2016</div>
-        <h3 class="article-headline"><a href="#">Dear Seller, Pick Me</a></h3>
+        <h3 class="headline-article"><a href="#">Dear Seller, Pick Me</a></h3>
         <div class="article-category">Notable</div>
-        <p>Sed quis mauris at leo blandit cursus. Sed tempor gravida augue. Ut dictum enim velit, in elementum mauris vehicula sed. </p>
+        <p class="article-blurb-blog">Sed quis mauris at leo blandit cursus. Sed tempor gravida augue. Ut dictum enim velit, in elementum mauris vehicula sed. </p>
       </div>
 		</div>
 	</div>
 	<div class="column">
-		<div class="blog-block" data-equalizer-watch>
+		<div class="article-block" data-equalizer-watch>
 		  <a class="overlay" href="#">
 		    <img src="/images/blog/blog-1.jpg" alt="Blog Img" />
 		  </a>
-      <div class="clippings-gridblock">
+      <div class="clippings-block-blog">
         <div class="article-date">May 30, 2016</div>
-        <h3 class="article-headline"><a href="#">Try, Try Again: Responding to a Counteroffer</a></h3>
+        <h3 class="headline-article"><a href="#">Try, Try Again: Responding to a Counteroffer</a></h3>
         <div class="article-category">Notable</div>
-        <p>Sed quis mauris at leo blandit cursus. Sed tempor gravida augue. Ut dictum enim velit, in elementum mauris vehicula sed. </p>
+        <p class="article-blurb-blog">Sed quis mauris at leo blandit cursus. Sed tempor gravida augue. Ut dictum enim velit, in elementum mauris vehicula sed. </p>
       </div>
 		</div>
 	</div>
 	<div class="column">
-    <div class="blog-block" data-equalizer-watch>
-      <a class="overlay" href="#">
-        <img src="/images/blog/blog-4.jpg" alt="Blog Img" />
-      </a>
-      <div class="clippings-gridblock">
+		<div class="article-block" data-equalizer-watch>
+		  <a class="overlay" href="#">
+		    <img src="/images/blog/blog-4.jpg" alt="Blog Img" />
+		  </a>
+      <div class="clippings-block-blog">
         <div class="article-date">June 2, 2016</div>
-        <h3 class="article-headline"><a href="#">Outlook 2016: More Apartments, Low Vacancy Rates, Higher Rent</a></h3>
+        <h3 class="headline-article"><a href="#">Outlook 2016: More Apartments, Low Vacancy Rates, Higher Rent</a></h3>
         <div class="article-category">Research &amp; Analysis</div>
-        <p>Sed quis mauris at leo blandit cursus. Sed tempor gravida augue. Ut dictum enim velit, in elementum mauris vehicula sed. </p>
+        <p class="article-blurb-blog">Sed quis mauris at leo blandit cursus. Sed tempor gravida augue. Ut dictum enim velit, in elementum mauris vehicula sed. </p>
       </div>
-    </div>
-  </div>
+		</div>
+	</div>
 </div>
 ```
 
 
 
-# Blog Feature
+# Feature Articles
+
+## Featured Blog Articles
 
 On the blog landing page, the first 2 entries are featured with large images and different styling to make them more prominent.
 
 ```html_example
 <div class="row">
   <div class="columns large-6">
-    <div class="blog-block blog-block-lg">
-      <a href="/corporate/blog-detail.html" class="overlay-dark">
+    <div class="article-block article-block-lg">
+      <a href="/corporate/blog-detail.html" class="overlay overlay-dark">
         <img src="/images/blog/feature-1.jpg" alt="Blog Img"/>
-        <div class="darken"></div>
         <div class="overlay-contents">
           <div class="article-date-lg">October 18, 2016</div>
           <h3 class="subtitle">Baby Boomer Myths: Up-Close and Personal with Sean Becketti, Chief Economist</h3>
-          <div class="button inverted-hollow">Research &amp; Analysis</div>
+          <div class="button reverse">Research &amp; Analysis</div>
         </div>
       </a>
     </div>
   </div>
   <div class="columns large-6">
-    <div class="blog-block blog-block-lg">
-      <a href="/corporate/blog-detail.html" class="overlay-dark">
+    <div class="article-block article-block-lg">
+      <a href="/corporate/blog-detail.html" class="overlay overlay-dark">
         <img src="/images/blog/feature-2.jpg" alt="Blog Img"/>
-        <div class="darken"></div>
         <div class="overlay-contents">
           <div class="article-date-lg">Oct 13, 2016</div>
           <h3 class="subtitle">Don't Be Spoofed</h3>
-          <div class="button inverted-hollow">Notable</div>
+          <div class="button reverse">Notable</div>
         </div>
       </a>
     </div>
@@ -1406,7 +1415,7 @@ A Callout Fullwidth Band is a full width band of content.  On most interior page
 #  Sidebar Modules
 
 <p class="lead">There are a variety of modules available for use in a side bar, when you are using the Two Column Layout.</p>
-<p>Links inside <a href="#sidebar-modules">sidebar modules</a> inherit the existing text color to blend in better.</p>
+<p>Links inside most <a href="#sidebar-modules">sidebar modules</a> inherit the existing text color to blend in better.</p>
 
 ---
 
@@ -1454,7 +1463,7 @@ A Callout Fullwidth Band is a full width band of content.  On most interior page
 <section class="sidebar sidebar-blue">
   <div class="row">
     <div class="sidebar-txt">
-      <h2 class="subtitle">Get The Weekly Roundup</h2>
+      <h2 class="sidebar-subtitle">Get The Weekly Roundup</h2>
       <p>Sign up for the <strong>Weekly Roundup</strong> and get Freddie Mac blog articles delivered to your inbox.</p>
       <form class="form outline outline-primary">
         <p><input type="email" placeholder="Your Email Address"></p>
@@ -1472,7 +1481,7 @@ A Callout Fullwidth Band is a full width band of content.  On most interior page
     <section class="sidebar sidebar-blue">
       <div class="row">
         <div class="sidebar-txt">
-          <h2 class="subtitle">Get The Weekly Roundup</h2>
+          <h2 class="sidebar-subtitle">Get The Weekly Roundup</h2>
           <p>Sign up for the <strong>Weekly Roundup</strong> and get Freddie Mac blog articles delivered to your inbox.</p>
           <form class="form outline outline-primary">
             <p><input type="email" placeholder="Your Email Address"></p>
@@ -1532,11 +1541,11 @@ Note: The news release lists are automated by MarketWire.
 ```html
 <section class="sidebar sidebar-concrete">
   <div class="row">
-    <h2 class="subtitle">Recent News</h2>
+    <h2 class="sidebar-subtitle">Recent News</h2>
     <ul class="sidebar-list no-bullet lightest-weight">
-      <li><a href="#">Freddie Mac Issues Dodd-Frank Stress Test Results <br>08/08/16 -  MCLEAN, VA--(Marketwired - Aug 8, 2016) - &nbsp;Freddie Mac (OTCQB: FMCC) today issued the company's stress test results for the severely adverse scenario conducted under FHFA's rule...</a></li>
-      <li><a href="#">Freddie Mac Reports Second Quarter 2016 Financial Results <br>08/02/16 -  MCLEAN, VA--(Marketwired - Aug 2, 2016) -  Freddie Mac (OTCQB: FMCC) today reported its second quarter 2016 financial results and filed its quarterly Form 10-Q with the U.S. Securities...</a></li>
-      <li><a href="#">Freddie Mac Sets Release Date for Second Quarter 2016 Financial Results <br>Jul 29, 2016 - MCLEAN, VA--(Marketwired - Jul 29, 2016) -  Freddie Mac (OTCQB: FMCC) announced today that it plans to report its second quarter 2016 financial results before the U.S. financial markets...</a></li>	
+      <li><a href="#">Freddie Mac Issues Dodd-Frank Stress Test Results</a> <br>08/08/16 -  MCLEAN, VA--(Marketwired - Aug 8, 2016) - &nbsp;Freddie Mac (OTCQB: FMCC) today issued the company's stress test results for the severely adverse scenario conducted under FHFA's rule...</li>
+      <li><a href="#">Freddie Mac Reports Second Quarter 2016 Financial Results</a> <br>08/02/16 -  MCLEAN, VA--(Marketwired - Aug 2, 2016) -  Freddie Mac (OTCQB: FMCC) today reported its second quarter 2016 financial results and filed its quarterly Form 10-Q with the U.S. Securities...</li>
+      <li><a href="#">Freddie Mac Sets Release Date for Second Quarter 2016 Financial Results</a> <br>Jul 29, 2016 - MCLEAN, VA--(Marketwired - Jul 29, 2016) -  Freddie Mac (OTCQB: FMCC) announced today that it plans to report its second quarter 2016 financial results before the U.S. financial markets...</li>	
     </ul>
   </div>
 </section>
@@ -1548,11 +1557,11 @@ Note: The news release lists are automated by MarketWire.
   <aside>
     <section class="sidebar sidebar-concrete">
       <div class="row">
-        <h2 class="subtitle">Recent News</h2>
+        <h2 class="sidebar-subtitle">Recent News</h2>
         <ul class="sidebar-list no-bullet lightest-weight">
-          <li><a href="#">Freddie Mac Issues Dodd-Frank Stress Test Results <br>08/08/16 -  MCLEAN, VA--(Marketwired - Aug 8, 2016) - &nbsp;Freddie Mac (OTCQB: FMCC) today issued the company's stress test results for the severely adverse scenario conducted under FHFA's rule...</a></li>
-          <li><a href="#">Freddie Mac Reports Second Quarter 2016 Financial Results <br>08/02/16 -  MCLEAN, VA--(Marketwired - Aug 2, 2016) -  Freddie Mac (OTCQB: FMCC) today reported its second quarter 2016 financial results and filed its quarterly Form 10-Q with the U.S. Securities...</a></li>
-          <li><a href="#">Freddie Mac Sets Release Date for Second Quarter 2016 Financial Results <br>Jul 29, 2016 - MCLEAN, VA--(Marketwired - Jul 29, 2016) -  Freddie Mac (OTCQB: FMCC) announced today that it plans to report its second quarter 2016 financial results before the U.S. financial markets...</a></li>	
+          <li><a href="#">Freddie Mac Issues Dodd-Frank Stress Test Results</a> <br>08/08/16 -  MCLEAN, VA--(Marketwired - Aug 8, 2016) - &nbsp;Freddie Mac (OTCQB: FMCC) today issued the company's stress test results for the severely adverse scenario conducted under FHFA's rule...</li>
+          <li><a href="#">Freddie Mac Reports Second Quarter 2016 Financial Results</a> <br>08/02/16 -  MCLEAN, VA--(Marketwired - Aug 2, 2016) -  Freddie Mac (OTCQB: FMCC) today reported its second quarter 2016 financial results and filed its quarterly Form 10-Q with the U.S. Securities...</li>
+          <li><a href="#">Freddie Mac Sets Release Date for Second Quarter 2016 Financial Results</a> <br>Jul 29, 2016 - MCLEAN, VA--(Marketwired - Jul 29, 2016) -  Freddie Mac (OTCQB: FMCC) announced today that it plans to report its second quarter 2016 financial results before the U.S. financial markets...</li>	
         </ul>
       </div>
     </section>
@@ -1569,7 +1578,7 @@ Note: The news release lists are automated by MarketWire.
   <div class="row">
     <div class="sidebar-txt">
       <div class="article-category">Featured Insight</div>
-      <h3 class="subtitle">Life's a Beach</h3>
+      <h3 class="sidebar-subtitle">Life's a Beach</h3>
       <p class="lead">So you've always dreamed of living at the beach, but you're discouraged by the high price of beachfront property? Not to worry. We've found just the place for you.  </p>
       <p><a class="hollow button expand" href="#">Read More</a></p>
     </div>
@@ -1586,7 +1595,7 @@ Note: The news release lists are automated by MarketWire.
       <div class="row">
         <div class="sidebar-txt">
           <div class="article-category">Featured Insight</div>
-          <h3 class="subtitle">Life's a Beach</h3>
+          <h3 class="sidebar-subtitle">Life's a Beach</h3>
           <p class="lead">So you've always dreamed of living at the beach, but you're discouraged by the high price of beachfront property? Not to worry. We've found just the place for you.  </p>
           <p><a class="hollow button expand" href="#">Read More</a></p>
         </div>
@@ -1602,7 +1611,7 @@ Note: The news release lists are automated by MarketWire.
 ```html
 <section class="sidebar sidebar-concrete">
   <div class="row">
-    <h2 class="subtitle">Recent Posts</h2>
+    <h2 class="sidebar-subtitle">Recent Posts</h2>
     <ul class="sidebar-list no-bullet">
       <li class="media-object">
         <div class="media-object-section">
@@ -1612,7 +1621,7 @@ Note: The news release lists are automated by MarketWire.
         </div>
         <div class="media-object-section">
           <div class="article-date">May 9, 2016</div>
-          <h3 class="article-headline-sidebar"><a href="#">Homework and a Home Purchase</a></h3>
+          <h3 class="headline-article-sidebar"><a href="#">Homework and a Home Purchase</a></h3>
           <div class="article-category">Homeownership</div>
         </div>
       </li>
@@ -1624,7 +1633,7 @@ Note: The news release lists are automated by MarketWire.
         </div>
         <div class="media-object-section">
           <div class="article-date">May 2, 2016</div>
-          <h3 class="article-headline-sidebar"><a href="#">Law Enforcement Cracking Down on Home Rental Scams</a></h3>
+          <h3 class="headline-article-sidebar"><a href="#">Law Enforcement Cracking Down on Home Rental Scams</a></h3>
           <div class="article-category">Rental Housing</div>
         </div>
       </li>
@@ -1636,7 +1645,7 @@ Note: The news release lists are automated by MarketWire.
         </div>
         <div class="media-object-section">
           <div class="article-date">April 23, 2016</div>
-          <h3 class="article-headline-sidebar"><a href="#">A Slow Start to the Best Year in Home Sales in a Decade</a></h3>
+          <h3 class="headline-article-sidebar"><a href="#">A Slow Start to the Best Year in Home Sales in a Decade</a></h3>
           <div class="article-category">Research &amp; Analysis</div>
         </div>
       </li>
@@ -1651,7 +1660,7 @@ Note: The news release lists are automated by MarketWire.
   <aside>
     <section class="sidebar sidebar-concrete">
       <div class="row">
-        <h2 class="subtitle">Recent Posts</h2>
+        <h2 class="sidebar-subtitle">Recent Posts</h2>
           <ul class="sidebar-list no-bullet">
             <li class="media-object">
               <div class="media-object-section">
@@ -1661,7 +1670,7 @@ Note: The news release lists are automated by MarketWire.
               </div>
               <div class="media-object-section">
                 <div class="article-date">May 9, 2016</div>
-                <h3 class="article-headline-sidebar"><a href="#">Homework and a Home Purchase</a></h3>
+                <h3 class="headline-article-sidebar"><a href="#">Homework and a Home Purchase</a></h3>
                 <div class="article-category">Homeownership</div>
               </div>
             </li>
@@ -1673,7 +1682,7 @@ Note: The news release lists are automated by MarketWire.
               </div>
               <div class="media-object-section">
                 <div class="article-date">May 2, 2016</div>
-                <h3 class="article-headline-sidebar"><a href="#">Law Enforcement Cracking Down on Home Rental Scams</a></h3>
+                <h3 class="headline-article-sidebar"><a href="#">Law Enforcement Cracking Down on Home Rental Scams</a></h3>
                 <div class="article-category">Rental Housing</div>
               </div>
             </li>
@@ -1685,7 +1694,7 @@ Note: The news release lists are automated by MarketWire.
               </div>
               <div class="media-object-section">
                 <div class="article-date">April 23, 2016</div>
-                <h3 class="article-headline-sidebar"><a href="#">A Slow Start to the Best Year in Home Sales in a Decade</a></h3>
+                <h3 class="headline-article-sidebar"><a href="#">A Slow Start to the Best Year in Home Sales in a Decade</a></h3>
                 <div class="article-category">Research &amp; Analysis</div>
               </div>
             </li>

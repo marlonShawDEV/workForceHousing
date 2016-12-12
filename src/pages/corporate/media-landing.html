@@ -1,4 +1,4 @@
----
+﻿---
 title: Media Landing
 layout: corporate
 ---
@@ -11,6 +11,32 @@ layout: corporate
 		</div>
 	</div>
 </section>
+
+<!-- START TWO COLUMN LAYOUT NO HERO -->
+<section class="two-column-layout">  
+  <!-- START MAIN PAGE CONTENT -->
+  <main>
+  <div class="column">
+    <h2>Latest Press Releases</h2>
+    <ul class="recent-headlines-container no-bullet lightest-weight list-divided">
+    <li><p class="text-center"><img src="/images/icon-loading.gif"></p></li>
+    </ul>
+  </div>  
+  </main>
+    <!-- END MAIN PAGE CONTENT -->
+    <!-- START RIGHT SIDEBAR -->
+    <aside>    
+      {{> sidebar-contact-media}}
+      {{> sidebar-cta-media}}
+      {{> sidebar-rss-media}}     
+    </aside>
+    <!-- END RIGHT SIDEBAR -->
+  </div>
+</section>
+<!-- END TWO COLUMN LAYOUT  -->
+
+
+
 
 {{> share-widget}}
 <div class="callout callout-yellow callout-fullwidth">

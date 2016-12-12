@@ -1,13 +1,14 @@
-jQuery.urlShortener.settings.apiKey='AIzaSyDAg5VvraTof2uGrJm-ESMov1q4s24o_70';
-jQuery.urlShortener({
-  success: function (shortUrl) {
-     $('.sharelink-twitter').attr('data-location',shortUrl);
-  },
-  error: function(err) {
-    window.console && console.log(JSON.stringify(err));
-  }
-});
-
+if(typeof jQuery.urlShortener !== "undefined") {
+  jQuery.urlShortener.settings.apiKey='AIzaSyDAg5VvraTof2uGrJm-ESMov1q4s24o_70';
+  jQuery.urlShortener({
+    success: function (shortUrl) {
+       $('.sharelink-twitter').attr('data-location',shortUrl);
+    },
+    error: function(err) {
+      window.console && console.log(JSON.stringify(err));
+    }
+  });
+}
 function shareLinkUpdate1(){
   var winProps = 'channelmode=no,directories=no,fullscreen=no,status=no,toolbar=no,width=400,height=400,modal=yes,alwaysRaised=yes,resizable=yes',
       lnk = encodeURIComponent(location),
@@ -21,7 +22,7 @@ function shareLinkUpdate1(){
       fblink = 'https://www.facebook.com/sharer/sharer.php?u='+lnk,
       lilink = 'https://www.linkedin.com/shareArticle?mini=true&url='+lnk+'&title='+txt+'&source='+lnk+'&summary='+summary,
       mtlink = 'mailto:?body=Sharing%20link%20'+lnk+'&Subject='+txt,
-      twlink = 'https://twitter.com/intent/tweet/?text='+txt+'&url='+encodeURIComponent(dtlnk)+'&via=freddiemac';
+      twlink = 'https://twitter.com/intent/tweet/?text='+txt+'&url='+dtlnk+'&via=freddiemac';
   $('.sharelink-mailto').attr('href',mtlink);
   $('.sharelink-facebook').attr('href', fblink).on('click', function(e){ e.preventDefault(); 
       var sharer_modal = window.open(fblink, 'Sharer Window', winProps, true); 

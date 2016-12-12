@@ -1,3 +1,5 @@
 {
-  "directory": "bower_components"
+  "directory": "bower_components", 
+  "proxy": "http://f252953:3UDQCXgexoz2%24%23%40!@bproxy.fhlmc.com:8080",
+  "https-proxy": "http://f252953:3UDQCXgexoz2%24%23%40!@bproxy.fhlmc.com:8080"
 }

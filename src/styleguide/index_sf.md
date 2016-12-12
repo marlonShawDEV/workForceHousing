@@ -1,4 +1,4 @@
-# The Grid
+﻿# The Grid
 
 <p class="lead">Problem: You've got tons of content, each needing different sized vertical columns, and don't know how to quick and easily get it all done. Solution: The awesome grid!</p>
 

@@ -1,6 +1,6 @@
 # ZURB Template for FM Responsive Redesign
 
-[![npm version](https://badge.fury.io/js/foundation-sites.svg)](https://badge.fury.io/js/foundation-sites) [![Bower version](https://badge.fury.io/bo/foundation-sites.svg)](https://badge.fury.io/bo/foundation-sites) [![devDependency Status](https://david-dm.org/zurb/foundation-sites/dev-status.svg)](https://david-dm.org/zurb/foundation-sites#info=devDependencies) 
+[![devDependency Status](https://david-dm.org/zurb/foundation-zurb-template/dev-status.svg)](https://david-dm.org/zurb/foundation-zurb-template#info=devDependencies)  
 
 **Please open all issues with this template on the main [Foundation for Sites](https://github.com/zurb/foundation-sites/issues) repo.**
 
@@ -31,9 +31,7 @@ To manually set up the template, first download it with Git. If you have are beh
 git clone https://github.com/SCarrero/fmzurb.git fmzurb
 ```
 
-
-
-Then open the fmzurb folder in your command line, and install the needed dependencies. If you have are behind a corporate firewall and have trouble with npm or bower, update your proxy settings:
+Then open the fmzurb folder in your command line, and install the needed dependencies. If you have are behind a corporate firewall and have trouble with npm or bower, update your proxy settings.
 
 ```bash
 cd fmzurb
@@ -60,4 +58,4 @@ Your finished styleguide will be created in `dist/styleguide.html`, viewable at 
 http://localhost:8000/styleguide/
 ```
 
-To create compressed, production-ready assets, run `npm run build`.
+To create compressed, production-ready assets, run `npm run build --production`.

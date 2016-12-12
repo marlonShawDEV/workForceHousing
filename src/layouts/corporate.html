@@ -1,4 +1,4 @@
-{{!-- This is the base layout for your project, and will be used on every page. --}}
+﻿{{!-- This is the base layout for your project, and will be used on every page. --}}
 
 <!doctype html>
 <html class="no-js" lang="en">
@@ -6,8 +6,9 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>{{ title }}</title>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900' rel='stylesheet' type='text/css' />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet" />
     <link rel="stylesheet" href="/ss/app_corp.css" />
   </head>
   <body>
@@ -29,7 +30,7 @@
     <!--[if gte IE 9]><!-->
     <script>window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"><\/'+'script>')</script>
     <!--<![endif]-->
-    <script>window.jQuery || document.write('<script src="{{root}}/js/vendor/jquery-2.1.4.min.js"><\/'+'script>')</script>
+    <script>window.jQuery || document.write('<script src="/js/vendor/jquery-2.1.4.min.js"><\/'+'script>')</script>
     <script src="/js/app_corp.js"></script>
   </body>
 </html>

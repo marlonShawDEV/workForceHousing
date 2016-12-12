@@ -87,6 +87,9 @@ $callout-palette: (
         margin: 0.25rem 0;
       }
     }
+    &.callout-concrete {
+      padding: $global-padding * 2 0;
+    }
   }
   .callout-fullwidth-cta {   
     text-align: center;

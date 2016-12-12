@@ -147,7 +147,18 @@ $button-opacity-disabled: 0.25 !default;
       @include button-expand; 
     }
   }
-
+	&.reverse {
+		background: transparent;
+      color: $white;
+      border-color: $white;
+		&:hover,
+    &:focus,
+    &:active {
+      background: $white;
+      color: $fm-gray;
+      border-color: $fm-gray;
+		}
+	}
 	&.hollow {
     color: $fm-gray;
     border-color: currentColor;
@@ -171,7 +182,7 @@ $button-opacity-disabled: 0.25 !default;
     } 
 	}
 
-	&.inverted {
+	&.invert-to-blue {
 		background: $white;
 		color: $fm-blue;
 		&:hover,
@@ -180,11 +191,6 @@ $button-opacity-disabled: 0.25 !default;
 			color: $white;
 		}
 	}
-	&.inverted-hollow {
-		background: transparent;
-		color: $white;
-    border-color: $white;
-	}  
   // Disabled style
   &.disabled,
   &[disabled] {

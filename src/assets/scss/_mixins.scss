@@ -1,19 +1,10 @@
 // text underline transition
-@mixin underline-transition($color, $width) {
-  &::after {
-    content: '';
-    border-bottom: $width solid transparent;
-    display: block;
-    transition: 0.35s ease;
-    width: 0;
-    white-space: nowrap;
-  }
+@mixin underline-transition($color: $white, $width: 1px) {
+  transition: border-bottom-color 0.25s ease 0s;
+  border-bottom: $width solid rgba($color, 0);
   &:hover,
   &:focus  {
-    &::after {
-      border-bottom: $width solid $color;
-      width: 100%;
-    }
+    border-bottom: $width solid rgba($color, 0.65);
   }
 }
 // desktop dropdown items from ribbon and corp nav
@@ -55,12 +46,24 @@
     border-bottom-color: $fm-green;              
   }
 }
+@mixin list-divided($color: $light-gray){  
+  li + li {
+    border-top: 1px solid $color; 
+  }  
+  li { 
+    padding: $global-padding/2 0;
+    &:last-child { 
+      padding-bottom: 0;
+    }
+  }
+  
+}
 // anchors that aren't buttons, when used over dark backgrounds (modals, rotators, call outs, etc.)
-@mixin anchor-on-dark(){
+@mixin anchor-on-dark($decoration: underline){
   &:not(.button) { 
     color: currentColor;
-    text-decoration: underline;
     position: relative;
+    text-decoration: $decoration;
     &::after {
       content: "";
       position: absolute;
@@ -68,16 +71,15 @@
       top: 0;
       width: 100%;
       height: 100%;
-      background: currentColor;
-      opacity: 0;   
-      transition: opacity 0.3s ease 0s;      
+      background: rgba($white, 0);
+      transition: background 0.3s ease 0s;      
     }
     &:hover::after,
     &:focus::after  {
-      opacity: 0.25;
+      background: rgba($white, 0.2);
     }
     &:active::after  {
-      opacity: 0.4;
+      background: rgba($white, 0.35);
       transition: none;
     }
   }  

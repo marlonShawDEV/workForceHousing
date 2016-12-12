@@ -5,6 +5,7 @@ PORT: 8000
 COMPATIBILITY:
   - "last 2 versions"
   - "ie >= 9"
+  - "and_chr >= 2.3"
 
 # UnCSS will use these settings
 UNCSS_OPTIONS:
@@ -55,10 +56,17 @@ PATHS:
     - "bower_components/foundation-sites/js/foundation.tabs.js"
     - "bower_components/foundation-sites/js/foundation.toggler.js"
     - "bower_components/foundation-sites/js/foundation.tooltip.js"
-    # Paths to your own project code are here    
-    - "src/assets/js/mediaBreakpoints.js"
+    # Paths to your own project code are here   
+    - "src/assets/js/headerNav_corp.js"
     - "src/assets/js/adjustSidebar.js"
+    - "src/assets/js/homepage-careers-module.js"
+    - "src/assets/js/prepModals.js"
+    - "src/assets/js/prepRotators.js" 
+    - "src/assets/js/fakeNav_corp.js"   
     - "src/assets/js/app_corp.js"
+    - "src/assets/js/mw_json.js"
+    # "src/assets/js/jQuery-url-shortener.js"  #uncomment for prod code. slows things down to much locally.
+    - "src/assets/js/share_widget.js"
     # Paths to JavaScript libraries, which are compined into one file
   javascriptsf:
     # Libraries requried by Foundation
@@ -88,8 +96,7 @@ PATHS:
     - "bower_components/foundation-sites/js/foundation.tabs.js"
     - "bower_components/foundation-sites/js/foundation.toggler.js"
     - "bower_components/foundation-sites/js/foundation.tooltip.js"
-    # Paths to your own project code are here    
-    - "src/assets/js/mediaBreakpoints.js"
+    # Paths to your own project code are here 
     - "src/assets/js/app_sf.js"
   javascriptmf:
     # Libraries requried by Foundation
@@ -120,7 +127,6 @@ PATHS:
     - "bower_components/foundation-sites/js/foundation.toggler.js"
     - "bower_components/foundation-sites/js/foundation.tooltip.js"
     # Paths to your own project code are here
-    - "src/assets/js/mediaBreakpoints.js"
     - "src/assets/js/app_mf.js"
   javascriptinvest:
     # Libraries requried by Foundation
@@ -151,5 +157,4 @@ PATHS:
     - "bower_components/foundation-sites/js/foundation.toggler.js"
     - "bower_components/foundation-sites/js/foundation.tooltip.js"
     # Paths to your own project code are here
-    - "src/assets/js/mediaBreakpoints.js"
     - "src/assets/js/app_invest.js"

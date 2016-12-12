@@ -1,6 +1,7 @@
 
-.blog-block,
-.sidebar {
+.article-block,
+.headline-article-sidebar,
+.clippings-block-author {
   a {
     color: inherit;
   }
@@ -30,18 +31,13 @@
     }     
   }
   &.overlay-dark {
-    color: $white;
+    transition: none;
     .overlay-contents { 
-      padding: $gutter $gutter * 1.5 $gutter * 1.5;
       @include breakpoint(small) {
         background: $fm-gray;
       } 
-      @include breakpoint(medium) {        
+      @include breakpoint(medium) {       
         background: transparent;
-        position: absolute;
-        bottom: 0;
-        left:0;
-        right:0; 
         padding-top: $gutter * 2.25;
       }
     } 
@@ -55,6 +51,40 @@
           background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.75) 100%);
         }
       }
+    }
+  }
+  &.overlay-gradient {
+    background: $fm-blue;
+    .overlay-contents { 
+      @include breakpoint(medium) {     
+        top: 0;
+        padding-left: $gutter;
+        padding-right: 40%; 
+        background: linear-gradient(to right, rgba($fm-blue,0.7) 0%,rgba($fm-blue,0.7) 40%,rgba($fm-blue,0.5) 100%);
+      }  
+      @include breakpoint(xlarge) {   
+        padding-right: 38%;
+      }  
+      @include breakpoint(xxlarge) {   
+        padding: $gutter * 1.5 40% $gutter $gutter * 2; 
+      }  
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      img {
+        opacity: 0.75;
+      }
+    }       
+  }
+  .overlay-contents {
+    color: $white;
+    padding: $gutter $gutter * 1.5 $gutter * 1.5;
+    @include breakpoint(medium) {   
+      position: absolute;
+      bottom: 0;
+      left:0;
+      right:0; 
     }
   }
 }

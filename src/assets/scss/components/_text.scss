@@ -72,7 +72,6 @@ h6 {
   font-size: rem-calc(32);
   font-size: calc(32px +  20 * (100vw - 320px)/1080); 
   font-weight: $global-weight-medium;
-  line-height: 1.2;
 	@include breakpoint(xxlarge) {
     font-size: rem-calc(52);
   }
@@ -82,7 +81,6 @@ h6 {
   font-size: calc(32px +  20 * (100vw - 320px)/1080); 
   margin-bottom: 0.5em;
   font-weight: $global-weight-black;
-  line-height: 1.2;
   @include breakpoint(xxlarge) {
     font-size: rem-calc(52);
     margin-bottom: 2rem;
@@ -90,10 +88,22 @@ h6 {
 }
 .subtitle {
   font-size: rem-calc(18);
+  font-size: calc(18px +  14 * (100vw - 320px)/1080); 
+  font-weight: $global-weight-bold;
+  margin: 0 0 0.375em;  
+  @include breakpoint(xlarge) {
+		font-size: rem-calc(26);
+    font-size: calc(26px +  6 * (100vw - 1180px)/220); 
+	}
+  @include breakpoint(xxlarge) {
+		font-size: rem-calc(32);
+	}
+}
+.sidebar-subtitle {
+  font-size: rem-calc(18);
   font-size: calc(18px +  12 * (100vw - 320px)/1080); 
   font-weight: $global-weight-bold;
   margin: 0 0 0.375em;
-  line-height: 1.2;
   @include breakpoint(xxlarge) {
 		font-size: rem-calc(30);
 	}
@@ -103,7 +113,6 @@ h6 {
   font-size: calc(22px +  10 * (100vw - 320px)/1080); 
   font-weight: $global-weight-bold;
   margin: 0 0 0.375em;
-  line-height: 1.2;
   @include breakpoint(xxlarge) {
 		font-size: rem-calc(32);
 	}
@@ -114,12 +123,11 @@ h6 {
   font-weight: $global-weight-medium;
   color: inherit;
   margin-bottom: 1em;
-  line-height: 1.2;
   @include breakpoint(xxlarge) {
 		font-size: rem-calc(22);
 	}
 }
-.article-headline {
+.headline-article {
   font-size: rem-calc(16);
   font-size: calc(16px +  6 * (100vw - 320px)/1080); 
   font-weight: $global-weight-medium;
@@ -128,7 +136,17 @@ h6 {
 		font-size: rem-calc(22);
 	}
 }
-.article-headline-sidebar {
+.headline-perspectives {
+  font-size: rem-calc(17);
+  font-size: calc(17px +  7 * (100vw - 320px)/1080); 
+  font-weight: $global-weight-medium;
+  margin-top: 0.2em;  
+  @include breakpoint(xxlarge) {
+		font-size: rem-calc(24);
+	}
+}
+.headline-article-sidebar,
+.stat-points {
   font-size: rem-calc(15);
   font-size: calc(15px +  3 * (100vw - 320px)/1080); 
   font-weight: $global-weight-medium;
@@ -157,13 +175,60 @@ h6 {
 		font-size: rem-calc(14);
 	}
 }
+.article-author {
+  font-size: rem-calc(15);
+  font-weight: $global-weight-bold;
+  color: inherit;
+  line-height: 1.2;
+	@include breakpoint(xxlarge) {
+		font-size: rem-calc(16);
+	}
+}
+
+.article-blurb {
+  @include show-for(medium);
+  font-size: rem-calc(13);
+  font-size: calc(13px +  3 * (100vw - 320px)/1080);
+	@include breakpoint(xxlarge) {
+		font-size: rem-calc(16);
+	}
+}
+.article-blurb-blog {
+  @include show-for(medium);
+  font-size: rem-calc(13);
+	@include breakpoint(large) {
+		font-size: rem-calc(14);
+	}
+}
+.article-blurb-perspectives {
+  @include show-for(medium);
+  font-size: rem-calc(14);
+  font-size: calc(14px +  2 * (100vw - 320px)/1080);
+  font-weight: $global-weight-light;
+	@include breakpoint(xxlarge) {
+		font-size: rem-calc(16);
+	}
+
+}
+.article-blurb-lg {
+  @include show-for(medium);
+  font-size: calc(14px +  4 * (100vw - 320px)/1080);
+  font-weight: $global-weight-light;
+  line-height: 1.3; 
+  margin: 0.8em 0;
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(18);
+  }
+}
 .article-date-lg {
   font-size: rem-calc(14);
+  font-size: calc(14px +  4 * (100vw - 320px)/1080);
+  padding-bottom: 0.25em;
   font-weight: $global-weight-medium;
   color: inherit;
   text-transform: uppercase;
   opacity: 0.75;
-	@include breakpoint(medium) {
+	@include breakpoint(xxlarge) {
 		font-size: rem-calc(18);
 	}
 }
@@ -202,7 +267,6 @@ h6 {
   font-size: calc(26px +  6 * (100vw - 320px)/1080);
   font-weight: $global-weight-bold;
   text-transform: uppercase;
-	line-height: 1.2;
   margin-bottom: $global-margin;
   @include breakpoint(xxlarge) {
 		font-size: rem-calc(32);
@@ -212,7 +276,6 @@ h6 {
   font-weight: $global-weight-light;
   font-size: rem-calc(26);
   font-size: calc(26px +  12 * (100vw - 320px)/1080);
-  line-height: 1.2;
   @include breakpoint(xxlarge) {
     font-size: rem-calc(38);
   }  
@@ -225,7 +288,7 @@ h6 {
 		font-size: rem-calc(38);
 	}
 }
-.stat {
+.stat-sm {
 	font-size: 24px;
   font-size: calc(24px +  (52 - 24) * (100vw - 320px)/1080);  
   @include breakpoint(xxlarge) { 

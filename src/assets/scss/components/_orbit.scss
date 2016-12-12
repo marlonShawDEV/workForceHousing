@@ -91,9 +91,9 @@ $orbit-palette: (
 }
 .orbit-slide {
   color: $white;  
-  a {
-    @include anchor-on-dark;
-  }
+    a {
+      @include anchor-on-dark;
+    }     
   .row div:last-child {
     padding: $global-padding $global-padding * 3 0 $global-padding;
   }

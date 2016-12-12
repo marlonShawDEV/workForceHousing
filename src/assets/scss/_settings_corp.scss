@@ -136,12 +136,12 @@ $header-sizes: (
   ),
 );
 $header-color: inherit;
-$header-lineheight: 1.4;
+$header-lineheight: 1.2;
 $header-margin-bottom: 0.5em;
 $header-text-rendering: optimizeLegibility;
 $small-font-size: 80%;
 $header-small-font-color: inherit;
-$paragraph-lineheight: 1.6;
+$paragraph-lineheight: inherit;
 $paragraph-margin-bottom: 1rem;
 $paragraph-text-rendering: optimizeLegibility;
 $code-color: $black;
@@ -188,7 +188,7 @@ $subheader-color: $dark-gray;
 $subheader-font-weight: $global-weight-normal;
 $subheader-margin-top: 0.2rem;
 $subheader-margin-bottom: 0.5rem;
-$stat-font-size: rem-calc(24);
+$stat-font-size: rem-calc(38);
 
 // 6. Abide
 // --------

@@ -49,7 +49,7 @@ $overlay-palette: (
     &.overlay-#{$name} {      
       background-color: $color;
       color: $white;
-      a {
+      a{
         @include anchor-on-dark;
       }     
       .button.hollow {
@@ -98,10 +98,10 @@ $overlay-palette: (
       @include breakpoint(medium) {
         font-size: rem-calc(20);
       }
-      :last-child { margin-bottom: 0;}          
+      :last-child { margin-bottom: 0;}      
       a {
         @include anchor-on-dark;
-      } 
+      }     
     }    
   }
   .gallery-previous {  
