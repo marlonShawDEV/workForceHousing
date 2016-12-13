@@ -8,6 +8,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>{{ title }}</title>
+    <meta name="author" content="" />
+    <meta name="abstract" content="" />
+    <meta name="keywords" content="" />
+    <meta name="date" scheme="RFC822" content="" />
+    <meta name="category" content="" />
+    <meta name="twitter:card" content="" />
+    <meta name="twitter:site" content="@FreddieMac" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
     <link rel="stylesheet" href="/ss/app_corp.css" />
   </head>
   <body class="grid-2col-tertiary">
@@ -17,21 +31,9 @@
     {{> nav-corp-primary}}
     {{> nav-corp-secondary}}
   </header>      
-   
-    {{> body}}
-  
-  
+     {{> body}}
     {{> footer-corp}}
-
-    
-    <!--[if lt IE 9]>
-    <script>window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"><\/'+'script>')</script>
-    <![endif]-->
-    <!--[if gte IE 9]><!-->
-    <script>window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"><\/'+'script>')</script>
-    <!--<![endif]-->
-    <script>window.jQuery || document.write('<script src="/js/vendor/jquery-2.1.4.min.js"><\/'+'script>')</script>
-    <script src="/js/app_corp.js"></script>
+    {{> footer-js-corp}}
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet" />
   </body>
 </html>
