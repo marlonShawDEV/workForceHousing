@@ -33,9 +33,18 @@
 .horizontal-center {
   @include horizontal-center;
 }
+.two-column-layout {
+  .two-column-row {
+    @include clearfix;     
+    @include breakpoint(large) {  
+      @include grid-column-row($gutter);  
+    }  
+    &.row {
+      padding: 0;
+    }
+  } 
+}
 main {
-	font-weight: $global-weight-light;
-	padding: $gutter * 2.5 $gutter/2;
 	figure {
 		margin: $global-margin * 2 0;
 		img {
@@ -48,75 +57,94 @@ main {
 			}
 		}
 	}
-}
-
-.two-column-layout {
-  @include clearfix;
-  @include breakpoint(large) { 
-    @include grid-column-row($gutter);
-  }
-	main {
+  &.column {
+    padding: $gutter * 2.5 $gutter $gutter * 2 $gutter;    
     @include breakpoint(large) { 
-      float: left;
+      max-width: 55em;    
       width: calc(100% - 23em);
-      padding-left: 0;
-      padding-right: 0;      
+      padding-right: 2em;
+      float: left;
     }
     @include breakpoint(xlarge) {
-      width: 66.666666%;
+      max-width: 59em;    
+      @include grid-column(1, $gutter * 2); 
+      @include grid-column-size(66.666666%);
+      padding-right: 4em;
     }
-    > .column {
-      @include breakpoint(medium) {      
-        padding-right: 2rem; 
-        max-width: 51.25rem;  
+    @include breakpoint(xxlarge) {
+      max-width: 61.5em;    
+      padding-right: 6.5em;
+    }
+    > .jut {
+      @include breakpoint(large) { 
+        width: calc(100% + 2em); 
       }
-      > .row {    
-        margin-left: -0.625rem;
-        margin-right: -0.625rem;
-        padding-right: 0;
-        padding-left: 0;
-        max-width: none;  
-      } 
-      .jut {
-        @include breakpoint(xxlarge) { 
-          width: 115%;
-        }
-      }      
-    }
-	}
-	aside {
-    clear: both;
-    @include breakpoint(large) {
-      clear: initial;
-      float: right;
-      width: 23em;
-      padding: $gutter * 2.5 $gutter/2;
-    }
-    @include breakpoint(xlarge) {
-      width: 33.333333%;
-    }
-		position: relative;
-		z-index: 2;
-    section {
-      padding: $gutter $gutter/2;
       @include breakpoint(xlarge) { 
-        padding: $gutter * 1.5 $gutter;
-      }  
-      margin: 0;
-      > .row {
-        margin: 0;
+        width: calc(100% + 4em);  
       }
+      @include breakpoint(xxlarge) { 
+        width: calc(100% + 6.5em);  
+      }
+    } 
+  }    
+}
+aside.column {
+  @include breakpoint (small only) {
+    @include grid-column-collapse;
+    clear: both;
+    float: none;
+  }
+  @include breakpoint (medium only) {
+    @include grid-column-collapse;
+    clear: both;
+    float: none;
+  }
+  @include breakpoint(large) {
+    float: left;
+    width: 23em;
+    padding: 0 $gutter $gutter * 2.5;
+  }
+  @include breakpoint(xlarge) {
+    @include grid-column(1, $gutter * 2);
+    @include grid-column-size(33.333333%);
+  }
+  position: relative;
+  z-index: 2;
+  section {
+    padding: $global-padding * 1.9 $global-padding * 2;
+    margin: 0;
+    > .row {
+      margin: 0;
     }
-  }  
-  .sidebar-article-offset {
-    padding-top: 0;
+  }
+} 
+.grid-2col {
+  aside {
+    @include breakpoint(large) {
+      padding-top: $gutter * 2.5;
+    }
   }
 }
-
-.sidebar-article-offset {
+.grid-2col-tertiary > .page-title {
+  h1 {
+    @include breakpoint(large) {      
+      padding-right: 23rem;
+    }  
+    @include breakpoint(xlarge) { 
+      padding-right: 33.3%;
+    }
+  }
+}
+.grid-2col-article > .two-column-layout aside.column {
   @media print and #{breakpoint(large)} {
     padding-top: 300px; // counteract the negative top margin when printing
   }
 }
-
+.grid-2col-tertiary > .two-column-layout { 
+  @media print and #{breakpoint(large)} {
+    .tertiary-nav {
+       padding-top: 70px;  // counteract the negative top margin when printing
+    }    
+  }
+}
 

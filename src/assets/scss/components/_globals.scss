@@ -20,13 +20,13 @@ cite {
 
 blockquote {
   font-size: rem-calc(17); 
-  font-weight: $global-weight-medium;
+  font-weight: $global-weight-normal;
   font-size: calc(17px +  3 * (100vw - 320px)/1080);
   @include breakpoint(xxlarge) {
     font-size: rem-calc(20);
   }
   footer { 
-    font-weight: $global-weight-normal;
+    font-weight: $global-weight-light;
     font-style: italic;
     font-size: $global-font-size;
     padding: 0;

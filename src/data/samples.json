@@ -9,7 +9,7 @@
    },
    {  
        "name":"Simple Content",
-       "url":"/simple-content.html"
+       "url":"/corporate/simple-content.html"
    },
    {  
        "name":"Executive Leadership",
@@ -54,6 +54,10 @@
    {  
        "name":"About Landing",
        "url":"/corporate/about-landing.html"
+   },
+   {  
+       "name":"Research Landing",
+       "url":"/corporate/research-landing.html"
    },
    {  
        "name":"Governance (About subpage)",

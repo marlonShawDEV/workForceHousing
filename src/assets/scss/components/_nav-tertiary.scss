@@ -1,21 +1,17 @@
 $tertiary-gap: $gutter * 1.5;
 $tertiary-border-color: scale-color($light-gray, $lightness: -5%);
 
-
-@media screen and #{breakpoint(large)} {
-  .tertiary-nav { margin-top: rem-calc(-110px); }
-}
-
 .tertiary-nav {
   background: $fm-green;
   color: $fm-gray;
   padding-bottom: 0.5rem;
   margin-bottom: 1.875rem;
-  font-size: 1.125rem;   
+  font-size: 1.125rem;  
   h2 {
     color: $white;
     padding: 0;
     margin: 0;
+    font-weight: $global-weight-light; 
   }
   a {
     color: inherit;
@@ -32,6 +28,7 @@ $tertiary-border-color: scale-color($light-gray, $lightness: -5%);
     margin: 0;    
     a {
       text-transform: uppercase;
+      font-weight: $global-weight-medium;
       &:hover,
       &:focus {
         color: $fm-green;

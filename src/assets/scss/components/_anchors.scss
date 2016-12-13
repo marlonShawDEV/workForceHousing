@@ -54,13 +54,21 @@
     }
   }
   &.overlay-gradient {
-    background: $fm-blue;
+    background: $white;
     .overlay-contents { 
+      @include breakpoint(small) {
+        background: $fm-gray;
+      } 
       @include breakpoint(medium) {     
         top: 0;
         padding-left: $gutter;
         padding-right: 40%; 
-        background: linear-gradient(to right, rgba($fm-blue,0.7) 0%,rgba($fm-blue,0.7) 40%,rgba($fm-blue,0.5) 100%);
+        background: linear-gradient(to right, rgba($fm-gray,1) 0%,rgba($fm-gray,0.7) 50%,rgba($fm-gray,0.3) 100%);
+        &:hover,
+        &:focus,
+        &:active {      
+            background: linear-gradient(to right, rgba($fm-blue,0.7) 0%,rgba($fm-blue,0.6) 40%,rgba($fm-blue,0.4) 100%);
+        } 
       }  
       @include breakpoint(xlarge) {   
         padding-right: 38%;
@@ -71,11 +79,11 @@
     }
     &:hover,
     &:focus,
-    &:active {
-      img {
-        opacity: 0.75;
-      }
-    }       
+    &:active {      
+        img {
+          opacity: 1;
+        }
+    }    
   }
   .overlay-contents {
     color: $white;

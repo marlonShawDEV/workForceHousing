@@ -1,4 +1,6 @@
-﻿# The Grid
+﻿
+
+# The Grid
 
 The grid is built around two key elements: rows and columns. Rows create a max-width and contain the columns, and columns create the final structure. Everything on your page that you don't give a specific structural style to should be within a row or column.
 In the Grid you can nest columns down as far as you'd like. Just embed rows inside columns and go from there. Each embedded row can contain up to 12 columns.
@@ -108,42 +110,41 @@ In the Grid you can nest columns down as far as you'd like. Just embed rows insi
 
 ```html
 <section class="two-column-layout">
-  <main>
-    <div class="column">
+  <div class="row two-column-row"> 
+    <main class="column">
       <h2>Main content</h2>
       <div class="callout">Sed semper tempus justo, ac volutpat ipsum, tempor ullamcorper odio.</p>
-    </div>
-  </main>
-  <aside>
-    <section class="sidebar">
-      <div class="row">
-        <h2>Sidebar Content</h2>
-        <p>Sed semper tempus justo, ac volutpat ipsum, tempor ullamcorper odio.</p>
-      </div>
-    </section>
-  </aside>
+    </main>
+    <aside class="column">  
+      <section class="sidebar">
+        <div class="row">
+          <h2>Sidebar Content</h2>
+          <p>Sed semper tempus justo, ac volutpat ipsum, tempor ullamcorper odio.</p>
+        </div>
+      </section>
+    </aside>
+  </div>
 </section>
 ```
 
 <section class="two-column-layout">
-  <main>
-    <div class="column">
+  <div class="row two-column-row"> 
+    <main class="column">
       <div class="callout">
         <h2>Main content</h2>
         <p>Sed semper tempus justo, ac volutpat ipsum, tempor ullamcorper odio.</p>
       </div>
-    </div>
-  </main>
-  <aside>
-    <section class="sidebar sidebar-blue">
-      <div class="row">
-        <h2>Sidebar Content</h2>
-        <p>Sed semper tempus justo, ac volutpat ipsum, tempor ullamcorper odio.</p>
-      </div>
-    </section>
-  </aside>
+    </main>
+    <aside class="column">  
+      <section class="sidebar sidebar-blue">
+        <div class="row">
+          <h2>Sidebar Content</h2>
+          <p>Sed semper tempus justo, ac volutpat ipsum, tempor ullamcorper odio.</p>
+        </div>
+      </section>
+    </aside>
+  </div>
 </section>
-<div class="row"></div>
 
 
 
@@ -343,7 +344,7 @@ These styles can be applied to most HTML elements, such as `H1` - `H6`, `span`, 
 <p>For use in main content area.</p>
 <h3 class="subtitle">This is a subtitle</h3>
 <h3 class="section-subtitle">This is a section-subtitle</h3>
-<h3 class="call-to-action">This is a call-to-action</h3>
+<h3 class="call-to-action-medium">This is a call-to-action-medium</h3>
 <h3 class="call-to-action-light">This is a call-to-action-light</h3>
 <p class="lead">This is class lead</p>
 <p class="callout-txt">This is class callout-txt</p>
@@ -369,7 +370,7 @@ These styles can be applied to most HTML elements, such as `H1` - `H6`, `span`, 
 <p>These should only be used inside HERO elements.</p>
 <div class="hero-date">This is hero-date</div>
 <h1 class="hero-title">This is hero-title</h1>
-<div class="hero-subtitle">This is hero-subtitle</div>
+<div class="hero-subtitle">This is hero-subtitle (homepage only)</div>
 
 <p>These should only be used on the corporate homepage.</p>
 <h2 class="homepage-headline">This is homepage-headline</h2>
@@ -387,7 +388,7 @@ These styles can be applied to most HTML elements, such as `H1` - `H6`, `span`, 
     <div class="callout">
       <h3 class="subtitle">This is a subtitle</h3>
       <h3 class="section-subtitle">This is a section-subtitle</h3>
-      <h3 class="call-to-action">This is a call-to-action</h3>
+      <h3 class="call-to-action-medium">This is a call-to-action-medium</h3>
       <h3 class="call-to-action-light">This is a call-to-action-light</h3>
       <p class="lead">This is class lead</p>
       <p class="callout-txt">This is class callout-txt</p>
@@ -405,7 +406,7 @@ These styles can be applied to most HTML elements, such as `H1` - `H6`, `span`, 
     <div class="callout callout-primary">
       <div class="hero-date">This is hero-date</div>
       <h1 class="hero-title">This is hero-title</h1>
-      <div class="hero-subtitle">This is hero-subtitle</div>
+      <div class="hero-subtitle">This is hero-subtitle (homepage only)</div>
     </div>
     <p>These should <strong>only</strong> be used on the homepage.</p>
     <div class="callout">
@@ -1542,7 +1543,7 @@ Note: The news release lists are automated by MarketWire.
 <section class="sidebar sidebar-concrete">
   <div class="row">
     <h2 class="sidebar-subtitle">Recent News</h2>
-    <ul class="sidebar-list no-bullet lightest-weight">
+    <ul class="sidebar-list no-bullet">
       <li><a href="#">Freddie Mac Issues Dodd-Frank Stress Test Results</a> <br>08/08/16 -  MCLEAN, VA--(Marketwired - Aug 8, 2016) - &nbsp;Freddie Mac (OTCQB: FMCC) today issued the company's stress test results for the severely adverse scenario conducted under FHFA's rule...</li>
       <li><a href="#">Freddie Mac Reports Second Quarter 2016 Financial Results</a> <br>08/02/16 -  MCLEAN, VA--(Marketwired - Aug 2, 2016) -  Freddie Mac (OTCQB: FMCC) today reported its second quarter 2016 financial results and filed its quarterly Form 10-Q with the U.S. Securities...</li>
       <li><a href="#">Freddie Mac Sets Release Date for Second Quarter 2016 Financial Results</a> <br>Jul 29, 2016 - MCLEAN, VA--(Marketwired - Jul 29, 2016) -  Freddie Mac (OTCQB: FMCC) announced today that it plans to report its second quarter 2016 financial results before the U.S. financial markets...</li>	
@@ -1558,7 +1559,7 @@ Note: The news release lists are automated by MarketWire.
     <section class="sidebar sidebar-concrete">
       <div class="row">
         <h2 class="sidebar-subtitle">Recent News</h2>
-        <ul class="sidebar-list no-bullet lightest-weight">
+        <ul class="sidebar-list no-bullet">
           <li><a href="#">Freddie Mac Issues Dodd-Frank Stress Test Results</a> <br>08/08/16 -  MCLEAN, VA--(Marketwired - Aug 8, 2016) - &nbsp;Freddie Mac (OTCQB: FMCC) today issued the company's stress test results for the severely adverse scenario conducted under FHFA's rule...</li>
           <li><a href="#">Freddie Mac Reports Second Quarter 2016 Financial Results</a> <br>08/02/16 -  MCLEAN, VA--(Marketwired - Aug 2, 2016) -  Freddie Mac (OTCQB: FMCC) today reported its second quarter 2016 financial results and filed its quarterly Form 10-Q with the U.S. Securities...</li>
           <li><a href="#">Freddie Mac Sets Release Date for Second Quarter 2016 Financial Results</a> <br>Jul 29, 2016 - MCLEAN, VA--(Marketwired - Jul 29, 2016) -  Freddie Mac (OTCQB: FMCC) announced today that it plans to report its second quarter 2016 financial results before the U.S. financial markets...</li>	

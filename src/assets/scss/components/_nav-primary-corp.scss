@@ -236,7 +236,7 @@
       min-width: rem-calc(250px);
     }
     p {
-      font-size: $global-font-size;
+      font-size: rem-calc(16);
       line-height: 1.3;
     }
   }

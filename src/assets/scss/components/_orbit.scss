@@ -113,7 +113,7 @@ $orbit-palette: (
     @extend .orbit-caption;
     text-align: center;
     font-weight: $global-weight-medium;
-    font-size: $global-font-size;
+    font-size: rem-calc(16);
     font-size: calc(16px +  4 * (100vw - 320px)/1080);
     @include breakpoint(xxlarge) {
       font-size: rem-calc(20);

@@ -25,6 +25,11 @@ function fakenav(){
     $('#subnav-news').addClass('on').find('.no-bullet').removeClass('hide');
     if(p.match(/press/)) {$('#subnav-news-list').find('li').eq(1).children('a').addClass('active');}   
   }
+  else if (p.match(/research-/)) {
+    $('#nav-research').children('a').addClass('active');
+    $('#subnav-research').addClass('on').find('.no-bullet').removeClass('hide');
+    if(p.match(/pmms/)) {$('#subnav-research-list').find('li').eq(0).children('a').addClass('active');}   
+  }
 }
 
 fakenav();

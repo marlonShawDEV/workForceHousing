@@ -34,7 +34,7 @@
           margin: 1.125rem 0;
           > a {
             @include accordion-pointers-title($medium-gray, $light-gray, false);
-            font-size: $global-font-size;
+            font-size: rem-calc(16);
           }
         }
         .menu {

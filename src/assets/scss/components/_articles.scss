@@ -126,3 +126,35 @@
   line-height: 1.3; 
 }
 
+.headline-featured {
+  min-height: 17.25rem;  
+  padding: 1.625rem 2rem 1.25rem;
+  background-color: $fm-blue;
+  color: $white;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: linear-gradient(rgba($fm-blue, 0.8), rgba($fm-blue, 0.8)), url('/images/media/featured-background.jpg');
+  margin-bottom: 4rem;
+  a {
+    color: inherit;
+  }
+  p + p {
+    margin-top: $global-margin * 1.5;
+  }
+  .article-category {
+    margin-bottom: 0.5em;
+  }
+}
+.recent-headlines-container {
+  min-height: 40rem;
+  h4 {
+    font-weight: $global-weight-medium;
+    margin: 0.2em 0;
+  }
+}
+
+.placeholder {
+  margin: 2.5rem auto 3.5rem;
+}

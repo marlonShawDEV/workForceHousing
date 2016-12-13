@@ -86,3 +86,10 @@
     z-index: -1;
   }
 }
+
+.twitter-feed {
+  overflow-y: scroll;
+  height: 44rem;
+  background: $white;
+  border: 1px solid darken($light-gray, 5%);
+}
