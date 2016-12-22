@@ -2,17 +2,20 @@
   position: relative;  
 }
 .sidebar-txt {
-	@include breakpoint(medium) {
-    max-width: 300px;
+  max-width: 83%;
+	@include breakpoint(large only) {
+    max-width: rem-calc(277);
   }  
 }
 .sidebar:not(.sidebar-concrete) {
 	color: $white;
   a {
-    @include anchor-on-dark;
+    color: $white;
+    @include anchor-on-dark(none);
   }
 }
 .sidebar-list {
+  margin-bottom: 0;
   .media-object-section {
     img {
       width: rem-calc(95);
@@ -22,9 +25,11 @@
     }
   }
   li { 
+    margin-top: 0;
+    margin-bottom: 0;
     .media-object-section {
-      padding-top: 1.375rem;
-      padding-bottom: 1.375rem;
+      padding-top: 0.875rem;
+      padding-bottom: 0.875rem;
     }   
     &:first-child { 
       .media-object-section {
@@ -36,10 +41,6 @@
         padding-bottom: 0;
       }
     }
-  }
-  a:not(.button) {
-    text-decoration: none !important;
-    color: inherit;
   }
 }
 .sidebar-gray {
@@ -56,34 +57,30 @@
 }
 .sidebar-blue {
   background-color: $fm-blue; 
-  @include list-divided(lighten($fm-blue, 10%));   
-  .button.hollow {
-    color: $white;
-    &:hover, 
-    &:active,
-    &:focus {
-      color: $fm-blue;
-      border-color: $fm-blue;
-      background: $white;
-    }
-  }
+  @include list-divided(lighten($fm-blue, 10%));
 }  
 
 .sidebar-feature {    
-  min-height: 24rem;
+  @include breakpoint(large) {
+    min-height: 24rem;
+  }
   z-index: -1;
   .feature-background {   // background will be different for each one, so moving to inline
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;    
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    height: auto;
-    opacity: 0.2;
-    z-index: -1;
+    display: none;
+    @include breakpoint(large) {
+      display: block;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: bottom right;    
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: auto;
+      opacity: 0.2;
+      z-index: -1;
+    }
   }
 }
 

@@ -140,11 +140,4 @@ aside.column {
     padding-top: 300px; // counteract the negative top margin when printing
   }
 }
-.grid-2col-tertiary > .two-column-layout { 
-  @media print and #{breakpoint(large)} {
-    .tertiary-nav {
-       padding-top: 70px;  // counteract the negative top margin when printing
-    }    
-  }
-}
 

@@ -10,6 +10,9 @@ if(typeof jQuery.urlShortener !== "undefined") {
   });
 }
 function shareLinkUpdate1(){
+  $(".share-wrapper").each(function(){
+    if($(this).hasClass('hide')){$(".share-wrapper").removeClass('hide');}
+  });
   var winProps = 'channelmode=no,directories=no,fullscreen=no,status=no,toolbar=no,width=400,height=400,modal=yes,alwaysRaised=yes,resizable=yes',
       lnk = encodeURIComponent(location),
       dtlnk = $('.sharelink-twitter')[0].hasAttribute('data-location') ? $('.sharelink-twitter').attr('data-location') : lnk,
@@ -36,6 +39,9 @@ function shareLinkUpdate1(){
       var sharer_modal = window.open(twlink, 'Sharer Window', winProps, true); 
       sharer_modal.opener=null;
   });	
+  $('.share-toggle').on('click', function(){
+    $(this).closest('.share-widget').toggleClass('share-opened');
+  });
 }
 
 if($(".share-widget").length){ shareLinkUpdate1(); }

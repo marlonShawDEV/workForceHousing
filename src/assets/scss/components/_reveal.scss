@@ -11,112 +11,128 @@ $overlay-palette: (
 
 
 .reveal {  
-  &:not(.overlay-video) {
-    @include breakpoint(medium) {
-      padding: 3rem 0;
+  &:not(.overlay-video):not(.reveal-image) {
+    @include reveal-modal-width($reveal-width);
+    padding-top: rem-calc(40);
+    padding-top: calc(40px +  56 * (100vw - 320px)/1080); 
+    @include breakpoint(xxlarge) {
+      padding-top: rem-cal(96);
     }
   }
-  .close-button {
-    @include close-button;
-    background-color: $white;
-    color: $dark-gray;
-    font-size: 3rem;
-    top: 1rem;
-    border-radius: 50%;
-    content: "";
-    display: block;
-    width: 3rem;
-    height: 3rem;
-    span {
-      position: absolute;    
-      right: 25%;
-      top: -2%; // magic number to vertically align the &times; symbol 
-    }
+  color: $white;
+  a{
+    @include anchor-on-dark;
   }  
+  &.tiny,
+  &.small,
+  &.large {
+    @include reveal-modal-width($reveal-width);
+  }
   &.overlay-video {
-    padding: 2.5rem 2.5rem 0;
-    .close-button {
-      font-size: 2.5rem;
-      top: 0;
-      right: 0;
-      width: 2.5rem;
-      height: 2.5rem;    
-    }
+    padding: 0;
+    max-width: $global-width;
+    @include reveal-modal-width(800px);
   }
   
 // Full-screen mode colors
   @each $name, $color in $overlay-palette {    
     &.overlay-#{$name} {      
       background-color: $color;
-      color: $white;
-      a{
-        @include anchor-on-dark;
-      }     
-      .button.hollow {
-        color: $white;
-        &:hover, 
-        &:active,
-        &:focus {
-          color: $color;
-        }
-      } 
     }
   } 
   > div { 
     position: relative;
   }
-}
-
-.reveal-image {
-  top: 0;
-  background: transparent;
-  border-width: 0;
-  max-height: 100vh;
-  .reveal-image-inner {
-    overflow: none;
-    padding: 2vh 2vw;
-    margin: 0 auto; 
-    position: relative;     
+  > .row {
+    max-width: $global-width;
   }
-  figure {
-    margin: 0 auto;   
-    max-height: 92vh;
-    max-width: 92vw;
-    overflow: hidden;
-    position: relative;   
-    img {
-      @include orbit-image;      
-      display: block; 
-      border: $reveal-border; 
+  .reveal-image {
+    top: 0;
+    background: transparent;
+    border-width: 0;
+    max-width: $global-width;
+    @include reveal-modal-width(800px);
+    .reveal-image-inner {
+      overflow: none;
+      padding: 2vh 2vw;
+      margin: 0 auto; 
+      position: relative;     
     }
-    figcaption { 
-      @extend .orbit-caption;
-      font-size: inherit;
-      text-align: center;      
-      font-size: rem-calc(18);
-      font-weight: $global-weight-medium;
-      @include breakpoint(medium) {
-        font-size: rem-calc(20);
+    figure {
+      margin: 0 auto;   
+      max-height: 92vh;
+      max-width: 92vw;
+      overflow: hidden;
+      position: relative;   
+      img {
+        @include orbit-image;      
+        display: block; 
+        border: $reveal-border; 
       }
-      :last-child { margin-bottom: 0;}      
-      a {
-        @include anchor-on-dark;
-      }     
-    }    
-  }
-  .gallery-previous {  
-    @extend %orbit-control;
-    @include orbit-previous;
-    z-index: 1009;
-  }
-  .gallery-next  {
-    @extend %orbit-control;
-    @include orbit-next;
-    z-index: 1010;
+      figcaption { 
+        @extend .orbit-caption;
+        font-size: inherit;
+        text-align: center;      
+        font-size: rem-calc(18);
+        font-weight: $global-weight-medium;
+        @include breakpoint(medium) {
+          font-size: rem-calc(20);
+        }
+        :last-child { margin-bottom: 0;}      
+        a {
+          @include anchor-on-dark;
+        }     
+      }    
     }
-  .gallery-previous,
-  .gallery-next {  
-    font-size: 1.5rem;
-    background-color: rgba($black, 0.4);
-  } 
+    .gallery-previous {  
+      @extend %orbit-control;
+      @include orbit-previous;
+      z-index: 1009;
+    }
+    .gallery-next  {
+      @extend %orbit-control;
+      @include orbit-next;
+      z-index: 1010;
+      }
+    .gallery-previous,
+    .gallery-next {  
+      font-size: 1.5rem;
+      background-color: rgba($black, 0.4);
+    } 
+  }
+}
+.modal-content {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 87.5rem * 0.9;
+  > .row {
+    padding: 0;
+    margin-left: -0.625rem;
+    margin-right: -0.625rem;
+  }
+}
+.modal-header {
+  display: table;
+  margin-bottom: rem-calc(36);
+  margin-bottom: calc(36px +  30 * (100vw - 320px)/1080); 
+  @include breakpoint(xxlarge) {
+    margin-bottom: rem-calc(66);
+  }
+  button { 
+    display: table-cell;
+    vertical-align: middle;
+  }
+  h2 { 
+    display: table-cell;
+    width:99%;
+    vertical-align: middle;
+    font-size: rem-calc(20);
+    font-size: calc(20px +  12 * (100vw - 320px)/1080); 
+    font-weight: $global-weight-bold;
+    margin: 0.4em 0;  
+    @include breakpoint(xxlarge) {
+      margin: 0.53125em 0;  
+      font-size: rem-calc(32);
+    }
+  }
 }

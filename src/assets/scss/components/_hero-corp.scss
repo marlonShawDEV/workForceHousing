@@ -36,6 +36,10 @@ $hero-blend-color: $fm-blue;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
+    .hero-date {
+      margin-top: 0.5em;
+      margin-bottom: 0.7em;
+    }
   }
   // default center aligned hero
   .hero-blended-content {
@@ -54,13 +58,12 @@ $hero-blend-color: $fm-blue;
         font-size: rem-calc(28);
       }
     }
-  }
-  // add this class when hero is left aligned
-  .hero-blended-left {
-    text-align: left;
-    margin-left: 0;
-    @include breakpoint(large) {
-      @include grid-column(7.3);
+    .grid-2col-article & {    
+      text-align: left;
+      margin-left: 0;
+      @include breakpoint(large) {
+        @include grid-column(7.3);
+      }
     }
   }
    // breaking our the hero details by their purpose, since we have several that are tall, short, blue or left.

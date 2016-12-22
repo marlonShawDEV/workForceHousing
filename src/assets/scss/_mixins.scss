@@ -25,7 +25,6 @@
     color: $white;
   } 
 }
-
 // desktop hover states for parent of dropdowns
 @mixin nav-submenu-parent-hover(){
   color: $fm-orange;
@@ -60,7 +59,7 @@
 }
 // anchors that aren't buttons, when used over dark backgrounds (modals, rotators, call outs, etc.)
 @mixin anchor-on-dark($decoration: underline){
-  &:not(.button) { 
+  &:not([class]) { 
     color: currentColor;
     position: relative;
     text-decoration: $decoration;
@@ -84,7 +83,20 @@
     }
   }  
 }
-
+// mixin to add rss feed icon to links in a list
+@mixin rss-list($color: $white) {
+  position: relative;
+  &::before {
+    content: " ";
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-right: 0.375em;
+    position: relative;
+    bottom: -0.1em;
+    background: transparent icon(rss-white, $color, 1rem, 1rem, 0, 0, 500, 460) no-repeat center center;
+  } 
+}
 // staggered mosiac full pattern used below secondary nav/hover and footer:
 @mixin mosaic-fill(
   $a: $mosaic-start, 

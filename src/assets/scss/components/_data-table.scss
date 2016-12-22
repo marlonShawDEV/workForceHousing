@@ -1,50 +1,8 @@
-// Override hover -- not on header or footer
-@mixin table-hover-body-row {
-  tbody {
-    tr {
-      //Darkens the non-striped table rows on hover.
-      &:hover {
-        background-color: $table-row-hover;
-      }
-
-      //Darkens the even striped table rows.
-      @if($table-stripe == even) {
-        &:nth-of-type(even):hover {
-          background-color: $table-row-stripe-hover;
-        }
-      }
-
-      //Darkens the odd striped table rows.
-      @elseif($table-stripe == odd) {
-        &:nth-of-type(odd):hover {
-          background-color: $table-row-stripe-hover;
-        }
-      }
-    }
-  }
+// default th tag alignment
+tbody th:not([class]),
+tfoot th:not([class]) {
+  text-align: #{$global-left};
 }
-
-table.table--hover {
-    @include table-hover-body-row;
-}
-  
-// Footer rows
-table {
-  tfoot {    
-    background: $table-foot-background;
-    tr {
-      background: transparent;
-      color: $body-font-color;
-    }
-    th {
-      text-align: #{$global-left};
-    }
-    td {
-      font-weight: inherit;
-    }
-  }
-}
-// th tags in the body
-tbody th {
-  text-align: left;
+table tfoot td {
+  font-weight: inherit;
 }

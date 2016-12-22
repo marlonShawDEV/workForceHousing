@@ -2,23 +2,21 @@
 title: Blog Detail
 layout: corporate-2col-article
 ---
-<section class="hero-blended blog-detail-hero">
-  <div class="row vertical-center-full">
-	  <div class="columns">
-		  <div class="hero-blended-content hero-blended-left">
-		  	<div class="hero-date">May 9, 2016</div>
-		    <h1 class="hero-title">Take the Anxiety Out of Your First Home Offer</h1>
-		    <div>
-		    	<a href="#" class="invert-to-blue button small">Homeownership</a>
-		    </div>
-		  </div>
-		</div>
+<div class="hero-blended blog-detail-hero">
+  <div class="row column vertical-center-full">
+    <div class="hero-blended-content">
+      <div class="hero-date">May 9, 2016</div>
+      <h1 class="hero-title">Take the Anxiety Out of Your First Home Offer</h1>
+      <div>
+        <a href="/corporate/blog-homeownership.html" class="hollow button small">Homeownership</a>
+      </div>
+    </div>
 	</div>
   {{> share-widget}}
-</section>
+</div>
 
 <!-- START TWO COLUMN LAYOUT WITH HERO -->
-<section class="two-column-layout">
+<div class="two-column-layout">
   <div class="row two-column-row"> 
     <!-- START MAIN PAGE CONTENT -->
     <main class="column">
@@ -59,6 +57,7 @@ layout: corporate-2col-article
 
       <p>The worst thing you can do is to fall so deeply in love with a house that you overpay for it. It may take you many years for the home to appreciate to the point where its market value matches what you paid.</p>
       
+      {{>blog-feedback-form}}
     </main>
     <!-- END MAIN PAGE CONTENT -->
     <!-- START RIGHT SIDEBAR -->
@@ -70,10 +69,11 @@ layout: corporate-2col-article
      </aside>
     <!-- END RIGHT SIDEBAR -->
   </div>
-</section>
+</div>
 <!-- END TWO COLUMN LAYOUT  -->
 
 
+<!-- START EP Cross Promotion -->
 <div class="callout callout-concrete callout-fullwidth">
   <div class="row column">
     <h2 class="subtitle">Insights from Company Leaders</h2>
@@ -149,3 +149,6 @@ layout: corporate-2col-article
     </div>
   </div>
 </div>
+
+<!-- END Cross Promotion -->
+{{> share-widget}}

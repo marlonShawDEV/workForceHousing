@@ -1,8 +1,43 @@
+ol.leading-zero {
+  list-style-type: decimal-leading-zero; 
+  margin-left: 1.75rem; 
+}
+ol.upper-alpha {
+  list-style-type: upper-alpha;
+}
+ol.lower-alpha {
+  list-style-type: lower-alpha;
+}
+ol.upper-roman {
+  list-style-type: upper-roman; 
+  margin-left: 1.75rem;
+}
+ol.lower-roman {
+  list-style-type: lower-roman;
+}
+ol.reversed {
+  transform: rotate(180deg);
+  > li {
+  transform: rotate(-180deg);
+  }
+}
+ul:not([class]) > li, 
+ol > li {
+  margin-bottom: 0.4375em;
+  margin-top: 0.4375em;
+}
 
+.list-rss {
+  > li {
+   @include rss-list;
+  }
+}
 
 .list-divided {
   @include list-divided(lighten($fm-gray, 10%));   
-  a:not(.button) {
+  a:not([class]) {
     text-decoration: none !important;
   }
-}  
+}
+
+

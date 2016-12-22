@@ -9,7 +9,7 @@ var adjustSidebarArticle = {
 },
 adjustSidebarTertiary = {
 	init: function(nav) {         
-		if( Foundation.MediaQuery.atLeast('xlarge') && $('.page-title').length) {
+		if( Foundation.MediaQuery.atLeast('large') && $('.page-title').length) {
 			nav.css('margin-top', -($('.page-title:first').outerHeight()/2));
 		} else {
 			nav.css('margin-top', 0);

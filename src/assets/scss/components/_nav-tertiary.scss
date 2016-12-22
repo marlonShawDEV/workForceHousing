@@ -7,6 +7,9 @@ $tertiary-border-color: scale-color($light-gray, $lightness: -5%);
   padding-bottom: 0.5rem;
   margin-bottom: 1.875rem;
   font-size: 1.125rem;  
+  @media print {
+    display: none;
+  } 
   h2 {
     color: $white;
     padding: 0;

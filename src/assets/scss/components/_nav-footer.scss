@@ -9,6 +9,7 @@
 	a {
 		color: currentColor; 
     display: inline-block; 
+    @include anchor-on-dark(none); 
     &.connect-link {
       margin-right: 0.375rem;
       > svg {
@@ -18,15 +19,12 @@
       &:last-child {
         margin-right: 0;         
       }  
-    }
-	}
-  a:not(.connect-link) {
-    @include underline-transition($white, 1px);  
-  }
+    } 
+  }  
 	ul {
 		margin: 0;
     @include clearfix;
-    }
+  }
   li {
     margin: 0.5rem 0rem 0.5rem 0;
     @include breakpoint(medium) {
@@ -52,4 +50,3 @@
   background: $celery;
   @include mosaic-fill($mosaic-start, $mosaic-end, to right); 
 }
-

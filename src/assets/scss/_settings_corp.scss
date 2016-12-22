@@ -161,8 +161,8 @@ $list-lineheight: $paragraph-lineheight;
 $list-margin-bottom: $paragraph-margin-bottom;
 $list-style-type: disc;
 $list-style-position: outside;
-$list-side-margin: 1.25rem;
-$list-nested-side-margin: 1.25rem;
+$list-side-margin: 1.5rem;
+$list-nested-side-margin: 1.5rem;
 $defnlist-margin-bottom: 1rem;
 $defnlist-term-weight: $global-weight-bold;
 $defnlist-term-margin-bottom: 0.3rem;
@@ -245,12 +245,12 @@ $breadcrumbs-item-slash: true;
 // ----------
 
 $button-padding: 0.85em 1.5em;
-$button-margin: 0 0 0 0;
-$button-fill: solid;
+$button-margin: 0;
+$button-fill: solid;  // not used
 $button-background: $fm-gray;
-$button-background-hover: scale-color($button-background, $lightness: -15%);
 $button-color: $white;
-$button-color-alt: $black;
+$button-background-hover: $button-color;
+$button-color-alt: $black; // not used
 $button-radius: 999em;   //guaranteed pill shape at all heights
 $button-sizes: (
   small: 0.75rem,
@@ -286,7 +286,7 @@ $callout-link-tint: false;
 $closebutton-position: right top;
 $closebutton-offset-horizontal: 1rem;
 $closebutton-offset-vertical: 0.5rem;
-$closebutton-size: 2.5rem;
+$closebutton-size: 1.5rem;
 $closebutton-lineheight: 1;
 $closebutton-color: $body-font-color;
 $closebutton-color-hover: $black;
@@ -332,7 +332,7 @@ $flexvideo-ratio-widescreen: 16 by 9;
 // 19. Forms
 // ---------
 
-$fieldset-border: 1px solid $medium-gray;
+$fieldset-border: 1px solid $fm-gray;
 $fieldset-padding: rem-calc(20);
 $fieldset-margin: rem-calc(8 0 18 0);
 $legend-padding: rem-calc(0 3);
@@ -342,7 +342,7 @@ $helptext-font-size: rem-calc(14);
 $helptext-font-style: italic;
 $input-prefix-color: $black;
 $input-prefix-background: $light-gray;
-$input-prefix-border: 1px solid $medium-gray;
+$input-prefix-border: 1px solid $fm-gray;
 $input-prefix-padding: 1rem;
 $form-label-color: inherit;
 $form-label-font-size: rem-calc(16);
@@ -358,8 +358,8 @@ $input-font-size: rem-calc(16);
 $input-background: inherit;
 $input-background-focus: inherit;
 $input-background-disabled: $light-gray;
-$input-border: 1px solid $medium-gray;
-$input-border-focus: 1px solid $dark-gray;
+$input-border: 1px solid rgba($black, 0.4);
+$input-border-focus: 1px solid $fm-gray;
 $input-shadow: inset 0 1px 2px rgba($black, 0.1);
 $input-shadow-focus: 0 0 4px rgba($black, 0.2);
 $input-cursor-disabled: default;
@@ -460,12 +460,12 @@ $progress-radius: $global-radius;
 // 28. Reveal
 // ----------
 
-$reveal-background: transparent;
-$reveal-width: 80%;
-$reveal-max-width: $global-width;
-$reveal-padding: $global-padding;
+$reveal-background: $fm-dark-blue;
+$reveal-width: 100%;
+$reveal-max-width: 100%;
+$reveal-padding: 0;   // not used.
 $reveal-border: 0px solid $medium-gray;
-$reveal-radius: $global-radius;
+$reveal-radius: 0;
 $reveal-zindex: 1005;
 $reveal-overlay-background: rgba($medium-gray, 0.85);
 
@@ -502,19 +502,26 @@ $switch-paddle-transition: all 0.25s ease-out;
 // 31. Table
 // ---------
 
-$table-background: scale-color($fm-dark-blue, $lightness: 100%);
+$table-background: scale-color($fm-dark-blue, $lightness: 99%);
 $table-color-scale: 4%;
-$table-border: 1px solid scale-color($fm-dark-blue, $lightness: 90%);
+$table-border: 1px solid smart-scale($table-background, $table-color-scale);
 $table-padding: rem-calc(8 10 10);
-$table-hover-scale: 1%;
-$table-row-hover: scale-color($fm-dark-blue, $lightness: 98%);
-$table-row-stripe-hover: scale-color($fm-dark-blue, $lightness: 90%);
-$table-striped-background: scale-color($fm-dark-blue, $lightness: 93%);
+$table-hover-scale: 2%;
+$table-row-hover: darken($table-background, $table-hover-scale);
+$table-row-stripe-hover: darken($table-background, $table-color-scale + $table-hover-scale);
+$table-is-striped: true;
+$table-striped-background: smart-scale($table-background, $table-color-scale);
 $table-stripe: even;
 $table-head-background: $fm-dark-blue;
-$table-foot-background: scale-color($fm-dark-blue, $lightness: 80%);
+$table-head-row-hover: darken($table-head-background, $table-hover-scale);
+$table-foot-background: smart-scale($table-background, $table-color-scale * 2);
+$table-foot-row-hover: darken($table-foot-background, $table-hover-scale);
+$table-foot-font-color: $body-font-color;
+$show-header-for-stacked: true;
 $table-head-font-color: $white;
-$show-header-for-stacked: false;
+
+
+
 
 // 32. Tabs
 // --------
@@ -534,9 +541,9 @@ $tab-content-padding: 1rem 0;
 // 33. Thumbnail
 // -------------
 
-$thumbnail-border: 0px;  //solid 4px $white;
+$thumbnail-border: solid 4px $white; 
 $thumbnail-margin-bottom: $global-margin;
-$thumbnail-shadow: 0px;  //0 0 0 1px rgba($black, 0.2);
+$thumbnail-shadow: 0 0 0 1px rgba($black, 0.2); 
 $thumbnail-shadow-hover: 0 0 6px 1px rgba($primary-color, 0.5);
 $thumbnail-transition: box-shadow 200ms ease-out;
 $thumbnail-radius: $global-radius;

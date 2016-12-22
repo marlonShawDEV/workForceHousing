@@ -2,30 +2,29 @@
 title: Media Landing
 layout: corporate-2col
 ---
-<section class="media-landing-hero hero-blended">
-  <div class="row vertical-center-full">
-  	<div class="columns">
-		  <div class="hero-blended-content">
-		    <h1 class="hero-title">Media Room</h1>
-        <p>News releases and resources for the media.</p>
-		  </div>
-		</div>
+<div class="media-landing-hero hero-blended">
+  <div class="row column vertical-center-full">
+    <div class="hero-blended-content">
+      <h1 class="hero-title">Media Room</h1>
+      <p>News releases and resources for the media.</p>
+    </div>
 	</div>
-</section>
+</div>
 
 <!-- START TWO COLUMN LAYOUT NO HERO -->
-<section class="two-column-layout">
+<div class="two-column-layout">
   <div class="row two-column-row"> 
     <!-- START MAIN PAGE CONTENT -->
     <main class="column">
+      <h2>Press Releases</h2>
       <div class="headline-featured">
-        <div class="article-category">Featured Press Release</div>
       </div>
       
-      <h2>Latest Press Releases</h2>
       <ul class="recent-headlines-container no-bullet list-divided">
       <li><div class="placeholder"><img src="/images/icon-loading.gif"></div></li>
       </ul>
+      <p class="enlarge"><strong><a href="">News Release Archive &gt;</a></strong></p>
+      <p class="enlarge"><strong><a href="http://www.freddiemac.com/debt/html/redemption_release.html">View Redemption Release &gt;</a></strong></p>
     </main>
     <!-- END MAIN PAGE CONTENT -->
     <!-- START RIGHT SIDEBAR -->
@@ -33,15 +32,12 @@ layout: corporate-2col
       {{> sidebar-contact-media}}
       {{> sidebar-cta-media}}
       {{> sidebar-twitter}}
-      {{> sidebar-rss-media}}     
+      {{> sidebar-rss-media}} 
     </aside>
     <!-- END RIGHT SIDEBAR -->
   </div>
-</section>
+</div>
 <!-- END TWO COLUMN LAYOUT  -->
-
-
-
 
 {{> share-widget}}
 

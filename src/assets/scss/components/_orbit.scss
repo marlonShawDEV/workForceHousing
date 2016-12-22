@@ -84,6 +84,8 @@ $orbit-palette: (
   } 
   li.orbit-slide {
     font-size: rem-calc(18); 
+    margin-top: 0;
+    margin-bottom: 0;   
     @include breakpoint(large) {
       height: 100%;
     } 
@@ -122,15 +124,7 @@ $orbit-palette: (
   } 
   @each $name, $color in $orbit-palette {    
     &.orbit-slide-#{$name} {      
-      background-color: $color;           
-      .button.hollow {
-        color: $white;
-        &:hover, 
-        &:active,
-        &:focus {
-          color: $color;
-        }
-      }
+      background-color: $color; 
     }
   }
 }

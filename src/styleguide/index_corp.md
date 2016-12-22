@@ -10,7 +10,7 @@ In the Grid you can nest columns down as far as you'd like. Just embed rows insi
 ## Basic Full Width Grid
 
 ```html
-<section class="section-padding">  
+<div class="section-padding">  
   <div class="row">
     <div class="columns">
       <h2>A Heading that is in a full width column.</h2>
@@ -54,11 +54,11 @@ In the Grid you can nest columns down as far as you'd like. Just embed rows insi
       </div> 
     </div>
   </div>  
-</section>
+</div>
 ```
 
 
-<section class="section-padding">  
+<div class="section-padding">  
   <div class="row">
     <div class="columns">
       <h2>A Heading that is in a full width column.</h2>
@@ -102,14 +102,14 @@ In the Grid you can nest columns down as far as you'd like. Just embed rows insi
       </div> 
     </div>
   </div>  
-</section>
+</div>
 
 ---
 
 ## Main Column With Aside Column Layout
 
 ```html
-<section class="two-column-layout">
+<div class="two-column-layout">
   <div class="row two-column-row"> 
     <main class="column">
       <h2>Main content</h2>
@@ -124,10 +124,10 @@ In the Grid you can nest columns down as far as you'd like. Just embed rows insi
       </section>
     </aside>
   </div>
-</section>
+</div>
 ```
 
-<section class="two-column-layout">
+<div class="two-column-layout">
   <div class="row two-column-row"> 
     <main class="column">
       <div class="callout">
@@ -144,7 +144,7 @@ In the Grid you can nest columns down as far as you'd like. Just embed rows insi
       </section>
     </aside>
   </div>
-</section>
+</div>
 
 
 
@@ -294,12 +294,14 @@ In the Grid you can nest columns down as far as you'd like. Just embed rows insi
 
 # Text and Typography
 
+There are several text and typography styles to choose from. They're balanced and sized along a modular scale -- while some may appear similar at desktop width, they scale down differently at mobile sizes.
+
+---
+
 ## Generic Headings
 
-Foundation includes styles for all headings&mdash;they're balanced and sized along a modular scale.
-
 <div class="callout">
-  <p>Avoid skipping heading levels when structuring your document, as it confuses screen readers. For example, after using an <code>&lt;h2&gt;</code> in your code, the next heading used should be either <code>&lt;h2&gt;</code> or <code>&lt;h3&gt;</code>. If you need a heading to match a specific style, use one of the custom Header classes.</p>
+  <p>Avoid skipping heading levels when structuring your document, as it confuses screen readers. If you need a heading to match a specific style, use one of the custom Header classes in the next section.</p>
 </div>
 
 ```html
@@ -313,32 +315,55 @@ Foundation includes styles for all headings&mdash;they're balanced and sized alo
 
 <div class="row">
   <div class="columns medium-6">
+    default on lighter backgrounds:
     <div class="callout">
-      <h1>This is the largest header</h1>
-      <h2>This is a large header</h2>
-      <h3>This is a medium header</h3>
-      <h4>This is a moderate header</h4>
-      <h5>This is a small header</h5>
-      <h6>This is a tiny header</h6>
+      <h1>H1 is the largest header</h1>
+      <h2>H2 is a large header</h2>
+      <h3>H3 is a medium header</h3>
+      <h4>H4 is a moderate header</h4>
+      <h5>H5 is a small header</h5>
+      <h6>H6 is the smallest header</h6>
     </div>
   </div>
   <div class="columns medium-6">
+    default on darker backgrounds:
     <div class="callout callout-blue">
-      <h1>This is the largest header</h1>
-      <h2>This is a large header</h2>
-      <h3>This is a medium header</h3>
-      <h4>This is a moderate header</h4>
-      <h5>This is a small header</h5>
-      <h6>This is a tiny header</h6>
+      <h1>H1 is the largest header</h1>
+      <h2>H2 is a large header</h2>
+      <h3>H3 is a medium header</h3>
+      <h4>H4 is a moderate header</h4>
+      <h5>H5 is a small header</h5>
+      <h6>H6 is the smallest header</h6>
     </div>
   </div>
 </div>
 
 ---
 
+## Lead Paragraph
+
+A slightly-larger-than-normal block of text, useful for introductory blurbs, or other emphasized text. The `.lead` text is a slightly larger size than standard text.
+
+```html_example
+<p class="lead">What are your cats <em>really</em> dreaming about while they sleep? <strong>Use strong tag for <em>extra</em> emphasis.</strong></p>
+<p>Standard paragraph for comparison. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras imperdiet nec erat ac condimentum. Nulla vel rutrum ligula.</p>
+```
+
+---
+
+## Call Out Paragraph <span id="call-out-txt"></span>
+
+A brief, attention-catching key phrase, in a distinctive typeface and color, used as a graphic element, serving to entice readers into the article or to highlight a key topic.
+
+```html_example
+<p class="callout-txt">Visit lots of websites like Realtor, Zillow, Trulia, Homesnap, Redfin, and individual broker websites.</p>
+```
+
+---
+
 ## Custom Headings and Text Blocks
 
-These styles can be applied to most HTML elements, such as `H1` - `H6`, `span`, `div`, or `p`. 
+These styles can be applied to most HTML elements, such as `H1` - `H6`, `span`, `div`, or `p`.  Many of these styles are intended for specific uses, or for specific page types.  
 
 ```html
 <p>For use in main content area.</p>
@@ -423,28 +448,7 @@ These styles can be applied to most HTML elements, such as `H1` - `H6`, `span`, 
 
 ---
 
-## Lead Paragraph
-
-A slightly-larger-than-normal block of text, useful for introductory blurbs, or other emphasized text. The `.lead` text is a slightly larger size than standard text.
-
-```html_example
-<p class="lead">What are your cats <em>really</em> dreaming about while they sleep? <strong>Use strong tag for <em>extra</em> emphasis.</strong></p>
-<p>Standard paragraph for comparison. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras imperdiet nec erat ac condimentum. Nulla vel rutrum ligula.</p>
-```
-
----
-
-## Call Out Paragraph <span id="call-out-txt"></span>
-
-A brief, attention-catching key phrase, in a distinctive typeface and color, used as a graphic element, serving to entice readers into the article or to highlight a key topic.
-
-```html_example
-<p class="callout-txt">Visit lots of websites like Realtor, Zillow, Trulia, Homesnap, Redfin, and individual broker websites.</p>
-```
-
----
-
-## Blockquotes
+# Blockquotes
 
 Sometimes other people say smart things, and you may want to mention those things with a quote.
 
@@ -458,9 +462,9 @@ Sometimes other people say smart things, and you may want to mention those thing
 </blockquote>
 ```
 
----
 
-## Abbreviations
+
+# Abbreviations
 
 Use the `<abbr>` tag to annotate a shortened term. Abbreviations must always have a `title` attribute which clarifies the full term.
 
@@ -468,49 +472,20 @@ Use the `<abbr>` tag to annotate a shortened term. Abbreviations must always hav
 <p>In my dream last night, I saw <abbr title="John Ronald Reuel">J. R. R.</abbr> Tolkien and George <abbr title="Raymond Richard">R. R.</abbr> Martin hanging out on Sunset <abbr title="Boulevard">Blvd</abbr>.</p>
 ```
 
----
 
-## Code
 
-Format references to code with the `<code>` tag.
+# Code and Keystrokes
+
+Format references to markup languanges with the `<code>` tag.  Use the `<kbd>` element to annotate a key stroke or combination.
 
 ```html_example
 Remember to escape angle brackets when printing HTML: <code>&lt;div&gt;</code>
-```
-
----
-
-## Keystrokes
-
-Use the `<kbd>` element to annotate a key stroke or combination.
-
-```html_example
 <p>Press <kbd>Cmd+Q</kbd> (or <kbd>Ctrl+Q</kbd> on Windows) to exit.</p>
 ```
 
----
 
-## Accessibility
 
-Text is core to the content of your page, so making it accessible to everyone is important. Here are some general guidelines to follow.
-
-### Text vs. Images
-
-Prefer using actual text over text inside a graphic. Assistive technologies can't read an image, and the text in an image can't be resized by a browser, like normal text. If an image has text that needs to be read, add it in the `alt` attribute of the image.
-
-```html
-<img src="http://www.freddiemac.com/blog/images/fm_blog_usda_returns.jpg" alt="Harp - act now!">
-```
-
----
-
-## Typography Helper Classes <span id="helper"></span>
-
-<p class="lead">These helper classes allow you to scaffold certain typographic styles faster.</p>
-
----
-
-### Text Alignment
+# Text Alignment
 
 The default text alignment for most containers is left.
 - You can change the text alignment of an element by adding `.text-left`, `.text-right`, or `.text-center` to an element.
@@ -526,7 +501,7 @@ The default text alignment for most containers is left.
 
 # Dividers
 
-Use dividers to define thematic breaks between paragraphs. To denote the end of one section of a page and the start of another, it's better to use the `<section>` tag.
+Use dividers to define thematic breaks between paragraphs. To denote the end of one section of a page and the start of another, it's better to use the `<div>` tag.
 
 ```html
 <hr>
@@ -536,11 +511,11 @@ Use dividers to define thematic breaks between paragraphs. To denote the end of 
 
 # Lists
 
-<p class="lead">There are 3 types of lists: definition, ordered, unordered. </p>
+<p class="lead">There are 3 types of lists: definition, ordered, unordered. Additionally, there are custom styles (un-bulleted, divided, etc) that can be used to modify the default layout of list elements.</p>
 
 ## Definition Lists
 
-A definition list (`<dl>`) is used to display name-value pairs, like metadata or a dictionary definition. Each term (`<dt>`) is paired with one or more definitions (`<dd>`).
+A definition list (`<dl>`) is used to display name-value pairs, like metadata or a dictionary definition. Each term (`<dt>`) is paired with one or more definitions (`<dd>`).  Additionally, there is an alternate style with indention on the definitions, which can be used for Glossary-type layouts.
 
 ```html_example
 <dl>
@@ -556,11 +531,12 @@ A definition list (`<dl>`) is used to display name-value pairs, like metadata or
 
 ## Ordered Lists
 
-Use an ordered list when creating a list where the order of the items is important, like ranking pizza toppings from best to worst.
+Use an ordered list when creating a list where the order of the items is important. Ordered lists support additional attributes if you need to specify a starting number other than 0, apply a non-integer counting method, or reverse to decending order.
 
 ```html_example
+<h5>Standard Nested List</h5>
 <ol>
-  <li>Cheese (essential)</li>
+  <li>Cheese</li>
   <li>Pepperoni</li>
   <li>Bacon
     <ol>
@@ -571,6 +547,99 @@ Use an ordered list when creating a list where the order of the items is importa
   <li>Sausage</li>
   <li>Onions</li>
   <li>Mushrooms</li>
+  <li>Peppers</li>
+  <li>Pineapple</li>
+  <li>Black Olives</li>
+  <li>Green Olives</li>
+</ol>
+<h5>Reversed Display Order</h5>
+<p>Use <code>.reversed</code> to visually reverse the display (for something like a "top 10 list" where you want the items to appear to count down to one. <strong>Note:</strong> this only reverses the visual display. The items are still marked up in their standard order.</p>
+<ol class="reversed">
+  <li>Cheese</li>
+  <li>Pepperoni</li>
+  <li>Bacon</li>
+  <li>Sausage</li>
+  <li>Onions</li>
+  <li>Mushrooms</li>
+  <li>Peppers</li>
+  <li>Pineapple</li>
+  <li>Black Olives</li>
+  <li>Green Olives</li>
+</ol>
+<h5>Alphabetical lists</h5>
+<p>Use <code>.upper-alpha</code> for uppercase or <code>.lower-alpha</code> for lowercase. If you go beyond 26, the count will shift from A-Z to AA-ZZ to AAA-ZZZ, etc. Nested lists are numeric unless you specify a different type.</p>
+<ol class="upper-alpha">
+  <li>Coffee</li>
+  <li>Milk
+    <ol class="lower-alpha">
+      <li>Whole</li>
+      <li>Reduced fat</li>
+      <li>Skim</li>
+    </ol>
+  </li>
+  <li>Tea
+    <ol>
+      <li>Black</li>
+      <li>Herbal</li>
+      <li>Green</li>
+    </ol>
+  </li>
+  <li>Soda</li>
+</ol>
+<h5>Roman Numerals lists</h5>
+<p>Use <code>.upper-roman</code> for uppercase or <code>.lower-roman</code> for lowercase. Nested lists are numeric unless you specify a different type.</p>
+<ol class="upper-roman">
+  <li>Coffee</li>
+  <li>Milk
+    <ol class="lower-roman">
+      <li>Whole</li>
+      <li>Reduced fat</li>
+      <li>Skim</li>
+    </ol>
+  </li>
+  <li>Tea
+    <ol>
+      <li>Black</li>
+      <li>Herbal</li>
+      <li>Green</li>
+    </ol>
+  </li>
+  <li>Soda</li>
+</ol>
+<h5>Leading Zero list</h5>
+<p>Use <code>.leading-zero</code> to include leading zeros on the numbers 1-9. Nested lists are numeric unless you specify a different type.</p>
+<ol class="leading-zero">
+  <li>Cheese</li>
+  <li>Pepperoni</li>
+  <li>Bacon</li>
+  <li>Sausage</li>
+  <li>Onions</li>
+  <li>Mushrooms</li>
+  <li>Peppers</li>
+  <li>Pineapple</li>
+  <li>Black Olives</li>
+  <li>Green Olives</li>
+</ol>
+<h5>Descending list</h5>
+<ol reversed>
+  <li>Coffee</li>
+  <li>Milk</li>
+  <li>Tea</li>
+  <li>Soda</li>
+</ol>
+<h5>Start any list at a number other than One</h5>
+<p>Provide a numeric value to the <code>start</code> attribute (even if the list is alpabetical). <strong>Note:</strong> you will need to add custom padding to a list where the item count is 3 digits or more -- our default level of indention displays best for 1-2 digit numbers.</p>
+<ol start="98">
+  <li>Coffee</li>
+  <li>Milk
+    <ol class="lower-alpha" start="8">
+      <li>Whole</li>
+      <li>Reduced fat</li>
+      <li>Skim</li>
+    </ol>
+  </li>
+  <li>Tea</li>
+  <li>Soda</li>
 </ol>
 ```
 
@@ -582,17 +651,26 @@ Use an unordered list to... *list things*, if the order of the items doesn't mat
 
 ```html_example
 <ul>
-  <li>List item with a much longer description or more content.</li>
+  <li>List item</li>
   <li>List item</li>
   <li>List item
     <ul>
-      <li>Nested list item</li>
+      <li>Nested list item      
+        <ul>
+          <li>Nested in a nested list item   
+            <ol>
+              <li>Numbered list</li>
+              <li>Deeply nested</li>
+            </ol>
+          </li>
+        </ul>
+      </li>
       <li>Nested list item</li>
       <li>Nested list item</li>
     </ul>
   </li>
   <li>List item</li>
-  <li>List item</li>
+  <li>List item. This is a list item with a much longer content.  Sometimes a list item is long enough that it will span multiple lines.  This is an example of such an item, to show the line height, padding, and margin that are applied to this list element when it is long enough to wrap to a new line.</li>
   <li>List item</li>
 </ul>
 ```
@@ -601,7 +679,7 @@ Use an unordered list to... *list things*, if the order of the items doesn't mat
 
 ### Un-bulleted Unordered Lists
 
-The `<ul>` is a bulleted list by default, but you can add the class `.no-bullet` to remove the bullets from that list.
+The `<ul>` is a bulleted list by default, but you can add the class `.no-bullet` to remove the bullets from that list.  Nested lists will retain their formatting unless also modified.
 
 ```html_example
 <ul class="no-bullet">
@@ -615,7 +693,7 @@ The `<ul>` is a bulleted list by default, but you can add the class `.no-bullet`
     </ul>
   </li>
   <li>List item</li>
-  <li>List item</li>
+  <li>List item. This is a list item with a much longer content.  Sometimes a list item is long enough that it will span multiple lines.  This is an example of such an item, to show the line height, padding, and margin that are applied to this list element when it is long enough to wrap to a new line.</li>
   <li>List item</li>
 </ul>
 ```
@@ -624,14 +702,48 @@ The `<ul>` is a bulleted list by default, but you can add the class `.no-bullet`
 
 ### Divided Lists
 
-To add dividers between items in a list, add the class `.list-divided` to the list tag.  Most sidebar containers will automatically include the dividers.
+To add dividers between items in a list, add the class `.list-divided` to the list tag.  Typically the dividers are used along with the `.no-bullet` class.
 
 ```html_example
 <ul class="no-bullet list-divided">
   <li>List item</li>
   <li>List item</li>
   <li>List item</li>
+  <li>List item. This is a list item with a much longer content.  Sometimes a list item is long enough that it will span multiple lines.  This is an example of such an item, to show the line height, padding, and margin that are applied to this list element when it is long enough to wrap to a new line.</li>
   <li>List item</li>
+</ul>
+```
+
+---
+
+### Expanded Lists
+
+If you require additional space between very long, complex list items -- such as those where multiple paragraphs are in a single list item, use `<p>` tags.
+
+```html_example
+<ul>
+  <li><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras imperdiet nec erat ac condimentum. Nulla vel rutrum ligula. Sed hendrerit interdum orci a posuere. Vivamus ut velit aliquet, mollis purus eget, iaculis nisl. Proin posuere malesuada ante. Proin auctor <a href="#">orci eros, ac molestie lorem</a> dictum nec. Vestibulum sit amet erat est. Morbi luctus sed elit ac luctus. Proin blandit, enim vitae egestas posuere, neque elit ultricies dui, vel mattis nibh enim ac lorem. Maecenas molestie nisl sit amet velit dictum lobortis. Aliquam erat volutpat.</p></li>
+  <li><p>Proin diam quam, elementum in eleifend id, elementum et metus. Cras in justo consequat justo semper ultrices. Sed dignissim lectus a ante mollis, nec vulputate ante molestie. Proin in porta nunc. Etiam pulvinar turpis sed velit porttitor, vel adipiscing velit fringilla. Cras ac tellus vitae purus pharetra tincidunt. Sed cursus aliquet aliquet. <strong>Cras eleifend commodo malesuada.</strong> In turpis turpis, ullamcorper ut tincidunt a, ullamcorper a nunc. Etiam luctus tellus ac dapibus gravida. Ut nec lacus laoreet neque ullamcorper volutpat.</p>
+  <p>Nunc et leo erat. Aenean mattis ultrices lorem, eget adipiscing dolor ultricies eu. In hac habitasse platea dictumst. Vivamus cursus feugiat sapien quis aliquam. Mauris quam libero, porta vel volutpat ut, blandit a purus. Vivamus vestibulum <a href="#">dui vel tortor molestie</a>, sit amet feugiat sem commodo. Nulla facilisi. Sed molestie arcu eget tellus vestibulum tristique.</p>
+  </li>
+  <li><p>Nullam ut tincidunt nunc. Pellentesque metus lacus, commodo eget justo ut, rutrum varius nunc. <strong>Sed non rhoncus risus.</strong> Morbi sodales gravida pulvinar. Duis malesuada, odio volutpat elementum vulputate, massa magna scelerisque ante, et accumsan tellus nunc in sem. Donec mattis arcu et velit aliquet, non sagittis justo vestibulum. Suspendisse volutpat felis lectus, <a href="#">nec consequat ipsum mattis id</a>. Donec dapibus vehicula facilisis. In tincidunt mi nisi, nec faucibus tortor euismod nec. Suspendisse ante ligula, aliquet vitae libero eu, vulputate dapibus libero. Sed bibendum, sapien at posuere interdum, libero est sollicitudin magna, ac gravida tellus purus eu ipsum. Proin ut quam arcu.</p>
+  <p><em>Suspendisse potenti.</em> Donec ante velit, ornare at augue quis, <a href="#">tristique laoreet sem</a>. Etiam in ipsum elit. Nullam cursus dolor sit amet nulla feugiat tristique. Phasellus ac tellus tincidunt, imperdiet purus eget, ullamcorper ipsum. Cras eu tincidunt sem. Nullam sed dapibus magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id venenatis tortor. In consectetur sollicitudin pharetra. Etiam convallis nisi nunc, et aliquam turpis viverra sit amet. Maecenas faucibus sodales tortor.</p>
+  <p>Suspendisse lobortis mi eu leo viverra volutpat. Pellentesque velit ante, vehicula sodales congue ut, elementum a urna. Cras tempor, ipsum eget luctus rhoncus, arcu ligula fermentum urna, vulputate pharetra enim enim non libero.</p></li>
+  <li><p>Vivamus sagittis, diam in vehicula lobortis, <a href="#">sapien arcu mattis erat</a>, vel aliquet sem urna et risus. Ut feugiat sapien vitae mi elementum laoreet. Suspendisse potenti. Aliquam erat nisl, aliquam pretium libero aliquet, sagittis eleifend nunc. In hac habitasse platea dictumst. Integer turpis augue, tincidunt dignissim mauris id, rhoncus dapibus purus. Maecenas et enim odio. Nullam massa metus, varius quis vehicula sed, pharetra mollis erat. In quis viverra velit. Vivamus placerat, est nec hendrerit varius, enim dui hendrerit magna, ut pulvinar nibh lorem vel lacus. Mauris a orci iaculis, hendrerit eros sed, gravida leo. In dictum mauris vel augue varius, ac ullamcorper nisl ornare. In eu posuere velit, ac fermentum arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam sed malesuada leo, at interdum elit.</p></li>
+</ul>
+```
+
+---
+
+### Compact Lists
+
+Plain `<li>` elements (not those styles as tabs, accordions, carousels, etc) have default margins to separate each item to provide better scanability.  If you are creating a custom layout element using list items, you can override the default margin by adding a class of `.compact` to the `<ul>` or `<ol>` container.
+
+```html_example
+<ul class="compact">
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item. This is a list item with a much longer content.  Sometimes a list item is long enough that it will span multiple lines.  This is an example of such an item, to show the line height, padding, and margin that are applied to this list element when it is long enough to wrap to a new line.</li>
   <li>List item</li>
 </ul>
 ```
@@ -652,7 +764,6 @@ To add dividers between items in a list, add the class `.list-divided` to the li
 <li><a href="#">standard link</a></li>
 <li><a href="#" class="icon">link with icon <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500"><path d="M86.4 480h339.2c12.3 0 22.4-9.9 22.4-22.1V246c0-12.2-10-22-22.4-22H404v-30.9c0-41.5-16.2-87.6-42.6-115.4-26.3-27.8-64-45.7-105.3-45.7h-.1-.1c-41.3 0-79 17.9-105.3 45.6C124.2 105.4 108 151.5 108 193v31H86.4C74 224 64 233.9 64 246v211.9c0 12.2 10 22.1 22.4 22.1zM161 193.1c0-27.3 9.9-61.1 28.1-80.3v-.3C206.7 93.9 231 83 255.9 83h.2c24.9 0 49.2 10.9 66.8 29.5v.2l-.1.1c18.3 19.2 28.1 53 28.1 80.3V224H161v-30.9z"/></svg></a></li>
 <li><a href="#" class="icon secondary">secondary link with icon <svg xmlns="http://www.w3.org/2000/svg" viewBox="60 0 450 480"><path d="M298.3 256L131.1 81.9c-4.2-4.3-4.1-11.4.2-15.8l29.9-30.6c4.3-4.4 11.3-4.5 15.5-.2L380.9 248c2.2 2.2 3.2 5.2 3 8.1.1 3-.9 5.9-3 8.1L176.7 476.8c-4.2 4.3-11.2 4.2-15.5-.2L131.3 446c-4.3-4.4-4.4-11.5-.2-15.8L298.3 256z"/></svg></a></li>
-
 </ul>
 ```
 
@@ -742,8 +853,8 @@ You can change the float behavior of an element by adding the `.float-left` or `
 
 ```html_example
 <div class="callout clearfix">
-  <a class="button float-left">Left</a>
-  <a class="button float-right">Right</a>
+  <a class="button secondary float-left">Left</a>
+  <a class="button secondary float-right">Right</a>
 </div>
 ```
 
@@ -754,7 +865,7 @@ You can change the float behavior of an element by adding the `.float-left` or `
 Okay, it's not *really* a float, but you can add the `.float-center` class to an element to engage the automatic margin centering trick. Note that this will only work on elements with an absolute width, which means not a percentage or `auto` width.
 
 ```html_example
-<img src="http://www.freddiemac.com/blog/images/fm_blog_usda_returns.jpg" alt="Harp - act now!" class="float-center">
+<img src="/images/blog/fm_blog_usda_returns.jpg" alt="Harp - act now!" class="float-center">
 ```
 
 
@@ -767,13 +878,13 @@ Okay, it's not *really* a float, but you can add the `.float-center` class to an
 
 ## Default Buttons
 
-Use default buttons for actions like resetting a form or cancelling a request.
+Use default buttons for minor actions like resetting a form or cancelling a request.
 
 ```html_example
 <p>
-  <a href="#" class="large button">Large button</a>
-  <a href="#" class="button">Regular button</a>
-  <a href="#" class="small button">Small button</a>
+  <a href="#" class="large button">Button (large)</a>
+  <a href="#" class="button">Button (default)</a>
+  <a href="#" class="small button">Button (small)</a>
 </p>
 ```
 
@@ -781,13 +892,13 @@ Use default buttons for actions like resetting a form or cancelling a request.
 
 ## Primary Buttons
 
-Use class `.primary`, for buttons used for primary calls-to-action, like submitting a form.  Use sparingly; there shouldn't be multiple calls-to-action on a single web page.
+Use class `.primary`, for buttons used for primary calls-to-action, like submitting a form.  Use sparingly; there shouldn't be multiple calls-to-action on most web pages.
 
 ```html_example
 <p>
-  <a href="#" class="primary large button">Large button</a>
-  <a href="#" class="primary button">Regular button</a>
-  <a href="#" class="primary small button">Small button</a>
+  <a href="#" class="primary large button">Button (large)</a>
+  <a href="#" class="primary button">Button (default)</a>
+  <a href="#" class="primary small button">Button (small)</a>
 </p>
 ```
 
@@ -799,9 +910,9 @@ Use class `.secondary` for buttons used for less important, secondary actions on
 
 ```html_example
 <p>
-  <a href="#" class="secondary large button">Large button</a>
-  <a href="#" class="secondary button">Regular button</a>
-  <a href="#" class="secondary small button">Small button</a>
+  <a href="#" class="secondary large button">Button (large)</a>
+  <a href="#" class="secondary button">Button (default)</a>
+  <a href="#" class="secondary small button">Button (small)</a>
 </p>
 ```
 
@@ -809,13 +920,13 @@ Use class `.secondary` for buttons used for less important, secondary actions on
 
 ## Tertiary Buttons
 
-Use class `.tertiary` for buttons used for less important, incidental actions on a page.
+Use class `.tertiary` for buttons for logins.  See below section on buttons with icons to include a padlock.
 
 ```html_example
 <p>
-  <a href="#" class="tertiary large button">Large button</a>
-  <a href="#" class="tertiary button">Regular button</a>
-  <a href="#" class="tertiary small button">Small button</a>
+  <a href="#" class="tertiary large button">Button (large)</a>
+  <a href="#" class="tertiary button">Button (default)</a>
+  <a href="#" class="tertiary small button">Button (small)</a>
 </p>
 ```
 
@@ -823,71 +934,30 @@ Use class `.tertiary` for buttons used for less important, incidental actions on
 
 ## Hollow Buttons
 
-Use class `.hollow` for non-solid buttons.  By default, hollow buttons are gray, but if they are used within a [callout](#callouts) or [carousel](#carousels), they will inherit their background and their hover text color from that element.
+Use class `.hollow` for buttons that aren't a call-to-action which are on a dark background, such as in carousels or modals. 
 
 ```html_example
-  <p>
-    <a href="#" class="hollow large button">Large button</a>
-    <a href="#" class="hollow button">Regular button</a>
-    <a href="#" class="hollow small button">Small button</a>
-  </p>
 <div class="callout callout-purple">
   <p>
-    <a href="#" class="hollow large button">Large button</a>
-    <a href="#" class="hollow button">Regular button</a>
-    <a href="#" class="hollow small button">Small button</a>
+    <a href="#" class="hollow large button">Button (large)</a>
+    <a href="#" class="hollow button">Button (default)</a>
+    <a href="#" class="hollow small button">Button (small)</a>
   </p>
 </div>
 <div class="callout callout-teal">
   <p>
-    <a href="#" class="hollow large button">Large button</a>
-    <a href="#" class="hollow button">Regular button</a>
-    <a href="#" class="hollow small button">Small button</a>
+    <a href="#" class="hollow large button">Button (large)</a>
+    <a href="#" class="hollow button">Button (default)</a>
+    <a href="#" class="hollow small button">Button (small)</a>
   </p>
 </div>
 <div class="callout callout-primary">
   <p>
-    <a href="#" class="hollow large button">Large button</a>
-    <a href="#" class="hollow button">Regular button</a>
-    <a href="#" class="hollow small button">Small button</a>
+    <a href="#" class="hollow large button">Button (large)</a>
+    <a href="#" class="hollow button">Button (default)</a>
+    <a href="#" class="hollow small button">Button (small)</a>
   </p>
 </div>
-```
-
----
-
-## Reverse Buttons
-
-Use the `.reverse` style button when you need a hollow button on a dark background or over a photo, but you aren't placing it in a [callout](#callouts) or [carousel](#carousels) -- in those locations the button text will match the background of the callout/carousel on hover, whereas this button's hover state reverses to gray on white. 
-
-```html_example
-<div style="background: black; padding: 1rem;">
-  <a href="#" class="reverse large button">Large button</a>
-  <a href="#" class="reverse button">Regular button</a>
-  <a href="#" class="reverse small button">Small button</a>
-</div>
-```
-
----
-
-## Inverted Buttons
-
-The `.invert-to-blue` style button is intended for category tags in the blog hero section only. For <strong>any other usage</strong>, choose a different button style.
-
-```html_example
-<section class="hero-blended blog-detail-hero">
-  <div class="row vertical-center-full">
-	  <div class="columns">
-		  <div class="hero-blended-content hero-blended-left">
-		  	<div class="hero-date">May 9, 2016</div>
-		    <h1 class="hero-title">Take the Anxiety Out of Your First Home Offer</h1>
-		    <div>
-		    	<a href="#" class="invert-to-blue button small">Homeownership</a>
-		    </div>
-		  </div>
-		</div>
-	</div>
-</section>
 ```
 
 ---
@@ -901,11 +971,9 @@ If you use a one-color svg icon without a fill color, css will allow it to inher
 <p>
   <a href="#" class="button tertiary">Log In <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 450"><path d="M86.4 480h339.2c12.3 0 22.4-9.9 22.4-22.1V246c0-12.2-10-22-22.4-22H404v-30.9c0-41.5-16.2-87.6-42.6-115.4-26.3-27.8-64-45.7-105.3-45.7h-.2c-41.3 0-79 17.9-105.3 45.6C124.2 105.4 108 151.5 108 193v31H86.4C74 224 64 233.9 64 246v211.9c0 12.2 10 22.1 22.4 22.1zM161 193.1c0-27.3 9.9-61.1 28.1-80.3v-.3C206.7 93.9 231 83 255.9 83h.2c24.9 0 49.2 10.9 66.8 29.5v.2l-.1.1c18.3 19.2 28.1 53 28.1 80.3V224H161v-30.9z" /></svg></a>
 
-
-  <a href="#" class="hollow darken button">Hey There! <svg xmlns="http://www.w3.org/2000/svg" viewBox="60 60 350 350"><path d="M363.3 363.9c-12.9-4.6-31.4-6.2-43.2-8.8-6.8-1.5-16.7-5.3-20-9.2-3.3-4-1.3-40.9-1.3-40.9s6.1-9.6 9.4-18 6.9-31.4 6.9-31.4 6.8 0 9.2-11.9c2.6-13 6.6-18.4 6.1-28.1-.5-9-5.2-9.5-5.7-9.5 0 0 4.9-13.6 5.6-42.4C331.1 129.6 305 96 256 96s-75 33.5-74.3 67.6c.6 28.7 5.6 42.4 5.6 42.4-.5 0-5.2.5-5.7 9.5-.5 9.7 3.6 14.9 6.1 27.9 2.4 11.9 9.2 12 9.2 12s3.6 23.1 6.9 31.5c3.3 8.5 9.4 18 9.4 18s2 36.9-1.3 40.9-13.2 7.7-20 9.2c-11.9 2.6-30.3 4.3-43.2 8.9C135.8 368.5 96 384 96 416h320c0-32-39.8-47.5-52.7-52.1z"/></svg></a>
-
-   <a href="#" class="button primary">Continue <svg xmlns="http://www.w3.org/2000/svg" viewBox="40 40 400 400"><path d="M322.7 128.4l100.3 105c6 5.8 9 13.7 9 22.4s-3 16.5-9 22.4L322.7 383.6c-11.9 12.5-31.3 12.5-43.2 0-11.9-12.5-11.9-32.7 0-45.2l48.2-50.4h-217c-17 0-30.7-14.3-30.7-32s13.7-32 30.6-32h217l-48.2-50.4c-11.9-12.5-11.9-32.7 0-45.2 12-12.5 31.3-12.5 43.3 0z" fill="#ffb718"/></svg></a>
-
+  <a class="button secondary"><svg xmlns="http://www.w3.org/2000/svg" viewBox="40 40 400 400"><path d="M189.3 128.4L89 233.4c-6 5.8-9 13.7-9 22.4s3 16.5 9 22.4l100.3 105.4c11.9 12.5 31.3 12.5 43.2 0 11.9-12.5 11.9-32.7 0-45.2L184.4 288h217c16.9 0 30.6-14.3 30.6-32s-13.7-32-30.6-32h-217l48.2-50.4c11.9-12.5 11.9-32.7 0-45.2-12-12.5-31.3-12.5-43.3 0z"/></svg> Previous</a>
+      
+  <a class="button secondary">Next <svg xmlns="http://www.w3.org/2000/svg" viewBox="40 40 400 400"><path d="M322.7 128.4l100.3 105c6 5.8 9 13.7 9 22.4s-3 16.5-9 22.4L322.7 383.6c-11.9 12.5-31.3 12.5-43.2 0-11.9-12.5-11.9-32.7 0-45.2l48.2-50.4h-217c-17 0-30.7-14.3-30.7-32s13.7-32 30.6-32h217l-48.2-50.4c-11.9-12.5-11.9-32.7 0-45.2 12-12.5 31.3-12.5 43.3 0z"/></svg></a>
 </p>
 ```
 
@@ -1003,7 +1071,7 @@ Landing Pages are those pages that are linked from the primary navigation. Add o
 
 
 ```html_example
-<section class="about-landing-hero hero-blended">
+<div class="hero-blended about-landing-hero">
   <div class="row vertical-center-full">
     <div class="columns">
       <div class="hero-blended-content">
@@ -1012,51 +1080,55 @@ Landing Pages are those pages that are linked from the primary navigation. Add o
       </div>
     </div>
   </div>
-</section>
+</div>
 ```
 
 ---
 
 ## Blog Detail Heros
 
-Use this hero on Blog article pages.
+Use this hero on Blog article pages.  Elements inside the hero include the date, the title, and the blog category.
 
-```html_example
-<section class="hero-blended blog-detail-hero">
+```html
+<div class="hero-blended blog-detail-hero">
   <div class="row vertical-center-full">
 	  <div class="columns">
-		  <div class="hero-blended-content hero-blended-left">
+		  <div class="hero-blended-content">
 		  	<div class="hero-date">May 9, 2016</div>
 		    <h1 class="hero-title">Take the Anxiety Out of Your First Home Offer</h1>
-		    <div>
-		    	<a href="#" class="invert-to-blue button small">Homeownership</a>
-		    </div>
+		    <p><a href="#" class="hollow button small">Homeownership</a></p>
 		  </div>
 		</div>
 	</div>
-  <div class="share-wrapper show-for-medium" aria-hidden="true">
-    <div class="row column">
-      <div class="share-widget">
-        <a class="sharelink-twitter" href="https://twitter.com/intent/tweet/?text=http://www.freddiemac.com&via=freddiemac"><svg xmlns="http://www.w3.org/2000/svg"><path d="M27.996 10.116c-.81.36-1.68.602-2.592.71a4.526 4.526 0 0 0 1.984-2.496 9.037 9.037 0 0 1-2.866 1.095 4.513 4.513 0 0 0-7.69 4.116 12.81 12.81 0 0 1-9.3-4.714 4.49 4.49 0 0 0-.612 2.27 4.51 4.51 0 0 0 2.008 3.755 4.495 4.495 0 0 1-2.044-.563v.057a4.515 4.515 0 0 0 3.62 4.425 4.52 4.52 0 0 1-2.04.076 4.517 4.517 0 0 0 4.217 3.134 9.055 9.055 0 0 1-5.603 1.93A9.18 9.18 0 0 1 6 23.85a12.773 12.773 0 0 0 6.918 2.027c8.3 0 12.84-6.876 12.84-12.84 0-.195-.005-.39-.014-.583a9.172 9.172 0 0 0 2.252-2.336"/></svg></a> 
-        <a class="sharelink-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://www.freddiemac.com"><svg xmlns="http://www.w3.org/2000/svg"><path d="M22 5.16c-.406-.054-1.806-.16-3.43-.16-3.4 0-5.733 1.825-5.733 5.17v2.882H9v3.913h3.837V27h4.604V16.965h3.824l.587-3.913h-4.41v-2.5c0-1.123.348-1.903 2.2-1.903H22V5.16z"/></svg></a> 
-        <a class="sharelink-linkedin" data-location="http://www.freddiemac.com" href="https://www.linkedin.com/"><svg xmlns="http://www.w3.org/2000/svg"><path d="M26 25.963h-4.185v-6.55c0-1.56-.027-3.57-2.175-3.57-2.18 0-2.51 1.7-2.51 3.46v6.66h-4.182V12.495h4.012v1.84h.058c.558-1.058 1.924-2.174 3.96-2.174 4.24 0 5.022 2.79 5.022 6.418v7.386zM8.23 10.655a2.426 2.426 0 0 1 0-4.855 2.427 2.427 0 0 1 0 4.855zm-2.098 1.84h4.19v13.468h-4.19V12.495z"/></svg></a> 
-        <a class="sharelink-mailto" href="mailto:?body=Sharing%20a%20link%20http://www.freddiemac.com"><svg xmlns="http://www.w3.org/2000/svg"><path d="M26.684 23.264H4.948v-12.88l.2-.1c.303-.202 7.046-4.73 8.152-5.435 1.41-.908 3.22-.807 4.63.1 1.308.803 8.453 5.332 8.453 5.332l.2.1.1 12.88zm-20.63-1.006H25.68v-11.27c-1.207-.806-7.044-4.53-8.252-5.133-1.107-.704-2.515-.704-3.622-.1-1.007.603-6.743 4.528-7.95 5.232.2.1.2 11.27.2 11.27z"/><path d="M21.753 16.622H10.08a1.59 1.59 0 0 1-1.61-1.61v-3.02c0-.905.704-1.61 1.61-1.61h11.673c.906 0 1.61.705 1.61 1.61v3.02a1.59 1.59 0 0 1-1.61 1.61zM9.98 11.49c-.404 0-.605.302-.605.604v3.02c0 .4.302.603.604.603h11.67c.403 0 .604-.302.604-.604v-3.02c0-.402-.302-.603-.604-.603H9.98z"/><path d="M25.778 21.956v-10.97l-5.837 4.53 5.84 6.44zm-19.824 0v-10.97l5.837 4.53-5.835 6.44z"/><path d="M25.778 22.76l-6.138-6.74h-7.548l-6.137 6.74-.806-.603 6.54-7.145h8.352l6.54 7.145-.805.604z"/><path d="M25.945 10.334l.61.8-6.32 4.823-.61-.8zm-20.043.052l6.326 4.814-.61.802-6.326-4.815zm9.914 7.444l.302 8.252 2.013-2.516 2.014 4.226 1.107-.503-2.112-4.228 3.22-.2-6.54-5.033z"/></svg></a>
+  <!-- and a share widget -->
+</div>
+```
+
+<div class="grid-2col-article">
+  <div class="hero-blended blog-detail-hero">
+    <div class="row vertical-center-full">
+      <div class="columns">
+        <div class="hero-blended-content">
+          <div class="hero-date">May 9, 2016</div>
+          <h1 class="hero-title">Take the Anxiety Out of Your First Home Offer</h1>
+          <p><a href="#" class="hollow button small">Homeownership</a></p>
+        </div>
       </div>
     </div>
+    <!-- and a share widget -->
   </div>
-</section>
-```
+</div>
 
 ---
 
 ## Executive Perspectives Heros
 
-Use this hero on Executive Perspectives article pages.
+Use this hero on Executive Perspectives article pages.  Elements include the label "Executive Perspectives", the date, the title, the author's image, the author's name, and the author's title.
 
-```html_example
-<section class="perspectives-detail-hero hero-blended">
+```html
+<div class="perspectives-detail-hero hero-blended">
   <div class="row column vertical-center-full">
-    <div class="hero-blended-content hero-blended-left">
+    <div class="hero-blended-content">
       <div><strong>Executive Perspectives</strong></div>
       <div class="hero-date">August 9, 2016</div>
       <h1 class="hero-title">Three Reasons Why Baby Boomer Homeowners are a Market to Watch</h1>
@@ -1070,20 +1142,30 @@ Use this hero on Executive Perspectives article pages.
       </figure>
     </div>
 	</div>
-  <div class="share-wrapper show-for-medium" aria-hidden="true">
-    <div class="row column">
-      <div class="share-widget">
-        <a class="sharelink-twitter" href="https://twitter.com/intent/tweet/?text=http://www.freddiemac.com&via=freddiemac"><svg xmlns="http://www.w3.org/2000/svg"><path d="M27.996 10.116c-.81.36-1.68.602-2.592.71a4.526 4.526 0 0 0 1.984-2.496 9.037 9.037 0 0 1-2.866 1.095 4.513 4.513 0 0 0-7.69 4.116 12.81 12.81 0 0 1-9.3-4.714 4.49 4.49 0 0 0-.612 2.27 4.51 4.51 0 0 0 2.008 3.755 4.495 4.495 0 0 1-2.044-.563v.057a4.515 4.515 0 0 0 3.62 4.425 4.52 4.52 0 0 1-2.04.076 4.517 4.517 0 0 0 4.217 3.134 9.055 9.055 0 0 1-5.603 1.93A9.18 9.18 0 0 1 6 23.85a12.773 12.773 0 0 0 6.918 2.027c8.3 0 12.84-6.876 12.84-12.84 0-.195-.005-.39-.014-.583a9.172 9.172 0 0 0 2.252-2.336"/></svg></a> 
-        <a class="sharelink-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://www.freddiemac.com"><svg xmlns="http://www.w3.org/2000/svg"><path d="M22 5.16c-.406-.054-1.806-.16-3.43-.16-3.4 0-5.733 1.825-5.733 5.17v2.882H9v3.913h3.837V27h4.604V16.965h3.824l.587-3.913h-4.41v-2.5c0-1.123.348-1.903 2.2-1.903H22V5.16z"/></svg></a> 
-        <a class="sharelink-linkedin" data-location="http://www.freddiemac.com" href="https://www.linkedin.com/"><svg xmlns="http://www.w3.org/2000/svg"><path d="M26 25.963h-4.185v-6.55c0-1.56-.027-3.57-2.175-3.57-2.18 0-2.51 1.7-2.51 3.46v6.66h-4.182V12.495h4.012v1.84h.058c.558-1.058 1.924-2.174 3.96-2.174 4.24 0 5.022 2.79 5.022 6.418v7.386zM8.23 10.655a2.426 2.426 0 0 1 0-4.855 2.427 2.427 0 0 1 0 4.855zm-2.098 1.84h4.19v13.468h-4.19V12.495z"/></svg></a> 
-        <a class="sharelink-mailto" href="mailto:?body=Sharing%20a%20link%20http://www.freddiemac.com"><svg xmlns="http://www.w3.org/2000/svg"><path d="M26.684 23.264H4.948v-12.88l.2-.1c.303-.202 7.046-4.73 8.152-5.435 1.41-.908 3.22-.807 4.63.1 1.308.803 8.453 5.332 8.453 5.332l.2.1.1 12.88zm-20.63-1.006H25.68v-11.27c-1.207-.806-7.044-4.53-8.252-5.133-1.107-.704-2.515-.704-3.622-.1-1.007.603-6.743 4.528-7.95 5.232.2.1.2 11.27.2 11.27z"/><path d="M21.753 16.622H10.08a1.59 1.59 0 0 1-1.61-1.61v-3.02c0-.905.704-1.61 1.61-1.61h11.673c.906 0 1.61.705 1.61 1.61v3.02a1.59 1.59 0 0 1-1.61 1.61zM9.98 11.49c-.404 0-.605.302-.605.604v3.02c0 .4.302.603.604.603h11.67c.403 0 .604-.302.604-.604v-3.02c0-.402-.302-.603-.604-.603H9.98z"/><path d="M25.778 21.956v-10.97l-5.837 4.53 5.84 6.44zm-19.824 0v-10.97l5.837 4.53-5.835 6.44z"/><path d="M25.778 22.76l-6.138-6.74h-7.548l-6.137 6.74-.806-.603 6.54-7.145h8.352l6.54 7.145-.805.604z"/><path d="M25.945 10.334l.61.8-6.32 4.823-.61-.8zm-20.043.052l6.326 4.814-.61.802-6.326-4.815zm9.914 7.444l.302 8.252 2.013-2.516 2.014 4.226 1.107-.503-2.112-4.228 3.22-.2-6.54-5.033z"/></svg></a>
-      </div>
-    </div>
-  </div>
-</section>
+  <!-- and a share widget -->
+</div>
 ```
 
-
+<div class="grid-2col-article">
+  <div class="perspectives-detail-hero hero-blended">
+    <div class="row column vertical-center-full">
+      <div class="hero-blended-content">
+        <div><strong>Executive Perspectives</strong></div>
+        <div class="hero-date">August 9, 2016</div>
+        <h1 class="hero-title">Three Reasons Why Baby Boomer Homeowners are a Market to Watch</h1>
+        <figure class="avatar">
+          <div>
+            <img src="/images/exec_david_brickman.jpg" alt="Avatar img" />
+          </div>
+          <div>
+            <figcaption class="reduce">Article By<br><strong>David Brickman, EVP Multifamily Business</strong></figcaption>
+          </div>
+        </figure>
+      </div>
+    </div>
+    <!-- and a share widget -->
+  </div>
+</div>
 
 
 
@@ -1096,13 +1178,13 @@ Every page should use either a [hero element](#heros) or a page title.  There ar
 For pages without a tertiary nav, the column with the title goes full width at all breakpoints.
 
 ```html_example
-<section class="page-title">
+<div class="page-title">
   <div class="row">
     <div class="column">
       <h1 class="hero-title">Page Title That is Quite Long to Show Where Wrapping Occurs</h1>
     <div>
   </div>
-</section>
+</div>
 ```
 
 ---
@@ -1112,13 +1194,13 @@ For pages without a tertiary nav, the column with the title goes full width at a
 For pages with a tertiary nav, the column with the title must wrap at the 8 columns mark at large breakpoint or higher, to allow for the tertiary nav to overlap the page title.
 
 ```html_example
-<section class="page-title">
+<div class="page-title">
   <div class="row">
     <div class="large-8 end column">
       <h1 class="hero-title">Page Title That is Quite Long to Show Where Wrapping Occurs</h1>
     <div>
   </div>
-</section>
+</div>
 ```
 
 
@@ -1203,7 +1285,7 @@ On the blog landing page, the first 2 entries are featured with large images and
         <div class="overlay-contents">
           <div class="article-date-lg">October 18, 2016</div>
           <h3 class="subtitle">Baby Boomer Myths: Up-Close and Personal with Sean Becketti, Chief Economist</h3>
-          <div class="button reverse">Research &amp; Analysis</div>
+          <div class="article-category">Research &amp; Analysis</div>
         </div>
       </a>
     </div>
@@ -1215,7 +1297,7 @@ On the blog landing page, the first 2 entries are featured with large images and
         <div class="overlay-contents">
           <div class="article-date-lg">Oct 13, 2016</div>
           <h3 class="subtitle">Don't Be Spoofed</h3>
-          <div class="button reverse">Notable</div>
+          <div class="article-category">Notable</div>
         </div>
       </a>
     </div>
@@ -1376,7 +1458,20 @@ A Callout Fullwidth Band is a full width band of content.  On most interior page
     </div>
     <div class="columns large-offset-1 large-3 position-relative" data-equalizer-watch>
       <div class="callout-fullwidth-cta">
-       <a class="primary button large" href="#">Our Mission</a>
+       <a class="hollow button large" href="#">Our Mission</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="callout callout-yellow callout-fullwidth">
+  <div class="row" data-equalizer data-equalize-on="large">
+    <div class="columns large-8" data-equalizer-watch>
+       <h3 class="callout-footer-title">My Home by Freddie Mac®</h3>
+      <p>We offer the resources to help you make informed housing decisions and support your success – whether you rent, own, or plan to buy a home.</p>
+    </div>
+    <div class="columns large-offset-1 large-3 position-relative" data-equalizer-watch>
+      <div class="callout-fullwidth-cta">
+       <a class="hollow large button" href="http://myhome.freddiemac.com/">Find it</a>
       </div>
     </div>
   </div>
@@ -1390,21 +1485,7 @@ A Callout Fullwidth Band is a full width band of content.  On most interior page
     </div>
     <div class="columns large-offset-1 large-3 position-relative" data-equalizer-watch>
       <div class="callout-fullwidth-cta">
-       <a class="primary button large" href="#">Our Mission</a>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="callout callout-yellow callout-fullwidth">
-  <div class="row" data-equalizer data-equalize-on="large">
-    <div class="columns large-8" data-equalizer-watch>
-      <h3 class="callout-footer-title">Getting To Know Freddie Mac</h3>
-      <p>Every day, Freddie Mac employees ensure mortgage credit is available for America's families and help rebuild the nation's housing finance system.</p>
-      <p>Learn how Our Mission is making a positive impact.</p>
-    </div>
-    <div class="columns large-offset-1 large-3 position-relative" data-equalizer-watch>
-      <div class="callout-fullwidth-cta">
-       <a class="primary button large" href="#">Our Mission</a>
+       <a class="hollow button large" href="#">Our Mission</a>
       </div>
     </div>
   </div>
@@ -1416,7 +1497,7 @@ A Callout Fullwidth Band is a full width band of content.  On most interior page
 #  Sidebar Modules
 
 <p class="lead">There are a variety of modules available for use in a side bar, when you are using the Two Column Layout.</p>
-<p>Links inside most <a href="#sidebar-modules">sidebar modules</a> inherit the existing text color to blend in better.</p>
+<p>Links inside most sidebar modules inherit the existing text color (typically white) to blend in better.</p>
 
 ---
 
@@ -1437,24 +1518,26 @@ A Callout Fullwidth Band is a full width band of content.  On most interior page
 </section>
 ```
 
-<section class="two-column-layout">
-  <main>
-  </main>
-  <aside>
-    <section class="sidebar sidebar-yellow">
-      <div class="row">
-        <h2>Trending Now</h2>
-        <ul class="sidebar-list no-bullet lead">
-          <li><a href="#">Credit Smart</a></li>
-          <li><a href="#">Education &amp; Tools</a></li>
-          <li><a href="#">Fraud</a></li>
-          <li><a href="#">HARP</a></li>
-          <li><a href="#">MiMi</a></li>
-        </ul>
-      </div>
-    </section>
-  </aside>
-</section>
+<div class="two-column-layout">
+  <div class="row two-column-row"> 
+    <main class="column">
+    </main>
+    <aside class="column">  
+      <section class="sidebar sidebar-yellow">
+        <div class="row">
+          <h2>Trending Now</h2>
+          <ul class="sidebar-list no-bullet lead">
+            <li><a href="#">Credit Smart</a></li>
+            <li><a href="#">Education &amp; Tools</a></li>
+            <li><a href="#">Fraud</a></li>
+            <li><a href="#">HARP</a></li>
+            <li><a href="#">MiMi</a></li>
+          </ul>
+        </div>
+      </section>
+    </aside>
+  </div>
+</div>
 
 ---
 
@@ -1475,24 +1558,26 @@ A Callout Fullwidth Band is a full width band of content.  On most interior page
 </section>
 ```
 
-<section class="two-column-layout">
-  <main>
-  </main>
-  <aside>
-    <section class="sidebar sidebar-blue">
-      <div class="row">
-        <div class="sidebar-txt">
-          <h2 class="sidebar-subtitle">Get The Weekly Roundup</h2>
-          <p>Sign up for the <strong>Weekly Roundup</strong> and get Freddie Mac blog articles delivered to your inbox.</p>
-          <form class="form outline outline-primary">
-            <p><input type="email" placeholder="Your Email Address"></p>
-            <p><a class="primary button expanded" href="#">Sign Up</a></p>
-          </form>
+<div class="two-column-layout">
+  <div class="row two-column-row"> 
+    <main class="column">
+    </main>
+    <aside class="column">
+      <section class="sidebar sidebar-blue">
+        <div class="row">
+          <div class="sidebar-txt">
+            <h2 class="sidebar-subtitle">Get The Weekly Roundup</h2>
+            <p>Sign up for the <strong>Weekly Roundup</strong> and get Freddie Mac blog articles delivered to your inbox.</p>
+            <form class="form outline outline-primary">
+              <p><input type="email" placeholder="Your Email Address"></p>
+              <p><a class="primary button expanded" href="#">Sign Up</a></p>
+            </form>
+          </div>
         </div>
-      </div>
-    </section>
-  </aside>
-</section>
+      </section>
+    </aside>
+  </div>
+</div>
 
 ---
 
@@ -1502,35 +1587,37 @@ A Callout Fullwidth Band is a full width band of content.  On most interior page
 <section class="sidebar sidebar-gray">
   <div class="row">
     <h2>RSS Blog Feeds</h2>
-    <ul class="sidebar-list no-bullet lead">
-      <li><a href="#" class="icon-rss-white">All Posts</a></li>
-      <li><a href="#" class="icon-rss-white">Homeownership</a></li>
-      <li><a href="#" class="icon-rss-white">Rental Housing</a></li>
-      <li><a href="#" class="icon-rss-white">Research &amp; Analysis</a></li>
-      <li><a href="#" class="icon-rss-white">Notable</a></li>
+    <ul class="sidebar-list no-bullet lead list-rss">
+      <li><a href="#">All Posts</a></li>
+      <li><a href="#">Homeownership</a></li>
+      <li><a href="#">Rental Housing</a></li>
+      <li><a href="#">Research &amp; Analysis</a></li>
+      <li><a href="#">Notable</a></li>
     </ul>
   </div>
 </section>
 ```
 
-<section class="two-column-layout">
-    <main>
-    </main>
-    <aside>
-      <section class="sidebar sidebar-gray">
-        <div class="row">
-          <h2>RSS Blog Feeds</h2>
-          <ul class="sidebar-list no-bullet lead">
-            <li><a href="#" class="icon-rss-white">All Posts</a></li>
-            <li><a href="#" class="icon-rss-white">Homeownership</a></li>
-            <li><a href="#" class="icon-rss-white">Rental Housing</a></li>
-            <li><a href="#" class="icon-rss-white">Research &amp; Analysis</a></li>
-            <li><a href="#" class="icon-rss-white">Notable</a></li>
-          </ul>
-        </div>
-      </section>
-    </aside>
-</section>
+<div class="two-column-layout">
+  <div class="row two-column-row"> 
+      <main class="column">
+      </main>
+      <aside class="column">
+        <section class="sidebar sidebar-gray">
+          <div class="row">
+            <h2>RSS Blog Feeds</h2>
+            <ul class="sidebar-list no-bullet lead list-rss">
+              <li><a href="#">All Posts</a></li>
+              <li><a href="#">Homeownership</a></li>
+              <li><a href="#">Rental Housing</a></li>
+              <li><a href="#">Research &amp; Analysis</a></li>
+              <li><a href="#">Notable</a></li>
+            </ul>
+          </div>
+        </section>
+      </aside>
+  </div>
+</div>
 
 ---
 
@@ -1542,32 +1629,38 @@ Note: The news release lists are automated by MarketWire.
 ```html
 <section class="sidebar sidebar-concrete">
   <div class="row">
-    <h2 class="sidebar-subtitle">Recent News</h2>
-    <ul class="sidebar-list no-bullet">
-      <li><a href="#">Freddie Mac Issues Dodd-Frank Stress Test Results</a> <br>08/08/16 -  MCLEAN, VA--(Marketwired - Aug 8, 2016) - &nbsp;Freddie Mac (OTCQB: FMCC) today issued the company's stress test results for the severely adverse scenario conducted under FHFA's rule...</li>
-      <li><a href="#">Freddie Mac Reports Second Quarter 2016 Financial Results</a> <br>08/02/16 -  MCLEAN, VA--(Marketwired - Aug 2, 2016) -  Freddie Mac (OTCQB: FMCC) today reported its second quarter 2016 financial results and filed its quarterly Form 10-Q with the U.S. Securities...</li>
-      <li><a href="#">Freddie Mac Sets Release Date for Second Quarter 2016 Financial Results</a> <br>Jul 29, 2016 - MCLEAN, VA--(Marketwired - Jul 29, 2016) -  Freddie Mac (OTCQB: FMCC) announced today that it plans to report its second quarter 2016 financial results before the U.S. financial markets...</li>	
-    </ul>
+    <div class="sidebar-txt">
+      <h2 class="sidebar-subtitle">Recent News</h2>
+      <ul class="sidebar-list no-bullet">
+        <li><a href="#">08/08/16 -  Freddie Mac (OTCQB: FMCC) today issued the company's stress test results for the severely adverse scenario conducted under FHFA's rule...</a> </li>
+        <li><a href="#">08/02/16 -  Freddie Mac (OTCQB: FMCC) today reported its second quarter 2016 financial results and filed its quarterly Form 10-Q with the U.S. Securities...</a> </li>
+        <li><a href="#">Jul 29, 2016 - Freddie Mac (OTCQB: FMCC) announced today that it plans to report its second quarter 2016 financial results before the U.S. financial markets...</a></li>	
+      </ul>
+    </div>
   </div>
 </section>
 ```
 
-<section class="two-column-layout">
-  <main>
-  </main>
-  <aside>
-    <section class="sidebar sidebar-concrete">
-      <div class="row">
-        <h2 class="sidebar-subtitle">Recent News</h2>
-        <ul class="sidebar-list no-bullet">
-          <li><a href="#">Freddie Mac Issues Dodd-Frank Stress Test Results</a> <br>08/08/16 -  MCLEAN, VA--(Marketwired - Aug 8, 2016) - &nbsp;Freddie Mac (OTCQB: FMCC) today issued the company's stress test results for the severely adverse scenario conducted under FHFA's rule...</li>
-          <li><a href="#">Freddie Mac Reports Second Quarter 2016 Financial Results</a> <br>08/02/16 -  MCLEAN, VA--(Marketwired - Aug 2, 2016) -  Freddie Mac (OTCQB: FMCC) today reported its second quarter 2016 financial results and filed its quarterly Form 10-Q with the U.S. Securities...</li>
-          <li><a href="#">Freddie Mac Sets Release Date for Second Quarter 2016 Financial Results</a> <br>Jul 29, 2016 - MCLEAN, VA--(Marketwired - Jul 29, 2016) -  Freddie Mac (OTCQB: FMCC) announced today that it plans to report its second quarter 2016 financial results before the U.S. financial markets...</li>	
-        </ul>
-      </div>
-    </section>
-  </aside>
-</section>
+<div class="two-column-layout">
+  <div class="row two-column-row"> 
+    <main class="column">
+    </main>
+    <aside class="column">
+      <section class="sidebar sidebar-concrete">
+        <div class="row">
+          <div class="sidebar-txt">
+            <h2 class="sidebar-subtitle">Recent News</h2>
+            <ul class="sidebar-list no-bullet">
+              <li><a href="#">08/08/16 -  Freddie Mac (OTCQB: FMCC) today issued the company's stress test results for the severely adverse scenario conducted under FHFA's rule...</a> </li>
+              <li><a href="#">08/02/16 -  Freddie Mac (OTCQB: FMCC) today reported its second quarter 2016 financial results and filed its quarterly Form 10-Q with the U.S. Securities...</a> </li>
+              <li><a href="#">Jul 29, 2016 - Freddie Mac (OTCQB: FMCC) announced today that it plans to report its second quarter 2016 financial results before the U.S. financial markets...</a></li>	
+            </ul>
+          </div>
+        </div>
+      </section>
+    </aside>
+  </div>
+</div>
 
 ---
 
@@ -1587,23 +1680,25 @@ Note: The news release lists are automated by MarketWire.
 </section>
 ```
 
-<section class="two-column-layout">
-  <main>
-  </main>
-  <aside>
-    <section class="sidebar sidebar-blue sidebar-feature">
-      <div class="feature-background" style="background-image: url('/images/feature-bg.jpg')"></div>
-      <div class="row">
-        <div class="sidebar-txt">
-          <div class="article-category">Featured Insight</div>
-          <h3 class="sidebar-subtitle">Life's a Beach</h3>
-          <p class="lead">So you've always dreamed of living at the beach, but you're discouraged by the high price of beachfront property? Not to worry. We've found just the place for you.  </p>
-          <p><a class="hollow button expand" href="#">Read More</a></p>
+<div class="two-column-layout">
+  <div class="row two-column-row"> 
+    <main class="column">
+    </main>
+    <aside class="column">
+      <section class="sidebar sidebar-blue sidebar-feature">
+        <div class="feature-background" style="background-image: url('/images/feature-bg.jpg')"></div>
+        <div class="row">
+          <div class="sidebar-txt">
+            <div class="article-category">Featured Insight</div>
+            <h3 class="sidebar-subtitle">Life's a Beach</h3>
+            <p class="lead">So you've always dreamed of living at the beach, but you're discouraged by the high price of beachfront property? Not to worry. We've found just the place for you.  </p>
+            <p><a class="hollow button expand" href="#">Read More</a></p>
+          </div>
         </div>
-      </div>
-    </section>
-  </aside>
-</section>
+      </section>
+    </aside>
+  </div>
+</div>
 
 ---
 
@@ -1655,55 +1750,57 @@ Note: The news release lists are automated by MarketWire.
 </section>
 ```
 
-<section class="two-column-layout">
-  <main>
-  </main>
-  <aside>
-    <section class="sidebar sidebar-concrete">
-      <div class="row">
-        <h2 class="sidebar-subtitle">Recent Posts</h2>
-          <ul class="sidebar-list no-bullet">
-            <li class="media-object">
-              <div class="media-object-section">
-                <a class="overlay" href="#">
-                  <img src="/images/blog/post-1.jpg" alt="Post Img" />
-              </a>
-              </div>
-              <div class="media-object-section">
-                <div class="article-date">May 9, 2016</div>
-                <h3 class="headline-article-sidebar"><a href="#">Homework and a Home Purchase</a></h3>
-                <div class="article-category">Homeownership</div>
-              </div>
-            </li>
-            <li class="media-object">
-              <div class="media-object-section">
-                <a class="overlay" href="#">
-                  <img src="/images/blog/post-2.jpg" alt="Post Img" />
+<div class="two-column-layout">
+  <div class="row two-column-row"> 
+    <main class="column">
+    </main>
+    <aside class="column">
+      <section class="sidebar sidebar-concrete">
+        <div class="row">
+          <h2 class="sidebar-subtitle">Recent Posts</h2>
+            <ul class="sidebar-list no-bullet">
+              <li class="media-object">
+                <div class="media-object-section">
+                  <a class="overlay" href="#">
+                    <img src="/images/blog/post-1.jpg" alt="Post Img" />
                 </a>
-              </div>
-              <div class="media-object-section">
-                <div class="article-date">May 2, 2016</div>
-                <h3 class="headline-article-sidebar"><a href="#">Law Enforcement Cracking Down on Home Rental Scams</a></h3>
-                <div class="article-category">Rental Housing</div>
-              </div>
-            </li>
-            <li class="media-object">
-              <div class="media-object-section">
-                <a class="overlay" href="#">
-                  <img src="/images/blog/post-3.jpg" alt="Post Img" />
-                </a>
-              </div>
-              <div class="media-object-section">
-                <div class="article-date">April 23, 2016</div>
-                <h3 class="headline-article-sidebar"><a href="#">A Slow Start to the Best Year in Home Sales in a Decade</a></h3>
-                <div class="article-category">Research &amp; Analysis</div>
-              </div>
-            </li>
-          </ul>
-      </div>
-    </section>
-  </aside>
-</section>
+                </div>
+                <div class="media-object-section">
+                  <div class="article-date">May 9, 2016</div>
+                  <h3 class="headline-article-sidebar"><a href="#">Homework and a Home Purchase</a></h3>
+                  <div class="article-category">Homeownership</div>
+                </div>
+              </li>
+              <li class="media-object">
+                <div class="media-object-section">
+                  <a class="overlay" href="#">
+                    <img src="/images/blog/post-2.jpg" alt="Post Img" />
+                  </a>
+                </div>
+                <div class="media-object-section">
+                  <div class="article-date">May 2, 2016</div>
+                  <h3 class="headline-article-sidebar"><a href="#">Law Enforcement Cracking Down on Home Rental Scams</a></h3>
+                  <div class="article-category">Rental Housing</div>
+                </div>
+              </li>
+              <li class="media-object">
+                <div class="media-object-section">
+                  <a class="overlay" href="#">
+                    <img src="/images/blog/post-3.jpg" alt="Post Img" />
+                  </a>
+                </div>
+                <div class="media-object-section">
+                  <div class="article-date">April 23, 2016</div>
+                  <h3 class="headline-article-sidebar"><a href="#">A Slow Start to the Best Year in Home Sales in a Decade</a></h3>
+                  <div class="article-category">Research &amp; Analysis</div>
+                </div>
+              </li>
+            </ul>
+        </div>
+      </section>
+    </aside>
+  </div>
+</div>
 
 
 
@@ -1792,101 +1889,104 @@ Form elements are styled based on their type attribute rather than a class. Inpu
 
 ```html_example
 <div class="row">
-  <form class="form" action="#">
-    <div class="row column">
-      <div class="small-12 columns">
-        <label for="">Label</label>
-        <input id="" type="text" placeholder="placeholder">
+  <div class="column">
+    <form class="form" action="#">
+      <div class="row">
+        <div class="small-12 columns">
+          <label for="">Label</label>
+          <input id="" type="text" placeholder="placeholder">
+        </div>
       </div>
-    </div>
-    <div class="row column">
-      <div class="small-12 columns">
-        <label for="pw">Password with Sample Help Text</label>
-        <input id="pw" type="password" aria-describedby="passwordHelpText" placeholder="***">
-        <p class="help-text" id="passwordHelpText">Your password must have at least 10 characters, a number, and a symbol.</p>
+      <div class="row">
+        <div class="small-12 columns">
+          <label for="pw">Password with Sample Help Text</label>
+          <input id="pw" type="password" aria-describedby="passwordHelpText" placeholder="***">
+          <p class="help-text" id="passwordHelpText">Your password must have at least 10 characters, a number, and a symbol.</p>
+        </div>
       </div>
-    </div>
-    <div class="row column">
-      <div class="medium-7 columns">
-        <label for="">Email</label>
-        <input id="" type="email" placeholder="name@company.com">
-      </div>
-      <div class="medium-5 columns">
-        <div class="row collapse">
-          <label>Height (combo field example)</label>
-          <div class="input-group">
-            <input id="feet" class="input-group-field" type="number" placeholder="5" min="0" max="12">
-            <label for="feet" class="input-group-label">ft.</label>
-            <input id="inches" class="input-group-field" type="number" placeholder="8" min="0" max="12">
-            <label for="inches" class="input-group-label">in.</label>
+      <div class="row">
+        <div class="medium-7 columns">
+          <label for="">Email</label>
+          <input id="" type="email" placeholder="name@company.com">
+        </div>
+        <div class="medium-5 columns">
+          <div class="row collapse">
+            <label>Height (combo field example)</label>
+            <div class="input-group">
+              <input id="feet" class="input-group-field" type="number" placeholder="5" min="0" max="12">
+              <label for="feet" class="input-group-label">ft.</label>
+              <input id="inches" class="input-group-field" type="number" placeholder="8" min="0" max="12">
+              <label for="inches" class="input-group-label">in.</label>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="row column">
-      <div class="small-12 columns">
-        <label for="">Select Box</label>
-        <select>
-          <option value="good">Good</option>
-          <option value="better">Better</option>
-          <option value="best">Best</option>
-        </select> 
+      <div class="row">
+        <div class="small-12 columns">
+          <label for="">Select Box</label>
+          <select>
+            <option value="good">Good</option>
+            <option value="better">Better</option>
+            <option value="best">Best</option>
+          </select> 
+          <p class="help-text" id="">IE11 applies it's own design to active select boxes.</p>
+        </div>
       </div>
-    </div>
-    <div class="row column"> 
-      <div class="small-12 columns">
-        <label for="">Multiple Select Box</label>
-        <select multiple>
-          <option value="showboat">Showboat</option>
-          <option value="redwing">Redwing</option>
-          <option value="narcho">Narcho</option>
-          <option value="hardball">Hardball</option>
-        </select>
+      <div class="row"> 
+        <div class="small-12 columns">
+          <label for="">Multiple Select Box</label>
+          <select multiple>
+            <option value="showboat">Showboat</option>
+            <option value="redwing">Redwing</option>
+            <option value="narcho">Narcho</option>
+            <option value="hardball">Hardball</option>
+          </select>
+        </div>
       </div>
-    </div>
-    <div class="row column">
-      <div class="medium-6 columns">
-        <fieldset>
-          <legend>Choose Your Favorite</legend>
-          <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Red</label>
-          <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Blue</label>
-          <input type="radio" name="pokemon" value="Yellow" id="pokemonYellow"><label for="pokemonYellow">Yellow</label>
-        </fieldset>
+      <div class="row">
+        <div class="medium-6 columns">
+          <fieldset>
+            <legend>Choose Your Favorite</legend>
+            <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Red</label>
+            <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Blue</label>
+            <input type="radio" name="pokemon" value="Yellow" id="pokemonYellow"><label for="pokemonYellow">Yellow</label>
+          </fieldset>
+        </div>
+        <div class="medium-6 columns">
+          <fieldset>
+            <legend>Check these out</legend>
+            <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+            <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
+            <input id="checkbox3" type="checkbox"><label for="checkbox3">Checkbox 3</label>
+          </fieldset>
+        </div>
       </div>
-      <div class="medium-6 columns">
-        <fieldset>
-          <legend>Check these out</legend>
-          <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-          <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
-          <input id="checkbox3" type="checkbox"><label for="checkbox3">Checkbox 3</label>
-        </fieldset>
+      <div class="row">
+        <div class="small-12 columns">
+          <fieldset class="fieldset">
+            <legend>Styled Fieldset</legend>
+            <input id="checkbox12" type="checkbox"><label for="checkbox12">Checkbox 1</label>
+            <input id="checkbox22" type="checkbox"><label for="checkbox22">Checkbox 2</label>
+            <input id="checkbox32" type="checkbox"><label for="checkbox32">Checkbox 3</label>
+          </fieldset>
+        </div>
       </div>
-    </div>
-    <div class="row column">
-      <div class="small-12 columns">
-        <fieldset class="fieldset">
-          <legend>Styled Fieldset</legend>
-          <input id="checkbox12" type="checkbox"><label for="checkbox12">Checkbox 1</label>
-          <input id="checkbox22" type="checkbox"><label for="checkbox22">Checkbox 2</label>
-          <input id="checkbox32" type="checkbox"><label for="checkbox32">Checkbox 3</label>
-        </fieldset>
+      <div class="row">
+        <div class="small-12 columns">
+          <label for="">How many items?</label>
+          <input id="" type="number" value="100">
+          <label for="">Textarea Label</label>
+          <textarea placeholder="placeholder" rows="3"></textarea>
+        </div>
       </div>
-    </div>
-    <div class="row column">
-      <div class="small-12 columns">
-        <label for="">How many items?</label>
-        <input id="" type="number" value="100">
-        <label for="">Textarea Label</label>
-        <textarea placeholder="placeholder" rows="3"></textarea>
+      <div class="row">
+        <div class="small-12 columns">
+          <button class="button primary" type="submit">Submit</button>
+          <button class="button" type="reset">Reset</button>
+        </div>
       </div>
-    </div>
-    <div class="row column">
-      <div class="small-12 columns">
-        <button class="button primary" type="submit">Submit</button>
-        <button class="button" type="reset">Reset</button>
-      </div>
-    </div>
-  </form>
+    </form>
+  </div>  
 </div>
 ```
 
@@ -1898,30 +1998,33 @@ Sometimes you want a form with labels to the left of your inputs. Piece of cake!
 
 ```html_example
 <div class="row">
-  <form class="form" action="#">
-    <div class="row column">
-      <div class="medium-3 columns">
-        <label for="side-label" class="text-right middle">Side Label</label>
+  <div class="column">
+    <form class="form" action="#">
+      <div class="row">
+        <div class="medium-3 columns">
+          <label for="side-label" class="text-right middle">Side Label</label>
+        </div>
+        <div class="medium-9 columns">
+          <input type="text" id="side-label" placeholder="short label that is vertically aligned to middle of field">
+        </div>
       </div>
-      <div class="medium-9 columns">
-        <input type="text" id="side-label" placeholder="short label that is vertically aligned to middle of field">
+      <div class="row">
+        <div class="medium-3 columns">
+          <label for="side-label2" class="text-right">A much longer side label for comparison</label>
+        </div>
+        <div class="medium-9 columns">
+          <input type="text" id="side-label2" placeholder="longer label with default alignment">
+        </div>
       </div>
-    </div>
-    <div class="row column">
-      <div class="medium-3 columns">
-        <label for="side-label2" class="text-right">A much longer side label for comparison</label>
+      <div class="row">
+        <div class="medium-9 medium-push-3 columns">
+          <button class="button primary" type="submit">Submit</button>
+          <button class="button" type="reset">Reset</button>
+        </div>
       </div>
-      <div class="medium-9 columns">
-        <input type="text" id="side-label2" placeholder="longer label with default alignment">
-      </div>
-    </div>
-    <div class="row column">
-      <div class="medium-9 medium-push-3 columns">
-        <button class="button primary" type="submit">Submit</button>
-        <button class="button" type="reset">Reset</button>
-      </div>
-    </div>
-  </form>
+    </form>
+  </div>
+</div>  
 ```
 
 ---
@@ -1932,17 +2035,19 @@ If a form has only a single field, you can combine the label, field, and submit 
 
 ```html_example
 <div class="row">
-  <form class="form" action="#">
-    <div class="medium-8 columns">
-      <div class="input-group">
-        <label for="emailxx" class="input-group-label">Get Notified</label>
-        <input id="emailxx" class="input-group-field" type="email" placeholder="name@company.com">
-        <div class="input-group-button">
-          <button class="button tertiary" type="submit">Subscribe</button>
-        </div>
-      </div> 
-    </div>
-  </form>
+  <div class="column">
+    <form class="form" action="#">
+      <div class="medium-8 columns">
+        <div class="input-group">
+          <label for="emailxx" class="input-group-label">Get Notified</label>
+          <input id="emailxx" class="input-group-field" type="email" placeholder="name@company.com">
+          <div class="input-group-button">
+            <button class="button tertiary" type="submit">Subscribe</button>
+          </div>
+        </div> 
+      </div>
+    </form>
+  </div>
 </div>
 ```
 
@@ -2099,7 +2204,7 @@ Once you put it all together, here's what you get for standard horizontal tabs!
     </div>
     <div class="tabs-panel" id="panelh4">
       <p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
-      <p><img src="http://www.freddiemac.com/blog/images/fm_blog_usda_returns.jpg" alt="Harp - act now!"></p>
+      <p><img src="/images/blog/fm_blog_usda_returns.jpg" alt="Harp - act now!"></p>
     </div>
   </div>
 </div>
@@ -2201,7 +2306,7 @@ Once you put it all together, here's what you get for vertical tabs!
       </div>
       <div class="tabs-panel" id="panel3vB">
         <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
-        <img src= "http://www.freddiemac.com/images/blog/sean_becketti_md.jpg" alt="sean Becketti">
+        <img src= "/images/sean_becketti_md.jpg" alt="sean Becketti">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <div class="clearfix"></div>
@@ -2218,179 +2323,266 @@ Once you put it all together, here's what you get for vertical tabs!
 
 <p class="lead">Okay, they're not the sexiest things ever, but tables get the job done (for tabular data, of course). They have responsive modifiers to help solve some of your layout issues based on your tables needs.</p>
 
----
-
 ## Hover State
 
-Need to spiff up the table just a tad? Just add the class `.table--hover` to lightly darken the table rows on hover.
+Need to spiff up the table just a tad? Just add the class `.hover` to lightly darken the table rows on hover.
 
 ```html
-<table class="table--hover">
+<table class="hover">
 </table>
 ```
 
----
+<table class="hover">
+  <thead>
+    <tr>
+      <th>Table Header</th>
+      <th>Table Header</th>
+      <th>Table Header</th>
+      <th>Table Header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Row Header</th>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+    <tr>
+      <th>Row Header</th>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+    <tr>
+      <th>Row Header</th>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th>Footer Row Header</th>
+      <td>Footer content</td>
+      <td>Footer content</td>
+      <td>Footer content</td>
+    </tr>
+  </tfoot>
+</table>
 
 ## Stacking Tables
 
-To stack a table on small screens, add the class `.stack`.
+To stack a table on small screens, add the class `.stack`.  Cells that span multiple rows are only shown in their original row -- if you have a complex table that has numerous rowspans and colspans, you may need opt for the scrolling table instead.
 
 ```html
 <table class="stack">
 </table>
 ```
 
-Once you put it all together, here's what you get for a stacked table with hover effect.
-
-```html_example
-<table class="stack table--hover">
+<table class="stack">
   <thead>
     <tr>
-      <th>Cookies</th>
-      <th>Taste</th>
-      <th>Calories</th>
-      <th>Overall</th>
+      <th>Table Header</th>
+      <th>Table Header</th>
+      <th>Table Header</th>
+      <th>Table Header</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Chocolate Chip</td>
-      <td>Tastey</td>
-      <td>120cal</td>
-      <td>7.5/10</td>
+      <th>Row Header</th>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
     </tr>
     <tr>
-      <td>Snickerdoodle</td>
-      <td>Delicious</td>
-      <td>95cal</td>
-      <td>8/10</td>
+      <th>Row Header</th>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
     </tr>
     <tr>
-      <td>Oatmeal Raisin</td>
-      <td>Superb</td>
-      <td>100cal</td>
-      <td>11/10</td>
-    </tr>
-    <tr>
-      <td>Lemon Bar</td>
-      <td>Tangy</td>
-      <td>130cal</td>
-      <td>6/10</td>
+      <th>Row Header</th>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
     </tr>
   </tbody>
+  <tfoot>
+    <tr>
+      <th>Footer Row Header</th>
+      <td>Footer content</td>
+      <td>Footer content</td>
+      <td>Footer content</td>
+    </tr>
+  </tfoot>
 </table>
-```
 
 ---
 
 ## Scrolling Table
 
-Got a lot of tabular data? Add the class `.scroll` to the table itself to enable horizontal scrolling.
+Got a lot of tubular tabular data? Add a wrapper element with the class `.table-scroll` around your table to enable horizontal scrolling.
 
-<div class="callout">
-  <p>Note: this method doesn't work great with Internet Explorer 9.</p>
-</div>
+<strong>Note:</strong> You can combine scrolling with stacking, but you may want to avoid doing so on tables with complex row and column spanning.
 
 ```html_example
-<table class="scroll table--hover">
+<div class="table-scroll">
+  <table></table>
+</div>
+```
+
+<div class="table-scroll">
+  <table>
+    <thead>
+      <tr>
+        <th>This is the description!</th>
+        <th>One</th>
+        <th>Two</th>
+        <th>Three</th>
+        <th>Four</th>
+        <th>Five</th>
+        <th>Six</th>
+        <th>Seven</th>
+        <th>Eight</th>
+        <th>Nine</th>
+        <th>Ten</th>
+        <th>Eleven</th>
+        <th>Twelve</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>These are all the words that people use to describe Foundation 6!</th>
+        <td>Cool</td>
+        <td>Swag</td>
+        <td>Chill</td>
+        <td>Killer</td>
+        <td>Rad</td>
+        <td>Baller</td>
+        <td>OMG</td>
+        <td>Sweet</td>
+        <td>Awesome</td>
+        <td>Beast</td>
+        <td>Dope</td>
+        <td>Tubular</td>
+      </tr>
+      <tr>
+        <th>These are some words that people use to describe other web frameworks.</th>
+        <td>Whatevs</td>
+        <td>Ugh.</td>
+        <td>LOL</td>
+        <td>K</td>
+        <td>Aight</td>
+        <td>Eh.</td>
+        <td>Grrr...</td>
+        <td>Meh.</td>
+        <td>TTYL</td>
+        <td>Bleh.</td>
+        <td>Really?</td>
+        <td>Why?</td>
+      </tr>
+      <tr>
+        <th>Here are some great super heros.</th>
+        <td>Batman</td>
+        <td>Superman</td>
+        <td>Spiderman</td>
+        <td>Wonder Woman</td>
+        <td>Hulk</td>
+        <td>Nicolas Cage</td>
+        <td>Antman</td>
+        <td>Aquaman</td>
+        <td>Captain America</td>
+        <td>Wolverine</td>
+        <td>Thor</td>
+        <td>Iron Man</td>
+      </tr>
+      <tr>
+        <th>Here are some common colors.</th>
+        <td>Red</td>
+        <td>Orange</td>
+        <td>Yellow</td>
+        <td>Green</td>
+        <td>Blue</td>
+        <td>Indigo</td>
+        <td>Violet</td>
+        <td>Black</td>
+        <td>White</td>
+        <td>Brown</td>
+        <td>Peach</td>
+        <td>Pink</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th>Here's a table footer, just in case</th>
+        <td>A</td>
+        <td>B</td>
+        <td>C</td>
+        <td>D</td>
+        <td>E</td>
+        <td>F</td>
+        <td>G</td>
+        <td>H</td>
+        <td>I</td>
+        <td>J</td>
+        <td>K</td>
+        <td>L</td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+
+---
+
+## Unstriped
+
+By default, table rows are striped. There's an `.unstriped` class to remove the stripes. 
+
+```html
+<table class="unstriped">
+</table>
+```
+
+<table class="unstriped">
   <thead>
     <tr>
-      <th>This is the description!</th>
-      <th>One</th>
-      <th>Two</th>
-      <th>Three</th>
-      <th>Four</th>
-      <th>Five</th>
-      <th>Six</th>
-      <th>Seven</th>
-      <th>Eight</th>
-      <th>Nine</th>
-      <th>Ten</th>
-      <th>Eleven</th>
-      <th>Twelve</th>
+      <th>Table Header</th>
+      <th>Table Header</th>
+      <th>Table Header</th>
+      <th>Table Header</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th style="display:block; width:350px;">These are all the words that people use to describe Foundation 6!</th>
-      <td>Cool</td>
-      <td>Swag</td>
-      <td>Chill</td>
-      <td>Killer</td>
-      <td>Rad</td>
-      <td>Baller</td>
-      <td>OMG</td>
-      <td>Sweet</td>
-      <td>Awesome</td>
-      <td>Beast</td>
-      <td>Dope</td>
-      <td>Tubular</td>
+      <th>Row Header</th>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
     </tr>
     <tr>
-      <th>These are some words that people use to describe other web frameworks.</th>
-      <td>Whatevs</td>
-      <td>Ugh.</td>
-      <td>LOL</td>
-      <td>K</td>
-      <td>Aight</td>
-      <td>Eh.</td>
-      <td>Grrr...</td>
-      <td>Meh.</td>
-      <td>TTYL</td>
-      <td>Bleh.</td>
-      <td>Really?</td>
-      <td>Why?</td>
+      <th>Row Header</th>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
     </tr>
     <tr>
-      <th>Here are some great super heros.</th>
-      <td>Batman</td>
-      <td>Superman</td>
-      <td>Spiderman</td>
-      <td>Wonder Woman</td>
-      <td>Hulk</td>
-      <td>Nicolas Cage</td>
-      <td>Antman</td>
-      <td>Aquaman</td>
-      <td>Captain America</td>
-      <td>Wolverine</td>
-      <td>Thor</td>
-      <td>Iron Man</td>
-    </tr>
-    <tr>
-      <th>Here are some common colors.</th>
-      <td>Red</td>
-      <td>Orange</td>
-      <td>Yellow</td>
-      <td>Green</td>
-      <td>Blue</td>
-      <td>Indigo</td>
-      <td>Violet</td>
-      <td>Black</td>
-      <td>White</td>
-      <td>Brown</td>
-      <td>Peach</td>
-      <td>Pink</td>
+      <th>Row Header</th>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
     </tr>
   </tbody>
   <tfoot>
     <tr>
-      <th>Here's a table footer, just in case</th>
-      <td>A</td>
-      <td>B</td>
-      <td>C</td>
-      <td>D</td>
-      <td>E</td>
-      <td>F</td>
-      <td>G</td>
-      <td>H</td>
-      <td>I</td>
-      <td>J</td>
-      <td>K</td>
-      <td>L</td>
+      <th>Footer Row Header</th>
+      <td>Footer content</td>
+      <td>Footer content</td>
+      <td>Footer content</td>
     </tr>
   </tfoot>
 </table>
-```
 
 
 
@@ -2414,109 +2606,99 @@ A standard modal dialog is just an empty container, so you can put any kind of c
 - To the modal container, add the class `.reveal`, the attribute `data-reveal`, and a unique ID (which is used by any link that launches the modal).
 - Modals by default are accessible through the use of various ARIA attributes.  To make a modal even more accessible, designate a label to the modal by adding an `id` attribute on the elment you want to designate as the label (such as a heading inside the modal) and then adding the same value into an `aria-labelledby` attribute on the modal container.
 
+Modals are available in a variety of background colors. To select a specific background, include `.overlay-xxx` class (where xxx is green, orange, blue, teal, gray, yellow, red, purple) on the `.reveal` element.
+
 ```html
-<a data-open="customModal" aria-controls="customModal">Link to a modal</a>
-
-<div class="reveal" id="customModal" data-reveal" aria-labelledby="customModalLabel">
-  <h2 id="customModalLabel">Modal Title</h2>
-  // modal contents
+<p><a data-open="modalID" aria-controls="modalID">View a modal window</a>.</p>
+<div class="reveal full overlay-green" id="modalID" data-reveal aria-labelledby="modalID-label">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 id="modalID-label">Modal Label</h2>
+    </div>
+    <p>I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items.</p>
+    <p>For grid based items, start with a row container, and add columns as desired.</p>
+  </div>
 </div>
-
-```
-
----
-
-<!-- 
-## Modal Sizing
-
-Below the medium breakpoint, *all* modals are full screen.  Use the following classes to adjust a modal's size:
-
-|Class    |Below Medium Breakpoint| Between Medium and Large   | Large Breakpoint and up     |
-|---------|:---------------------:|:--------------------------:|:---------------------------:|
-|`.small` |100% w x 100% h        |50% w (max 480p) x content h|480p w x content h           |
-|`.medium`|100% w x 100% h        |75% w (max 720p) x content h|720p w x content h           |
-|(default)|100% w x 100% h        |75% w (max 960p) x content h|960p w x content h           |
-|`.large` |100% w x 100% h        |90% w x content h           |90% w (max 1400p) x content h|
-|`.full`  |100% w x 100% h        |100% w x 100% h             |100% w x 100% h              |
--->
-
-## Color Overlays
-
-Modals can be done with a variety of background colors by adding an `.overlay-xxx` class (where xxx is green, orange, blue, teal, gray, yellow, red, purple) on the `.reveal` element.
-
-```html_example
+ ```
+ 
 <ol>
   <li><a data-open="fullModal1" aria-controls="fullModal1">View a modal on green</a>.
     <div class="reveal full overlay-green" id="fullModal1" data-reveal aria-labelledby="Modal1-label">
-      <div class="row">
-        <h3 id="Modal1-label">I'm a modal.</h3>
-        <p> I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
-        <img src="http://placekitten.com/200/160" alt="kitty">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="Modal1-label">Modal Label</h2>
+        </div>
+        <p>I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
+        <img src="/images/kitten160.jpg" alt="kitty">
       </div>
     </div>
   </li>
-
   <li><a data-open="fullModal2" aria-controls="fullModal2">View a modal on orange</a>.
     <div class="reveal full overlay-orange" id="fullModal2" data-reveal aria-labelledby="Modal2-label">
-      <div class="row">
-        <h3 id="Modal1-label">I'm a modal.</h3>
-        <p> I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
-        <img src="http://placekitten.com/200/160" alt="kitty">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="Modal2-label">Modal Label</h2>
+        </div>
+        <p>I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
+        <img src="/images/kitten160.jpg" alt="kitty">
       </div>
     </div>
   </li>
-
   <li><a data-open="fullModal3">View a modal on blue</a>.
     <div class="reveal full overlay-blue" id="fullModal3" data-reveal>
-      <div class="row">
-        <h3 id="Modal1-label">I'm a modal.</h3>
-        <p> I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
-        <img src="http://placekitten.com/200/160" alt="kitty">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="Modal3-label">Modal Label</h2>
+        </div>
+        <p>I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
+        <img src="/images/kitten160.jpg" alt="kitty">
       </div>
     </div>
   </li>
-
   <li><a data-open="fullModal4">View a modal on teal</a>.
     <div class="reveal full overlay-teal" id="fullModal4" data-reveal>
-      <div class="row">
-        <h3 id="Modal1-label">I'm a modal.</h3>
-        <p> I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
-        <img src="http://placekitten.com/200/160" alt="kitty">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="Modal4-label">Modal Label</h2>
+        </div>
+        <p>I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
+        <img src="/images/kitten160.jpg" alt="kitty">
       </div>
     </div>
   </li>
-
   <li><a data-open="fullModal5">View a modal on gray</a>.
     <div class="reveal full overlay-gray" id="fullModal5" data-reveal>
-      <div class="row">
-        <h3 id="Modal1-label">I'm a modal.</h3>
-        <p> I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
-        <img src="http://placekitten.com/200/160" alt="kitty">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="Modal5-label">Modal Label</h2>
+        </div>
+        <p>I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
+        <img src="/images/kitten160.jpg" alt="kitty">
       </div>
     </div>
   </li>
-
-  <li><a data-open="fullModal7">View a modal on yellow</a>.
-    <div class="reveal full overlay-yellow" id="fullModal7" data-reveal>
-      <div class="row">
-        <p>I'm a modal.</p>
-        <p> I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
-        <img src="http://placekitten.com/200/160" alt="kitty">
+  <li><a data-open="fullModal6">View a modal on yellow</a>.
+    <div class="reveal full overlay-yellow" id="fullModal6" data-reveal>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="Modal6-label">Modal Label</h2>
+        </div>
+        <p>I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
+        <img src="/images/kitten160.jpg" alt="kitty">
       </div>
     </div>
   </li>
-
-  <li><a data-open="fullModal9">View a modal on purple</a>
-    <div class="reveal full overlay-purple" id="fullModal9" data-reveal>
-      <div class="row">
-        <h3 id="Modal1-label">I'm a modal.</h3>
-        <p> I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
-        <img src="http://placekitten.com/200/160" alt="kitty">
+  <li><a data-open="fullModal7">View a modal on purple</a>
+    <div class="reveal full overlay-purple" id="fullModal7" data-reveal>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="Modal7-label">Modal Label</h2>
+        </div>
+        <p>I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
+        <img src="/images/kitten160.jpg" alt="kitty">
       </div>
-    </div>
   </li>
 </ol>
-```
 
 ---
 
@@ -2531,16 +2713,55 @@ It's possible for modals to open other modals. Create a second modal with a uniq
 
 <!-- This is the first modal -->
 <div class="reveal full overlay-purple" id="exampleModalA" data-reveal>
-  <div class="row">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 id="exampleModalB-label">Modal Label</h2>
+    </div>
     <h2>Awesome!</h2>
     <p class="lead">I have another modal inside of me!</p>
-    <p><a class="button secondary" data-open="exampleModalB" aria-controls="exampleModalB">View another modal!</a></p>
+    <p><a class="button secondary" data-open="exampleModalB" aria-controls="exampleModalB">View another modal!</a></p>    
+    <div class="row">
+      <p class="text-center">One section 12 columns wide.</p>
+      <div class="small-12 columns">
+        <div class="primary callout">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <p class="text-center">Three sections each 4 columns wide.</p>
+      <div class="small-4 columns">
+        <div class="primary callout">
+        </div>
+      </div>
+      <div class="small-4 columns">
+        <div class="primary callout">
+        </div>
+      </div>
+      <div class="small-4 columns">
+        <div class="primary callout">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <p class="text-center">Two sections, each 6 columns wide.</p>
+      <div class="small-6 columns">
+        <div class="primary callout">
+        </div>
+      </div>
+      <div class="small-6 columns">
+        <div class="primary callout">
+        </div>
+      </div>
+    </div> 
   </div>
 </div>
 
 <!-- This is the nested modal -->
 <div class="reveal full overlay-orange" id="exampleModalB" data-reveal>
-  <div class="row">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 id="exampleModalB-label">Modal Label</h2>
+    </div>
     <h2>ANOTHER MODAL!!!</h2>
     <p>I took the place of the first modal.</p>
   </div>
@@ -2566,7 +2787,7 @@ The default ratio is 4:3. Add the `.widescreen` class to change it to 16:9.
 
 <div class="reveal overlay-video" id="exampleModalC" data-reveal data-reset-on-close="true">
   <div class="flex-video">
-    <iframe width="420" height="315" frameborder="0" allowfullscreen src="//www.youtube-nocookie.com/embed/26OUQIjRRbc?rel=0&amp;wmode=transparent"></iframe>
+    <iframe width="420" height="315" frameborder="0" allowfullscreen src="" data-video="//www.youtube-nocookie.com/embed/26OUQIjRRbc?rel=0&amp;wmode=transparent"></iframe>
   </div>
 </div>
 
@@ -2576,7 +2797,7 @@ The default ratio is 4:3. Add the `.widescreen` class to change it to 16:9.
 
 <div class="reveal overlay-video" id="exampleModalD" data-reveal data-reset-on-close="true">
   <div class="flex-video widescreen">
-    <iframe width="549" height="309" frameborder="0" allowfullscreen src="//www.youtube-nocookie.com/embed/tCg9285bJnY?rel=0&amp;wmode=transparent"></iframe>
+    <iframe width="549" height="309" frameborder="0" allowfullscreen src="" data-video="//www.youtube-nocookie.com/embed/tCg9285bJnY?rel=0&amp;wmode=transparent"></iframe>
   </div>
 </div>
 ```
@@ -2595,13 +2816,13 @@ Image modals are those that contain only an image and a caption, and the image s
 ```html_example
 
 <ul>
-  <li><a data-open="exampleModalE" href="http://placekitten.com/2300/1600" aria-controls="exampleModalE">View an image modal</a>.</li>
+  <li><a data-open="exampleModalE" href="/images/bigkitty.jpg" aria-controls="exampleModalE">View an image modal</a>.</li>
 </ul>
 
 <div class="reveal reveal-image" id="exampleModalE" data-reveal>
   <div class="reveal-image-inner">
     <figure>
-      <img src="http://placekitten.com/2200/1600" alt="kitty">
+      <img src="/images/bigkitty.jpg" alt="kitty">
       <figcaption>Pretty Kitty!</figcaption>
     </figure>
   </div>
@@ -2609,13 +2830,13 @@ Image modals are those that contain only an image and a caption, and the image s
 
 <ul>
   <li>View an image modal by clicking the following image.<br><a data-open="exampleModalF" class="overlay"
-  href="http://placekitten.com/2300/1600" aria-controls="exampleModalF"><img src="http://placekitten.com/200/160" alt="kitty"></a></li>
+  href="/images/kitty1600.jpg" aria-controls="exampleModalF"><img src="/images/kitten160.jpg" alt="kitty"></a></li>
 </ul>
 
 <div class="reveal reveal-image" id="exampleModalF" data-reveal>
   <div class="reveal-image-inner">
     <figure>
-      <img src="http://placekitten.com/2300/1600" alt="kitty">
+      <img src="/images/kitty1600.jpg" alt="kitty">
       <figcaption>Who Doesn't Love Kitties?</figcaption>
     </figure>
   </div>
@@ -2707,28 +2928,28 @@ Combine the image modal and the nested modal to achieve an image gallery where t
 <div class="orbit bullets-overlay" role="region" aria-label="Favorite Text Ever" data-orbit data-auto-play="false">
   <ul class="orbit-container">
     <li class="orbit-slide orbit-slide-yellow">
-      <section>
+      <div>
         <h3>Slide One</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <p class="text-right"><a class="button hollow">Button Link</a></p>
-      </section>
+      </div>
     </li>
     <li class="orbit-slide orbit-slide-green">
-      <section>
+      <div>
         <h3>Slide Two</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <p class="text-center"><a class="button hollow">Button Link</a></p>
-      </section>
+      </div>
     </li>
     <li class="orbit-slide orbit-slide-orange">
-      <section>
+      <div>
         <h3>Slide Three</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <p class="text-right"><a class="button hollow large">Button Link</a></p>
-      </section>
+      </div>
     </li>
     <li class="orbit-slide orbit-slide-red">
-      <section>
+      <div>
         <h3>Slide Four</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <ul>
@@ -2736,34 +2957,34 @@ Combine the image modal and the nested modal to achieve an image gallery where t
         <li>Velit esse cillum dolore eu fugiat nulla pariatur.</li>
         </ul>
         <p><a class="button hollow">Button Link</a></p>
-      </section>
+      </div>
     </li>
     <li class="orbit-slide orbit-slide-purple">
-      <section>
+      <div>
         <h3>Slide Five</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <p class="text-right"><a class="button hollow">Button Link</a></p>
-      </section>
+      </div>
     </li>
     <li class="orbit-slide orbit-slide-blue">
-      <section>
+      <div>
         <h3>Slide Six - Example Without a Button</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </section>
+      </div>
     </li>
     <li class="orbit-slide orbit-slide-teal">
-      <section>
+      <div>
         <h3>Slide Seven</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
         <p class="text-right"><a class="button hollow">Button Link</a></p>
-      </section>
+      </div>
     </li>
     <li class="orbit-slide orbit-slide-gray">
-      <section>
+      <div>
         <h3>Slide Nine</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <p class="text-right"><a class="button hollow">Button Link</a></p>
-      </section>
+      </div>
     </li>
   </ul>
 </div>

@@ -1,0 +1,38 @@
+<ul class="accordion-pointer" data-accordion role="tablist">
+  <li class="accordion-item" data-accordion-item>
+    <a class="accordion-title" href="#blog-feedback" id="blog-feedback-heading" aria-controls="blog-feedback" role="tab">Feedback</a>
+    <div class="accordion-content" data-tab-content id="blog-feedback" aria-labelledby="blog-feedback-heading" role="tabpanel">
+      <div class="row">
+        <div class="columns">
+          <form class="form" action="#" name="blog_feedback" id="blog_feedback">
+            <div class="row">
+              <div class="columns">
+                <label for="FullName">Name</label>
+                <input id="FullName" name="FullName" type="text" maxlength="50" value="">
+              </div>
+            </div>
+            <div class="row">
+              <div class="columns">
+                <label for="Email">E-mail Address</label>
+                <input type="email" maxlength="60" value="" id="Email" name="Email" required="required" placeholder="name@company.com">
+              </div>
+            </div>  
+            <div class="row">
+              <div class="columns">
+                <label for="Feedback">Feedback</label>
+                <textarea name="Feedback" id="Feedback" cols="40" rows="5" required="required" maxlength="250"></textarea>
+                <p class="help-text" id="passwordHelpText">Maximum of 250 characters.</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="columns">
+                <button class="button primary" type="submit">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
+

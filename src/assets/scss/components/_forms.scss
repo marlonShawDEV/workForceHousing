@@ -5,6 +5,9 @@ select:not([multiple]) {
   background-repeat: no-repeat;
   background-origin: content-box;
 }
+select:active {
+  border-width: 0px;
+}
 input[type='email'] {
   position: relative;          
   background-image: icon(email, $fm-gray, 24, 24, 0, 3, 24, 24);
@@ -60,16 +63,20 @@ fieldset {
       color: $fm-green;
       &::before {
         color: $white;
-        background-color: $fm-green;
         border-color: $fm-green;
       }
-    }  
+    }
+  }
+  [type="radio"]:checked + label::before {
+      background: $fm-green;
+      background: radial-gradient(ellipse at center, $fm-green 0%,$fm-green 60%,$white 60%);
   }
   [type='radio'] + label::before {
     border-radius: 50%;  
   } 
   [type='checkbox']:checked + label::before {
-      content: '\00d7';  
+      content: '\2713';  
+      background: $fm-green;
   }  
   .input-group {
     > :first-child {

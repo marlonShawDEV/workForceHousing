@@ -272,7 +272,6 @@ strong, b {
   font-size: calc(16px +  6 * (100vw - 320px)/1080); 
   font-weight: inherit;
   text-transform: uppercase;
-  margin-bottom: 0.7em;
   @include breakpoint(xxlarge) {
     font-size: rem-calc(22);
   }
@@ -329,7 +328,6 @@ strong, b {
     font-weight: $global-weight-black;
   }
 }
-
 // replacing .feature-txt with .lead, since it's a built in style for Foundation, replaced .lead_bolder with just <b> or <strong> inside .lead.
 .lead {
 	font-weight: $global-weight-medium;

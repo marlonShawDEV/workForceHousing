@@ -46,14 +46,6 @@ $callout-palette: (
       color: $white;
       a {
         @include anchor-on-dark;
-      }       
-      .button.hollow {
-        color: $white;
-        &:hover, 
-        &:active,
-        &:focus {
-          color: $color;
-        }
       }
     }
   }

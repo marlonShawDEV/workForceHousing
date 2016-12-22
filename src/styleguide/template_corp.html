@@ -4,9 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Style Guide</title>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/ss/app_corp.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
 
     <!-- Style guide-specific CSS goes here. -->
     <style>
@@ -94,37 +92,36 @@
   <body>
 
 
-  <div class="row">
+  <div id="top" class="row">
     <div class="large-2 medium-3 columns" data-sticky-container>
-      <ul class="vertical menu">
+      <ul class="vertical menu list-divided">
         {{#each pages}}
           <li><a href="#{{ anchor }}">{{ title }}</a></li>
         {{/each}}
       </ul>
     </div>
     <div class="large-10 medium-9 columns" id="code-content">
-      <section class="page-title">
+      <div class="page-title">
     <div class="row">
       <div class="column">
         <h1>&nbsp;Corporate Style Guide</h1>
       </div>
     </div>
-  </section>
+  </div>
       {{#each pages}}
-        <section class="ss-section" id="{{ anchor }}">
-          {{ body }}
-        </section>
+        <div class="ss-section" id="{{ anchor }}">
+          <div class="row">
+            <div class="column">
+              {{ body }}
+            </div>
+          </div>
+          <p class="text-right"><a href="#top">Back to Top</a></p>
+        </div>
       {{/each}}
     </div>
   </div>
     
-    <!--[if lt IE 9]>
-    <script>window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"><\/'+'script>')</script>
-    <![endif]-->
-    <!--[if gte IE 9]><!-->
-    <script>window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"><\/'+'script>')</script>
-    <!--<![endif]-->
-    <script>window.jQuery || document.write('<script src="{{root}}/js/vendor/jquery-2.1.4.min.js"><\/'+'script>')</script>
+    <script src="/js/vendor/jquery-2.1.4.min.js"> </script>
     <script src="/js/app_corp.js"></script>
     <script>
     // suppress the code view blocks by default and hide them under a toggle.
@@ -142,5 +139,13 @@
       });
     }
     </script>
+    
+    <! --
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900' rel='stylesheet' type='text/css'>
+    -->
+    <style>
+     /* from href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css" */
+    .hljs{display:block;overflow-x:auto;padding:0.5em;color:#333;background:#f8f8f8;-webkit-text-size-adjust:none}.hljs-comment,.diff .hljs-header{color:#998;font-style:italic}.hljs-keyword,.css .rule .hljs-keyword,.hljs-winutils,.nginx .hljs-title,.hljs-subst,.hljs-request,.hljs-status{color:#333;font-weight:bold}.hljs-number,.hljs-hexcolor,.ruby .hljs-constant{color:#008080}.hljs-string,.hljs-tag .hljs-value,.hljs-doctag,.tex .hljs-formula{color:#d14}.hljs-title,.hljs-id,.scss .hljs-preprocessor{color:#900;font-weight:bold}.hljs-list .hljs-keyword,.hljs-subst{font-weight:normal}.hljs-class .hljs-title,.hljs-type,.vhdl .hljs-literal,.tex .hljs-command{color:#458;font-weight:bold}.hljs-tag,.hljs-tag .hljs-title,.hljs-rule .hljs-property,.django .hljs-tag .hljs-keyword{color:#000080;font-weight:normal}.hljs-attribute,.hljs-variable,.lisp .hljs-body,.hljs-name{color:#008080}.hljs-regexp{color:#009926}.hljs-symbol,.ruby .hljs-symbol .hljs-string,.lisp .hljs-keyword,.clojure .hljs-keyword,.scheme .hljs-keyword,.tex .hljs-special,.hljs-prompt{color:#990073}.hljs-built_in{color:#0086b3}.hljs-preprocessor,.hljs-pragma,.hljs-pi,.hljs-doctype,.hljs-shebang,.hljs-cdata{color:#999;font-weight:bold}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.diff .hljs-change{background:#0086b3}.hljs-chunk{color:#aaa}
+    </style>
   </body>
 </html>

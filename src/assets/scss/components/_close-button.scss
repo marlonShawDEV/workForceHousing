@@ -1,2 +1,18 @@
-
-// gone
+.close-button-large {
+  width: 1em;
+  height: 1em;
+  line-height: $closebutton-lineheight;
+  font-size: rem-calc(36);
+  font-size: calc(36px +  30 * (100vw - 320px)/1080); 
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(66);
+  }
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background: transparent icon(close, $white, '', '', 0, 0, 170, 170) no-repeat top left;
+    background-size: contain;
+  }
+} 
