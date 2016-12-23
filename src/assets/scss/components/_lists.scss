@@ -39,5 +39,21 @@ ol > li {
     text-decoration: none !important;
   }
 }
-
-
+dt, dd { 
+  display: block;
+  margin: 0.25rem 0;
+}
+.glossary {
+  dt { 
+    &:not(:first-child) {
+      margin-top: 1.1rem;
+      font-size: rem-calc(18);
+    }
+  }
+  dd {
+    margin-left: 4rem; 
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+}

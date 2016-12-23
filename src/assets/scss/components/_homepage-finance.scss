@@ -6,16 +6,12 @@ $finance-bg2: lighten(saturate(adjust-hue($celery, -3.9799), 4.2642), 0.7843);
   position: relative;
   @include breakpoint(xlarge) {
     margin-top: -20rem;	
-    min-height: 40rem;
+    min-height: 37.5rem;
   }
 }
 .finance-buffer {
   padding-left: 0;
   padding-right: 0;
-	@include breakpoint(large) {
-    padding-left: $gutter;
-    padding-right:  $gutter;
-  }
 }
 .finance-housing-research {
   background: $finance-bg1;  
@@ -26,9 +22,9 @@ $finance-bg2: lighten(saturate(adjust-hue($celery, -3.9799), 4.2642), 0.7843);
 }
 .finance-row1 {
   background: $finance-bg1;
-  padding: $global-padding 0.625rem 0;
+  padding: $global-padding $gutter * 1.5 0;
   @include breakpoint(medium) {
-    padding: $global-padding;
+    padding: $global-padding $gutter * 1.5;
   }
 	@include breakpoint(xlarge) {
 		padding: $global-padding * 2.375 $global-padding $global-padding * 2.375 $global-padding * 3.75;
@@ -41,9 +37,9 @@ $finance-bg2: lighten(saturate(adjust-hue($celery, -3.9799), 4.2642), 0.7843);
   align-items: center;
 }
 .finance-row2 {
-  padding: $global-padding 0.625rem $global-padding;
+  padding: $global-padding $gutter * 1.5 $global-padding;
   @include breakpoint(medium) {
-    padding: $global-padding;
+    padding: $global-padding $gutter * 1.5;
   }
 }
 .finance-mortgage-market {
@@ -87,6 +83,7 @@ $finance-bg2: lighten(saturate(adjust-hue($celery, -3.9799), 4.2642), 0.7843);
   }
   .finance-grid-block1 {
     background: color-shift($finance-bg1, $pear, 6, 2);
+    padding: $global-padding $gutter * 1.5;
     p { 
       margin-bottom: rem-calc(18);
     }

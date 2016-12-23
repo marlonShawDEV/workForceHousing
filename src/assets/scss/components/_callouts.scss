@@ -3,11 +3,12 @@ $callout-palette: (
   orange: $fm-orange,
   yellow: $fm-yellow,
   purple: $fm-purple,
-  blue: $fm-dark-blue,
+  blue: $fm-blue,
   teal: $fm-teal,
   gray: $medium-gray,
   alert: $fm-red,
-  primary: $fm-blue
+  red: $fm-red,
+  primary: $primary-color
 );
 
 .callout {

@@ -18,7 +18,7 @@ $button-sizes: (
 /// @type Map
 $button-palette: (
   primary: $fm-orange,
-  secondary: $fm-blue,
+  secondary: $primary-color,
   tertiary: $fm-green,
   default: $medium-gray
 ) !default;
@@ -81,10 +81,13 @@ $button-opacity-disabled: 0.25 !default;
   @each $size, $value in map-remove($button-sizes, default) {
     &.#{$size} {
       font-size: $value;     
-      @if $size == large {
-        border-width: 3px;
-        @include breakpoint(xlarge) {
+      @if $size == large {  
+        @include breakpoint(large) {
+          font-size: calc(16px +  6 * (100vw - 320px) / 1180); 
+        }
+        @include breakpoint(xxlarge) {
           font-size: rem-calc(22);
+          border-width: 3px;
         }
       }
     }

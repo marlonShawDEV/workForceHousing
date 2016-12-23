@@ -4,7 +4,7 @@ $orbit-palette: (
   yellow: $fm-yellow,
   red: $fm-red,
   purple: $fm-purple,
-  blue: $fm-dark-blue,
+  blue: $fm-blue,
   teal: $fm-teal,
   gray: $medium-gray
 );
@@ -92,10 +92,13 @@ $orbit-palette: (
   }
 }
 .orbit-slide {
-  color: $white;  
-    a {
-      @include anchor-on-dark;
-    }     
+  color: $white; 
+  a {
+    @include anchor-on-dark;
+  } 
+  > div:not([class])  {
+    padding: $gutter * 1.5;  
+  }
   .row div:last-child {
     padding: $global-padding $global-padding * 3 0 $global-padding;
   }
@@ -116,7 +119,7 @@ $orbit-palette: (
     text-align: center;
     font-weight: $global-weight-medium;
     font-size: rem-calc(16);
-    font-size: calc(16px +  4 * (100vw - 320px)/1080);
+    font-size: calc(16px +  4 * (100vw - 320px)/1180);
     @include breakpoint(xxlarge) {
       font-size: rem-calc(20);
     }

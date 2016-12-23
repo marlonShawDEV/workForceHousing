@@ -27,11 +27,11 @@
     span {
       display: none;
       font-size: 1.375rem;
-      padding: 1.4375rem 1rem; 
+      padding: 1.4375rem $gutter; 
     }
   }   
   .toggle-icon {
-    background: transparent icon(menu, $fm-blue, 24, 23, 0, 0, 24, 23) no-repeat center center;   
+    background: transparent icon(menu, $primary-color, 24, 23, 0, 0, 24, 23) no-repeat center center;   
   }
   .button-search {
     background: $fm-yellow icon(search, $white, 24, 24) no-repeat center center;     
@@ -45,7 +45,7 @@
       position: absolute;
       top: 50%;
       margin-top: -4px;
-      right: 1rem;
+      right: $gutter;
     }
   }
   .is-accordion-submenu-parent[aria-expanded='true'] > a::after {
@@ -60,8 +60,7 @@
       font-weight: inherit;
     }
     .logo-mobile { 
-      margin: $gutter;
-      margin-bottom: 0;
+      margin: $gutter $gutter 0 $gutter * 1.5;
     } 
     .column {
       padding: 0;
@@ -80,7 +79,7 @@
           background: $medium-gray;
         }
         > a { 
-          padding: 2rem 1rem;
+          padding: $gutter * 1.5 $gutter;
         }             
       }
       .is-accordion-submenu {
@@ -91,7 +90,7 @@
         background: $light-gray;
           > a {            
             color: transparentize($fm-gray, .15);
-            padding: 1.375rem 1rem;
+            padding: $gutter * 1.5 $gutter;
             text-transform: initial;
             border-bottom: 1px solid transparentize($fm-gray, .5);
           }          
@@ -100,7 +99,7 @@
     }     
     &.data-expanded {
       .title-bar {
-        background: $fm-blue none repeat scroll 0 0;
+        background: $primary-color none repeat scroll 0 0;
         color: $white;
         transition: background-color 0.35s ease 0s, background-image 0.35s ease 0s;
         span {
@@ -129,7 +128,7 @@
       color: $white;
       height: 3rem;  
       font-size: 1.125rem;
-      margin: 1.25rem 1.125rem 1.35rem 1rem;
+      margin: $gutter 1.125rem 1.35rem $gutter;
       padding-left: 0;
       &::placeholder { 
         color: rgba(255,255,255,.9);
@@ -242,10 +241,5 @@
   }
 } 
 
-.row.column {
-  &.primarynav-buffer {  
-    @include breakpoint(xlarge) {  
-        padding-right: 0px;    
-    }
-  }
-}  
+// .primarynav-buffer defined with page-layout
+ 

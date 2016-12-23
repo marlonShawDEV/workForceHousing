@@ -21,7 +21,7 @@ cite {
 blockquote {
   font-size: rem-calc(17); 
   font-weight: $global-weight-normal;
-  font-size: calc(17px +  3 * (100vw - 320px)/1080);
+  font-size: calc(17px +  3 * (100vw - 320px)/1180);
   @include breakpoint(xxlarge) {
     font-size: rem-calc(20);
   }

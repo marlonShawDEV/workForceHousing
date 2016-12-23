@@ -9,7 +9,7 @@
 .overlay  {
   display: inline-block;  
 	position: relative;
-  background: $fm-blue;  
+  background: $primary-color;  
   color: $white;
   max-width: 100%;
   img {
@@ -72,7 +72,7 @@
         &:hover,
         &:focus,
         &:active {      
-            background: linear-gradient(to right, rgba($fm-blue,0.7) 0%,rgba($fm-blue,0.6) 40%,rgba($fm-blue,0.4) 100%);        
+            background: linear-gradient(to right, rgba($primary-color,0.7) 0%,rgba($primary-color,0.6) 40%,rgba($primary-color,0.4) 100%);        
             background-position: -100% -100%;
         } 
       }  

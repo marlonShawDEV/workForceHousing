@@ -1,6 +1,6 @@
 // changed from <footer> element to .footer class so that footers used inside other elements don't inherit these styles
 .footer {
-	background: darken($fm-blue, 3%);
+	background: darken($primary-color, 3%);
 	color: $white;
 	padding: 0.5rem 0 0.75rem;
 	@include breakpoint(medium) {
@@ -38,7 +38,7 @@
     }
   }
 	.footer-top {
-		border-bottom: 1px solid lighten($fm-blue, 3%); 
+		border-bottom: 1px solid lighten($primary-color, 3%); 
 		ul {
       font-weight: $global-weight-medium;
       text-transform: uppercase;

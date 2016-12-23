@@ -1,5 +1,4 @@
 ﻿
-
 # The Grid
 
 The grid is built around two key elements: rows and columns. Rows create a max-width and contain the columns, and columns create the final structure. Everything on your page that you don't give a specific structural style to should be within a row or column.
@@ -10,116 +9,34 @@ In the Grid you can nest columns down as far as you'd like. Just embed rows insi
 ## Basic Full Width Grid
 
 ```html
-<div class="section-padding">  
-  <div class="row">
-    <div class="columns">
-      <h2>A Heading that is in a full width column.</h2>
-      <div class="row">
-        <div class="columns large-6">
-          <p>A column that is 6-wide at large breakpoint</p>
-        </div>
-        <div class="columns large-6">
-          <p>A column that is 6-wide at large breakpoint</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="columns large-4">
-          <p>A column that is 4-wide at large breakpoint</p>
-        </div>
-        <div class="columns large-4">
-          <p>A column that is 4-wide at large breakpoint</p>
-        </div>
-        <div class="columns large-4">
-          <p>A column that is 4-wide at large breakpoint</p>
-        </div>
-      </div>      
-	  </div>
+<div class="section-padding">
+  <div class="row column">
+      full width content.  
   </div>
-  <div class="row">
-    <div class="columns"> 
-        <p>Additional content, within a new full width column, within a new row.</p>
-      <div class="row">
-        <div class="columns large-3">
-          <p>A column that is 3-wide at large breakpoint</p>
-        </div>
-        <div class="columns large-3">
-          <p>A column that is 3-wide at large breakpoint</p>
-        </div>
-        <div class="columns large-3">
-          <p>A column that is 3-wide at large breakpoint</p>
-        </div>
-        <div class="columns large-3">
-          <p>A column that is 3-wide at large breakpoint</p>
-        </div>
-      </div> 
-    </div>
-  </div>  
 </div>
 ```
 
-
-<div class="section-padding">  
-  <div class="row">
-    <div class="columns">
-      <h2>A Heading that is in a full width column.</h2>
-      <div class="row">
-        <div class="columns large-6">
-          <div class="callout">A column that is 6-wide at large breakpoint</div>
-        </div>
-        <div class="columns large-6">
-          <div class="callout">A column that is 6-wide at large breakpoint</div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="columns large-4">
-          <div class="callout">A column that is 4-wide at large breakpoint</div>
-        </div>
-        <div class="columns large-4">
-          <div class="callout">A column that is 4-wide at large breakpoint</div>
-        </div>
-        <div class="columns large-4">
-          <div class="callout">A column that is 4-wide at large breakpoint</div>
-        </div>
-      </div>      
-	  </div>
+<div class="row display">
+  <div class="columns">  
+    <h2>Full width Grid.</h2>
+    <p>Nullam ut tincidunt nunc. Pellentesque metus lacus, commodo eget justo ut, rutrum varius nunc. <strong>Sed non rhoncus risus.</strong> Morbi sodales gravida pulvinar. Duis malesuada, odio volutpat elementum vulputate, massa magna scelerisque ante, et accumsan tellus nunc in sem. Donec mattis arcu et velit aliquet, non sagittis justo vestibulum. Suspendisse volutpat felis lectus, <a href="#">nec consequat ipsum mattis id</a>. Donec dapibus vehicula facilisis. In tincidunt mi nisi, nec faucibus tortor euismod nec. Suspendisse ante ligula, aliquet vitae libero eu, vulputate dapibus libero. Sed bibendum, sapien at posuere interdum, libero est sollicitudin magna, ac gravida tellus purus eu ipsum. Proin ut quam arcu.</p>
   </div>
-  <div class="row">
-    <div class="columns"> 
-        <div class="callout">Additional content, within a new full width column, within a new row.</div>
-      <div class="row">
-        <div class="columns large-3">
-          <div class="callout">A column that is 3-wide at large breakpoint</div>
-        </div>
-        <div class="columns large-3">
-          <div class="callout">A column that is 3-wide at large breakpoint</div>
-        </div>
-        <div class="columns large-3">
-          <div class="callout">A column that is 3-wide at large breakpoint</div>
-        </div>
-        <div class="columns large-3">
-          <div class="callout">A column that is 3-wide at large breakpoint</div>
-        </div>
-      </div> 
-    </div>
-  </div>  
 </div>
 
 ---
 
-## Main Column With Aside Column Layout
+## Two Column Grid
 
 ```html
 <div class="two-column-layout">
   <div class="row two-column-row"> 
     <main class="column">
-      <h2>Main content</h2>
-      <div class="callout">Sed semper tempus justo, ac volutpat ipsum, tempor ullamcorper odio.</p>
+      main content
     </main>
     <aside class="column">  
       <section class="sidebar">
         <div class="row">
-          <h2>Sidebar Content</h2>
-          <p>Sed semper tempus justo, ac volutpat ipsum, tempor ullamcorper odio.</p>
+          aside content
         </div>
       </section>
     </aside>
@@ -128,18 +45,16 @@ In the Grid you can nest columns down as far as you'd like. Just embed rows insi
 ```
 
 <div class="two-column-layout">
-  <div class="row two-column-row"> 
+  <div class="row display two-column-row">
     <main class="column">
-      <div class="callout">
-        <h2>Main content</h2>
-        <p>Sed semper tempus justo, ac volutpat ipsum, tempor ullamcorper odio.</p>
-      </div>
+      <h2>Two Column Grid.</h2>
+      <p>Nullam ut tincidunt nunc. Pellentesque metus lacus, commodo eget justo ut, rutrum varius nunc. <strong>Sed non rhoncus risus.</strong> Morbi sodales gravida pulvinar. Duis malesuada, odio volutpat elementum vulputate, massa magna scelerisque ante, et accumsan tellus nunc in sem. Donec mattis arcu et velit aliquet, non sagittis justo vestibulum. </p>
     </main>
-    <aside class="column">  
-      <section class="sidebar sidebar-blue">
+    <aside class="column">
+      <section class="sidebar">
         <div class="row">
           <h2>Sidebar Content</h2>
-          <p>Sed semper tempus justo, ac volutpat ipsum, tempor ullamcorper odio.</p>
+          <p>Sed bibendum, sapien at posuere interdum, libero est sollicitudin magna, ac gravida tellus purus eu ipsum. Proin ut quam arcu.</p>
         </div>
       </section>
     </aside>
@@ -157,8 +72,7 @@ In the Grid you can nest columns down as far as you'd like. Just embed rows insi
 <div class="row up-1 medium-up-3 large-up-4">
   <div class="column">
     <div class="color-block">
-      <span style="background: #00a6e2"></span>
-      $fm-blue<br>
+      <span style="background: #00a6e2"></span>      
       $primary-color
     </div>
   </div>
@@ -208,7 +122,7 @@ In the Grid you can nest columns down as far as you'd like. Just embed rows insi
   <div class="column">
     <div class="color-block">
       <span style="background: #457bbe"></span>
-      $fm-dark-blue
+      $fm-blue
     </div>
   </div>
 </div>
@@ -491,11 +405,21 @@ The default text alignment for most containers is left.
 - You can change the text alignment of an element by adding `.text-left`, `.text-right`, or `.text-center` to an element.
 - You can shift alignment at different breakpoints by adding a breakpoint to the front of a text alignment class. For example, `.medium-text-center` will keep text left-aligned on the smallest screens, but switch to center-aligned on medium screens and larger.
 
-```html_example
+```html
 <p class="text-left"><strong>This text is left-aligned.</strong> </p>
 <p class="medium-text-right"><strong>This text is right-aligned</strong> at medium screen widths and larger.</p>
 <p class="text-center"><strong>This text is center-aligned.</strong> </p>
 ```
+
+<div class="callout">
+  <p class="text-left"><strong>This text is left-aligned.</strong> </p>
+</div>
+<div class="callout">
+  <p class="medium-text-right"><strong>This text is right-aligned</strong> at medium screen widths and larger.</p>
+</div>
+<div class="callout">
+  <p class="text-center"><strong>This text is center-aligned.</strong> </p>
+</div>
 
 
 
@@ -503,7 +427,7 @@ The default text alignment for most containers is left.
 
 Use dividers to define thematic breaks between paragraphs. To denote the end of one section of a page and the start of another, it's better to use the `<div>` tag.
 
-```html
+```html_example
 <hr>
 ```
 
@@ -515,15 +439,27 @@ Use dividers to define thematic breaks between paragraphs. To denote the end of 
 
 ## Definition Lists
 
-A definition list (`<dl>`) is used to display name-value pairs, like metadata or a dictionary definition. Each term (`<dt>`) is paired with one or more definitions (`<dd>`).  Additionally, there is an alternate style with indention on the definitions, which can be used for Glossary-type layouts.
+A definition list (`<dl>`) is used to display name-value pairs, like metadata or a dictionary definition. Each term (`<dt>`) is paired with one or more definitions (`<dd>`).  Add class `.glossary` to the `dl` to indent the definitions.
 
 ```html_example
+<h3>Plain style</h3>
 <dl>
   <dt>Time</dt>
   <dd>The indefinite continued progress of existence and events in the past, present, and future regarded as a whole.</dd>
   <dt>Space</dt>
   <dd>A continuous area or expanse that is free, available, or unoccupied.</dd>
   <dd>The dimensions of height, depth, and width within which all things exist and move.</dd>
+</dl>
+<h3>Glossary style</h3>
+<dl class="glossary">
+  <dt>Amortization</dt>
+  <dd>Paying off a loan over the period of time and at the interest rate specified in a loan document. The amortization of a loan includes the payment of interest and a part of the amount borrowed in each mortgage payment.</dd>
+  <dt>Amortization Schedule</dt>
+  <dd>Provided by mortgage lenders, the schedule shows how over the term of your mortgage the principal portion of the mortgage payment increases and the interest portion of the mortgage payment decreases.</dd>
+  <dt>Annual Percentage Rate (APR)</dt>
+  <dd>How much a loan costs annually. The APR includes the interest rate, points, broker fees and certain other credit charges a borrower is required to pay.</dd>
+  <dt>Application Fee</dt>
+  <dd>The fee that a mortgage lender charges to apply for a mortgage to cover processing costs.</dd>
 </dl>
 ```
 
@@ -1320,7 +1256,7 @@ On the blog landing page, the first 2 entries are featured with large images and
 
 ## Coloring
 
-The background of the callout can be chnaged by including any of the following classes:
+The background of the callout can be changed by including any of the following classes:
 
 * `callout-hollow`
 * `callout-gray`
@@ -1331,7 +1267,7 @@ The background of the callout can be chnaged by including any of the following c
 * `.callout-purple`
 * `.callout-teal`
 * `.callout-primary`
-* `.callout-alert`
+* `.callout-alert` (or `.callout-red`)
 
 ```html_example
 <div class="row">
@@ -1499,6 +1435,18 @@ A Callout Fullwidth Band is a full width band of content.  On most interior page
 <p class="lead">There are a variety of modules available for use in a side bar, when you are using the Two Column Layout.</p>
 <p>Links inside most sidebar modules inherit the existing text color (typically white) to blend in better.</p>
 
+The background of the sidebar module can be changed by including any of the following classes:
+
+* `sidebar-gray`
+* `.sidebar-blue`
+* `.sidebar-green`
+* `.sidebar-orange`
+* `.sidebar-yellow`
+* `.sidebar-purple`
+* `.sidebar-teal`
+* `.sidebar-red`
+* `.sidebar-concrete`
+
 ---
 
 ## Popular List Items
@@ -1520,8 +1468,6 @@ A Callout Fullwidth Band is a full width band of content.  On most interior page
 
 <div class="two-column-layout">
   <div class="row two-column-row"> 
-    <main class="column">
-    </main>
     <aside class="column">  
       <section class="sidebar sidebar-yellow">
         <div class="row">
@@ -1544,7 +1490,7 @@ A Callout Fullwidth Band is a full width band of content.  On most interior page
 ## Call To Action
 
 ```html
-<section class="sidebar sidebar-blue">
+<section class="sidebar sidebar-primary">
   <div class="row">
     <div class="sidebar-txt">
       <h2 class="sidebar-subtitle">Get The Weekly Roundup</h2>
@@ -1560,10 +1506,8 @@ A Callout Fullwidth Band is a full width band of content.  On most interior page
 
 <div class="two-column-layout">
   <div class="row two-column-row"> 
-    <main class="column">
-    </main>
     <aside class="column">
-      <section class="sidebar sidebar-blue">
+      <section class="sidebar sidebar-primary">
         <div class="row">
           <div class="sidebar-txt">
             <h2 class="sidebar-subtitle">Get The Weekly Roundup</h2>
@@ -1600,8 +1544,6 @@ A Callout Fullwidth Band is a full width band of content.  On most interior page
 
 <div class="two-column-layout">
   <div class="row two-column-row"> 
-      <main class="column">
-      </main>
       <aside class="column">
         <section class="sidebar sidebar-gray">
           <div class="row">
@@ -1629,33 +1571,27 @@ Note: The news release lists are automated by MarketWire.
 ```html
 <section class="sidebar sidebar-concrete">
   <div class="row">
-    <div class="sidebar-txt">
-      <h2 class="sidebar-subtitle">Recent News</h2>
-      <ul class="sidebar-list no-bullet">
-        <li><a href="#">08/08/16 -  Freddie Mac (OTCQB: FMCC) today issued the company's stress test results for the severely adverse scenario conducted under FHFA's rule...</a> </li>
-        <li><a href="#">08/02/16 -  Freddie Mac (OTCQB: FMCC) today reported its second quarter 2016 financial results and filed its quarterly Form 10-Q with the U.S. Securities...</a> </li>
-        <li><a href="#">Jul 29, 2016 - Freddie Mac (OTCQB: FMCC) announced today that it plans to report its second quarter 2016 financial results before the U.S. financial markets...</a></li>	
-      </ul>
-    </div>
+    <h2 class="sidebar-subtitle">Recent News</h2>
+    <ul class="sidebar-list no-bullet">
+      <li><a href="#">08/08/16 -  Freddie Mac (OTCQB: FMCC) today issued the company's stress test results for the severely adverse scenario conducted under FHFA's rule...</a> </li>
+      <li><a href="#">08/02/16 -  Freddie Mac (OTCQB: FMCC) today reported its second quarter 2016 financial results and filed its quarterly Form 10-Q with the U.S. Securities...</a> </li>
+      <li><a href="#">Jul 29, 2016 - Freddie Mac (OTCQB: FMCC) announced today that it plans to report its second quarter 2016 financial results before the U.S. financial markets...</a></li>	
+    </ul>
   </div>
 </section>
 ```
 
 <div class="two-column-layout">
   <div class="row two-column-row"> 
-    <main class="column">
-    </main>
     <aside class="column">
       <section class="sidebar sidebar-concrete">
         <div class="row">
-          <div class="sidebar-txt">
-            <h2 class="sidebar-subtitle">Recent News</h2>
-            <ul class="sidebar-list no-bullet">
-              <li><a href="#">08/08/16 -  Freddie Mac (OTCQB: FMCC) today issued the company's stress test results for the severely adverse scenario conducted under FHFA's rule...</a> </li>
-              <li><a href="#">08/02/16 -  Freddie Mac (OTCQB: FMCC) today reported its second quarter 2016 financial results and filed its quarterly Form 10-Q with the U.S. Securities...</a> </li>
-              <li><a href="#">Jul 29, 2016 - Freddie Mac (OTCQB: FMCC) announced today that it plans to report its second quarter 2016 financial results before the U.S. financial markets...</a></li>	
-            </ul>
-          </div>
+          <h2 class="sidebar-subtitle">Recent News</h2>
+          <ul class="sidebar-list no-bullet">
+            <li><a href="#">08/08/16 -  Freddie Mac (OTCQB: FMCC) today issued the company's stress test results for the severely adverse scenario conducted under FHFA's rule...</a> </li>
+            <li><a href="#">08/02/16 -  Freddie Mac (OTCQB: FMCC) today reported its second quarter 2016 financial results and filed its quarterly Form 10-Q with the U.S. Securities...</a> </li>
+            <li><a href="#">Jul 29, 2016 - Freddie Mac (OTCQB: FMCC) announced today that it plans to report its second quarter 2016 financial results before the U.S. financial markets...</a></li>	
+          </ul>
         </div>
       </section>
     </aside>
@@ -1667,7 +1603,7 @@ Note: The news release lists are automated by MarketWire.
 ## Featured Article
 
 ```html
-<section class="sidebar sidebar-blue sidebar-feature">
+<section class="sidebar sidebar-primary sidebar-feature">
   <div class="feature-background" style="background-image: url('/images/feature-bg.jpg')"></div>
   <div class="row">
     <div class="sidebar-txt">
@@ -1682,10 +1618,8 @@ Note: The news release lists are automated by MarketWire.
 
 <div class="two-column-layout">
   <div class="row two-column-row"> 
-    <main class="column">
-    </main>
     <aside class="column">
-      <section class="sidebar sidebar-blue sidebar-feature">
+      <section class="sidebar sidebar-primary sidebar-feature">
         <div class="feature-background" style="background-image: url('/images/feature-bg.jpg')"></div>
         <div class="row">
           <div class="sidebar-txt">
@@ -1929,7 +1863,7 @@ Form elements are styled based on their type attribute rather than a class. Inpu
             <option value="better">Better</option>
             <option value="best">Best</option>
           </select> 
-          <p class="help-text" id="">IE11 applies it's own design to active select boxes.</p>
+          <p class="help-text" id="">IE11 applies it's own design to the drop down on select boxes.</p>
         </div>
       </div>
       <div class="row"> 
@@ -2921,8 +2855,18 @@ Combine the image modal and the nested modal to achieve an image gallery where t
 - The container for the slides is a `ul` with the class `.orbit-container` (for image carousels, use a `div` with class `.orbit-container`).
 - Each slide is an `li` with the class `.orbit-slide` (for image carousels use a `figure`).
 - By default, slides transition every 5 seconds.  You can stop the auto-play functionality by adding the attribute `data-auto-play="false"`.
-- Slides can be done with a variety of background colors by adding an `.orbit-slide-xxx` class (where xxx is green, orange, blue, teal, gray, yellow, red, purple) on the `.orbit-slide` element.
 - To shift the dot navigation so that it appears inside the panel, add class `.bullets-overlay` to the `.orbit` element.
+
+The background of a slide can be changed by including any of the following classes:
+
+* `.orbit-slide-gray`
+* `.orbit-slide-blue`
+* `.orbit-slide-green`
+* `.orbit-slide-orange`
+* `.orbit-slide-yellow`
+* `.orbit-slide-purple`
+* `.orbit-slide-teal`
+* `.orbit-slide-red`
 
 ```html_example
 <div class="orbit bullets-overlay" role="region" aria-label="Favorite Text Ever" data-orbit data-auto-play="false">

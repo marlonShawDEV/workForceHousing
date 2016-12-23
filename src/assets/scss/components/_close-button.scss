@@ -3,7 +3,7 @@
   height: 1em;
   line-height: $closebutton-lineheight;
   font-size: rem-calc(36);
-  font-size: calc(36px +  30 * (100vw - 320px)/1080); 
+  font-size: calc(36px +  30 * (100vw - 320px)/1180); 
   @include breakpoint(xxlarge) {
     font-size: rem-calc(66);
   }

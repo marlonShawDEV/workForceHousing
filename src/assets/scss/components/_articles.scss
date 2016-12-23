@@ -89,7 +89,7 @@
   }
 }
 .article-block {
-  max-width: 20rem;
+  max-width: 22rem;
   margin: 0 auto $gutter;
   @include breakpoint(large) {
     max-width: initial;
@@ -129,13 +129,13 @@
 .headline-featured {
   min-height: 17.25rem;  
   padding: 1.625rem 2rem 1.25rem;
-  background-color: $fm-blue;
+  background-color: $primary-color;
   color: $white;
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-image: linear-gradient(rgba($fm-blue, 0.8), rgba($fm-blue, 0.8)), url('/images/media/featured-background.jpg');
+  background-image: linear-gradient(rgba($primary-color, 0.8), rgba($primary-color, 0.8)), url('/images/media/featured-background.jpg');
   margin-bottom: 4rem;
   a {
     color: inherit;

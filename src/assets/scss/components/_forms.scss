@@ -5,9 +5,6 @@ select:not([multiple]) {
   background-repeat: no-repeat;
   background-origin: content-box;
 }
-select:active {
-  border-width: 0px;
-}
 input[type='email'] {
   position: relative;          
   background-image: icon(email, $fm-gray, 24, 24, 0, 3, 24, 24);

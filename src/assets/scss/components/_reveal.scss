@@ -4,7 +4,7 @@ $overlay-palette: (
   yellow: $fm-yellow,
   red: $fm-red,
   purple: $fm-purple,
-  blue: $fm-dark-blue,
+  blue: $fm-blue,
   teal: $fm-teal,
   gray: $medium-gray
 );
@@ -14,7 +14,7 @@ $overlay-palette: (
   &:not(.overlay-video):not(.reveal-image) {
     @include reveal-modal-width($reveal-width);
     padding-top: rem-calc(40);
-    padding-top: calc(40px +  56 * (100vw - 320px)/1080); 
+    padding-top: calc(40px +  56 * (100vw - 320px)/1180); 
     @include breakpoint(xxlarge) {
       padding-top: rem-cal(96);
     }
@@ -114,7 +114,7 @@ $overlay-palette: (
 .modal-header {
   display: table;
   margin-bottom: rem-calc(36);
-  margin-bottom: calc(36px +  30 * (100vw - 320px)/1080); 
+  margin-bottom: calc(36px +  30 * (100vw - 320px)/1180); 
   @include breakpoint(xxlarge) {
     margin-bottom: rem-calc(66);
   }
@@ -127,7 +127,7 @@ $overlay-palette: (
     width:99%;
     vertical-align: middle;
     font-size: rem-calc(20);
-    font-size: calc(20px +  12 * (100vw - 320px)/1080); 
+    font-size: calc(20px +  12 * (100vw - 320px)/1180); 
     font-weight: $global-weight-bold;
     margin: 0.4em 0;  
     @include breakpoint(xxlarge) {

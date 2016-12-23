@@ -46,7 +46,7 @@
 // ---------
 
 $global-font-size: 16px;
-$global-width: rem-calc(1400); 
+$global-width: rem-calc(1500); 
 $global-lineheight: 1.5;
 $light-gray: #f4f4f4;
 $medium-gray: #464645;
@@ -54,11 +54,10 @@ $dark-gray: #333333;
 $black: #000000;
 $white: #ffffff;
 $fm-yellow: #ffb718;
-$fm-blue: #00a6e2;
 $fm-orange: #ff6c00;
 $fm-red: #cf0a2c;
 $fm-teal: #00a19a;
-$fm-dark-blue: #457bbe;
+$fm-blue: #457bbe;
 $fm-purple: #725090;
 $fm-green: #88BD45;
 $fm-gray: #777874;
@@ -68,7 +67,7 @@ $offwhite: #f9f9f9;
 $mosaic-start: #88BD45;
 $mosaic-end: #E4F118;
 
-$primary-color: $fm-blue;
+$primary-color: #00a6e2;
 $secondary-color: $fm-orange;
 $success-color: $fm-green;
 $warning-color: $fm-yellow;
@@ -100,9 +99,9 @@ $print-transparent-backgrounds: true;
 $breakpoints: (
   small: 0,
   medium: 600px,
-  large: 950px,
-  xlarge: 1180px,
-  xxlarge: 1400px,
+  large: 980px,  // position when aside drops below main
+  xlarge: 1270px,  // position where main nav gets too crowded to fit
+  xxlarge: 1500px,
 );
 $breakpoint-classes: (small medium large xlarge);
 
@@ -155,7 +154,7 @@ $anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
 $anchor-text-decoration: none;
 $anchor-text-decoration-hover: none;
 $hr-width: $global-width;
-$hr-border: 1px solid $medium-gray;
+$hr-border: 2px solid darken($light-gray, 15%);
 $hr-margin: rem-calc(20) auto;
 $list-lineheight: $paragraph-lineheight;
 $list-margin-bottom: $paragraph-margin-bottom;
@@ -460,7 +459,7 @@ $progress-radius: $global-radius;
 // 28. Reveal
 // ----------
 
-$reveal-background: $fm-dark-blue;
+$reveal-background: $fm-blue;
 $reveal-width: 100%;
 $reveal-max-width: 100%;
 $reveal-padding: 0;   // not used.
@@ -502,7 +501,7 @@ $switch-paddle-transition: all 0.25s ease-out;
 // 31. Table
 // ---------
 
-$table-background: scale-color($fm-dark-blue, $lightness: 99%);
+$table-background: scale-color($fm-blue, $lightness: 99%);
 $table-color-scale: 4%;
 $table-border: 1px solid smart-scale($table-background, $table-color-scale);
 $table-padding: rem-calc(8 10 10);
@@ -512,7 +511,7 @@ $table-row-stripe-hover: darken($table-background, $table-color-scale + $table-h
 $table-is-striped: true;
 $table-striped-background: smart-scale($table-background, $table-color-scale);
 $table-stripe: even;
-$table-head-background: $fm-dark-blue;
+$table-head-background: $fm-blue;
 $table-head-row-hover: darken($table-head-background, $table-hover-scale);
 $table-foot-background: smart-scale($table-background, $table-color-scale * 2);
 $table-foot-row-hover: darken($table-foot-background, $table-hover-scale);
@@ -557,7 +556,7 @@ $titlebar-padding: 0;
 $titlebar-text-font-weight: inherit;
 $titlebar-icon-color: $primary-color;
 $titlebar-icon-color-hover: $primary-color;
-$titlebar-icon-spacing: 1.25rem;
+$titlebar-icon-spacing: $gutter $gutter * 1.5;
 
 // 35. Tooltip
 // -----------

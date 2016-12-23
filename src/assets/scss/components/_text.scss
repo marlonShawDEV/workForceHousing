@@ -2,26 +2,26 @@
 // calc( min-font-size-px + (max-font-size - min-font-size) * (100vw - min-screen-size-px)/(max-screen-size - min-screen-size) )
 // thus if you want 16px at 400 wide, scaling up to 24px at 800 wide, then you'd use
 // calc(16px + (24-16) * (100vw - 400px)/(800-400))
-// 1080 denominator is based on 1400 - 320;
+// 1180 denominator is based on 1500 - 320;
 
 
 h1 {
-    font-size: calc(30px +  12 * (100vw - 320px) / 1080); 
+    font-size: calc(30px +  12 * (100vw - 320px) / 1180); 
 }
 h2 {
-    font-size: calc(22px +  10 * (100vw - 320px) / 1080); 
+    font-size: calc(22px +  10 * (100vw - 320px) / 1180); 
 }
 h3 {
-    font-size: calc(20px +  8 * (100vw - 320px) / 1080); 
+    font-size: calc(20px +  8 * (100vw - 320px) / 1180); 
 }
 h4 {
-    font-size: calc(18px +  7 * (100vw - 320px) / 1080); 
+    font-size: calc(18px +  7 * (100vw - 320px) / 1180); 
 }
 h5 {
-    font-size: calc(16px +  5 * (100vw - 320px) / 1080); 
+    font-size: calc(16px +  5 * (100vw - 320px) / 1180); 
 }
 h6 {
-    font-size: calc(15px +  2 * (100vw - 320px) / 1080); 
+    font-size: calc(15px +  2 * (100vw - 320px) / 1180); 
 }
 
 @include breakpoint(xxlarge) {
@@ -54,7 +54,7 @@ strong, b {
   font-size: rem-calc(28);
   font-weight: $global-weight-medium;
   color: inherit;
-	font-size: calc(28px +  20 * (100vw - 320px)/1080);
+	font-size: calc(28px +  20 * (100vw - 320px)/1180);
 	@include breakpoint(xxlarge) {
 		font-size: rem-calc(48);
 	}
@@ -67,7 +67,7 @@ strong, b {
 }
 .call-to-action-light {
   font-size: rem-calc(28);
-  font-size: calc(28px +  20 * (100vw - 320px)/1080); 
+  font-size: calc(28px +  20 * (100vw - 320px)/1180); 
   font-weight: inherit;
   color: inherit;
 	@include breakpoint(xxlarge) {
@@ -78,8 +78,8 @@ strong, b {
   }
 }
 .callout-footer-title {
-  font-size: rem-calc(32);
-  font-size: calc(32px +  20 * (100vw - 320px)/1080); 
+  font-size: rem-calc(28);
+  font-size: calc(28px +  24 * (100vw - 320px)/1180); 
   font-weight: $global-weight-medium;
 	@include breakpoint(xxlarge) {
     font-size: rem-calc(52);
@@ -90,7 +90,7 @@ strong, b {
 }
 .hero-title {
   font-size: rem-calc(32);
-  font-size: calc(32px +  20 * (100vw - 320px)/1080); 
+  font-size: calc(32px +  20 * (100vw - 320px)/1180); 
   margin-bottom: 0.5em;
   font-weight: $global-weight-black;
   @include breakpoint(xxlarge) {
@@ -101,7 +101,7 @@ strong, b {
 }
 .subtitle {
   font-size: rem-calc(18);
-  font-size: calc(18px +  14 * (100vw - 320px)/1080); 
+  font-size: calc(18px +  14 * (100vw - 320px)/1180); 
   font-weight: $global-weight-bold;
   margin: 0 0 0.375em;  
   @include breakpoint(xlarge) {
@@ -114,7 +114,7 @@ strong, b {
 }
 .sidebar-subtitle {
   font-size: rem-calc(18);
-  font-size: calc(18px +  12 * (100vw - 320px)/1080); 
+  font-size: calc(18px +  12 * (100vw - 320px)/1180); 
   font-weight: $global-weight-bold;
   margin: 0 0 0.375em;
   line-height: 1.1;
@@ -124,7 +124,7 @@ strong, b {
 }
 .homepage-headline {
   font-size: rem-calc(22);
-  font-size: calc(22px +  10 * (100vw - 320px)/1080); 
+  font-size: calc(22px +  10 * (100vw - 320px)/1180); 
   font-weight: $global-weight-bold;
   margin: 0 0 0.375em;
   @include breakpoint(xxlarge) {
@@ -133,7 +133,7 @@ strong, b {
 }
 .section-subtitle {
   font-size: rem-calc(18);
-  font-size: calc(18px +  4 * (100vw - 320px)/1080);
+  font-size: calc(18px +  4 * (100vw - 320px)/1180);
   color: inherit;
   font-weight: inherit;
   margin-bottom: 1em;
@@ -143,7 +143,7 @@ strong, b {
 }
 .headline-article {
   font-size: rem-calc(16);
-  font-size: calc(16px +  6 * (100vw - 320px)/1080); 
+  font-size: calc(16px +  6 * (100vw - 320px)/1180); 
   font-weight: $global-weight-medium;
   margin-bottom: 0;  
   @include breakpoint(xxlarge) {
@@ -155,7 +155,7 @@ strong, b {
 }
 .headline-perspectives {
   font-size: rem-calc(17);
-  font-size: calc(17px +  7 * (100vw - 320px)/1080); 
+  font-size: calc(17px +  7 * (100vw - 320px)/1180); 
   font-weight: $global-weight-medium;
   margin-top: 0.2em;  
   @include breakpoint(xxlarge) {
@@ -168,7 +168,7 @@ strong, b {
 .headline-article-sidebar,
 .stat-points {
   font-size: rem-calc(15);
-  font-size: calc(15px +  3 * (100vw - 320px)/1080); 
+  font-size: calc(15px +  3 * (100vw - 320px)/1180); 
   font-weight: $global-weight-medium;
   @include breakpoint(xxlarge) {
 		font-size: rem-calc(18);
@@ -211,7 +211,7 @@ strong, b {
 .article-blurb {
   @include show-for(medium);
   font-size: rem-calc(13);
-  font-size: calc(13px +  3 * (100vw - 320px)/1080);
+  font-size: calc(13px +  3 * (100vw - 320px)/1180);
   font-weight: inherit;
 	@include breakpoint(xxlarge) {
 		font-size: rem-calc(16);
@@ -228,7 +228,7 @@ strong, b {
 .article-blurb-perspectives {
   @include show-for(medium);
   font-size: rem-calc(14);
-  font-size: calc(14px +  2 * (100vw - 320px)/1080);
+  font-size: calc(14px +  2 * (100vw - 320px)/1180);
   font-weight: inherit;
 	@include breakpoint(xxlarge) {
 		font-size: rem-calc(16);
@@ -237,7 +237,7 @@ strong, b {
 }
 .article-blurb-lg {
   @include show-for(medium);
-  font-size: calc(14px +  4 * (100vw - 320px)/1080);
+  font-size: calc(14px +  4 * (100vw - 320px)/1180);
   font-weight: inherit;
   line-height: 1.3; 
   margin: 0.8em 0;
@@ -247,7 +247,7 @@ strong, b {
 }
 .article-date-lg {
   font-size: rem-calc(14);
-  font-size: calc(14px +  4 * (100vw - 320px)/1080);
+  font-size: calc(14px +  4 * (100vw - 320px)/1180);
   padding-bottom: 0.25em;
   font-weight: $global-weight-medium;
   color: inherit;
@@ -259,7 +259,7 @@ strong, b {
 }
 .hero-subtitle {
   font-size: rem-calc(20); 
-  font-size: calc(20px +  8 * (100vw - 320px)/1080);
+  font-size: calc(20px +  8 * (100vw - 320px)/1180);
   font-weight: inherit;
   margin-bottom: $global-margin * 2;
   line-height: 1.2;
@@ -269,7 +269,7 @@ strong, b {
 }
 .hero-date {
   font-size: rem-calc(16);
-  font-size: calc(16px +  6 * (100vw - 320px)/1080); 
+  font-size: calc(16px +  6 * (100vw - 320px)/1180); 
   font-weight: inherit;
   text-transform: uppercase;
   @include breakpoint(xxlarge) {
@@ -277,9 +277,9 @@ strong, b {
   }
 }
 .callout-txt {
-	color: $fm-blue;
+	color: $primary-color;
 	font-size: rem-calc(30);
-  font-size: calc(30px +  18 * (100vw - 320px)/1080);
+  font-size: calc(30px +  18 * (100vw - 320px)/1180);
 	line-height: 1.2;
 	margin: 2rem 0;
   font-weight: inherit;
@@ -289,7 +289,7 @@ strong, b {
 }
 .finance-grid-title {
   font-size: rem-calc(26);
-  font-size: calc(26px +  6 * (100vw - 320px)/1080);
+  font-size: calc(26px +  6 * (100vw - 320px)/1180);
   font-weight: $global-weight-bold;
   text-transform: uppercase;
   margin-bottom: $global-margin;
@@ -299,7 +299,7 @@ strong, b {
 }
 .finance-row1-title {
   font-size: rem-calc(26);
-  font-size: calc(26px +  12 * (100vw - 320px)/1080);
+  font-size: calc(26px +  12 * (100vw - 320px)/1180);
   font-weight: inherit;
   @include breakpoint(xxlarge) {
     font-size: rem-calc(38);
@@ -307,7 +307,7 @@ strong, b {
 }
 .homepage-business-highlight-title {
   font-size: rem-calc(24);
-  font-size: calc(24px +  14 * (100vw - 320px)/1080);
+  font-size: calc(24px +  14 * (100vw - 320px)/1180);
   font-weight: inherit;
   @include breakpoint(xlarge) {
 		font-size: rem-calc(38);
@@ -318,7 +318,7 @@ strong, b {
 }
 .stat-sm {
 	font-size: 24px;
-  font-size: calc(24px +  (52 - 24) * (100vw - 320px)/1080);  
+  font-size: calc(24px +  (52 - 24) * (100vw - 320px)/1180);  
   font-weight: inherit;
   line-height: 1.1;
   @include breakpoint(xxlarge) { 

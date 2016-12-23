@@ -8,7 +8,7 @@
 .background-quote::before {
   content: "\201D";
   font-size: 9rem;
-  font-size: calc(144px +  144 * (100vw - 320px)/(1180 - 320)); 
+  font-size: calc(144px +  144 * (100vw - 320px)/(1270 - 320)); 
   opacity: 0.2;
   display: block;
   float: right;
@@ -42,14 +42,15 @@
   img {
     transform: rotate(3deg);
     @include breakpoint(medium) {
-    transform: rotate(4deg);
-    transform-origin: center bottom;
+      transform: rotate(4deg);
+      transform-origin: center bottom;
+      padding-right: 1rem;
     }  
     @include breakpoint(large) {
       transform: rotate(4.8deg);
       transform-origin: 50% 20%;
-      padding-left: 2rem;
-    }  
+      padding-left: $gutter/2;
+    } 
   }
 }
 .testimonial-image-offset {
@@ -60,37 +61,55 @@
 .testimonials-single {
   position: relative;
   padding-bottom: $global-padding;
+  @include breakpoint(large down) {
+    padding-left: $gutter;
+    padding-right: $gutter;
+  }
 }
 .testimonials-multi { 
   position: relative;
   .testimonials-quote {
-    width: 100%;
+    margin-left: $gutter * 1.5;
+    margin-right: $gutter * 1.5;
     @include breakpoint(medium) {
+      width: 55%;
       position: absolute;
       top: 0;
       left: 0;
     }
+    @include breakpoint(large) {
+      width: 50%;
+    }
   } 
-  .title-testimonial  {
+  .testimonail-feature {
     @include breakpoint(medium) {
-      max-width: 55%;
+      @include grid-column(8.5 of 12);
+      float: right;
+      padding-right: $gutter/2;
+    }
+    @include breakpoint(large) {
+      @include grid-column(9 of 12);
+      float: right;
+      padding-right: $gutter * 2;
+    }
+    @include breakpoint(xlarge) {
+      @include grid-column(12 of 12);
+      float: right;
+      padding-right: 0;
     }
   }
   .testimonial-image-offset {
-    max-width: 85%;  
+    padding-top: $gutter;
     @include breakpoint(large) {
-      max-width: 97%;
+      padding-top: 0;
     }
-    @include breakpoint(xlarge) {
-      max-width: 100%;
-    }  
   }
 }
 
 .title-testimonial {
   position: relative;  
   font-size: rem-calc(32);
-  font-size: calc(32px +  20 * (100vw - 320px)/1080); 
+  font-size: calc(32px +  20 * (100vw - 320px)/1180); 
   margin-bottom: 0.5em;
   font-weight: $global-weight-black;
   line-height: 1.2;
@@ -101,12 +120,12 @@
 }
 .testimonials-thumbnails {
   text-align: center;
-  padding: 1rem 0;
+  padding: 1rem $gutter;
   float: left;
   width: 100%;
   @include breakpoint(large) {
     position: absolute;
-    right: 0;
+    right: $gutter * 1.5;
     top: 0;
     width: 12rem;
     padding: 0;
@@ -114,11 +133,8 @@
   } 
 }
 .testimonials-thumbnail {
-  @include breakpoint(small only) {
-    @include grid-column(4);
-  }
-  @include breakpoint(medium only) {
-    @include grid-column(4);
+  @include breakpoint(medium down) {
+    @include grid-column(4 of 12);
   }
   @include breakpoint(large) {
     margin: 0 0 $gutter $gutter;

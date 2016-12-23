@@ -1,6 +1,6 @@
 // don't print the giant hero stuff, just the text contents
 $hero-opacity: 0.8;
-$hero-blend-color: $fm-blue;
+$hero-blend-color: $primary-color;
 
 @media screen {
   .hero {
@@ -53,7 +53,7 @@ $hero-blend-color: $fm-blue;
       @include grid-column-position(center);
     }
     p {
-      font-size: calc(18px +  10 * (100vw - 320px)/1080);
+      font-size: calc(18px +  10 * (100vw - 320px)/1180);
       @include breakpoint(xxlarge) {
         font-size: rem-calc(28);
       }
@@ -62,7 +62,7 @@ $hero-blend-color: $fm-blue;
       text-align: left;
       margin-left: 0;
       @include breakpoint(large) {
-        @include grid-column(7.3);
+        @include grid-column(7 of 12);
       }
     }
   }

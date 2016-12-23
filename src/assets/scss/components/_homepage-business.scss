@@ -18,7 +18,7 @@
   @include breakpoint(xlarge) {
     text-align: left;
     padding: $global-padding 0;
-    font-size: calc( 24px + (28 - 24) * ( (100vw - 1180px) / (1400 - 1180) ));
+    font-size: calc( 24px + (28 - 24) * ( (100vw - 1270px) / (1500 - 1270) ));
   }
   @include breakpoint(xxlarge) {
       font-size: 28px;
@@ -49,7 +49,7 @@
   }
 }
 .business-line-icon {
-  color: $fm-blue;
+  color: $primary-color;
   line-height: 1;
   text-transform: uppercase;
   font-weight: $global-weight-medium;

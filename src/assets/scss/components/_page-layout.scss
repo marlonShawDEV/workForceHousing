@@ -1,16 +1,4 @@
 // trying to solve for the fact that design want the full gutter to the left and right, not half a gutter, like Foundation defaults to.
-.row {
-  padding-left: $gutter/2;
-  padding-right:  $gutter/2;
-  &.column {
-    padding-left: $gutter;
-    padding-right: $gutter;
-  }
-}
-.row .column .row {
-  padding-right: 0;
-  padding-left: 0;
-}
 .section-padding {
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -18,6 +6,90 @@
     padding-top: rem-cal(55px);
     padding-bottom: rem-calc(45px);
 	}
+}
+.primary-nav {
+  .row {
+    &.column {
+      &.primarynav-buffer {
+        padding-right: 0;
+        padding-left: 0;
+        @include breakpoint(xlarge) {
+          padding-right: rem-calc(30);  
+          padding-left: rem-calc(50);
+        }
+        @include breakpoint(xxlarge) {
+          padding-right: rem-calc(50); 
+          padding-left: rem-calc(70);
+        }      
+      }
+    }
+  }
+}
+.two-column-layout{
+  @include breakpoint(medium down) {
+    > .two-column-row {
+      main.column {    
+        padding-left: rem-calc(30);
+        padding-right: rem-calc(30);
+      }    
+    }
+  } 
+  @include breakpoint(large) {
+    > .two-column-row {
+        padding-left: $gutter;
+        padding-right: $gutter
+    }
+  } 
+  @include breakpoint(xlarge) {
+    > .two-column-row {
+      padding-left: rem-calc(40);
+      padding-right: rem-calc(40);
+    }
+  }  
+  @include breakpoint(xxlarge) {
+    > .two-column-row {
+      padding-left: rem-calc(60);
+      padding-right: rem-calc(60);
+    }
+  }  
+}
+.ribbon,
+.primary-nav,
+.secondary-nav,
+.page-title,
+.section-padding,
+.share-wrapper,
+.callout-fullwidth,
+.footer,
+.hero-blended {  
+  > .row {
+    padding-left: rem-calc(20);
+    padding-right: rem-calc(20);
+    &.column {
+      padding-left: rem-calc(30);
+      padding-right: rem-calc(30); 
+    }
+  } 
+  @include breakpoint(xlarge) {
+    > .row {
+      padding-left: rem-calc(40);
+      padding-right: rem-calc(40);
+      &.column {
+        padding-left: rem-calc(50);
+        padding-right: rem-calc(50);
+      }
+    }
+  } 
+  @include breakpoint(xxlarge) {
+    > .row {
+      padding-left: rem-calc(60);
+      padding-right: rem-calc(60);
+      &.column {
+        padding-left: rem-calc(70);
+        padding-right: rem-calc(70); 
+      }
+    }
+  }  
 }
 .position-relative {
   position: relative;
@@ -35,12 +107,53 @@
 }
 .two-column-layout {
   .two-column-row {
-    @include clearfix;     
-    @include breakpoint(large) {  
-      @include grid-column-row($gutter);  
+    @include clearfix; 
+  } 
+  main {
+    &.column {
+      padding-top: $gutter * 2.5;
+      padding-bottom: $gutter * 2;    
+      @include breakpoint(large) {
+        @include grid-column(7 of 12);
+      }
+      > .jut {
+        @include breakpoint(large) { 
+          width: 106%; 
+        }
+      } 
+      > .jut {
+        @include breakpoint(xlarge) { 
+          width: 112%; 
+        }
+      } 
     }  
-    &.row {
-      padding: 0;
+  }
+  aside.column {
+    @include breakpoint (medium down) {
+      @include grid-column-collapse;
+      clear: both;
+      float: none;
+    }
+    @include breakpoint(large) {
+        @include grid-column(4.5 of 12);
+    }
+    @include breakpoint(xlarge) {
+        @include grid-column(4 of 12);
+    }
+    position: relative;
+    z-index: 2;
+    section {    
+      margin: 0;
+      padding: $gutter * 1.5;      
+      @include breakpoint(large) {
+        padding: $gutter;
+      }  
+      @include breakpoint(xlarge) {
+        padding: $global-padding * 1.9 $global-padding * 2;
+      }      
+      > .row {
+        margin: 0;
+      }
     }
   } 
 }
@@ -56,68 +169,9 @@ main {
 				font-size: rem-calc(12);
 			}
 		}
-	}
-  &.column {
-    padding: $gutter * 2.5 $gutter $gutter * 2 $gutter;    
-    @include breakpoint(large) { 
-      max-width: 55em;    
-      width: calc(100% - 23em);
-      padding-right: 2em;
-      float: left;
-    }
-    @include breakpoint(xlarge) {
-      max-width: 59em;    
-      @include grid-column(1, $gutter * 2); 
-      @include grid-column-size(66.666666%);
-      padding-right: 4em;
-    }
-    @include breakpoint(xxlarge) {
-      max-width: 61.5em;    
-      padding-right: 6.5em;
-    }
-    > .jut {
-      @include breakpoint(large) { 
-        width: calc(100% + 2em); 
-      }
-      @include breakpoint(xlarge) { 
-        width: calc(100% + 4em);  
-      }
-      @include breakpoint(xxlarge) { 
-        width: calc(100% + 6.5em);  
-      }
-    } 
-  }    
+	}  
 }
-aside.column {
-  @include breakpoint (small only) {
-    @include grid-column-collapse;
-    clear: both;
-    float: none;
-  }
-  @include breakpoint (medium only) {
-    @include grid-column-collapse;
-    clear: both;
-    float: none;
-  }
-  @include breakpoint(large) {
-    float: left;
-    width: 23em;
-    padding: 0 $gutter $gutter * 2.5;
-  }
-  @include breakpoint(xlarge) {
-    @include grid-column(1, $gutter * 2);
-    @include grid-column-size(33.333333%);
-  }
-  position: relative;
-  z-index: 2;
-  section {
-    padding: $global-padding * 1.9 $global-padding * 2;
-    margin: 0;
-    > .row {
-      margin: 0;
-    }
-  }
-} 
+
 .grid-2col {
   aside {
     @include breakpoint(large) {
@@ -128,11 +182,8 @@ aside.column {
 .grid-2col-tertiary > .page-title {
   h1 {
     @include breakpoint(large) {      
-      padding-right: 23rem;
-    }  
-    @include breakpoint(xlarge) { 
-      padding-right: 33.3%;
-    }
+      @include grid-column(7 of 12);
+    } 
   }
 }
 .grid-2col-article > .two-column-layout aside.column {

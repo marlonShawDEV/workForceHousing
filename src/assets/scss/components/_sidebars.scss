@@ -1,3 +1,15 @@
+$sidebar-palette: (
+  green: $fm-green,
+  orange: $fm-orange,
+  yellow: $fm-yellow,
+  purple: $fm-purple,
+  blue: $fm-blue,
+  teal: $fm-teal,
+  gray: $medium-gray,
+  red: $fm-red,
+  primary: $primary-color
+);
+
 .sidebar {
   position: relative;  
 }
@@ -47,18 +59,18 @@
   background-color: $fm-gray;
   @include list-divided(lighten($fm-gray, 10%));
 }
-.sidebar-yellow {
-	background-color: $fm-yellow;
-  @include list-divided(lighten($fm-yellow, 10%));
+
+@each $name, $color in $sidebar-palette {    
+  &.sidebar-#{$name} {      
+    background-color: $color;
+    @include list-divided(lighten($color, 10%));
+  }
 }
 .sidebar-concrete {
   background-color: $light-gray;
   @include list-divided(darken($light-gray, 5%));
+  a { color: inherit;}
 }
-.sidebar-blue {
-  background-color: $fm-blue; 
-  @include list-divided(lighten($fm-blue, 10%));
-}  
 
 .sidebar-feature {    
   @include breakpoint(large) {

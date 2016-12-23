@@ -54,11 +54,10 @@ $dark-gray: #333333;
 $black: #000000;
 $white: #ffffff;
 $fm-yellow: #ffb718;
-$fm-blue: #00a6e2;
 $fm-orange: #ff6c00;
 $fm-red: #cf0a2c;
 $fm-teal: #00a19a;
-$fm-dark-blue: #457bbe;
+$fm-blue: #457bbe;
 $fm-purple: #725090;
 $fm-green: #88BD45;
 $fm-gray: #777874;
@@ -68,7 +67,7 @@ $offwhite: #f9f9f9;
 $mosaic-start: #7AB629;
 $mosaic-end: #FCEE1C;
 
-$primary-color: $fm-blue;
+$primary-color: #00a6e2;
 $secondary-color: $fm-orange;
 $success-color: $fm-gray;
 $warning-color: $fm-yellow;
@@ -511,17 +510,17 @@ $switch-paddle-transition: all 0.25s ease-out;
 // 31. Table
 // ---------
 
-$table-background: scale-color($fm-dark-blue, $lightness: 100%);
+$table-background: scale-color($fm-blue, $lightness: 100%);
 $table-color-scale: 4%;
-$table-border: 1px solid scale-color($fm-dark-blue, $lightness: 90%);
+$table-border: 1px solid scale-color($fm-blue, $lightness: 90%);
 $table-padding: rem-calc(8 10 10);
 $table-hover-scale: 1%;
-$table-row-hover: scale-color($fm-dark-blue, $lightness: 98%);
-$table-row-stripe-hover: scale-color($fm-dark-blue, $lightness: 90%);
-$table-striped-background: scale-color($fm-dark-blue, $lightness: 93%);
+$table-row-hover: scale-color($fm-blue, $lightness: 98%);
+$table-row-stripe-hover: scale-color($fm-blue, $lightness: 90%);
+$table-striped-background: scale-color($fm-blue, $lightness: 93%);
 $table-stripe: even;
-$table-head-background: $fm-dark-blue;
-$table-foot-background: scale-color($fm-dark-blue, $lightness: 80%);
+$table-head-background: $fm-blue;
+$table-foot-background: scale-color($fm-blue, $lightness: 80%);
 $table-head-font-color: $white;
 $show-header-for-stacked: false;
 
