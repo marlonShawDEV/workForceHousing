@@ -11,78 +11,95 @@ $overlay-palette: (
 
 
 .reveal {  
-  &:not(.overlay-video):not(.reveal-image) {
+  color: $white;
+  &.tiny,
+  &.small,
+  &.large {
+    @include reveal-modal-width($reveal-width);
+  }
+  &:not(.overlay-video):not(.overlay-image):not(.overlay-gallery) {
     @include reveal-modal-width($reveal-width);
     padding-top: rem-calc(40);
     padding-top: calc(40px +  56 * (100vw - 320px)/1180); 
     @include breakpoint(xxlarge) {
       padding-top: rem-cal(96);
     }
+    > div { 
+      position: relative;
+    }
+    > .row {
+      max-width: $global-width;
+    }
   }
-  color: $white;
-  a{
+  a {
     @include anchor-on-dark;
   }  
-  &.tiny,
-  &.small,
-  &.large {
-    @include reveal-modal-width($reveal-width);
-  }
-  &.overlay-video {
-    padding: 0;
-    max-width: $global-width;
-    @include reveal-modal-width(800px);
-  }
-  
+  .close-button-medium {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    @include breakpoint (medium) {    
+      top: -0.9em;
+      right: -0.9em;
+    }
+  }  
 // Full-screen mode colors
   @each $name, $color in $overlay-palette {    
     &.overlay-#{$name} {      
       background-color: $color;
     }
   } 
-  > div { 
-    position: relative;
-  }
-  > .row {
-    max-width: $global-width;
-  }
-  .reveal-image {
-    top: 0;
+  
+  &.overlay-video,
+  &.overlay-image,
+  &.overlay-gallery  {
     background: transparent;
-    border-width: 0;
-    max-width: $global-width;
-    @include reveal-modal-width(800px);
-    .reveal-image-inner {
-      overflow: none;
-      padding: 2vh 2vw;
-      margin: 0 auto; 
-      position: relative;     
+    @include reveal-modal-width(90%, 1280px);
+    text-align: center;  
+    overflow: visible;
+  }  
+  &.overlay-video {
+    padding: 2rem 2rem 0;
+    @include breakpoint (small only) {
+      padding: 1rem 1rem 0;
     }
-    figure {
-      margin: 0 auto;   
-      max-height: 92vh;
-      max-width: 92vw;
-      overflow: hidden;
-      position: relative;   
-      img {
-        @include orbit-image;      
-        display: block; 
-        border: $reveal-border; 
+    .responsive-embed {
+      overflow: visible;
+    }
+  }
+  &.overlay-image,
+  &.overlay-gallery  {
+    .modal-content {
+      max-width: 100%;
+      padding: 2rem 2rem 0;
+      
+      @include breakpoint (small only) {
+        padding: 1rem 1rem 0;
       }
-      figcaption { 
-        @extend .orbit-caption;
-        font-size: inherit;
-        text-align: center;      
-        font-size: rem-calc(18);
-        font-weight: $global-weight-medium;
-        @include breakpoint(medium) {
-          font-size: rem-calc(20);
-        }
-        :last-child { margin-bottom: 0;}      
-        a {
-          @include anchor-on-dark;
-        }     
-      }    
+    }
+    figure {    
+      display: inline-block; 
+      margin: 0 auto;
+      max-width: 100%;
+      position: relative;
+      img {        
+        max-width: 100%;
+        max-height:90vh;
+        min-height: rem-calc(200);
+        width: auto;
+      }
+    }
+    figcaption {
+      font-size: inherit;
+      text-align: center;      
+      font-size: rem-calc(20);
+      font-weight: $global-weight-medium;
+      @extend .orbit-caption;
+      @include breakpoint(small only) {
+        font-size: rem-calc(14);
+        padding: 0.5em;
+      }
+      :last-child { margin-bottom: 0;}     
     }
     .gallery-previous {  
       @extend %orbit-control;
@@ -96,8 +113,8 @@ $overlay-palette: (
       }
     .gallery-previous,
     .gallery-next {  
-      font-size: 1.5rem;
-      background-color: rgba($black, 0.4);
+      background-color: rgba($black, 0.2);
+      font-size: 1.2rem;
     } 
   }
 }

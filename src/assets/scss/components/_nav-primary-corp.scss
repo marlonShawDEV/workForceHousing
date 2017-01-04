@@ -37,6 +37,8 @@
     background: $fm-yellow icon(search, $white, 24, 24) no-repeat center center;     
   }
 }
+
+// mobile nav
 @include breakpoint(large down) {      
   .is-accordion-submenu-parent > a {
     position: relative;
@@ -58,6 +60,7 @@
     }
     h4 {
       font-weight: inherit;
+      margin-bottom: 0;
     }
     .logo-mobile { 
       margin: $gutter $gutter 0 $gutter * 1.5;
@@ -120,6 +123,7 @@
       background: $fm-yellow;
       color: $white;
     }
+    
     input[type="search"] {
       max-width: 100%;
       background: $fm-yellow;

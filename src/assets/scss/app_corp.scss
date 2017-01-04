@@ -6,6 +6,7 @@
 @import 'components/breakpoint';
 @import 'components/visibility';
 
+
 @include foundation-global-styles;
 @include foundation-grid;
 // @include foundation-flex-grid;
@@ -25,15 +26,15 @@
 @include foundation-drilldown-menu;
 @include foundation-dropdown;
 @include foundation-dropdown-menu;
-@include foundation-flex-video;
-@include foundation-label;
+// @include foundation-flex-video;  replaced by responsive embed
+@include foundation-responsive-embed;
+// @include foundation-label;
 @include foundation-media-object;
 @include foundation-off-canvas;
 @include foundation-orbit;
 @include foundation-pagination;
 @include foundation-progress-bar;
-// @include foundation-progress-element;
-// @include foundation-meter-element;
+// @include foundation-progress-element; 
 @include foundation-slider;
 @include foundation-sticky;
 @include foundation-reveal;
@@ -46,6 +47,7 @@
 @include foundation-top-bar;
 @include foundation-visibility-classes;
 @include foundation-float-classes;
+
 // @include foundation-flex-classes;
 
 @include motion-ui-transitions;

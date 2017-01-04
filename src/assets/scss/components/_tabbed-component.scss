@@ -4,15 +4,23 @@ $tab-margin: 0 !default;
 
 /// Default background color of a tab bar.
 /// @type Color
-$tab-background: $light-gray !default;
+$tab-background: $white !default;
 
-/// active background color of a tab bar.
+/// Font color of tab item.
+/// @type Color
+$tab-color: $primary-color !default;
+
+/// Active background color of a tab bar.
 /// @type Color
 $tab-background-active: $light-gray !default;
 
+/// Active font color of tab item.
+/// @type Color
+$tab-active-color: $primary-color !default;
+
 /// Font size of tab items.
 /// @type Number
-$tab-item-font-size: rem-calc(16) !default;
+$tab-item-font-size: rem-calc(12) !default;
 
 /// Default background color on hover for items in a Menu.
 $tab-item-background-hover: $white !default;
@@ -33,6 +41,10 @@ $tab-content-background: $white !default;
 /// @type Color
 $tab-content-border: $light-gray !default;
 
+/// Default text color of tab content.
+/// @type Color
+$tab-content-color: $body-font-color !default;
+
 /// Default padding for tab content.
 /// @type Number | List
 $tab-content-padding: 1rem !default;
@@ -48,13 +60,6 @@ $tab-item-hover-color: $medium-gray !default;
 /// Default text color of active tab item.
 /// @type Color
 $tab-item-active-color: $primary-color !default;
-
-// Sizes child elements so that `$n` number of items appear on each row.
-///
-/// @param {Number} $n - Number of elements to display per row.
-@mixin block-tabs($n) {
-  width: percentage(1/$n);
-}
 
 /// Adds styles for a tab container. Apply this to a `<ul>`.
 @mixin tabs-container {
@@ -146,6 +151,13 @@ $tab-item-active-color: $primary-color !default;
   &.is-active {
     display: block;
   }
+}
+
+// Sizes child elements so that `$n` number of items appear on each row.
+///
+/// @param {Number} $n - Number of elements to display per row.
+@mixin block-tabs($n) {
+  width: percentage(1/$n);
 }
 
 

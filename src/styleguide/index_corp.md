@@ -435,14 +435,14 @@ Use dividers to define thematic breaks between paragraphs. To denote the end of 
 
 # Lists
 
-<p class="lead">There are 3 types of lists: definition, ordered, unordered. Additionally, there are custom styles (un-bulleted, divided, etc) that can be used to modify the default layout of list elements.</p>
+<p class="lead">There are 3 types of lists: definition, unordered, and ordered. Additionally, there are custom styles (un-bulleted, divided, reversed, etc) that can be used to modify the default layout of list elements.</p>
 
 ## Definition Lists
 
 A definition list (`<dl>`) is used to display name-value pairs, like metadata or a dictionary definition. Each term (`<dt>`) is paired with one or more definitions (`<dd>`).  Add class `.glossary` to the `dl` to indent the definitions.
 
 ```html_example
-<h3>Plain style</h3>
+<h4>Plain style</h4>
 <dl>
   <dt>Time</dt>
   <dd>The indefinite continued progress of existence and events in the past, present, and future regarded as a whole.</dd>
@@ -450,7 +450,8 @@ A definition list (`<dl>`) is used to display name-value pairs, like metadata or
   <dd>A continuous area or expanse that is free, available, or unoccupied.</dd>
   <dd>The dimensions of height, depth, and width within which all things exist and move.</dd>
 </dl>
-<h3>Glossary style</h3>
+<hr>
+<h4>Glossary style</h4>
 <dl class="glossary">
   <dt>Amortization</dt>
   <dd>Paying off a loan over the period of time and at the interest rate specified in a loan document. The amortization of a loan includes the payment of interest and a part of the amount borrowed in each mortgage payment.</dd>
@@ -461,6 +462,100 @@ A definition list (`<dl>`) is used to display name-value pairs, like metadata or
   <dt>Application Fee</dt>
   <dd>The fee that a mortgage lender charges to apply for a mortgage to cover processing costs.</dd>
 </dl>
+```
+
+---
+
+## Unordered Lists
+
+Use an unordered list to... *list things*, if the order of the items doesn't matter.
+
+<div class="callout">
+Generic list items (those in `<ul>` or `<ol>` containers with no css class applied) have default margins to separate each item to provide better scanability. Adding any class to the `<ul>` or `<ol>` container will override the default margins on the `<li>` elements.
+</div>
+
+```html_example
+<ul>
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item
+    <ul>
+      <li>Nested list item      
+        <ul>
+          <li>Nested in a nested list item   
+            <ol>
+              <li>Numbered list</li>
+              <li>Deeply nested</li>
+            </ol>
+          </li>
+        </ul>
+      </li>
+      <li>Nested list item. This is a list item with a much longer content.  Sometimes a list item is long enough that it will span multiple lines.  This is an example of such an item, to show the line height, padding, and margin that are applied to this list element when it is long enough to wrap to a new line.</li>
+      <li>Nested list item</li>
+    </ul>
+  </li>
+  <li>List item</li>
+  <li>List item. This is a list item with a much longer content.  Sometimes a list item is long enough that it will span multiple lines.  This is an example of such an item, to show the line height, padding, and margin that are applied to this list element when it is long enough to wrap to a new line.</li>
+  <li>List item</li>
+</ul>
+```
+
+---
+
+### Un-bulleted Unordered Lists
+
+The `<ul>` is a bulleted list by default, but you can add the class `.no-bullet` to remove the bullets from that list.  Nested lists will retain their formatting unless also modified.
+
+```html_example
+<ul class="no-bullet">
+  <li>List item with a much longer description or more content.</li>
+  <li>List item</li>
+  <li>List item
+    <ul>
+      <li>Nested list item</li>
+      <li>Nested list item</li>
+      <li>Nested list item</li>
+    </ul>
+  </li>
+  <li>List item</li>
+  <li>List item. This is a list item with a much longer content.  Sometimes a list item is long enough that it will span multiple lines.  This is an example of such an item, to show the line height, padding, and margin that are applied to this list element when it is long enough to wrap to a new line.</li>
+  <li>List item</li>
+</ul>
+```
+
+---
+
+### Divided Lists
+
+To add dividers between items in a list, add the class `.list-divided` to the list tag.  Typically the dividers are used along with the `.no-bullet` class.
+
+```html_example
+<ul class="no-bullet list-divided">
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item. This is a list item with a much longer content.  Sometimes a list item is long enough that it will span multiple lines.  This is an example of such an item, to show the line height, padding, and margin that are applied to this list element when it is long enough to wrap to a new line.</li>
+  <li>List item</li>
+</ul>
+```
+
+---
+
+### Expanded Lists
+
+If you require additional space between very long, complex list items -- such as those where multiple paragraphs are in a single list item, use `<p>` tags.
+
+```html_example
+<ul>
+  <li><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras imperdiet nec erat ac condimentum. Nulla vel rutrum ligula. Sed hendrerit interdum orci a posuere. Vivamus ut velit aliquet, mollis purus eget, iaculis nisl. Proin posuere malesuada ante. Proin auctor <a href="#">orci eros, ac molestie lorem</a> dictum nec. Vestibulum sit amet erat est. Morbi luctus sed elit ac luctus. Proin blandit, enim vitae egestas posuere, neque elit ultricies dui, vel mattis nibh enim ac lorem. Maecenas molestie nisl sit amet velit dictum lobortis. Aliquam erat volutpat.</p></li>
+  <li><p>Proin diam quam, elementum in eleifend id, elementum et metus. Cras in justo consequat justo semper ultrices. Sed dignissim lectus a ante mollis, nec vulputate ante molestie. Proin in porta nunc. Etiam pulvinar turpis sed velit porttitor, vel adipiscing velit fringilla. Cras ac tellus vitae purus pharetra tincidunt. Sed cursus aliquet aliquet. <strong>Cras eleifend commodo malesuada.</strong> In turpis turpis, ullamcorper ut tincidunt a, ullamcorper a nunc. Etiam luctus tellus ac dapibus gravida. Ut nec lacus laoreet neque ullamcorper volutpat.</p>
+  <p>Nunc et leo erat. Aenean mattis ultrices lorem, eget adipiscing dolor ultricies eu. In hac habitasse platea dictumst. Vivamus cursus feugiat sapien quis aliquam. Mauris quam libero, porta vel volutpat ut, blandit a purus. Vivamus vestibulum <a href="#">dui vel tortor molestie</a>, sit amet feugiat sem commodo. Nulla facilisi. Sed molestie arcu eget tellus vestibulum tristique.</p>
+  </li>
+  <li><p>Nullam ut tincidunt nunc. Pellentesque metus lacus, commodo eget justo ut, rutrum varius nunc. <strong>Sed non rhoncus risus.</strong> Morbi sodales gravida pulvinar. Duis malesuada, odio volutpat elementum vulputate, massa magna scelerisque ante, et accumsan tellus nunc in sem. Donec mattis arcu et velit aliquet, non sagittis justo vestibulum. Suspendisse volutpat felis lectus, <a href="#">nec consequat ipsum mattis id</a>. Donec dapibus vehicula facilisis. In tincidunt mi nisi, nec faucibus tortor euismod nec. Suspendisse ante ligula, aliquet vitae libero eu, vulputate dapibus libero. Sed bibendum, sapien at posuere interdum, libero est sollicitudin magna, ac gravida tellus purus eu ipsum. Proin ut quam arcu.</p>
+  <p><em>Suspendisse potenti.</em> Donec ante velit, ornare at augue quis, <a href="#">tristique laoreet sem</a>. Etiam in ipsum elit. Nullam cursus dolor sit amet nulla feugiat tristique. Phasellus ac tellus tincidunt, imperdiet purus eget, ullamcorper ipsum. Cras eu tincidunt sem. Nullam sed dapibus magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id venenatis tortor. In consectetur sollicitudin pharetra. Etiam convallis nisi nunc, et aliquam turpis viverra sit amet. Maecenas faucibus sodales tortor.</p>
+  <p>Suspendisse lobortis mi eu leo viverra volutpat. Pellentesque velit ante, vehicula sodales congue ut, elementum a urna. Cras tempor, ipsum eget luctus rhoncus, arcu ligula fermentum urna, vulputate pharetra enim enim non libero.</p></li>
+  <li><p>Vivamus sagittis, diam in vehicula lobortis, <a href="#">sapien arcu mattis erat</a>, vel aliquet sem urna et risus. Ut feugiat sapien vitae mi elementum laoreet. Suspendisse potenti. Aliquam erat nisl, aliquam pretium libero aliquet, sagittis eleifend nunc. In hac habitasse platea dictumst. Integer turpis augue, tincidunt dignissim mauris id, rhoncus dapibus purus. Maecenas et enim odio. Nullam massa metus, varius quis vehicula sed, pharetra mollis erat. In quis viverra velit. Vivamus placerat, est nec hendrerit varius, enim dui hendrerit magna, ut pulvinar nibh lorem vel lacus. Mauris a orci iaculis, hendrerit eros sed, gravida leo. In dictum mauris vel augue varius, ac ullamcorper nisl ornare. In eu posuere velit, ac fermentum arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam sed malesuada leo, at interdum elit.</p></li>
+</ul>
 ```
 
 ---
@@ -579,111 +674,6 @@ Use an ordered list when creating a list where the order of the items is importa
 </ol>
 ```
 
----
-
-## Unordered Lists
-
-Use an unordered list to... *list things*, if the order of the items doesn't matter.
-
-```html_example
-<ul>
-  <li>List item</li>
-  <li>List item</li>
-  <li>List item
-    <ul>
-      <li>Nested list item      
-        <ul>
-          <li>Nested in a nested list item   
-            <ol>
-              <li>Numbered list</li>
-              <li>Deeply nested</li>
-            </ol>
-          </li>
-        </ul>
-      </li>
-      <li>Nested list item</li>
-      <li>Nested list item</li>
-    </ul>
-  </li>
-  <li>List item</li>
-  <li>List item. This is a list item with a much longer content.  Sometimes a list item is long enough that it will span multiple lines.  This is an example of such an item, to show the line height, padding, and margin that are applied to this list element when it is long enough to wrap to a new line.</li>
-  <li>List item</li>
-</ul>
-```
-
----
-
-### Un-bulleted Unordered Lists
-
-The `<ul>` is a bulleted list by default, but you can add the class `.no-bullet` to remove the bullets from that list.  Nested lists will retain their formatting unless also modified.
-
-```html_example
-<ul class="no-bullet">
-  <li>List item with a much longer description or more content.</li>
-  <li>List item</li>
-  <li>List item
-    <ul>
-      <li>Nested list item</li>
-      <li>Nested list item</li>
-      <li>Nested list item</li>
-    </ul>
-  </li>
-  <li>List item</li>
-  <li>List item. This is a list item with a much longer content.  Sometimes a list item is long enough that it will span multiple lines.  This is an example of such an item, to show the line height, padding, and margin that are applied to this list element when it is long enough to wrap to a new line.</li>
-  <li>List item</li>
-</ul>
-```
-
----
-
-### Divided Lists
-
-To add dividers between items in a list, add the class `.list-divided` to the list tag.  Typically the dividers are used along with the `.no-bullet` class.
-
-```html_example
-<ul class="no-bullet list-divided">
-  <li>List item</li>
-  <li>List item</li>
-  <li>List item</li>
-  <li>List item. This is a list item with a much longer content.  Sometimes a list item is long enough that it will span multiple lines.  This is an example of such an item, to show the line height, padding, and margin that are applied to this list element when it is long enough to wrap to a new line.</li>
-  <li>List item</li>
-</ul>
-```
-
----
-
-### Expanded Lists
-
-If you require additional space between very long, complex list items -- such as those where multiple paragraphs are in a single list item, use `<p>` tags.
-
-```html_example
-<ul>
-  <li><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras imperdiet nec erat ac condimentum. Nulla vel rutrum ligula. Sed hendrerit interdum orci a posuere. Vivamus ut velit aliquet, mollis purus eget, iaculis nisl. Proin posuere malesuada ante. Proin auctor <a href="#">orci eros, ac molestie lorem</a> dictum nec. Vestibulum sit amet erat est. Morbi luctus sed elit ac luctus. Proin blandit, enim vitae egestas posuere, neque elit ultricies dui, vel mattis nibh enim ac lorem. Maecenas molestie nisl sit amet velit dictum lobortis. Aliquam erat volutpat.</p></li>
-  <li><p>Proin diam quam, elementum in eleifend id, elementum et metus. Cras in justo consequat justo semper ultrices. Sed dignissim lectus a ante mollis, nec vulputate ante molestie. Proin in porta nunc. Etiam pulvinar turpis sed velit porttitor, vel adipiscing velit fringilla. Cras ac tellus vitae purus pharetra tincidunt. Sed cursus aliquet aliquet. <strong>Cras eleifend commodo malesuada.</strong> In turpis turpis, ullamcorper ut tincidunt a, ullamcorper a nunc. Etiam luctus tellus ac dapibus gravida. Ut nec lacus laoreet neque ullamcorper volutpat.</p>
-  <p>Nunc et leo erat. Aenean mattis ultrices lorem, eget adipiscing dolor ultricies eu. In hac habitasse platea dictumst. Vivamus cursus feugiat sapien quis aliquam. Mauris quam libero, porta vel volutpat ut, blandit a purus. Vivamus vestibulum <a href="#">dui vel tortor molestie</a>, sit amet feugiat sem commodo. Nulla facilisi. Sed molestie arcu eget tellus vestibulum tristique.</p>
-  </li>
-  <li><p>Nullam ut tincidunt nunc. Pellentesque metus lacus, commodo eget justo ut, rutrum varius nunc. <strong>Sed non rhoncus risus.</strong> Morbi sodales gravida pulvinar. Duis malesuada, odio volutpat elementum vulputate, massa magna scelerisque ante, et accumsan tellus nunc in sem. Donec mattis arcu et velit aliquet, non sagittis justo vestibulum. Suspendisse volutpat felis lectus, <a href="#">nec consequat ipsum mattis id</a>. Donec dapibus vehicula facilisis. In tincidunt mi nisi, nec faucibus tortor euismod nec. Suspendisse ante ligula, aliquet vitae libero eu, vulputate dapibus libero. Sed bibendum, sapien at posuere interdum, libero est sollicitudin magna, ac gravida tellus purus eu ipsum. Proin ut quam arcu.</p>
-  <p><em>Suspendisse potenti.</em> Donec ante velit, ornare at augue quis, <a href="#">tristique laoreet sem</a>. Etiam in ipsum elit. Nullam cursus dolor sit amet nulla feugiat tristique. Phasellus ac tellus tincidunt, imperdiet purus eget, ullamcorper ipsum. Cras eu tincidunt sem. Nullam sed dapibus magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id venenatis tortor. In consectetur sollicitudin pharetra. Etiam convallis nisi nunc, et aliquam turpis viverra sit amet. Maecenas faucibus sodales tortor.</p>
-  <p>Suspendisse lobortis mi eu leo viverra volutpat. Pellentesque velit ante, vehicula sodales congue ut, elementum a urna. Cras tempor, ipsum eget luctus rhoncus, arcu ligula fermentum urna, vulputate pharetra enim enim non libero.</p></li>
-  <li><p>Vivamus sagittis, diam in vehicula lobortis, <a href="#">sapien arcu mattis erat</a>, vel aliquet sem urna et risus. Ut feugiat sapien vitae mi elementum laoreet. Suspendisse potenti. Aliquam erat nisl, aliquam pretium libero aliquet, sagittis eleifend nunc. In hac habitasse platea dictumst. Integer turpis augue, tincidunt dignissim mauris id, rhoncus dapibus purus. Maecenas et enim odio. Nullam massa metus, varius quis vehicula sed, pharetra mollis erat. In quis viverra velit. Vivamus placerat, est nec hendrerit varius, enim dui hendrerit magna, ut pulvinar nibh lorem vel lacus. Mauris a orci iaculis, hendrerit eros sed, gravida leo. In dictum mauris vel augue varius, ac ullamcorper nisl ornare. In eu posuere velit, ac fermentum arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam sed malesuada leo, at interdum elit.</p></li>
-</ul>
-```
-
----
-
-### Compact Lists
-
-Plain `<li>` elements (not those styles as tabs, accordions, carousels, etc) have default margins to separate each item to provide better scanability.  If you are creating a custom layout element using list items, you can override the default margin by adding a class of `.compact` to the `<ul>` or `<ol>` container.
-
-```html_example
-<ul class="compact">
-  <li>List item</li>
-  <li>List item</li>
-  <li>List item. This is a list item with a much longer content.  Sometimes a list item is long enough that it will span multiple lines.  This is an example of such an item, to show the line height, padding, and margin that are applied to this list element when it is long enough to wrap to a new line.</li>
-  <li>List item</li>
-</ul>
-```
-
 
 
 # Anchor Links
@@ -703,6 +693,8 @@ Plain `<li>` elements (not those styles as tabs, accordions, carousels, etc) hav
 </ul>
 ```
 
+---
+
 ## Linked Image Overlays
 
 Apply the `.overlay` class to the `<a>` that wraps an image to style the image with a blue overlay on hover and focus.
@@ -717,8 +709,6 @@ Refer to <a href="#blog-feature">Blog Feature</a> for a dark variant on the over
     <a class="overlay" href="#"><img alt="photo of David Brickman" src="/images/exec_david_brickman.jpg"></a>
   </div>
 </div>
-
----
 
 
 
@@ -905,10 +895,10 @@ If you use a one-color svg icon without a fill color, css will allow it to inher
 
 ```html_example
 <p>
-  <a href="#" class="button tertiary">Log In <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 450"><path d="M86.4 480h339.2c12.3 0 22.4-9.9 22.4-22.1V246c0-12.2-10-22-22.4-22H404v-30.9c0-41.5-16.2-87.6-42.6-115.4-26.3-27.8-64-45.7-105.3-45.7h-.2c-41.3 0-79 17.9-105.3 45.6C124.2 105.4 108 151.5 108 193v31H86.4C74 224 64 233.9 64 246v211.9c0 12.2 10 22.1 22.4 22.1zM161 193.1c0-27.3 9.9-61.1 28.1-80.3v-.3C206.7 93.9 231 83 255.9 83h.2c24.9 0 49.2 10.9 66.8 29.5v.2l-.1.1c18.3 19.2 28.1 53 28.1 80.3V224H161v-30.9z" /></svg></a>
-
   <a class="button secondary"><svg xmlns="http://www.w3.org/2000/svg" viewBox="40 40 400 400"><path d="M189.3 128.4L89 233.4c-6 5.8-9 13.7-9 22.4s3 16.5 9 22.4l100.3 105.4c11.9 12.5 31.3 12.5 43.2 0 11.9-12.5 11.9-32.7 0-45.2L184.4 288h217c16.9 0 30.6-14.3 30.6-32s-13.7-32-30.6-32h-217l48.2-50.4c11.9-12.5 11.9-32.7 0-45.2-12-12.5-31.3-12.5-43.3 0z"/></svg> Previous</a>
-      
+   
+  <a href="#" class="button tertiary">Log In <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 450"><path d="M86.4 480h339.2c12.3 0 22.4-9.9 22.4-22.1V246c0-12.2-10-22-22.4-22H404v-30.9c0-41.5-16.2-87.6-42.6-115.4-26.3-27.8-64-45.7-105.3-45.7h-.2c-41.3 0-79 17.9-105.3 45.6C124.2 105.4 108 151.5 108 193v31H86.4C74 224 64 233.9 64 246v211.9c0 12.2 10 22.1 22.4 22.1zM161 193.1c0-27.3 9.9-61.1 28.1-80.3v-.3C206.7 93.9 231 83 255.9 83h.2c24.9 0 49.2 10.9 66.8 29.5v.2l-.1.1c18.3 19.2 28.1 53 28.1 80.3V224H161v-30.9z" /></svg></a>
+   
   <a class="button secondary">Next <svg xmlns="http://www.w3.org/2000/svg" viewBox="40 40 400 400"><path d="M322.7 128.4l100.3 105c6 5.8 9 13.7 9 22.4s-3 16.5-9 22.4L322.7 383.6c-11.9 12.5-31.3 12.5-43.2 0-11.9-12.5-11.9-32.7 0-45.2l48.2-50.4h-217c-17 0-30.7-14.3-30.7-32s13.7-32 30.6-32h217l-48.2-50.4c-11.9-12.5-11.9-32.7 0-45.2 12-12.5 31.3-12.5 43.3 0z"/></svg></a>
 </p>
 ```
@@ -934,9 +924,7 @@ The button is also labeled with `aria-label` to clarify what the button's purpos
 
 ### Making Something Closable
 
-
 The close button on its own doesn't close elements, but you can use it with other plugins that have open and close behaviors.
-
 
 <div class="callout">
   <p>Any element can be used as a close trigger, not just close button. Adding the attribute <code>data-close</code> to any element within the callout will turn it into a close trigger.</p>
@@ -1118,7 +1106,7 @@ For pages without a tertiary nav, the column with the title goes full width at a
   <div class="row">
     <div class="column">
       <h1 class="hero-title">Page Title That is Quite Long to Show Where Wrapping Occurs</h1>
-    <div>
+    </div>
   </div>
 </div>
 ```
@@ -1134,7 +1122,7 @@ For pages with a tertiary nav, the column with the title must wrap at the 8 colu
   <div class="row">
     <div class="large-8 end column">
       <h1 class="hero-title">Page Title That is Quite Long to Show Where Wrapping Occurs</h1>
-    <div>
+    </div>
   </div>
 </div>
 ```
@@ -1239,13 +1227,48 @@ On the blog landing page, the first 2 entries are featured with large images and
     </div>
   </div>
 </div>
-```      
+```
+
+---
+
+## Featured Perspectives Articles
+
+```html_example
+<div class="row xlarge-up-2">
+  <div class="columns">
+    <div class="article-block article-block-lg">
+      <a href="/corporate/perspectives-detail.html" class="overlay overlay-gradient">
+        <img src="/images/perspectives/gilmore-lg.jpg" alt="Yvette Gilmore"/>
+        <div class="overlay-contents">
+          <div class="article-date-lg">August 22, 2016</div>
+          <h3 class="subtitle">The New Normal: Servicing in a Post-Crisis World</h3>
+          <p class="article-blurb-lg">In the years since the crisis we’ve made important strides in making the servicing industry stronger, more efficient and better able to help struggling borrowers. Today servicers have broadly delegated authority...</p>
+          <div class="article-author"><strong class="uppercase">Yvette Gilmore</strong><br><span class="reduce">VP Single-Family Servicer Performance Management</span></div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="columns">
+    <div class="article-block article-block-lg">
+      <a href="/corporate/perspectives-detail.html" class="overlay overlay-gradient">
+        <img src="/images/perspectives/hanson-lg.jpg" alt="Mark Hanson"/>
+        <div class="overlay-contents">
+          <div class="article-date-lg">Jul 11, 2016</div>
+          <h3 class="subtitle">The Single Security: Testing the Pipes</h3>
+          <p class="article-blurb-lg">Borrowers such as step-rate mortgages and partial principal forbearance. In addition, we’ve made it possible for them to modify loans without documentation through our streamlined modification program.</p>
+          <div class="article-author"><strong class="uppercase">Mark Hanson</strong><br><span class="reduce">Senior Vice President Securitization</span></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+```    
 
 
 
 # Callouts
 
-<p class="lead">A callout is just a container with a `.callout` class applied. You can put any kind of content inside.  There are two types of callouts -- the ones shown below are for use within the content area, and the [footer band](#callout-fullwidth) for use below your content.</p>
+<p class="lead">A callout is just a container with a `.callout` class applied. You can put any kind of content inside.  There are two types of callouts -- the ones shown below are for use within the content area, and the [footer band](#callout-fullwidth) for cross-promotional usage below your content and above the footer.</p>
 
 ```html
 <div class="callout">
@@ -1256,7 +1279,7 @@ On the blog landing page, the first 2 entries are featured with large images and
 
 ## Coloring
 
-The background of the callout can be changed by including any of the following classes:
+Add class `.rounded` to give a callout rounded corners. To make the entire callout clickable, put the anchor tag around the `.callout` container. Add any of the following classes to modify the background of the callout:
 
 * `callout-hollow`
 * `callout-gray`
@@ -1281,11 +1304,14 @@ The background of the callout can be changed by including any of the following c
     <div class="callout callout-gray">
       <p>This is a <a href="#">callout</a> with class of callout-gray.</p>
     </div>
+    <div class="callout callout-green">
+      <p>This is a <a href="#">callout</a> with a class of callout-green.</p>
+    </div>
     <div class="callout callout-blue">
       <p>This is a <a href="#">callout</a> with class of callout-blue.</p>
     </div>
-    <div class="callout callout-green">
-      <p>This is a <a href="#">callout</a> with a class of callout-green.</p>
+    <div class="callout callout-blue rounded">
+      <p>This is a <b>rounded</b> <a href="#">callout</a> with class of rounded AND callout-blue.</p>
     </div>
   </div>
   <div class="medium-6 columns">
@@ -1449,7 +1475,7 @@ The background of the sidebar module can be changed by including any of the foll
 
 ---
 
-## Popular List Items
+## Sidebar Popular List Items
 
 ```html
 <section class="sidebar sidebar-yellow">
@@ -1487,7 +1513,7 @@ The background of the sidebar module can be changed by including any of the foll
 
 ---
 
-## Call To Action
+## Sidebar Call To Action
 
 ```html
 <section class="sidebar sidebar-primary">
@@ -1525,7 +1551,7 @@ The background of the sidebar module can be changed by including any of the foll
 
 ---
 
-## RSS
+## Sidebar RSS
 
 ```html
 <section class="sidebar sidebar-gray">
@@ -1563,7 +1589,7 @@ The background of the sidebar module can be changed by including any of the foll
 
 ---
 
-## News List
+## Sidebar News List
 
 Note: The news release lists are automated by MarketWire.
 
@@ -1600,7 +1626,7 @@ Note: The news release lists are automated by MarketWire.
 
 ---
 
-## Featured Article
+## Sidebar Featured Article
 
 ```html
 <section class="sidebar sidebar-primary sidebar-feature">
@@ -1686,8 +1712,6 @@ Note: The news release lists are automated by MarketWire.
 
 <div class="two-column-layout">
   <div class="row two-column-row"> 
-    <main class="column">
-    </main>
     <aside class="column">
       <section class="sidebar sidebar-concrete">
         <div class="row">
@@ -2305,6 +2329,8 @@ Need to spiff up the table just a tad? Just add the class `.hover` to lightly da
   </tfoot>
 </table>
 
+---
+
 ## Stacking Tables
 
 To stack a table on small screens, add the class `.stack`.  Cells that span multiple rows are only shown in their original row -- if you have a complex table that has numerous rowspans and colspans, you may need opt for the scrolling table instead.
@@ -2470,7 +2496,7 @@ Got a lot of tubular tabular data? Add a wrapper element with the class `.table-
 
 ---
 
-## Unstriped
+## Unstriped Tables
 
 By default, table rows are striped. There's an `.unstriped` class to remove the stripes. 
 
@@ -2539,6 +2565,7 @@ A standard modal dialog is just an empty container, so you can put any kind of c
 - Add the attributes `data-open` and `aria-controls` to to the link that opens the modal. The value of both should be the ID of the modal.
 - To the modal container, add the class `.reveal`, the attribute `data-reveal`, and a unique ID (which is used by any link that launches the modal).
 - Modals by default are accessible through the use of various ARIA attributes.  To make a modal even more accessible, designate a label to the modal by adding an `id` attribute on the elment you want to designate as the label (such as a heading inside the modal) and then adding the same value into an `aria-labelledby` attribute on the modal container.
+- The contents of a modal should be wrapped in a `.modal-content` container.
 
 Modals are available in a variety of background colors. To select a specific background, include `.overlay-xxx` class (where xxx is green, orange, blue, teal, gray, yellow, red, purple) on the `.reveal` element.
 
@@ -2704,47 +2731,12 @@ It's possible for modals to open other modals. Create a second modal with a uniq
 
 ---
 
-## Video Modal
-
-Embedded videos won't maintain their aspect ratio as the width of the screen changes. To avoid squished videos, wrap them in a container with the class `.flex-video`.
-The default ratio is 4:3. Add the `.widescreen` class to change it to 16:9.
-
-- If the video is hosted by Vimeo, you should also add the class `.vimeo`.
-- To prevent a video from continuing to play after a modal is closed, add `data-reset-on-close="true"`.
-- To provide a non-javascript fallback link, include the url of the video page in the `href` attribute.
-
-
-```html_example
-<ul>
-  <li><a href="https://www.youtube.com/watch?v=26OUQIjRRbc" data-open="exampleModalC" aria-controls="exampleModalC">View a modal with a (4:3 ratio) video</a>.</li>
-</ul>
-
-<div class="reveal overlay-video" id="exampleModalC" data-reveal data-reset-on-close="true">
-  <div class="flex-video">
-    <iframe width="420" height="315" frameborder="0" allowfullscreen src="" data-video="//www.youtube-nocookie.com/embed/26OUQIjRRbc?rel=0&amp;wmode=transparent"></iframe>
-  </div>
-</div>
-
-<ul>
-  <li><a href="https://www.youtube.com/watch?v=tCg9285bJnY" data-open="exampleModalD" aria-controls="exampleModalD">View a modal with a widescreen (16:9 ratio) video</a>.</li>
-</ul>
-
-<div class="reveal overlay-video" id="exampleModalD" data-reveal data-reset-on-close="true">
-  <div class="flex-video widescreen">
-    <iframe width="549" height="309" frameborder="0" allowfullscreen src="" data-video="//www.youtube-nocookie.com/embed/tCg9285bJnY?rel=0&amp;wmode=transparent"></iframe>
-  </div>
-</div>
-```
-
----
-
 ## Image Modal
 
-Image modals are those that contain only an image and a caption, and the image stretches/shrinks to fill the width of the container.  To prevent images from distorting at higher resolutions, the maximum container width for image modals (regardless of size) is the width of the grid (1400px).
-- To create an image modal, add class `.reveal-image` to the .`reveal` container, and include a `figure` with `img` and `figcaption`.
-- To provide a non-javascript fallback link, include the url of the larger image in the `href` attribute.
+Image modals are intended to contain ONLY an image and a optional caption -- otherwise use a standard modal.
+- To create an image modal, add class `.overlay-image` to the .`reveal` container. Then inside the `.modal-content` container, include a `figure` element that contains an `img` and optional `figcaption`.
+- Include the url of the larger image in the `href` attribute (this will provide a non-javascript fall-back url, and will preserve all right-click options for the link (such as opening the link in a new window/tab, bookmarking the link, copying the link).
 - If the modal is being launched from a link on an image, utilize the [`.overlay` class](#overlay) to provide a focus and hover state on the image.  Below are examples of an image modal being launched from a text link and from a link on an overlay image.
--
 
 
 ```html_example
@@ -2753,11 +2745,11 @@ Image modals are those that contain only an image and a caption, and the image s
   <li><a data-open="exampleModalE" href="/images/bigkitty.jpg" aria-controls="exampleModalE">View an image modal</a>.</li>
 </ul>
 
-<div class="reveal reveal-image" id="exampleModalE" data-reveal>
-  <div class="reveal-image-inner">
+<div class="reveal overlay-image" id="exampleModalE" data-reveal>
+  <div class="modal-content">
     <figure>
       <img src="/images/bigkitty.jpg" alt="kitty">
-      <figcaption>Pretty Kitty!</figcaption>
+      <figcaption>What a pretty kitty!</figcaption>
     </figure>
   </div>
 </div>
@@ -2767,8 +2759,8 @@ Image modals are those that contain only an image and a caption, and the image s
   href="/images/kitty1600.jpg" aria-controls="exampleModalF"><img src="/images/kitten160.jpg" alt="kitty"></a></li>
 </ul>
 
-<div class="reveal reveal-image" id="exampleModalF" data-reveal>
-  <div class="reveal-image-inner">
+<div class="reveal overlay-image" id="exampleModalF" data-reveal>
+  <div class="modal-content">
     <figure>
       <img src="/images/kitty1600.jpg" alt="kitty">
       <figcaption>Who Doesn't Love Kitties?</figcaption>
@@ -2781,7 +2773,7 @@ Image modals are those that contain only an image and a caption, and the image s
 
 ## Image Gallery Modal <span id="igallery"></span>
 
-Combine the image modal and the nested modal to achieve an image gallery where the user can navigation through the images one at a time.
+Combine the image modal and the nested modal to achieve an image gallery where the user can navigation through several images one at a time.  If the images are important to the main content of the page, consider using an image carousel instead of an image modal.
 
 ```html_example
 <ul>
@@ -2789,59 +2781,64 @@ Combine the image modal and the nested modal to achieve an image gallery where t
 </ul>
 
 <!-- This is the first modal -->
-<div class="large reveal reveal-image" id="galleryModalA" data-reveal>
-  <div class="reveal-image-inner">
+<div class="reveal overlay-gallery" rel="gallery1" id="galleryModalA" data-reveal>
+  <div class="modal-content">
     <figure>
       <img src="/images/plant1.jpg" alt="plant 1">
       <figcaption>Default - center aligned caption.</figcaption>
-      <a class="gallery-previous" data-open="galleryModalD" aria-controls="galleryModalD"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</a>
-      <a class="gallery-next" data-open="galleryModalB" aria-controls="galleryModalB"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</a>
     </figure>
   </div>
 </div>
 
 <!-- This is the second modal -->
-<div class="large reveal reveal-image" id="galleryModalB" data-reveal>
-  <div class="reveal-image-inner">
+<div class="reveal overlay-gallery" rel="gallery1" id="galleryModalB" data-reveal>
+  <div class="modal-content">
     <figure>
       <img src="/images/plant2.jpg" alt="plant 2">
       <figcaption><p class="text-left">Left-aligned caption.</p><p class="text-left">With more than one paragraph.</p></figcaption>
-      <a class="gallery-previous" data-open="galleryModalA" aria-controls="galleryModalA"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</a>
-      <a class="gallery-next" data-open="galleryModalC" aria-controls="galleryModalC"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</a>
     </figure>
   </div>
 </div>
 
 <!-- This is the third modal -->
-<div class="large reveal reveal-image" id="galleryModalC" data-reveal>
-  <div class="reveal-image-inner">
+<div class="reveal overlay-gallery" rel="gallery1" id="galleryModalC" data-reveal>
+  <div class="modal-content">
     <figure>
       <img src="/images/plant3.jpg" alt="plant 3">
       <figcaption>
-        <p class="text-left show-for-medium">(example below is how a blockquote would appear - borrowed the idea from My Home.) </p>
-        <blockquote>
-          <p>"The lights burn blue. It is now dead midnight."</p>
-          <footer><cite>William Shakespeare</cite> in <cite>King Henry the Sixth</cite></footer>
-        </blockquote>
+        <p class="text-left show-for-medium">The lights burn blue. It is now dead midnight.</p>
       </figcaption>
-      <a class="gallery-previous" data-open="galleryModalB" aria-controls="galleryModalB"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</a>
-      <a class="gallery-next" data-open="galleryModalD" aria-controls="galleryModalD"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</a>
     </figure>
   </div>
 </div>
 
 <!-- This is the fourth modal -->
-<div class="large reveal reveal-image" id="galleryModalD" data-reveal>
-  <div class="reveal-image-inner">
+<div class="reveal overlay-gallery" rel="gallery1" id="galleryModalD" data-reveal>
+  <div class="modal-content">
     <figure>
       <img src="/images/plant4.jpg" alt="plant 4">
       <figcaption>This caption is longer than the others to show how things look when the caption is very long, and it contains a <a href="#">hyperlink</a> and formatting such as  <em>emphasis</em> and <strong>strong</strong>, so we can see how they look in a caption.
       </figcaption>
-      <a class="gallery-previous" data-open="galleryModalC" aria-controls="galleryModalC"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</a>
-      <a class="gallery-next" data-open="galleryModalA" aria-controls="galleryModalA"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</a>
     </figure>
   </div>
 </div>
+```
+
+---
+
+## Video Modal
+
+Embedded videos won't maintain their aspect ratio as the width of the screen changes. The default ratio is 4:3. Add the `.widescreen` class to change it to 16:9.  
+
+- Add a `.data-src` attribute to define the video url to embed in the modal, omit the http/https protocol from the embed url and include `wmode=transparent` in the embed query string.  This value should be different than the video page url -- we typically pull videos in via www.youtube-nocookie.com because they are less likely to be blocked. 
+- Include the url of the video page in the `href` attribute (this will provide a non-javascript fall-back url, and will preserve all right-click options for the link (such as opening the link in a new window/tab, bookmarking the link, copying the link).
+
+```html_example
+<ul>
+  <li><a class="video-modal" href="https://www.youtube.com/watch?v=26OUQIjRRbc" data-src="//www.youtube-nocookie.com/embed/26OUQIjRRbc?rel=0&amp;wmode=transparent">View a modal with a (4:3 ratio) video</a>.</li>
+
+  <li><a class="video-modal widescreen-video" href="https://www.youtube.com/watch?v=tCg9285bJnY"  data-src="//www.youtube-nocookie.com/embed/tCg9285bJnY?rel=0&amp;wmode=transparent">View a modal with a widescreen (16:9 ratio) video</a>.</li>
+</ul>
 ```
 
 
@@ -2852,9 +2849,9 @@ Combine the image modal and the nested modal to achieve an image gallery where t
 
 - The default animation for the carousel is slide out the existing slide while sliding in the replacement slide (direction based on whether you are moving forward or backward through the slides).  See below for [other animation options](#slide_animation).
 - The wrapper for the carousel should use the `.orbit` class and contain a `data-orbit` attribute and a `role="region"` attribute.  For assistive technology, provide an `aria-label` attribute that describes the carousel contents.  The wrapper groups the slides and the slide navigation together.
-- The container for the slides is a `ul` with the class `.orbit-container` (for image carousels, use a `div` with class `.orbit-container`).
-- Each slide is an `li` with the class `.orbit-slide` (for image carousels use a `figure`).
-- By default, slides transition every 5 seconds.  You can stop the auto-play functionality by adding the attribute `data-auto-play="false"`.
+- The container for the slides is a `ul` with the class `.orbit-container`.
+- Each slide is an `li` with the class `.orbit-slide`.
+- By default, slides transition every 5 seconds.  That is typically sufficient for images, but if the slides contain very much text, you will likely want to stop the auto-play functionality by adding the attribute `data-auto-play="false"`.
 - To shift the dot navigation so that it appears inside the panel, add class `.bullets-overlay` to the `.orbit` element.
 
 The background of a slide can be changed by including any of the following classes:
@@ -2938,7 +2935,7 @@ The background of a slide can be changed by including any of the following class
 
 ## Image Carousel
 
-For an image carousel, each slide consists of a `figure`, `img` and optional `figcaption`.
+For an image carousel, each `orbit-slide` contains a `figure`, with an `img` and optional `figcaption`.
 
 - Try to make sure your images are all similar in size and proportion.
 - Each image should still have an `alt` attribute, even if it has an associated caption.
@@ -2947,30 +2944,38 @@ For an image carousel, each slide consists of a `figure`, `img` and optional `fi
 
 ```html_example
 <div class="orbit" role="region" aria-label="Favorite Flower Pictures" data-orbit>
-  <div class="orbit-container">
-    <figure class="orbit-slide">
-      <img src="/images/plant1.jpg" alt="plant 1">
-      <figcaption>Default - center aligned caption.</figcaption>
-    </figure>
-    <figure class="orbit-slide">
-      <img src="/images/plant2.jpg" alt="plant 2">
-      <figcaption><p class="text-left">Left-aligned caption.</p><p class="text-left">With more than one paragraph.</p></figcaption>
-    </figure>
-    <figure class="orbit-slide">
-      <img src="/images/plant3.jpg" alt="plant 3">
-      <figcaption>
-        <p class="text-left show-for-medium">(example below is how a blockquote would appear - borrowed the idea from My Home.) </p>
-        <blockquote>
-          <p>"The lights burn blue. It is now dead midnight."</p>
-          <footer><cite>William Shakespeare</cite> in <cite>King Henry the Sixth</cite></footer>
-        </blockquote>
-      </figcaption>
-    </figure>
-    <figure class="orbit-slide">
-      <img src="/images/plant4.jpg" alt="plant 4">
-      <figcaption>This caption is longer than the others to show how things look when the caption is very long, and it contains a <a href="#">hyperlink</a> and formatting such as  <em>emphasis</em> and <strong>strong</strong>, so we can see how they look in a caption. </figcaption>
-    </figure>
-  </div>
+  <ul class="orbit-container">
+    <li class="orbit-slide">
+      <figure>
+        <img class="full" src="/images/plant1.jpg" alt="plant 1">
+        <figcaption>Default - center aligned caption.</figcaption>
+      </figure>
+    </li>
+    <li class="orbit-slide">
+      <figure>
+        <img class="full" src="/images/plant2.jpg" alt="plant 2">
+        <figcaption><p class="text-left">Left-aligned caption.</p><p class="text-left">With more than one paragraph.</p></figcaption>
+      </figure>
+    </li>
+    <li class="orbit-slide">
+      <figure>
+        <img class="full" src="/images/plant3.jpg" alt="plant 3">
+        <figcaption>
+          <p class="text-left show-for-medium">(example below is how a blockquote would appear - borrowed the idea from My Home.) </p>
+          <blockquote>
+            <p>"The lights burn blue. It is now dead midnight."</p>
+            <footer><cite>William Shakespeare</cite> in <cite>King Henry the Sixth</cite></footer>
+          </blockquote>
+        </figcaption>
+      </figure>
+    </li>
+    <li class="orbit-slide">
+      <figure>
+        <img class="full" src="/images/plant4.jpg" alt="plant 4">
+        <figcaption>This caption is longer than the others to show how things look when the caption is very long, and it contains a <a href="#">hyperlink</a> and formatting such as  <em>emphasis</em> and <strong>strong</strong>, so we can see how they look in a caption. </figcaption>
+      </figure>
+    </li>
+  </ul>
 </div>
 ```
 
@@ -2994,30 +2999,38 @@ Since those option names are pretty *long*, you can also set them all in one HTM
 Below is an example of the same image carousel shown above, but with a fade-in/fade-out animation.
 
 <div class="orbit" role="region" aria-label="Favorite Flower Pictures" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
-  <div class="orbit-container">
-    <figure class="orbit-slide">
-      <img src="/images/plant1.jpg" alt="plant 1">
-      <figcaption>Default - center aligned caption.</figcaption>
-    </figure>
-    <figure class="orbit-slide">
-      <img src="/images/plant2.jpg" alt="plant 2">
-      <figcaption><p class="text-left">Left-aligned caption.</p><p class="text-left">With more than one paragraph.</p></figcaption>
-    </figure>
-    <figure class="orbit-slide">
-      <img src="/images/plant3.jpg" alt="plant 3">
-      <figcaption>
-        <p class="text-left show-for-medium">(example below is how a blockquote would appear - borrowed the idea from My Home.) </p>
-        <blockquote>
-          <p>"The lights burn blue. It is now dead midnight."</p>
-          <footer><cite>William Shakespeare</cite> in <cite>King Henry the Sixth</cite></footer>
-        </blockquote>
-      </figcaption>
-    </figure>
-    <figure class="orbit-slide">
-      <img src="/images/plant4.jpg" alt="plant 4">
-      <figcaption>This caption is longer than the others to show how things look when the caption is very long, and it contains a <a href="#">hyperlink</a> and formatting such as  <em>emphasis</em> and <strong>strong</strong>, so we can see how they look in a caption. </figcaption>
-    </figure>
-  </div>
+  <ul class="orbit-container">
+    <li class="orbit-slide">
+      <figure>
+        <img class="full" src="/images/plant1.jpg" alt="plant 1">
+        <figcaption>Default - center aligned caption.</figcaption>
+      </figure>
+    </li>
+    <li class="orbit-slide">
+      <figure>
+        <img class="full" src="/images/plant2.jpg" alt="plant 2">
+        <figcaption><p class="text-left">Left-aligned caption.</p><p class="text-left">With more than one paragraph.</p></figcaption>
+      </figure>
+    </li>
+    <li class="orbit-slide">
+      <figure>
+        <img class="full" src="/images/plant3.jpg" alt="plant 3">
+        <figcaption>
+          <p class="text-left show-for-medium">(example below is how a blockquote would appear - borrowed the idea from My Home.) </p>
+          <blockquote>
+            <p>"The lights burn blue. It is now dead midnight."</p>
+            <footer><cite>William Shakespeare</cite> in <cite>King Henry the Sixth</cite></footer>
+          </blockquote>
+        </figcaption>
+      </figure>
+    </li>
+    <li class="orbit-slide">
+      <figure>
+        <img class="full" src="/images/plant4.jpg" alt="plant 4">
+        <figcaption>This caption is longer than the others to show how things look when the caption is very long, and it contains a <a href="#">hyperlink</a> and formatting such as  <em>emphasis</em> and <strong>strong</strong>, so we can see how they look in a caption. </figcaption>
+      </figure>
+    </li>
+  </ul>
 </div>
 
 ---

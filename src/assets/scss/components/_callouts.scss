@@ -14,7 +14,6 @@ $callout-palette: (
 .callout {
   margin: $callout-margin;
   background-color: $callout-background;
-  border-radius: 0.3rem;
   position: relative;
   padding: $callout-padding;
   &.large {
@@ -23,6 +22,9 @@ $callout-palette: (
   }
   &.small {
     padding: $callout-padding * 0.5 $callout-padding * 0.75;
+  }
+  &.rounded {
+    border-radius: 0.35rem;
   }
   > :first-child {
     margin-top: 0;

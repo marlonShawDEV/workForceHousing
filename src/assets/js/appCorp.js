@@ -4,5 +4,6 @@ if (Foundation.MediaQuery.atLeast('medium')) { Foundation.Tabs.matchHeight = tru
 Foundation.Reveal.deepLink = true;
 Foundation.Reveal.fullScreen = true;
 Foundation.Reveal.resetOnClose = true;
+// Reveal closeOnEsc and closeOnClick are both true 
 
 $(document).foundation(); 

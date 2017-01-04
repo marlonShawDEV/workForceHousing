@@ -11,13 +11,6 @@ figure {
  margin: $global-margin;
 }
 
-cite { 
-  display: inline;
-  &::before {
-    content: none;
-  }
-}
-
 blockquote {
   font-size: rem-calc(17); 
   font-weight: $global-weight-normal;
@@ -28,11 +21,17 @@ blockquote {
   footer { 
     font-weight: $global-weight-light;
     font-style: italic;
-    font-size: $global-font-size;
     padding: 0;
-    &:before {
-    content: "\2014 \2009";
+    font-size: 90%;
+    @include breakpoint(large) {
+      font-size: 80%;
     }
+    &:before {
+    content: "\2014 \0020";
+    }
+  }
+  cite { 
+    display: inline;
   }
   :last-child {
     margin-bottom: 0;

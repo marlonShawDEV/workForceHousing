@@ -16,6 +16,7 @@ FM.form = {
  deleteCookie: function (a,b){b||(b="/"),FM.form.getCookie(a)!==""&&FM.form.setCookie(a,"","-1",b)},
  limitText: function(a,b,m) {var v=$(a).val(),l=v.length,n=m-l,r=n==1?n+' char':n+' chars'; if(l>m){$(a).val(v.substring(0,m));}else {$(b).html(r);}},
  useOmni:function(){if(typeof somniTL=='function'&&!FM.form.pathElements[0].match(/^iw/)){return true}else{return false}},
+ toggleClick:function(){var f=arguments;return this.each(function(){var it=0;$(this).on("click",function(){f[it].apply(this, arguments);it=(it+1) % f.length;});})},
  omniNavLink:function(event){var $tg=$(event.target),$lk=$tg.closest('a,area'),trig='dne',desc='content:',locale='',ltype='o',txt='',dir=FM.form.pathElements[0].length?FM.form.pathElements[0]:'homepage'; 
   if($lk.length) { 
     var a='',b='',q='',hash='',qryst='',hrf=$lk.attr('href')||'',cl=$lk.attr('class')||'',persona='',rel=$lk.attr('rel')||'',tl=$lk.attr('title')||'';

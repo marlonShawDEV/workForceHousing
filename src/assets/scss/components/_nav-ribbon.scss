@@ -71,6 +71,7 @@ $ribbon-background-desktop: linear-gradient(to bottom, $offwhite 0%, $offwhite 9
     width: 2.25rem;
     padding: 0;
     transition: none;
+    border-radius: 0;
     &:hover,
     &:focus {
       background-color: scale-color($fm-yellow, $lightness: -10%);
