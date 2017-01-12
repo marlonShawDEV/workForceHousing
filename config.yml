@@ -59,6 +59,7 @@ PATHS:
     - "bower_components/foundation-sites/js/foundation.zf.responsiveAccordionTabs.js"
     # Paths to your own project code are here   
     - "src/assets/js/fmGlobals.js"
+    - "src/assets/js/mwNewsFeed.js"
     - "src/assets/js/headerNav_corp.js"
     - "src/assets/js/adjustSidebar.js"
     - "src/assets/js/homepageTestimonies_corp.js"
@@ -66,7 +67,6 @@ PATHS:
     - "src/assets/js/prepRotators.js" 
     - "src/assets/js/fakeNav_corp.js"   
     - "src/assets/js/appCorp.js"
-    - "src/assets/js/mwNewsFeed.js"
     - "src/assets/js/blogFeedbackForm_corp.js"
     # "src/assets/js/jQueryUrlShortener.js"  #uncomment for prod code. slows things down to much locally.
     - "src/assets/js/shareWidget.js"

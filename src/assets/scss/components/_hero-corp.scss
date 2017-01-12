@@ -70,64 +70,64 @@ $hero-blend-color: $primary-color;
    // layering 2 backgrounds -- blue and image to avoid extra markup
  
   &.perspectives-landing-hero {
-    background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero-5-mobile.jpg');
+    background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero/hero-5-mobile.jpg');
     height: 219px;
     @include breakpoint(medium) {
-      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero-5-desktop.jpg');
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero/hero-5-desktop.jpg');
       height: 345px;
       text-align: center;
     }
   } 
   &.blog-landing-hero {
-    background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/blog/hero-2-mobile.jpg');
+    background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero/hero-2-mobile.jpg');
     height: 219px;
     @include breakpoint(medium) {
-      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/blog/hero-2-desktop.jpg');
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero/hero-2-desktop.jpg');
       height: 345px;
       text-align: center;
     }
   }
   &.media-landing-hero {
-    background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero-6-mobile.jpg');
+    background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero/hero-6-mobile.jpg');
     height: 219px;
     @include breakpoint(medium) {
-      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero-6-desktop.jpg');
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero/hero-6-desktop.jpg');
       height: 345px;
       text-align: center;
     }
   } 
   &.research-landing-hero { //pending graphic from Jon
-    background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero-7-mobile.jpg');
+    background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero/hero-7-mobile.jpg');
     height: 219px;
     @include breakpoint(medium) {
-      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero-7-desktop.jpg');
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero/hero-7-desktop.jpg');
       height: 345px;
       text-align: center;
     }
   } 
   &.about-landing-hero {  //pending graphic from Jon
-    background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero-7-mobile.jpg');
+    background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero/hero-7-mobile.jpg');
     height: 219px;
     @include breakpoint(medium) {
-      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero-7-desktop.jpg');
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero/hero-7-desktop.jpg');
       height: 345px;
       text-align: center;
     }
   } 
   &.perspectives-detail-hero {
-    background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero-5-mobile.jpg');
+    background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero/hero-5-mobile.jpg');
     height: 389px;
     @include breakpoint(medium) {
-      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero-5-desktop.jpg');
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero/hero-5-desktop.jpg');
       height: 468px;
       text-align: center;
     }
   } 
   &.blog-detail-hero {
-    background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/blog/hero-4-mobile.jpg');
+    background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero/hero-4-mobile.jpg');
     height: 389px;
     @include breakpoint(medium) {
-      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/blog/hero-4-desktop.jpg');
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero/hero-4-desktop.jpg');
       height: 468px;
     }
   }

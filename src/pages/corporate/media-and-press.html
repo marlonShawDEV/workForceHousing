@@ -9,9 +9,72 @@ layout: corporate-1col
   </div>
 </div>
 <div class="section-padding">
-  <div class="row column">
-  
-  
+  <div class="row">
+    <div class="columns show-for-large large-3">
+      <img src="/images/media/building-1wide.jpg" alt="image of Freddie Mac Headquarters">
+    </div>
+    <div class="columns medium-6 large-5">
+    <h2>Company Profile</h2>
+    <p class="enlarge">Freddie Mac was chartered by Congress in 1970 with a public mission to stabilize the nation's residential mortgage markets and expand opportunities for homeownership and affordable rental housing.</p>
+    </div>
+    <div class="columns medium-6 large-4 xlarge-3 xlarge-offset1">
+      <div class="callout callout-hollow">
+        <h2>Media Contact</h2>
+        <p class="lead">For Press Inquiries Only<br>
+        Phone:<strong>(703)903-3933</strong><br>
+        Email: <strong><a href="mailto:corprel@freddiemac.com">corprel@freddiemac.com</a></strong></p>
+        <p><strong><a href="#">Non-press inquiries</a></strong></p>
+      </div>
+    </div>  
+  </div>
+  <div class="row">
+    <div class="columns small-12">
+      <div class="tab-wrapper" data-equalizer="tabs" data-equalize-on="small">
+        <ul class="tabs small-up-2 medium-up-4 horizontal" data-tabs id="mediaResourceTabs">
+          <li class="tabs-title is-active"><a href="#mediaPanel1" aria-selected="true" data-equalizer-watch="tabs">Corporate Information</a></li>
+          <li class="tabs-title"><a href="#mediaPanel2" data-equalizer-watch="tabs">Video</a></li>
+          <li class="tabs-title"><a href="#mediaPanel3" data-equalizer-watch="tabs">Images</a></li>
+          <li class="tabs-title"><a href="#mediaPanel4" data-equalizer-watch="tabs">Executive Photos &amp; Bios</a></li>
+        </ul>
+        <div class="tabs-content" data-tabs-content="mediaResourceTabs">
+          <div class="tabs-panel is-active" id="mediaPanel1">
+            <div class="row">
+              <div class="columns">
+                <h2 class="subtitle">Corporate Information</h2>
+              </div>
+            </div>
+            {{> corp-info-grid}}
+ 
+          </div>
+          <div class="tabs-panel" id="mediaPanel2">
+            <div class="row">
+              <div class="columns">
+                <h2 class="subtitle">Video</h2>
+              </div>
+            </div>            
+            {{> corp-video-cards}}           
+            
+          </div>
+          <div class="tabs-panel" id="mediaPanel3">
+            <div class="row">
+              <div class="columns">
+                <h2 class="subtitle">Images</h2>
+                {{>corp-image-cards}} 
+                
+              </div>
+            </div>
+          </div>
+          <div class="tabs-panel" id="mediaPanel4">
+            <div class="row">
+              <div class="columns">
+                <h2 class="subtitle">Executive Photos &amp; Bios</h2>  
+                {{> corp-exec-cards}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>    
+    </div>
   </div>
 </div>
 

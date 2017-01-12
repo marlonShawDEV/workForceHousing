@@ -77,6 +77,57 @@ strong, b {
     color: inherit;
   }
 }
+.grid-block-label {
+  font-size: rem-calc(13);
+  font-size: calc(13px +  3 * (100vw - 320px)/1180); 
+  color: $white;
+  line-height: 1.1;
+  margin: 0 0 1.5em;
+  font-weight: $global-weight-bold;
+  @include breakpoint(small only) {
+    font-weight: $global-weight-medium;
+  }
+  text-transform: uppercase;
+  @include breakpoint(large) {
+		font-size: rem-calc(16);
+	}
+}
+
+.grid-block-title {
+  font-size: rem-calc(16);
+  line-height: 1.18;
+  font-size: calc(16px +  16 * (100vw - 320px)/1180); 
+  font-weight: $global-weight-bold;
+  @include breakpoint(small only) {
+    font-weight: $global-weight-medium;
+  }
+  margin: 0 0 0.5rem;  
+  @include breakpoint(xxlarge) {
+		font-size: rem-calc(32);
+	}
+}
+.grid-block-title-medium {
+  font-size: rem-calc(16);
+  font-size: calc(16px +  8 * (100vw - 320px)/1180); 
+  font-weight: $global-weight-bold;
+  @include breakpoint(small only) {
+    font-weight: $global-weight-medium;
+  }
+  margin: 0 0 0.5rem;  
+  @include breakpoint(xxlarge) {
+		font-size: rem-calc(24);
+	}
+  svg { 
+    vertical-align: baseline;
+  }
+}
+.grid-block-title-small {  
+  font-size: rem-calc(14);
+  line-height: 1.2;
+  @include breakpoint(medium) {
+		font-size: rem-calc(16);
+	}
+}
 .callout-footer-title {
   font-size: rem-calc(28);
   font-size: calc(28px +  24 * (100vw - 320px)/1180); 
@@ -97,13 +148,12 @@ strong, b {
     font-size: rem-calc(52);
     margin-bottom: 2rem;
   }
-  .thin { font-weight: $global-weight-light; }
 }
 .subtitle {
   font-size: rem-calc(18);
   font-size: calc(18px +  14 * (100vw - 320px)/1180); 
   font-weight: $global-weight-bold;
-  margin: 0 0 0.375em;  
+  margin: 0.25em 0 0.375em;  
   @include breakpoint(xlarge) {
 		font-size: rem-calc(26);
     font-size: calc(26px +  6 * (100vw - 1180px)/220); 
@@ -136,7 +186,7 @@ strong, b {
   font-size: calc(18px +  4 * (100vw - 320px)/1180);
   color: inherit;
   font-weight: inherit;
-  margin-bottom: 1em;
+  margin-bottom: 0.25rem;
   @include breakpoint(xxlarge) {
 		font-size: rem-calc(22);
 	}
@@ -145,21 +195,9 @@ strong, b {
   font-size: rem-calc(16);
   font-size: calc(16px +  6 * (100vw - 320px)/1180); 
   font-weight: $global-weight-medium;
-  margin-bottom: 0;  
+  margin: 0.15em 0 0.45em; 
   @include breakpoint(xxlarge) {
 		font-size: rem-calc(22);
-	}
-	strong {
-		font-weight: $global-weight-bold;
-	}
-}
-.headline-perspectives {
-  font-size: rem-calc(17);
-  font-size: calc(17px +  7 * (100vw - 320px)/1180); 
-  font-weight: $global-weight-medium;
-  margin-top: 0.2em;  
-  @include breakpoint(xxlarge) {
-		font-size: rem-calc(24);
 	}
 	strong {
 		font-weight: $global-weight-bold;
@@ -179,13 +217,15 @@ strong, b {
 }
 .article-category {
   font-size: rem-calc(13);
-  font-weight: $global-weight-bold;
+  font-weight: $global-weight-medium;
   color: inherit;
   opacity: 0.75;
   text-transform: uppercase;
   margin: 0.25em 0;
+  line-height: 1.2;
 	@include breakpoint(medium) {
 		font-size: rem-calc(14);
+    font-weight: $global-weight-bold;
 	}
 }
 .article-date {
@@ -193,6 +233,8 @@ strong, b {
   color: inherit;
   opacity: 0.75;
   font-weight: inherit;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
   text-transform: uppercase;
 	@include breakpoint(medium) {
 		font-size: rem-calc(14);
@@ -220,20 +262,10 @@ strong, b {
 .article-blurb-blog {
   @include show-for(medium);
   font-size: rem-calc(13);
-  font-weight: inherit;
+  font-weight: $global-weight-light;
 	@include breakpoint(large) {
 		font-size: rem-calc(14);
 	}
-}
-.article-blurb-perspectives {
-  @include show-for(medium);
-  font-size: rem-calc(14);
-  font-size: calc(14px +  2 * (100vw - 320px)/1180);
-  font-weight: inherit;
-	@include breakpoint(xxlarge) {
-		font-size: rem-calc(16);
-	}
-
 }
 .article-blurb-lg {
   @include show-for(medium);
@@ -248,7 +280,6 @@ strong, b {
 .article-date-lg {
   font-size: rem-calc(14);
   font-size: calc(14px +  4 * (100vw - 320px)/1180);
-  padding-bottom: 0.25em;
   font-weight: $global-weight-medium;
   color: inherit;
   text-transform: uppercase;
@@ -328,6 +359,74 @@ strong, b {
     font-weight: $global-weight-black;
   }
 }
+.stat {
+  font-size: rem-calc(20);
+  font-size: calc(20px +  28 * (100vw - 320px)/1180); 
+  @include breakpoint (xxlarge) {
+    font-size: rem-calc(48);
+  }
+}
+.page-subtitle {
+  margin: 0.5em 0 0;
+  font-weight: $global-weight-medium;
+  color: $fm-gray;
+  font-size: rem-calc(17);    
+  font-size: calc(17px +  5 * (100vw - 320px) / 1180); 
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(22);
+  }
+}
+
+.card-title-large {
+  font-size: rem-calc(18);
+  font-size: calc(18px +  6 * (100vw - 320px)/1180); 
+  font-weight: $global-weight-medium;
+  margin: 0.2em 0 0.45em;  
+  @include breakpoint(xxlarge) {
+		font-size: rem-calc(24);
+	}
+	strong {
+		font-weight: $global-weight-bold;
+	}
+}
+.card-title {
+  font-size: rem-calc(18);
+  font-size: calc(18px +  4 * (100vw - 320px)/1180);
+  color: inherit;
+  font-weight: $global-weight-normal;
+  margin-bottom: 0.45rem;
+  line-height: 1.2;
+  @include breakpoint(xxlarge) {
+		font-size: rem-calc(22);
+	}
+  strong {
+    font-weight: $global-weight-bold;
+  }
+}
+.card-subtitle { 
+  font-size: rem-calc(14px);
+  color: $fm-gray;
+  margin: 0.5em 0;
+}
+.card-blurb { 
+  @include show-for(medium);
+  font-size: rem-calc(14px);
+  margin: 0.5em 0;
+}
+.card-blurb-large {
+  @include show-for(medium);
+  font-size: rem-calc(14);
+  font-size: calc(14px +  2 * (100vw - 320px)/1180);
+  font-weight: inherit;
+	@include breakpoint(xxlarge) {
+		font-size: rem-calc(16);
+	}
+}
+.video-length {
+  font-size: rem-calc(21);    
+  line-height: 1;
+  font-weight: $global-weight-normal;
+}
 // replacing .feature-txt with .lead, since it's a built in style for Foundation, replaced .lead_bolder with just <b> or <strong> inside .lead.
 .lead {
 	font-weight: $global-weight-medium;
@@ -340,6 +439,7 @@ strong, b {
 }
 .reduce {
   font-size: 0.875em;
+  line-height: 1.2;
 }
 .enlarge {
   font-size: 1.125em;
@@ -347,4 +447,12 @@ strong, b {
 .initial-color {
  color: initial;
 }
-
+.weight-medium {
+  font-weight: $global-weight-medium;
+}
+.weight-thin { 
+  font-weight: $global-weight-light; 
+}
+.weight-bold {
+  font-weight: $global-weight-bold;
+}

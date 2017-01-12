@@ -8,9 +8,15 @@ svg {
 }
 // reseting odd margins that are part of Foundation default
 figure { 
- margin: $global-margin;
+ margin: $global-margin 0;
+ img { 
+   width: 100%;
+   max-width: auto;
+ }
 }
-
+sup, sub {
+  font-size: 65%;
+}
 blockquote {
   font-size: rem-calc(17); 
   font-weight: $global-weight-normal;

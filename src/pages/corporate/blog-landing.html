@@ -4,7 +4,7 @@ layout: corporate-1col
 ---
 
 <div class="blog-landing-hero hero-blended">
-  <div class="row column vertical-center-full">
+  <div class="row vertical-center-full">
     <div class="hero-blended-content">
       <h1 class="hero-title">Freddie Mac Blog</h1>
       <p>Helpful information and tips on <strong>owning</strong> or <strong>renting</strong> a home and the housing market.</p>
@@ -16,7 +16,11 @@ layout: corporate-1col
   <div class="row column">
     <h2>From The Blog</h2>
     {{> blog-features}}
-    {{> blog-grid}}
+    
+    <div class="row small-up-2 medium-up-3 large-up-4" data-equalizer data-equalize-by-row="true">
+    {{> blog-cards}}
+    </div>
+    
   </div>
 </div>
 <div class="section-padding">    

@@ -1,16 +1,29 @@
 /* MW Scripts for headlines */
-
 function getMediaRoomData() {
-  var url = "http://freddiemac.mwnewsroom.com/scripts/json/js?max=10";
-  $.getJSON(url, function(data) {
-      useMediaRoomData(data);
-  })  
+  var mwReq = $.getJSON("http://freddiemac.mwnewsroom.com/scripts/json/js?max=10", function(data) {
+      console.log( "success" );
+      useMediaRoomData(data);      
+  }).done(function() {
+    console.log( "done" );
+  }).fail(function( jqxhr, textStatus, error ) {
+    var err = textStatus + ", " + error;
+    console.log( "Request Failed: " + err );
+  }).always(function() {
+    console.log( "complete" );
+  });  
 }
+  
 function getHomePageData() {
-  var url = "http://freddiemac.mwnewsroom.com/scripts/json/js?max=1";
-  $.getJSON(url, function(data) {
+  var jqxhr = $.getJSON("http://freddiemac.mwnewsroom.com/scripts/json/js?max=1", function(data) {
+      console.log( "success" );
       useHomePageData(data);
-  })  
+  }).done(function() {
+    console.log( "done" );
+  }).fail(function() {
+    console.log( "error" );
+  }).always(function() {
+    console.log( "complete" );
+  }); 
 }
 function useMediaRoomData(data) {
   var $html = '', $feature = '', $curr = '';
@@ -44,4 +57,3 @@ if ($('.recent-headlines-container').length)  {
 if ($('.recent-headline-home').length)  {  
   getHomePageData();
 }
- 

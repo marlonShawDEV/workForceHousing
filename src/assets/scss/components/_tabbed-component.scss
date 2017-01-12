@@ -106,7 +106,6 @@ $tab-item-active-color: $primary-color !default;
     background: $tab-background;
     color: $tab-item-color;
     text-align: center; 
-
     &:hover,
     &:focus {
       background: scale-color($tab-background, $lightness: -5%);
@@ -196,8 +195,18 @@ $tab-item-active-color: $primary-color !default;
   @include tabs-title;
   // Block tabs
   @for $i from 1 through $tab-expand-max {
-    .small-up-#{$i} &, .medium-up-#{$i} & {
+    .small-up-#{$i} & {
       @include block-tabs($i);
+    } 
+    .medium-up-#{$i} & {
+      @include breakpoint(medium) {
+        @include block-tabs($i);
+      }
+    }  
+    .large-up-#{$i} & {
+      @include breakpoint(large) {
+        @include block-tabs($i);
+      }
     }      
   }
 }

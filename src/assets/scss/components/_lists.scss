@@ -34,11 +34,21 @@ ol > li {
 }
 
 .list-divided {
-  @include list-divided(lighten($fm-gray, 10%));   
+  @include list-divided(darken($light-gray, 5%)); 
   a:not([class]) {
     text-decoration: none !important;
   }
 }
+.clipping-block {   // divides blog archive entries  
+  li {
+    border-bottom: 1px solid darken($light-gray, 5%); 
+    padding: 0 0 $global-padding 0;
+  }
+  > li + li {
+    margin-top: $global-padding;
+    padding: $global-padding 0;
+  }
+} 
 dd { 
   margin: 0.25rem 0;
   display: block;

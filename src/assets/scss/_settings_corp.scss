@@ -131,7 +131,7 @@ $grid-column-gutter: (
 );
 $gutter: 20px;
 $grid-column-align-edge: true;
-$block-grid-max: 8;
+$block-grid-max: 4;
 
 // 4. Base Typography
 // ------------------
@@ -309,10 +309,10 @@ $buttongroup-radius-on-each: false;
 // -----------
 
 $callout-background: $light-gray;
-$callout-background-fade: 80%;
-$callout-border: 2px solid rgba($black, 0.2);
-$callout-margin: 1rem 0;
-$callout-padding: 1rem;
+$callout-background-fade: 0%;
+$callout-border: 1px solid darken($light-gray, 5%);
+$callout-margin: 0 0 1rem;
+$callout-padding: $gutter;
 $callout-font-color: currentColor;
 $callout-font-color-alt: currentColor;
 $callout-radius: 0;
@@ -324,11 +324,11 @@ $callout-link-tint: false;
 $card-background: $white;
 $card-font-color: $body-font-color;
 $card-divider-background: $light-gray;
-$card-border: 1px solid $light-gray;
+$card-border: 0px solid $fm-green;
 $card-shadow: none;
-$card-border-radius: $global-radius;
-$card-padding: $global-padding;
-$card-margin: $global-margin;
+$card-border-radius: 0;
+$card-padding: $gutter;  // $card-padding can contain 4 values, one per side.
+$card-margin: $gutter;  // $card-margin can contain 1 value used for bottom-margin only
 
 // 15. Close Button
 // ----------------
@@ -607,12 +607,12 @@ $tab-background-active: $light-gray;
 $tab-active-color: $primary-color;
 $tab-item-font-size: rem-calc(16);
 $tab-item-background-hover: $white;
-$tab-item-padding: 1.25rem 1.5rem;
+$tab-item-padding: $gutter $gutter * 1.2;
 $tab-expand-max: 6;
 $tab-content-background: $white;
 $tab-content-border: $light-gray;
 $tab-content-color: foreground($tab-background, $primary-color);
-$tab-content-padding: 1rem 0;
+$tab-content-padding: $gutter 0;
 // these are my custom variables //
 $tab-item-color: scale-color($medium-gray, $lightness: 26%);
 $tab-item-hover-color: $medium-gray;

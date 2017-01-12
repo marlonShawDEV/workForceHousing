@@ -3,9 +3,15 @@
   padding-top: 2rem;
   padding-bottom: 2rem;
 	@include breakpoint(xlarge) {
-    padding-top: rem-cal(55px);
-    padding-bottom: rem-calc(45px);
+    padding-top: rem-calc(55);
+    padding-bottom: rem-calc(45);    
 	}
+}
+.gutter-top {
+  padding-top: $gutter;
+}
+.gutter-bottom {
+  padding-bottom: $gutter;
 }
 .primary-nav {
   .row {
@@ -105,10 +111,8 @@
 .horizontal-center {
   @include horizontal-center;
 }
-.two-column-layout {
-  .two-column-row {
-    @include clearfix; 
-  } 
+.two-column-row {
+  @include clearfix; 
   main {
     &.column {
       padding-top: $gutter * 2.5;
@@ -183,6 +187,7 @@ main {
   h1 {
     @include breakpoint(large) {      
       @include grid-column(7 of 12);
+      padding-left: 0;
     } 
   }
 }
@@ -192,3 +197,44 @@ main {
   }
 }
 
+.grid-block {
+  > .columns {
+   padding-bottom: $gutter;
+   > .row {
+    height: 100%;
+     .columns {
+      height: 100%;     
+     }
+   }
+  }
+  .callout {
+    margin: 0;
+    width: 100%; 
+    min-height:150px;
+    @include breakpoint(medium) {
+      min-height:300px;
+    } 
+    @include breakpoint(xlarge) {
+      padding: $global-padding * 2;
+      min-height:325px;
+    } 
+  }
+  p:not([class]) { 
+    margin-bottom: 0.5rem;
+  }
+}
+
+.fake-side-bar {
+  @include breakpoint(medium) {
+    float: right;
+    width: 40%;
+    margin-left: $gutter;
+  }  
+}
+.fake-side-bar-fixed {
+  @include breakpoint(medium) {
+    float: right;
+    width: rem-calc(300);
+    margin-left: $gutter;
+  }  
+}

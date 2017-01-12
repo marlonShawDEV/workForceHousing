@@ -35,9 +35,14 @@ $callout-palette: (
   .close-button {
     color: currentColor;
   }
+  &.callout-hollow-thin,
   &.callout-hollow {
     background-color: $white;
-    border: 0.1875rem solid $callout-background;
+    border: $callout-border;
+    color: $fm-gray;
+  }
+  &.callout-hollow {
+    border-width: 3px;
   }
   &.callout-concrete {
     background: $light-gray;
@@ -50,7 +55,16 @@ $callout-palette: (
       a {
         @include anchor-on-dark;
       }
+      a:hover > &,
+      a:focus > & {
+        background-color: darken(desaturate($color, 3%), 3%);
+      }
     }
+  }
+  &.callout-overlay {    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
   }
   &.callout-fullwidth {
     border-radius: 0;    

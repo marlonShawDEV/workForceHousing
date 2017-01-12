@@ -1,0 +1,112 @@
+/// card
+.card {
+  border-bottom-width: 3px;
+  text-align: left;
+	.overlay {
+		width: 100%;
+	}
+  .avatar {
+    color: $fm-gray;
+    position: absolute;
+    left: $gutter;
+    right: $gutter;
+    bottom: $gutter;
+    margin: 0;
+  }   
+}
+.card-section {  
+  &:not(.text-center) {
+    padding-left: 0;
+    @include breakpoint(medium) {
+      padding-right: $gutter * 2;
+    }    
+  }
+}
+.card-divider {
+    position: relative;
+    padding: $gutter;
+}
+.perspectives {
+  .card { 
+    margin-top: $gutter * 2.5;
+  }
+  .card-divider {
+    padding-bottom:  $gutter * 5.3;
+  }
+} 
+
+.callout-concrete {
+  .card-divider {
+    background: $white;
+  }
+}
+@include breakpoint(medium) {
+  &.medium-up-4 {
+    @for $i from 1 through 4 {
+      > div:nth-child(4n+#{$i}) > .card {
+        border-bottom: 3px solid color-shift($fm-green, $pear, 4, $i);
+      }
+    }    
+  }
+  &.medium-up-3 {
+    @for $i from 1 through 3 {
+      > div:nth-child(3n+#{$i}) > .card {
+        border-bottom: 3px solid color-shift($fm-green, $pear, 3, $i);
+      }
+    }  
+  }
+  &.medium-up-2 {
+    @for $i from 1 through 2 {
+      > div:nth-child(2n+#{$i}) > .card {
+        border-bottom: 3px solid color-shift($fm-green, $pear, 3, $i);
+      }
+    }  
+  }
+}
+@include breakpoint(large) {
+  &.large-up-4 {
+    @for $i from 1 through 4 {
+      > div:nth-child(4n+#{$i}) > .card {
+        border-bottom: 3px solid color-shift($fm-green, $pear, 4, $i);
+      }
+    }    
+  }
+  &.large-up-3 {
+    @for $i from 1 through 3 {
+      > div:nth-child(3n+#{$i}) > .card {
+        border-bottom: 3px solid color-shift($fm-green, $pear, 3, $i);
+      }
+    }  
+  }
+  &.large-up-2 {
+    @for $i from 1 through 2 {
+      > div:nth-child(2n+#{$i}) > .card {
+        border-bottom: 3px solid color-shift($fm-green, $pear, 3, $i);
+      }
+    }  
+  }
+}
+
+@include breakpoint(xlarge) {
+  &.xlarge-up-4 {
+    @for $i from 1 through 4 {
+      > div:nth-child(4n+#{$i}) > .card {
+        border-bottom: 3px solid color-shift($fm-green, $pear, 4, $i);
+      }
+    }    
+  }
+  &.xlarge-up-3 {
+    @for $i from 1 through 3 {
+      > div:nth-child(3n+#{$i}) > .card {
+        border-bottom: 3px solid color-shift($fm-green, $pear, 3, $i);
+      }
+    }  
+  }
+  &.xlarge-up-2 {
+    @for $i from 1 through 2 {
+      > div:nth-child(2n+#{$i}) > .card {
+        border-bottom: 3px solid color-shift($fm-green, $pear, 3, $i);
+      }
+    }  
+  }
+}

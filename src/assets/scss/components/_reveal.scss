@@ -57,6 +57,9 @@ $overlay-palette: (
     @include reveal-modal-width(90%, 1280px);
     text-align: center;  
     overflow: visible;
+    @include breakpoint (xlarge) {
+      max-width: rem-calc(1280);
+    }
   }  
   &.overlay-video {
     padding: 2rem 2rem 0;

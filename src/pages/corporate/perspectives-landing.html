@@ -3,8 +3,8 @@ title: Perspectives Landing
 layout: corporate-1col
 ---
 
-<div class="hero-blended perspectives-landing-hero">
-  <div class="row column vertical-center-full">
+<div class="perspectives-landing-hero hero-blended">
+  <div class="row vertical-center-full">
     <div class="hero-blended-content">
       <h1 class="hero-title">Perspectives</h1>
       <p>Insights from our company’s leaders into key trends in the housing industry.</p>
@@ -15,8 +15,12 @@ layout: corporate-1col
 <div class="section-padding">  
   <div class="row column">
     <h2>Executive Perspectives</h2>
-  {{> perspectives-features}}
-  {{> perspectives-grid}}      
+    {{> perspectives-features}}
+    <div class="row medium-up-2 xlarge-up-4 perspectives" data-equalizer data-equalize-by-row="true">
+    {{> perspectives-cards}} 
+    {{> perspectives-cards}}   
+    {{> perspectives-cards}}       
+    </div>
   </div>
 </div>
 <div class="section-padding">    

@@ -75,12 +75,6 @@ $finance-bg2: lighten(saturate(adjust-hue($celery, -3.9799), 4.2642), 0.7843);
       }
     }    
   }
-  .stat {
-    font-weight: $global-weight-light;
-    strong {
-      font-weight: $global-weight-black;
-    }
-  }
   .finance-grid-block1 {
     background: color-shift($finance-bg1, $pear, 6, 2);
     padding: $global-padding $gutter * 1.5;

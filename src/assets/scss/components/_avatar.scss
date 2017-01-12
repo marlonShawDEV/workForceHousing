@@ -1,16 +1,21 @@
+$avatar-width: 80px;
+
 .avatar {
-	display: table;
 	margin: 2rem 0 0;
-	>div {
+	> div {
 		display: table-cell;
 		vertical-align: middle;
+    &:first-child {
+      width: rem-calc($avatar-width + $gutter);
+      padding-right: $gutter;
+    }
 	}
 	img {
-		border-radius: 50%;
-		margin: 0 0.75rem 0 0;
-    max-width: 5rem;
+		border-radius: 50%; 
+    width: rem-calc($avatar-width);   
 	}
 	figcaption {
-		line-height: 1.2;
+    max-height: 6em;
+    margin: 0;
 	}
 }

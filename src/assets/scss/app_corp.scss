@@ -20,6 +20,7 @@
 @include foundation-breadcrumbs;
 @include foundation-button-group;
 // @include foundation-callout;
+@include foundation-card;
 @include foundation-close-button;
 @include foundation-menu;
 @include foundation-menu-icon;
@@ -67,12 +68,13 @@
 @import 'components/homepage-finance';
 @import 'components/homepage-testimonials';
 @import 'components/call-to-action';
+@import 'components/call-to-action';
 @import 'components/accordion-pointers';
 @import 'components/forms';
 @import 'components/lists';
 @import 'components/avatar';
 @import 'components/page-title';
-@import 'components/person-block';
+@import 'components/card';
 @import 'components/tabbed-component';
 @import 'components/data-table';
 @import 'components/nav-ribbon';
