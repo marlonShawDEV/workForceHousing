@@ -1,138 +1,95 @@
-// trying to solve for the fact that design want the full gutter to the left and right, not half a gutter, like Foundation defaults to.
-.section-padding {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-	@include breakpoint(xlarge) {
-    padding-top: rem-calc(55);
-    padding-bottom: rem-calc(45);    
-	}
-}
-.gutter-top {
-  padding-top: $gutter;
-}
-.gutter-bottom {
-  padding-bottom: $gutter;
-}
-.primary-nav {
-  .row {
-    &.column {
-      &.primarynav-buffer {
-        padding-right: 0;
-        padding-left: 0;
-        @include breakpoint(xlarge) {
-          padding-right: rem-calc(30);  
-          padding-left: rem-calc(50);
-        }
-        @include breakpoint(xxlarge) {
-          padding-right: rem-calc(50); 
-          padding-left: rem-calc(70);
-        }      
-      }
-    }
-  }
-}
-.two-column-layout{
-  @include breakpoint(medium down) {
-    > .two-column-row {
-      main.column {    
-        padding-left: rem-calc(30);
-        padding-right: rem-calc(30);
-      }    
-    }
-  } 
-  @include breakpoint(large) {
-    > .two-column-row {
-        padding-left: $gutter;
-        padding-right: $gutter
-    }
-  } 
-  @include breakpoint(xlarge) {
-    > .two-column-row {
-      padding-left: rem-calc(40);
-      padding-right: rem-calc(40);
-    }
-  }  
-  @include breakpoint(xxlarge) {
-    > .two-column-row {
-      padding-left: rem-calc(60);
-      padding-right: rem-calc(60);
-    }
-  }  
-}
 .ribbon,
 .primary-nav,
 .secondary-nav,
 .page-title,
-.section-padding,
+.content-band,
 .share-wrapper,
-.callout-fullwidth,
+.footer-promo,
+.pre-footer-promo,
 .footer,
-.hero-blended {  
-  > .row {
+.hero-blended,
+.hero {  
+  > .row  {
     padding-left: rem-calc(20);
     padding-right: rem-calc(20);
-    &.column {
+    @include breakpoint(xlarge) {
+      padding-left: rem-calc(40);
+      padding-right: rem-calc(40);    
+    }
+    @include breakpoint(xxlarge) {
+      padding-left: rem-calc(60);
+      padding-right: rem-calc(60);    
+    }
+    &.column,
+    &.collapse {
       padding-left: rem-calc(30);
       padding-right: rem-calc(30); 
-    }
-  } 
-  @include breakpoint(xlarge) {
-    > .row {
-      padding-left: rem-calc(40);
-      padding-right: rem-calc(40);
-      &.column {
+      @include breakpoint(xlarge) {
         padding-left: rem-calc(50);
-        padding-right: rem-calc(50);
+        padding-right: rem-calc(50);      
       }
-    }
-  } 
-  @include breakpoint(xxlarge) {
-    > .row {
-      padding-left: rem-calc(60);
-      padding-right: rem-calc(60);
-      &.column {
+      @include breakpoint(xxlarge) {
         padding-left: rem-calc(70);
         padding-right: rem-calc(70); 
       }
+    }  
+  }   
+}
+.content-band {
+  margin-top: 2rem;
+  margin-bottom: 4rem; 
+	@include breakpoint(xlarge) {
+     margin-top: rem-calc(55);
+    margin-bottom: rem-calc(100); 
+	}
+}
+.two-column-layout{
+  > .two-column-row {
+    margin-bottom: 4rem; 
+    @include breakpoint(xlarge) {
+      margin-bottom: rem-calc(100); 
     }
-  }  
-}
-.position-relative {
-  position: relative;
-}
-/// Vertically centers the element inside of its first non-static parent
-.vertical-center-full {
-  @include vertical-center;
-  right: 0;
-  left: 0;
-  position: relative;
-}
-/// Horizontally centers the element inside of its first non-static parent
-.horizontal-center {
-  @include horizontal-center;
+    @include breakpoint(large) {
+      padding-left: rem-calc(20);
+      padding-right: rem-calc(20);
+    }
+    @include breakpoint(xlarge) {
+      padding-left: rem-calc(40);
+      padding-right: rem-calc(40);
+    }
+    @include breakpoint(xxlarge) {
+      padding-left: rem-calc(60);
+      padding-right: rem-calc(60);
+    }  
+  }
 }
 .two-column-row {
   @include clearfix; 
-  main {
-    &.column {
-      padding-top: $gutter * 2.5;
-      padding-bottom: $gutter * 2;    
-      @include breakpoint(large) {
-        @include grid-column(7 of 12);
+  > main {
+    position: relative;
+    z-index: 3;
+    padding-top: $gutter * 2.5; 
+    @include breakpoint(medium down){
+      padding-left: rem-calc(30);
+      padding-right: rem-calc(30);    
+    }
+    @include breakpoint(large) {
+      @include grid-column(7 of 12);
+    }
+    > .jut {
+      margin-bottom: 1.5rem;
+      @include breakpoint(large) { 
+        width: 106%; 
       }
-      > .jut {
-        @include breakpoint(large) { 
-          width: 106%; 
-        }
-      } 
-      > .jut {
-        @include breakpoint(xlarge) { 
-          width: 112%; 
-        }
-      } 
-    }  
+      @include breakpoint(xlarge) { 
+        width: 112%; 
+      }        
+    } 
   }
-  aside.column {
+  > aside {
+    position: relative;
+    z-index: 4;
+    padding-top: $gutter * 2.5;
     @include breakpoint (medium down) {
       @include grid-column-collapse;
       clear: both;
@@ -144,8 +101,6 @@
     @include breakpoint(xlarge) {
         @include grid-column(4 of 12);
     }
-    position: relative;
-    z-index: 2;
     section {    
       margin: 0;
       padding: $gutter * 1.5;      
@@ -154,87 +109,16 @@
       }  
       @include breakpoint(xlarge) {
         padding: $global-padding * 1.9 $global-padding * 2;
-      }      
-      > .row {
-        margin: 0;
       }
     }
   } 
 }
-main {
-	figure {
-		margin: $global-margin * 2 0;
-		img {
-			margin: 0 0 1rem;
-		}
-		figcaption {
-			font-size: rem-calc(14);
-			@include breakpoint(medium) {
-				font-size: rem-calc(12);
-			}
-		}
-	}  
-}
 
-.grid-2col {
-  aside {
-    @include breakpoint(large) {
-      padding-top: $gutter * 2.5;
-    }
-  }
-}
-.grid-2col-tertiary > .page-title {
-  h1 {
-    @include breakpoint(large) {      
-      @include grid-column(7 of 12);
-      padding-left: 0;
-    } 
-  }
-}
-.grid-2col-article > .two-column-layout aside.column {
+.grid-2col-blog .two-column-row > aside {
+  padding-top: 0;
   @media print and #{breakpoint(large)} {
-    padding-top: 300px; // counteract the negative top margin when printing
+    padding-top: 300px; // counteract the negative top margin inserted by css when printing
   }
 }
 
-.grid-block {
-  > .columns {
-   padding-bottom: $gutter;
-   > .row {
-    height: 100%;
-     .columns {
-      height: 100%;     
-     }
-   }
-  }
-  .callout {
-    margin: 0;
-    width: 100%; 
-    min-height:150px;
-    @include breakpoint(medium) {
-      min-height:300px;
-    } 
-    @include breakpoint(xlarge) {
-      padding: $global-padding * 2;
-      min-height:325px;
-    } 
-  }
-  p:not([class]) { 
-    margin-bottom: 0.5rem;
-  }
-}
 
-.fake-side-bar {
-  @include breakpoint(medium) {
-    float: right;
-    width: 40%;
-    margin-left: $gutter;
-  }  
-}
-.fake-side-bar-fixed {
-  @include breakpoint(medium) {
-    float: right;
-    width: rem-calc(300);
-    margin-left: $gutter;
-  }  
-}

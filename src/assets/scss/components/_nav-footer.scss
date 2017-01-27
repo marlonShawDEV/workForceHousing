@@ -27,7 +27,7 @@
   }
   li {
     margin: 0.5rem 0rem 0.5rem 0;
-    @include breakpoint(medium) {
+    @include breakpoint(large) {
       display: inline-block;
       margin-right: 2rem;      
       &:last-child {    
@@ -48,5 +48,5 @@
 .footer-bottom-edge {
   height: 1rem;  
   background: $celery;
-  @include mosaic-fill($mosaic-start, $mosaic-end, to right); 
+  @include mosaic-fill(); 
 }

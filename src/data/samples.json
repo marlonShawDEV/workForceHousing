@@ -40,7 +40,7 @@
        "url":"/corporate/perspectives-landing.html"
    },
    {  
-       "name":"Perspectives Detail",
+       "name":"Perspectives Article",
        "url":"/corporate/perspectives-detail.html"
    },
    {  
@@ -48,8 +48,16 @@
        "url":"/corporate/media-landing.html"
    },
    {  
-       "name":"Media Detail",
+       "name":"Media Archive",
+       "url":"/corporate/media-archive.html"
+   },
+   {  
+       "name":"Media Resources",
        "url":"/corporate/media-and-press.html"
+   },
+   {  
+       "name":"Media Article",
+       "url":"/corporate/media-detail.html"
    },
    {  
        "name":"About Landing",
@@ -58,6 +66,10 @@
    {  
        "name":"Research Landing",
        "url":"/corporate/research-landing.html"
+   },
+   {  
+       "name":"Research Detail",
+       "url":"/corporate/research-detail.html"
    },
    {  
        "name":"Governance (About subpage)",

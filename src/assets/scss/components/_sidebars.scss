@@ -1,33 +1,24 @@
-$sidebar-palette: (
-  green: $fm-green,
-  orange: $fm-orange,
-  yellow: $fm-yellow,
-  purple: $fm-purple,
-  blue: $fm-blue,
-  teal: $fm-teal,
-  gray: $medium-gray,
-  red: $fm-red,
-  primary: $primary-color
-);
-
 .sidebar {
   position: relative;  
+  ul, 
+  ol {
+    margin-bottom: 0;
+  }
+  > .row > .column > *:first-child {
+    margin-top: 0;
+  }
 }
 .sidebar-txt {
   max-width: 83%;
 	@include breakpoint(large only) {
     max-width: rem-calc(277);
   }  
-}
-.sidebar:not(.sidebar-concrete) {
-	color: $white;
-  a {
-    color: $white;
-    @include anchor-on-dark(none);
+  :first-child {
+    margin-top: 0;
   }
 }
-.sidebar-list {
-  margin-bottom: 0;
+.sidebar-media {
+  @include list-divided(darken($light-gray, 5%)); 
   .media-object-section {
     img {
       width: rem-calc(95);
@@ -55,22 +46,7 @@ $sidebar-palette: (
     }
   }
 }
-.sidebar-gray {
-  background-color: $fm-gray;
-  @include list-divided(lighten($fm-gray, 10%));
-}
 
-@each $name, $color in $sidebar-palette {    
-  &.sidebar-#{$name} {      
-    background-color: $color;
-    @include list-divided(lighten($color, 10%));
-  }
-}
-.sidebar-concrete {
-  background-color: $light-gray;
-  @include list-divided(darken($light-gray, 5%));
-  a { color: inherit;}
-}
 
 .sidebar-feature {    
   @include breakpoint(large) {
@@ -78,21 +54,17 @@ $sidebar-palette: (
   }
   z-index: -1;
   .feature-background {   // background will be different for each one, so moving to inline
-    display: none;
-    @include breakpoint(large) {
-      display: block;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: bottom right;    
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 100%;
-      height: auto;
-      opacity: 0.2;
-      z-index: -1;
-    }
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom right;    
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.2;
+    z-index: -1;
   }
 }
 

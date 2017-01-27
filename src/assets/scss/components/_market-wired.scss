@@ -1,0 +1,34 @@
+
+// for use by MarketWired
+.mw_release {
+  margin-bottom: 2rem;
+}
+
+ 
+// MarketWired's navigation
+.paginate_button,
+.paginate_active {
+  padding: 0.15rem 0.5rem;
+  font-weight: $global-weight-medium;
+	border-radius: $button-radius;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  min-width: 1.9rem;
+  display: inline-block; 
+  margin: 0.5rem 0.1rem;  
+}
+
+.paginate_button {
+	border: 2px solid $fm-gray;
+  background: transparent;
+  color: $fm-gray;
+  &:hover,
+  &:focus {
+    background: rgba($fm-gray, 0.1);
+  }
+}
+.paginate_active {
+	border: 2px solid $primary-color;
+  background: $primary-color;
+  color: $white;
+}

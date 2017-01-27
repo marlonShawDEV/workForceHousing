@@ -1,19 +1,31 @@
 body {
-  min-width: 320px;
+  min-width: rem-calc(320);
 }
 // prevent padding on svg from distorting the aspect ratio, and defaulting to middle alignment for inline svgs
 svg {
   box-sizing: content-box;
   vertical-align: middle;
 }
-// reseting odd margins that are part of Foundation default
 figure { 
- margin: $global-margin 0;
- img { 
+  margin: 0; // reseting odd margins that are part of Foundation default
+  @include breakpoint (small only) {
+   margin-bottom: $global-margin;
+  }
+  img { 
    width: 100%;
-   max-width: auto;
- }
+  } 
+  figcaption {
+    font-size: rem-calc(12);
+    @include breakpoint(medium) {
+      font-size: rem-calc(14);
+    }
+  }
+  img + figcaption,
+  figcaption + img {
+    margin-top: $global-margin;
+  }
 }
+
 sup, sub {
   font-size: 65%;
 }

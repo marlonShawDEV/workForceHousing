@@ -1,0 +1,8 @@
+
+a img,
+img {
+  border: 1px solid darken($light-gray, 5%);
+  &.no-border {
+    border-width: 0;
+  }
+}

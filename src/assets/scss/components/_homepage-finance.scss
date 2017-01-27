@@ -56,7 +56,7 @@ $finance-bg2: lighten(saturate(adjust-hue($celery, -3.9799), 4.2642), 0.7843);
 	}
 }
 .finance-grid {  
-  .columns {
+  .column {
     padding-top: $global-padding;
     @include breakpoint(medium) {
       padding: $global-padding;

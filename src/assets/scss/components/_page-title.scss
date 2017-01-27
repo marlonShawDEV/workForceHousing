@@ -1,11 +1,20 @@
 
 .page-title {
 	background: $offwhite;
-  font-weight: $global-weight-bold;
-  color: $fm-green;
+  color: $fm-gray;
   line-height: 1.2;
 	padding: 44px 0 44px;
-  h1 {
+  position: relative;
+  p {
     margin: 0;
+  }
+  h1 { 
+    color: $fm-green;
+    margin: 0.6rem 0;
+  }  
+  @include breakpoint(large) { 
+    p, h1 {
+      max-width: 59%;
+    }
   }
 }

@@ -27,7 +27,7 @@ $hero-blend-color: $primary-color;
   .hero-edge {
     height: rem-calc(14);  
     background: $celery;
-    @include mosaic-fill($mosaic-start, $celery, to right); 
+    @include mosaic-fill(); 
   }
   .hero-blended {
     background-color: $hero-blend-color;
@@ -40,10 +40,15 @@ $hero-blend-color: $primary-color;
       margin-top: 0.5em;
       margin-bottom: 0.7em;
     }
+    > .row {
+      @include vertical-center;
+      right: 0;
+      left: 0;
+      position: relative;
+    }
   }
   // default center aligned hero
   .hero-blended-content {
-    @include grid-column;
     @include breakpoint(large) {
       @include grid-column(10);
       @include grid-column-position(center);
@@ -58,7 +63,7 @@ $hero-blend-color: $primary-color;
         font-size: rem-calc(28);
       }
     }
-    .grid-2col-article & {    
+    .grid-2col-blog & {    
       text-align: left;
       margin-left: 0;
       @include breakpoint(large) {
@@ -96,11 +101,11 @@ $hero-blend-color: $primary-color;
       text-align: center;
     }
   } 
-  &.research-landing-hero { //pending graphic from Jon
-    background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero/hero-7-mobile.jpg');
+  &.research-landing-hero { 
+    background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero/hero-3-mobile.jpg');
     height: 219px;
     @include breakpoint(medium) {
-      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero/hero-7-desktop.jpg');
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero/hero-3-desktop.jpg');
       height: 345px;
       text-align: center;
     }

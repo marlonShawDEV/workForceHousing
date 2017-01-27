@@ -39,14 +39,13 @@ ol > li {
     text-decoration: none !important;
   }
 }
-.clipping-block {   // divides blog archive entries  
+.clipping-block {   // divides blog and news archive entries  
   li {
     border-bottom: 1px solid darken($light-gray, 5%); 
-    padding: 0 0 $global-padding 0;
+    padding-bottom: $gutter;
   }
   > li + li {
-    margin-top: $global-padding;
-    padding: $global-padding 0;
+    padding-top: $gutter * 1.5;
   }
 } 
 dd { 

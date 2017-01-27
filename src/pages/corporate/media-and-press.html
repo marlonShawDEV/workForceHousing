@@ -8,72 +8,113 @@ layout: corporate-1col
     <h1>Media Resources</h1>
   </div>
 </div>
-<div class="section-padding">
-  <div class="row">
-    <div class="columns show-for-large large-3">
-      <img src="/images/media/building-1wide.jpg" alt="image of Freddie Mac Headquarters">
-    </div>
-    <div class="columns medium-6 large-5">
-    <h2>Company Profile</h2>
-    <p class="enlarge">Freddie Mac was chartered by Congress in 1970 with a public mission to stabilize the nation's residential mortgage markets and expand opportunities for homeownership and affordable rental housing.</p>
-    </div>
-    <div class="columns medium-6 large-4 xlarge-3 xlarge-offset1">
-      <div class="callout callout-hollow">
-        <h2>Media Contact</h2>
-        <p class="lead">For Press Inquiries Only<br>
-        Phone:<strong>(703)903-3933</strong><br>
-        Email: <strong><a href="mailto:corprel@freddiemac.com">corprel@freddiemac.com</a></strong></p>
-        <p><strong><a href="#">Non-press inquiries</a></strong></p>
+ <div class="content-band">
+  <div class="row column">
+    <div class="row">
+      <div class="column show-for-large large-3">
+        <img src="/images/media/building-1wide.jpg" alt="image of Freddie Mac Headquarters">
       </div>
-    </div>  
-  </div>
-  <div class="row">
-    <div class="columns small-12">
-      <div class="tab-wrapper" data-equalizer="tabs" data-equalize-on="small">
-        <ul class="tabs small-up-2 medium-up-4 horizontal" data-tabs id="mediaResourceTabs">
-          <li class="tabs-title is-active"><a href="#mediaPanel1" aria-selected="true" data-equalizer-watch="tabs">Corporate Information</a></li>
-          <li class="tabs-title"><a href="#mediaPanel2" data-equalizer-watch="tabs">Video</a></li>
-          <li class="tabs-title"><a href="#mediaPanel3" data-equalizer-watch="tabs">Images</a></li>
-          <li class="tabs-title"><a href="#mediaPanel4" data-equalizer-watch="tabs">Executive Photos &amp; Bios</a></li>
-        </ul>
-        <div class="tabs-content" data-tabs-content="mediaResourceTabs">
-          <div class="tabs-panel is-active" id="mediaPanel1">
-            <div class="row">
-              <div class="columns">
-                <h2 class="subtitle">Corporate Information</h2>
-              </div>
-            </div>
-            {{> corp-info-grid}}
- 
-          </div>
-          <div class="tabs-panel" id="mediaPanel2">
-            <div class="row">
-              <div class="columns">
-                <h2 class="subtitle">Video</h2>
-              </div>
-            </div>            
-            {{> corp-video-cards}}           
-            
-          </div>
-          <div class="tabs-panel" id="mediaPanel3">
-            <div class="row">
-              <div class="columns">
-                <h2 class="subtitle">Images</h2>
-                {{>corp-image-cards}} 
-                
-              </div>
-            </div>
-          </div>
-          <div class="tabs-panel" id="mediaPanel4">
-            <div class="row">
-              <div class="columns">
-                <h2 class="subtitle">Executive Photos &amp; Bios</h2>  
-                {{> corp-exec-cards}}
-              </div>
-            </div>
-          </div>
+      <div class="column medium-6 large-5">
+      <h2>Company Profile</h2>
+      <p class="intro">Freddie Mac was chartered by Congress in 1970 with a public mission to stabilize the nation's residential mortgage markets and expand opportunities for homeownership and affordable rental housing.</p>
+      </div>
+      <div class="column medium-6 large-4 xlarge-3 xlarge-offset1">
+        <div class="callout hollow-thin">
+          <h2>Media Contact</h2>
+          <p class="lead"><span class="weight-light">For Press Inquiries Only</span><br>
+          Phone: <strong>(703)903-3933</strong><br>
+          Email: <strong><a href="mailto:corprel@freddiemac.com">corprel@freddiemac.com</a></strong></p>
+          <p><strong><a href="#">Non-press inquiries</a></strong></p>
         </div>
-      </div>    
+      </div>  
+    </div>
+    <div class="row">
+      <div class="column small-12">
+        <div class="tab-wrapper" data-equalizer="tabs" data-equalize-on="small">
+          <ul class="tabs small-up-2 medium-up-4 horizontal" data-tabs id="mediaResourceTabs">
+            <li class="tabs-title is-active"><a href="#mediaPanel1" aria-selected="true" data-equalizer-watch="tabs">Corporate Information</a></li>
+            <li class="tabs-title"><a href="#mediaPanel2" data-equalizer-watch="tabs">Video</a></li>
+            <li class="tabs-title"><a href="#mediaPanel3" data-equalizer-watch="tabs">Images</a></li>
+            <li class="tabs-title"><a href="#mediaPanel4" data-equalizer-watch="tabs">Executive Photos &amp; Bios</a></li>
+          </ul>
+          <div class="tabs-content" data-tabs-content="mediaResourceTabs">
+            <div class="tabs-panel is-active" id="mediaPanel1">
+              <div class="row">
+                <div class="column">
+                  <h2 class="subtitle gutter-bottom">Corporate Information</h2>
+                </div>
+              </div>
+              {{> corp-info-grid}}
+   
+            </div>
+            <div class="tabs-panel" id="mediaPanel2">
+              <div class="row">
+                <div class="column">
+                  <h2 class="subtitle gutter-bottom">Video</h2>
+                </div>
+              </div>            
+              {{> corp-video-cards}}           
+              
+            </div>
+            <div class="tabs-panel" id="mediaPanel3">
+              <div class="row">
+                <div class="column">
+                  <h2 class="subtitle gutter-bottom">Images</h2>
+                  {{>corp-image-cards}} 
+                  
+                </div>
+              </div>
+            </div>
+            <div class="tabs-panel" id="mediaPanel4">
+              <div class="row">
+                <div class="column">
+                  <h2 class="subtitle gutter-bottom">Executive Photos &amp; Bios</h2>  
+                  {{> corp-exec-cards}}
+                  
+                </div>
+              </div>
+              <div class="row content-band-inner">
+                <div class="column">
+                  <div class="background-concrete gutter-top gutter-bottom">
+                    <div class="row gutter-bottom">
+                      <div class="column large-10 large-centered gutter-bottom">
+                        <h2 class="gutter-bottom  gutter-top">Board of Directors</h2>
+                        <div class="callout background-white">
+                        {{> board-of-directors}}
+                        </div>  
+                      </div>
+                    </div>
+                  </div> 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>    
+      </div>
+    </div>
+    <!-- end of tabs -->
+    <div class="row collapse large-up-3 mosaic-3 content-band" data-equalizer data-equalize-by-row="true">
+      <div class="column" data-equalizer-watch>
+        <div class="icon-chevron-right-circle">
+          <h2 class="uppercase">My Home</h2>
+          <p class="enlarge weight-medium">FreddieMac Home is the place to learn everything new today.</p>
+          <p class="enlarge weight-medium"><strong><a href="#">Go to My Home Now!</a></strong></p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="icon-chevron-right-circle" data-equalizer-watch>
+          <h2 class="uppercase">E-mail Alerts</h2>
+          <p class="enlarge weight-medium">Needs blurb<br>Needs blurb</p>
+          <p class="enlarge weight-medium"><strong><a href="#">Call to Action</a></strong></p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="icon-chevron-right-circle" data-equalizer-watch>
+          <h2 class="uppercase">RSS Feeds</h2>
+          <p class="enlarge weight-medium">FreddieMac RSS feeds give you complete content delivery control.</p>
+          <p class="enlarge weight-medium"><strong><a href="#">Get FreddieMac RSS Feeds</a></strong></p>
+        </div>
+      </div>
     </div>
   </div>
 </div>

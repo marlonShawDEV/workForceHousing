@@ -15,16 +15,6 @@
       padding: 0.5rem 0; 
       z-index: 1001;      
     }
-    .style-picklist {
-      float: right;
-    }
-    #ssnav { 
-      margin-bottom: 0; 
-      font-weight: normal;
-      height: auto;
-      padding: 3px 9px;
-      background-color: white;
-    }
     /* This styles individual sections of the style guide */
     .ss-section:not(:last-child) {
       padding-bottom: 4rem;
@@ -39,21 +29,16 @@
     .display {
       margin: 0 !important;
     }
-    .display > .columns {
-      background: #eee;
+    .display > .column    {
+      background: #ddd;
       margin-bottom: 10px;
-      border: solid 1px #c6c6c6;}
+      border: solid 1px #c6c6c6;
+    }
     .two-column-layout > .two-column-row {
       padding-left: 0;
       padding-right: 0;      
     }
-    .display  main {
-       background: #eee;
-        border: solid 1px #c6c6c6;
-    }
-    .display aside {
-      background: #ffb718;
-    }
+
     /* This styles the color blocks used in the color documentation. */
     .color-block {
       border-radius: 2px;
@@ -63,6 +48,7 @@
       text-transform: uppercase;
       border: 1px solid #ddd;
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
     }
       .color-block span {
         display: block;
@@ -108,31 +94,33 @@
 
     <div id="top" class="page-title">
       <div class="row column">
-        <div class="style-picklist">
+        <form class="form float-right">
           <select id="ssnav">
             {{#each pages}}
               <option value="{{ anchor }}">{{ title }}</option>
             {{/each}}
           </select>
-        </div>
+        </form>
         <h1>Corporate Style Guide</h1>
       </div>
     </div>
-    <div class="section-padding">    
+    
+    <div class="content-band">    
       <div class="row column" id="code-content">
         
-        {{#each pages}}
+          {{#each pages}}
           <div class="ss-section" id="{{ anchor }}">
             <div class="row">
-              <div class="column markup-wrapper">
-                {{ body }}
+              <div class="column markup-wrapper">            
+              {{ body }}
               </div>
-            </div>
+            </div>              
           </div>
-        {{/each}}
-        
+          {{/each}}
+       
       </div>
-    </div>    
+    </div> 
+    
     <script src="/js/vendor/jquery-2.1.4.min.js"> </script>
     <script src="/js/app_corp.js"></script>
     <script>

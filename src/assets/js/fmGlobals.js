@@ -22,15 +22,15 @@ FM.form = {
     var a='',b='',q='',hash='',qryst='',hrf=$lk.attr('href')||'',cl=$lk.attr('class')||'',persona='',rel=$lk.attr('rel')||'',tl=$lk.attr('title')||'';
     txt=$lk.text().replace(/"/g,"").replace(/^\s|\s$/g,"").toLowerCase();
     if(hrf.length){hrf=decodeURI(hrf);}	 
-    if(hrf.match(/type=popup/i)||rel== 'AllRegs'){desc='popup:';}
-    else if(cl.match(/reveal/i)){desc='modal:';}
+    // if(hrf.match(/type=popup/i)||rel== 'AllRegs'){desc='popup:';}
+    if(cl.match(/reveal/i)){desc='modal:';}
     else if(cl.match(/accordion-title/)){desc='accordion:';}
     else if($lk.closest('#ribbon-nav').length){locale='ribbon|';}
     else if($lk.closest('.tabs-title').length){desc='tab:';}		
     else if($lk.closest('#header-nav').length){locale='topnav|';} 
     else if($lk.closest('.footer').length){locale='footer|';} 
     else if(hrf.match(/privacy\.truste\.com/) || $lk.closest('.fsrCloseBtn, .fsrDeclineButton, .fsrAcceptButton').length){locale='foreseeinvite|';}	
-    else if($lk.closest('#skipper').length||$lk.closest('#skipper-2').length){locale='skiplink|';}
+    // else if($lk.closest('#skipper').length||$lk.closest('#skipper-2').length){locale='skiplink|';}
     else if($lk.closest('.orbit-slide').length){desc='rotator:';} 	
     else if($lk.closest('aside').length){desc='sidebar:';} 
     else if(locale==''){locale=dir+'|';} 
@@ -62,7 +62,21 @@ FM.form = {
   }	
  }
 };
+if (FM.form.useOmni){$(document).on("click",FM.form.omniNavLink);}
 for (var x in FM.form.QueryPairs) {
   QueryParam[decodeURIComponent(FM.form.QueryPairs[x].split('=')[0] || "")] = decodeURIComponent(FM.form.QueryPairs[x].split('=')[1] || "");
 };
-if (FM.form.useOmni){$(document).on("click",FM.form.omniNavLink);}
+
+
+// process offsite
+$('[href]').filter('.offsite, [rel="external"]').each(function(){
+  var x = $(this)[0].hasAttribute('rel') ? $(this).attr('rel') : '',  y = x!=='' ? 'noopener noreferrer '+x : 'noopener noreferrer';	
+  $(this).attr('target','_blank').attr('rel',y); 
+  
+});
+// process file markers
+if (FM.form.pathElements[0] !== "search") { 
+	$(".content-band, .two-column-layout").find("a[href]").not('.plain').not(":has(img)").not(":has(.callout)").not(":has(.card)").filter(function(){return (/.+\.(pdf|zip|mp3|mov|docx?|xls[mx]?|pptx?)/i).test($(this).attr('href'));}).each(
+	   function(){ var h=$(this).attr('href').toLowerCase().replace(/.+\.(pdf|zip|mp3|mov|docx?|xls[mx]?|pptx?).*/, "$1"); $(this).after(" <span class='filemarker'>["+h+"]</span>"); 
+	});
+} 

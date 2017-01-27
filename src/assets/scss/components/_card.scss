@@ -2,7 +2,9 @@
 .card {
   border-bottom-width: 3px;
   text-align: left;
-	.overlay {
+	.overlay,
+  .modal-launch,
+  .video-modal {
 		width: 100%;
 	}
   .avatar {
@@ -12,9 +14,9 @@
     right: $gutter;
     bottom: $gutter;
     margin: 0;
-  }   
+  } 
 }
-.card-section {  
+.card-section { 
   &:not(.text-center) {
     padding-left: 0;
     @include breakpoint(medium) {
@@ -23,23 +25,28 @@
   }
 }
 .card-divider {
-    position: relative;
-    padding: $gutter;
+  position: relative;
+  padding: $gutter;
+  .background-concrete & {
+    background: $white;
+  }
 }
 .perspectives {
   .card { 
     margin-top: $gutter * 2.5;
+    margin-bottom: 0;
+    padding-bottom: $gutter;
   }
   .card-divider {
     padding-bottom:  $gutter * 5.3;
   }
 } 
-
-.callout-concrete {
-  .card-divider {
-    background: $white;
+.pre-footer-promo {
+  .card { 
+    margin-top: $gutter/2;
   }
 }
+
 @include breakpoint(medium) {
   &.medium-up-4 {
     @for $i from 1 through 4 {

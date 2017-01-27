@@ -64,8 +64,8 @@ $fm-gray: #777874;
 $sushi: #97bb35;
 $celery: #a4c745; 
 $offwhite: #f9f9f9;
-$mosaic-start: #7AB629;
-$mosaic-end: #FCEE1C;
+$mosaic-first: #7AB629;
+$mosaic-last: #FCEE1C;
 
 $primary-color: #00a6e2;
 $secondary-color: $fm-orange;
@@ -388,7 +388,7 @@ $label-radius: $global-radius;
 // ----------------
 
 $mediaobject-margin-bottom: $global-margin;
-$mediaobject-section-padding: $global-padding;
+$mediaobject-content-band: $global-padding;
 $mediaobject-image-width-stacked: 100%;
 
 // 22. Menu

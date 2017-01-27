@@ -3,7 +3,24 @@
     display: none;
   }
 }
+
 .primary-nav {
+  .row {
+    &.column {
+      &.primarynav-buffer {
+        padding-right: 0;
+        padding-left: 0;
+        @include breakpoint(xlarge) {
+          padding-right: rem-calc(30);  
+          padding-left: rem-calc(50);
+        }
+        @include breakpoint(xxlarge) {
+          padding-right: rem-calc(50); 
+          padding-left: rem-calc(70);
+        }      
+      }
+    }
+  }
   font-weight: $global-weight-medium;
   position: relative;
   h4 {
@@ -126,7 +143,8 @@
     
     input[type="search"] {
       max-width: 100%;
-      background: $fm-yellow;
+      background: none;
+      background-color: $fm-yellow;
       box-shadow: none;
       border: 0;
       color: $white;

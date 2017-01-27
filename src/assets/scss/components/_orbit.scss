@@ -40,11 +40,6 @@
     }
     :last-child { margin-bottom: 0;}
   } 
-  @each $name, $color in $orbit-palette {    
-    &.orbit-slide-#{$name} {      
-      background-color: $color; 
-    }
-  }
 }
 
 .orbit-bullets {

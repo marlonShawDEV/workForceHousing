@@ -1,16 +1,3 @@
-$callout-palette: (
-  green: $fm-green,
-  orange: $fm-orange,
-  yellow: $fm-yellow,
-  purple: $fm-purple,
-  blue: $fm-blue,
-  teal: $fm-teal,
-  gray: $medium-gray,
-  alert: $fm-red,
-  red: $fm-red,
-  primary: $primary-color
-);
-
 .callout {
   margin: $callout-margin;
   background-color: $callout-background;
@@ -18,10 +5,23 @@ $callout-palette: (
   padding: $callout-padding;
   &.large {
     padding: $callout-padding * 2;
-    font-size: 120%;
   }
   &.small {
     padding: $callout-padding * 0.5 $callout-padding * 0.75;
+  }
+  &.xlarge {
+    padding: $callout-padding * 2;
+    @include breakpoint(large) {
+      padding: $callout-padding * 3;
+    }
+    @include breakpoint(xlarge) {
+      padding: $callout-padding * 3 7em;
+    }
+    .reveal & {
+      @include breakpoint(xlarge) {
+        padding: 7rem;
+      }
+    }   
   }
   &.rounded {
     border-radius: 0.35rem;
@@ -35,80 +35,18 @@ $callout-palette: (
   .close-button {
     color: currentColor;
   }
-  &.callout-hollow-thin,
-  &.callout-hollow {
+  &.hollow-thin,
+  &.hollow {
     background-color: $white;
     border: $callout-border;
     color: $fm-gray;
   }
-  &.callout-hollow {
+  &.hollow {
     border-width: 3px;
-  }
-  &.callout-concrete {
-    background: $light-gray;
-    color: $body-font-color;
-  }
-  @each $name, $color in $callout-palette {    
-    &.callout-#{$name} {      
-      background-color: $color;
-      color: $white;
-      a {
-        @include anchor-on-dark;
-      }
-      a:hover > &,
-      a:focus > & {
-        background-color: darken(desaturate($color, 3%), 3%);
-      }
-    }
   }
   &.callout-overlay {    
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-  }
-  &.callout-fullwidth {
-    border-radius: 0;    
-    padding: 2.5rem 0;
-    margin: 0;
-    font-size: rem-calc(22);    
-    @include breakpoint(large) {
-      padding: 4.375rem 0;
-    }    
-    p {
-      font-weight: $global-weight-light;
-      margin: 1.5rem 0;
-      @include breakpoint(large) {   
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-    }
-    form {      
-      display: table;
-      width: 100%;
-      > :not(:last-child) {
-        max-width: 18rem;
-        margin-right: 1rem;
-      }
-      > * {
-        display: table-cell;
-        vertical-align: middle;
-        margin: 0.25rem 0;
-      }
-    }
-    &.callout-concrete {
-      padding: $global-padding * 2 0;
-      font-size: inherit;
-    }
-  }
-  .callout-fullwidth-cta {   
-    text-align: center;
-    width: 100%;      
-    @include breakpoint(large) {              
-      @include vertical-center;
-      right: 0;
-      text-align: right;
-      position: relative;
-    }
   }
 }

@@ -48,9 +48,13 @@ $ribbon-background-desktop: linear-gradient(to bottom, $offwhite 0%, $offwhite 9
   .input-group { 
     margin-bottom: 0.0625rem;
     background: #fff;
-  }      
+  }  
+  .input-group-button {
+    width: auto;
+  }
   [type="search"] {
     font-size: inherit;
+    background: none;
     border-width: 0;
     color: $fm-gray;
     height: 2.1875rem;

@@ -99,8 +99,8 @@
 }
 // staggered mosiac full pattern used below secondary nav/hover and footer:
 @mixin mosaic-fill(
-  $a: $mosaic-start, 
-  $b: $mosaic-end, 
+  $a: $mosaic-first, 
+  $b: $mosaic-last, 
   $direction: to right
   ) {
   background: linear-gradient($direction, 
@@ -146,4 +146,4 @@
   }
 }
    
-   
+  

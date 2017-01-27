@@ -47,8 +47,10 @@ function clean(done) {
 // Copy files out of the assets folder
 // This task skips over the "img", "js", and "scss" folders, which are parsed separately
 function copy() {
-  return gulp.src(PATHS.assets)
-    .pipe(gulp.dest(PATHS.dist));
+  gulp.src(PATHS.assets) 
+    .pipe(gulp.dest(PATHS.dist));  
+  return gulp.src('src/assets/docs/**/*')
+    .pipe(gulp.dest(PATHS.dist + '/docs'));
 }
 
 // Copy page templates into finished HTML files

@@ -1,0 +1,25 @@
+
+.box-right-40 {
+  @include breakpoint(medium) {
+    float: right;
+    width: 40%;
+    margin-left: $gutter;
+    margin-bottom: $gutter;
+  }  
+}
+.box-left-40 {
+  @include breakpoint(medium) {
+    float: left;
+    width: 40%;
+    margin-right: $gutter;
+    margin-bottom: $gutter;
+  }  
+}
+
+.fake-side-bar-fixed {
+  @include breakpoint(medium) {
+    float: right;
+    width: rem-calc(300);
+    margin-left: $gutter;
+  }  
+}

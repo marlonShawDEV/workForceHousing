@@ -26,9 +26,9 @@
       border: solid 1px #c6c6c6;
       margin-left: 0 !important;
       margin-right: 0 !important; }
-      .row.display .columns:nth-child(2), .row.display .columns.small-centered, .row.display .columns.large-centered {
+      .row.display .column:nth-child(2), .row.display .column.small-centered, .row.display .column.large-centered {
         background: #e1e1e1; }
-      .row.display .columns.color-end {
+      .row.display .column.color-end {
         background: #d4d4d4; }
 
     /* This styles the color blocks used in the color documentation. */
@@ -80,7 +80,7 @@
 
     <div class="column row"><div class="row collapse">
 
-      <div class="large-3 medium-4 columns" data-sticky-container>
+      <div class="large-3 medium-4 column" data-sticky-container>
         <ul class="vertical menu">
           {{#each pages}}
             <li><a href="#{{ anchor }}">{{ title }}</a></li>
@@ -88,7 +88,7 @@
         </ul>
       </div>
 
-      <div class="large-9 medium-8 columns" id="code-content">
+      <div class="large-9 medium-8 column" id="code-content">
         {{#each pages}}
           <div class="ss-section" id="{{ anchor }}">
             {{ body }}

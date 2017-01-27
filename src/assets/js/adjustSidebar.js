@@ -1,39 +1,48 @@
-var adjustSidebarArticle = {
-	init: function(aside) {         
-		if( Foundation.MediaQuery.atLeast('large') ) {
-			aside.css('margin-top', -(aside.find('.sidebar:first').outerHeight(true)));
-		} else {
-			aside.css('margin-top', 0);
+var adjustSidebarBlog = {
+	init: function(aside) {  
+    var hero = $('.hero-blended:first').outerHeight() || 0,
+    sdBar = aside.find('.sidebar:first').outerHeight(true);        
+		if( Foundation.MediaQuery.atLeast('large') ) {     
+      if(sdBar < hero) { aside.css('margin-top', -sdBar); }
+      else if (hero > 0) { aside.css('margin-top', -(hero/2)); }
+			else { aside.css('margin-top', -50); }
+		} 
+    else {
+			aside.removeAttr('style');
 		}
 	}
 },
-adjustSidebarTertiary = {
-	init: function(nav) {         
-		if( Foundation.MediaQuery.atLeast('large') && $('.page-title').length) {
-			nav.css('margin-top', -($('.page-title:first').outerHeight()/2));
-		} else {
-			nav.css('margin-top', 0);
+adjustSidebarNav = {
+	init: function(nav) { 
+    var  pgTitle = $('.page-title:first').outerHeight() || 0;
+		if( Foundation.MediaQuery.atLeast('large') && pgTitle > 0) {
+			nav.css('margin-top', -(pgTitle/2));
+      nav.closest('aside').css('padding-top', 0);
+		} 
+    else {
+			nav.removeAttr('style');
+      nav.closest('aside').removeAttr('style');
 		}
 	}
 };
 function initSidebar() {
-  var $sdBarArticle = $('.grid-2col-article').find('aside') || '',
-      $sdBarTertiary = $('.grid-2col-tertiary').find('.tertiary-nav') || '';
-  if($sdBarArticle.length) {
-    adjustSidebarArticle.init($sdBarArticle);
+  var $sdBarBlog = $('.grid-2col-blog').find('aside') || '',
+      $sdBarNav = $('.grid-2col').find('.tertiary-nav') || '';
+  if($sdBarBlog.length) {
+    adjustSidebarBlog.init($sdBarBlog);
     $(window).on('changed.zf.mediaquery', function() {
-      adjustSidebarArticle.init($sdBarArticle);
+      adjustSidebarBlog.init($sdBarBlog);
     });   
   }
-  else if ($sdBarTertiary.length) {
-    adjustSidebarTertiary.init($sdBarTertiary);
+  else if ($sdBarNav.length) {
+    adjustSidebarNav.init($sdBarNav);
     $(window).on('changed.zf.mediaquery', function() {
-      adjustSidebarTertiary.init($sdBarTertiary);
+      adjustSidebarNav.init($sdBarNav);
     }); 
   }
 }  
 
-if($('.grid-2col-article').find('aside:first').length || $('.grid-2col-tertiary').find('.tertiary-nav').length) {
+if($('.grid-2col-blog').find('aside:first').length || $('.grid-2col').find('.tertiary-nav').length) {
   $(document).ready(initSidebar);  
 }
 

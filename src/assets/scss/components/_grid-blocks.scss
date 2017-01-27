@@ -1,0 +1,37 @@
+.grid-block {
+  margin-bottom: $gutter;
+  + .grid-block {
+    margin-top: -$gutter;
+  }
+  .callout {
+    margin: 0;
+    width: 100%; 
+    min-height:170px;
+    position: relative;
+    @include breakpoint(medium) {
+      min-height:300px;
+    } 
+    @include breakpoint(xlarge) {
+      padding: $global-padding * 2;
+      min-height:325px;
+    }
+  }
+  p:not([class]) { 
+    margin-bottom: 0.5rem;
+  }
+   
+  .center-vertically {
+    @include vertical-center;
+  }
+}
+  @media print {
+    .grid-block,
+    .mosaic-3 {
+      .row,
+      .column {
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+      }
+    }
+  } 

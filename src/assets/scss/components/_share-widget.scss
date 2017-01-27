@@ -2,8 +2,8 @@
   background: $light-gray;
   padding-top: $global-padding;
   padding-bottom: $global-padding;
-  border-top: 1px solid rgba($black, 0.2);
-  .hero-blended > &  {
+  .hero-blended > &,
+  .page-title > &  {
     background: none; 
     padding: 0;
     position: absolute;
@@ -11,7 +11,6 @@
     left: 0;
     right: 0;  
     text-align: left;
-    border-top-width: 0px;
   }
 }
 .share-widget {

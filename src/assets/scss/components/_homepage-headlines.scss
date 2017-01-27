@@ -1,6 +1,8 @@
 .homepage-headlines {
   font-size: rem-calc(18);  
   border-bottom: 1px solid darken($light-gray, 9.8039);
+  margin-bottom: 0;
+  padding-bottom: $global-padding *2.5;
   a {
     color: inherit;
   }
@@ -11,13 +13,11 @@
   }
 }
 .homepage-headlines-dominant {
-  padding-bottom: $global-padding * 2;
 	@include breakpoint(large) {
 		padding-right: $global-padding * 3.5;
 	}
 }
 .homepage-headlines-subdominant {
-  padding-bottom: $global-padding;
   p + .article-category {
     padding-top: 2.5rem;
   }

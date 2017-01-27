@@ -47,8 +47,11 @@ h6 {
 body {  
 	font-weight: $global-weight-light;
 }
-strong, b {
+strong {
   font-weight: $global-weight-medium;
+}
+b {
+  font-weight: $global-weight-bold;
 }
 .call-to-action-medium {
   font-size: rem-calc(28);
@@ -92,7 +95,16 @@ strong, b {
 		font-size: rem-calc(16);
 	}
 }
-
+.grid-block-title-large {
+  font-size: rem-calc(20);
+  line-height: 1.25;
+  font-size: calc(20px +  18 * (100vw - 320px)/1180); 
+  font-weight: $global-weight-medium;
+  margin: 0 0 0.7em; 
+  @include breakpoint(xxlarge) {
+		font-size: rem-calc(38);
+	}
+}
 .grid-block-title {
   font-size: rem-calc(16);
   line-height: 1.18;
@@ -121,7 +133,14 @@ strong, b {
     vertical-align: baseline;
   }
 }
-.grid-block-title-small {  
+.grid-block-text {  
+  font-size: rem-calc(15);
+  font-size: calc(15px +  6 * (100vw - 320px)/1180); 
+  @include breakpoint(xxlarge) {
+		font-size: rem-calc(21);
+	}
+}
+.grid-block-text-small {  
   font-size: rem-calc(14);
   line-height: 1.2;
   @include breakpoint(medium) {
@@ -191,7 +210,7 @@ strong, b {
 		font-size: rem-calc(22);
 	}
 }
-.headline-article {
+.article-headline {
   font-size: rem-calc(16);
   font-size: calc(16px +  6 * (100vw - 320px)/1180); 
   font-weight: $global-weight-medium;
@@ -203,7 +222,7 @@ strong, b {
 		font-weight: $global-weight-bold;
 	}
 }
-.headline-article-sidebar,
+.article-headline-sidebar,
 .stat-points {
   font-size: rem-calc(15);
   font-size: calc(15px +  3 * (100vw - 320px)/1180); 
@@ -227,6 +246,9 @@ strong, b {
 		font-size: rem-calc(14);
     font-weight: $global-weight-bold;
 	}
+  .sidebar & {
+    margin-bottom: 0.65em;
+  }
 }
 .article-date {
   font-size: rem-calc(13);
@@ -249,7 +271,14 @@ strong, b {
 		font-size: rem-calc(16);
 	}
 }
-
+.bio-block {  
+  font-size: rem-calc(16);
+  font-size: calc(16px +  2 * (100vw - 320px)/1180);
+  font-weight: $global-weight-normal;
+	@include breakpoint(xxlarge) {
+		font-size: rem-calc(18);
+	}
+}
 .article-blurb {
   @include show-for(medium);
   font-size: rem-calc(13);
@@ -367,7 +396,7 @@ strong, b {
   }
 }
 .page-subtitle {
-  margin: 0.5em 0 0;
+  margin: 0.5em 0;
   font-weight: $global-weight-medium;
   color: $fm-gray;
   font-size: rem-calc(17);    
@@ -376,7 +405,19 @@ strong, b {
     font-size: rem-calc(22);
   }
 }
+.cross-promo-title {
+  font-weight: $global-weight-bold;
+  color: $fm-gray;
+  margin: $gutter 0;
+  font-size: rem-calc(20); 
+  text-transform: uppercase;  
+  font-size: calc(20px +  8 * (100vw - 320px) / 1180); 
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(28);
+    margin: $global-margin * 2 0;
+  }
 
+}
 .card-title-large {
   font-size: rem-calc(18);
   font-size: calc(18px +  6 * (100vw - 320px)/1180); 
@@ -404,9 +445,14 @@ strong, b {
   }
 }
 .card-subtitle { 
-  font-size: rem-calc(14px);
   color: $fm-gray;
   margin: 0.5em 0;
+}
+.card-subtitle-small { 
+  color: $fm-gray;
+  margin: 0.35em 0;
+  font-size: rem-calc(14px);
+  font-weight: $global-weight-normal;
 }
 .card-blurb { 
   @include show-for(medium);
@@ -427,32 +473,58 @@ strong, b {
   line-height: 1;
   font-weight: $global-weight-normal;
 }
-// replacing .feature-txt with .lead, since it's a built in style for Foundation, replaced .lead_bolder with just <b> or <strong> inside .lead.
+
+.intro {
+  font-size: rem-calc(17);    
+  font-size: calc(17px +  5 * (100vw - 320px) / 1180); 
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(22);
+  }
+}
+.filemarker {
+  font-variant: small-caps;
+  opacity: 0.8;
+}
 .lead {
-	font-weight: $global-weight-medium;
-	strong {
-		font-weight: $global-weight-bold;
-	}
+	font-weight: $global-weight-normal;
 }
 .uppercase { 
   text-transform: uppercase;
 }
+.smallcaps {
+  font-variant: small-caps;
+}
 .reduce {
   font-size: 0.875em;
-  line-height: 1.2;
+  line-height: 1.25;
 }
 .enlarge {
   font-size: 1.125em;
 }
 .initial-color {
- color: initial;
+  color: initial;
+}
+.weight-light { 
+  font-weight: $global-weight-light; 
+}
+.weight-normal {
+  font-weight: $global-weight-normal;
 }
 .weight-medium {
   font-weight: $global-weight-medium;
-}
-.weight-thin { 
-  font-weight: $global-weight-light; 
+	strong {
+		font-weight: $global-weight-bold;
+	}
 }
 .weight-bold {
   font-weight: $global-weight-bold;
+  strong {
+    font-weight: $global-weight-black;
+  }
+}
+.weight-black {
+  font-weight: $global-weight-black;
+  strong {
+    font-weight: inherit;
+  }
 }

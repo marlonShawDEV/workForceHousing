@@ -109,7 +109,8 @@
          > li > a {          
           color: $white;
           &:hover,
-          &:active {
+          &:active,
+          &:focus {
             color: $white;
           }
           

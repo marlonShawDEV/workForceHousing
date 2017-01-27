@@ -1,0 +1,21 @@
+// content classes to add paddings, margins, gutters etc as needed.
+.gutter-top {
+  padding-top: $gutter;
+}
+.gutter-bottom {
+  padding-bottom: $gutter;
+}
+.gutter-left {
+  padding-left: $gutter;
+}
+.gutter-right {
+  padding-right: $gutter;
+}
+
+
+.content-band-inner {
+  margin-top: $gutter;
+	@include breakpoint(xlarge) {
+    margin-top: 2rem; 
+	}
+}

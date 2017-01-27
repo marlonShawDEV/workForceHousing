@@ -1,8 +1,8 @@
-
 .card,
-.headline-article-sidebar {
+.article-headline-sidebar {
   a:not([class]) {
     color: inherit;
+    text-decoration: none;
   }
 }
 .video-modal {
@@ -10,8 +10,8 @@
   display: inline-block;  
   .video-length {
     position: absolute; 
-    bottom: 0; 
-    left: 0;
+    bottom: 1px; 
+    left: 1px;
     display: inline-block;
     min-width: rem-calc(90);
     background: rgba($primary-color, 0.92);
@@ -21,36 +21,41 @@
     z-index:200;    
   }
 }
+.block {
+    width: 100%;
+}
+.modal-launch,
+.overlay  {
+  display: inline-block; 
+  background: $primary-color;  
+  color: $white;
+  img {
+    opacity: 1;
+    transition: opacity 0.25s ease;
+    width: 100%;
+  }
+  &:hover,
+  &:focus {
+    color: $white;
+    img {
+      opacity: 0.22; 
+    }
+  }
+}
 .modal-launch {
+  position: relative;  
   &::after {
     position: absolute;
     bottom: 1rem;
     right: 1rem;
     width: 1.625rem;
     height: 1.625rem;
-    content: "";
-    background: transparent url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024.5%2024.5%22%3E%3Cdefs%3E%3Cstyle%3E.a,.b{fill:none;}.a{stroke:%23fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}%3C/style%3E%3C/defs%3E%3Ccircle%20class=%22a%22%20cx=%2212%22%20cy=%2212%22%20r=%2211%22/%3E%3Cpath%20class=%22a%22%20d=%22M12%208v8M16%2012H8%22/%3E%3Cpath%20class=%22b%22%20d=%22M.5.5h24v24H.5z%22/%3E%3C/svg%3E") no-repeat center center;
-  }
-}
-.modal-launch,
-.overlay  {
-  display: inline-block;  
-	position: relative;
-  background: $primary-color;  
-  color: $white;
-  max-width: 100%;
-  img {
-    width: 100%;
-    opacity: 1;
-    transition: opacity 0.25s ease;
-  }
-  &:hover,
-  &:focus,
-  &:active {
-    color: $white;
-    img {
-      opacity: 0.22;       
-    }
+    content: " ";
+    z-index: 300;
+    background-color: transparent;
+    background-image:  url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2225%22%20height=%2225%22%20viewBox=%220%200%2025%2025%22%3E%3Ccircle%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-linejoin=%22round%22%20stroke-width=%222%22%20cx=%2212%22%20cy=%2212%22%20r=%2211%22/%3E%3Cpath%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-width=%222%22%20d=%22M12%208v8m4-4H8%22/%3E%3C/svg%3E"), url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2225%22%20height=%2225%22%20viewBox=%22-1%20-1%2026%2026%22%3E%3Ccircle%20fill=%22none%22%20stroke=%22%23666%22%20stroke-linejoin=%22round%22%20stroke-width=%223%22%20stroke-opacity=%220.3%22%20cx=%2212%22%20cy=%2212%22%20r=%2211%22/%3E%3Cpath%20fill=%22none%22%20stroke=%22%23666%22%20stroke-width=%223%22%20stroke-opacity=%220.3%22%20d=%22M12%208v8m4-4H8%22/%3E%3C/svg%3E");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0 0, 1 1;
   }
 }
 .video-length::before {
@@ -63,7 +68,28 @@
   left: rem-calc(9);
   bottom: rem-calc(9);      
 }
+.overlay-contents {
+  color: $white;
+  padding: $gutter;
+  @include breakpoint(small only) {
+    background: $fm-gray;
+  } 
+  @include breakpoint(medium) {   
+    position: absolute;
+    bottom: 0;
+    left:0;
+    right:0;
+    z-index: 100;
+  }
+  @include breakpoint(large) {   
+    padding: $gutter $gutter * 1.5; 
+  }  
+  @include breakpoint(xxlarge) {   
+    padding: $gutter * 1.5 $gutter * 1.5 $gutter * 1.5 $gutter * 2; 
+  }  
+}
 .overlay  {  
+	position: relative;  
   &.overlay-orange {
     background: lighten($fm-orange, 4%);
     .is-active {
@@ -71,92 +97,59 @@
     }     
   }
   &.overlay-dark {
-    .overlay-contents {
-      @include breakpoint(small) {
-        background: $fm-gray;
-      } 
-      @include breakpoint(medium) {       
-        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.75) 100%);
-        padding-top: $gutter * 2.25;
-        transition: background 0.35s ease; 
-      }
-    } 
-    &:not(:hover) {
+    @include breakpoint(medium) {
       img {
-        opacity: 0.9;
+        z-index: 90;
       }
-    }
-    &:hover,
-    &:focus,
-    &:active {
-      .overlay-contents {
-        @include breakpoint(medium) { 
-          background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.15) 100%);
+      &::after {
+        content: " ";
+        display: block;      
+        position: absolute;
+        bottom: 0;
+        left:0;
+        right:0; 
+        top: 0;
+        z-index: 95;
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.75) 100%);
+        transition: background-image 0.3s ease 0s;       
+      }
+      &:hover,
+      &:focus  {
+        &::after {
+          background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.3) 100%);
         }
       }
     }
   }
+  
   &.overlay-gradient {
     .overlay-contents { 
-      @include breakpoint(small) {
-        background: $fm-gray;
-      } 
       @include breakpoint(medium) {     
         top: 0;
-        padding-left: $gutter;
         padding-right: 40%; 
-        background: linear-gradient(to right, rgba($fm-gray,1) 0%,rgba($fm-gray,0.7) 50%,rgba($fm-gray,0.3) 100%);
-        background-position: 0% 0%;
-        transition: background 0.5s ease; 
-        &:hover,
-        &:focus,
-        &:active {      
-            background: linear-gradient(to right, rgba($primary-color,0.7) 0%,rgba($primary-color,0.6) 40%,rgba($primary-color,0.4) 100%);        
-            background-position: -100% -100%;
-        } 
       }  
-      @include breakpoint(xlarge) {   
+      @include breakpoint(xlarge only) {   
         padding-right: 38%;
       }  
-      @include breakpoint(xxlarge) {   
-        padding: $gutter * 1.5 40% $gutter $gutter * 2; 
-      }  
     }
-    &:hover,
-    &:focus,
-    &:active {      
-        img {
-          opacity: 0.9;
+    @include breakpoint(medium) {      
+      &::after {
+        content: " ";
+        display: block;      
+        position: absolute;
+        bottom: 0;
+        left:0;
+        right:0; 
+        top: 0;
+        background: linear-gradient(to right, rgba($fm-gray,1) 0%,rgba($fm-gray,0.7) 50%,rgba($fm-gray,0.3) 100%);
+        transition: background-image 0.3s ease 0s;       
+      }
+      &:hover,
+      &:focus {
+        &::after {
+          background: linear-gradient(to right, rgba(mix($fm-gray, $primary-color, 40%),0.8) 0%,rgba(mix($fm-gray, $primary-color, 30%),0.4) 50%,rgba(mix($fm-gray, $primary-color, 20%),0.1) 100%); 
         }
-    }    
-  }
-  .overlay-contents {
-    color: $white;
-    padding: $gutter $gutter * 1.5 $gutter * 1.5;
-    @include breakpoint(medium) {   
-      position: absolute;
-      bottom: 0;
-      left:0;
-      right:0; 
-    }
+      }
+    } 
   }
 }
-  
-.icon {
-  &.secondary { 
-    color: $fm-orange;  
-    &:hover,
-    &:focus {
-      color: scale-color($fm-orange, $lightness: -10%);   
-    }
-    &:active {
-      color: scale-color($fm-orange, $lightness: -20%);
-    }
-  }
-  svg { 
-    fill: currentColor;
-    height: 1em;
-    width: 1em;
-  }
-}
-

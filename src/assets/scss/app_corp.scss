@@ -42,7 +42,7 @@
 @include foundation-switch;
 @include foundation-table;
 // @include foundation-tabs;
-// @include foundation-thumbnail;
+@include foundation-thumbnail;
 @include foundation-title-bar;
 @include foundation-tooltip;
 @include foundation-top-bar;
@@ -58,6 +58,8 @@
 @import 'components/icons';
 @import 'components/globals';
 @import 'components/page-layout';
+@import 'components/shims';
+@import 'components/reveal';
 @import 'components/text';
 @import 'components/buttons';
 @import 'components/callouts';
@@ -68,13 +70,14 @@
 @import 'components/homepage-finance';
 @import 'components/homepage-testimonials';
 @import 'components/call-to-action';
-@import 'components/call-to-action';
 @import 'components/accordion-pointers';
 @import 'components/forms';
 @import 'components/lists';
 @import 'components/avatar';
+@import 'components/images';
 @import 'components/page-title';
 @import 'components/card';
+@import 'components/grid-blocks';
 @import 'components/tabbed-component';
 @import 'components/data-table';
 @import 'components/nav-ribbon';
@@ -84,8 +87,12 @@
 @import 'components/nav-tertiary';
 @import 'components/sidebars';
 @import 'components/anchors';
-@import 'components/reveal';
 @import 'components/orbit';
 @import 'components/close-button';
 @import 'components/tooltips';
 @import 'components/share-widget';
+@import 'components/footer-promos';
+@import 'components/floated-boxes';
+@import 'components/mosaic';
+@import 'components/backgrounds';
+@import 'components/market-wired';

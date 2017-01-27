@@ -54,13 +54,6 @@ $medium-gray: #464645;
 $dark-gray: #333333;
 $black: #000000;
 $white: #ffffff;
-$foundation-palette: (
- primary: #00a6e2,
- secondary: #ff6c00,
- success: #88BD45,
- warning: #ffb718,
- alert: #cf0a2c,
-); 
 $primary-color: #00a6e2;
 $fm-orange: #ff6c00;
 $fm-green: #88BD45;
@@ -70,15 +63,19 @@ $fm-teal: #00a19a;
 $fm-blue: #457bbe;
 $fm-purple: #725090;
 $fm-gray: #777874;
-$pear: #c6d838;
+$pear: #c7d939; 
 $celery: #a4c745;   
 $offwhite: #f9f9f9;
-$mosaic-start: #88BD45;
-$mosaic-end: #E4F118;
-$secondary-color: $fm-orange;
-$success-color: $fm-green;
-$warning-color: $fm-yellow;
-$alert-color: $fm-red;
+$mosaic-first: #88BD45;
+$mosaic-last: #E4F118;
+$foundation-palette: (
+ primary: $primary-color,
+ secondary: $fm-orange,
+ success: $fm-green,
+ warning: $fm-yellow,
+ alert: $fm-red,
+); 
+@include add-foundation-colors;
 $orbit-palette: (
   green: $fm-green,
   orange: $fm-orange,
@@ -87,7 +84,8 @@ $orbit-palette: (
   purple: $fm-purple,
   blue: $fm-blue,
   teal: $fm-teal,
-  gray: $medium-gray
+  gray: $fm-gray,
+  primary: $primary-color,
 );
 
 $body-background: $white;
@@ -112,8 +110,8 @@ $print-transparent-backgrounds: true;
 // --------------
 
 $breakpoints: (
-  small: 0,
-  medium: 600px,
+  small: 0,     // FYI: min width on the body element is 320
+  medium: 570px,  // was 600 but knocked it down just a tad 1/13
   large: 980px,  // position where aside and main stack/unstack
   xlarge: 1270px,  // position where we swap between mobile and desktop nav
   xxlarge: 1500px,
@@ -308,15 +306,15 @@ $buttongroup-radius-on-each: false;
 // 13. Callout
 // -----------
 
-$callout-background: $light-gray;
-$callout-background-fade: 0%;
+$callout-background: none;
+$callout-background-fade: 0%;  // don't use
 $callout-border: 1px solid darken($light-gray, 5%);
 $callout-margin: 0 0 1rem;
 $callout-padding: $gutter;
-$callout-font-color: currentColor;
-$callout-font-color-alt: currentColor;
-$callout-radius: 0;
-$callout-link-tint: false; 
+$callout-font-color: currentColor;  // don't use
+$callout-font-color-alt: currentColor;  // don't use
+$callout-radius: 0;   // don't use
+$callout-link-tint: false;   
 
 // 14. Card
 // --------
@@ -403,7 +401,7 @@ $form-label-color: inherit;
 $form-label-font-size: rem-calc(16);
 $form-label-font-weight: $global-weight-medium;
 $form-label-line-height: 1.6;
-$select-background: inherit;
+$select-background: rgba($white, 0.7);
 $select-triangle-color: transparent;
 $select-radius: 5px;
 $input-color: $body-font-color;
@@ -411,7 +409,7 @@ $input-placeholder-color: rgba($body-font-color, 0.5);
 $input-font-family: inherit;
 $input-font-size: rem-calc(16);
 $input-font-weight: $global-weight-normal;
-$input-background: inherit;
+$input-background: rgba($white, 0.7);
 $input-background-focus: inherit;
 $input-background-disabled: $light-gray;
 $input-border: 1px solid rgba($black, 0.4);
@@ -442,7 +440,7 @@ $label-radius: $global-radius;
 // ----------------
 
 $mediaobject-margin-bottom: 0;
-$mediaobject-section-padding: $gutter;
+$mediaobject-content-band: $gutter;
 $mediaobject-image-width-stacked: 100%;
 
 // 22. Menu
@@ -537,7 +535,7 @@ $responsive-embed-ratios: (
 // 29. Reveal
 // ----------
 
-$reveal-background: $fm-blue;
+$reveal-background: none;
 $reveal-width: 100%;
 $reveal-max-width: 100%;
 $reveal-padding: 0;   // not used.
@@ -607,7 +605,7 @@ $tab-background-active: $light-gray;
 $tab-active-color: $primary-color;
 $tab-item-font-size: rem-calc(16);
 $tab-item-background-hover: $white;
-$tab-item-padding: $gutter $gutter * 1.2;
+$tab-item-padding: 1.25em 1.5em;
 $tab-expand-max: 6;
 $tab-content-background: $white;
 $tab-content-border: $light-gray;
@@ -621,9 +619,9 @@ $tab-item-active-color: $primary-color;
 // 34. Thumbnail
 // -------------
 
-$thumbnail-border: solid 4px $white; 
-$thumbnail-margin-bottom: $global-margin;
-$thumbnail-shadow: 0 0 0 1px rgba($black, 0.2); 
+$thumbnail-border: 0px solid $white; 
+$thumbnail-margin-bottom: 0;
+$thumbnail-shadow: 0 0 7px 0 rgba($black, 0.15); 
 $thumbnail-shadow-hover: 0 0 6px 1px rgba($primary-color, 0.5);
 $thumbnail-transition: box-shadow 200ms ease-out;
 $thumbnail-radius: $global-radius;

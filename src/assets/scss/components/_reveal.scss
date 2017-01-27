@@ -1,17 +1,4 @@
-$overlay-palette: (
-  green: $fm-green,
-  orange: $fm-orange,
-  yellow: $fm-yellow,
-  red: $fm-red,
-  purple: $fm-purple,
-  blue: $fm-blue,
-  teal: $fm-teal,
-  gray: $medium-gray
-);
-
-
 .reveal {  
-  color: $white;
   &.tiny,
   &.small,
   &.large {
@@ -20,9 +7,9 @@ $overlay-palette: (
   &:not(.overlay-video):not(.overlay-image):not(.overlay-gallery) {
     @include reveal-modal-width($reveal-width);
     padding-top: rem-calc(40);
-    padding-top: calc(40px +  56 * (100vw - 320px)/1180); 
+    padding-top: calc(40px +  54 * (100vw - 320px)/1180); 
     @include breakpoint(xxlarge) {
-      padding-top: rem-cal(96);
+      padding-top: rem-cal(94);
     }
     > div { 
       position: relative;
@@ -31,9 +18,6 @@ $overlay-palette: (
       max-width: $global-width;
     }
   }
-  a {
-    @include anchor-on-dark;
-  }  
   .close-button-medium {
     position: absolute;
     top: 0px;
@@ -43,23 +27,21 @@ $overlay-palette: (
       right: -0.9em;
     }
   }  
-// Full-screen mode colors
-  @each $name, $color in $overlay-palette {    
-    &.overlay-#{$name} {      
-      background-color: $color;
-    }
-  } 
-  
+ 
   &.overlay-video,
   &.overlay-image,
   &.overlay-gallery  {
+    color: $white;
     background: transparent;
-    @include reveal-modal-width(90%, 1280px);
+    @include reveal-modal-width(90%, 1360px);
     text-align: center;  
     overflow: visible;
     @include breakpoint (xlarge) {
-      max-width: rem-calc(1280);
+      max-width: rem-calc(1360);
     }
+    a {
+      @include anchor-on-dark;    
+    } 
   }  
   &.overlay-video {
     padding: 2rem 2rem 0;
@@ -124,11 +106,14 @@ $overlay-palette: (
 .modal-content {
   margin: 0 auto;
   width: 90%;
-  max-width: 87.5rem * 0.9;
+  max-width: rem-calc(1360);
   > .row {
     padding: 0;
     margin-left: -0.625rem;
     margin-right: -0.625rem;
+  }
+  &.frame {
+    
   }
 }
 .modal-header {
@@ -154,5 +139,16 @@ $overlay-palette: (
       margin: 0.53125em 0;  
       font-size: rem-calc(32);
     }
+  }
+}
+.modal-page-header {
+  background: $light-gray;
+  text-align: center;
+  padding: 4rem 2rem 3rem;
+  h1 {
+    color: $fm-green;
+  }
+  :last-child:not(:first-child) {
+    margin-bottom: 0;
   }
 }

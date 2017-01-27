@@ -1,13 +1,25 @@
-select:not([multiple]) {
-  position: relative;   
-  background-image: icon(triangle-down, $fm-gray, 12, 9, 0, 0, 16, 12);
+select {
+  box-shadow: $input-shadow;
+  position: relative;  
+  &:not([multiple]) { 
+    background-image: icon(angle-down, $fm-gray, 20, 20, 0, 0, 680, 550);
+    background-position: $global-right center;
+    background-repeat: no-repeat;
+    background-origin: padding-box;
+    padding-right: 1.5rem;
+  }
+}
+
+input[type='email'] {
+  position: relative;          
+  background-image: icon(email, $fm-gray, 24, 24, 0, 3, 24, 24);
   background-position: $global-right center;
   background-repeat: no-repeat;
   background-origin: content-box;
 }
-input[type='email'] {
+input[type='search'] {
   position: relative;          
-  background-image: icon(email, $fm-gray, 24, 24, 0, 3, 24, 24);
+  background-image: icon(search, $fm-gray, 24, 24);
   background-position: $global-right center;
   background-repeat: no-repeat;
   background-origin: content-box;
@@ -117,8 +129,11 @@ fieldset {
   input[type='email']:not(:focus) {
     background-image: icon(email, $white, 24, 24, 0, 3, 24, 24);
   } 
+  input[type='search']:not(:focus) {    
+    background-image: icon(search, $white, 24, 24);
+  }
   select:not([multiple]):not(:focus) {
-    background-image: icon(triangle-down, $white, 12, 9, 0, 0, 16, 12);
+    background-image: icon(angle-down, $white, 20, 20, 0, 0, 680, 550);
   }
   .fieldset,
   .input-group-label, 
