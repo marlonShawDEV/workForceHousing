@@ -176,7 +176,7 @@ $anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
 $anchor-text-decoration: none;
 $anchor-text-decoration-hover: none;
 $hr-width: $global-width;
-$hr-border: 2px solid darken($light-gray, 15%);
+$hr-border: 1px solid darken($light-gray, 15%);
 $hr-margin: rem-calc(20) auto;
 $list-lineheight: $paragraph-lineheight;
 $list-margin-bottom: $paragraph-margin-bottom;
@@ -271,7 +271,7 @@ $breadcrumbs-item-slash: true;
 // ----------
 
 $button-padding: 0.85em 1.5em;
-$button-margin: 0;
+$button-margin: 0.5em 0 0;
 $button-fill: solid;  // not used
 $button-background: $fm-gray;
 $button-color: $white;
@@ -385,7 +385,7 @@ $dropdownmenu-border: 0px;
 // 19. Forms
 // ---------
 
-$fieldset-border: 1px solid $fm-gray;
+$fieldset-border: 1px solid rgba($fm-gray, 0.5);
 $fieldset-padding: rem-calc(20);
 $fieldset-margin: rem-calc(8 0 18 0);
 $legend-padding: rem-calc(0 3);
@@ -395,27 +395,27 @@ $helptext-font-size: rem-calc(14);
 $helptext-font-style: italic;
 $input-prefix-color: $black;
 $input-prefix-background: $light-gray;
-$input-prefix-border: 1px solid $fm-gray;
+$input-prefix-border: 1px solid rgba($fm-gray, 0.5);
 $input-prefix-padding: 1rem;
 $form-label-color: inherit;
 $form-label-font-size: rem-calc(16);
-$form-label-font-weight: $global-weight-medium;
+$form-label-font-weight: $global-weight-normal;
 $form-label-line-height: 1.6;
 $select-background: rgba($white, 0.7);
 $select-triangle-color: transparent;
 $select-radius: 5px;
 $input-color: $body-font-color;
-$input-placeholder-color: rgba($body-font-color, 0.5);
+$input-placeholder-color: rgba($body-font-color, 0.7);
 $input-font-family: inherit;
 $input-font-size: rem-calc(16);
 $input-font-weight: $global-weight-normal;
 $input-background: rgba($white, 0.7);
 $input-background-focus: inherit;
 $input-background-disabled: $light-gray;
-$input-border: 1px solid rgba($black, 0.4);
-$input-border-focus: 1px solid $fm-gray;
-$input-shadow: inset 0 1px 2px rgba($black, 0.1);
-$input-shadow-focus: 0 0 4px rgba($black, 0.2);
+$input-border: 1px solid rgba($fm-gray, 0.5);
+$input-border-focus: 1px solid rgba($fm-gray, 0.9);
+$input-shadow: inset 0 1px 2px rgba($dark-gray, 0.1);
+$input-shadow-focus: 0 0 4px rgba($dark-gray, 0.2);
 $input-cursor-disabled: not-allowed;
 $input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
 $input-number-spinners: false; // maybe true once IE supports spinners?

@@ -2,7 +2,7 @@ select {
   box-shadow: $input-shadow;
   position: relative;  
   &:not([multiple]) { 
-    background-image: icon(angle-down, $fm-gray, 20, 20, 0, 0, 680, 550);
+    background-image: icon(chevron-down, $fm-gray, 24, 16, 0, 100, 800, 300);
     background-position: $global-right center;
     background-repeat: no-repeat;
     background-origin: padding-box;
@@ -133,7 +133,7 @@ fieldset {
     background-image: icon(search, $white, 24, 24);
   }
   select:not([multiple]):not(:focus) {
-    background-image: icon(angle-down, $white, 20, 20, 0, 0, 680, 550);
+    background-image: icon(chevron-down, $white, 24, 16, 0, 100, 800, 300);
   }
   .fieldset,
   .input-group-label, 

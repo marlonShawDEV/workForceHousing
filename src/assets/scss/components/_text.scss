@@ -255,20 +255,39 @@ b {
   color: inherit;
   opacity: 0.75;
   font-weight: inherit;
-  line-height: 1.2;
-  margin-bottom: 0.5em;
+  line-height: 1.1;
+  margin-bottom: 0.6em;
   text-transform: uppercase;
 	@include breakpoint(medium) {
 		font-size: rem-calc(14);
 	}
 }
-.article-author {
+
+.article-date-lg {
+  font-size: rem-calc(14);
+  opacity: 0.75;
+  font-weight: inherit;
+  line-height: 1.1;
+  margin-bottom: 0.8em;
+	@include breakpoint(medium) {
+		font-size: rem-calc(16);
+	}
+	strong {
+		font-weight: $global-weight-bold;
+	}
+}
+
+.article-byline {
   font-size: rem-calc(15);
   color: inherit;
   line-height: 1.2;
   font-weight: inherit;
+  margin-top: 0.6em;
 	@include breakpoint(xxlarge) {
 		font-size: rem-calc(16);
+	}
+	strong {
+		font-weight: $global-weight-bold;
 	}
 }
 .bio-block {  
@@ -306,7 +325,7 @@ b {
     font-size: rem-calc(18);
   }
 }
-.article-date-lg {
+.article-date-feature {
   font-size: rem-calc(14);
   font-size: calc(14px +  4 * (100vw - 320px)/1180);
   font-weight: $global-weight-medium;
@@ -376,7 +395,7 @@ b {
     font-weight: $global-weight-black;
   }
 }
-.stat-sm {
+.stat-lg {
 	font-size: 24px;
   font-size: calc(24px +  (52 - 24) * (100vw - 320px)/1180);  
   font-weight: inherit;
@@ -393,6 +412,14 @@ b {
   font-size: calc(20px +  28 * (100vw - 320px)/1180); 
   @include breakpoint (xxlarge) {
     font-size: rem-calc(48);
+  }
+}
+.stat-sm {
+  font-size: rem-calc(18);
+  font-size: calc(20px +  14 * (100vw - 320px)/1180);
+  font-weight: $global-weight-black;
+  @include breakpoint (xxlarge) {
+    font-size: rem-calc(32);
   }
 }
 .page-subtitle {

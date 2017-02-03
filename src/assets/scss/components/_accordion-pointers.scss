@@ -2,9 +2,12 @@
 @mixin accordion-pointers-active($color: $primary-color, $background: $accordion-content-background) {
   background:$background;
   color: $color;
-  &::before {
-    content: '\276E';
-    transform: rotate(90deg);
+  &::before {    
+    content: ' ';   
+    background: transparent icon(chevron-down, $color, 14, 14) no-repeat right center;
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
   }
 }
 // the standard  non-active state of the item
@@ -16,8 +19,11 @@
   }  
   font-size: $global-font-size;
   &::before {
-    content: '\276F';
-    transform: rotate(90deg);
+    content: ' ';  
+    background: transparent icon(chevron-right, $color, 14, 14) no-repeat right center;    
+    width: 1rem;
+    height: 1rem;
+    margin-left: -0.15rem;
   }  
   :last-child:not(.is-active) > & {
     border-bottom: 0;

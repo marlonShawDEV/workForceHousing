@@ -451,9 +451,10 @@ There are several text and typography styles to choose from, although some style
         <h3 class="article-headline">This is class article-headline (use in news, blog)</h3>
         <h3 class="card-title-large">This is class card-title-large (variation of above, used for EP cards only)</h3>
         <div class="article-category">This is class article-category</div>
-        <div class="article-date">This is class article-date</div>
-        <div class="article-date-lg">This is class article-date-lg (used in featured blog/EP)</div>
-        <div class="article-author">This is class article-author <span class="uppercase">(Uppercase in EP)</span></div> 
+        <div class="article-date">This is class article-date (used in blog, perspectives)</div>
+        <div class="article-date-lg">This is class article-date-lg <span class="uppercase"><strong>Partial Uppercase/Strong</strong></span> (used in media, research)</div>
+        <div class="article-date-feature">This is class article-date-feature <span class="uppercase">Partial Uppercase</span> (used in featured blog/EP)</div>
+        <div class="article-byline">This is class article-byline <span class="uppercase">Partial Uppercase</span> <span class="reduce">Partial Reduced</span> (used in featured EP)</div> 
       </div>
       <hr>
       <div class="callout">
@@ -530,7 +531,7 @@ There are several text and typography styles to choose from, although some style
         <h2 class="homepage-business-highlight-title">This is homepage-business-highlight-title</h2>
         <h3 class="finance-grid-title">This is finance-grid-title</h3>
         <h3 class="finance-row1-title">This is finance-row1-title</h3>    
-        <p class="stat-sm">This is stat-sm <strong>(3%)</strong></p>
+        <p class="stat-lg">This is stat-lg <strong>(3%)</strong></p>
         <p class="stat-points">This is stat-points</p>
         <p class="title-testimonial">This is title-testimonial</p>  
       </div>
@@ -1804,7 +1805,7 @@ On the blog landing page, the first 2 entries are featured with large images and
           <div class="article-date-lg">August 22, 2016</div>
           <h3 class="subtitle">The New Normal: Servicing in a Post-Crisis World</h3>
           <p class="article-blurb-lg">In the years since the crisis we’ve made important strides in making the servicing industry stronger, more efficient and better able to help struggling borrowers. Today servicers have broadly delegated authority...</p>
-          <div class="article-author"><strong class="uppercase">Yvette Gilmore</strong><br><span class="reduce">VP Single-Family Servicer Performance Management</span></div>
+          <div class="article-byline"><strong class="uppercase">Yvette Gilmore</strong><br><span class="reduce">VP Single-Family Servicer Performance Management</span></div>
         </div>
       </a>
     </div>
@@ -1817,7 +1818,7 @@ On the blog landing page, the first 2 entries are featured with large images and
           <div class="article-date-lg">Jul 11, 2016</div>
           <h3 class="subtitle">The Single Security: Testing the Pipes</h3>
           <p class="article-blurb-lg">Borrowers such as step-rate mortgages and partial principal forbearance. In addition, we’ve made it possible for them to modify loans without documentation through our streamlined modification program.</p>
-          <div class="article-author"><strong class="uppercase">Mark Hanson</strong><br><span class="reduce">Senior Vice President Securitization</span></div>
+          <div class="article-byline"><strong class="uppercase">Mark Hanson</strong><br><span class="reduce">Senior Vice President Securitization</span></div>
         </div>
       </a>
     </div>
@@ -2195,7 +2196,6 @@ Form elements are styled based on their type attribute rather than a class. Inpu
       <div class="row">
         <div class="small-12 column">
           <button class="button primary" type="submit">Submit</button>
-          <button class="button" type="reset">Reset</button>
         </div>
       </div>
     </form>
@@ -2232,7 +2232,7 @@ Sometimes you want a form with labels to the left of your inputs. Piece of cake!
       <div class="row">
         <div class="medium-9 medium-push-3 column">
           <button class="button primary" type="submit">Submit</button>
-          <button class="button" type="reset">Reset</button>
+          <button class="button" type="button">Cancel</button>
         </div>
       </div>
     </form>

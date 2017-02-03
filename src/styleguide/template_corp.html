@@ -17,13 +17,15 @@
     }
     /* This styles individual sections of the style guide */
     .ss-section:not(:last-child) {
-      padding-bottom: 4rem;
+      padding-bottom: 3rem;
+      padding-top: 4rem;
       clear: both;
     }
     .markup-wrapper > h1 {
       padding: 2.5rem;
       color: #ff6c00;
       background: rgba(255,108,0,0.15);
+      margin-top: 3rem;
     }
     /* This styles the example rows used in the grid documentation. */
     .display {
@@ -88,6 +90,11 @@
       font-size: 0.875rem;
       opacity: 0.6;
     }
+    
+    @media screen and (max-width: 35em) {
+      #top h1 { float: left; font-size: 20px; }
+      #top select { font-size: 14px; }
+    }
     </style>
   </head>
   <body>
@@ -97,24 +104,23 @@
         <form class="form float-right">
           <select id="ssnav">
             {{#each pages}}
-              <option value="{{ anchor }}">{{ title }}</option>
+              <option value="#{{ anchor }}">{{ title }}</option>
             {{/each}}
           </select>
         </form>
-        <h1>Corporate Style Guide</h1>
+        <h1>Corporate <span class="show-for-medium">Style Guide</span></h1>
       </div>
     </div>
     
     <div class="content-band">    
       <div class="row column" id="code-content">
-        
           {{#each pages}}
           <div class="ss-section" id="{{ anchor }}">
             <div class="row">
-              <div class="column markup-wrapper">            
+              <div class="column markup-wrapper">
               {{ body }}
               </div>
-            </div>              
+            </div>
           </div>
           {{/each}}
        
@@ -138,7 +144,11 @@
         $code.hide(0);
       });
     }
-    $("#ssnav").change(function() { if($(this).val() !=='') { location.href = '#' +  $(this).val();}}); 
+    $("#ssnav").change(function() { 
+      var x = $(this).val(); 
+      location.hash = '#nadda';
+      location.hash = x;
+    }); 
     </script>
     
     

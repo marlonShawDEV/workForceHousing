@@ -100,12 +100,13 @@ $button-transition: background-color 0.25s ease-out, color 0.25s ease-out !defau
   -webkit-appearance: none;  
   transition: $button-transition;
   vertical-align: middle;
-  padding: $button-padding;
+  padding: 0.85em 2.25em;
   margin: $button-margin;
   // Sizes
-  @each $size, $value in map-remove($button-sizes, default) {
+  @each $size, $value in map-remove($button-sizes, default) {  
     &.#{$size} {
-      font-size: $value;     
+      font-size: $value;   
+      padding: $button-padding;  // everything but default      
       @if $size == large {  
         @include breakpoint(large) {
           font-size: calc(16px +  6 * (100vw - 320px) / 1180); 
@@ -160,4 +161,9 @@ $button-transition: background-color 0.25s ease-out, color 0.25s ease-out !defau
 }
 .button-group .button {
   border-radius: 0;
+}
+p {
+  > .button:not(:last-of-type) {
+    margin-right: 2.5rem;
+  }
 }
