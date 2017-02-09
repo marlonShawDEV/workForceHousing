@@ -139,10 +139,10 @@ In the Grid you can nest columns down as far as you'd like. Just embed rows insi
 ```
 
 <div class="two-column-layout">
-  <div class="row two-column-row display"> 
+  <div class="row two-column-row display">
     <main class="column">
       <h3>Main Content Area</h3>
-      <p>This column can be further divided by using cards or inserting rows of columns (max of 12 columns per row).</p>    
+      <p>This column can be further divided by using cards or inserting rows of columns (max of 12 columns per row).</p>
       <div class="row">
         <div class="small-4 column">
           <div class="background-white callout small"></div>
@@ -182,12 +182,12 @@ In the Grid you can nest columns down as far as you'd like. Just embed rows insi
         </div>
       </div>
     </main>
-    <aside class="column">  
+    <aside class="column">
       <section class="sidebar">
         <div class="row">
           <div class="column">
             <h3>Aside Content Area</h3>
-            <p>This column can be further divided by using cards or inserting rows of columns.</p>    
+            <p>This column can be further divided by using cards or inserting rows of columns.</p>
             <div class="row">
               <div class="small-4 column">
                 <div class="background-white callout small"></div>
@@ -415,7 +415,7 @@ There are several text and typography styles to choose from, although some style
         <h3 class="call-to-action-light">This is class call-to-action-light (currently not used)</h3>
         <h3 class="subtitle">This is class subtitle</h3>
         <h3 class="section-subtitle">This is class section-subtitle</h3> 
-        <h2 class="page-subtitle">This is class page subtitle</h2>
+        <h2 class="page-subtitle">This is class page subtitle (also used for subtitles in <a href="#page-title">page titles</a>)</h2>
       </div>
     </div>
   </li>
@@ -436,8 +436,9 @@ There are several text and typography styles to choose from, although some style
       <p>In addition to these styles, sidebars can also use any of the basic content styles.</p>
       <hr>
       <div class="callout">
-        <h3 class="sidebar-subtitle">This is a sidebar-subtitle</h3>
-        <h3 class="article-headline-sidebar">This is a article-headline-sidebar</h3>
+        <h3 class="sidebar-title">This is a sidebar-title</h3>
+        <h3 class="sidebar-subtitle">This is a sidebar-subtitle (use in research landing)</h3>
+        <h3 class="sidebar-headline">This is a sidebar-headline</h3>
       </div>
     </div>
   </li>
@@ -575,8 +576,71 @@ There are several text and typography styles to choose from, although some style
     </div>
   </li>
   <li class="accordion-item" data-accordion-item>
-    <a class="accordion-title" href="#typography13" id="typography-heading13" aria-controls="typography13" role="tab">Ordered Lists</a>
-    <div class="accordion-content" data-tab-content id="typography13" aria-labelledby="typography-heading13" role="tabpanel">      
+    <a class="accordion-title" href="#typography15" id="typography15-heading" aria-controls="typography15" role="tab">Text Weight &amp; Size</a>
+    <div class="accordion-content" data-tab-content id="typography15" aria-labelledby="typography15-heading" role="tabpanel">
+      <div class="callout">
+        <h5>Emphasized Text</h5>
+        <p>Use <code>&lt;strong&gt;</code> and <code>&lt;em&gt;</code> to add emphasis to standard text.</p>
+        <p>This is <strong>content inside a &lt;strong&gt; element</strong> in a regular sentence.</p>
+        <p>This is <em>content inside an &lt;em&gt; element</em> in a regular sentence.</p>
+      </div>    
+      <hr>
+      <div class="callout">
+        <h5>Text Weight</h5>
+        <p>When you need to change the weight of text without changing it's emphasis, add class <code>.weight-xxx</code> (where xxx = light, normal, medium, bold, or black).  These classes can be nested as needed to create variation.</p>
+        <ol>
+        <li class="weight-light">This is class weight-light (300), and <span class="weight-bold">This is class weight-bold (700)</span> inside of it.</li>
+        <li class="weight-normal">This is class weight-normal (400), and <span class="weight-black">This is class weight-black (900)</span> inside of it.</li>
+        <li class="weight-medium">This is class weight-medium (500), and <span class="weight-light">This is class weight-light (300)</span> inside of it.</li>
+        <li class="weight-bold">This is class weight-bold (700), and <span class="weight-normal">This is class weight-normal (400)</span> inside of it.</li>
+        <li class="weight-black">This is class weight-black (900), and <span class="weight-medium">This is class weight-medium (500)</span> inside of it.</li>
+      </div>   
+      <hr>
+      <div class="callout"> 
+        <h5>Text Size</h5>
+        <p>Use these styles you want to adjust the font size of an item up or down.</p>
+        <p>This is <span class="enlarge">class enlarge -- it bumps up the size</span> of the current text.</p>
+        <p>This is <span class="reduce">class reduce -- it bumps down the size</span> of the current text.</p>
+        <p>This is <span class="stat">class stat</span> it bumps up the size of a single data point to highlight it.</p>  
+      </div>
+    </div>
+  </li>
+</ul>
+```
+
+
+
+# Text Alignment
+
+The default text alignment for most containers is left.
+- You can change the text alignment of an element by adding `.text-left`, `.text-right`, or `.text-center` to an element.
+- You can shift alignment at different breakpoints by adding a breakpoint to the front of a text alignment class. For example, `.medium-text-center` will keep text left-aligned on the smallest screens, but switch to center-aligned on medium screens and larger.
+
+```html
+<p class="text-left"><strong>This text is left-aligned.</strong> </p>
+<p class="medium-text-right"><strong>This text is right-aligned</strong> at medium screen widths and larger.</p>
+<p class="text-center"><strong>This text is center-aligned.</strong> </p>
+```
+
+<div class="callout background-concrete">
+  <p class="text-left"><strong>This text is left-aligned.</strong> </p>
+</div>
+<div class="callout background-concrete">
+  <p class="medium-text-right"><strong>This text is right-aligned</strong> at medium screen widths and larger.</p>
+</div>
+<div class="callout background-concrete">
+  <p class="text-center"><strong>This text is center-aligned.</strong> </p>
+</div>
+
+
+
+# Lists
+
+```html_example
+<ul class="accordion-pointer" data-accordion role="tablist">
+  <li class="accordion-item" data-accordion-item>
+    <a class="accordion-title" href="#lists3" id="list-heading3" aria-controls="lists3" role="tab">Ordered Lists</a>
+    <div class="accordion-content" data-tab-content id="lists3" aria-labelledby="list-heading3" role="tabpanel">      
       <p>Use an ordered list when creating a list where the order of the items is important. Ordered lists support additional attributes and classes if you need to specify a starting number other than 0, apply a non-integer counting method, or reverse to decending order.</p>
       <hr>
       <div class="callout">
@@ -710,8 +774,8 @@ There are several text and typography styles to choose from, although some style
     </div>
   </li>
   <li class="accordion-item" data-accordion-item>
-    <a class="accordion-title" href="#typography14" id="typography-heading14" aria-controls="typography14" role="tab">Unordered Lists</a>
-    <div class="accordion-content" data-tab-content id="typography14" aria-labelledby="typography-heading14" role="tabpanel">      
+    <a class="accordion-title" href="#lists4" id="list-heading4" aria-controls="lists4" role="tab">Unordered Lists</a>
+    <div class="accordion-content" data-tab-content id="lists4" aria-labelledby="list-heading4" role="tabpanel">      
       <p>Use an unordered list to... *list things*, if the order of the items doesn't matter.</p>
       <div class="callout background-concrete">
       Generic list items (those in <code>ul</code> or <code>ol</code> containers with no css class applied) have default margins to separate each item to provide better scanability. Adding any class to the <code>ul</code> or <code>ol</code> container will override the default margins on the <code>li</code> elements.
@@ -763,18 +827,6 @@ There are several text and typography styles to choose from, although some style
       </div>
       <hr>
       <div class="callout">
-        <h4>Divided Unordered Lists</h4>
-        <p>To add dividers between items in a list, add the class <code>.list-divided</code> to the <code>ul</code> tag.  Typically the dividers are used along with the <code>.no-bullet</code> class.</p>
-        <ul class="no-bullet list-divided">
-          <li>List item</li>
-          <li>List item</li>
-          <li>List item</li>
-          <li>List item. This is a list item with a much longer content.  Sometimes a list item is long enough that it will span multiple lines.  This is an example of such an item, to show the line height, padding, and margin that are applied to this list element when it is long enough to wrap to a new line.</li>
-          <li>List item</li>
-        </ul>
-      </div>
-      <hr>
-      <div class="callout">
         <h4>Expanded Unordered Lists</h4>
         <p>When you require additional space between very long, complex list items -- such as those where multiple paragraphs are in a single list item, use <code>p</code> tags.</p>
         <ul>
@@ -787,33 +839,11 @@ There are several text and typography styles to choose from, although some style
           <p>Suspendisse lobortis mi eu leo viverra volutpat. Pellentesque velit ante, vehicula sodales congue ut, elementum a urna. Cras tempor, ipsum eget luctus rhoncus, arcu ligula fermentum urna, vulputate pharetra enim enim non libero.</p></li>
         </ul>
       </div>
-      <hr>
-      <div class="callout">
-        <h4>News Clippings List</h4>
-        <p>Similar to the Divided List, but more spread out to give more room to the additional data that blog headlines include.</p>
-        <ul class="no-bullet clipping-block">
-          <li>
-            <div class="article-date">November 23, 2016 | <span  class="article-category">Notable</span></div>
-            <h3 class="article-headline"><a href="#">A Day for Sharing and Giving Thanks</a></h3>
-            <p>Family and friends. Marshmallows on sweet potatoes. Green bean casserole. Pie. A food-induced nap, followed by more pie. Football all day. Thanksgiving is a time to step back from our day-to-day and appreciate what and who we have in our lives. </p>
-          </li>
-          <li>
-            <div class="article-date">November 21, 2016 | <span  class="article-category">Rental Housing</span></div>
-            <h3 class="article-headline"><a href="#">The Rental Experience is Satisfying and More Affordable Than Owning</a></h3>
-            <p>Freddie Mac's September survey of the nation's renters saw an increase in the percentage who said they are satisfied with the rental experience and a steady majority who expect to rent their next residence. </p>
-          </li>
-          <li>
-            <div class="article-date">November 18, 2016 | <span  class="article-category">Notable</span></div>
-            <h3 class="article-headline"><a href="#">This Week's Housing Headlines</a></h3>
-            <p>Tenants are concerned about rising rents, but that's not the only expense they're keeping their eye on. Find that story and other highlights from the week in our headlines roundup. </p>
-          </li>
-        </ul>
-      </div>
     </div>
   </li>
   <li class="accordion-item" data-accordion-item>
-    <a class="accordion-title" href="#typography" id="typography-heading" aria-controls="typography" role="tab">Definition Lists</a>
-    <div class="accordion-content" data-tab-content id="typography" aria-labelledby="typography-heading" role="tabpanel">
+    <a class="accordion-title" href="#list5" id="list-heading5" aria-controls="list5" role="tab">Definition Lists</a>
+    <div class="accordion-content" data-tab-content id="list5" aria-labelledby="list-heading5" role="tabpanel">
       <p>A definition list (<code>dl</code>) is used to display name-value pairs, like metadata or a dictionary definition. Each term (<code>dt</code>) is paired with one or more definitions (<code>dd</code>).  Add class <code>.glossary</code> to the <code>dl</code> to indent the definitions.</p>
       <hr>
       <div class="callout">
@@ -843,61 +873,82 @@ There are several text and typography styles to choose from, although some style
     </div>
   </li>
   <li class="accordion-item" data-accordion-item>
-    <a class="accordion-title" href="#typography15" id="typography15-heading" aria-controls="typography15" role="tab">Text Weight &amp; Size</a>
-    <div class="accordion-content" data-tab-content id="typography15" aria-labelledby="typography15-heading" role="tabpanel">
-      <div class="callout">
-        <h5>Emphasized Text</h5>
-        <p>Use <code>&lt;strong&gt;</code> and <code>&lt;em&gt;</code> to add emphasis to standard text.</p>
-        <p>This is <strong>content inside a &lt;strong&gt; element</strong> in a regular sentence.</p>
-        <p>This is <em>content inside an &lt;em&gt; element</em> in a regular sentence.</p>
-      </div>    
-      <hr>
-      <div class="callout">
-        <h5>Text Weight</h5>
-        <p>When you need to change the weight of text without changing it's emphasis, add class <code>.weight-xxx</code> (where xxx = light, normal, medium, bold, or black).  These classes can be nested as needed to create variation.</p>
-        <ol>
-        <li class="weight-light">This is class weight-light (300), and <span class="weight-bold">This is class weight-bold (700)</span> inside of it.</li>
-        <li class="weight-normal">This is class weight-normal (400), and <span class="weight-black">This is class weight-black (900)</span> inside of it.</li>
-        <li class="weight-medium">This is class weight-medium (500), and <span class="weight-light">This is class weight-light (300)</span> inside of it.</li>
-        <li class="weight-bold">This is class weight-bold (700), and <span class="weight-normal">This is class weight-normal (400)</span> inside of it.</li>
-        <li class="weight-black">This is class weight-black (900), and <span class="weight-medium">This is class weight-medium (500)</span> inside of it.</li>
-      </div>   
-      <hr>
-      <div class="callout"> 
-        <h5>Text Size</h5>
-        <p>Use these styles you want to adjust the font size of an item up or down.</p>
-        <p>This is <span class="enlarge">class enlarge -- it bumps up the size</span> of the current text.</p>
-        <p>This is <span class="reduce">class reduce -- it bumps down the size</span> of the current text.</p>
-        <p>This is <span class="stat">class stat</span> it bumps up the size of a single data point to highlight it.</p>  
+    <a class="accordion-title" href="#list6" id="list-heading6" aria-controls="list6" role="tab">Divided Lists</a>
+    <div class="accordion-content" data-tab-content id="list6" aria-labelledby="list-heading6" role="tabpanel">      
+      <p>To add dividers between items in a list, add the class <code>.list-divided</code> (for light backgrounds) or <code>.list-divided-white</code> (for dark backgrounds) to the <code>ul</code> or <code>ol</code> tag.</p>
+      <p>The spacing is looser for `.list-divided` than it is for `.list-divided-white`.</p>
+      <p>On unordered lists, the dividers are typically used along with the <code>.no-bullet</code> class.</p>
+      <div class="row">
+        <div class="column medium-6">
+        <h5>Unordered Divided Lists</h5>
+          <div class="callout"> 
+            <ul class="list-divided no-bullet">
+              <li>List item</li>
+              <li>List item</li>
+              <li>List item</li>
+              <li>List item</li>
+            </ul>
+          </div> 
+          <div class="callout background-gray"> 
+            <ul class="list-divided-white no-bullet">
+              <li>List item</li>
+              <li>List item</li>
+              <li>List item</li>
+              <li>List item</li>
+            </ul>
+          </div>
+        </div>
+        <div class="column medium-6">
+        <h5>Ordered Divided Lists</h5>
+          <div class="callout">   
+            <ol class="list-divided">
+              <li>List item</li>
+              <li>List item</li>
+              <li>List item</li>
+              <li>List item</li>
+            </ol>
+          </div>
+          <div class="callout background-gray">   
+            <ol class="list-divided-white">
+              <li>List item</li>
+              <li>List item</li>
+              <li>List item</li>
+              <li>List item</li>
+            </ol>
+          </div>
+        </div>
       </div>
+    </div>
+  </li>
+  <li class="accordion-item" data-accordion-item>
+    <a class="accordion-title" href="#list7" id="list-heading7" aria-controls="list7" role="tab">News Clipping Lists</a>
+    <div class="accordion-content" data-tab-content id="list7" aria-labelledby="list-heading7" role="tabpanel">      
+      <p>Similar to the Divided List, but more spread out to give more room to the additional data that blog headlines include.</p>
+      <p>Variations of this design also exist for <a href="#sidebar-modules">sidebar modules</a>.</p>
+      <div class="callout">       
+        <ul class="no-bullet clipping-block gutter-bottom">
+          <li><div class="article-date-lg">January 18, 2017</div>
+            <h3 class="article-headline"><a href="#">Freddie Mac Forgoes Issuing a Reference Notes Security on its January 18, 2017 Announcement Date</a></h3>
+            <p>Freddie Mac announced today that it will forgo issuing a Reference Notes security on its Jan. 18, 2017 announcement... <a href="#">More</a></p>
+          </li>
+          <li><div class="article-date-lg">January 18, 2017</div>
+            <h3 class="article-headline"><a href="#">Freddie Mac to Delist from Luxembourg Stock Exchange </a></h3>
+            <p>Freddie Mac  announced that its request to delist its debt and mortgage securities from the Luxembourg Stock Exchange was granted... <a href="#">More</a></p>
+          </li>
+          <li><div class="article-date-lg">January 18, 2017</div>
+            <h3 class="article-headline"><a href="#">Mortgage Rates Lower for Third Consecutive Week </a></h3>
+            <p>Freddie Mac  today released the results of its Primary Mortgage Market Survey&reg; (PMMS&reg;), showing average mortgage rates moving... <a href="#">More</a></p>
+          </li>
+          <li><div class="article-date-lg">January 17, 2017</div>
+            <h3 class="article-headline"><a href="#">Freddie Mac Announces Pricing of $198.5 Million Multifamily Small Balance Loan Securitization </a></h3>
+            <p>Freddie Mac  announces the pricing of the SB26 offering, a multifamily mortgage-backed securitization backed by small balance... <a href="#">More</a></p>
+          </li>
+        </ul>
+      </div>  
     </div>
   </li>
 </ul>
 ```
-
-
-
-# Text Alignment
-
-The default text alignment for most containers is left.
-- You can change the text alignment of an element by adding `.text-left`, `.text-right`, or `.text-center` to an element.
-- You can shift alignment at different breakpoints by adding a breakpoint to the front of a text alignment class. For example, `.medium-text-center` will keep text left-aligned on the smallest screens, but switch to center-aligned on medium screens and larger.
-
-```html
-<p class="text-left"><strong>This text is left-aligned.</strong> </p>
-<p class="medium-text-right"><strong>This text is right-aligned</strong> at medium screen widths and larger.</p>
-<p class="text-center"><strong>This text is center-aligned.</strong> </p>
-```
-
-<div class="callout background-concrete">
-  <p class="text-left"><strong>This text is left-aligned.</strong> </p>
-</div>
-<div class="callout background-concrete">
-  <p class="medium-text-right"><strong>This text is right-aligned</strong> at medium screen widths and larger.</p>
-</div>
-<div class="callout background-concrete">
-  <p class="text-center"><strong>This text is center-aligned.</strong> </p>
-</div>
 
 
 
@@ -992,7 +1043,7 @@ Callouts can be sized using the `.small`, `.large` and `.xlarge` classes. These 
   </div>
   <div class="medium-8 columns">
     <div class="callout background-purple large">
-      <p>This is a callout with class of large. It has more padding between the contents and the edge of the container, and the text is larger.</p>
+      <p>This is a callout with class of large. It has more padding between the contents and the edge of the container.</p>
     </div>
   </div>  
 </div>
@@ -1069,8 +1120,8 @@ Pair the callout with the [close button](#close-button) component and `data-clos
 ```html_example
 <ul class="no-bullet">
 <li><a href="#">standard link</a></li>
-<li><a href="#" class="icon">link with icon <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500"><path d="M86.4 480h339.2c12.3 0 22.4-9.9 22.4-22.1V246c0-12.2-10-22-22.4-22H404v-30.9c0-41.5-16.2-87.6-42.6-115.4-26.3-27.8-64-45.7-105.3-45.7h-.1-.1c-41.3 0-79 17.9-105.3 45.6C124.2 105.4 108 151.5 108 193v31H86.4C74 224 64 233.9 64 246v211.9c0 12.2 10 22.1 22.4 22.1zM161 193.1c0-27.3 9.9-61.1 28.1-80.3v-.3C206.7 93.9 231 83 255.9 83h.2c24.9 0 49.2 10.9 66.8 29.5v.2l-.1.1c18.3 19.2 28.1 53 28.1 80.3V224H161v-30.9z"/></svg></a></li>
-<li><a href="#" class="icon secondary">secondary link with icon <svg xmlns="http://www.w3.org/2000/svg" viewBox="60 0 450 480"><path d="M298.3 256L131.1 81.9c-4.2-4.3-4.1-11.4.2-15.8l29.9-30.6c4.3-4.4 11.3-4.5 15.5-.2L380.9 248c2.2 2.2 3.2 5.2 3 8.1.1 3-.9 5.9-3 8.1L176.7 476.8c-4.2 4.3-11.2 4.2-15.5-.2L131.3 446c-4.3-4.4-4.4-11.5-.2-15.8L298.3 256z"/></svg></a></li>
+<li><a href="#" class="icon-chevron-right">link with css-based icon</a></li>
+<li><a href="#" class="icon">link with inline svg icon <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" style="vertical-align: baseline;"><path d="M86.4 480h339.2c12.3 0 22.4-9.9 22.4-22.1V246c0-12.2-10-22-22.4-22H404v-30.9c0-41.5-16.2-87.6-42.6-115.4-26.3-27.8-64-45.7-105.3-45.7h-.1-.1c-41.3 0-79 17.9-105.3 45.6C124.2 105.4 108 151.5 108 193v31H86.4C74 224 64 233.9 64 246v211.9c0 12.2 10 22.1 22.4 22.1zM161 193.1c0-27.3 9.9-61.1 28.1-80.3v-.3C206.7 93.9 231 83 255.9 83h.2c24.9 0 49.2 10.9 66.8 29.5v.2l-.1.1c18.3 19.2 28.1 53 28.1 80.3V224H161v-30.9z"/></svg></a></li>
 </ul>
 ```
 
@@ -1426,15 +1477,15 @@ Use this hero on Blog article pages.  Elements inside the hero include the date,
 
 ---
 
-## Executive Perspectives Heros
+## Perspectives Heros
 
-Use this hero on Executive Perspectives article pages.  Elements include the label "Executive Perspectives", the date, the title, the author's image, the author's name, and the author's title.
+Use this hero on Perspectives article pages.  Elements include the label "Perspectives", the date, the title, the author's image, the author's name, and the author's title.
 
 ```html
 <div class="perspectives-detail-hero hero-blended">
   <div class="row">
     <div class="column hero-blended-content">
-      <div><strong>Executive Perspectives</strong></div>
+      <div><strong>Perspectives</strong></div>
       <div class="hero-date">August 9, 2016</div>
       <h1 class="hero-title">Three Reasons Why Baby Boomer Homeowners are a Market to Watch</h1>
       <figure class="avatar">
@@ -1455,7 +1506,7 @@ Use this hero on Executive Perspectives article pages.  Elements include the lab
   <div class="perspectives-detail-hero hero-blended">
     <div class="row">
       <div class="column hero-blended-content">
-        <div><strong>Executive Perspectives</strong></div>
+        <div><strong>Perspectives</strong></div>
         <div class="hero-date">August 9, 2016</div>
         <h1 class="hero-title">Three Reasons Why Baby Boomer Homeowners are a Market to Watch</h1>
         <figure class="avatar">
@@ -1539,7 +1590,7 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
 
 ## Perspective Cards
 
-<p>This style of card is used for Executive Perspectives articles.</p>
+<p>This style of card is used for Perspectives articles.</p>
 
 ```html_example
 <div class="row medium-up-2 xlarge-up-4 perspectives" data-equalizer data-equalize-by-row="true">
@@ -1847,7 +1898,7 @@ To select a specific background, include `.background-xxx` class (where xxx is g
       <section class="sidebar background-yellow">
         <div class="row">
           <h2>Trending Now</h2>
-          <ul class="list-divided no-bullet lead">
+          <ul class="list-divided-white no-bullet lead">
             <li><a href="#">Credit Smart</a></li>
             <li><a href="#">Education &amp; Tools</a></li>
             <li><a href="#">Fraud</a></li>
@@ -1871,13 +1922,12 @@ To select a specific background, include `.background-xxx` class (where xxx is g
     <aside class="column">
       <section class="sidebar background-primary">
         <div class="row">
-          <div class="sidebar-txt">
-            <h2 class="sidebar-subtitle">Get The Weekly Roundup</h2>
-            <p>Sign up for the <strong>Weekly Roundup</strong> and get Freddie Mac blog articles delivered to your inbox.</p>
-            <form class="form outline">
-              <p><input type="email" placeholder="Your Email Address"></p>
-              <p><a class="primary button expanded" href="#">Sign Up</a></p>
-            </form>
+          <div class="column">
+            <div class="sidebar-txt">
+              <h2 class="sidebar-title">Connect with Us</h2>
+              <p>Sign up to get the latest <strong>Lorem Ipsum updates</strong> in your inbox.</p>      
+            </div>
+            <p><a class="primary button" href="#">Email Alert</a> <a class="hollow button" href="#">RSS Feeds</a></p>
           </div>
         </div>
       </section>
@@ -1897,7 +1947,7 @@ To select a specific background, include `.background-xxx` class (where xxx is g
         <section class="sidebar background-gray">
           <div class="row">
             <h2>RSS Blog Feeds</h2>
-            <ul class="list-divided no-bullet lead list-rss">
+            <ul class="list-divided-white no-bullet lead list-rss">
               <li><a href="#">All Posts</a></li>
               <li><a href="#">Homeownership</a></li>
               <li><a href="#">Rental Housing</a></li>
@@ -1923,7 +1973,7 @@ Note: The news release lists are automated by MarketWire.
     <aside class="column">
       <section class="sidebar background-concrete">
         <div class="row">
-          <h2 class="sidebar-subtitle">Recent News</h2>
+          <h2 class="sidebar-title">Recent News</h2>
           <ul class="list-divided no-bullet">
             <li><a href="#">08/08/16 -  Freddie Mac (OTCQB: FMCC) today issued the company's stress test results for the severely adverse scenario conducted under FHFA's rule...</a></li>
             <li><a href="#">08/02/16 -  Freddie Mac (OTCQB: FMCC) today reported its second quarter 2016 financial results and filed its quarterly Form 10-Q with the U.S. Securities...</a></li>
@@ -1940,6 +1990,8 @@ Note: The news release lists are automated by MarketWire.
 
 ## Sidebar Featured Article
 
+<p>To select the background color, include `.background-xxx` class (where xxx is green, orange, primary, blue, teal, gray, yellow, red, or purple) on the `.sidebar-feature` container and include a background image in the `.feature-background` container.</p>
+
 ```html_example
 <div class="two-column-layout content-band">
   <div class="row two-column-row"> 
@@ -1948,10 +2000,23 @@ Note: The news release lists are automated by MarketWire.
         <div class="feature-background" style="background-image: url('/images/feature-bg.jpg')"></div>
         <div class="row">
           <div class="sidebar-txt">
-            <div class="article-category">Featured Insight</div>
-            <h3 class="sidebar-subtitle">Life's a Beach</h3>
+            <p class="article-category">Insight <span class="weight-light">| November 30, 2016</span></p>
+            <h3 class="sidebar-title">Life's a Beach</h3>
             <p class="lead">So you've always dreamed of living at the beach, but you're discouraged by the high price of beachfront property? Not to worry. We've found just the place for you.  </p>
             <p><a class="hollow button expand" href="#">Read More</a></p>
+          </div>
+        </div>
+      </section>
+      <section class="sidebar background-purple sidebar-feature">
+        <div class="feature-background" style="background-image: url('/images/research/featured-background.jpg')"></div>
+        <div class="row">
+          <div class="column">
+            <div class="sidebar-txt">
+            <p class="article-category">Insight <span class="weight-light">| November 30, 2016</span></p>
+            <h3 class="sidebar-title">Interest Rates Heading Higher. What That Means for Housing.</h3>
+              <p>Interest rates surged higher over the past two weeks following the U.S. presidential election.  The 10-year Treasury closed at 2.35 percent on November 18, 2016, up over 50 basis points... </p>
+              <p><a class="hollow button" href="#">Read More</a></p>
+            </div>
           </div>
         </div>
       </section>
@@ -1964,39 +2029,42 @@ Note: The news release lists are automated by MarketWire.
 
 ## Sidebar Posts with Thumbnail
 
+Refer to the Media Object section for more details about this markup.
+
 ```html_example
 <div class="two-column-layout content-band">
   <div class="row two-column-row"> 
     <aside class="column">
       <section class="sidebar background-concrete">
         <div class="row">
-          <h2 class="sidebar-subtitle">Recent Posts</h2>
-            <ul class="sidebar-media no-bullet">
-              <li class="media-object">
-                <div class="media-object-section">
+          <div class="column">
+            <h2 class="sidebar-title">Recent Posts</h2>
+            <ul class="list-divided no-bullet">
+              <li class="media-object blurb-leads-image">
+                <div class="media-object-section">  
                   <a class="overlay" href="#">
                     <img src="/images/blog/post-1.jpg" alt="Post Img" />
-                </a>
+                  </a>
                 </div>
                 <div class="media-object-section">
                   <div class="article-date">May 9, 2016</div>
-                  <h3 class="article-headline-sidebar"><a href="#">Homework and a Home Purchase</a></h3>
+                  <h3 class="sidebar-headline"><a href="#">Homework and a Home Purchase</a></h3>
                   <div class="article-category">Homeownership</div>
                 </div>
               </li>
-              <li class="media-object">
-                <div class="media-object-section">
+              <li class="media-object blurb-leads-image">
+                <div class="media-object-section">  
                   <a class="overlay" href="#">
                     <img src="/images/blog/post-2.jpg" alt="Post Img" />
                   </a>
                 </div>
-                <div class="media-object-section">
+                <div class="media-object-section">  
                   <div class="article-date">May 2, 2016</div>
-                  <h3 class="article-headline-sidebar"><a href="#">Law Enforcement Cracking Down on Home Rental Scams</a></h3>
+                  <h3 class="sidebar-headline"><a href="#">Law Enforcement Cracking Down on Home Rental Scams</a></h3>
                   <div class="article-category">Rental Housing</div>
                 </div>
               </li>
-              <li class="media-object">
+              <li class="media-object blurb-leads-image">
                 <div class="media-object-section">
                   <a class="overlay" href="#">
                     <img src="/images/blog/post-3.jpg" alt="Post Img" />
@@ -2004,11 +2072,12 @@ Note: The news release lists are automated by MarketWire.
                 </div>
                 <div class="media-object-section">
                   <div class="article-date">April 23, 2016</div>
-                  <h3 class="article-headline-sidebar"><a href="#">A Slow Start to the Best Year in Home Sales in a Decade</a></h3>
+                  <h3 class="sidebar-headline"><a href="#">A Slow Start to the Best Year in Home Sales in a Decade</a></h3>
                   <div class="article-category">Research &amp; Analysis</div>
                 </div>
               </li>
             </ul>
+          </div>
         </div>
       </section>
     </aside>
@@ -2807,6 +2876,84 @@ By default, table rows are striped. There's an `.unstriped` class to remove the 
     </tr>
   </tfoot>
 </table>
+
+---
+
+## Research Sidebar Tables
+
+Research landing page has custom styled tables, which can be achieved by applying class `.research-table` to the table.
+
+```html_example
+<div class="two-column-layout">
+  <div class="row two-column-row"> 
+    <aside class="column">  
+      <section class="sidebar background-concrete">
+        <div class="row">
+          <div class="column">
+            <ul class="list-divided no-bullet">
+              <li>
+                <table class="research-table">
+                  <thead>
+                    <tr>
+                      <th colspan="2" class="text-center uppercase"><span class="weight-light">Full Year YYYY</span> as of Month</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center"><span class="reduce">30-Yr FRM</span><br>
+                        <span class="stat-sm">4.2%</span><br>
+                      </td>
+                      <td class="text-center"><span class="reduce">Originations</span><br>
+                        <span class="stat-sm">1,505 ($B)</span><br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-center"><span class="reduce">Home Sales</span><br>
+                        <span class="stat-sm">5.75 (M)</span><br>
+                      </td>
+                      <td class="text-center"><span class="reduce">House Price Growth</span><br>
+                        <span class="stat-sm">4.7%</span><br>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </li>
+              <li>
+                <table class="research-table">
+                  <thead>
+                    <tr>
+                      <th colspan="3" class="text-center uppercase"><span class="weight-light">Average Rates</span> as of Date</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center">
+                        <span class="reduce">30-Yr FRM</span><br>
+                        <span class="stat-sm">4.19%</span><br>
+                        <span class="reduce"><strong>0.5</strong> Fees/<wbr>Points</wbr></span>
+                      </td>
+                      <td class="text-center">
+                        <span class="reduce">15-Yr FRM</span><br>
+                        <span class="stat-sm">3.41%</span><br>
+                        <span class="reduce"><strong>0.5</strong> Fees/<wbr>Points</wbr></span>
+                      </td>
+                      <td class="text-center">
+                        <span class="reduce">5/1-Yr ARM</span><br>
+                        <span class="stat-sm">3.23%</span><br>
+                        <span class="reduce"><strong>0.4</strong> Fees/<wbr>Points</wbr></span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </aside>
+  </div>
+</div>
+```
 
 
 

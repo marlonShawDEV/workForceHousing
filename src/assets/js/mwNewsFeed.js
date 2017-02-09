@@ -9,11 +9,11 @@ function convertDate(dt) {
   return str;
 }
 function tidyBlurb(str){
-  var tidy = str.replace('(OTCQB: FMCC)','').replace(/\s*MCLEAN,\s*VA--/,'').replace(/Marketwired\s*-\s*/,'').replace(/\s*\(.{3}\s+\d\d?, \d{4}\)\s*-?\s*/,'').replace(/^@/, '').replace(/@/g, '&reg;');
+  var tidy = str.replace('(OTCQB: FMCC)','').replace(/\s*MCLEAN,\s*VA--/,'').replace(/Marketwired\s*-\s*/,'').replace(/\s*\(.{3}\s+\d\d?, \d{4}\)\s*-?\s*/,'').replace(/@*\s*Freddie\s+Mac/g, ' Freddie Mac').replace(/@/g, '&reg;');
   return tidy;
 }
 function getMediaRoomData() {
-  var mwReq = $.getJSON("http://freddiemac.mwnewsroom.com/scripts/json/js?max=10", function(data) {
+  var mwReq = $.getJSON("//freddiemac.mwnewsroom.com/scripts/json/js?max=10", function(data) {
       console.log( "success" );
       useMediaRoomData(data);      
   }).done(function() {
@@ -27,7 +27,7 @@ function getMediaRoomData() {
 }
   
 function getHomePageData() {
-  var jqxhr = $.getJSON("http://freddiemac.mwnewsroom.com/scripts/json/js?max=1", function(data) {
+  var jqxhr = $.getJSON("//freddiemac.mwnewsroom.com/scripts/json/js?max=1", function(data) {
       console.log( "success" );
       useHomePageData(data);
   }).done(function() {
@@ -44,13 +44,14 @@ function useMediaRoomData(data) {
     $curr = data.releases[i];
     $blurb = tidyBlurb($curr.intro); 
     if(i == 0)  {
-      $feature = '<div class="headline-featured"><div class="article-date-lg">' + convertDate($curr.date) + '</div><h2><a href="' + $curr.url + '">' + $curr.title + '</a></h2><p class="lead">' + $blurb + '</p><p><a class="button hollow" href="' + $curr.url + '">Read More</a></p></div>';
+      $feature = '<div class="callout large background-primary release-featured"><div class="article-date-lg">' + convertDate($curr.date) + '</div><h2><a href="' + $curr.url + '">' + $curr.title + '</a></h2><p class="lead">' + $blurb + '</p><p><a class="button hollow" href="' + $curr.url + '">Read More</a></p></div>';
+      $('.recent-headlines-container:first').before($feature);
     }  
     else {
       $html += '<li><div class="article-date-lg">' + convertDate($curr.date) + '</div><h3 class="article-headline"><a href="' + $curr.url + '">' + $curr.title + '</a></h3><p>' + $blurb + ' <a href="' + $curr.url + '">More</a></p></li>';    
     }
   }
-  $('.recent-headlines-container:first').before($feature).html($html);   
+  $('.recent-headlines-container:first').html($html);   
 }
 
 function useHomePageData(data) {

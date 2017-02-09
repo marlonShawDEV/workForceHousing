@@ -1,9 +1,14 @@
-.card,
-.article-headline-sidebar {
-  a:not([class]) {
+h2, h3, h4 {
+ > a { display: inline-block; }
+}
+
+.card {
+  a {
     color: inherit;
-    text-decoration: none;
   }
+}
+.primary-color {
+  color: $primary-color;  // may not be needed
 }
 .video-modal {
   position: relative;

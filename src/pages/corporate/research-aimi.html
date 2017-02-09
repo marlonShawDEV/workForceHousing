@@ -1,0 +1,57 @@
+﻿---
+title: "AIMI"
+layout: corporate-2col
+---
+<div class="page-title">
+  <div class="row column">  
+    <h1>AIMI</h1>
+  </div>
+</div>
+
+<!-- START TWO COLUMN LAYOUT NO HERO -->
+<div class="two-column-layout">
+  <div class="row two-column-row">
+    <!-- START MAIN PAGE CONTENT -->
+    <main class="column">
+      <div class="jut">
+        <div id="tableau-viz">
+          
+        </div>
+      </div>
+
+
+      <h6>Disclaimer</h6>
+      <p class="reduce">Opinions, estimates, forecasts and other views contained in this page are those of the Freddie Mac Multifamily Research and Modeling Department, do not necessarily represent the views of Freddie Mac or its management, should not be construed as indicating Freddie Mac's business prospects or expected results, and are subject to change without notice. Although the Multifamily Research and Modeling Department attempts to provide reliable, useful information, it does not guarantee that the information is accurate, current or suitable for any particular purpose.</p>
+
+      <p class="reduce">&copy; 2016 by Freddie Mac. Information from this page may be used with proper attribution.</p> 
+ 
+    </main>
+    <!-- END MAIN PAGE CONTENT -->
+    <!-- START RIGHT SIDEBAR -->
+    <aside class="column"> 
+        {{> sidebar-featured-research}} 
+        {{> sidebar-posts-research}} 
+        {{> sidebar-cta-research}} 
+        {{> sidebar-contact-research}} 
+     </aside>
+    <!-- END RIGHT SIDEBAR -->
+  </div>
+</div>
+<!-- END TWO COLUMN LAYOUT  -->
+{{> share-widget}}
+
+{{> footer-promo-research-signup}}
+
+<script type="text/javascript"> 
+function loadVis() {
+  if ($('#tableau-viz').width() > 624) { 
+    $.getScript("https://public.tableau.com/javascripts/api/viz_v1.js");
+    $("#tableau-viz").html("<div class='tableauPlaceholder' id='viz1482244640310' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;In&#47;InvestmentIndex2016Q3&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='854' height='1169' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='InvestmentIndex2016Q3&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;In&#47;InvestmentIndex2016Q3&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>");
+  }
+  else {
+    $("#tableau-viz").html("<p><a href='http://public.tableau.com/views/InvestmentIndex2016Q3/Dashboard1?:embed=n&:loadOrderID=0&:display_count=yes'>View the visual on Tableau.</a></p>");
+  }
+}
+
+window.onload = loadVis;
+</script>

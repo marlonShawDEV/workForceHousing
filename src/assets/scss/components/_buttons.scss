@@ -129,7 +129,9 @@ $button-transition: background-color 0.25s ease-out, color 0.25s ease-out !defau
     &.#{$name} {
       background: $color;
       border-color: $color;
-      &:hover {
+      &:hover,
+      &:focus,
+      &:active {
         background: $button-color;
         color: $color;
       }

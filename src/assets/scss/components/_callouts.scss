@@ -4,7 +4,7 @@
   position: relative;
   padding: $callout-padding;
   &.large {
-    padding: $callout-padding * 2;
+    padding: $callout-padding * 1.5;
   }
   &.small {
     padding: $callout-padding * 0.5 $callout-padding * 0.75;

@@ -76,7 +76,7 @@ $('[href]').filter('.offsite, [rel="external"]').each(function(){
 });
 // process file markers
 if (FM.form.pathElements[0] !== "search") { 
-	$(".content-band, .two-column-layout").find("a[href]").not('.plain').not(":has(img)").not(":has(.callout)").not(":has(.card)").filter(function(){return (/.+\.(pdf|zip|mp3|mov|docx?|xls[mx]?|pptx?)/i).test($(this).attr('href'));}).each(
-	   function(){ var h=$(this).attr('href').toLowerCase().replace(/.+\.(pdf|zip|mp3|mov|docx?|xls[mx]?|pptx?).*/, "$1"); $(this).after(" <span class='filemarker'>["+h+"]</span>"); 
+	$(".content-band, .two-column-layout").find("a[href]").not('.plain').not(":has(img)").not(":has(.callout)").not(":has(.card)").filter(function(){return (/.+\.(pdf|zip|mp3|mov|csv|docx?|xls[mx]?|pptx?)/i).test($(this).attr('href'));}).each(
+	   function(){ var h=$(this).attr('href').toLowerCase().replace(/.+\.(pdf|zip|mp3|mov|csv|docx?|xls[mx]?|pptx?).*/, "$1"); $(this).after(" <span class='filemarker'>["+h+"]</span>"); 
 	});
 } 

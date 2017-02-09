@@ -1,34 +1,26 @@
+.background-green,
+.background-orange,
+.background-yellow,
+.background-red,
+.background-purple,
+.background-blue,
+.background-teal,
+.background-gray,
+.background-primary {
+  color: $white;
+  a {
+    @include anchor-on-dark(none);
+  }
+}
 @each $name, $color in $orbit-palette {    
   .background-#{$name} {      
     background-color: $color; 
-    color: $white;
-    a {
-      @include anchor-on-dark;
-    }
-    .list-divided {
-      @include list-divided(rgba($white, 0.3));
-    }
-    a:hover > &,
-    a:focus > & {
-      background-color: darken(desaturate($color, 3%), 3%);
-    } 
   }
 } 
 .background-concrete {
   background-color: $light-gray;
-  .list-divided { 
-    @include list-divided(darken($light-gray, 5%));
-  }
-  .card,
-  .sidebar,
-  .list-divided  { 
-    a {
-      color: inherit;
-    }
-  }
-  a:hover > &,
-  a:focus > & {
-    background-color: darken(desaturate($light-gray, 3%), 3%);
+  a:not([class]) {
+    color: inherit;
   }
 }
 .background-white {

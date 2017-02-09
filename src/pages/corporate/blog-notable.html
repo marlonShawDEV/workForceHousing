@@ -1,0 +1,34 @@
+﻿---
+title: Blog Notable
+layout: corporate-2col
+---
+
+<div class="page-title">
+  <div class="row column">
+    <h1>Topic: Notable</h1>
+  </div>
+</div>
+<!-- START TWO COLUMN LAYOUT NO HERO -->
+<div class="two-column-layout">
+  <div class="row two-column-row"> 
+    <!-- START MAIN PAGE CONTENT -->
+    <main class="column">      
+      <div class="row small-up-2 xlarge-up-3 jut card-block" data-equalizer data-equalize-by-row="true">
+      {{> blog-cards}}
+      </div>
+    </main>
+    <!-- END MAIN PAGE CONTENT -->
+    <!-- START RIGHT SIDEBAR -->
+    <aside class="column">  
+      {{> sidebar-cta-blog}}
+      {{> sidebar-tags-blog}}
+      {{> sidebar-rss-blog}}
+    </aside>
+    <!-- END RIGHT SIDEBAR -->
+  </div>
+</div>
+<!-- END TWO COLUMN LAYOUT  -->
+
+{{> share-widget}}
+
+

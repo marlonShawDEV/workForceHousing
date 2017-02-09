@@ -11,36 +11,24 @@
     } 
   }  
 }
-
-.headline-featured,    // press release featured item
-.research-featured {   // research featured item
-  min-height: 17.25rem;  
-  padding: 1.625rem 2rem 1.25rem;
-  background-color: $primary-color;
-  color: $white;
+.release-featured,
+.research-featured { 
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: 2rem;
   margin-bottom: 4rem;
-  a {
-    color: inherit;
-  }
   p + p {
     margin-top: $global-margin * 1.5;
-  }
-  .article-category {
-    margin-bottom: 0.5em;
-  }
-}
-.headline-featured {
-  background-position: center center;
-  background-image: linear-gradient(rgba($primary-color, 0.8), rgba($primary-color, 0.8)), url('/images/media/featured-background.jpg');
-}
-.research-featured {
+  } 
+}  
+.research-featured {  // research featured item  
   background-position: center top;
   background-image: linear-gradient(rgba($primary-color, 0.8), rgba($primary-color, 0.8)), url('/images/research/featured-research-background.jpg');
-
+}
+.release-featured {   // press release featured item
+  background-position: center center;
+  background-image: linear-gradient(rgba($primary-color, 0.8), rgba($primary-color, 0.8)), url('/images/media/featured-background.jpg');
 }
 .recent-headlines-container {
   min-height: 40rem;

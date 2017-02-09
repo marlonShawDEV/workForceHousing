@@ -6,3 +6,27 @@ tfoot th:not([class]) {
 table tfoot td {
   font-weight: inherit;
 }
+
+.research-table {
+  color: $fm-gray;
+  border-collapse:collapse;  
+  th, 
+  td {
+    padding: 0.5rem 0.4rem;
+  }
+  thead {
+    background: $primary-color;
+  }
+  strong {
+    font-weight: $global-weight-black;
+  }
+  tbody {
+    border-width: 0px;
+    tr:nth-child(n) {  
+      background: #fff;
+      td {
+        border: 1px solid darken($light-gray, 5.5);
+      }
+    }
+  }
+}

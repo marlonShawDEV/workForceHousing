@@ -22,7 +22,7 @@ ol.reversed {
   }
 }
 ul:not([class]) > li, 
-ol > li {
+ol:not([class]) > li {
   margin-bottom: 0.4375em;
   margin-top: 0.4375em;
 }
@@ -34,20 +34,16 @@ ol > li {
 }
 
 .list-divided {
-  @include list-divided(darken($light-gray, 5%)); 
-  a:not([class]) {
-    text-decoration: none !important;
-  }
+  @include list-divided(darken($light-gray, 5%), $gutter, false);
+}
+
+.list-divided-white {
+  @include list-divided(rgba($white, 0.3), $global-padding/2, false);
 }
 .clipping-block {   // divides blog and news archive entries  
-  li {
-    border-bottom: 1px solid darken($light-gray, 5%); 
-    padding-bottom: $gutter;
-  }
-  > li + li {
-    padding-top: $gutter * 1.5;
-  }
+  @include list-divided(darken($light-gray, 5%), $gutter * 1.5, true);
 } 
+
 dd { 
   margin: 0.25rem 0;
   display: block;

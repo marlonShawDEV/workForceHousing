@@ -17,36 +17,6 @@
     margin-top: 0;
   }
 }
-.sidebar-media {
-  @include list-divided(darken($light-gray, 5%)); 
-  .media-object-section {
-    img {
-      width: rem-calc(95);
-      @include breakpoint(medium) { 
-        width: rem-calc(130);
-      }
-    }
-  }
-  li { 
-    margin-top: 0;
-    margin-bottom: 0;
-    .media-object-section {
-      padding-top: 0.875rem;
-      padding-bottom: 0.875rem;
-    }   
-    &:first-child { 
-      .media-object-section {
-        padding-top: 0;
-      }
-    }   
-    &:last-child { 
-      .media-object-section {
-        padding-bottom: 0;
-      }
-    }
-  }
-}
-
 
 .sidebar-feature {    
   @include breakpoint(large) {

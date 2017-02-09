@@ -165,7 +165,26 @@
     @include breakpoint(xxlarge) { font-size: rem-calc(54); }
   }
 }
-
+.icon-chevron-right {
+  position: relative;
+  color: $anchor-color;
+  &::after {
+    content: ' ';  
+    background: transparent icon(chevron-right, $anchor-color, 1em, 1em) no-repeat right center;    
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    position: relative;
+    bottom: -0.125em;
+    margin-left: 0.5em;
+  }
+  &:hover,
+  &:focus {
+      &::after {
+        background: transparent icon(chevron-right, $anchor-color-hover, 1em, 1em) no-repeat right center;   
+      }
+  }
+}
 .icon-download {
   position: relative;
   color: inherit;

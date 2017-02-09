@@ -65,7 +65,8 @@ PATHS:
     - "src/assets/js/homepageTestimonies_corp.js"
     - "src/assets/js/prepModals.js"
     - "src/assets/js/prepRotators.js" 
-    - "src/assets/js/fakeNav_corp.js"   
+    - "src/assets/js/fakeNav_corp.js" 
+    - "src/assets/js/tertiaryNav_corp.js"   
     - "src/assets/js/appCorp.js"
     - "src/assets/js/blogFeedbackForm_corp.js"
     # "src/assets/js/jQueryUrlShortener.js"  #uncomment for prod code. slows things down to much locally.
