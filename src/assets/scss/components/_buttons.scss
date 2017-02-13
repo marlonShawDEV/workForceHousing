@@ -161,6 +161,12 @@ $button-transition: background-color 0.25s ease-out, color 0.25s ease-out !defau
     vertical-align: bottom;
   }
 }
+span.button {
+  &:hover {
+    background: inherit !important;
+    cursor: initial;
+  }
+}
 .button-group .button {
   border-radius: 0;
 }
