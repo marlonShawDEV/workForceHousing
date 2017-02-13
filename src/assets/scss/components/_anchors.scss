@@ -2,13 +2,37 @@ h2, h3, h4 {
  > a { display: inline-block; }
 }
 
-.card {
-  a {
+.background-green a,
+.background-orange a,
+.background-yellow a,
+.background-red a,
+.background-purple a,
+.background-blue a,
+.background-teal a,
+.background-gray a,
+.background-primary a {
+  @include anchor-on-dark(none);
+}
+.card:not(:hover),
+.background-concrete {
+  a:not(:hover):not(:focus):not(.button) {
     color: inherit;
   }
 }
+.card:hover a:not(.button) {
+  color: $anchor-color-hover;
+}
+.background-white {
+  a:not(.button) {
+    color: $anchor-color;
+    &:hover,
+    &:focus {
+      color: $anchor-color-hover;
+    }
+  }
+}
 .primary-color {
-  color: $primary-color;  // may not be needed
+  color: $primary-color;  // may not be needed?
 }
 .video-modal {
   position: relative;
@@ -40,7 +64,8 @@ h2, h3, h4 {
     width: 100%;
   }
   &:hover,
-  &:focus {
+  &:focus,
+  .card:hover &  {
     color: $white;
     img {
       opacity: 0.22; 

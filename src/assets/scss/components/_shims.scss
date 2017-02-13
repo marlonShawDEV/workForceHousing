@@ -15,7 +15,7 @@
 
 .content-band-inner {
   margin-top: $gutter;
-	@include breakpoint(xlarge) {
+	@include breakpoint(large) {
     margin-top: 2rem; 
 	}
 }

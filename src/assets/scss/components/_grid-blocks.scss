@@ -22,16 +22,65 @@
    
   .center-vertically {
     @include vertical-center;
+  }  
+  .twin-block {
+    display: table;
+    margin: 0;
+    width: 100%; 
+    position: relative;
+    > .twin-col {
+      width: 50%;
+      display: table-cell;
+      position: relative;
+      background-color: inherit;
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: cover; 
+      background-color: inherit;
+      vertical-align: middle;
+    }
+  }
+  .caret-rightside,
+  .caret-leftside  {
+    background-color: inherit;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    vertical-align: middle;  
+  }
+  .caret-leftside {
+    left: 0;
+  }
+  .caret-rightside {
+    right: 0;
+  }
+  .caret-leftside::after,
+  .caret-rightside::after  {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px; 
+    position: absolute;
+    transform: rotate(45deg);
+    background-color: inherit;
+    z-index: 300;
+  }
+  .caret-rightside::after {
+    right: -10px;
+  }
+  .caret-leftside::after {
+    left: -10px;
   }
 }
-  @media print {
-    .grid-block,
-    .mosaic-3 {
-      .row,
-      .column {
-        width: 100% !important;
-        height: auto !important;
-        min-height: auto !important;
-      }
+
+@media print {
+  .grid-block,
+  .mosaic-3 {
+    .row,
+    .column {
+      width: 100% !important;
+      height: auto !important;
+      min-height: auto !important;
     }
-  } 
+  }
+} 

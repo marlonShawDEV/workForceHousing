@@ -55,7 +55,7 @@
     :last-child {
       margin-bottom: 0;
     }
-    @if $last-border == false {
+    @if ($last-border == false) {
       &:last-child {
         padding-bottom: 0;
         border-bottom-width: 0;
@@ -101,7 +101,7 @@
     margin-right: 0.375em;
     position: relative;
     bottom: -0.1em;
-    background: transparent icon(rss-white, $color, 1rem, 1rem, 0, 0, 500, 460) no-repeat center center;
+    background: transparent icon(rss, $color, 1rem, 1rem, 0, 0, 500, 460) no-repeat center center;
   } 
 }
 // staggered mosiac full pattern used below secondary nav/hover and footer:

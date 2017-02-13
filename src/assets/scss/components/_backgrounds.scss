@@ -1,39 +1,17 @@
-.background-green,
-.background-orange,
-.background-yellow,
-.background-red,
-.background-purple,
-.background-blue,
-.background-teal,
-.background-gray,
-.background-primary {
-  color: $white;
-  a {
-    @include anchor-on-dark(none);
-  }
-}
 @each $name, $color in $orbit-palette {    
-  .background-#{$name} {      
+  .background-#{$name} {  
+    color: $white;    
     background-color: $color; 
   }
 } 
 .background-concrete {
   background-color: $light-gray;
-  a:not([class]) {
-    color: inherit;
-  }
 }
 .background-white {
   background: $white;
-  color: $body-font-color;
-  a:not([class]) {
-    color: $anchor-color;
-    &:hover,
-    &:focus {
-      color: $anchor-color-hover;
-    }
-  }
+  color: $body-font-color; // solves for when this is inside another background
 }
 .background-offwhite {
   background: $offwhite;   // is this needed?
+  color: $body-font-color; 
 }

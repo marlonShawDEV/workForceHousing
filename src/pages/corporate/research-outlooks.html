@@ -75,81 +75,9 @@ layout: corporate-2col
     <!-- END MAIN PAGE CONTENT -->
     <!-- START RIGHT SIDEBAR -->
     <aside class="column">  
-      <section class="sidebar background-gray">
-        <div class="row">
-          <div class="column">
-              <h2>Key Market Dashboards</h2>
-          </div>
-        </div>
-      </section>
-      <section class="sidebar background-concrete">
-        <div class="row">
-          <div class="column">
-            <ul class="list-divided no-bullet">
-              <li>
-                <h2 class="sidebar-subtitle">Forecast Snapshot</h2>
-                <table class="research-table">
-                  <thead>
-                    <tr>
-                      <th colspan="2" class="text-center uppercase"><span class="weight-light">Full Year 2017</span> as of January</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="text-center"><span class="reduce">30-Yr FRM</span><br>
-                        <span class="stat-sm">4.2%</span><br>
-                      </td>
-                      <td class="text-center"><span class="reduce">Originations</span><br>
-                        <span class="stat-sm">1,505 ($B)</span><br>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="text-center"><span class="reduce">Home Sales</span><br>
-                        <span class="stat-sm">5.75 (M)</span><br>
-                      </td>
-                      <td class="text-center"><span class="reduce">House Price Growth</span><br>
-                        <span class="stat-sm">4.7%</span><br>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <p><a class="icon-chevron-right" href="/corporate/research-outlooks.html">Current Outlook Commentary & Forecast</a></p>
-              </li>
-              <li>
-                <h2 class="sidebar-subtitle">Primary Mortgage Market Survey<sup>®</sup></h2>
-                <table class="research-table">
-                  <thead>
-                    <tr>
-                      <th colspan="3" class="text-center uppercase"><span class="weight-light">Average Rates</span> as of February 2, 2017</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="text-center">
-                        <span class="reduce">30-Yr FRM</span><br>
-                        <span class="stat-sm">4.19%</span><br>
-                        <span class="reduce"><strong>0.5</strong> Fees/<wbr>Points</wbr></span>
-                      </td>
-                      <td class="text-center">
-                        <span class="reduce">15-Yr FRM</span><br>
-                        <span class="stat-sm">3.41%</span><br>
-                        <span class="reduce"><strong>0.5</strong> Fees/<wbr>Points</wbr></span>
-                      </td>
-                      <td class="text-center">
-                        <span class="reduce">5/1-Yr ARM</span><br>
-                        <span class="stat-sm">3.23%</span><br>
-                        <span class="reduce"><strong>0.4</strong> Fees/<wbr>Points</wbr></span>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <p><a class="icon-chevron-right" href="#">This Week's Survey</a></p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
+      
+        {{> sidebar-featured-research}}
+        {{> sidebar-posts-research}} 
         {{> sidebar-cta-research}} 
         {{> sidebar-contact-research}} 
     </aside>

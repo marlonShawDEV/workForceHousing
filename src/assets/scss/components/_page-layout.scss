@@ -37,7 +37,10 @@
 }
 .content-band {
   margin-top: 2rem;
-  margin-bottom: 4rem; 
+  margin-bottom: $gutter * 1.5; 
+	@include breakpoint(large) {
+    margin-bottom: 4rem; 
+	}
 	@include breakpoint(xlarge) {
      margin-top: rem-calc(55);
     margin-bottom: rem-calc(100); 
@@ -45,7 +48,9 @@
 }
 .two-column-layout{
   > .two-column-row {
-    margin-bottom: 4rem; 
+    @include breakpoint(large) {
+      margin-bottom: 4rem; 
+    }
     @include breakpoint(xlarge) {
       margin-bottom: rem-calc(100); 
     }
