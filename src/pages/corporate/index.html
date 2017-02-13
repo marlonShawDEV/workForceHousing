@@ -16,10 +16,44 @@ layout: corporate-1col
 </div>
 <div class="hero-edge"> </div>
 
-{{> homepage-headlines}}
+<div class="homepage-headlines content-band">
+  <div class="row">
+    <div class="large-5 xlarge-5 medium-offset-1 medium-11 column">
+      <div class="homepage-headlines-dominant">
+        <div class="article-category">Perspectives</div>
+        {{> homepage-headline-perspective}}
+      </div>
+    </div>
+    <div class="large-5 xlarge-4 medium-offset-1 medium-11 end column">
+       <div class="homepage-headlines-subdominant">
+        <div class="homepage-pressrelease">
+          <div class="article-category">News</div>
+          <div class="recent-headline-home"><div class="placeholder"><img class="no-border" src="/images/icon-loading.gif"></div></div>
+          <div class="article-category">Blog</div> 
+            {{> homepage-headline-blog}}
+        </div>
+      </div>
+    </div>  
+  </div>
+</div>
 {{> homepage-business-lines}}
 {{> homepage-business-highlight}}
-{{> homepage-finance}}
+
+<div class="finance-offset">
+  <div class="finance-housing-research">
+    <div class="row finance-buffer">
+      <div class="finance-housing-research-column">
+        {{> homepage-finance-recent}}
+      </div>  
+    </div>
+  </div>
+  <div class="finance-mortgage-market">
+    <div class="row finance-buffer finance-grid" data-equalizer data-equalize-on="xlarge">
+      {{> homepage-finance-pmms}}
+    </div>
+  </div>
+</div>
+
 {{> homepage-testimonials}}
  
 {{>footer-promo-about}}
