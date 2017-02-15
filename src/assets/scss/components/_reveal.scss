@@ -77,14 +77,18 @@
     figcaption {
       font-size: inherit;
       text-align: center;      
-      font-size: rem-calc(20);
       font-weight: $global-weight-medium;
       @extend .orbit-caption;
-      @include breakpoint(small only) {
-        font-size: rem-calc(14);
-        padding: 0.5em;
+      :last-child { 
+        margin-bottom: 0;
+      }     
+      &:not(.reduce) {
+        font-size: rem-calc(20);
+        @include breakpoint(small only) {
+          font-size: rem-calc(14);
+          padding: 0.5em;
+        }
       }
-      :last-child { margin-bottom: 0;}     
     }
     .gallery-previous {  
       @extend %orbit-control;

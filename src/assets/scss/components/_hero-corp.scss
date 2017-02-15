@@ -1,7 +1,7 @@
-// don't print the giant hero stuff, just the text contents
 $hero-opacity: 0.8;
 $hero-blend-color: $primary-color;
 
+// only apply color and backgrounds on screen, not in print
 @media screen {
   .hero {
     background: transparent url('/images/homepage/hero-mobile.jpg') no-repeat top center fixed;

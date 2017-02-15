@@ -7,6 +7,15 @@
   > .row > .column > *:first-child {
     margin-top: 0;
   }
+  blockquote {
+    border-left-width: 0;
+    margin-bottom: 0;
+    padding: rem-calc(8 0 8 0);
+    figcaption & {
+      padding: 0;
+    } 
+  }
+  
 }
 .sidebar-txt {
   max-width: 83%;

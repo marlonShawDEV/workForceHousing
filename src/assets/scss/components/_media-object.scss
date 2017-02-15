@@ -7,7 +7,7 @@
   &:first-child { 
     padding-top: 0;
   }
-  &.blurb-leads-image {   // thus image is inside of nth-child(2n)
+  &.blurb3-leads-image2 {   // thus image is inside of nth-child(2n)
     .media-object-section:nth-child(2n){
       @include breakpoint (medium) { width: rem-calc(325 + 2); }    
       @media screen and (min-width: -zf-bp-to-em(map-get($breakpoints, medium))) and (max-width: -zf-bp-to-em(map-get($breakpoints, medium) + 160px)) {
@@ -38,63 +38,35 @@
       }
     }
   }
-  &.image-leads-blurb {  // thus image is inside of nth-child(2n+1)
+  &.image1-leads-blurb3 {  // thus image is inside of nth-child(2n+1)  
     .media-object-section:nth-child(2n+1){
-      @include breakpoint (medium) { width: rem-calc(325 + 2); }    
-      @media screen and (min-width: -zf-bp-to-em(map-get($breakpoints, medium))) and (max-width: -zf-bp-to-em(map-get($breakpoints, medium) + 160px)) {
-        width: rem-calc(230 + 2); 
+      width: rem-calc(210 + 2);
+      @include breakpoint(small only) {
+        width: rem-calc(150 + 2);
       }
-      @media screen and (min-width: -zf-bp-to-em(map-get($breakpoints, large))) and (max-width: -zf-bp-to-em(map-get($breakpoints, large) + 150px)) {
-        width: rem-calc(230 + 2); 
-      }
-      @media screen and (min-width: -zf-bp-to-em(map-get($breakpoints, large) + 150px)) and (max-width: -zf-bp-to-em(map-get($breakpoints, xlarge))) {
-        width: rem-calc(290 + 2); 
+      @media screen and (max-width: 400px) {  //less than small
+        width: rem-calc(110 + 2);
       }   
     }
     .callout.large & {
       .media-object-section:nth-child(2n+1){ 
-        @include breakpoint (medium) { width: rem-calc(325 + 2 - ($callout-padding * 1.5)); }  
-        // from medium to 160px past medium
-        @media screen and (min-width: -zf-bp-to-em(map-get($breakpoints, medium))) and (max-width: -zf-bp-to-em(map-get($breakpoints, medium) + 160px)) {
-          width: rem-calc(230 + 2 - ($callout-padding * 1.5)); 
-        }
-        // from large to 150px past large
-        @media screen and (min-width: -zf-bp-to-em(map-get($breakpoints, large))) and (max-width: -zf-bp-to-em(map-get($breakpoints, large) + 150px)) {
-          width: rem-calc(230 + 2 - ($callout-padding * 1.5)); 
-        }
-        // from large + 150px to xlarge
-        @media screen and (min-width: -zf-bp-to-em(map-get($breakpoints, large) + 150px)) and (max-width: -zf-bp-to-em(map-get($breakpoints, xlarge))) {
-          width: rem-calc(290 + 2 - ($callout-padding * 1.5)); 
-        }      
+        @include breakpoint (medium) { width: rem-calc(210 + 2 - ($callout-padding * 1.5)); } 
       }
     }
   } 
   .sidebar & {  
-    &.image-leads-blurb:not(.stack-for-small) {
+    &.image1-leads-blurb2 {
       .media-object-section:nth-child(2n+1) {
-        width: rem-calc(130 + 2 + $gutter);             
+        width: rem-calc(130 + 2 + $gutter); 
         // from small to 150px before medium
         @media screen and (min-width: -zf-bp-to-em(map-get($breakpoints, small))) and (max-width: -zf-bp-to-em(map-get($breakpoints, medium) - 150px)) {
           width: rem-calc(98 + 2 + $gutter);  
-        }      
+        }  
         // from large to 80px past large
         @media screen and (min-width: -zf-bp-to-em(map-get($breakpoints, large))) and (max-width: -zf-bp-to-em(map-get($breakpoints, large) + 80px)) {
           width: rem-calc(98 + 2 + $gutter);
         }
-      } 
-    }
-    &.blurb-leads-image:not(.stack-for-small) {
-      .media-object-section:nth-child(2n) {
-        width: rem-calc(130 + 2 + $gutter);             
-        // from small to 150px before medium
-        @media screen and (min-width: -zf-bp-to-em(map-get($breakpoints, small))) and (max-width: -zf-bp-to-em(map-get($breakpoints, medium) - 150px)) {
-          width: rem-calc(98 + 2 + $gutter);  
-        }      
-        // from large to 80px past large
-        @media screen and (min-width: -zf-bp-to-em(map-get($breakpoints, large))) and (max-width: -zf-bp-to-em(map-get($breakpoints, large) + 80px)) {
-          width: rem-calc(98 + 2 + $gutter);
-        }
-      } 
+      }       
     }
   }
 }

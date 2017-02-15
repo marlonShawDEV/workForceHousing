@@ -1,0 +1,26 @@
+.banner {
+  &.diversity {
+    background: $light-gray url('/images/about/diversitybanner.jpg') no-repeat top center / cover;
+    background-size: cover;  
+    min-height: 150px;    
+    padding: rem-calc($gutter $gutter * 1.5);
+    margin-bottom: $gutter * 2;
+    @include breakpoint (medium) {
+      min-height: 240px;
+      padding: rem-calc($gutter * 1.5);
+    }
+    // from 200px before large
+    @media screen and (min-width: -zf-bp-to-em(map-get($breakpoints, large) - 200px)) {
+      min-height: 280px;
+      padding: rem-calc($gutter * 2.5);
+    }
+    @include breakpoint (large) {
+      padding: rem-calc($gutter * 2.5 $gutter * 1.5);
+    }
+    // start at large + 200
+    @media screen and (xlarge) {
+      min-height: 300px;
+      padding: rem-calc($gutter * 2.5);
+    }
+  }
+}

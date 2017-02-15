@@ -15,9 +15,11 @@ figure {
    width: 100%;
   } 
   figcaption {
-    font-size: rem-calc(12);
-    @include breakpoint(medium) {
-      font-size: rem-calc(14);
+    &.reduce {
+      font-size: rem-calc(12);
+      @include breakpoint(medium) {
+        font-size: rem-calc(14);
+      }
     }
   }
   img + figcaption,

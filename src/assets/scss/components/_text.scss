@@ -194,6 +194,20 @@ b {
 		font-size: rem-calc(30);
 	}
 }
+
+.banner-title {
+  font-size: rem-calc(20);
+  font-size: calc(20px +  16 * (100vw - 320px)/1180); 
+  line-height: 1.3;
+  @include breakpoint(xxlarge) {
+		font-size: rem-calc(36);
+	}
+  main & {
+    @include breakpoint(medium only) {
+      font-size: rem-calc(30);
+    }
+  }
+}
 .sidebar-subtitle {
   font-size: rem-calc(17);
   font-size: calc(17px +  7 * (100vw - 320px)/1180); 
@@ -247,6 +261,9 @@ b {
   @include breakpoint(xxlarge) {
 		font-size: rem-calc(22);
 	}
+  + .section-subtitle {
+    margin-top: 0.5em;
+  }
 }
 .article-headline {
   font-size: rem-calc(16);

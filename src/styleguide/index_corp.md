@@ -2040,7 +2040,7 @@ Refer to the Media Object section for more details about this markup.
           <div class="column">
             <h2 class="sidebar-title">Recent Posts</h2>
             <ul class="list-divided no-bullet">
-              <li class="media-object blurb-leads-image">
+              <li class="media-object image1-leads-blurb2">
                 <div class="media-object-section">  
                   <a class="overlay" href="#">
                     <img src="/images/blog/post-1.jpg" alt="Post Img" />
@@ -2052,7 +2052,7 @@ Refer to the Media Object section for more details about this markup.
                   <div class="article-category">Homeownership</div>
                 </div>
               </li>
-              <li class="media-object blurb-leads-image">
+              <li class="media-object image1-leads-blurb2">
                 <div class="media-object-section">  
                   <a class="overlay" href="#">
                     <img src="/images/blog/post-2.jpg" alt="Post Img" />
@@ -2064,7 +2064,7 @@ Refer to the Media Object section for more details about this markup.
                   <div class="article-category">Rental Housing</div>
                 </div>
               </li>
-              <li class="media-object blurb-leads-image">
+              <li class="media-object image1-leads-blurb2">
                 <div class="media-object-section">
                   <a class="overlay" href="#">
                     <img src="/images/blog/post-3.jpg" alt="Post Img" />
