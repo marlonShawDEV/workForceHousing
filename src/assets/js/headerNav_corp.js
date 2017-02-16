@@ -27,7 +27,7 @@ function navExpandAccordions() {
 }
 
 // comment out this section for 2nd testbed
-$('#nav-perspectives, #nav-research, #nav-blog, #nav-news, #nav-about, #subnav-perspectives, #subnav-research, #subnav-blog, #subnav-news, #subnav-about').each(function(){
+$('#nav-perspectives, #nav-research, #nav-blog, #nav-mediaroom, #nav-about, #subnav-perspectives, #subnav-research, #subnav-blog, #subnav-mediaroom, #subnav-about').each(function(){
   $(this).mouseenter(function(){var id = $(this).attr('id'), i = id.match(/^sub/) ? id.replace(/^subnav/,"nav") : id; navHoverOn(i);}
   ).mouseleave(function(){ navHoverOff();})
 });

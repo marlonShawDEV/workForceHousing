@@ -7,41 +7,41 @@ function fakeNav(){
   if (p.match(/blog/)) { 
     $('#nav-blog').children('a').addClass('active');
     $('#subnav-blog').addClass('on').find('.no-bullet').removeClass('hide');
-    if (p.match(/detail|homeownership/)) {$('#subnav-blog-list').find('li').eq(0).children('a').addClass('active');}
-    else if (p.match(/rental/)) {$('#subnav-blog-list').find('li').eq(1).children('a').addClass('active');}
-    else if (p.match(/research/)) {$('#subnav-blog-list').find('li').eq(2).children('a').addClass('active');}
-    else if (p.match(/notable/)) {$('#subnav-blog-list').find('li').eq(3).children('a').addClass('active');}
-    else {$('#subnav-blog-list').find('li').eq(4).children('a').addClass('active');}
+    if (p.match(/detail|homeownership/)) {$('#subnav-blog-homeownership').addClass('active');}
+    else if (p.match(/rental/)) {$('#subnav-blog-rental').addClass('active');}
+    else if (p.match(/research/)) {$('#subnav-blog-research').addClass('active');}
+    else if (p.match(/notable/)) {$('#subnav-blog-notable').addClass('active');}
+    else if (p.match(/archive|harp/)) {$('#subnav-blog-archive').addClass('active');}
   }
   else if (p.match(/about/)) {
     $('#nav-about').children('a').addClass('active');
     $('#subnav-about').addClass('on').find('.no-bullet').removeClass('hide');
-    if (p.match(/leaders/)) {$('#subnav-about-list').find('li').eq(0).children('a').addClass('active');}
-    if (p.match(/business/)) {$('#subnav-about-list').find('li').eq(1).children('a').addClass('active');}
-    if (p.match(/people|employee|supplier/)) {$('#subnav-about-list').find('li').eq(2).children('a').addClass('active');}
-    if (p.match(/communities/)) {$('#subnav-about-list').find('li').eq(3).children('a').addClass('active');}
-    else if (p.match(/governance|annual|agenda|board/)) {$('#subnav-about-list').find('li').eq(4).children('a').addClass('active');}
-    else if (p.match(/investor/)) {$('#subnav-about-list').find('li').eq(5).children('a').addClass('active');}
+    if (p.match(/leaders/)) {$('#subnav-about-leaders').addClass('active');}
+    if (p.match(/business/)) {$('#subnav-about-business').addClass('active');}
+    if (p.match(/people|employee|supplier/)) {$('#subnav-about-people').addClass('active');}
+    if (p.match(/communities/)) {$('#subnav-about-communities').addClass('active');}
+    else if (p.match(/governance|annual|agenda|board/)) {$('#subnav-about-governance').addClass('active');}
+    else if (p.match(/investor/)) {$('#subnav-about-investors').addClass('active');}
   }
   else if (p.match(/perspectives/)) {
     $('#nav-perspectives').children('a').addClass('active');
     $('#subnav-perspectives').addClass('on').find('.no-bullet').removeClass('hide');       
   }
   else if (p.match(/media-/)) {
-    $('#nav-news').children('a').addClass('active');
-    $('#subnav-news').addClass('on').find('.no-bullet').removeClass('hide');
-    if (p.match(/press/)) {$('#subnav-news-list').find('li').eq(1).children('a').addClass('active');}   
-    else {$('#subnav-news-list').find('li').eq(0).children('a').addClass('active');}  
+    $('#nav-mediaroom').children('a').addClass('active');
+    $('#subnav-mediaroom').addClass('on').find('.no-bullet').removeClass('hide');
+    if (p.match(/detail|archive/)) {$('#subnav-mediaroom-archive').addClass('active');}   
+    else if (p.match(/press/)) {$('#subnav-mediaroom-resources').addClass('active');} 
   }
-  else if (p.match(/research-/)) {
+  else if (p.match(/research/)) {
     $('#nav-research').children('a').addClass('active');
     $('#subnav-research').addClass('on').find('.no-bullet').removeClass('hide');
-    if(p.match(/pmms/)) {$('#subnav-research-list').find('li').eq(0).children('a').addClass('active');} 
-    else if (p.match(/detail|insight/)) {$('#subnav-research-list').find('li').eq(1).children('a').addClass('active');} 
-    else if (p.match(/outlook/)) {$('#subnav-research-list').find('li').eq(2).children('a').addClass('active');} 
-    else if (p.match(/consumer/)) {$('#subnav-research-list').find('li').eq(3).children('a').addClass('active');} 
-    else if (p.match(/aimi/)) {$('#subnav-research-list').find('li').eq(4).children('a').addClass('active');}   
-    else if (p.match(/data/)) {$('#subnav-research-list').find('li').eq(5).children('a').addClass('active');}   
+    if(p.match(/pmms/)) {$('#subnav-research-mortgage').addClass('active');} 
+    else if (p.match(/detail|insight/)) {$('#subnav-research-insight').addClass('active');} 
+    else if (p.match(/outlook/)) {$('#subnav-research-outlook').addClass('active');} 
+    else if (p.match(/consumer/)) {$('#subnav-research-consumer').addClass('active');} 
+    else if (p.match(/aimi/)) {$('#subnav-research-indices').addClass('active');}   
+    else if (p.match(/data/)) {$('#subnav-research-datasets').addClass('active');}   
   }
 }
 

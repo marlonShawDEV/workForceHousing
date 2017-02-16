@@ -31,8 +31,7 @@
     position: relative;
   }
 }
-.footer-promo-cta {   
-  text-align: center;
+.footer-promo-cta { 
   width: 100%;      
   @include breakpoint(large) {              
     @include vertical-center;
