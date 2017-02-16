@@ -348,13 +348,16 @@ b {
 		font-weight: $global-weight-bold;
 	}
 }
-.bio-block {  
+.flex-up {  
   font-size: rem-calc(16);
   font-size: calc(16px +  2 * (100vw - 320px)/1180);
   font-weight: $global-weight-normal;
 	@include breakpoint(xxlarge) {
 		font-size: rem-calc(18);
 	}
+  strong { 
+    font-weight: $global-weight-bold; 
+  }
 }
 .article-blurb {
   @include show-for(medium);
@@ -533,15 +536,15 @@ b {
   color: $fm-gray;
   margin: 0.5em 0;
 }
-.card-subtitle-small { 
+.card-subtitle-small {    // currently not used
   color: $fm-gray;
   margin: 0.35em 0;
-  font-size: rem-calc(14px);
+  font-size: rem-calc(14);
   font-weight: $global-weight-normal;
 }
 .card-blurb { 
   @include show-for(medium);
-  font-size: rem-calc(14px);
+  font-size: rem-calc(14);
   margin: 0.5em 0;
 }
 .card-blurb-large {

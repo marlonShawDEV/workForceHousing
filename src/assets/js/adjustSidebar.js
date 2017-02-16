@@ -41,8 +41,9 @@ function initSidebar() {
     }); 
   }
 }  
-
-if($('.grid-2col-blog').find('aside:first').length || $('.grid-2col').find('.tertiary-nav').length) {
-  $(document).ready(initSidebar);  
-}
+$(function(){
+  if($('.grid-2col-blog').find('aside:first').length || $('.grid-2col').find('.tertiary-nav').length) {
+    initSidebar();  
+  }
+});
 

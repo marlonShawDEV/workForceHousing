@@ -6,7 +6,6 @@ function closestBlockParent(item) {
   });  
 }
 
-
 //  prep content for modals by adding buttons
 function preReveal() {
   //automate insertion of Close Buttons
@@ -42,7 +41,8 @@ function preRevealImage() {
     obj.find('img:first').after(btnClose);
     obj.attr('data-animation-in', "scale-in-up").attr('data-animation-out', "scale-out-down").addClass('fast');
     $('a[data-open="'+i+'"][href]').on("click",function(e){ 
-      e.preventDefault();
+      var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth; 
+      if (w > 470) { e.preventDefault(); }      
     });    
   }); 
 }
@@ -85,7 +85,8 @@ function preRevealGallery() {
       obj.find('figure').append(btnNext, btnPrev);
       obj.find('img:first').after(btnClose);
       $('[data-open="'+i+'"][href]').on("click",function(e){ 
-        e.preventDefault(); 
+        var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth; 
+        if (w > 470) { e.preventDefault(); }      
       });  
     });
   }   
@@ -122,7 +123,8 @@ function preRevealVideo() {
     $('#'+i).on('open.zf.reveal', function(){$('#'+$frameId).attr('src',$src+'&autoplay=1');}).on('closed.zf.reveal', function(){$('#'+$frameId).attr('src','')});
     $('#'+i).on("click",function(){$(this).find('[data-close]').click()});    
     $lnk.on("click",function(e){ 
-      e.preventDefault();
+      var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth; 
+      if (w > 470) { e.preventDefault(); }      
     });   
   });
 } 

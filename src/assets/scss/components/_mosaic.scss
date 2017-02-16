@@ -17,7 +17,6 @@
 .mosaic-3,
 .mosaic-4 {
   color: $white;
-  .column,
   .column {
     > div {
       padding: $gutter * 2 $gutter * 2 $gutter * 1.3 $gutter * 2;
@@ -25,7 +24,7 @@
     > .icon-chevron-right-circle {
       padding-left: 6rem;
       @include breakpoint (small only) {
-        padding-left: $gutter * 2;
+        padding: $gutter;
         &::before {
           background: none;
         }

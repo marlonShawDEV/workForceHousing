@@ -1,5 +1,5 @@
 .no-js {
-  .title-bar {
+  #menu-toggle {
     display: none;
   }
 }
@@ -74,6 +74,9 @@
   .primary-nav {  
     .top-bar-right {
       text-transform: uppercase;
+      &:not([style]) .menu {
+        display: none;
+      }
     }
     h4 {
       font-weight: inherit;

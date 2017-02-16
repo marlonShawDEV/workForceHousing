@@ -416,6 +416,7 @@ There are several text and typography styles to choose from, although some style
         <h3 class="subtitle">This is class subtitle</h3>
         <h3 class="section-subtitle">This is class section-subtitle</h3> 
         <h2 class="page-subtitle">This is class page subtitle (also used for subtitles in <a href="#page-title">page titles</a>)</h2>
+        <p class="flex-up">This is class flex-up</p>
       </div>
     </div>
   </li>

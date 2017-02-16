@@ -18,7 +18,7 @@ function fakeNav(){
     $('#subnav-about').addClass('on').find('.no-bullet').removeClass('hide');
     if (p.match(/leaders/)) {$('#subnav-about-list').find('li').eq(0).children('a').addClass('active');}
     if (p.match(/business/)) {$('#subnav-about-list').find('li').eq(1).children('a').addClass('active');}
-    if (p.match(/people/)) {$('#subnav-about-list').find('li').eq(2).children('a').addClass('active');}
+    if (p.match(/people|employee|supplier/)) {$('#subnav-about-list').find('li').eq(2).children('a').addClass('active');}
     if (p.match(/communities/)) {$('#subnav-about-list').find('li').eq(3).children('a').addClass('active');}
     else if (p.match(/governance|annual|agenda|board/)) {$('#subnav-about-list').find('li').eq(4).children('a').addClass('active');}
     else if (p.match(/investor/)) {$('#subnav-about-list').find('li').eq(5).children('a').addClass('active');}
