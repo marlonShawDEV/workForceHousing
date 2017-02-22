@@ -21,19 +21,23 @@ function navHoverOff(){
   $('.secondary-nav').removeClass('highlight').find('.current-hover').removeClass('current-hover').addClass('hide');
 }
 function navExpandAccordions() {
-  $("#main-nav").find(".is-accordion-submenu-parent").each(function(){
-    if($(this).attr('aria-expanded') == "false") { $(this).find("a").click(); }
-  });   
+ // $("#main-nav").find(".is-accordion-submenu-parent").each(function(){
+ //   if($(this).attr('aria-expanded') == "false") { $(this).find("a").click(); }
+ // });   
 }
 
 // comment out this section for 2nd testbed
-$('#nav-perspectives, #nav-research, #nav-blog, #nav-mediaroom, #nav-about, #subnav-perspectives, #subnav-research, #subnav-blog, #subnav-mediaroom, #subnav-about').each(function(){
-  $(this).mouseenter(function(){var id = $(this).attr('id'), i = id.match(/^sub/) ? id.replace(/^subnav/,"nav") : id; navHoverOn(i);}
-  ).mouseleave(function(){ navHoverOff();})
+$('#nav-perspectives, #nav-research, #nav-blog, #nav-mediaroom, #nav-about, #subnav-perspectives, #subnav-research, #subnav-blog, #subnav-mediaroom, #subnav-about').each(function(){  
+  $(this).mouseenter(function(){
+    if (Foundation.MediaQuery.atLeast('xlarge')) {
+      var id = $(this).attr('id'), i = id.match(/^sub/) ? id.replace(/^subnav/,"nav") : id; navHoverOn(i);
+    }
+    }).mouseleave(function(){ navHoverOff();})
+
 });
  
 $("#primary-nav").on("on.zf.toggler", function(e) {
-    navExpandAccordions();
+  //  navExpandAccordions();
   });
 
 $(window).on('changed.zf.mediaquery', function() {    
@@ -43,6 +47,6 @@ $(window).on('changed.zf.mediaquery', function() {
 
 $(function(){
   if (!Foundation.MediaQuery.atLeast('xlarge')) {
-    navExpandAccordions();
+  //  navExpandAccordions();
   }
 });

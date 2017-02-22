@@ -1,3 +1,28 @@
+.stroke-anchor {
+  fill: none;
+  stroke: $anchor-color;
+  vertical-align: middle;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  &.baseline {
+    vertical-align: baseline;
+  }
+  :hover > & {
+    stroke: $anchor-color-hover;
+  }
+}
+.fill-anchor {
+  fill: $anchor-color;
+  stroke: none;
+  vertical-align: middle; 
+  &.baseline {
+    vertical-align: baseline;
+  }
+  :hover > & {
+    fill: $anchor-color-hover;
+  }
+}
 //
 // supporting function to icon()
 // wraps contents in a <path> element with provided parameters

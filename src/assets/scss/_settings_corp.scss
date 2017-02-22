@@ -177,7 +177,7 @@ $anchor-text-decoration: none;
 $anchor-text-decoration-hover: none;
 $hr-width: $global-width;
 $hr-border: 1px solid darken($light-gray, 15%);
-$hr-margin: rem-calc(20) auto;
+$hr-margin: rem-calc(30) auto;
 $list-lineheight: $paragraph-lineheight;
 $list-margin-bottom: $paragraph-margin-bottom;
 $list-style-type: disc;
@@ -319,9 +319,9 @@ $callout-link-tint: false;
 // 14. Card
 // --------
 
-$card-background: $white;
+$card-background: none;
 $card-font-color: $body-font-color;
-$card-divider-background: $light-gray;
+$card-divider-background: none;
 $card-border: 0px solid $fm-green;
 $card-shadow: none;
 $card-border-radius: 0;

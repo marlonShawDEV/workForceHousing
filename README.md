@@ -59,3 +59,12 @@ http://localhost:8000/styleguide/
 ```
 
 To create compressed, production-ready assets, run `npm run build --production`.
+
+
+### Developer SASS Notes
+
+- Do not include browser-prefixes in the scss, they will be generated for you.
+- If you are designing a variation of an element, add the new styles to the appropriate scss file.  If you are designing a new "widget" that is unique in purpose from existing elements, create a new scss file for it and update app_corp.css to include it.
+- When the production code is generated, all white space and comments are trimmed, so format your code for ease of readability using multiple lines and indentations for each style definition, and use comments whenever you need to include explanation for other developers. 
+- Avoid the use of the & to concatenate strings in your SCSS classes, avoid nesting styles, and avoid overriding existing styles (always search through all files to insure that the style you are creating isn't already defined). 
+- Whenever possible (and when not conflicting with foundation class names) follow the SMACSS methodology: keep all styles lowercased, use hyphens instead of underscores, and aim for block-element-modify order (for example class footer-promo-cta). 

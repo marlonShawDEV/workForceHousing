@@ -4,16 +4,17 @@
 The corporate site has 2 primary templates: One-column content, and two-column content.
 
 The templates are build using the Foundation grid -- which uses two key elements: rows and columns. Rows create a max-width and contain the columns, and columns create the final structure. Everything on your page that you don't give a specific structural style to should be within a row or column.
-In the Grid you can nest columns down as far as you'd like. Just embed rows inside columns, and columns inside rows. Each embedded row can contain up to 12 columns.
 
 ---
 
 ## One Column Content
 
+When you are creating a new page using the responsive template, the markup for the 1 column band is automatically wrapped around your content.
+
 ```html
 <div class="content-band">
   <div class="row column">
-    <h2>One Column Content</h2>  
+      <!-- content area -->
   </div>
 </div>
 ```
@@ -21,7 +22,7 @@ In the Grid you can nest columns down as far as you'd like. Just embed rows insi
 <div class="row display">
   <div class="column">  
     <h3>Main Content Area</h3>
-    <p>This column can be further divided by using cards or inserting rows of columns (max of 12 columns per row).</p>    
+    <p>This column can be further divided by using cards or inserting <a href="#rows-and-columns">rows of columns</a> (max of 12 columns per row).</p>    
     <div class="row">
       <div class="column small-1">
         <div class="background-white callout small"></div>
@@ -57,58 +58,6 @@ In the Grid you can nest columns down as far as you'd like. Just embed rows insi
         <div class="background-white callout small"></div>
       </div>
       <div class="column small-1">
-        <div class="background-white callout small"></div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="small-3 column">
-        <div class="background-white callout small"></div>
-      </div>
-      <div class="small-3 column">
-        <div class="background-white callout small"></div>
-      </div>
-      <div class="small-3 column">
-        <div class="background-white callout small"></div>
-      </div>
-      <div class="small-3 column">
-        <div class="background-white callout small"></div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="small-4 column">
-        <div class="background-white callout small"></div>
-      </div>
-      <div class="small-4 column">
-        <div class="background-white callout small"></div>
-      </div>
-      <div class="small-4 column">
-        <div class="background-white callout small"></div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="small-6 column">
-        <div class="background-white callout small"></div>
-      </div>
-      <div class="small-6 column">
-        <div class="background-white callout small"></div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="small-3 column">
-        <div class="background-white callout small"></div>
-      </div>
-      <div class="small-6 column">
-        <div class="background-white callout small"></div>
-      </div>
-      <div class="small-3 column">
-        <div class="background-white callout small"></div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="small-7 column">
-        <div class="background-white callout small"></div>
-      </div>
-      <div class="small-5 column">
         <div class="background-white callout small"></div>
       </div>
     </div>
@@ -119,20 +68,16 @@ In the Grid you can nest columns down as far as you'd like. Just embed rows insi
 
 ## Two Column Content
 
+When you are creating a new page using the responsive template, the markup for the 2 column band is automatically wrapped around your content.
+
 ```html
 <div class="two-column-layout">
   <div class="row two-column-row"> 
     <main class="column">
-      <h3>Main Content Area</h3>
+      <!-- main content area -->      
     </main>
     <aside class="column">  
-      <section class="sidebar">
-        <div class="row">
-          <div class="column">
-            <h3>Aside Content Area</h3>
-          </div>
-        </div>
-      </section>
+      <!-- sidebar content area -->
     </aside>
   </div>
 </div>
@@ -142,42 +87,42 @@ In the Grid you can nest columns down as far as you'd like. Just embed rows insi
   <div class="row two-column-row display">
     <main class="column">
       <h3>Main Content Area</h3>
-      <p>This column can be further divided by using cards or inserting rows of columns (max of 12 columns per row).</p>
+      <p>This column can be further divided by using cards or inserting <a href="#rows-and-columns">rows of columns</a> (max of 12 columns per row).</p>   
       <div class="row">
-        <div class="small-4 column">
+        <div class="column small-1">
           <div class="background-white callout small"></div>
         </div>
-        <div class="small-4 column">
+        <div class="column small-1">
           <div class="background-white callout small"></div>
         </div>
-        <div class="small-4 column">
+        <div class="column small-1">
           <div class="background-white callout small"></div>
         </div>
-      </div>
-      <div class="row">
-        <div class="small-6 column">
+        <div class="column small-1">
           <div class="background-white callout small"></div>
         </div>
-        <div class="small-6 column">
+        <div class="column small-1">
           <div class="background-white callout small"></div>
         </div>
-      </div>
-      <div class="row">
-        <div class="small-3 column">
+        <div class="column small-1">
           <div class="background-white callout small"></div>
         </div>
-        <div class="small-6 column">
+        <div class="column small-1">
           <div class="background-white callout small"></div>
         </div>
-        <div class="small-3 column">
+        <div class="column small-1">
           <div class="background-white callout small"></div>
         </div>
-      </div>
-      <div class="row">
-        <div class="small-7 column">
+        <div class="column small-1">
           <div class="background-white callout small"></div>
         </div>
-        <div class="small-5 column">
+        <div class="column small-1">
+          <div class="background-white callout small"></div>
+        </div>
+        <div class="column small-1">
+          <div class="background-white callout small"></div>
+        </div>
+        <div class="column small-1">
           <div class="background-white callout small"></div>
         </div>
       </div>
@@ -187,31 +132,18 @@ In the Grid you can nest columns down as far as you'd like. Just embed rows insi
         <div class="row">
           <div class="column">
             <h3>Aside Content Area</h3>
-            <p>This column can be further divided by using cards or inserting rows of columns.</p>
+            <p>This column can be further divided by using cards or inserting <a href="#rows-and-columns">rows of columns</a>.</p>
             <div class="row">
-              <div class="small-4 column">
+              <div class="small-3 column">
                 <div class="background-white callout small"></div>
               </div>
-              <div class="small-4 column">
+              <div class="small-3 column">
                 <div class="background-white callout small"></div>
               </div>
-              <div class="small-4 column">
+              <div class="column small-3">
                 <div class="background-white callout small"></div>
               </div>
-            </div>
-            <div class="row">
-              <div class="small-6 column">
-                <div class="background-white callout small"></div>
-              </div>
-              <div class="small-6 column">
-                <div class="background-white callout small"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="small-5 column">
-                <div class="background-white callout small"></div>
-              </div>
-              <div class="small-7 column">
+              <div class="column small-3">
                 <div class="background-white callout small"></div>
               </div>
             </div>
@@ -221,6 +153,119 @@ In the Grid you can nest columns down as far as you'd like. Just embed rows insi
     </aside>
   </div>
 </div>
+
+
+
+# Rows and Columns
+
+When you need to divide your content into columns, start by adding an element with a class of `.row`. This will create a horizontal block to contain vertical columns. Then add elements with a `.column` class within that row. Specify the widths of each column with the `.small-#`, `.medium-#`, `.large-#`, and `.xlarge-#`.  Larger widths will inherit from smallers ones, so you only need to add an extra class if you are changing the layout at a larger breapoint.
+
+Move blocks up to 11 columns to the right by using classes like `.large-offset-1` and `.small-offset-3`. 
+
+In order to work around browsers' different rounding behaviors, Foundation will float the last column in a row to the right so the edge aligns. If your row doesn't have a count that adds up to 12 columns, you can tag the last column with a class of `.end` in order to override that behavior.
+
+Center your columns by adding a class of `.small-centered` to your column. Large will inherit small centering by default, but you can also center solely on large by applying a `.large-centered` class. To uncenter on large screens, use `.large-uncentered`.
+
+If you are looking for more advanced examples, refer to <a href="http://foundation.zurb.com/sites/docs/grid.html">Foundation Docs</a>.
+
+```html_example
+<div class="row">
+  <div class="small-2 large-4 column">
+    <p>small-2 large-4 column content</p>
+  </div>
+  <div class="small-4 large-4 column">
+    <p>small-4 large-4 column content</p>
+  </div>
+  <div class="small-6 large-4 column">
+    <p>small-6 large-4 column content</p>
+  </div>
+</div>
+<div class="row">
+  <div class="large-3 column">
+    <p>large-3 column content</p>
+  </div>
+  <div class="large-6 column">
+    <p>large-6 column content</p>
+  </div>
+  <div class="large-3 column">
+    <p>large-3 column content</p>
+  </div>
+</div>
+<div class="row">
+  <div class="small-6 large-2 column">
+    <p>small-6 large-2 column content</p>
+  </div>
+  <div class="small-6 large-8 column">
+    <p>small-6 large-8 column content</p>
+  </div>
+  <div class="small-12 large-2 column">
+    <p>small-12 large-2 column content</p>
+  </div>
+</div>
+<div class="row">
+  <div class="small-3 column">
+    <p>small-3 column content</p>
+  </div>
+  <div class="small-9 column">
+    <p>small-9 column content</p>
+  </div>
+</div>
+<div class="row">
+  <div class="large-4 column">
+    <p>large-4 column content</p>
+  </div>
+  <div class="large-8 column">
+    <p>large-8 column content</p>
+  </div>
+</div>
+<div class="row">
+  <div class="small-6 large-5 column">
+    <p>small-6 large-5 column content</p>
+  </div>
+  <div class="small-6 large-7 column">
+    <p>small-6 large-7 column content</p>
+  </div>
+</div>
+<div class="row">
+  <div class="large-6 column">
+    <p>large-6 column content</p>
+  </div>
+  <div class="large-6 column">
+    <p>large-6 column content</p>
+  </div>
+</div>
+```
+
+---
+
+## Block Grids
+
+Block grids are a shorthand way to create equally-sized columns. Add a class of the format `.[size]-up-[n]` to change the number of columns within the row. Adding the `.column-block` class to columns will apply a bottom margin equal to the width of gutters.
+
+Block grids are used for most of the card displays.
+
+```html_example
+<div class="row small-up-2 medium-up-3 large-up-4">
+  <div class="column column-block">
+    <img src="//placehold.it/600x600" class="thumbnail" alt="">
+  </div>
+  <div class="column column-block">
+    <img src="//placehold.it/600x600" class="thumbnail" alt="">
+  </div>
+  <div class="column column-block">
+    <img src="//placehold.it/600x600" class="thumbnail" alt="">
+  </div>
+  <div class="column column-block">
+    <img src="//placehold.it/600x600" class="thumbnail" alt="">
+  </div>
+  <div class="column column-block">
+    <img src="//placehold.it/600x600" class="thumbnail" alt="">
+  </div>
+  <div class="column column-block">
+    <img src="//placehold.it/600x600" class="thumbnail" alt="">
+  </div>
+</div>
+```
 
 
 
@@ -370,7 +415,7 @@ In the Grid you can nest columns down as far as you'd like. Just embed rows insi
 
 # Dividers
 
-Use dividers to define thematic breaks between paragraphs. To denote the end of one section of a page and the start of another, it's better to use the `<div>` tag.
+Use `<hr>` dividers to define thematic breaks between content chunks. 
 
 ```html_example
 <hr>
@@ -382,8 +427,8 @@ Use dividers to define thematic breaks between paragraphs. To denote the end of 
 
 There are several text and typography styles to choose from, although some styles are intended for specific uses, or for specific page types. Avoid skipping heading levels when structuring your document, as it confuses screen readers. 
 
-<div class="callout background-concrete">
-  <p>While some may appear similar at desktop width, they scale down differently at mobile sizes, so pay attention to the class you choose.</p>
+<div class="callout background-gray">
+  <p class="lead">While some may appear similar at desktop width, they scale down differently at mobile sizes, so pay attention to the class you choose.</p>
 </div>
 
 ```html_example
@@ -959,11 +1004,11 @@ The default text alignment for most containers is left.
 
 - To create a white callout with a border, add either class `.hollow` or `.hollow-thin` to the `.callout` container.
 - To select a callout with a specific background color, include `.background-xxx` class (where xxx is green, orange, primary, blue, teal, gray, yellow, red, purple, concrete, white) on the `.callout` container.
-- There are callouts for use within the content area.  Refer to <a href="#footer-promo">footer promo</a> for full width promo containers. 
+- There are callouts for use within the content area.  Refer to <a href="#prefooter-promo-band">prefooter promo</a> for full width promo containers. 
 
 ```html_example
 <div class="row">
-  <div class="medium-6 columns">
+  <div class="medium-6 column">
     <div class="callout hollow">
       <p>This is a <a href="#">callout</a> with class of hollow.</p>
     </div>
@@ -983,7 +1028,7 @@ The default text alignment for most containers is left.
       <p>This is a <a href="#">callout</a> with class of background-blue.</p>
     </div>
   </div>
-  <div class="medium-6 columns">
+  <div class="medium-6 column">
     <div class="callout background-orange">
       <p>This is a <a href="#">callout</a> with a class of background-orange.</p>
     </div>
@@ -1005,7 +1050,7 @@ The default text alignment for most containers is left.
   </div>
 </div>
 <div class="row">
-  <div class="columns">
+  <div class="column">
     <div class="callout background-gray">
       <p>This is a gray callout, with another callout nested inside it.</p>
       <div class="callout background-white">
@@ -1037,12 +1082,12 @@ Callouts can be sized using the `.small`, `.large` and `.xlarge` classes. These 
 
 ```html_example
 <div class="row">
-  <div class="medium-4 columns">
+  <div class="medium-4 column">
     <div class="callout background-purple small">
       <p>This is a callout with class of small. It has less padding between the contents and the edge of the container.</p>
     </div>
   </div>
-  <div class="medium-8 columns">
+  <div class="medium-8 column">
     <div class="callout background-purple large">
       <p>This is a callout with class of large. It has more padding between the contents and the edge of the container.</p>
     </div>
@@ -1065,7 +1110,7 @@ To make the entire callout clickable, put an anchor tag around the `.callout` co
 
 ```html_example
 <div class="row">
-  <div class="small-8 medium-6 end columns">
+  <div class="small-8 medium-6 end column">
     <a href="/"><div class="callout background-blue">
     <p>This entire blue callout is inside an anchor tag and becomes 1 big link.</p>
     </div></a>
@@ -1084,7 +1129,7 @@ Pair the callout with the [close button](#close-button) component and `data-clos
 
 ```html_example
 <div class="row">
-  <div class="medium-6 columns">
+  <div class="medium-6 column">
     <div class="callout background-orange" data-closable>
       <h5>This is Important!</h5>
       <p>When you're done reading it, click the close button in the corner to dismiss this alert.</p>
@@ -1094,7 +1139,7 @@ Pair the callout with the [close button](#close-button) component and `data-clos
       </button>
     </div>
   </div>
-  <div class="medium-6 columns">
+  <div class="medium-6 column">
     <div class="callout background-green" data-closable="slide-out-right">
       <h5>This a friendly message.</h5>
       <p>When you're done reading it, click the close button in the corner to dismiss this message.</p>
@@ -1588,10 +1633,13 @@ For pages that include a subtitle, it will appear directly below the H1.
 Make sure you wrap your content in a `.card-section` element in order to achieve the traditional card look.</p>
 <p>A card container has no padding, allowing you to place full-bleed images inside. Use the `.card-divider` and `.card-section` classes to sub-divide a card. To center the text content (for people cards, for example) simply add class `.text-center` to the `.card-section` container.</p>
 
-
 ## Perspective Cards
 
-<p>This style of card is used for Perspectives articles.</p>
+<p>This style of card is used for Perspectives articles. </p>
+
+- If the cards have the same background as the content contaienr they are in, add no extra color class.
+- If the cards should have a white background (when displayed on a darker color) add class `.background-white` to each card.
+- If the cards should have a gray background (when displayed on a white background) add class `.background-gray` to each card.
 
 ```html_example
 <div class="row medium-up-2 xlarge-up-4 perspectives" data-equalizer data-equalize-by-row="true">
@@ -1670,6 +1718,10 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
 
 ## Blog Cards
 
+- If the cards have the same background as the content contaienr they are in, add no extra color class.
+- If the cards should have a white background (when displayed on a darker color) add class `.background-white` to each card.
+- If the cards should have a gray background (when displayed on a white background) add class `.background-gray` to each card.
+
 ```html_example
 <div class="row small-up-2 medium-up-3 large-up-4" data-equalizer data-equalize-by-row="true">
   <div class="column">
@@ -1731,6 +1783,10 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
 
 ## Video Cards
 
+- If the cards have the same background as the content contaienr they are in, add no extra color class.
+- If the cards should have a white background (when displayed on a darker color) add class `.background-white` to each card.
+- If the cards should have a gray background (when displayed on a white background) add class `.background-gray` to each card.
+
 ```html_example
 <div class="row medium-up-2 large-up-3" data-equalizer data-equalize-by-row="true">
   <div class="column">
@@ -1764,6 +1820,10 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
 ```
 
 ## People Cards
+
+- If the cards have the same background as the content contaienr they are in, add no extra color class.
+- If the cards should have a white background (when displayed on a darker color) add class `.background-white` to each card.
+- If the cards should have a gray background (when displayed on a white background) add class `.background-gray` to each card.
 
 ```html_example
 <div class="row small-up-1 medium-up-2 large-up-4" data-equalizer data-equalize-by-row="true">
@@ -1880,6 +1940,56 @@ On the blog landing page, the first 2 entries are featured with large images and
 
 
 
+# Tertiary Navigation
+
+<p class="lead">Tertiary navigation is available for pages that are 3-4 levels deep in the IA.  Tertiary nav is only avaialble in the two-column content template.</p>
+
+All items in the tertiary nav (including the heading) should be linked.  Add class `.no-bullet` to the `ul` tags to create the link lists.
+
+```html
+<div class="tertiary-nav">
+<h2><a href="#">Level Two Link</a></h2> 
+<nav>
+  <ul class="no-bullet">
+    <li><a href="#">Level Three Link</a>
+      <ul class="no-bullet">
+        <li><a href="#">Level Four Link</a></li>
+        <li><a href="#">Level Four Link</a></li>
+      </ul> 
+    </li>
+    <li><a href="#">Level Three Link</a></li>
+    <li><a href="#">Level Three Link</a></li>
+    <li><a href="#">Level Three Link</a></li>
+  </ul>
+</nav>
+</div>
+```
+
+<div class="two-column-layout content-band">
+  <div class="row two-column-row"> 
+    <aside class="column">
+      <div class="tertiary-nav">
+        <h2><a href="#">Level Two Link</a></h2> 
+        <nav>
+          <ul class="no-bullet">
+            <li><a href="#">Level Three Link</a>
+              <ul class="no-bullet">
+                <li><a href="/styleguide/styleguide_corp.html">Level Four Link</a></li>
+                <li><a href="#">Level Four Link</a></li>
+              </ul> 
+            </li>
+            <li><a href="#">Level Three Link</a></li>
+            <li><a href="#">Level Three Link</a></li>
+            <li><a href="#">Level Three Link</a></li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+  </div>
+</div>
+
+
+
 #  Sidebar Modules
 
 <p class="lead">There are a variety of modules available for use in a side bar, when you are using the Two Column Layout.</p>
@@ -1888,11 +1998,16 @@ Links inside most sidebar modules inherit the existing text color (typically whi
 
 To select a specific background, include `.background-xxx` class (where xxx is green, orange, primary, blue, teal, gray, yellow, red, purple, concrete) on the `.sidebar` container.
 
+Avoid using the same background color for  the last sidebar box that you use in the prefooter -- in mobile they will appear to run together when that occurs.
+
 ---
 
 ## Sidebar Popular List Items
 
+For divided list items, include these classes on the `ul` tag: `.no-bullet` (to suppress list bullets), `.lead` (to increase the font size), and `.list-divided-white` (to add white dividers between items -- if background is concrete, use `.list-divided` instead).
+
 ```html_example
+<!-- the template will provide the outer containers, to create these in a templated page, begin with the <section> tag. -->
 <div class="two-column-layout content-band">
   <div class="row two-column-row"> 
     <aside class="column">  
@@ -1917,7 +2032,12 @@ To select a specific background, include `.background-xxx` class (where xxx is g
 
 ## Sidebar Call To Action
 
+To avoid having the text stretch edge-to-edge, you can wrap the text in a div with class `.sidebar-txt`.
+
+If a sidebar contains multiple calls-to-action, set one button to be the `.primary` call.
+
 ```html_example
+<!-- the template will provide the outer containers, to create these in a templated page, begin with the <section> tag. -->
 <div class="two-column-layout content-band">
   <div class="row two-column-row"> 
     <aside class="column">
@@ -1928,7 +2048,7 @@ To select a specific background, include `.background-xxx` class (where xxx is g
               <h2 class="sidebar-title">Connect with Us</h2>
               <p>Sign up to get the latest <strong>Lorem Ipsum updates</strong> in your inbox.</p>      
             </div>
-            <p><a class="primary button" href="#">Email Alert</a> <a class="hollow button" href="#">RSS Feeds</a></p>
+            <p><a class="primary button" href="#">CTA</a> <a class="hollow button" href="#">CTA</a></p>
           </div>
         </div>
       </section>
@@ -1941,48 +2061,24 @@ To select a specific background, include `.background-xxx` class (where xxx is g
 
 ## Sidebar RSS
 
+For divided list items, include these classes on the `ul` tag: `.no-bullet` (to suppress list bullets), `.lead` (to increase the font size), `.list-divided-white` (to add white dividers between items), and `.list-rss` (to add the RSS icons).
+
 ```html_example
+<!-- the template will provide the outer containers, to create these in a templated page, begin with the <section> tag. -->
 <div class="two-column-layout content-band">
   <div class="row two-column-row"> 
       <aside class="column">
         <section class="sidebar background-gray">
           <div class="row">
-            <h2>RSS Blog Feeds</h2>
+            <h2>RSS Feeds</h2>
             <ul class="list-divided-white no-bullet lead list-rss">
-              <li><a href="#">All Posts</a></li>
-              <li><a href="#">Homeownership</a></li>
-              <li><a href="#">Rental Housing</a></li>
-              <li><a href="#">Research &amp; Analysis</a></li>
-              <li><a href="#">Notable</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
             </ul>
           </div>
         </section>
       </aside>
-  </div>
-</div>
-```
-
----
-
-## Sidebar News List
-
-Note: The news release lists are automated by MarketWire.
-
-```html_example
-<div class="two-column-layout content-band">
-  <div class="row two-column-row"> 
-    <aside class="column">
-      <section class="sidebar background-concrete">
-        <div class="row">
-          <h2 class="sidebar-title">Recent News</h2>
-          <ul class="list-divided no-bullet">
-            <li><a href="#">08/08/16 -  Freddie Mac (OTCQB: FMCC) today issued the company's stress test results for the severely adverse scenario conducted under FHFA's rule...</a></li>
-            <li><a href="#">08/02/16 -  Freddie Mac (OTCQB: FMCC) today reported its second quarter 2016 financial results and filed its quarterly Form 10-Q with the U.S. Securities...</a></li>
-            <li><a href="#">Jul 29, 2016 - Freddie Mac (OTCQB: FMCC) announced today that it plans to report its second quarter 2016 financial results before the U.S. financial markets...</a></li>
-          </ul>
-        </div>
-      </section>
-    </aside>
   </div>
 </div>
 ```
@@ -1994,6 +2090,7 @@ Note: The news release lists are automated by MarketWire.
 <p>To select the background color, include `.background-xxx` class (where xxx is green, orange, primary, blue, teal, gray, yellow, red, or purple) on the `.sidebar-feature` container and include a background image in the `.feature-background` container.</p>
 
 ```html_example
+<!-- the template will provide the outer containers, to create these in a templated page, begin with the <section> tag. -->
 <div class="two-column-layout content-band">
   <div class="row two-column-row"> 
     <aside class="column">
@@ -2033,6 +2130,7 @@ Note: The news release lists are automated by MarketWire.
 Refer to the Media Object section for more details about this markup.
 
 ```html_example
+<!-- the template will provide the outer containers, to create these in a templated page, begin with the <section> tag. -->
 <div class="two-column-layout content-band">
   <div class="row two-column-row"> 
     <aside class="column">
@@ -2349,7 +2447,7 @@ When the form appears on a darker background, add the class `.outline` to invert
 ```
 
 <div class="row">
-  <div class="medium-6 columns">
+  <div class="medium-6 column">
     <div class="callout background-primary">
       <form action="#" class="form outline">
         <label for="">Label</label>
@@ -2358,7 +2456,7 @@ When the form appears on a darker background, add the class `.outline` to invert
       </form>
     </div>
   </div>
-  <div class="medium-6 columns">
+  <div class="medium-6 column">
     <div class="callout background-yellow">
       <form action="#" class="form outline">
         <label for="">Select One</label>
@@ -2373,7 +2471,7 @@ When the form appears on a darker background, add the class `.outline` to invert
   </div>
 </div>
 <div class="row">
-  <div class="medium-6 columns">
+  <div class="medium-6 column">
     <div class="callout background-teal">
       <form action="#" class="form outline">
         <fieldset>
@@ -2385,7 +2483,7 @@ When the form appears on a darker background, add the class `.outline` to invert
       </form>
     </div>
   </div>
-  <div class="medium-6 columns">
+  <div class="medium-6 column">
     <div class="callout background-purple">
       <form action="#" class="form outline">
         <fieldset>
@@ -2400,7 +2498,7 @@ When the form appears on a darker background, add the class `.outline` to invert
   </div>
 </div>
 <div class="row">
-  <div class="medium-6 columns">
+  <div class="medium-6 column">
     <div class="callout background-blue">
       <form action="#" class="form outline">
         <label for="">Email</label>
@@ -2409,7 +2507,7 @@ When the form appears on a darker background, add the class `.outline` to invert
       </form>
     </div>
   </div>
-  <div class="medium-6 columns">
+  <div class="medium-6 column">
     <div class="callout background-gray">
       <form action="#" class="form outline">
         <label for="">Keyword</label>
@@ -2885,6 +2983,7 @@ By default, table rows are striped. There's an `.unstriped` class to remove the 
 Research landing page has custom styled tables, which can be achieved by applying class `.research-table` to the table.
 
 ```html_example
+<!-- the template will provide the outer containers, to create these in a templated page, begin with the <section> tag. -->
 <div class="two-column-layout">
   <div class="row two-column-row"> 
     <aside class="column">  
@@ -2999,7 +3098,7 @@ A standard modal dialog is just an empty container, so you can put any kind of c
     <div class="reveal full background-green" id="fullModal1" data-reveal aria-labelledby="Modal1-label">
       <div class="modal-content">
         <div class="row">
-          <div class="columns xlarge-offset-1 xlarge-10 end">
+          <div class="column xlarge-offset-1 xlarge-10 end">
             <div class="modal-header">
               <h2 id="Modal1-label">Modal Label</h2>
             </div>
@@ -3015,7 +3114,7 @@ A standard modal dialog is just an empty container, so you can put any kind of c
     <div class="reveal full background-orange" id="fullModal2" data-reveal aria-labelledby="Modal2-label">
       <div class="modal-content">
         <div class="row">
-          <div class="columns xlarge-offset-1 xlarge-10 end">
+          <div class="column xlarge-offset-1 xlarge-10 end">
             <div class="modal-header">
               <h2 id="Modal2-label">Modal Label</h2>
             </div>
@@ -3033,7 +3132,7 @@ A standard modal dialog is just an empty container, so you can put any kind of c
     <div class="reveal full background-blue" id="fullModal3" data-reveal>
       <div class="modal-content">
         <div class="row">
-          <div class="columns xlarge-offset-1 xlarge-10 end">
+          <div class="column xlarge-offset-1 xlarge-10 end">
             <div class="modal-header">
               <h2 id="Modal3-label">Modal Label</h2>
             </div>
@@ -3055,7 +3154,7 @@ A standard modal dialog is just an empty container, so you can put any kind of c
     <div class="reveal full background-teal" id="fullModal4" data-reveal>
       <div class="modal-content">
         <div class="row">
-          <div class="columns xlarge-offset-1 xlarge-10 end">
+          <div class="column xlarge-offset-1 xlarge-10 end">
             <div class="modal-header">
               <h2 id="Modal4-label">Modal Label</h2>
             </div>
@@ -3122,33 +3221,33 @@ It's possible for modals to open other modals. Create a second modal with a uniq
     <p><a class="button secondary" data-open="exampleModalB" aria-controls="exampleModalB">View another modal!</a></p>    
     <div class="row">
       <p class="text-center">One section 12 columns wide.</p>
-      <div class="small-12 columns">
+      <div class="small-12 column">
         <div class="callout background-white">
         </div>
       </div>
     </div>
     <div class="row">
       <p class="text-center">Three sections each 4 columns wide.</p>
-      <div class="small-4 columns">
+      <div class="small-4 column">
         <div class="callout background-white">
         </div>
       </div>
-      <div class="small-4 columns">
+      <div class="small-4 column">
         <div class="callout background-white">
         </div>
       </div>
-      <div class="small-4 columns">
+      <div class="small-4 column">
         <div class="callout background-white">
         </div>
       </div>
     </div>
     <div class="row">
       <p class="text-center">Two sections, each 6 columns wide.</p>
-      <div class="small-6 columns">
+      <div class="small-6 column">
         <div class="callout background-white">
         </div>
       </div>
-      <div class="small-6 columns">
+      <div class="small-6 column">
         <div class="callout background-white">
         </div>
       </div>
@@ -3390,7 +3489,7 @@ For an image carousel, each `orbit-slide` contains a `figure`, with an `img` and
 
 ```html_example
 <div class="row">
-  <div class="medium-8 columns">
+  <div class="medium-8 column">
     <div class="orbit" role="region" aria-label="Favorite Flower Pictures" data-orbit>
       <ul class="orbit-container">
         <li class="orbit-slide">
@@ -3449,7 +3548,7 @@ Since those option names are pretty *long*, you can also set them all in one HTM
 Below is an example of the same image carousel shown above, but with a fade-in/fade-out animation.
 
 <div class="row">
-  <div class="medium-8 columns">
+  <div class="medium-8 column">
     <div class="orbit" role="region" aria-label="Favorite Flower Pictures" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
       <ul class="orbit-container">
         <li class="orbit-slide">
@@ -3500,21 +3599,23 @@ To disable the animation, set the `data-use-m-u-i` attribute to `false`.  To sto
 
 
 
-# Footer Promo Band
+# Prefooter Promo Band
 
-A Footer Promo is a full width band of content.  On most interior pages, it goes after all contnet and immediately above the footer.  Never use more than one callout footer band per page, and limit the content of the footer band to a single concept and link.  The first `div` should contain the supporting text, and the second <code>div</code> should contain the call to action.
+A Prefooter Promo is a full width band of content.  On most interior pages, it is inserted after all content and immediately above the footer.  Never include more than one prefooter band per page, and limit the content of the prefooter band to a single concept and one link.  The first `div` should contain the supporting text, and the second `div` should contain the call to action.
 
 To select a specific background, include `.background-xxx` class (where xxx is green, orange, primary, blue, teal, gray, yellow, red, purple) on the `.footer-promo` container.
+
+Avoid using the same background color for the prefooter as you do for the last sidebar module -- in mobile they will appear to run together when that occurs.
 
 ```html_example
 <div class="background-primary footer-promo">
   <div class="row" data-equalizer data-equalize-on="large">
-    <div class="columns large-8" data-equalizer-watch>
+    <div class="column large-8" data-equalizer-watch>
       <h3 class="callout-footer-title">Getting To Know Freddie Mac</h3>
       <p>Every day, Freddie Mac employees ensure mortgage credit is available for America's families and help rebuild the nation's housing finance system.</p>
       <p>Learn how Our Mission is making a positive impact.</p>
     </div>
-    <div class="columns large-offset-1 large-3 position-relative" data-equalizer-watch>
+    <div class="column large-offset-1 large-3 position-relative" data-equalizer-watch>
       <div class="footer-promo-cta">
        <a class="hollow button large" href="#">Our Mission</a>
       </div>
@@ -3523,11 +3624,11 @@ To select a specific background, include `.background-xxx` class (where xxx is g
 </div>
 <div class="background-yellow footer-promo">
   <div class="row" data-equalizer data-equalize-on="large">
-    <div class="columns large-8" data-equalizer-watch>
+    <div class="column large-8" data-equalizer-watch>
        <h3 class="callout-footer-title">My Home by Freddie Mac®</h3>
       <p>We offer the resources to help you make informed housing decisions and support your success – whether you rent, own, or plan to buy a home.</p>
     </div>
-    <div class="columns large-offset-1 large-3 position-relative" data-equalizer-watch>
+    <div class="column large-offset-1 large-3 position-relative" data-equalizer-watch>
       <div class="footer-promo-cta">
        <a class="hollow large button" href="http://myhome.freddiemac.com/">Find it</a>
       </div>
@@ -3536,12 +3637,12 @@ To select a specific background, include `.background-xxx` class (where xxx is g
 </div>
 <div class="background-teal footer-promo">
   <div class="row" data-equalizer data-equalize-on="large">
-    <div class="columns large-8" data-equalizer-watch>
+    <div class="column large-8" data-equalizer-watch>
       <h3 class="callout-footer-title">Getting To Know Freddie Mac</h3>
       <p>Every day, Freddie Mac employees ensure mortgage credit is available for America's families and help rebuild the nation's housing finance system.</p>
       <p>Learn how Our Mission is making a positive impact.</p>
     </div>
-    <div class="columns large-offset-1 large-3 position-relative" data-equalizer-watch>
+    <div class="column large-offset-1 large-3 position-relative" data-equalizer-watch>
       <div class="footer-promo-cta">
        <a class="hollow button large" href="#">Our Mission</a>
       </div>

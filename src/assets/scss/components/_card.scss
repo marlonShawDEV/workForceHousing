@@ -1,6 +1,8 @@
 /// card
 .card {
-  border-bottom-width: 3px;
+  &:not(.no-border) {
+    border-bottom-width: 3px;
+  }  
   text-align: left;
 	.overlay,
   .modal-launch,
@@ -26,16 +28,11 @@
 }
 .card-divider {
   position: relative;
-  padding: $gutter;
-  .background-concrete & {
-    background: $white;
-  }
 }
 .perspectives {
   .card { 
     margin-top: $gutter * 2.5;
     margin-bottom: 0;
-    padding-bottom: $gutter;
   }
   .card-divider {
     padding-bottom:  $gutter * 5.3;
@@ -51,21 +48,21 @@
   &.medium-up-4 {
     @for $i from 1 through 4 {
       > div:nth-child(4n+#{$i}) > .card {
-        border-bottom: 3px solid color-shift($fm-green, $pear, 4, $i);
+        border-bottom-color: color-shift($fm-green, $pear, 4, $i);
       }
     }    
   }
   &.medium-up-3 {
     @for $i from 1 through 3 {
       > div:nth-child(3n+#{$i}) > .card {
-        border-bottom: 3px solid color-shift($fm-green, $pear, 3, $i);
+        border-bottom-color: color-shift($fm-green, $pear, 3, $i);
       }
     }  
   }
   &.medium-up-2 {
     @for $i from 1 through 2 {
       > div:nth-child(2n+#{$i}) > .card {
-        border-bottom: 3px solid color-shift($fm-green, $pear, 3, $i);
+        border-bottom-color: color-shift($fm-green, $pear, 3, $i);
       }
     }  
   }
@@ -74,21 +71,21 @@
   &.large-up-4 {
     @for $i from 1 through 4 {
       > div:nth-child(4n+#{$i}) > .card {
-        border-bottom: 3px solid color-shift($fm-green, $pear, 4, $i);
+        border-bottom-color: color-shift($fm-green, $pear, 4, $i);
       }
     }    
   }
   &.large-up-3 {
     @for $i from 1 through 3 {
       > div:nth-child(3n+#{$i}) > .card {
-        border-bottom: 3px solid color-shift($fm-green, $pear, 3, $i);
+        border-bottom-color: color-shift($fm-green, $pear, 3, $i);
       }
     }  
   }
   &.large-up-2 {
     @for $i from 1 through 2 {
       > div:nth-child(2n+#{$i}) > .card {
-        border-bottom: 3px solid color-shift($fm-green, $pear, 3, $i);
+        border-bottom-color: color-shift($fm-green, $pear, 3, $i);
       }
     }  
   }
@@ -98,21 +95,21 @@
   &.xlarge-up-4 {
     @for $i from 1 through 4 {
       > div:nth-child(4n+#{$i}) > .card {
-        border-bottom: 3px solid color-shift($fm-green, $pear, 4, $i);
+        border-bottom-color: color-shift($fm-green, $pear, 4, $i);
       }
     }    
   }
   &.xlarge-up-3 {
     @for $i from 1 through 3 {
       > div:nth-child(3n+#{$i}) > .card {
-        border-bottom: 3px solid color-shift($fm-green, $pear, 3, $i);
+        border-bottom-color: color-shift($fm-green, $pear, 3, $i);
       }
     }  
   }
   &.xlarge-up-2 {
     @for $i from 1 through 2 {
       > div:nth-child(2n+#{$i}) > .card {
-        border-bottom: 3px solid color-shift($fm-green, $pear, 3, $i);
+        border-bottom-color: color-shift($fm-green, $pear, 3, $i);
       }
     }  
   }
