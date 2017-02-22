@@ -227,7 +227,7 @@ $input-error-font-weight: $global-weight-bold;
 // ------------
  
 $accordion-background: $light-gray;
-$accordion-plusminus: true;
+$accordion-plusminus: false;
 $accordion-title-font-size: rem-calc(18);
 $accordion-item-color: $body-font-color;
 $accordion-item-background-hover: scale-color($light-gray, $lightness: -5%);
