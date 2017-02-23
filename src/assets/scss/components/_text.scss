@@ -339,7 +339,6 @@ b {
   font-size: rem-calc(13);
   color: $fm-gray;
   line-height: 1.15;
-  text-transform: uppercase;
   font-weight: $global-weight-normal;
 	@include breakpoint(medium) {
 		font-size: rem-calc(14);

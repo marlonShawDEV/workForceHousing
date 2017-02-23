@@ -38,11 +38,13 @@
 @mixin nav-desktop-link(){  
   color: $fm-gray;
   transition: color 0.25s ease 0s, border-bottom-color 0.25s ease 0s;   
-  &:hover,
+  &.active {
+    border-bottom-color: #cbe721; // somewhere close to adjust_hue(saturate(darken($pear, 2.3), 22.5), 4.2);              
+  }
   &:focus,
-  &.active  {
+  &:hover {
     color: $fm-green;
-    border-bottom-color: $fm-green;              
+    border-bottom-color: $fm-green;            
   }
 }
 @mixin list-divided($color: darken($light-gray, 5%), $padding-base: $global-padding, $last-border: false){      

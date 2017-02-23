@@ -83,6 +83,9 @@
       position: relative;
       z-index: 485;
     }
+    .menu { 
+      float: right;
+    }
     &.highlight {  
       background: $fm-green; 
       border-top: 1px solid $fm-green;

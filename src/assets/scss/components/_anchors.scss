@@ -13,6 +13,19 @@ h2, h3, h4 {
 .background-primary a {
   @include anchor-on-dark(none);
 }
+a:hover {
+  .background-green,
+  .background-orange,
+  .background-yellow,
+  .background-red,
+  .background-purple,
+  .background-blue,
+  .background-teal,
+  .background-gray,
+  .background-primary {
+   opacity: 0.8;
+  }
+}
 .card:not(:hover),
 .background-concrete {
   a:not(:hover):not(:focus):not(.button) {
@@ -37,17 +50,24 @@ h2, h3, h4 {
 .video-modal {
   position: relative;
   display: inline-block;  
-  .video-length {
-    position: absolute; 
-    bottom: 1px; 
+}
+.video-length {
+  position: absolute; 
+  display: inline-block;
+  min-width: rem-calc(90);
+  color: $white;
+  padding: 0.7em 0.4em 0.6em 2em;
+  z-index:200; 
+  .card & {  
     left: 1px;
-    display: inline-block;
-    min-width: rem-calc(90);
+    bottom: 1px; 
     background: rgba($primary-color, 0.92);
-    color: $white;
-    padding: 0.7em 0.4em 0.6em 2em;
     transition: background 0.25s ease; 
-    z-index:200;    
+  }  
+  .twin-col & {
+    right: 0px;
+    bottom: 0px;
+    background: rgba($white, 0.3);
   }
 }
 .block {

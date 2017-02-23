@@ -49,3 +49,12 @@ layout: corporate-2col
 {{> share-widget}}
 
 {{> footer-promo-pmms}}
+
+<script type="text/javascript"> 
+function addShare() {
+  var share = $(".share-wrapper:first").clone();
+  $('.page-title:first').append(share);
+}
+
+window.onload = addShare;
+</script>
