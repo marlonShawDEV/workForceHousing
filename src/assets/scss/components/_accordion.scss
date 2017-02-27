@@ -58,8 +58,8 @@
   @include accordion-container($white);
   counter-reset: section;
   .accordion-title {
-    @include accordion-title(0.5rem, 1rem, $anchor-color, 0, lighten($light-gray, 2));
-    padding-left: 2.5rem;
+    @include accordion-title(0.5rem 0.5rem 0.5rem 2.5rem, rem-calc(18), $anchor-color, 0, lighten($light-gray, 2.5));
+    line-height: inherit;
     &::before {
       counter-increment: section;
       content: counters(section, ".", decimal) ". ";
@@ -72,6 +72,7 @@
   .accordion-item {
     &.is-active {
       background: $light-gray;
+      margin-bottom: $gutter;
       .accordion-title {
         background: $light-gray;
       }
@@ -81,8 +82,14 @@
     border-bottom-width: 0;
   }
   .accordion-content {
-    @include accordion-content(0.25rem 1rem, 0, transparent, $body-font-color);    
-  }
+    @include accordion-content(0.5rem $gutter 1rem 2.5rem, 0, transparent, $body-font-color); 
+    @media screen and (max-width: 400px) {  //less than small
+      padding: 0.5rem 0.8rem 1rem;
+    } 
+    :last-child {
+      margin-bottom: 0;
+    }    
+   }
 }
 
 ///styles for .accordion-pointer
@@ -94,3 +101,38 @@
   @include accordion-faq;
 }
 
+// angle pointer instead of triangle for nav entries
+.nav-accordion-parent {
+  display: table-cell;
+  position: relative;
+  &[aria-expanded='true'] > a {
+    color: $fm-orange;
+    &::before {
+      background: transparent icon(chevron-up, $fm-orange, 14, 14) no-repeat center center;
+    }
+  }
+  > a {
+    &:hover {
+      @include nav-submenu-parent-hover();
+    }
+    &::before {
+      content: ' ';      
+      height: 0.75em;    
+      width: 1em;      
+      display: inline-block;
+      position: relative;
+      top: 0.05em;
+      margin-right: 0.5rem;
+      background: transparent icon(chevron-down, $fm-orange, 14, 14) no-repeat center center;
+    }
+  }
+  .is-accordion-submenu-item > a {    
+    color: $body-font-color;
+    transition: background 0.2s ease 0s, color 0.2s ease 0s;
+    &:hover,
+    &:focus {
+      background: $fm-yellow;
+      color: $white;
+    }
+  }
+}  

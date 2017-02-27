@@ -432,7 +432,7 @@ There are several text and typography styles to choose from, although some style
 </div>
 
 ```html_example
-<ul class="accordion-pointer" data-accordion role="tablist">
+<ul class="accordion-pointer" data-accordion>
   <li class="accordion-item" data-accordion-item>
     <a class="accordion-title" href="#typography1" id="typography1-heading" aria-controls="typography1" role="tab">Generic Headings</a>
     <div class="accordion-content" data-tab-content id="typography1" aria-labelledby="typography1-heading" role="tabpanel">
@@ -683,7 +683,7 @@ The default text alignment for most containers is left.
 # Lists
 
 ```html_example
-<ul class="accordion-pointer" data-accordion role="tablist">
+<ul class="accordion-pointer" data-accordion>
   <li class="accordion-item" data-accordion-item>
     <a class="accordion-title" href="#lists3" id="list-heading3" aria-controls="lists3" role="tab">Ordered Lists</a>
     <div class="accordion-content" data-tab-content id="lists3" aria-labelledby="list-heading3" role="tabpanel">      
@@ -2197,27 +2197,26 @@ Refer to the Media Object section for more details about this markup.
 ### Accordion Container
 
 The container for an accordion needs the class `.accordion-pointer`, and the attribute `data-accordion`. Note that in these examples, we use a `<ul>`, but you can use any element you want.
--    For accessibility, include the attribute `role="tablist"`.
 
 
 ```html
-<ul class="accordion-pointer" data-accordion role="tablist">
+<ul class="accordion-pointer" data-accordion>
 </ul>
 ```
 
 ### Accordion Content Panes
 
-Inside the accordion, place a series of content panes (minimum of 2) with the class `.accordion-item` and the attribute `data-accordion-item`. To mark which pane should be open by default, add the class `.is-active` to that pane. Omit this class if all panes should be closed by default.
+Inside the accordion, place a series of content panes with the class `.accordion-item` and the attribute `data-accordion-item`. To mark which pane should be open by default, add the class `.is-active` to that pane. Omit this class if all panes should be closed by default.
 
 Each pane has 2 parts: a **title** and a **content area**.
--    The **title** is an `<a>` with the class `.accordion-title`, a unique `id`, and a link to its coordinating content area.  For accessibility, include `role="tab"`, and set the `aria-controls` attribute to the ID of its content area.
--    The **content area**, is a `<div>` with the class `.accordion-content`, the attribute `data-tab-content`, and each content area also has a unique `id`, which is targeted by the title  link.  For accessibility, include `role="tabpanel"`, and set the `aria-labelledby` attribute to the ID of its title tag.
+-    The **title** is an `<a>` with the class `.accordion-title`. 
+-    The **content area**, is a `<div>` with the class `.accordion-content`, and the attribute `data-tab-content`.
 
 
 ```html
   <li class="accordion-item is-active" data-accordion-item>
-    <a class="accordion-title" href="#panela" id="panel1-heading" aria-controls="panela" role="tab">Accordion A: Title</a>
-    <div class="accordion-content" data-tab-content id="panela" aria-labelledby="panela-heading" role="tabpanel">
+    <a class="accordion-title" href="#">Accordion A: Title</a>
+    <div class="accordion-content" data-tab-content>
       Panel A: I start in the open state.
     </div>
   </li>
@@ -2226,26 +2225,63 @@ Each pane has 2 parts: a **title** and a **content area**.
 Once you put it all together, here's what you get!
 
 ```html_example
-<ul class="accordion-pointer" data-accordion role="tablist">
+<ul class="accordion-pointer" data-accordion>
   <li class="accordion-item is-active" data-accordion-item>
-    <a class="accordion-title" href="#panel1" id="panel1-heading" aria-controls="panel1" role="tab">Panel One Title</a>
-    <div class="accordion-content" data-tab-content id="panel1" aria-labelledby="panel1-heading" role="tabpanel">
+    <a class="accordion-title" href="#">Panel One Title</a>
+    <div class="accordion-content" data-tab-content>
       Panel 1. Lorem ipsum dolor.
     </div>
   </li>
   <li class="accordion-item" data-accordion-item>
-    <a class="accordion-title" href="#panel2" id="panel2-heading" aria-controls="panel2" role="tab">Panel Two Title</a>
-    <div class="accordion-content" data-tab-content id="panel2" aria-labelledby="panel2-heading" role="tabpanel">
+    <a class="accordion-title" href="#">Panel Two Title</a>
+    <div class="accordion-content" data-tab-content>
       Panel 2. Lorem ipsum dolor.
     </div>
   </li>
   <li class="accordion-item" data-accordion-item>
-    <a class="accordion-title" href="#panel3" id="panel3-heading" aria-controls="panel3" role="tab">Panel Three Title</a>
-    <div class="accordion-content" data-tab-content id="panel3" aria-labelledby="panel3-heading" role="tabpanel">
+    <a class="accordion-title" href="#">Panel Three Title</a>
+    <div class="accordion-content" data-tab-content>
       Panel 3. Lorem ipsum dolor.
     </div>
   </li>
 </ul>
+```
+
+
+
+# FAQs
+
+Lists of Frequently Asked Questions (FAQs) use a variation of the accordion markup that includes numbering of questions, and omits the +/- type markers.  
+- Use class `.accordion-faq` on hte container for the questions.
+- Do not add a class to initially expand one FAQ.
+
+```html_example
+ <ol class="accordion-faq" data-accordion>
+  <li class="accordion-item" data-accordion-item>
+    <a href="#" class="accordion-title">What is the Refinance Report?</a>
+    <div class="accordion-content" data-tab-content>
+    <p>Freddie Mac compiles statistics on loans it purchases that refinance loans in its portfolio, and produces a report on the attributes of these refinance loans. The report is known as the Refinance Report and is released quarterly.</p>
+    </div>
+  </li>
+  <li class="accordion-item" data-accordion-item>
+    <a href="#" class="accordion-title">What does the Refinance Report cover and how far back does the data go?</a>
+    <div class="accordion-content" data-tab-content>
+    <p>The Freddie Mac's Refinance Activities Report covers: Quarterly Refinance Statistics for the United States covering the period 1985Q1 to present; Annual Refinance Statistics for the United States and four Census Divisions (1985-present); Quarterly Cash-Out Volume Estimates for the United States (1993Q1-present); Annual Cash-out Volume Estimates for the United States (1993-present); Quarterly Product Transition report for the United States (2002Q1-present); Annual Product Transition Report for the United States (1990-present).</p>
+    </div>
+  </li>
+  <li class="accordion-item" data-accordion-item>
+    <a href="#" class="accordion-title">When is the report updated? Do you revise previously released data?</a>
+    <div class="accordion-content" data-tab-content>
+    <p>Freddie Mac publishes its Refinance Report approximately 30 days after quarter's end. Previously released data is revised, but usually revisions are small. The revisions are due to Freddie Mac's purchases of refinance loans originated in prior quarters. The additional data can cause the reported median and average statistics values to change.</p>
+    </div>
+  </li>
+  <li class="accordion-item" data-accordion-item>
+    <a href="#" class="accordion-title">What data are typically released in the Refinance Report?</a>
+   <div class="accordion-content" data-tab-content>
+    <p>The quarterly and annual refinance statistics include the percent of Freddie Mac-owned loans that were refinanced and resulted in new mortgages at least five percent higher in amount than the original mortgages, the share that resulted in lower loan amounts, the median ratio of the new loan interest rate to the old interest rate for fixed-rate mortgages, the median age of the refinanced loan, and the median amount of appreciation on the property since the previous loan was originated.</p>
+    </div>
+  </li>
+</ol>
 ```
 
 

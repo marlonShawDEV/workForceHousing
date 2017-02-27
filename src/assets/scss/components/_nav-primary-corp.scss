@@ -44,143 +44,114 @@
     span {
       display: none;
       font-size: 1.375rem;
-      padding: 1.4375rem $gutter; 
+      padding-top: 0.2rem; 
+      color: $white;
     }
   }   
   .toggle-icon {
     background: transparent icon(menu, $primary-color, 24, 23, 0, 0, 24, 23) no-repeat center center;   
   }
-  .button-search {
-    background: $fm-yellow icon(search, $white, 24, 24) no-repeat center center;     
-  }
 }
 
 // mobile nav
 @include breakpoint(large down) {      
-  .is-accordion-submenu-parent > a {
-    position: relative;
-    &::after {
-      @include css-triangle(8px, $white, down);
-      position: absolute;
-      top: 50%;
-      margin-top: -4px;
-      right: $gutter;
-    }
-  }
-  .is-accordion-submenu-parent[aria-expanded='true'] > a::after {
-    transform-origin: 50% 50%;
-    transform: scaleY(-1);
-  } 
   .primary-nav {  
+    font-size: rem-calc(19);
+    .column {
+      padding: 0;
+    }
     .top-bar-right {
       text-transform: uppercase;
       &:not([style]) .menu {
-        display: none;
+        display: none;  // hide it on load before js kicks in and adds style attribute
       }
     }
     h4 {
       font-weight: inherit;
       margin-bottom: 0;
     }
-    .logo-mobile { 
-      margin: $gutter $gutter 0 $gutter * 1.5;
-    } 
-    .column {
-      padding: 0;
-    }
     a {
-      color: $white;          
+      color: $body-font-color;          
       display: block;
-      border-bottom: 1px solid transparentize($white, .5);
+      position: relative;
     }
+    .menu {
+      a {
+        border-bottom: 1px solid transparentize($fm-gray, .5);
+      }
+    }
+    .is-accordion-submenu-parent {
+       > a {
+        background: $medium-gray;
+        color: $white;
+        &::after {
+          content: ' ';      
+          height: 1rem;    
+          width: 1rem; 
+          display: inline-block;
+          background: transparent icon(chevron-down, $white, 16, 16) no-repeat center center;
+          position: absolute;
+          top: 50%;
+          margin-top: -0.5rem;
+          right: $gutter;
+          transition: background 0.2s ease 0s;
+        }
+      }
+      &[aria-expanded='true'] {
+        > a::after {
+          background: transparent icon(chevron-up, $white, 16, 16) no-repeat center center;
+        }    
+      }
+    }
+    .logo-mobile { 
+      padding: $gutter $gutter 0 $gutter;
+      display: inline-block;
+      img {
+        width: rem-calc(116);
+        height: rem-calc(41);
+        margin-left: $gutter / 2;
+      }
+    } 
     .menu {
       background: scale-color($topbar-background, $lightness: -8%);
       > li {
-        display: block;
-        background: $fm-green;
-        &.is-accordion-submenu-parent {
-          background: $medium-gray;
-        }
+        background: $light-gray;
         > a { 
           padding: $gutter * 1.5 $gutter;
         }             
       }
-      .is-accordion-submenu {
-        display: block;
-        width: 100%;
+      .nested {
         position: relative;
         > li {   
-        background: $light-gray;
-          > a {            
-            color: transparentize($fm-gray, .15);
+          > a {
             padding: $gutter * 1.5 $gutter;
             text-transform: initial;
-            border-bottom: 1px solid transparentize($fm-gray, .5);
           }          
         } 
       }
     }     
-    &.data-expanded {
+    &.is-mobile-expanded[aria-expanded='true'] {
       .title-bar {
         background: $primary-color none repeat scroll 0 0;
         color: $white;
-        transition: background-color 0.35s ease 0s, background-image 0.35s ease 0s;
+        transition: background-color 0.2s ease 0s, background-image 0.2s ease 0s;
         span {
           display: inline-block;
         }
         .logo-mobile {
+          img {
             display: none;
+          }
         }
       } 
       .toggle-icon {
         background: transparent icon(menu-close, $white, 24, 24) no-repeat center center; 
       }      
     }
-    .input-group {
-      height: 5rem;
-      margin-bottom: 0;
-      padding: 0;
-      background: $fm-yellow;
-      color: $white;
-    }
-    
-    input[type="search"] {
-      max-width: 100%;
-      background: none;
-      background-color: $fm-yellow;
-      box-shadow: none;
-      border: 0;
-      color: $white;
-      height: 3rem;  
-      font-size: 1.125rem;
-      margin: $gutter 1.125rem 1.35rem $gutter;
-      padding-left: 0;
-      &::placeholder { 
-        color: rgba(255,255,255,.9);
-      }
-    }  
   }  
 }
 
-@include breakpoint(xlarge) {       
-  // angle pointer instead of triangle
-  .dropdown.menu > li.is-dropdown-submenu-parent {
-    > a::before {
-      content: ' ';      
-      height: 0.75em;    
-      width: 1em;      
-      display: inline-block;
-      position: relative;
-      top: 0.05em;
-      margin-right: 0.5rem;
-      background: transparent icon(chevron-down, $fm-orange, 14, 14) no-repeat center center;
-    }
-    &.is-active {
-      > a::before {
-        background: transparent icon(chevron-up, $fm-orange, 14, 14) no-repeat center center;
-      }
-    }
-  }  
+@include breakpoint(xlarge) {  
   .top-bar {    
     a {
       color: $fm-gray;
@@ -188,18 +159,10 @@
     h4 {
       font-size: 1.125rem;
       font-weight: $global-weight-normal;
-    } 
-    .menu {
-      .submenu {
-        @include nav-submenu-list(2rem 2rem 1rem);
-      }  
-      > li > a {
-        padding: 0.6875rem 1.3rem; 
-        line-height: 1;
-      }  
     }
-    li.is-dropdown-submenu-parent {
+    li.nav-accordion-parent {
       position: relative;
+      display: table-cell;
       li:not(:last-child) {
         border-bottom: 1px solid lighten($fm-gray, 40%);
       }
@@ -207,61 +170,76 @@
   }
   .logo-desktop {
       padding: 1.3125rem 0 1rem;
+      display: inline-block;
+      img {
+        width: rem-calc(190);
+        height: rem-calc(67.13);
+      }
   }
   .primary-nav {  
     font-size: rem-calc(17); 
     font-weight: $global-weight-medium;
     border-width: 0;
-    .top-bar-right > .menu:not(.submenu) {
+    .menu:not(.nested) {
+      display: table-cell;
+      padding-top: 1rem;
       z-index: 496;
       text-transform: uppercase;
       letter-spacing: 1px;
       > li {
         padding: 0 1.75rem;                 
         > a {
-          padding: 3.125rem 0 2.375rem;
-          border-bottom: 6px solid $white;          
+          padding: 2.125rem 0 2.375rem;
+          border-bottom: 6px solid $white;
+          line-height: 1;          
         }  
-        &:not(.is-dropdown-submenu-parent) {
+        &:not(.nav-accordion-parent) {
           > a {
             @include nav-desktop-link();
           }
-        } 
-        &.is-active {
-          > a {
-            @include nav-submenu-parent-hover; 
-          }  
-        } 
-        &.current-hover > a {
-          border-bottom-color: $fm-green;
-          color: $fm-green;
-        }
-        &.is-dropdown-submenu-parent {
+        }        
+      }
+      &.nav-bus-section {
+        padding-top: 0;
+        > .nav-accordion-parent {
           padding-right: 0;
           padding-left: 0;      
           > a {
+            padding-top: 3.125rem;
             padding-left: 1.375rem;
             padding-right: 1.25rem;            
             position: relative;
             z-index: 497;
-            transition: color 0.25s ease 0s;
+            transition: color 0.2s ease 0s;
             &:focus  {
-              color: $fm-orange;
+              color: $fm-orange; 
             }
-          }        
-        }      
-      }      
-    }    
-    .submenu {
-      z-index: 496;
-      margin-top: -1px;
+          } 
+          &[aria-expanded='true'] {
+            box-shadow: 0 -5px 5px 0 rgba(0, 0, 0, 0.37);
+          }
+        } 
+      } 
+    } 
+       
+    .nested {
       letter-spacing: normal;
-      @include nav-submenu-list(1.75rem 1.5rem 0.75rem 1.75rem);
       min-width: rem-calc(250px);
+      position: absolute;
+      top: rem-calc(111);
+      right: 0;
+      width: rem-calc(250);
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.37);
+      z-index: 493;
+      text-transform: initial;
+      > li > a {
+        padding: 1.8rem 2rem 1rem;
+      }
     }
     p {
       font-size: rem-calc(16);
       line-height: 1.3;
+      font-weight: $global-weight-light;
     }
   }
 } 

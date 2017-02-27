@@ -17,34 +17,54 @@ $ribbon-background-desktop: linear-gradient(to bottom, $offwhite 0%, $offwhite 9
   background: $ribbon-background-desktop;  
   .ribbon-nav {
     z-index: 501;
+  }  
+  .menu > li > a {
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
   }
-  li.is-dropdown-submenu-parent > a {
-    z-index: 502;
-    position: relative;
-  }
-  .submenu {      
-      z-index: 499;
-      p {
-        line-height: 1.3;
-      }
+  .nested {
+    position: absolute;
+    top: 2.25rem;
+    right: 0;
+    width: 19rem;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.37);
+    z-index: 200;
+    > li > a {
+      padding: 1.8rem 2rem 1rem;
+    }
+    p {
+      line-height: 1.3;
+    }
   }
   li.active > a {
     box-shadow: none;
     border-left: 1px solid $ribbon-edge;
     border-right: 1px solid $ribbon-edge;
   }      
-  .menu:not(.submenu) {
+  .menu:not(.nested) {
+    display: table-cell;
+    &:not(:last-child) { padding-right: 5px; }
     background: $ribbon-background-desktop;
-     .active > a {
+    .active > a {
       color: $fm-green;
       font-weight: $global-weight-medium;
     }
-    >  li:not(.active):hover > a,
-    > li:not(.active) > a:focus,
-    > li.is-active > a  {
-     @include nav-submenu-parent-hover;      
-    }
-  }    
+    > li {
+      display: table-cell;
+      &:not(.active):hover > a,
+      &:not(.active) > a:focus  {
+        @include nav-submenu-parent-hover; 
+        box-shadow: 0 -5px 5px 0 rgba(0,0,0,0.37);        
+      }
+    }  
+  }
+  .ribbon-rbo-toggle > a:focus {
+    background: $white;
+    border-bottom-color: $white;
+    z-index: 606;
+    position: relative;
+    display: inline-block;
+  }  
   .input-group { 
     margin-bottom: 0.0625rem;
     background: #fff;

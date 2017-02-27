@@ -58,10 +58,10 @@ a:hover {
   color: $white;
   padding: 0.7em 0.4em 0.6em 2em;
   z-index:200; 
-  .card & {  
-    left: 1px;
-    bottom: 1px; 
-    background: rgba($primary-color, 0.92);
+  left: 1px;
+  bottom: 1px; 
+  background: rgba($primary-color, 0.92);
+  .overlay & {  
     transition: background 0.25s ease; 
   }  
   .twin-col & {

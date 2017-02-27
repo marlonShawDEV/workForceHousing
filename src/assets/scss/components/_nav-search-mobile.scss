@@ -1,0 +1,27 @@
+
+  .button-search {
+    background: $fm-yellow icon(search, $white, 24, 24) no-repeat center center;     
+  }
+    .input-group {
+      height: 5rem;
+      margin-bottom: 0;
+      padding: 0;
+      background: $fm-yellow;
+      color: $white;
+    }
+    
+    input[type="search"] {
+      max-width: 100%;
+      background: none;
+      background-color: $fm-yellow;
+      box-shadow: none;
+      border: 0;
+      color: $white;
+      height: 3rem;  
+      font-size: 1.125rem;
+      margin: $gutter 1.125rem 1.35rem $gutter;
+      padding-left: 0;
+      &::placeholder { 
+        color: rgba(255,255,255,.9);
+      }
+    }  

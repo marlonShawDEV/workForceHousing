@@ -1,13 +1,15 @@
 <div class="top-bar ribbon show-for-xlarge data-expanded" id="ribbon">    
   <div id="ribbon-nav" class="row column">  
     <nav class="top-bar-right">
-      <ul class="menu dropdown"  data-dropdown-menu>
+      <ul class="menu">
         <li id="desktop-corporate-home"><a href="/corporate/">Freddie Mac Home</a></li>
         <li id="desktop-singlefamily-home"><a href="/singlefamily/">Single-Family</a></li>
         <li id="desktop-multifamily-home"><a href="/multifamily/">Multifamily</a></li>
-        <li id="desktop-investments-home"><a href="/investments/">Capital Markets</a></li>
-        <li class="is-dropdown-submenu-parent"><a href="#">Renters, Buyers, &amp; Owners</a>
-          <ul class="menu">
+        <li id="desktop-markets-home"><a href="/capital-markets/">Capital Markets</a></li>
+      </ul>
+      <ul class="menu vertical ribbon-rbo-section" data-accordion-menu>
+        <li class="nav-accordion-parent ribbon-rbo-toggle"><a href="#">Renters, Buyers, &amp; Owners</a>
+          <ul class="menu vertical nested" style="display: none;">
             <li><a href="http://myhome.freddiemac.com/"><h4>My Home by Freddie Mac<sup>&reg;</sup></h4>
             <p>Resources to help you rent, buy and own your home.</p></a>
             </li>
@@ -19,7 +21,9 @@
             </li>
           </ul>
         </li> 
-        <li>              
+      </ul> 
+      <ul class="menu">
+        <li id="desktop-search-wrapper">              
           <form action="http://search.freddiemac.com/search" method="get" accept-charset="utf-8">
             <input type="hidden" name="entqr" value="0">
             <input type="hidden" name="output" value="xml_no_dtd">
@@ -39,7 +43,7 @@
             </div> 
           </form>  
         </li>
-      </ul>        
+      </ul>       
     </nav>
   </div>
 </div>

@@ -1,44 +1,27 @@
 // text underline transition
 @mixin underline-transition($color: $white, $width: 1px) {
-  transition: border-bottom-color 0.25s ease 0s;
+  transition: border-bottom-color 0.2s ease 0s;
   border-bottom: $width solid rgba($color, 0);
   &:hover,
   &:focus  {
     border-bottom: $width solid rgba($color, 0.65);
   }
 }
-// desktop dropdown items from ribbon and corp nav
-@mixin nav-submenu-list($padding: $menu-item-padding) {
-  background: $white;
-  box-shadow: 0 0 5px 0 rgba(0,0,0,0.37);
-  & > li > a { 
-    padding: $padding;     
-    color: $medium-gray;  
-    text-transform: initial; 
-    font-weight: $global-weight-light;
-    border-bottom-width: 0; 
-    transition: background-color 0.2s ease 0s, color 0.15s ease 0s;
-  }
-  & > li:hover > a, 
-  & a:focus { 
-    background: $fm-yellow;
-    color: $white;
-  } 
-}
+
 // desktop hover states for parent of dropdowns
 @mixin nav-submenu-parent-hover(){
   color: $fm-orange;
   background: $white;
   border-bottom-color: $white;
-  box-shadow: 0 -5px 5px 0 rgba(0,0,0,0.37);
-  transition: color 0.15s ease 0s;
+  transition: color 0.2s ease 0s;
 }
 
 // link style for primary and secondary nav but not ribbon
 @mixin nav-desktop-link(){  
   color: $fm-gray;
-  transition: color 0.25s ease 0s, border-bottom-color 0.25s ease 0s;   
+  transition: color 0.2s ease 0s, border-bottom-color 0.2s ease 0s;   
   &.active {
+    color: $fm-green;
     border-bottom-color: #cbe721; // somewhere close to adjust_hue(saturate(darken($pear, 2.3), 22.5), 4.2);              
   }
   &:focus,
@@ -80,14 +63,14 @@
       width: 100%;
       height: 100%;
       background: rgba($white, 0);
-      transition: background 0.3s ease 0s;      
+      transition: background 0.25s ease 0s;      
     }
     &:hover::after,
     &:focus::after  {
       background: rgba($white, 0.2);
     }
     &:active::after  {
-      background: rgba($white, 0.35);
+      background: rgba($white, 0.3);
       transition: none;
     }
   }  
