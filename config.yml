@@ -42,7 +42,7 @@ PATHS:
     - "bower_components/foundation-sites/js/foundation.accordionMenu.js"
     - "bower_components/foundation-sites/js/foundation.drilldown.js"
     - "bower_components/foundation-sites/js/foundation.dropdown.js"
-    - "bower_components/foundation-sites/js/foundation.dropdownMenu.js"
+    # "bower_components/foundation-sites/js/foundation.dropdownMenu.js"
     - "bower_components/foundation-sites/js/foundation.equalizer.js"
     - "bower_components/foundation-sites/js/foundation.interchange.js"
     # "bower_components/foundation-sites/js/foundation.magellan.js"
@@ -65,11 +65,13 @@ PATHS:
     - "src/assets/js/homepageTestimonies_corp.js"
     - "src/assets/js/prepModals.js"
     - "src/assets/js/prepRotators.js" 
-    - "src/assets/js/fakeNav_corp.js" 
+    # comment for prod code. this is just for local site
+    - "src/assets/js/fakeNav_corp.js"  
     - "src/assets/js/tertiaryNav_corp.js"   
     - "src/assets/js/appCorp.js"
     - "src/assets/js/blogFeedbackForm_corp.js"
-    # "src/assets/js/jQueryUrlShortener.js"  #uncomment for prod code. slows things down to much locally.
+    #uncomment for prod if desired 
+    # "src/assets/js/jQueryUrlShortener.js"  
     - "src/assets/js/shareWidget.js"
     # Paths to JavaScript libraries, which are compined into one file
   javascriptsf:
@@ -79,29 +81,6 @@ PATHS:
     # Core Foundation files
     - "bower_components/foundation-sites/js/foundation.core.js"
     - "bower_components/foundation-sites/js/foundation.util.*.js"
-    # Individual Foundation components
-    # If you aren't using a component, just remove it from the list
-    - "bower_components/foundation-sites/js/foundation.abide.js"
-    - "bower_components/foundation-sites/js/foundation.accordion.js"
-    - "bower_components/foundation-sites/js/foundation.accordionMenu.js"
-    - "bower_components/foundation-sites/js/foundation.drilldown.js"
-    - "bower_components/foundation-sites/js/foundation.dropdown.js"
-    - "bower_components/foundation-sites/js/foundation.dropdownMenu.js"
-    - "bower_components/foundation-sites/js/foundation.equalizer.js"
-    - "bower_components/foundation-sites/js/foundation.interchange.js"
-    - "bower_components/foundation-sites/js/foundation.magellan.js"
-    # "bower_components/foundation-sites/js/foundation.offcanvas.js"
-    - "bower_components/foundation-sites/js/foundation.orbit.js"
-    - "bower_components/foundation-sites/js/foundation.responsiveMenu.js"
-    - "bower_components/foundation-sites/js/foundation.responsiveToggle.js"
-    - "bower_components/foundation-sites/js/foundation.reveal.js"
-    # "bower_components/foundation-sites/js/foundation.slider.js"
-    - "bower_components/foundation-sites/js/foundation.sticky.js"
-    - "bower_components/foundation-sites/js/foundation.tabs.js"
-    - "bower_components/foundation-sites/js/foundation.toggler.js"
-    - "bower_components/foundation-sites/js/foundation.tooltip.js"
-    # Paths to your own project code are here 
-    - "src/assets/js/appSf.js"
   javascriptmf:
     # Libraries requried by Foundation
     #- "bower_components/jquery/dist/jquery.js"
@@ -110,55 +89,11 @@ PATHS:
     - "bower_components/foundation-sites/js/foundation.core.js"
     - "bower_components/foundation-sites/js/foundation.util.*.js"
     # Individual Foundation components
-    # If you aren't using a component, just remove it from the list
-    - "bower_components/foundation-sites/js/foundation.abide.js"
-    - "bower_components/foundation-sites/js/foundation.accordion.js"
-    - "bower_components/foundation-sites/js/foundation.accordionMenu.js"
-    - "bower_components/foundation-sites/js/foundation.drilldown.js"
-    - "bower_components/foundation-sites/js/foundation.dropdown.js"
-    - "bower_components/foundation-sites/js/foundation.dropdownMenu.js"
-    - "bower_components/foundation-sites/js/foundation.equalizer.js"
-    - "bower_components/foundation-sites/js/foundation.interchange.js"
-    - "bower_components/foundation-sites/js/foundation.magellan.js"
-    # "bower_components/foundation-sites/js/foundation.offcanvas.js"
-    - "bower_components/foundation-sites/js/foundation.orbit.js"
-    - "bower_components/foundation-sites/js/foundation.responsiveMenu.js"
-    - "bower_components/foundation-sites/js/foundation.responsiveToggle.js"
-    - "bower_components/foundation-sites/js/foundation.reveal.js"
-    # "bower_components/foundation-sites/js/foundation.slider.js"
-    - "bower_components/foundation-sites/js/foundation.sticky.js"
-    - "bower_components/foundation-sites/js/foundation.tabs.js"
-    - "bower_components/foundation-sites/js/foundation.toggler.js"
-    - "bower_components/foundation-sites/js/foundation.tooltip.js"
-    # Paths to your own project code are here
-    - "src/assets/js/appMf.js"
-  javascriptinvest:
+  javascriptcm:
     # Libraries requried by Foundation
     #- "bower_components/jquery/dist/jquery.js"
     - "bower_components/what-input/what-input.js"
     # Core Foundation files
     - "bower_components/foundation-sites/js/foundation.core.js"
     - "bower_components/foundation-sites/js/foundation.util.*.js"
-    # Individual Foundation components
-    # If you aren't using a component, just remove it from the list
-    - "bower_components/foundation-sites/js/foundation.abide.js"
-    - "bower_components/foundation-sites/js/foundation.accordion.js"
-    - "bower_components/foundation-sites/js/foundation.accordionMenu.js"
-    - "bower_components/foundation-sites/js/foundation.drilldown.js"
-    - "bower_components/foundation-sites/js/foundation.dropdown.js"
-    - "bower_components/foundation-sites/js/foundation.dropdownMenu.js"
-    - "bower_components/foundation-sites/js/foundation.equalizer.js"
-    - "bower_components/foundation-sites/js/foundation.interchange.js"
-    - "bower_components/foundation-sites/js/foundation.magellan.js"
-    # "bower_components/foundation-sites/js/foundation.offcanvas.js"
-    - "bower_components/foundation-sites/js/foundation.orbit.js"
-    - "bower_components/foundation-sites/js/foundation.responsiveMenu.js"
-    - "bower_components/foundation-sites/js/foundation.responsiveToggle.js"
-    - "bower_components/foundation-sites/js/foundation.reveal.js"
-    # "bower_components/foundation-sites/js/foundation.slider.js"
-    - "bower_components/foundation-sites/js/foundation.sticky.js"
-    - "bower_components/foundation-sites/js/foundation.tabs.js"
-    - "bower_components/foundation-sites/js/foundation.toggler.js"
-    - "bower_components/foundation-sites/js/foundation.tooltip.js"
-    # Paths to your own project code are here
-    - "src/assets/js/appCm.js"
+

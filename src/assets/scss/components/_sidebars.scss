@@ -29,13 +29,13 @@
 
 .sidebar-feature {    
   @include breakpoint(large) {
-    min-height: 24rem;
+    min-height: 21rem;
   }
   z-index: -1;
   .feature-background {   // background will be different for each one, so moving to inline
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: bottom right;    
+    background-position: center center;    
     position: absolute;
     left: 0;
     top: 0;

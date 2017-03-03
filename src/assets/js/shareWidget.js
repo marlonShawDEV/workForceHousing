@@ -44,4 +44,7 @@ function shareLinkUpdate1(){
   });
 }
 
-if($(".share-widget").length){ shareLinkUpdate1(); }
+$(function(){
+ if($(".share-widget").length){ shareLinkUpdate1(); }
+});
+

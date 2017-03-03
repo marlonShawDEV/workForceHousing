@@ -86,9 +86,9 @@ function styleGuide(done) {
     output: PATHS.dist + '/styleguide/styleguide_mf.html',
     template: 'src/styleguide/template_mf.html'
   }, done);
-  sherpa('src/styleguide/index_invest.md', {
-    output: PATHS.dist + '/styleguide/styleguide_invest.html',
-    template: 'src/styleguide/template_invest.html'
+  sherpa('src/styleguide/index_cm.md', {
+    output: PATHS.dist + '/styleguide/styleguide_cm.html',
+    template: 'src/styleguide/template_cm.html'
   }, done);
 }
 
@@ -142,10 +142,10 @@ function javascript(done) {
     ))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/js'));
-  return gulp.src(PATHS.javascriptinvest)
+  return gulp.src(PATHS.javascriptcm)
     .pipe($.sourcemaps.init())
     .pipe($.babel())
-    .pipe($.concat('app_invest.js'))
+    .pipe($.concat('app_cm.js'))
     .pipe($.if(PRODUCTION, $.uglify()
       .on('error', e => { console.log(e); })
     ))

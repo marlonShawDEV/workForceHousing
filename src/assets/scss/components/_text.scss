@@ -338,13 +338,9 @@ b {
 .article-byline-small {
   font-size: rem-calc(13);
   color: $fm-gray;
-  line-height: 1.15;
-  font-weight: $global-weight-normal;
+  line-height: 1.25;
 	@include breakpoint(medium) {
 		font-size: rem-calc(14);
-	}
-	strong {
-		font-weight: $global-weight-bold;
 	}
 }
 .flex-up {  

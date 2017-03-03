@@ -1,0 +1,169 @@
+// fluid font formula
+// calc( min-font-size-px + (max-font-size - min-font-size) * (100vw - min-screen-size-px)/(max-screen-size - min-screen-size) )
+// thus if you want 16px at 400 wide, scaling up to 24px at 800 wide, then you'd use
+// calc(16px + (24-16) * (100vw - 400px)/(800-400))
+// 1180 denominator is based on 1500 - 320;
+
+body {  
+	font-weight: $global-weight-light;
+}
+
+h1 {
+    font-size: calc(30px +  12 * (100vw - 320px) / 1180); 
+}
+h2 {
+    font-size: calc(22px +  10 * (100vw - 320px) / 1180); 
+}
+h3 {
+    font-size: calc(20px +  8 * (100vw - 320px) / 1180); 
+}
+h4 {
+    font-size: calc(18px +  7 * (100vw - 320px) / 1180); 
+}
+h5 {
+    font-size: calc(16px +  5 * (100vw - 320px) / 1180); 
+}
+h6 {
+    font-size: calc(15px +  2 * (100vw - 320px) / 1180); 
+}
+
+@include breakpoint(xxlarge) {
+  h1 {
+      font-size: rem-calc(42); 
+  }
+  h2 {
+      font-size: rem-calc(32);  
+  }
+  h3 {
+      font-size: rem-calc(28); 
+  }
+  h4 {
+      font-size: rem-calc(25); 
+  }
+  h5 {
+      font-size: rem-calc(21); 
+  }
+  h6 {
+      font-size: rem-calc(17); 
+  }
+}
+
+h1.subtitle {
+  font-size: rem-calc(18);
+  font-size: calc(18px +  14 * (100vw - 320px)/1180); 
+  font-weight: $global-weight-bold;
+  margin: 0.25em 0 0.375em;  
+  @include breakpoint(xlarge) {
+		font-size: rem-calc(26);
+    font-size: calc(26px +  6 * (100vw - 1180px)/220); 
+	}
+  @include breakpoint(xxlarge) {
+		font-size: rem-calc(32);
+	}
+}
+.grid-block-label {
+  font-size: rem-calc(13);
+  font-size: calc(13px +  3 * (100vw - 320px)/1180); 
+  color: $white;
+  line-height: 1.1;
+  margin: 0 0 1.5em;
+  font-weight: $global-weight-bold;
+  @include breakpoint(small only) {
+    font-weight: $global-weight-medium;
+  }
+  text-transform: uppercase;
+  @include breakpoint(large) {
+		font-size: rem-calc(16);
+	}
+}
+.grid-block-title-large {
+  font-size: rem-calc(20);
+  line-height: 1.25;
+  font-size: calc(20px +  18 * (100vw - 320px)/1180); 
+  font-weight: $global-weight-medium;
+  margin: 0 0 0.7em; 
+  @include breakpoint(xxlarge) {
+		font-size: rem-calc(38);
+	}
+}
+.grid-block-title {
+  font-size: rem-calc(16);
+  line-height: 1.18;
+  font-size: calc(16px +  16 * (100vw - 320px)/1180); 
+  font-weight: $global-weight-bold;
+  @include breakpoint(small only) {
+    font-weight: $global-weight-medium;
+  }
+  margin: 0 0 0.5rem;  
+  @include breakpoint(xxlarge) {
+		font-size: rem-calc(32);
+	}
+  .media-object-section & {
+    margin: 0.75rem 0 0; 
+  }
+}
+.grid-block-title-medium {
+  font-size: rem-calc(16);
+  font-size: calc(16px +  8 * (100vw - 320px)/1180); 
+  font-weight: $global-weight-bold;
+  @include breakpoint(small only) {
+    font-weight: $global-weight-medium;
+  }
+  margin: 0 0 0.5rem;  
+  @include breakpoint(xxlarge) {
+		font-size: rem-calc(24);
+	}
+}
+.grid-block-text {  
+  font-size: rem-calc(15);
+  font-size: calc(15px +  6 * (100vw - 320px)/1180); 
+  @include breakpoint(xxlarge) {
+		font-size: rem-calc(21);
+	}
+}
+.section-subtitle {
+  font-size: rem-calc(18);
+  font-size: calc(18px +  4 * (100vw - 320px)/1180);
+  color: inherit;
+  font-weight: inherit;
+  margin-bottom: 0.25rem;
+  @include breakpoint(xxlarge) {
+		font-size: rem-calc(22);
+	}
+  + .section-subtitle {
+    margin-top: 0.5em;
+  }
+}
+.callout-txt {
+	color: $primary-color;
+	font-size: rem-calc(30);
+  font-size: calc(30px +  18 * (100vw - 320px)/1180);
+	line-height: 1.2;
+	margin: 2rem 0;
+  font-weight: inherit;
+  @include breakpoint(xxlarge) {
+		font-size: rem-calc(48);
+	}
+}
+.page-subtitle {
+  margin: 0.5em 0;
+  font-weight: $global-weight-medium;
+  color: $fm-gray;
+  font-size: rem-calc(17);    
+  font-size: calc(17px +  5 * (100vw - 320px) / 1180); 
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(22);
+  }
+}
+
+p.intro {
+  font-size: rem-calc(17);    
+  font-size: calc(17px +  5 * (100vw - 320px) / 1180); 
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(22);
+  }
+}
+
+p.lead {
+	font-weight: $global-weight-normal;
+}

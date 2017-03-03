@@ -1,199 +1,179 @@
 
 <div class="show-for-print">FreddieMac.com</div>
 <header id="header-nav" class="hide-for-print">  
-    <div class="top-bar ribbon show-for-xlarge data-expanded" id="ribbon">    
-      <div id="ribbon-nav" class="row column">  
-        <nav class="top-bar-right">
-          <ul class="menu dropdown"  data-dropdown-menu>
-            <li id="desktop-corporate-home"><a href="/corporate/">Freddie Mac Home</a></li>
-            <li id="desktop-singlefamily-home"><a href="/singlefamily/">Single-Family</a></li>
-            <li id="desktop-multifamily-home"><a href="/multifamily/">Multifamily</a></li>
-            <li id="desktop-investments-home"><a href="/investments/">Capital Markets</a></li>
-            <li class="future-drop-down"><a href="#">Renters, Buyers, &amp; Owners</a>
-              <ul class="menu">
-                <li><a href="http://myhome.freddiemac.com/"><h4>My Home by Freddie Mac<sup>&reg;</sup></h4>
-                <p>Resources to help you rent, buy and own your home.</p></a>
-                </li>
-                <li><a href="https://ww3.freddiemac.com/loanlookup/"><h4>Do we own your mortgage?</h4>
-                <p>Find out if Freddie Mac owns your loan using our secured lookup tool.</p></a>
-                </li>
-                <li><a href="https://www.homesteps.com/"><h4>Homes for Sale</h4>
-                <p>Buy a home from HomeSteps<sup>&reg;</sup>, the real estate sales unit of Freddie Mac.</p></a>
-                </li>
+  <div class="top-bar ribbon show-for-xlarge data-expanded" id="ribbon">    
+    <div id="ribbon-nav" class="row column">  
+      <nav class="top-bar-right">
+        <ul class="menu">
+          <li id="desktop-corporate-home"><a href="/">Freddie Mac Home</a></li>
+          <li id="desktop-singlefamily-home"><a href="/singlefamily/">Single-Family</a></li>
+          <li id="desktop-multifamily-home"><a href="/multifamily/">Multifamily</a></li>
+          <li id="desktop-markets-home"><a href="/capital-markets/">Capital Markets</a></li>
+        </ul>
+        <ul class="menu vertical ribbon-rbo-section" data-accordion-menu>
+          <li class="nav-accordion-parent ribbon-rbo-toggle"><a href="#">Renters, Buyers, &amp; Owners</a>
+            <ul class="menu vertical nested" style="display: none;">
+              <li><a href="http://myhome.freddiemac.com/"><h4>My Home by Freddie Mac<sup>&reg;</sup></h4>
+              <p>Resources to help you rent, buy and own your home.</p></a>
+              </li>
+              <li><a href="https://ww3.freddiemac.com/loanlookup/"><h4>Do we own your mortgage?</h4>
+              <p>Find out if Freddie Mac owns your loan using our secured lookup tool.</p></a>
+              </li>
+              <li><a href="https://www.homesteps.com/"><h4>Homes for Sale</h4>
+              <p>Buy a home from HomeSteps<sup>&reg;</sup>, the real estate sales unit of Freddie Mac.</p></a>
+              </li>
+            </ul>
+          </li> 
+        </ul> 
+        <ul class="menu">
+          <li id="desktop-search-wrapper">              
+            <form action="http://search.freddiemac.com/search" method="get" accept-charset="utf-8">
+              <input type="hidden" name="entqr" value="0">
+              <input type="hidden" name="output" value="xml_no_dtd">
+              <input type="hidden" name="sort" value="date:D:L:d1">
+              <input type="hidden" name="client" value="default_frontend">
+              <input type="hidden" name="ud" value="1">
+              <input type="hidden" name="oe" value="UTF-8">
+              <input type="hidden" name="ie" value="UTF-8">
+              <input type="hidden" name="proxystylesheet" value="default_frontend">
+              <input type="hidden" name="getfields" value="description">
+              <input type="hidden" name="site" value="default_collection">
+              <div class="input-group">
+                <input type="search" placeholder="Search" name="q" class="input-group-field">	                
+                <div class="input-group-button">
+                  <button type="submit" class="button" aria-label="submit search"></button>
+                </div>
+              </div> 
+            </form>  
+          </li>
+        </ul> 
+      </nav>
+    </div>
+  </div>
+  
+  <div class="primary-nav" id="primary-nav" data-toggler=".is-mobile-expanded">
+    <div class="row column primarynav-buffer"> 
+      <div class="top-bar"> 
+        <div class="title-bar hide-for-xlarge" id="top-bar-title" data-responsive-toggle="main-nav" data-hide-for="xlarge">
+          <div class="float-right">
+            <button id="menu-toggle" class="toggle-icon button" type="button" data-toggle="primary-nav" aria-label="toggle menu"></button>
+          </div>
+            <a href="/" class="logo-mobile"><span>Freddie Mac Home</span><img class="no-border" src="/images/FreddieMacLogo.svg" alt="Freddie Mac logo"></a>
+        </div>
+        <div class="top-bar-left show-for-xlarge">
+          <a href="/" class="logo-desktop"><img alt="Freddie Mac logo" src="/images/FreddieMacLogo.svg" class="no-border"></a>
+        </div>
+        <nav class="top-bar-right" id="main-nav">  
+          <ul class="menu vertical xlarge-horizontal">       
+            <li id="nav-perspectives"><a href="/perspectives/">Perspectives</a>
+            </li>
+            <li id="nav-research"><a href="/research/">Research</a>
+            </li>
+            <li id="nav-blog"><a href="/blog/">Blog</a>
+            </li>
+            <li id="nav-mediaroom"><a href="/media-room/">Media Room</a>
+            </li>
+            <li id="nav-about"><a href="/about/">About</a>
+            </li>
+          </ul>
+          <ul class="menu vertical show-for-xlarge nav-bus-section" data-accordion-menu>
+            <li class="nav-accordion-parent nav-bus-toggle"><a href="#">Our Businesses</a>
+              <ul class="menu vertical nested" style="display: none;">
+                <li><a href="/singlefamily/"><h4>Single-Family</h4>
+                      <p>For lenders, servicers and industry partners</p></a></li>
+                <li><a href="/multifamily/"><h4>Multifamily</h4>
+                      <p>For lenders, servicers, borrowers and investors</p></a></li>
+                <li><a href="/capital-markets/"><h4>Capital Markets</h4>
+                      <p>For securities investors</p></a></li>
+              </ul>
+            </li>
+          </ul>
+          <!-- mobile nav items below -->  
+          <ul class="menu vertical hide-for-xlarge" data-accordion-menu>
+            <li class=""><a id="nav-mobile-bus-link" href="#">Our Businesses</a>
+              <ul class="menu vertical nested" style="display: block;">
+                <li><a href="/singlefamily/">Single-Family</a></li>
+                <li><a href="/multifamily/">Multifamily</a></li>
+                <li><a href="/capital-markets/">Capital Markets</a></li>
+              </ul>
+            </li>        
+            <li class=""><a id="nav-mobile-rbo-link" href="#">Renters, Buyers, &amp; Owners</a>
+              <ul class="menu vertical nested" id="nav-mobile-rbo" style="display: block;">
+                <li><a href="http://myhome.freddiemac.com/">My Home by Freddie Mac<sup>&reg;</sup></a></li>
+                <li><a href="https://ww3.freddiemac.com/loanlookup/">Do we own your mortgage?</a></li>
+                <li><a href="https://www.homesteps.com/">Homes for Sale</a></li>
               </ul>
             </li> 
-            <li>              
-              <form action="http://search.freddiemac.com/search" method="get" accept-charset="utf-8">
-                <input type="hidden" name="entqr" value="0">
-                <input type="hidden" name="output" value="xml_no_dtd">
-                <input type="hidden" name="sort" value="date:D:L:d1">
-                <input type="hidden" name="client" value="default_frontend">
-                <input type="hidden" name="ud" value="1">
-                <input type="hidden" name="oe" value="UTF-8">
-                <input type="hidden" name="ie" value="UTF-8">
-                <input type="hidden" name="proxystylesheet" value="default_frontend">
-                <input type="hidden" name="getfields" value="description">
-                <input type="hidden" name="site" value="default_collection">
-                <div class="input-group">
-                  <input type="search" placeholder="Search" name="q" class="input-group-field">	                
-                  <div class="input-group-button">
-                    <button type="submit" class="button" aria-label="submit search"></button>
-                  </div>
-                </div> 
-              </form>  
-            </li>
-          </ul>        
+          </ul>      
         </nav>
       </div>
     </div>
-    
-    <div class="primary-nav" id="primary-nav" data-toggler=".data-expanded">
-      <div class="row column primarynav-buffer"> 
-        <div class="row column top-bar"> 
-          <div class="title-bar hide-for-xlarge" id="top-bar-title" data-responsive-toggle="main-nav" data-hide-for="xlarge">
-            <div class="float-right">
-              <button id="menu-toggle" class="toggle-icon button" type="button" data-toggle="primary-nav" aria-label="toggle menu"></button>
-            </div>
-              <a href="/"><span>Freddie Mac Home</span><img class="logo-mobile no-border" src="/images/fm-logo-mobile.png" alt="Freddie Mac logo"></a>
-          </div>
-          <div class="top-bar-left show-for-xlarge">
-            <a href="/"><img alt="Fredd Mac logo" src="/images/logo.png" class="logo-desktop no-border"></a>
-          </div>
-          <nav class="top-bar-right" id="main-nav">      
-            <ul class="menu" data-responsive-menu="accordion xlarge-dropdown">       
-              <li class="hide-for-xlarge">              
-                <form action="http://search.freddiemac.com/search" method="get" accept-charset="utf-8">
-                  <input type="hidden" name="entqr" value="0">
-                  <input type="hidden" name="output" value="xml_no_dtd">
-                  <input type="hidden" name="sort" value="date:D:L:d1">
-                  <input type="hidden" name="client" value="default_frontend">
-                  <input type="hidden" name="ud" value="1">
-                  <input type="hidden" name="oe" value="UTF-8">
-                  <input type="hidden" name="ie" value="UTF-8">
-                  <input type="hidden" name="proxystylesheet" value="default_frontend">
-                  <input type="hidden" name="getfields" value="description">
-                  <input type="hidden" name="site" value="default_collection">
-                  <div class="input-group">
-                    <input type="search" placeholder="Search" name="q" class="input-group-field">	                
-                    <div class="input-group-button">
-                      <button type="submit" class="button button-search" aria-label="submit search"></button>
-                    </div>
-                  </div> 
-                </form>  
-              </li>
-              <li id="nav-perspectives"><a href="/perspectives/">Perspectives</a>
-              </li>
-              <li id="nav-research"><a href="/research/">Research</a>
-              </li>
-              <li id="nav-blog"><a href="/blog/">Blog</a>
-              </li>
-              <li id="nav-mediaroom"><a href="/media-room/">Media Room</a>
-              </li>
-              <li id="nav-about"><a href="/about/">About</a>
-              </li>
-              <li class="is-dropdown-submenu-parent"><a href="#">Our Businesses</a>
-                <ul class="menu vertical">
-                  <li><a href="/singlefamily/"><h4>Single-Family</h4>
-                        <p class="show-for-xlarge">Mortgage Products, technology &amp; servicing.</p></a></li>
-                  <li><a href="/multifamily/"><h4>Multifamily</h4>
-                        <p class="show-for-xlarge">Description about what multifamily is.</p></a></li>
-                  <li><a href="/investments/"><h4>Capital Markets</h4>
-                        <p class="show-for-xlarge">Description about what captial markets are.</p></a></li>
-                </ul>
-              </li>        
-              <li class="is-dropdown-submenu-parent hide-for-xlarge"><a id="nav-mobile-rbo-link" href="#">Renters, Buyers, &amp; Owners</a>
-                <ul class="menu vertical" id="nav-mobile-rbo">
-                  <li><a href="http://myhome.freddiemac.com/">My Home by Freddie Mac<sup>&reg;</sup></a>
-                  </li>
-                  <li><a href="https://ww3.freddiemac.com/loanlookup/">Do we own your mortgage?</a>
-                  </li>
-                  <li><a href="https://www.homesteps.com/">Homes for Sale</a>
-                  </li>
-                </ul>
-              </li> 
-            </ul>      
-          </nav>
-        </div>
-      </div>
-    </div>  
+  </div>  
         
-    <div  id="secondary-nav">
-      <nav class="secondary-nav hide" id="subnav-perspectives" data-toggler=".data-expanded">
-        <div class="row column">
-          <ul class="no-bullet">
-            <li><a id="subnav-perspectives-toggle" class="hide-for-xlarge" data-toggle="subnav-perspectives">Perspectives</a>
-              <ul class="menu xlarge-horizontal" id="subnav-perspectives-list">
-                <li><a href="#">Archive</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <div class="subnav-bottom"></div>
-      </nav>
-      <nav class="secondary-nav" id="subnav-research" data-toggler=".data-expanded">
-        <div class="row column">
-          <ul class="hide no-bullet">
-            <li><a id="subnav-research-toggle" class="hide-for-xlarge" data-toggle="subnav-research">Research</a>
-              <ul class="menu xlarge-horizontal" id="subnav-research-list">
-                <li><a id="subnav-research-mortgage" href="/pmms/">Mortgage Rates</a></li>
-                <li><a id="subnav-research-insight" href="/research/insight">Insight</a></li>
-                <li><a id="subnav-research-outlook" href="/research/outlooks">Outlook</a></li>
-                <li><a id="subnav-research-consumer" href="/research/consumer">Consumer Research</a></li>
-                <li><a id="subnav-research-indices" href="/research/aimi">Indices</a></li>
-                <li><a id="subnav-research-datasets" href="/research/data">Additional Datasets</a></li>
-              </ul>
-            </li>
-          </ul>     
-        </div>
-        <div class="subnav-bottom"></div>
-      </nav>
-      <nav class="secondary-nav" id="subnav-blog" data-toggler=".data-expanded">
-        <div class="row column">
-          <ul class="hide no-bullet">
-            <li><a id="subnav-blog-toggle" class="hide-for-xlarge" data-toggle="subnav-blog">Blog</a>
-              <ul class="menu xlarge-horizontal" id="subnav-blog-list">
-                <li><a id="subnav-blog-homeownership" href="/blog/homeownership/">Homeownership</a></li>
-                <li><a id="subnav-blog-rental" href="/blog/rental_housing/">Rental Housing</a></li>
-                <li><a id="subnav-blog-research" href="/blog/research_and_analysis/">Research &amp; Analysis</a></li>
-                <li><a id="subnav-blog-notable" href="/blog/notable/">Notable</a></li>
-                <li><a id="subnav-blog-archive" href="/blog/blog-archive/">Archive</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <div class="subnav-bottom"></div>
-      </nav>
-      <nav class="secondary-nav" id="subnav-mediaroom" data-toggler=".data-expanded">
-        <div class="row column">      
-          <ul class="hide no-bullet">
-            <li><a id="subnav-mediaroom-toggle" class="hide-for-xlarge" data-toggle="subnav-mediaroom">Media Room</a>
-              <ul class="menu xlarge-horizontal" id="subnav-mediaroom-list">
-                <li><a id="subnav-mediaroom-archive" href="#">Press Release Archive</a></li>
-                <li><a id="subnav-mediaroom-resources" href="/mediaroom/resources/">Media Resources</a></li>
-              </ul> 
-            </li>
-          </ul>  
-        </div>
-        <div class="subnav-bottom"></div>
-      </nav>
-      <nav class="secondary-nav" id="subnav-about" data-toggler=".data-expanded">
-        <div class="row column">       
-          <ul class="hide no-bullet">
-            <li><a id="subnav-about-toggle" class="hide-for-xlarge" data-toggle="subnav-about">About</a>
-              <ul class="menu xlarge-horizontal" id="subnav-about-list">
-                <li><a id="subnav-about-leaders" href="/about/leaders">Our Leaders</a></li>
-                <li><a id="subnav-about-business" href="/about/business">Our Business</a></li>
-                <li><a id="subnav-about-people" href="/about/people">Our People</a></li>
-                <li><a id="subnav-about-communities" href="/about/communities">Our Communities</a></li>
-                <li><a id="subnav-about-governanace" href="/about/governance">Corporate Governance</a></li>
-                <li><a id="subnav-about-investors" href="/investors">Investor Relations</a></li>
-                <li><a id="subnav-about-careers" href="http://www.freddiemac.jobs/">Careers</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <div class="subnav-bottom"></div>
-      </nav>
-      <div class="secondary-nav-bottom"></div>
-    </div>    
+  <div  id="subnav-secondary-nav">
+    <nav class="secondary-nav" id="subnav-research" data-toggler=".is-expanded">
+      <div class="row column">
+        <ul class="hide no-bullet">
+          <li><a id="subnav-research-toggle" class="hide-for-xlarge" data-toggle="subnav-research">Research Menu</a>
+            <ul class="menu xlarge-horizontal" id="subnav-research-list">
+              <li><a id="subnav-research-mortgage" href="/pmms/">Mortgage Rates</a></li>
+              <li><a id="subnav-research-insight" href="/research/insight/">Insight</a></li>
+              <li><a id="subnav-research-outlook" href="/research/outlook/">Outlook</a></li>
+              <li><a id="subnav-research-consumer" href="/research/consumer-research/">Consumer Research</a></li>
+              <li><a id="subnav-research-indices" href="/research/indices/">Indices</a></li>
+              <li><a id="subnav-research-datasets" href="/research/datasets/">Additional Datasets</a></li>
+            </ul>
+          </li>
+        </ul>     
+      </div>
+      <div class="subnav-bottom"></div>
+    </nav>
+    <nav class="secondary-nav" id="subnav-blog" data-toggler=".is-expanded">
+      <div class="row column">
+        <ul class="hide no-bullet">
+          <li><a id="subnav-blog-toggle" class="hide-for-xlarge" data-toggle="subnav-blog">Blog Menu</a>
+            <ul class="menu xlarge-horizontal" id="subnav-blog-list">
+              <li><a id="subnav-blog-homeownership" href="/blog/homeownership/">Homeownership</a></li>
+              <li><a id="subnav-blog-rental" href="/blog/rental/">Rental Housing</a></li>
+              <li><a id="subnav-blog-research" href="/blog/research/">Research &amp; Analysis</a></li>
+              <li><a id="subnav-blog-notable" href="/blog/notable/">Notable</a></li>
+              <li><a id="subnav-blog-archive" href="/blog/archive/">Archive</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="subnav-bottom"></div>
+    </nav>
+    <nav class="secondary-nav" id="subnav-mediaroom" data-toggler=".is-expanded">
+      <div class="row column">      
+        <ul class="hide no-bullet">
+          <li><a id="subnav-mediaroom-toggle" class="hide-for-xlarge" data-toggle="subnav-mediaroom">Media Room Menu</a>
+            <ul class="menu xlarge-horizontal" id="subnav-mediaroom-list">
+              <li><a id="subnav-mediaroom-archive" href="/media-room/">Press Release Archive</a></li>
+              <li><a id="subnav-mediaroom-resources" href="/media-room/resources/">Media Resources</a></li>
+            </ul> 
+          </li>
+        </ul>  
+      </div>
+      <div class="subnav-bottom"></div>
+    </nav>
+    <nav class="secondary-nav" id="subnav-about" data-toggler=".is-expanded">
+      <div class="row column">       
+        <ul class="hide no-bullet">
+          <li><a id="subnav-about-toggle" class="hide-for-xlarge" data-toggle="subnav-about">About Menu</a>
+            <ul class="menu xlarge-horizontal" id="subnav-about-list">
+              <li><a id="subnav-about-leaders" href="/about/leaders/">Our Leaders</a></li>
+              <li><a id="subnav-about-business" href="/about/business/">Our Business</a></li>
+              <li><a id="subnav-about-people" href="/about/people/">Our People</a></li>
+              <li><a id="subnav-about-communities" href="/about/communities/">Our Communities</a></li>
+              <li><a id="subnav-about-governance" href="/governance/">Corporate Governance</a></li>
+              <li><a id="subnav-about-investors" href="/investors/">Investor Relations</a></li>
+              <li><a id="subnav-about-careers" href="http://www.freddiemac.jobs/">Careers</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="subnav-bottom"></div>
+    </nav>
+  </div>   
 </header>  

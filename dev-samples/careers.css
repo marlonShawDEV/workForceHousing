@@ -1,0 +1,221 @@
+body {
+  font-weight: 300; 
+  font-family: "Roboto", Arial, sans-serif;  
+  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: normal;
+  font-weight: 700;
+  color: inherit;
+  text-rendering: optimizeLegibility; }
+h1 {
+  font-size: 1.875rem;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 0.5rem; }
+
+h2 {
+  font-size: 1.375rem;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 0.5rem; }
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 0.5rem; }
+
+h4 {
+  font-size: 1.125rem;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 0.5rem; }
+
+h5 {
+  font-size: 1rem;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 0.5rem; }
+
+h6 {
+  font-size: 0.9375rem;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 0.5rem; }
+
+  /* flexible font sizing if supported */ 
+h1 {
+  font-size: calc(30px +  12 * (100vw - 320px) / 1180); }
+
+h2 {
+  font-size: calc(22px +  10 * (100vw - 320px) / 1180); }
+
+h3 {
+  font-size: calc(20px +  8 * (100vw - 320px) / 1180); }
+
+h4 {
+  font-size: calc(18px +  7 * (100vw - 320px) / 1180); }
+
+h5 {
+  font-size: calc(16px +  5 * (100vw - 320px) / 1180); }
+
+h6 {
+  font-size: calc(15px +  2 * (100vw - 320px) / 1180); }
+  
+/* set max flex-font at our largest width */ 
+@media screen and (min-width: 93.75em) {
+  h1 {
+    font-size: 2.625rem; }
+  h2 {
+    font-size: 2rem; }
+  h3 {
+    font-size: 1.75rem; }
+  h4 {
+    font-size: 1.5625rem; }
+  h5 {
+    font-size: 1.3125rem; }
+  h6 {
+    font-size: 1.0625rem; } }
+
+    
+h1.subtitle {
+  font-size: 1.125rem;
+  font-size: calc(18px +  14 * (100vw - 320px)/1180);
+  font-weight: 700;
+  margin: 0.25em 0 0.375em; }
+  @media screen and (min-width: 79.375em) {
+    h1.subtitle {
+      font-size: 1.625rem;
+      font-size: calc(26px +  6 * (100vw - 1180px)/220); } }
+  @media screen and (min-width: 93.75em) {
+    h1.subtitle {
+      font-size: 2rem; } }
+      
+ /* can be H2-H6  */
+.page-subtitle {
+  margin: 0.5em 0;
+  font-weight: 500;
+  color: #777874;
+  font-size: 1.0625rem;
+  font-size: calc(17px +  5 * (100vw - 320px) / 1180); }
+  @media screen and (min-width: 93.75em) {
+    .page-subtitle {
+      font-size: 1.375rem; } }    
+
+ /* can be H2-H6  */
+.section-subtitle {
+  font-size: 1.125rem;
+  font-size: calc(18px +  4 * (100vw - 320px)/1180);
+  color: inherit;
+  font-weight: inherit;
+  margin-bottom: 0.25rem; }
+  @media screen and (min-width: 93.75em) {
+    .section-subtitle {
+      font-size: 1.375rem; } }
+  .section-subtitle + .section-subtitle {
+    margin-top: 0.5em; }
+
+ /* initial text as intro or lead sentence  */
+ 
+p.intro {
+  font-size: 1.0625rem;
+  font-size: calc(17px +  5 * (100vw - 320px) / 1180); }
+  @media screen and (min-width: 93.75em) {
+    p.intro {
+      font-size: 1.375rem; } }
+
+p.lead {
+  font-weight: 400; }
+    
+ /* inside block grids  */    
+.grid-block-title {
+  font-size: 1rem;
+  line-height: 1.18;
+  font-size: calc(16px +  16 * (100vw - 320px)/1180);
+  font-weight: 700;
+  margin: 0 0 0.5rem; }
+  @media screen and (max-width: 35.5625em) {
+    .grid-block-title {
+      font-weight: 500; } }
+  @media screen and (min-width: 93.75em) {
+    .grid-block-title {
+      font-size: 2rem; } }
+  .media-object-section .grid-block-title {
+    margin: 0.75rem 0 0; }
+
+.grid-block-title-medium {
+  font-size: 1rem;
+  font-size: calc(16px +  8 * (100vw - 320px)/1180);
+  font-weight: 700;
+  margin: 0 0 0.5rem; }
+  @media screen and (max-width: 35.5625em) {
+    .grid-block-title-medium {
+      font-weight: 500; } }
+  @media screen and (min-width: 93.75em) {
+    .grid-block-title-medium {
+      font-size: 1.5rem; } }
+      
+.grid-block-title-large {
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-size: calc(20px +  18 * (100vw - 320px)/1180);
+  font-weight: 500;
+  margin: 0 0 0.7em; }
+  @media screen and (min-width: 93.75em) {
+    .grid-block-title-large {
+      font-size: 2.375rem; } }
+
+.grid-block-text {
+  font-size: 0.9375rem;
+  font-size: calc(15px +  6 * (100vw - 320px)/1180); }
+  @media screen and (min-width: 93.75em) {
+    .grid-block-text {
+      font-size: 1.3125rem; } }
+
+ /* standard blockquote  */
+blockquote {
+  margin: 0 0 1em;
+  padding: 0.5rem 1.875rem 0.5625rem 1.5625rem;
+  border-left: 5px solid #88BD45; }
+  blockquote, blockquote p {
+    line-height: inherit;
+    color: inherit; }
+  blockquote {
+  font-size: 1.0625rem;
+  font-weight: 400;
+  font-size: calc(17px +  3 * (100vw - 320px)/1180); }
+  @media screen and (min-width: 93.75em) {
+    blockquote {
+      font-size: 1.25rem; } }
+  blockquote footer {
+    font-weight: 300;
+    font-style: italic;
+    padding: 0;
+    font-size: 90%; }
+    @media print, screen and (min-width: 61.25em) {
+      blockquote footer {
+        font-size: 80%; } }
+    blockquote footer:before {
+      content: "\2014 \0020"; }
+  blockquote cite {
+    display: inline; }
+  blockquote :last-child {
+    margin-bottom: 0; }  
+  
+  /*  attention getting callout text */  
+.callout-txt {
+  color: #00a6e2;
+  font-size: 1.875rem;
+  font-size: calc(30px +  18 * (100vw - 320px)/1180);
+  line-height: 1.2;
+  margin: 2rem 0;
+  font-weight: inherit; }
+  @media screen and (min-width: 93.75em) {
+    .callout-txt {
+      font-size: 3rem; } }
+    
