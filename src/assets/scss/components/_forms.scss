@@ -10,14 +10,14 @@ select {
   }
 }
 
-input[type='email'] {
+input[type="email"] {
   position: relative;          
   background-image: icon(email, $fm-gray, 24, 24, 0, 3, 24, 24);
   background-position: $global-right center;
   background-repeat: no-repeat;
   background-origin: content-box;
 }
-input[type='search'] {
+input[type="search"] {
   position: relative;          
   background-image: icon(search, $fm-gray, 24, 24);
   background-position: $global-right center;
@@ -52,8 +52,8 @@ fieldset {
   aside & {
     padding-top: $global-padding;
   }
-  [type='radio'] ,  
-  [type='checkbox'] {
+  [type="radio"] ,  
+  [type="checkbox"] {
     @include element-invisible;
     + label::before {    
       background: inherit;
@@ -80,10 +80,10 @@ fieldset {
       background: $fm-green;
       background: radial-gradient(ellipse at center, $fm-green 0%,$fm-green 60%,$white 60%);
   }
-  [type='radio'] + label::before {
+  [type="radio"] + label::before {
     border-radius: 50%;  
   } 
-  [type='checkbox']:checked + label::before {
+  [type="checkbox"]:checked + label::before {
       content: '\2713';  
       background: $fm-green;
   }  
@@ -103,20 +103,20 @@ fieldset {
   } 
 }
 .outline { 
-  [type='text'], 
-  [type='password'], 
-  [type='date'], 
-  [type='datetime'], 
-  [type='datetime-local'], 
-  [type='month'], 
-  [type='week'], 
-  [type='email'], 
-  [type='number'], 
-  [type='search'], 
-  [type='tel'], 
-  [type='time'], 
-  [type='url'], 
-  [type='color'],
+  [type="text"], 
+  [type="password"], 
+  [type="date"], 
+  [type="datetime"], 
+  [type="datetime-local"], 
+  [type="month"], 
+  [type="week"], 
+  [type="email"], 
+  [type="number"], 
+  [type="search"], 
+  [type="tel"], 
+  [type="time"], 
+  [type="url"], 
+  [type="color"],
   select,
   textarea {
     border: 1px solid $white;
@@ -126,10 +126,10 @@ fieldset {
       background-color: $white;
     }
   }
-  input[type='email']:not(:focus) {
+  input[type="email"]:not(:focus) {
     background-image: icon(email, $white, 24, 24, 0, 3, 24, 24);
   } 
-  input[type='search']:not(:focus) {    
+  input[type="search"]:not(:focus) {    
     background-image: icon(search, $white, 24, 24);
   }
   select:not([multiple]):not(:focus) {
@@ -137,16 +137,25 @@ fieldset {
   }
   .fieldset,
   .input-group-label, 
-  [type=radio] + label::before,
-  [type='checkbox'] + label::before {
+  [type="radio"] + label::before,
+  [type="checkbox"] + label::before {
     border-color: $white;
   }
-  [type=radio]:checked + label,
-  [type='checkbox']:checked + label {
+  [type="radio"]:checked + label,
+  [type="checkbox"]:checked + label {
     color: $white;
   }    
   input::placeholder,
   textarea::placeholder {
     color: rgba($white, 0.8);
   }
+}
+
+.form-error {    // override defaults
+  margin-bottom: 1em;
+  margin-top: 0;
+}
+
+.is-invalid-input + .help-text {
+  color: $form-label-color-invalid;
 }

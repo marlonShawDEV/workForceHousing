@@ -1,0 +1,252 @@
+﻿---
+title: Loan Lookup
+layout: corporate-2col
+---
+<div class="page-title">
+  <div class="row column">
+    <h1>Loan Look-Up Tool</h1>
+  </div>
+</div>
+
+<!-- START TWO COLUMN LAYOUT NO HERO -->
+<div class="two-column-layout">
+  <div class="row two-column-row"> 
+    <!-- START MAIN PAGE CONTENT -->
+    <main class="column">
+      <p class="lead">To understand the options available for getting help with your mortgage &ndash; including the federal <a href="http://myhome.freddiemac.com/refinance/understand-harp.html">Home Affordable Refinance Program&reg;</a> (HARP) &ndash; it's important for you to know who owns your loan.</p>
+
+      <p>Using the secured look-up tool below, you can quickly find out if Freddie Mac owns your loan. <strong>Please enter your information carefully </strong>&ndash; a spelling error or other small mistake could cause an inaccurate result. Abbreviations, typos, or including the "Street Type" in the "Street Name" field can also lead to inaccurate results.</p>
+      <h2>Self-Service Lookup</h2>
+      <div class="callout background-concrete small">
+      <p class="icon-required" area-hidden="true"><strong>Indicates required fields</strong></p>
+      </div>
+      <form novalidate id="MyMortgageLookUp" name="MyMortgageLookUp" data-abide action="SearchResult.jsp" method="post" enctype="x-www-form-urlencoded" class="form">
+        <input type="hidden" id="" name="Phone" value="">
+        <input type="hidden" id="" name="Email" value="">
+        <input type="hidden" id="" name="Contact" value="">
+        <input type="hidden" id="lang" name="lang" value="en">
+        <div class="row">
+          <div class="column medium-6 large-12 xlarge-6">
+            <label for="fname" class="icon-required">First Name</label>
+            <input type="text" id="fname" name="fname" pattern="no-unsafe" required maxlength="100">          
+          </div>
+          <div class="column medium-6 large-12 xlarge-6">
+            <label for="lname" class="icon-required"> Last Name </label>
+            <input type="text" id="lname" name="lname" required maxlength="100">            
+          </div>
+        </div>
+        <div class="row">
+          <div class="column medium-6 large-12 xlarge-6">
+            <label for="strt_nbr" class="icon-required"> House Number </label>
+            <input type="text" id="strt_nbr" name="strt_nbr" aria-describedby="strt_nbrHelpText" required  maxlength="20" pattern="alpha-num-hyphen">  
+            <p class="help-text" id="strt_nbrHelpText">Please use only numbers, letters and hyphens.</p>   
+          </div>
+          <div class="column medium-6 large-12 xlarge-6">
+            <label for="unit_num">Unit Number</label>
+            <input id="unit_num" name="unit_num" aria-describedby="unit_numHelpText" maxlength="20" type="text" pattern="alpha-num-hyphen"> 
+            <p class="help-text" id="unit_numHelpText">Please use only numbers, letters and hyphens.</p>         
+          </div>
+        </div>
+        <div class="row">
+          <div class="column medium-6 large-12 xlarge-6">
+            <label for="strt_name" class="icon-required"> Street Name  </label>
+            <input type="text" id="strt_name" aria-describedby="strtHelpText" name="strt_name" maxlength="30" required pattern="alpha-num-hyphen">
+            <p class="help-text" id="strtHelpText">Do not include "Street", "Avenue", "Drive", etc.</p>  
+          </div>
+          <div class="column medium-6 large-12 xlarge-6">
+            <label for="strt_suffix">Street Suffix</label>
+            <select name="strt_suffix" id="strt_suffix">
+              <option value="">Select Suffix</option>
+              <option value="Avenue">Avenue</option>
+              <option value="Drive">Drive</option>
+              <option value="Road">Road</option>
+              <option value="Street">Street</option>
+              <option value="Other">Other</option>
+            </select>     
+          </div>
+        </div>
+        <label for="addr_city" class="icon-required"> City </label>
+        <input type="text" id="addr_city" name="addr_city" required maxlength="50">
+        <div class="row">
+          <div class="medium-6 large-12 xlarge-6 column">
+            <label for="addr_state" class="icon-required"> State </label>
+            <select name="addr_state" id="addr_state" required>
+              <option value="">Pick a State</option>
+              <option value="AL">AL</option>
+              <option value="AK">AK</option>
+              <option value="AZ">AZ</option>
+              <option value="AR">AR</option>
+              <option value="CA">CA</option>
+              <option value="CO">CO</option>
+              <option value="CT">CT</option>
+              <option value="DE">DE</option>
+              <option value="DC">DC</option>
+              <option value="FL">FL</option>
+              <option value="GA">GA</option>
+              <option value="GU">GU</option>
+              <option value="HI">HI</option>
+              <option value="ID">ID</option>
+              <option value="IL">IL</option>
+              <option value="IN">IN</option>
+              <option value="IA">IA</option>
+              <option value="KS">KS</option>
+              <option value="KY">KY</option>
+              <option value="LA">LA</option>
+              <option value="ME">ME</option>
+              <option value="MD">MD</option>
+              <option value="MA">MA</option>
+              <option value="MI">MI</option>
+              <option value="MN">MN</option>
+              <option value="MS">MS</option>
+              <option value="MO">MO</option>
+              <option value="MT">MT</option>
+              <option value="NE">NE</option>
+              <option value="NV">NV</option>
+              <option value="NH">NH</option>
+              <option value="NJ">NJ</option>
+              <option value="NM">NM</option>
+              <option value="NY">NY</option>
+              <option value="NC">NC</option>
+              <option value="ND">ND</option>
+              <option value="OH">OH</option>
+              <option value="OK">OK</option>
+              <option value="OR">OR</option>
+              <option value="PA">PA</option>
+              <option value="PR">PR</option>
+              <option value="RI">RI</option>
+              <option value="SC">SC</option>
+              <option value="SD">SD</option>
+              <option value="TN">TN</option>
+              <option value="TX">TX</option>
+              <option value="UT">UT</option>
+              <option value="VT">VT</option>
+              <option value="VA">VA</option>
+              <option value="VI">VI</option>
+              <option value="WA">WA</option>
+              <option value="WV">WV</option>
+              <option value="WI">WI</option>
+              <option value="WY">WY</option>
+            </select>               
+          </div>
+          <div class="medium-6 large-12 xlarge-6 column">
+            <label for="addr_zip" class="icon-required">Five Digit Zip Code   (Format: #####) </label>
+            <input type="text" pattern="number" id="addr_zip" name="addr_zip" required maxlength="5" minlength="5" placeholder="#####">
+          </div>
+        </div>
+
+        <label for="ssn" class="icon-required"> Last 4 Digits of Social Security Number (Format: ####) </label>
+        <input type="password" id="ssn" name="ssn" required pattern="ssn" minlength="4" maxlength="4" placeholder="####">
+        <p class="help-text" id="passwordHelpText"><a data-open="modalSS" aria-controls="modalSS">Why do we ask for Social Security?</a></p>      
+
+        <div class="reveal full background-purple" id="modalSS" data-reveal aria-labelledby="modalSS-label">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 id="modalSS-label">Social Security Number</h2>
+            </div>
+            <div class="callout large background-white">
+            <h3>Why do we ask for your Social Security Number</h3>
+            <ul>
+            <li>Freddie Mac takes protecting your privacy seriously. We ask for your Social Security Number (SSN) to help us confirm that the requested information is being given to the mortgage holder or to someone authorized by the mortgage holder to receive the information.</li>
+            <li>We ask for your SSN because it allows us to quickly and accurately determine if your mortgage is held by Freddie Mac and to deliver an answer to you immediately. Providing a SSN increases the speed and accuracy of the look-up response.</li>
+            <li>We take measures to protect the SSN that you deliver to us (see below).</li>
+            </ul>
+            <h3>How do we handle your SSN after you enter it?</h3>
+            <ul>
+            <li>The SSN you enter within this form is only used to answer your specific look-up request. We do not save the number you enter or distribute it to a third party for any other purpose.</li>
+            <li>All information you enter in this form is transmitted from your web browser to our site via an encrypted communication channel. Please review our <a href="http://www.freddiemac.com/terms/privacy.html">privacy policy</a> for more details.</li>
+            </ul>
+            <h3>Do you have to provide your SSN number?</h3>
+            <ul>
+            <li>No. If you wish, you may submit an <a href="avoiding_foreclosure_form.html">email request</a> that does not require your SSN. Our customer service representatives will respond as quickly as they can, but given current demand it may take several days. Please be patient.</li>
+            </ul>
+            </div>
+          </div>
+        </div>        
+        
+        <fieldset>
+          <legend class="icon-required"> Verification</legend>
+          <input type="checkbox" id="Verify_0" name="Verify" value="Yes" required><label for="Verify_0">  
+        By checking this box and clicking on the button below to submit this information, I confirm I am the owner of this property or have the consent of the owner to lookup this information.    
+        </label>
+        </fieldset>
+        <div class="row">
+          <div class="medium-3 column">
+            <button class="button primary" type="submit">Submit</button>
+          </div>
+          <div class="medium-9 column">
+            <div class="callout small background-red" data-closable  data-abide-error style="display: none;">
+              <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <p class="enlarge">Please review your form for errors</p>
+            </div>
+          </div>
+        </div>
+      </form>
+    
+      <p>Home Affordable Refinance Program&reg; is a registered trademark of the U.S. Department of Treasury.</p>  
+
+    </main>
+    <!-- END MAIN PAGE CONTENT -->
+    <!-- START RIGHT SIDEBAR -->
+    <aside class="column">  
+<section class="sidebar background-yellow">
+  <div class="row">
+    <div class="column">
+      <div class="sidebar-txt">
+        <h3>Support Information</h3>
+            <p>If you are having difficulty paying your mortgage on time, your lender (also referred to as a mortgage servicer) should be your first call for assistance. They want to help you. Their telephone number and mailing address should be listed on your monthly statement.</p>
+      </div>
+    </div>
+  </div>
+</section>    
+<section class="sidebar background-teal">
+  <div class="row">
+    <div class="column">
+      <div class="sidebar-txt">
+        <h3>My Home by Freddie Mac<sup>&reg;</sup></h3>
+        <p>Information and guidance on options to stay in your home, options to leave your home, working with a housing counselor or your lender, avoiding fraud and more.</p>
+      </div>
+      <p><a class="hollow button" href="http://myhome.freddiemac.com/">Learn More</a></p>
+    </div>
+  </div>
+</section>
+
+
+    </aside>
+    <!-- END RIGHT SIDEBAR -->
+  </div>
+</div>
+<!-- END TWO COLUMN LAYOUT  -->
+
+{{> share-widget}}
+
+<script type="text/javascript"> 
+
+function trimExtraneous(val) {
+//	val = val.replace(/[()\[\]{}<>!@#$%^&*_+=|\\/~`]/g,'');
+	return val.replace(/([.,'-]){2,}/g, "$1");
+}
+
+function formSetup() {
+Foundation.Abide.defaults.patterns['ssn'] = /^[0-9]{4}$/;
+Foundation.Abide.defaults.patterns['alpha-num-hyphen'] = /^[-A-Za-z0-9 ]+$/;
+Foundation.Abide.defaults.patterns['no-unsafe'] = /^[^\[\]{}<>#%^*_+=|\\/~`]+$/;
+$("input[type='text']").on('keyup',function(){var val = $(this).val(); $(this).val(trimExtraneous(val));});
+$('#MyMortgageLookUp')
+  .on('forminvalid.zf.abide', function (ev,frm) {
+    var invalid_fields = $(this).find('[data-invalid]');
+    console.log("Form id "+ev.target.id+" failed validation.");
+  })
+  .on("formvalid.zf.abide", function(ev,frm) {
+    console.log("Form passes validation.");
+    $(frm).find("div[data-abide-error]").attr("style", "display: none;");
+  })
+  .on("submit", function(ev) {
+    ev.preventDefault();
+    console.log("Submit for form id "+ev.target.id+" intercepted");
+  });
+}
+
+window.onload = formSetup;
+</script>

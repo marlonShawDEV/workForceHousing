@@ -136,4 +136,36 @@ $hero-blend-color: $primary-color;
       height: 468px;
     }
   }
+  &.blog-detail-hero-homeownership {
+    background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero/hero-4-mobile.jpg');
+    height: 389px;
+    @include breakpoint(medium) {
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero/hero-4-desktop.jpg');
+      height: 468px;
+    }
+  }
+  &.blog-detail-hero-rental {
+    background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero/hero-4-mobile.jpg');
+    height: 389px;
+    @include breakpoint(medium) {
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero/hero-4-desktop.jpg');
+      height: 468px;
+    }
+  }
+  &.blog-detail-hero-notable {
+    background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero/hero-4-mobile.jpg');
+    height: 389px;
+    @include breakpoint(medium) {
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero/hero-4-desktop.jpg');
+      height: 468px;
+    }
+  }
+  &.blog-detail-hero-research {
+    background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero/hero-4-mobile.jpg');
+    height: 389px;
+    @include breakpoint(medium) {
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero/hero-4-desktop.jpg');
+      height: 468px;
+    }
+  }
 }

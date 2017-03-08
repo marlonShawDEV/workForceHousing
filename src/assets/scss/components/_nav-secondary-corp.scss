@@ -80,16 +80,14 @@
   }
 }
 
-@include breakpoint(xlarge) {       
+@include breakpoint(xlarge) {   
+  .subnav-edge {
+    position: relative;
+    @include mosaic-fill;
+    height: 8px;
+  }    
   .secondary-nav { 
     z-index: 480;
-    &.on {
-      .subnav-bottom {
-        position: relative;
-        @include mosaic-fill;
-        height: 8px;
-      }
-    }
     .no-bullet:not(.hide) {
       position: relative;
       z-index: 485;

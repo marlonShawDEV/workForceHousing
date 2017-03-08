@@ -49,4 +49,14 @@
     background-repeat: no-repeat;
     background-position: center center;
   }
+  &.alert {
+    background-color: mix($fm-red, $white, 10%);
+    border-radius: 5px;
+    border: 1px solid $fm-red;
+    color: $black;  
+    padding: $callout-padding * 0.5 $callout-padding;   
+    margin: $callout-padding * 0.5 0;
+    font-weight: $global-weight-medium;
+  }
 }
+

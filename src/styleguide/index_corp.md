@@ -2306,105 +2306,101 @@ Form elements are styled based on their type attribute rather than a class. Inpu
 ## Form Example
 
 ```html_example
-<div class="row">
-  <div class="column">
-    <form class="form" action="#">
-      <div class="row">
-        <div class="small-12 column">
-          <label for="">Label</label>
-          <input id="" type="text" placeholder="placeholder">
+<form class="form" action="#">
+  <div class="row">
+    <div class="small-12 column">
+      <label for="">Label</label>
+      <input id="" type="text" placeholder="placeholder">
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-12 column">
+      <label for="pw">Password with Sample Help Text</label>
+      <input id="pw" type="password" aria-describedby="passwordHelpText" placeholder="***">
+      <p class="help-text" id="passwordHelpText">Your password must have at least 10 characters, a number, and a symbol.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="medium-7 column">
+      <label for="">Email</label>
+      <input id="" type="email" placeholder="name@company.com">
+    </div>
+    <div class="medium-5 column">
+      <div class="row collapse">
+        <label>Height (combo field example)</label>
+        <div class="input-group">
+          <input id="feet" class="input-group-field" type="number" placeholder="5" min="0" max="12">
+          <label for="feet" class="input-group-label">ft.</label>
+          <input id="inches" class="input-group-field" type="number" placeholder="8" min="0" max="12">
+          <label for="inches" class="input-group-label">in.</label>
         </div>
       </div>
-      <div class="row">
-        <div class="small-12 column">
-          <label for="pw">Password with Sample Help Text</label>
-          <input id="pw" type="password" aria-describedby="passwordHelpText" placeholder="***">
-          <p class="help-text" id="passwordHelpText">Your password must have at least 10 characters, a number, and a symbol.</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="medium-7 column">
-          <label for="">Email</label>
-          <input id="" type="email" placeholder="name@company.com">
-        </div>
-        <div class="medium-5 column">
-          <div class="row collapse">
-            <label>Height (combo field example)</label>
-            <div class="input-group">
-              <input id="feet" class="input-group-field" type="number" placeholder="5" min="0" max="12">
-              <label for="feet" class="input-group-label">ft.</label>
-              <input id="inches" class="input-group-field" type="number" placeholder="8" min="0" max="12">
-              <label for="inches" class="input-group-label">in.</label>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="small-12 column">
-          <label for="">Select Box</label>
-          <select>
-            <option value="good">Good</option>
-            <option value="better">Better</option>
-            <option value="best">Best</option>
-          </select> 
-          <p class="help-text" id="">Browsers apply their own design to the drop down on select boxes.</p>
-        </div>
-      </div>
-      <div class="row"> 
-        <div class="small-12 column">
-          <label for="">Multiple Select Box</label>
-          <select multiple>
-            <option value="showboat">Showboat</option>
-            <option value="redwing">Redwing</option>
-            <option value="narcho">Narcho</option>
-            <option value="hardball">Hardball</option>
-          </select>
-        </div>
-      </div>
-      <div class="row">
-        <div class="medium-6 column">
-          <fieldset>
-            <legend>Choose Your Favorite</legend>
-            <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Red</label>
-            <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Blue</label>
-            <input type="radio" name="pokemon" value="Yellow" id="pokemonYellow"><label for="pokemonYellow">Yellow</label>
-          </fieldset>
-        </div>
-        <div class="medium-6 column">
-          <fieldset>
-            <legend>Check these out</legend>
-            <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-            <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
-            <input id="checkbox3" type="checkbox"><label for="checkbox3">Checkbox 3</label>
-          </fieldset>
-        </div>
-      </div>
-      <div class="row">
-        <div class="small-12 column">
-          <fieldset class="fieldset">
-            <legend>Styled Fieldset</legend>
-            <input id="checkbox12" type="checkbox"><label for="checkbox12">Checkbox 1</label>
-            <input id="checkbox22" type="checkbox"><label for="checkbox22">Checkbox 2</label>
-            <input id="checkbox32" type="checkbox"><label for="checkbox32">Checkbox 3</label>
-          </fieldset>
-        </div>
-      </div>
-      <div class="row">
-        <div class="small-12 column">
-          <label for="">How many items?</label>
-          <input id="" type="number" value="100">
-          <label for="">Textarea Label</label>
-          <textarea placeholder="placeholder" rows="3"></textarea>
-        </div>
-      </div>
-      <div class="row">
-        <div class="small-12 column">
-          <button class="button primary" type="submit">Submit</button>
-        </div>
-      </div>
-    </form>
-  </div>  
-</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-12 column">
+      <label for="">Select Box</label>
+      <select>
+        <option value="good">Good</option>
+        <option value="better">Better</option>
+        <option value="best">Best</option>
+      </select> 
+      <p class="help-text" id="">Browsers apply their own design to the drop down on select boxes.</p>
+    </div>
+  </div>
+  <div class="row"> 
+    <div class="small-12 column">
+      <label for="">Multiple Select Box</label>
+      <select multiple>
+        <option value="showboat">Showboat</option>
+        <option value="redwing">Redwing</option>
+        <option value="narcho">Narcho</option>
+        <option value="hardball">Hardball</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="medium-6 column">
+      <fieldset>
+        <legend>Choose Your Favorite</legend>
+        <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Red</label>
+        <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Blue</label>
+        <input type="radio" name="pokemon" value="Yellow" id="pokemonYellow"><label for="pokemonYellow">Yellow</label>
+      </fieldset>
+    </div>
+    <div class="medium-6 column">
+      <fieldset>
+        <legend>Check these out</legend>
+        <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+        <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
+        <input id="checkbox3" type="checkbox"><label for="checkbox3">Checkbox 3</label>
+      </fieldset>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-12 column">
+      <fieldset class="fieldset">
+        <legend>Styled Fieldset</legend>
+        <input id="checkbox12" type="checkbox"><label for="checkbox12">Checkbox 1</label>
+        <input id="checkbox22" type="checkbox"><label for="checkbox22">Checkbox 2</label>
+        <input id="checkbox32" type="checkbox"><label for="checkbox32">Checkbox 3</label>
+      </fieldset>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-12 column">
+      <label for="">How many items?</label>
+      <input id="" type="number" value="100">
+      <label for="">Textarea Label</label>
+      <textarea placeholder="placeholder" rows="3"></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-12 column">
+      <button class="button primary" type="submit">Submit</button>
+    </div>
+  </div>
+</form>
 ```
 
 ---

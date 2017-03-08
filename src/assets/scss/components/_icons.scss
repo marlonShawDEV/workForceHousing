@@ -249,6 +249,18 @@
     background: transparent icon(download, 'none', 24px, 24px, 0, 0, 24, 24, '#777', 1) no-repeat center center;
   }
 }
+.icon-required {
+  position: relative;
+  &::before {
+    content: '*';
+    display: inline-block; 
+    position: relative;
+    width: 1em;
+    height: 1em;
+    color: $fm-red;
+  }
+
+}
 .icon {
   &.secondary { 
     color: $fm-orange;  

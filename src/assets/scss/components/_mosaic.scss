@@ -32,7 +32,7 @@
     }
   }
   a {
-    @include anchor-on-dark;
+    @include anchor-on-dark(none);
   }
 }
 
