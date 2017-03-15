@@ -27,7 +27,7 @@ a:hover {
   }
 }
 .card:not(:hover),
-.background-concrete {
+.sidebar.background-concrete {
   a:not(:hover):not(:focus):not(.button) {
     color: inherit;
   }
@@ -67,6 +67,7 @@ a:hover {
   .twin-col & {
     right: 0px;
     bottom: 0px;
+    left: auto;
     background: rgba($white, 0.3);
   }
 }
@@ -140,12 +141,6 @@ a:hover {
 }
 .overlay  {  
 	position: relative;  
-  &.overlay-orange {
-    background: lighten($fm-orange, 4%);
-    .is-active {
-      opacity: 0.22;
-    }     
-  }
   &.overlay-dark {
     @include breakpoint(medium) {
       img {

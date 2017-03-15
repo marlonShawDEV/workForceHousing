@@ -3,7 +3,7 @@ title: Freddie Mac Homepage
 layout: corporate-1col
 ---
 <style>
-.secondary-nav-bottom {display: none;}
+.subnav-edge { display: none; }
 </style>
 <div class="hero">
   <div class="row column"> 
@@ -40,16 +40,14 @@ layout: corporate-1col
 {{> homepage-business-highlight}}
 
 <div class="finance-offset">
-  <div class="finance-housing-research">
-    <div class="row finance-buffer">
-      <div class="finance-housing-research-column">
-        {{> homepage-finance-recent}}
-      </div>  
-    </div>
-  </div>
-  <div class="finance-mortgage-market">
-    <div class="row finance-buffer finance-grid" data-equalizer data-equalize-on="xlarge">
-      {{> homepage-finance-pmms}}
+  <div class="finance-research">
+    <div class="row">
+      {{> homepage-finance-recent}}
+    </div> 
+  </div>  
+  <div class="finance-pmms">
+    <div class="row" data-equalizer data-equalize-on="medium">
+        {{> homepage-finance-pmms}}
     </div>
   </div>
 </div>

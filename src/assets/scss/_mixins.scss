@@ -57,11 +57,12 @@
     &::after {
       content: "";
       position: absolute;
-      left: 0; 
+      left: -5px; 
       top: 0;
       bottom: 0;
-      width: 100%;
+      width: calc(100% + 10px);
       height: 100%;
+      border-radius: 4px;
       background: rgba($white, 0);
       transition: background 0.25s ease 0s;      
     }
@@ -111,7 +112,7 @@
     );
 }
 
-// calculate color differences from beginning and ending color acorss number of steps, and return color at particular step
+// calculate color differences from beginning and ending color across number of steps, and return color at particular step
 // just pass a start color/end color, number of steps from one to the other, and the current step to get the color.
 @function color-shift($a, $b, $steps, $step) {
   @if $step == 1 or $steps < 2 { 

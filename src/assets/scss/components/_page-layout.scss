@@ -125,5 +125,12 @@
     padding-top: 300px; // counteract the negative top margin inserted by css when printing
   }
 }
-
-
+.center-horizontally {
+  @include horizontal-center;
+}
+.center-vertically {
+  @include vertical-center;
+}  
+.center-absolute {
+  @include absolute-center;
+}

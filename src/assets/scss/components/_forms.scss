@@ -156,6 +156,7 @@ fieldset {
   margin-top: 0;
 }
 
+label.is-invalid-label,
 .is-invalid-input + .help-text {
   color: $form-label-color-invalid;
 }
