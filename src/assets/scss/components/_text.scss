@@ -427,7 +427,7 @@ b {
 .finance-category {
   font-size: rem-calc(18);
   font-size: calc(18px +  4 * (100vw - 320px)/1180);
-  font-weight: $global-weight-bold;
+  font-weight: $global-weight-medium;
   line-height: 1.1;
   text-transform: uppercase;
   margin-bottom: $global-margin;
@@ -450,7 +450,7 @@ b {
   font-size: calc(15px +  2 * (100vw - 320px)/1180);
   @include breakpoint(xxlarge) {
     font-size: rem-calc(18);
-  letter-spacing: 1px;
+    letter-spacing: 1px;
   }  
 }
 .homepage-business-highlight-title {
@@ -464,16 +464,22 @@ b {
     font-weight: $global-weight-black;
   }
 }
-.stat-lg {
-	font-size: 24px;
-  font-size: calc(24px +  (52 - 24) * (100vw - 320px)/1180);  
-  font-weight: inherit;
-  line-height: 1.1;
-  @include breakpoint(xxlarge) { 
-    font-size: rem-calc(52);
+.stat-sm {
+  font-size: rem-calc(18);
+  font-size: calc(18px +  14 * (100vw - 320px)/1180);
+  line-height: 1.2;
+  width: 100%;
+  @include breakpoint (xxlarge) {
+    font-size: rem-calc(32);
   }
-  strong {
-    font-weight: $global-weight-black;
+}
+.stat-med {
+  font-size: rem-calc(24);
+  font-size: calc(24px +  18 * (100vw - 320px)/1180);
+  font-weight: $global-weight-black;
+  line-height: 1.3;
+  @include breakpoint (xxlarge) {
+    font-size: rem-calc(42);
   }
 }
 .stat {
@@ -483,13 +489,13 @@ b {
     font-size: rem-calc(48);
   }
 }
-.stat-sm {
-  font-size: rem-calc(18);
-  font-size: calc(20px +  14 * (100vw - 320px)/1180);
-  font-weight: $global-weight-black;
-  line-height: 1.3;
-  @include breakpoint (xxlarge) {
-    font-size: rem-calc(32);
+.stat-lg {
+	font-size: rem-calc(24);
+  font-size: calc(24px +  (52 - 24) * (100vw - 320px)/1180);  
+  font-weight: inherit;
+  line-height: 1.1;
+  @include breakpoint(xxlarge) { 
+    font-size: rem-calc(52);
   }
 }
 .page-subtitle {

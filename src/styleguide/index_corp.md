@@ -564,6 +564,9 @@ There are several text and typography styles to choose from, although some style
           <p class="grid-block-title-medium">This is grid-block-title-medium</p>
           <p class="grid-block-text">This is grid-block-text.</p>
           <p class="grid-block-text-small">This is grid-block-text-small</p>
+          <p class="stat-lg">This is stat-lg</p>
+          <p class="stat-med">This is stat-med</p>
+          <p class="stat">This is stat</p>
         </div>
       </div>
     </div>
@@ -577,10 +580,11 @@ There are several text and typography styles to choose from, although some style
         <h2 class="homepage-headline">This is homepage-headline</h2>
         <h2 class="homepage-business-highlight-title">This is homepage-business-highlight-title</h2>
         <h3 class="finance-category">This is finance-category</h3>
-        <h3 class="finance-research-title">This is finance-research-title</h3>    
-        <p class="stat-lg">This is stat-lg <strong>(3%)</strong></p>
-        <p class="stat-points">This is stat-points</p>   
-        <p class="stat-sm">This is stat-sm <span class="weight-light">with weight-light</span></p>
+        <h3 class="finance-research-title">This is finance-research-title</h3>
+        <p class="finance-research-category">This is finance-research-category</p>
+        <p class="stat-med">This is stat-med</p>
+        <p class="stat-sm">This is stat-sm</p>
+        <p class="stat-points">This is stat-points</p>
         <p class="title-testimonial">This is title-testimonial</p>  
       </div>
     </div>
