@@ -61,6 +61,16 @@ a:hover {
   left: 1px;
   bottom: 1px; 
   background: rgba($primary-color, 0.92);
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    background: transparent url("/images/control-play.3.3.1-x2.png") no-repeat top left / contain;
+    width: 1.35em;
+    height: 1.35em;
+    left: rem-calc(9);
+    bottom: rem-calc(9); 
+  }
   .overlay & {  
     transition: background 0.25s ease; 
   }  
@@ -108,16 +118,6 @@ a:hover {
     background-repeat: no-repeat, no-repeat;
     background-position: 0 0, 1 1;
   }
-}
-.video-length::before {
-  content: "";
-  position: absolute;
-  display: block;
-  background: transparent url("/images/control-play.3.3.1-x2.png") no-repeat top left;
-  width: 1.35em;
-  height: 1.35em;
-  left: rem-calc(9);
-  bottom: rem-calc(9);      
 }
 .overlay-contents {
   color: $white;

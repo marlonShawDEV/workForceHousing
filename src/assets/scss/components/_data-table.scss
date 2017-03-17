@@ -6,7 +6,17 @@ tfoot th:not([class]) {
 table tfoot td {
   font-weight: inherit;
 }
-
+table.stack.show-header {
+  thead {
+    display: block;
+    th {
+      display: none;
+    }
+    th:first-child {
+      display: block;
+    }
+  }  
+}
 .research-table {
   color: $fm-gray;
   border-collapse:collapse;  

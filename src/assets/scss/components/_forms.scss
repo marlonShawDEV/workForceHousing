@@ -17,13 +17,6 @@ input[type="email"] {
   background-repeat: no-repeat;
   background-origin: content-box;
 }
-input[type="search"] {
-  position: relative;          
-  background-image: icon(search, $fm-gray, 24, 24);
-  background-position: $global-right center;
-  background-repeat: no-repeat;
-  background-origin: content-box;
-}
 legend {
   font-weight: $form-label-font-weight;
 } 
@@ -131,6 +124,9 @@ fieldset {
   } 
   input[type="search"]:not(:focus) {    
     background-image: icon(search, $white, 24, 24);
+    background-position: $global-right center;
+    background-repeat: no-repeat;
+    background-origin: content-box;
   }
   select:not([multiple]):not(:focus) {
     background-image: icon(chevron-down, $white, 24, 16, 0, 100, 800, 300);

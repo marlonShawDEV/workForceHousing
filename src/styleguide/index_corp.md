@@ -456,8 +456,7 @@ There are several text and typography styles to choose from, although some style
       <hr>
       <div class="callout">
         <p><span class="callout-txt">This is class callout-txt, use it for a brief, attention-catching phrase.</a></p>  
-        <h3 class="call-to-action-medium">This is class call-to-action-medium  (currently not used)</h3>
-        <h3 class="call-to-action-light">This is class call-to-action-light (currently not used)</h3>
+        <h3 class="call-to-action">This is class call-to-action  (currently not used)</h3>
         <h3 class="subtitle">This is class subtitle</h3>
         <h3 class="section-subtitle">This is class section-subtitle</h3> 
         <h2 class="page-subtitle">This is class page subtitle (also used for subtitles in <a href="#page-title">page titles</a>)</h2>
@@ -1271,10 +1270,83 @@ You can change the float behavior of an element by adding the `.float-left` or `
 
 ## Float Center
 
-Okay, it's not *really* a float, but you can add the `.float-center` class to an element to engage the automatic margin centering trick. Note that this will only work on elements with an absolute width, which means not a percentage or `auto` width.
+Okay, it's not *really* a float, but you can add the `.float-center` class to an element to engage the automatic margin centering trick. Note that this will only work on elements with an absolute width or a maximum width that is less than their containing element.
 
 ```html_example
-<img src="/images/blog/fm_blog_usda_returns.jpg" alt="Harp - act now!" class="float-center">
+<div class="gutter-bottom">
+  <img src="/images/blog/fm_blog_usda_returns.jpg" alt="Harp - act now!"  class="float-center">
+</div>
+```
+
+---
+
+## Content Section Floats
+
+There are four options for creating floated content columns within a content area: left and right variations that are proportionate or fixed.  All will only float at medium breakpoint and above -- the content will stack at small screen sizes.  Only use floated containers when ther eis sufficient content to wrap around them -- if there isn't sufficient content use a row that splits content into columns at specific breakpoints to create a similar concept.
+
+### Left Float, Proportionate Width
+
+Use class `.box-left-40` to float content to the left at 40% of the content area's width (content will stack below medium breakpoint).  The floated content can contain a callout, figure, or other design elements.
+
+```html_example
+<p class="lead">Example showing floated element inserted, with floated container set to percentage-based width at medium breakpoint and higher.</p>
+<div class="box-left-40">
+  <div class="callout background-teal">
+    <h3>Related Items</h3>
+    <ul>
+      <li><a href="#">Link to some supporting material</a></li>
+      <li><a href="#">Link to some other supporting material</a></li>
+    </ul>
+  </div>
+</div>
+<p>This content comes after a floated container, and thus can wrap around it if needed.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. This content comes after a floated container, and thus can wrap around it if needed.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. This content comes after a floated container, and thus can wrap around it if needed.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+```
+
+### Left Float, Fixed Width 
+
+Use class `.box-left-fixed300` to float content to the left at a fixed width of 300px (content will stack below medium breakpoint).  The floated content can contain a callout, figure, or other design elements.
+
+```html_example
+<p class="lead">Example showing floated element inserted, with floated container set to a fixed-size width at medium breakpoint and higher.</p>
+<div class="box-left-fixed300">
+  <figure>
+    <img src="/images/styleguide/bigkitty.jpg" alt="kitty">
+  </figure>
+</div>
+<p>This content comes after a floated container, and thus can wrap around it if needed.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. This content comes after a floated container, and thus can wrap around it if needed.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. This content comes after a floated container, and thus can wrap around it if needed.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+```
+
+### Right Float, Proportionate Width 
+
+Use class `.box-right-40` to float content to the right at 40% of the content area's width (content will stack below medium breakpoint).  The floated content can contain a callout, figure, or other design elements.
+
+```html_example
+<p class="lead">Example showing floated element inserted, with floated container set to percentage-based width at medium breakpoint and higher.</p>
+<div class="box-right-40">
+  <div class="callout background-yellow">
+    <h3>Related Items</h3>
+    <ul class="list-divided no-bullet">
+      <li><a href="#">Link to some supporting material</a></li>
+      <li><a href="#">Link to some other supporting material</a></li>
+      <li><a href="#">Link to some other supporting material</a></li>
+    </ul>
+  </div>
+</div>
+<p>This content comes after a floated container, and thus can wrap around it if needed.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. This content comes after a floated container, and thus can wrap around it if needed.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. This content comes after a floated container, and thus can wrap around it if needed.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+```
+
+### Right Float, Fixed Width 
+
+Use class `.box-right-fixed300` to float content to the right at a fixed width of 300px (content will stack below medium breakpoint).  The floated content can contain a callout, figure, or other design elements.
+
+```html_example
+<p class="lead">Example showing floated element inserted, with floated container set to a fixed-size width at medium breakpoint and higher.</p>
+<div class="box-right-fixed300">
+  <figure>
+    <img src="/images/styleguide/bigkitty.jpg" alt="kitty">
+  </figure>
+</div>
+<p>This content comes after a floated container, and thus can wrap around it if needed.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. This content comes after a floated container, and thus can wrap around it if needed.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. This content comes after a floated container, and thus can wrap around it if needed.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 ```
 
 
@@ -2548,7 +2620,7 @@ When the form appears on a darker background, add the class `.outline` to invert
     <div class="callout background-gray">
       <form action="#" class="form outline">
         <label for="">Keyword</label>
-        <input id="" type="search" placeholder="search">
+        <input id="" type="search" placeholder="search" class="icon">
         <button class="button primary">Submit</button>
       </form>
     </div>
@@ -2802,13 +2874,14 @@ Need to spiff up the table just a tad? Just add the class `.hover` to lightly da
 
 ## Stacking Tables
 
-To stack a table on small screens, add the class `.stack`.  Cells that span multiple rows are only shown in their original row -- if you have a complex table that has numerous rowspans and colspans, you may need opt for the scrolling table instead.
+To stack a table on medium and small screens, add the class `.stack`.  Cells that span multiple rows are only shown in their original row -- if you have a complex table that has numerous rowspans and colspans, you may need opt for the scrolling table instead.
 
-```html
-<table class="stack">
-</table>
-```
+By default, *all* header rows are hidden when the table stacks.  You can make the first header cell visible by adding class `.show-header` to the table.  If you opt for this route, make sure you put relevant content info in the first cell.  
 
+To swap the contents of the first cell between stacked and non-stacked displays, use class `.hide-for-large` for content that should only display when stacked and class `.show-for-large` for content that should only show when not stacked.
+
+```html_example
+<h3>Table that stacks and header does not display</h3>
 <table class="stack">
   <thead>
     <tr>
@@ -2847,6 +2920,50 @@ To stack a table on small screens, add the class `.stack`.  Cells that span mult
     </tr>
   </tfoot>
 </table>
+<br>
+<h3>Table that stacks and displays alternate header info</h3>
+<table class="stack show-header">
+  <thead>
+    <tr>
+      <th>
+        <span class="show-for-large">Table Header (desktop only)</span>
+        <span class="hide-for-large">Alternate Header for Mobile Stacked Table</span>      
+      </th>
+      <th>Table Header</th>
+      <th>Table Header</th>
+      <th>Table Header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Row Header</th>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+    <tr>
+      <th>Row Header</th>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+    <tr>
+      <th>Row Header</th>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th>Footer Row Header</th>
+      <td>Footer content</td>
+      <td>Footer content</td>
+      <td>Footer content</td>
+    </tr>
+  </tfoot>
+</table>
+```
 
 ---
 
@@ -2858,7 +2975,9 @@ Got a lot of tubular tabular data? Add a wrapper element with the class `.table-
 
 ```html_example
 <div class="table-scroll">
-  <table></table>
+  <table>
+  // table markup
+  </table>
 </div>
 ```
 

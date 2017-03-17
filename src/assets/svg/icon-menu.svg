@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="23" viewBox="0 0 24 23">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
 <g fill="#00a6e2">
-<rect width="24" height="3"/>
-<rect y="10" width="24" height="3"/>
-<rect y="20" width="24" height="3"/>
+<rect width="24" height="3" rx="3" ry="3"/>
+<rect y="10" width="24" height="3" rx="3" ry="3"/>
+<rect y="20" width="24" height="3" rx="3" ry="3"/>
 </g>
 </svg>

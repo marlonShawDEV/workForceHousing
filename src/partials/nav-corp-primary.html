@@ -1,16 +1,18 @@
-<div class="primary-nav" id="primary-nav" data-toggler=".is-mobile-expanded">
+
+
+<div class="primary-nav" id="primary-nav" data-toggler=".is-mobile-expanded" aria-expanded="false">
   <div class="row column primarynav-buffer"> 
     <div class="top-bar"> 
-      <div class="title-bar hide-for-xlarge" id="top-bar-title" data-responsive-toggle="main-nav" data-hide-for="xlarge">
+      <div class="title-bar hide-for-xlarge" id="top-bar-title" data-hide-for="xlarge">
         <div class="float-right">
-          <button id="menu-toggle" class="toggle-icon button" type="button" data-toggle="primary-nav" aria-label="toggle menu"></button>
+          <button id="search-toggle" class="search-icon button" type="button" data-toggle="search-mobile" aria-label="toggle search"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65.11 64.57"><defs><style>.a{fill:none;stroke-width:8px;}.a,.b{stroke:#00a6e2;}.b{fill:#00a6e2;stroke-linecap:round;stroke-width:7px;}</style></defs><circle class="a" cx="23.67" cy="23.67" r="20.17"/><line class="b" x1="38.19" y1="37.66" x2="62.11" y2="61.57"/></svg></button><button id="menu-toggle" class="toggle-icon button" type="button" data-toggle="primary-nav main-nav" aria-label="toggle menu"></button>
         </div>
           <a href="/corporate/" class="logo-mobile"><span>Freddie Mac Home</span><img class="no-border" src="/images/FreddieMacLogo.svg" alt="Freddie Mac logo"></a>
       </div>
       <div class="top-bar-left show-for-xlarge">
         <a href="/corporate/" class="logo-desktop"><img alt="Freddie Mac logo" src="/images/FreddieMacLogo.svg" class="no-border"></a>
       </div>
-      <nav class="top-bar-right" id="main-nav">  
+      <nav class="top-bar-right" id="main-nav" role="navigation">  
         <ul class="menu vertical xlarge-horizontal">       
           <li id="nav-perspectives"><a href="/corporate/perspectives-landing.html">Perspectives</a>
           </li>
@@ -54,5 +56,28 @@
         </ul>      
       </nav>
     </div>
+  </div>
+  <div class="search-nav hide-for-xlarge" id="search-mobile" data-toggler=".is-expanded">
+    <form action="http://search.freddiemac.com/search" method="get" accept-charset="utf-8">
+      <input type="hidden" name="entqr" value="0">
+      <input type="hidden" name="output" value="xml_no_dtd">
+      <input type="hidden" name="sort" value="date:D:L:d1">
+      <input type="hidden" name="client" value="default_frontend">
+      <input type="hidden" name="ud" value="1">
+      <input type="hidden" name="oe" value="UTF-8">
+      <input type="hidden" name="ie" value="UTF-8">
+      <input type="hidden" name="proxystylesheet" value="default_frontend">
+      <input type="hidden" name="getfields" value="description">
+      <input type="hidden" name="site" value="default_collection">
+      <div class="row">
+        <div class="column small-9 medium-10 large-11">
+        <label for="mobile-search" class="show-for-sr">Site Search</label>
+          <input id="mobile-search" name="q" type="search" placeholder="Site Search" required maxlength="100">	   
+        </div>
+        <div class="column small-3 medium-2 large-1">
+          <button type="submit" class="float-right button">Search</button>
+        </div>
+      </div>
+    </form>
   </div>
 </div>

@@ -4,7 +4,7 @@
     float: right;
     width: 40%;
     margin-left: $gutter;
-    margin-bottom: $gutter;
+
   }  
 }
 .box-left-40 {
@@ -12,14 +12,21 @@
     float: left;
     width: 40%;
     margin-right: $gutter;
-    margin-bottom: $gutter;
   }  
 }
 
-.fake-side-bar-fixed {
+.box-right-fixed300 {
   @include breakpoint(medium) {
     float: right;
     width: rem-calc(300);
-    margin-left: $gutter;
+    margin-left: $global-margin;
+  }  
+}
+
+.box-left-fixed300 {
+  @include breakpoint(medium) {
+    float: left;
+    width: rem-calc(300);
+    margin-right: $global-margin;
   }  
 }

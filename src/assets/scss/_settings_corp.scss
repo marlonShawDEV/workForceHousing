@@ -593,7 +593,7 @@ $table-foot-background: smart-scale($table-background, $table-color-scale * 2);
 $table-foot-row-hover: darken($table-foot-background, $table-hover-scale);
 $table-head-font-color: $white;
 $table-foot-font-color: $body-font-color;
-$show-header-for-stacked: true;
+$show-header-for-stacked: false;
 
 // 33. Tabs
 // --------
@@ -629,13 +629,13 @@ $thumbnail-radius: $global-radius;
 // 34. Title Bar
 // -------------
 
-$titlebar-background: inherit;
+$titlebar-background: $white;
 $titlebar-color: $white;
 $titlebar-padding: 0;
 $titlebar-text-font-weight: inherit;
 $titlebar-icon-color: $primary-color;
 $titlebar-icon-color-hover: $primary-color;
-$titlebar-icon-spacing: $gutter $gutter * 1.5;
+$titlebar-icon-spacing: $gutter;
 
 // 35. Tooltip
 // -----------
@@ -657,5 +657,5 @@ $topbar-padding: 0;
 $topbar-background: $white;
 $topbar-submenu-background: $white;
 $topbar-title-spacing: 0;
-$topbar-input-width: 200px;
+$topbar-input-width: 900px;
 $topbar-unstack-breakpoint: xlarge;

@@ -5,6 +5,7 @@
 }
 
 .primary-nav {
+  font-weight: $global-weight-medium;
   .row {
     &.column {
       &.primarynav-buffer {
@@ -21,19 +22,17 @@
       }
     }
   }
-  font-weight: $global-weight-medium;
-  position: relative;
   h4 {
     font-size: inherit;
   }
   .button { 
     height: 2.5rem;
-    width: 1.5rem;
+    width: 1.875rem;
     margin: $titlebar-icon-spacing;
-    padding: 0;
+    padding: 0.4375rem 0;
     transition: none;
     border-width: 0;
-    border-radius: 0;      
+    border-radius: 0;
   }
   @include foundation-title-bar;
   .title-bar {
@@ -41,6 +40,8 @@
     background: $titlebar-background;
     color: $titlebar-color;
     padding: $titlebar-padding;
+    position: relative;
+    z-index: 400;
     span {
       display: none;
       font-size: 1.375rem;
@@ -49,17 +50,29 @@
     }
   }   
   .toggle-icon {
-    background: transparent icon(menu, $primary-color, 24, 23, 0, 0, 24, 23) no-repeat center center;   
-  }
+    background: transparent icon(menu, $primary-color, 28, 24, 0, 0, 28, 24) no-repeat center center;       
+    display: inline;  
+    @media screen and (min-width: 400px) {
+       margin-right: $gutter * 1.5;
+    }    
+  }   
+  .search-icon {
+    background: transparent; 
+    display: inline;
+    svg {
+      width: 100%;
+      height: 100%;
+      color: $primary-color;
+    }
+  } 
 }
 
 // mobile nav
 @include breakpoint(large down) {      
   .primary-nav {  
-    font-size: rem-calc(19);
-    .column {
-      padding: 0;
-    }
+    position: relative;
+    z-index: 200;
+    font-size: rem-calc(18);
     .top-bar-right {
       text-transform: uppercase;
       &:not([style]) .menu {
@@ -71,7 +84,7 @@
       margin-bottom: 0;
     }
     a {
-      color: $body-font-color;          
+      color: $fm-gray;          
       display: block;
       position: relative;
     }
@@ -104,33 +117,30 @@
       }
     }
     .logo-mobile { 
-      padding: $gutter $gutter 0 $gutter;
+      padding: $gutter $gutter/2 0 $gutter * 1.5;
       display: inline-block;
       img {
         width: rem-calc(116);
         height: rem-calc(41);
-        margin-left: $gutter / 2;
       }
     } 
     .menu {
       background: scale-color($topbar-background, $lightness: -8%);
+      letter-spacing: 1px;
       > li {
         background: $light-gray;
         > a { 
-          padding: $gutter * 1.5 $gutter;
+          padding: $gutter * 1.5;
+          padding-bottom: ($gutter * 1.5) - 2px;
         }             
       }
       .nested {
         position: relative;
-        > li {   
-          > a {
-            padding: $gutter * 1.5 $gutter;
-            text-transform: initial;
-          }          
-        } 
       }
     }     
     &.is-mobile-expanded[aria-expanded='true'] {
+      .top-bar-right .menu { display: block;}
+      .search-nav { display: none; }
       .title-bar {
         background: $primary-color none repeat scroll 0 0;
         color: $white;
@@ -142,6 +152,9 @@
           img {
             display: none;
           }
+        }
+        .search-icon {
+          display: none;
         }
       } 
       .toggle-icon {

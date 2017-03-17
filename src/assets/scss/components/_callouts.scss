@@ -26,7 +26,7 @@
   &.rounded {
     border-radius: 0.35rem;
   }
-  > :first-child {
+  > :first-child:not(.button) {
     margin-top: 0;
   }
   > :last-child {

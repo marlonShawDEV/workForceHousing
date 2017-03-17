@@ -30,12 +30,13 @@
         margin: 0;
         > li {
           border: 1px solid darken($light-gray, 9.8039);
-          border-radius: 0.3125rem;      
+          border-radius: 0.4rem;      
           position: relative;
-          margin: 1.125rem 0;
+          margin: $gutter/2 0;
           > a {
             @include accordion-pointers-title($medium-gray, $light-gray, false);
             font-size: rem-calc(16);
+            padding: 1rem;
           }
         }
         .menu {

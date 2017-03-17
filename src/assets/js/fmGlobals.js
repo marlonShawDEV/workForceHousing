@@ -59,11 +59,13 @@ FM.form = {
       if(q.length && $lk.closest('#content').length){desc=q+'|'+desc;trig='search'}
     }
     txt=txt.slice(0,100);
-    // somniTL(event,ltype,hrf,trig,locale+desc+txt,persona); 
+    somniTL(event,ltype,hrf,trig,locale+desc+txt,persona); 
   }	
  }
 };
-if (FM.form.useOmni){$(document).on("click",FM.form.omniNavLink);}
+if (FM.form.useOmni){  
+  $(document).on("click",FM.form.omniNavLink);  
+}
 for (var x in FM.form.QueryPairs) {
   QueryParam[decodeURIComponent(FM.form.QueryPairs[x].split('=')[0] || "")] = decodeURIComponent(FM.form.QueryPairs[x].split('=')[1] || "");
 };
@@ -82,3 +84,9 @@ if (FM.form.pathElements[0] !== "search") {
      else { $(this).after(" <span class='filemarker'>["+h+"]</span>"); }
 	});
 } 
+// fix marketwire crap tables
+if(FM.form.hostname.match(/newsroom/)) {
+  $("table").not("[class]").each(function(){
+    $(this).wrap('<div class="table-scroll"></div>');
+  });  
+}

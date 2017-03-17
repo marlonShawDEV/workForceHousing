@@ -40,13 +40,13 @@ $(".nav-bus-section").on("mouseleave", function(){
  }); 
  
 $("#primary-nav").on("on.zf.toggler", function(e) {
-  
 });
 
 $(window).on('changed.zf.mediaquery', function() {    
   navHoverOff();
+  $(".search-nav").removeClass("is-expanded");
 });
 
 $(function(){
-
+  $(".search-nav").addClass("has-transition");
 });

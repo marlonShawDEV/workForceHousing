@@ -1,9 +1,10 @@
-
+<!--googleoff: all-->
 <div class="show-for-print">FreddieMac.com</div>
+<a class="show-for-sr" href="#nav-end">Skip to content</a>
 <header id="header-nav" class="hide-for-print">  
   <div class="top-bar ribbon show-for-xlarge data-expanded" id="ribbon">    
     <div id="ribbon-nav" class="row column">  
-      <nav class="top-bar-right">
+      <nav class="top-bar-right" role="navigation">
         <ul class="menu">
           <li id="desktop-corporate-home"><a href="/">Freddie Mac Home</a></li>
           <li id="desktop-singlefamily-home"><a href="/singlefamily/">Single-Family</a></li>
@@ -51,19 +52,22 @@
     </div>
   </div>
   
-  <div class="primary-nav" id="primary-nav" data-toggler=".is-mobile-expanded">
+  <div class="primary-nav" id="primary-nav" data-toggler=".is-mobile-expanded" aria-expanded="false">
     <div class="row column primarynav-buffer"> 
       <div class="top-bar"> 
-        <div class="title-bar hide-for-xlarge" id="top-bar-title" data-responsive-toggle="main-nav" data-hide-for="xlarge">
-          <div class="float-right">
-            <button id="menu-toggle" class="toggle-icon button" type="button" data-toggle="primary-nav" aria-label="toggle menu"></button>
-          </div>
+        <div class="title-bar hide-for-xlarge" id="top-bar-title" data-hide-for="xlarge">
+        <div class="float-right">
+          <button id="search-toggle" class="search-icon button" type="button" data-toggle="search-mobile" aria-label="toggle search"><svg xmlns="http://www.w3.org/2000/svg" 
+		  viewBox="0 0 65.11 64.57"><defs><style>.a{fill:none;stroke-width:8px;}.a,.b{stroke:#00a6e2;}.b{fill:#00a6e2;stroke-linecap:round;stroke-width:7px;}</style></defs><circle 
+		  class="a" cx="23.67" cy="23.67" r="20.17"/><line class="b" x1="38.19" y1="37.66" x2="62.11" y2="61.57"/></svg></button><button id="menu-toggle" class="toggle-icon button" 
+          type="button" data-toggle="primary-nav main-nav" aria-label="toggle menu"></button>
+        </div>
             <a href="/" class="logo-mobile"><span>Freddie Mac Home</span><img class="no-border" src="/images/FreddieMacLogo.svg" alt="Freddie Mac logo"></a>
         </div>
         <div class="top-bar-left show-for-xlarge">
           <a href="/" class="logo-desktop"><img alt="Freddie Mac logo" src="/images/FreddieMacLogo.svg" class="no-border"></a>
         </div>
-        <nav class="top-bar-right" id="main-nav">  
+        <nav class="top-bar-right" id="main-nav" role="navigation">  
           <ul class="menu vertical xlarge-horizontal">       
             <li id="nav-perspectives"><a href="/perspectives/">Perspectives</a>
             </li>
@@ -108,10 +112,34 @@
         </nav>
       </div>
     </div>
+    
+    <div class="search-nav hide-for-xlarge" id="search-mobile" data-toggler=".is-expanded">
+        <form action="http://search.freddiemac.com/search" method="get" accept-charset="utf-8">
+          <input type="hidden" name="entqr" value="0">
+          <input type="hidden" name="output" value="xml_no_dtd">
+          <input type="hidden" name="sort" value="date:D:L:d1">
+          <input type="hidden" name="client" value="default_frontend">
+          <input type="hidden" name="ud" value="1">
+          <input type="hidden" name="oe" value="UTF-8">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="proxystylesheet" value="default_frontend">
+          <input type="hidden" name="getfields" value="description">
+          <input type="hidden" name="site" value="default_collection">
+          <div class="row">
+            <div class="column small-9 medium-10 large-11">
+            <label for="mobile-search" class="show-for-sr">Site Search</label>
+              <input id="mobile-search" name="q" type="search" placeholder="Site Search" required maxlength="100">	   
+            </div>
+            <div class="column small-3 medium-2 large-1">
+              <button type="submit" class="float-right button">Search</button>
+            </div>
+          </div>
+        </form>
+    </div>
   </div>  
         
   <div  id="subnav-secondary-nav">
-    <nav class="secondary-nav" id="subnav-research" data-toggler=".is-expanded">
+    <nav class="secondary-nav" id="subnav-research" data-toggler=".is-expanded" role="navigation">
       <div class="row column">
         <ul class="hide no-bullet">
           <li><a id="subnav-research-toggle" class="hide-for-xlarge" data-toggle="subnav-research">Research Menu</a>
@@ -128,36 +156,36 @@
       </div>
       <div class="subnav-bottom"></div>
     </nav>
-    <nav class="secondary-nav" id="subnav-blog" data-toggler=".is-expanded">
+    <nav class="secondary-nav" id="subnav-blog" data-toggler=".is-expanded" role="navigation">
       <div class="row column">
         <ul class="hide no-bullet">
           <li><a id="subnav-blog-toggle" class="hide-for-xlarge" data-toggle="subnav-blog">Blog Menu</a>
             <ul class="menu xlarge-horizontal" id="subnav-blog-list">
               <li><a id="subnav-blog-homeownership" href="/blog/homeownership/">Homeownership</a></li>
-              <li><a id="subnav-blog-rental" href="/blog/rental/">Rental Housing</a></li>
-              <li><a id="subnav-blog-research" href="/blog/research/">Research &amp; Analysis</a></li>
+              <li><a id="subnav-blog-rental" href="/blog/rental_housing/">Rental Housing</a></li>
+              <li><a id="subnav-blog-research" href="/blog/research_and_analysis/">Research &amp; Analysis</a></li>
               <li><a id="subnav-blog-notable" href="/blog/notable/">Notable</a></li>
-              <li><a id="subnav-blog-archive" href="/blog/archive/">Archive</a></li>
+              <li><a id="subnav-blog-archive" href="/blog/blog-archive/">Archive</a></li>
             </ul>
           </li>
         </ul>
       </div>
       <div class="subnav-bottom"></div>
     </nav>
-    <nav class="secondary-nav" id="subnav-mediaroom" data-toggler=".is-expanded">
+    <nav class="secondary-nav" id="subnav-mediaroom" data-toggler=".is-expanded" role="navigation">
       <div class="row column">      
         <ul class="hide no-bullet">
           <li><a id="subnav-mediaroom-toggle" class="hide-for-xlarge" data-toggle="subnav-mediaroom">Media Room Menu</a>
             <ul class="menu xlarge-horizontal" id="subnav-mediaroom-list">
-              <li><a id="subnav-mediaroom-archive" href="/media-room/">Press Release Archive</a></li>
-              <li><a id="subnav-mediaroom-resources" href="/media-room/resources/">Media Resources</a></li>
+              <li><a id="subnav-mediaroom-archive" href="http://freddiemac.mwnewsroom.com/">Press Release Archive</a></li>
+              <li><a id="subnav-mediaroom-resources" href="/media-room/resources.html">Media Resources</a></li>
             </ul> 
           </li>
         </ul>  
       </div>
       <div class="subnav-bottom"></div>
     </nav>
-    <nav class="secondary-nav" id="subnav-about" data-toggler=".is-expanded">
+    <nav class="secondary-nav" id="subnav-about" data-toggler=".is-expanded" role="navigation">
       <div class="row column">       
         <ul class="hide no-bullet">
           <li><a id="subnav-about-toggle" class="hide-for-xlarge" data-toggle="subnav-about">About Menu</a>
@@ -175,5 +203,7 @@
       </div>
       <div class="subnav-bottom"></div>
     </nav>
-  </div>   
+  </div> 
+  <div class="subnav-edge" id="nav-end"></div>   
 </header>  
+<!--googleon: all-->
