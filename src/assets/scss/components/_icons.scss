@@ -255,11 +255,11 @@
     content: '*';
     display: inline-block; 
     position: relative;
-    width: 1em;
+    width: 0.75em;
     height: 1em;
     color: $fm-red;
+    text-align: right;
   }
-
 }
 .icon {
   &.secondary { 

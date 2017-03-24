@@ -9,7 +9,6 @@ import rimraf   from 'rimraf';
 import sherpa   from 'style-sherpa';
 import yaml     from 'js-yaml';
 import fs       from 'fs';
-
 // Load all Gulp plugins into one variable
 const $ = plugins();
 
@@ -26,7 +25,7 @@ function loadConfig() {
 
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
- gulp.series(clean, gulp.parallel(javascript, pages, sass, images, copy), styleGuide));
+ gulp.series(clean, gulp.parallel(javascript, pages, sass, sassHomepage, images, copy), styleGuide));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -77,25 +76,30 @@ function styleGuide(done) {
   sherpa('src/styleguide/index_corp.md', {
     output: PATHS.dist + '/styleguide/styleguide_corp.html',
     template: 'src/styleguide/template_corp.html'
-  }, done);  
+  }, done); 
+}
+function styleGuideSF(done) {
   sherpa('src/styleguide/index_sf.md', {
     output: PATHS.dist + '/styleguide/styleguide_sf.html',
     template: 'src/styleguide/template_sf.html'
   }, done);
+}
+function styleGuideMF(done) {
   sherpa('src/styleguide/index_mf.md', {
     output: PATHS.dist + '/styleguide/styleguide_mf.html',
     template: 'src/styleguide/template_mf.html'
   }, done);
+}
+function styleGuideCM(done) {
   sherpa('src/styleguide/index_cm.md', {
     output: PATHS.dist + '/styleguide/styleguide_cm.html',
     template: 'src/styleguide/template_cm.html'
   }, done);
 }
-
 // Compile Sass into CSS
 // In production, the CSS is compressed
 function sass() {
-  return gulp.src('src/assets/scss/app*.scss')
+  return gulp.src('src/assets/scss/app_corp.scss')
     .pipe($.sourcemaps.init())
     .pipe($.sass({
       includePaths: PATHS.sass
@@ -112,10 +116,30 @@ function sass() {
     .pipe(browser.reload({ stream: true }));
 }
 
+// Compile Sass into CSS
+// In production, the CSS is compressed
+function sassHomepage() {
+  return gulp.src('src/assets/scss/home*.scss')
+    .pipe($.sourcemaps.init())
+    .pipe($.sass({
+      includePaths: PATHS.sasshome
+    })
+    .on('error', $.sass.logError))
+    .pipe($.autoprefixer({
+      browsers: COMPATIBILITY
+    }))
+    // Comment in the pipe below to run UnCSS in production
+    //.pipe($.if(PRODUCTION, $.uncss(UNCSS_OPTIONS)))
+    .pipe($.if(PRODUCTION, $.cssnano()))
+    .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
+    .pipe(gulp.dest(PATHS.dist + '/ss'))
+    .pipe(browser.reload({ stream: true }));
+}
+
 // Combine JavaScript into one file
 // In production, the file is minified
 function javascript(done) {
-  gulp.src(PATHS.javascriptcorp)
+  return gulp.src(PATHS.javascriptcorp)
     .pipe($.sourcemaps.init())
     .pipe($.babel())
     .pipe($.concat('app_corp.js'))
@@ -124,7 +148,11 @@ function javascript(done) {
     ))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/js'));
-  gulp.src(PATHS.javascriptsf)
+  done();
+}
+
+function javascriptSF(done) {
+  return gulp.src(PATHS.javascriptsf)
     .pipe($.sourcemaps.init())
     .pipe($.babel())
     .pipe($.concat('app_sf.js'))
@@ -133,7 +161,11 @@ function javascript(done) {
     ))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/js'));
-  gulp.src(PATHS.javascriptmf)
+  done();
+}
+
+function javascriptMF(done) {
+  return gulp.src(PATHS.javascriptmf)
     .pipe($.sourcemaps.init())
     .pipe($.babel())
     .pipe($.concat('app_mf.js'))
@@ -142,6 +174,10 @@ function javascript(done) {
     ))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/js'));
+  done();
+}
+
+function javascriptCM(done) {
   return gulp.src(PATHS.javascriptcm)
     .pipe($.sourcemaps.init())
     .pipe($.babel())
@@ -153,6 +189,7 @@ function javascript(done) {
     .pipe(gulp.dest(PATHS.dist + '/js'));
   done();
 }
+
 
 // Copy images to the "dist" folder
 // In production, the images are compressed
@@ -183,7 +220,7 @@ function watch() {
   gulp.watch(PATHS.assets, copy);
   gulp.watch('src/pages/**/*.html').on('change', gulp.series(pages, browser.reload));
   gulp.watch('src/{layouts,partials}/**/*.html').on('change', gulp.series(resetPages, pages, browser.reload));
-  gulp.watch('src/assets/scss/**/*.scss').on('change', gulp.series(sass, browser.reload));
+  gulp.watch('src/assets/scss/**/*.scss').on('change', gulp.series(sass, sassHomepage, browser.reload));
   gulp.watch('src/assets/js/**/*.js').on('change', gulp.series(javascript, browser.reload));
   gulp.watch('src/assets/img/**/*').on('change', gulp.series(images, browser.reload));
   gulp.watch('src/styleguide/**').on('change', gulp.series(styleGuide, browser.reload));

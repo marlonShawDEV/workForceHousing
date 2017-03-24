@@ -42,6 +42,7 @@ ol:not([class]) > li {
 }
 .clipping-block {   // divides blog and news archive entries  
   @include list-divided(darken($light-gray, 5%), $gutter * 1.5, true);
+  + hr { border-width: 0; }
 } 
 
 dd { 

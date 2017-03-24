@@ -39,9 +39,8 @@ $tertiary-border-color: scale-color($light-gray, $lightness: -5%);
       }
       &.active {
         color: $fm-green;
-        background: $offwhite;
         font-weight: $global-weight-black;
-      }    
+      }     
     }
     li + li::before {     
         content: ""; 
@@ -62,8 +61,10 @@ $tertiary-border-color: scale-color($light-gray, $lightness: -5%);
       }
     }
   }
+  li.parent {      
+    background: $offwhite;
+  } 
   li.data-expanded {
-    background: $offwhite;  
     > a {  
       padding-bottom: $tertiary-gap/4;
     }

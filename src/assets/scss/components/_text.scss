@@ -451,22 +451,13 @@ b {
     letter-spacing: 1px;
   }  
 }
-.homepage-business-highlight-title {
-  font-size: rem-calc(24);
-  font-size: calc(24px +  14 * (100vw - 320px)/1180);
-  font-weight: inherit;
-  @include breakpoint(xlarge) {
-		font-size: rem-calc(38);
-	}
-  strong {
-    font-weight: $global-weight-black;
-  }
-}
 .stat-sm {
   font-size: rem-calc(18);
   font-size: calc(18px +  14 * (100vw - 320px)/1180);
   line-height: 1.1;
   width: 100%;
+  font-weight: 900;
+  
   @include breakpoint (xxlarge) {
     font-size: rem-calc(32);
   }

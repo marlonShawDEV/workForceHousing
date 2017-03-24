@@ -10,7 +10,8 @@ h2, h3, h4 {
 .background-blue a,
 .background-teal a,
 .background-gray a,
-.background-primary a {
+.background-primary a,
+thead a {
   @include anchor-on-dark(none);
 }
 a:hover {

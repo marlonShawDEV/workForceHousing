@@ -1,3 +1,4 @@
+.subnav-edge { display: none; }
 .homepage-business-lines {
   background: $light-gray;  
   padding: $global-padding 0;
@@ -69,18 +70,5 @@
   }
   svg { 
     padding: 0 $global-padding * .5 $global-padding * .5;
-  }
-}
-.homepage-business-highlight {
-  margin: 0;  
-  padding: $global-padding * 3 0 $global-padding * 2;
-  @include breakpoint (medium) {
-    padding: $global-padding * 6 0 $global-padding * 5;
-  }
-  background-image: linear-gradient(to left top, transparent 46%, rgba(0,0,0,0.07) 46%, rgba(0,0,0,0.07) 54%,  transparent 54%);
-  background-size: 10px 10px;  
-  @include breakpoint(xlarge) {
-    padding-bottom: 25rem;
-    min-height: rem-calc(700);
   }
 }

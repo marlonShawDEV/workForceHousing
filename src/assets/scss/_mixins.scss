@@ -22,7 +22,7 @@
   transition: color 0.2s ease 0s, border-bottom-color 0.2s ease 0s;   
   &.active {
     color: $fm-green;
-    border-bottom-color: #cbe721; // somewhere close to adjust_hue(saturate(darken($pear, 2.3), 22.5), 4.2);              
+    border-bottom-color: darken(saturate(adjust-hue($pear,-1.73485), 12.69119), 1.96078);  
   }
   &:focus,
   &:hover {
@@ -108,6 +108,40 @@
     color-shift($a, $b, 12, 10) 67%,  
     color-shift($a, $b, 12, 9) 83%, 
     color-shift($a, $b, 12, 12) 83%,  
+    color-shift($a, $b, 12, 11) 100%
+    );
+}
+
+// staggered mosiac pattern 12 steps:
+@mixin mosaic-fill12(
+  $a: $mosaic-first, 
+  $b: $mosaic-last, 
+  $direction: to right
+  ) {
+  background: linear-gradient($direction, 
+    color-shift($a, $b, 12, 1) 0%, 
+    color-shift($a, $b, 12, 0) 8%,
+    color-shift($a, $b, 12, 2) 8%, 
+    color-shift($a, $b, 12, 1) 17%, 
+    color-shift($a, $b, 12, 3) 17%, 
+    color-shift($a, $b, 12, 2) 25%, 
+    color-shift($a, $b, 12, 4) 25%,  
+    color-shift($a, $b, 12, 3) 33%, 
+    color-shift($a, $b, 12, 5) 33%,   
+    color-shift($a, $b, 12, 4) 42%, 
+    color-shift($a, $b, 12, 6) 42%, 
+    color-shift($a, $b, 12, 5) 50%, 
+    color-shift($a, $b, 12, 7) 50%, 
+    color-shift($a, $b, 12, 6) 58%, 
+    color-shift($a, $b, 12, 8) 58%, 
+    color-shift($a, $b, 12, 7) 67%, 
+    color-shift($a, $b, 12, 9) 67%, 
+    color-shift($a, $b, 12, 8) 75%, 
+    color-shift($a, $b, 12, 10) 75%,   
+    color-shift($a, $b, 12, 9) 83%, 
+    color-shift($a, $b, 12, 11) 83%,   
+    color-shift($a, $b, 12, 10) 92%, 
+    color-shift($a, $b, 12, 12) 92%,  
     color-shift($a, $b, 12, 11) 100%
     );
 }

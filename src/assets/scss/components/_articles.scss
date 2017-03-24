@@ -25,15 +25,15 @@
 }  
 .research-featured {  // research featured item  
   background-position: center top;
-  background-image: linear-gradient(rgba($primary-color, 0.8), rgba($primary-color, 0.8)), url('/images/research/featured-research-background.jpg');
+  background-image: linear-gradient(rgba($primary-color, 0.8), rgba($primary-color, 0.8)), url('/images/features/featured-research-background.jpg');
 }
 .release-featured {   // press release featured item
   background-position: center center;
-  background-image: linear-gradient(rgba($primary-color, 0.8), rgba($primary-color, 0.8)), url('/images/media/featured-background.jpg');
+  background-image: linear-gradient(rgba($primary-color, 0.8), rgba($primary-color, 0.8)), url('/images/features/featured-media-background.jpg');
 }
 .investors-featured {   // investors featured item
   background-position: right top;
-  background-image: linear-gradient(rgba($primary-color, 0.8), rgba($primary-color, 0.8)), url('/images/about/investors_feature_bg.jpg');
+  background-image: linear-gradient(rgba($primary-color, 0.8), rgba($primary-color, 0.8)), url('/images/features/investors_feature_bg.jpg');
 }
 .recent-headlines-container {
   min-height: 40rem;

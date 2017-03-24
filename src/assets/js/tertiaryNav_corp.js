@@ -4,24 +4,17 @@
 function tertiaryNav(){
   var $navList = $('.tertiary-nav').find('ul:first') || '',
   $navLinks = $navList.find('a'),
-  p = location.pathname, h='';
-  if(p.match(/\/$/)){ p = p + "index.html"}
+  p = location.pathname.match(/\/$/) ? location.pathname + "index.html" : location.pathname, 
+  h='';
   $navList.find('ul').addClass('hide');
   $navLinks.each(function(){
-    h = $(this).attr('href');
-    if(h.match(/\/$/)){ h = h + "index.html"}
-    if(h === p) { 
-     $(this).addClass('active')
-     if($(this).closest('.hide').length){
-      $(this).closest('.hide').removeClass('hide');     
-      if($(this).closest('ul').closest('li').length) {
-        $(this).closest('ul').closest('li').addClass('data-expanded');
-      }
-     }
-     else if($(this).siblings('.hide').length) {       
-      $(this).siblings('.hide').removeClass('hide');      
-      $(this).closest('li').addClass('data-expanded');
-     }
+    h = $(this).attr('href').match(/\/$/) ? $(this).attr('href') + "index.html" : $(this).attr('href');
+    if(h !== p) { return; }
+    $(this).addClass('active').parents('li').addClass('parent');  
+    $(this).closest('ul.hide').removeClass('hide').parent('li').addClass('data-expanded');
+    if($(this).siblings('ul').length) {       
+      $(this).siblings('ul').removeClass('hide');
+      $(this).closest('li').addClass('data-expanded'); 
     }
   });
 }

@@ -31,13 +31,13 @@ layout: corporate-2col
             <input type="text" id="fname" name="fname" pattern="no-unsafe" required maxlength="100">          
           </div>
           <div class="column medium-6 large-12 xlarge-6">
-            <label for="lname" class="icon-required"> Last Name </label>
+            <label for="lname" class="icon-required">Last Name</label>
             <input type="text" id="lname" name="lname" required maxlength="100">            
           </div>
         </div>
         <div class="row">
           <div class="column medium-6 large-12 xlarge-6">
-            <label for="strt_nbr" class="icon-required"> House Number </label>
+            <label for="strt_nbr" class="icon-required">House Number</label>
             <input type="text" id="strt_nbr" name="strt_nbr" aria-describedby="strt_nbrHelpText" required  maxlength="20" pattern="alpha-num-hyphen">  
             <p class="help-text" id="strt_nbrHelpText">Please use only numbers, letters and hyphens.</p>   
           </div>
@@ -49,7 +49,7 @@ layout: corporate-2col
         </div>
         <div class="row">
           <div class="column medium-6 large-12 xlarge-6">
-            <label for="strt_name" class="icon-required"> Street Name  </label>
+            <label for="strt_name" class="icon-required">Street Name</label>
             <input type="text" id="strt_name" aria-describedby="strtHelpText" name="strt_name" maxlength="30" required pattern="alpha-num-hyphen">
             <p class="help-text" id="strtHelpText">Do not include "Street", "Avenue", "Drive", etc.</p>  
           </div>
@@ -65,11 +65,11 @@ layout: corporate-2col
             </select>     
           </div>
         </div>
-        <label for="addr_city" class="icon-required"> City </label>
+        <label for="addr_city" class="icon-required">City</label>
         <input type="text" id="addr_city" name="addr_city" required maxlength="50">
         <div class="row">
           <div class="medium-6 large-12 xlarge-6 column">
-            <label for="addr_state" class="icon-required"> State </label>
+            <label for="addr_state" class="icon-required"> State</label>
             <select name="addr_state" id="addr_state" required>
               <option value="">Pick a State</option>
               <option value="AL">AL</option>
@@ -129,12 +129,12 @@ layout: corporate-2col
             </select>               
           </div>
           <div class="medium-6 large-12 xlarge-6 column">
-            <label for="addr_zip" class="icon-required">Five Digit Zip Code   (Format: #####) </label>
+            <label for="addr_zip" class="icon-required">Five Digit Zip Code (Format: #####)</label>
             <input type="text" pattern="number" id="addr_zip" name="addr_zip" required maxlength="5" minlength="5" placeholder="#####">
           </div>
         </div>
 
-        <label for="ssn" class="icon-required"> Last 4 Digits of Social Security Number (Format: ####) </label>
+        <label for="ssn" class="icon-required">Last 4 Digits of Social Security Number (Format: ####)</label>
         <input type="password" id="ssn" name="ssn" required pattern="ssn" minlength="4" maxlength="4" placeholder="####">
         <p class="help-text" id="passwordHelpText"><a data-open="modalSS" aria-controls="modalSS">Why do we ask for Social Security?</a></p>      
 
@@ -165,9 +165,8 @@ layout: corporate-2col
         
         <fieldset>
           <legend class="icon-required"> Verification</legend>
-          <input type="checkbox" id="Verify_0" name="Verify" value="Yes" required><label for="Verify_0">  
-        By checking this box and clicking on the button below to submit this information, I confirm I am the owner of this property or have the consent of the owner to lookup this information.    
-        </label>
+          <input type="checkbox" id="Verify_0" name="Verify" value="Yes" required>
+          <label for="Verify_0" class="multiline">By checking this box and clicking on the button below to submit this information, I confirm I am the owner of this property or have the consent of the owner to lookup this information.</label>
         </fieldset>
         <div class="row">
           <div class="medium-3 column">

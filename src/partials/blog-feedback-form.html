@@ -1,38 +1,53 @@
 <ul class="accordion-pointer" data-accordion role="tablist">
   <li class="accordion-item" data-accordion-item>
-    <a class="accordion-title" href="#blog-feedback" id="blog-feedback-heading" aria-controls="blog-feedback" role="tab">Feedback</a>
-    <div class="accordion-content" data-tab-content id="blog-feedback" aria-labelledby="blog-feedback-heading" role="tabpanel">
+    <a class="accordion-title" href="#feedback-container" id="feedback-heading" aria-controls="feedback-container" role="tab">Feedback</a>
+    <div class="accordion-content" data-tab-content id="feedback-container" aria-labelledby="feedback-heading" role="tabpanel">
       <div class="row">
         <div class="column">
-          <form class="form" action="#" name="blog_feedback" id="blog_feedback">
-            <div class="row">
-              <div class="column">
-                <label for="FullName">Name</label>
-                <input id="FullName" name="FullName" type="text" maxlength="50" value="">
-              </div>
+          <p>Have a comment or question about this post? Email us to let us know what's on your mind.</p>
+          <form novalidate class="form" data-abide action="#" name="feedback-form" id="feedback-form">
+            <label for="FullName">Name</label>
+            <input id="FullName" name="FullName" type="text" maxlength="50" value="">
+            <label for="Email">E-mail Address</label>
+            <input type="email" maxlength="60" value="" id="Email" name="Email" required="required" placeholder="name@company.com">
+            <label for="Feedback">Feedback</label>
+            <textarea name="Feedback" id="Feedback" cols="40" rows="5" required="required" maxlength="250"></textarea>
+            <p class="help-text" id="passwordHelpText">Maximum of 250 characters.</p>
+            <p><button class="button primary" type="submit">Submit</button></p>
+            <div class="callout small background-red" data-closable  data-abide-error style="display: none;">
+              <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <p class="enlarge">Please review your form for errors</p>
             </div>
-            <div class="row">
-              <div class="column">
-                <label for="Email">E-mail Address</label>
-                <input type="email" maxlength="60" value="" id="Email" name="Email" required="required" placeholder="name@company.com">
-              </div>
+            <div class="callout background-green" data-closable  data-abide-success style="display: none;">
+              <button class="close-button" aria-label="Dismiss Success" type="button" data-close>
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <p class="enlarge">Your feedback has been received by Freddie Mac's Public Relations Department. While we may not be able to reply to you individually, your feedback helps us shape future blog posts for our subscribers. We hope to incorporate answers to commonly asked questions in future posts. Thank you for your feedback.</p>
             </div>  
-            <div class="row">
-              <div class="column">
-                <label for="Feedback">Feedback</label>
-                <textarea name="Feedback" id="Feedback" cols="40" rows="5" required="required" maxlength="250"></textarea>
-                <p class="help-text" id="passwordHelpText">Maximum of 250 characters.</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="column">
-                <button class="button primary" type="submit">Submit</button>
-              </div>
-            </div>
           </form>
         </div>
       </div>
     </div>
   </li>
 </ul>
-
+<script type="text/javascript"> 
+function feedbackSetup() {
+$('#feedback-form')
+  .on('forminvalid.zf.abide', function (ev,frm) {
+    var invalid_fields = $(this).find('[data-invalid]');
+  })
+  .on("submit", function(ev,frm) {
+    ev.preventDefault();
+    $(frm).find("div[data-abide-success]").attr("style", "display: none;");
+  })
+  .on("formvalid.zf.abide", function(ev,frm) {
+    $.post('/cgi-bin/email/email.cgi',frm.serialize());    
+    frm.foundation('resetForm');
+    $(frm).find("div[data-abide-success]").attr("style", "display: block;");
+    
+  });
+}
+window.onload = feedbackSetup;
+</script>

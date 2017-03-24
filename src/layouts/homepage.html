@@ -1,0 +1,42 @@
+﻿{{!-- This is the base layout for full width corporate pages --}}
+
+<!doctype html>
+<html class="no-js" lang="en" xmlns:fb="http://ogp.me/ns/fb#">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <meta name="author" content="" />
+    <meta name="abstract" content="" />
+    <meta name="keywords" content="" />
+    <meta name="date" scheme="RFC822" content="" />
+    <meta name="category" content="" />
+    <meta name="twitter:card" content="" />
+    <meta name="twitter:site" content="@FreddieMac" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta name="theme-color" content="#88BD45">
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="stylesheet" href="/ss/app_corp.css" />
+    <link rel="stylesheet" href="/ss/homepage.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet" />
+  </head>
+  <body>
+  <div class="show-for-print">FreddieMac.com</div>
+  <header id="header-nav" class="hide-for-print"> 
+
+    {{> ribbon}}
+    {{> nav-corp-primary}}
+    {{> nav-corp-secondary}}
+  </header>      
+    {{> body}}
+    {{> footer-corp}}
+    {{> footer-js-corp}}
+  </body>
+</html>

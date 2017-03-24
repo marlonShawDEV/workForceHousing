@@ -577,7 +577,6 @@ There are several text and typography styles to choose from, although some style
       <hr>
       <div class="callout">
         <h2 class="homepage-headline">This is homepage-headline</h2>
-        <h2 class="homepage-business-highlight-title">This is homepage-business-highlight-title</h2>
         <h3 class="finance-category">This is finance-category</h3>
         <h3 class="finance-research-title">This is finance-research-title</h3>
         <p class="finance-research-category">This is finance-research-category</p>
@@ -665,6 +664,7 @@ There are several text and typography styles to choose from, although some style
 The default text alignment for most containers is left.
 - You can change the text alignment of an element by adding `.text-left`, `.text-right`, or `.text-center` to an element.
 - You can shift alignment at different breakpoints by adding a breakpoint to the front of a text alignment class. For example, `.medium-text-center` will keep text left-aligned on the smallest screens, but switch to center-aligned on medium screens and larger.
+- There are also [vertical alignment classes](#data-tables) if you are needing to align table cells.
 
 ```html
 <p class="text-left"><strong>This text is left-aligned.</strong> </p>
@@ -2822,55 +2822,10 @@ Once you put it all together, here's what you get for vertical tabs!
 
 <p class="lead">Okay, they're not the sexiest things ever, but tables get the job done (for tabular data, of course). They have responsive modifiers to help solve some of your layout issues based on your tables needs.</p>
 
-## Hover State
+- You can change a cell's horizontal alignment (default is left-aligned) by adding `.text-right`, or `.text-center` to the `<td>` or `<th>`.
+- You can change a cell's vertical alignment (default is center-aligned) by adding `.vertical-top`, `.vertical-bottom`, or `.vertical-baseline` to the `<td>` or `<th>`.
+- You can add a hover state to each row by adding class `.hover` to the `<table>`. 
 
-Need to spiff up the table just a tad? Just add the class `.hover` to lightly darken the table rows on hover.
-
-```html
-<table class="hover">
-</table>
-```
-
-<table class="hover">
-  <thead>
-    <tr>
-      <th>Table Header</th>
-      <th>Table Header</th>
-      <th>Table Header</th>
-      <th>Table Header</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Row Header</th>
-      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
-      <td>Content Goes Here</td>
-      <td>Content Goes Here</td>
-    </tr>
-    <tr>
-      <th>Row Header</th>
-      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
-      <td>Content Goes Here</td>
-      <td>Content Goes Here</td>
-    </tr>
-    <tr>
-      <th>Row Header</th>
-      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
-      <td>Content Goes Here</td>
-      <td>Content Goes Here</td>
-    </tr>
-  </tbody>
-  <tfoot>
-    <tr>
-      <th>Footer Row Header</th>
-      <td>Footer content</td>
-      <td>Footer content</td>
-      <td>Footer content</td>
-    </tr>
-  </tfoot>
-</table>
-
----
 
 ## Stacking Tables
 
@@ -2882,11 +2837,11 @@ To swap the contents of the first cell between stacked and non-stacked displays,
 
 ```html_example
 <h3>Table that stacks and header does not display</h3>
-<table class="stack">
+<table class="stack hover">
   <thead>
     <tr>
       <th>Table Header</th>
-      <th>Table Header</th>
+      <th>Table Header (entire header is desktop only)</th>
       <th>Table Header</th>
       <th>Table Header</th>
     </tr>
@@ -2922,16 +2877,16 @@ To swap the contents of the first cell between stacked and non-stacked displays,
 </table>
 <br>
 <h3>Table that stacks and displays alternate header info</h3>
-<table class="stack show-header">
+<table class="stack hover show-header">
   <thead>
     <tr>
       <th>
-        <span class="show-for-large">Table Header (desktop only)</span>
+        <span class="show-for-large">Table Header (desktop only, alternate content at mobile)</span>
         <span class="hide-for-large">Alternate Header for Mobile Stacked Table</span>      
       </th>
-      <th>Table Header</th>
-      <th>Table Header</th>
-      <th>Table Header</th>
+      <th>Table Header (desktop only)</th>
+      <th>Table Header (desktop only)</th>
+      <th>Table Header (desktop only)</th>
     </tr>
   </thead>
   <tbody>

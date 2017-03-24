@@ -6,16 +6,18 @@ tfoot th:not([class]) {
 table tfoot td {
   font-weight: inherit;
 }
-table.stack.show-header {
-  thead {
-    display: block;
-    th {
-      display: none;
-    }
-    th:first-child {
+@include breakpoint(medium down){
+  table.stack.show-header {
+    thead {
       display: block;
-    }
-  }  
+      th {
+        display: none;
+      }
+      th:first-child {
+        display: block;
+      }
+    }  
+  }
 }
 .research-table {
   color: $fm-gray;
@@ -40,3 +42,7 @@ table.stack.show-header {
     }
   }
 }
+
+.vertical-top { vertical-align: top; } 
+.vertical-baseline {   vertical-align: baseline; } 
+.vertical-bottom {   vertical-align: bottom; }

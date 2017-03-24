@@ -28,6 +28,9 @@ PATHS:
     - "bower_components/foundation-sites/scss"
     - "bower_components/motion-ui/src"
   # Paths to JavaScript libraries, which are compined into one file
+  sasshome:
+    - "bower_components/foundation-sites/scss"
+  # Paths to JavaScript libraries, which are compined into one file
   javascriptcorp:
     # Libraries requried by Foundation
     #- "bower_components/jquery/dist/jquery.js"

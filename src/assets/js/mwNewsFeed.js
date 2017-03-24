@@ -14,28 +14,15 @@ function tidyBlurb(str){
 }
 function getMediaRoomData() {
   var mwReq = $.getJSON("//freddiemac.mwnewsroom.com/scripts/json/js?max=10", function(data) {
-      console.log( "success" );
       useMediaRoomData(data);      
-  }).done(function() {
-    console.log( "done" );
   }).fail(function( jqxhr, textStatus, error ) {
     var err = textStatus + ", " + error;
-    console.log( "Request Failed: " + err );
-  }).always(function() {
-    console.log( "complete" );
   });  
 }
   
 function getHomePageData() {
   var jqxhr = $.getJSON("//freddiemac.mwnewsroom.com/scripts/json/js?max=1", function(data) {
-      console.log( "success" );
       useHomePageData(data);
-  }).done(function() {
-    console.log( "done" );
-  }).fail(function() {
-    console.log( "error" );
-  }).always(function() {
-    console.log( "complete" );
   }); 
 }
 function useMediaRoomData(data) {

@@ -527,9 +527,12 @@ $progress-radius: $global-radius;
 // --------------------
 
 $responsive-embed-margin-bottom: rem-calc(16);
-$responsive-embed-ratios: (
+$responsive-embed-ratios: (  
   default: 4 by 3,
   widescreen: 16 by 9,
+  square: 1 by 1,
+  portrait:1 by 2,
+  tall: 1 by 3
 );
 
 // 29. Reveal

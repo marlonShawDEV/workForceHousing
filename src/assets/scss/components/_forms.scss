@@ -68,6 +68,17 @@ fieldset {
         border-color: $fm-green;
       }
     }
+    + label.multiline {
+      margin-left: 1.75em;
+      margin-right: 0;
+      @include clearfix;
+      &::before {
+        margin-left: -1.75em;
+        margin-top: 2px;
+        display: block; 
+        float: left;
+      }
+    }
   }
   [type="radio"]:checked + label::before {
       background: $fm-green;

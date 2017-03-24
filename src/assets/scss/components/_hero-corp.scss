@@ -4,14 +4,14 @@ $hero-blend-color: $primary-color;
 // only apply color and backgrounds on screen, not in print
 @media screen {
   .hero {
-    background: transparent url('/images/homepage/hero-mobile.jpg') no-repeat top center fixed;
+    background: transparent url('/images/hero/hero-mobile.jpg') no-repeat top center fixed;
     position: relative;
     color: $white;    
     padding: 30px 0;
     background-size: cover;
     @include breakpoint(medium) {
       padding: 100px 0 55px;
-      background-image: url('/images/homepage/hero-desktop.jpg');
+      background-image: url('/images/hero/hero-desktop.jpg');
     }
     @include breakpoint(xlarge) {
       padding: 150px 0 85px;

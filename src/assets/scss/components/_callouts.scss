@@ -23,9 +23,6 @@
       }
     }   
   }
-  &.rounded {
-    border-radius: 0.35rem;
-  }
   > :first-child:not(.button) {
     margin-top: 0;
   }
@@ -60,3 +57,12 @@
   }
 }
 
+.rounded {
+  border-radius: 0.35rem;
+  &.large {
+    border-radius: 0.6rem;
+  }
+  &.xlarge {
+    border-radius: 0.65rem;
+  }
+}
