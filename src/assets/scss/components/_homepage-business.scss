@@ -1,14 +1,16 @@
 .subnav-edge { display: none; }
-.homepage-business-lines {
-  background: $light-gray;  
-  padding: $global-padding 0;
-	@include breakpoint(large) {
-		padding: $global-padding * 2.375 0;
-	}  
-  box-shadow: 0px 10px 9px 0px rgba(0,0,0,0.15);
-  // needed to allow the box shadow to appear above the next section
-  z-index: 600;
-  position: relative;
+@media screen {
+  .homepage-business-lines {
+    background: $light-gray;  
+    padding: $global-padding 0;
+    @include breakpoint(large) {
+      padding: $global-padding * 2.375 0;
+    }  
+    box-shadow: 0px 10px 9px 0px rgba(0,0,0,0.15);
+    // needed to allow the box shadow to appear above the next section
+    z-index: 600;
+    position: relative;
+  }
 }
 .homepage-business-lines-heading {
   font-size: rem-calc(24px);

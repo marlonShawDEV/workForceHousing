@@ -5,21 +5,23 @@
     padding: 6.25rem 0 0;
   }
 }
-.background-quote::before {
-  content: "\201D";
-  font-size: rem-calc(128);
-  font-size: calc(128px +  160 * (100vw)/1180); 
-  opacity: 0.2;
-  display: block;
-  float: right;
-  width: 0.45em;
-  position: relative;
-  top: 0.25em;
-  padding-left: 0.05em;
-  font-family: 'Lucida Sans', 'Lucida Sans Typewriter', 'Lucida Console', monospace;
-  line-height: 0.25em;
-  @include breakpoint(xlarge) {
-    font-size: rem-calc(288)
+@media screen {
+  .background-quote::before {
+    content: "\201D";
+    font-size: rem-calc(128);
+    font-size: calc(128px +  160 * (100vw)/1180); 
+    opacity: 0.2;
+    display: block;
+    float: right;
+    width: 0.45em;
+    position: relative;
+    top: 0.25em;
+    padding-left: 0.05em;
+    font-family: 'Lucida Sans', 'Lucida Sans Typewriter', 'Lucida Console', monospace;
+    line-height: 0.25em;
+    @include breakpoint(xlarge) {
+      font-size: rem-calc(288)
+    }
   }
 }
 .testimonials-quote {
@@ -52,12 +54,12 @@
   }  
   img {
     transform: rotate(3deg);
-    @include breakpoint(medium) {
+    @media screen and #{breakpoint(medium)} {
       transform: rotate(4deg);
       transform-origin: center bottom;
       padding-right: 1rem;
     }  
-    @include breakpoint(large) {
+    @media screen and #{breakpoint(large)} {
       transform: rotate(4.8deg);
       transform-origin: 50% 20%;
       padding-left: $gutter/2;
@@ -147,7 +149,10 @@
     width: rem-calc(170 + $gutter);
     padding: 0;
     float: none;
-  }  
+  }
+  @media print {
+    display: none;
+  }
 }
 .testimonials-thumbnail {
   @include breakpoint(medium down) {

@@ -157,125 +157,125 @@
     @return svg-url('#{$icon}');
 }
 
-
-.icon-chevron-right-circle-blue {
-  position: relative;
-  &::before {
-    content: '';
-    position: absolute;
-    width: 1em;
-    height: 1em;
-    top: 0.1em;
-    left: -2em;
-    background: transparent icon(chevron-right-circle, $primary-color, 32px, 32px, 0, 0, 64, 64, $primary-color, 1) no-repeat center center;
-    background-size: cover;
-  }
-}
-
-.icon-chevron-right-circle {
-  position: relative;
-  &::before {
-    content: '';
-    position: absolute;
-    width: 1.1875em;
-    height: 1.1875em;
-    top: $gutter * 2;
-    left: 1.25em;
-    background: transparent icon(chevron-right-circle, $white, 1.1875em, 1.1875em, 0, 0, 64, 64, $white, 1) no-repeat center center;
-    background-size: cover;
-    font-size: calc(22px +  10 * (100vw - 320px) / 1180); 
-    @include breakpoint(xxlarge) { font-size: rem-calc(32); }
-  }
-}
-
-.icon-video-play {
-  position: relative;  
-  > :first-child {
-    padding-top: rem-calc(54);
-    padding-top: calc(54px +  42 * (100vw - 320px) / 1180);
-    @include breakpoint(xxlarge) { padding-top: rem-calc(96); }
-  }
-  &::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    padding: 0.444em;
-    width: 1.85em;
-    height: 1.85em;
-    display: inline-block;
-    background: rgba($white, 0.2) icon(chevron-right-circle, $white, 1em, 1em, 0, 0, 64, 64, $white, 1) no-repeat center center;
-    background-size: 1em 1em;    
-    font-size: calc(32px +  22 * (100vw - 320px) / 1180); 
-    @include breakpoint(xxlarge) { font-size: rem-calc(54); }
-  }
-}
-.icon-chevron-right {
-  position: relative;
-  color: $anchor-color !important;
-  padding-right: 1.6rem;
-  &::after {
-    content: ' ';  
-    background: transparent icon(chevron-right, $anchor-color, 1em, 1em) no-repeat right center;    
-    width: 1em;
-    height: 1em;
-    display: inline-block;
+@media screen {
+  .icon-chevron-right-circle-blue {
     position: relative;
-    bottom: -0.125em;
-    margin-left: 0.4rem;
-    margin-right: -1.6rem;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 1em;
+      height: 1em;
+      top: 0.1em;
+      left: -2em;
+      background: transparent icon(chevron-right-circle, $primary-color, 32px, 32px, 0, 0, 64, 64, $primary-color, 1) no-repeat center center;
+      background-size: cover;
+    }
   }
-  &:hover,
-  &:focus {
-      color: $anchor-color-hover !important;
-      &::after {
-        background: transparent icon(chevron-right, $anchor-color-hover, 1em, 1em) no-repeat right center;   
-      }
-  }
-}
-.icon-download {
-  position: relative;
-  color: inherit;
-  padding-right: 2.25rem;
-  &::after {
-    content: '';
-    display: inline-block; 
+
+  .icon-chevron-right-circle {
     position: relative;
-    width: 1.625rem;
-    height: 1.625rem;
-    margin-left: 0.5rem;
-    bottom: -0.375rem;
-    margin-right: -2.25rem;
-    background: transparent icon(download, 'none', 24px, 24px, 0, 0, 24, 24, '#777', 1) no-repeat center center;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 1.1875em;
+      height: 1.1875em;
+      top: $gutter * 2;
+      left: 1.25em;
+      background: transparent icon(chevron-right-circle, $white, 1.1875em, 1.1875em, 0, 0, 64, 64, $white, 1) no-repeat center center;
+      background-size: cover;
+      font-size: calc(22px +  10 * (100vw - 320px) / 1180); 
+      @include breakpoint(xxlarge) { font-size: rem-calc(32); }
+    }
   }
-}
-.icon-required {
-  position: relative;
-  &::after {
-    content: '*';
-    display: inline-block; 
+
+  .icon-video-play {
+    position: relative;  
+    > :first-child {
+      padding-top: rem-calc(54);
+      padding-top: calc(54px +  42 * (100vw - 320px) / 1180);
+      @include breakpoint(xxlarge) { padding-top: rem-calc(96); }
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: 0.444em;
+      width: 1.85em;
+      height: 1.85em;
+      display: inline-block;
+      background: rgba($white, 0.2) icon(chevron-right-circle, $white, 1em, 1em, 0, 0, 64, 64, $white, 1) no-repeat center center;
+      background-size: 1em 1em;    
+      font-size: calc(32px +  22 * (100vw - 320px) / 1180); 
+      @include breakpoint(xxlarge) { font-size: rem-calc(54); }
+    }
+  }
+  .icon-chevron-right {
     position: relative;
-    width: 0.75em;
-    height: 1em;
-    color: $fm-red;
-    text-align: right;
-  }
-}
-.icon {
-  &.secondary { 
-    color: $fm-orange;  
+    color: $anchor-color !important;
+    padding-right: 1.6rem;
+    &::after {
+      content: ' ';  
+      background: transparent icon(chevron-right, $anchor-color, 1em, 1em) no-repeat right center;    
+      width: 1em;
+      height: 1em;
+      display: inline-block;
+      position: relative;
+      bottom: -0.125em;
+      margin-left: 0.4rem;
+      margin-right: -1.6rem;
+    }
     &:hover,
     &:focus {
-      color: scale-color($fm-orange, $lightness: -10%);   
-    }
-    &:active {
-      color: scale-color($fm-orange, $lightness: -20%);
+        color: $anchor-color-hover !important;
+        &::after {
+          background: transparent icon(chevron-right, $anchor-color-hover, 1em, 1em) no-repeat right center;   
+        }
     }
   }
-  svg { 
-    fill: currentColor;
-    height: 1em;
-    width: 1em;
+  .icon-download {
+    position: relative;
+    color: inherit;
+    padding-right: 2.25rem;
+    &::after {
+      content: '';
+      display: inline-block; 
+      position: relative;
+      width: 1.625rem;
+      height: 1.625rem;
+      margin-left: 0.5rem;
+      bottom: -0.375rem;
+      margin-right: -2.25rem;
+      background: transparent icon(download, 'none', 24px, 24px, 0, 0, 24, 24, '#777', 1) no-repeat center center;
+    }
+  }
+  .icon-required {
+    position: relative;
+    &::after {
+      content: '*';
+      display: inline-block; 
+      position: relative;
+      width: 0.75em;
+      height: 1em;
+      color: $fm-red;
+      text-align: right;
+    }
+  }
+  .icon {
+    &.secondary { 
+      color: $fm-orange;  
+      &:hover,
+      &:focus {
+        color: scale-color($fm-orange, $lightness: -10%);   
+      }
+      &:active {
+        color: scale-color($fm-orange, $lightness: -20%);
+      }
+    }
+    svg { 
+      fill: currentColor;
+      height: 1em;
+      width: 1em;
+    }
   }
 }
-

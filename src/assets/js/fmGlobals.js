@@ -102,6 +102,8 @@ if (FM.form.pathElements[0] !== "search") {
 	});
 } 
 $(function(){  
-  console.log("loaded omni"); 
-  s_somni.t(); 
+  if (FM.form.useOmni()){
+    console.log("loaded omni"); 
+    s_somni.t(); 
+  }
 });

@@ -22,3 +22,6 @@
     padding-top: 2.5rem;
   }
 }
+@media print {
+  .homepage-headlines .column { width: 100%; }
+}

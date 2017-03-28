@@ -33,7 +33,7 @@
 }
 .footer-promo-cta { 
   width: 100%;      
-  @include breakpoint(large) {              
+  @media screen and #{breakpoint(large)} {              
     @include vertical-center;
     right: 0;
     text-align: right;
@@ -52,5 +52,11 @@
     display: table-cell;
     vertical-align: middle;
     margin: 0.25rem 0;
+  }
+}
+
+@media print {
+  .footer-promo .column { 
+    width: 100%;
   }
 }

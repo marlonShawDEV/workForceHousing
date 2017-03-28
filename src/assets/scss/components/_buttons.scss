@@ -182,3 +182,12 @@ p {
   padding-left: 0.25em;
   font-size: 0.9em;
 }
+
+@media print {
+  .button {
+    border-width: 0px !important;
+  }
+  .filemarker {
+    display: none;
+  }
+}

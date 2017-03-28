@@ -18,7 +18,10 @@
       }
       @media screen and (min-width: -zf-bp-to-em(map-get($breakpoints, large) + 150px)) and (max-width: -zf-bp-to-em(map-get($breakpoints, xlarge))) {
         width: rem-calc(290 + 2); 
-      }   
+      } 
+      @media print {
+        width: rem-calc(110 + 2);
+      } 
     }
     .callout.large & {
       .media-object-section:nth-child(2n){ 
@@ -34,11 +37,30 @@
         // from large + 150px to xlarge
         @media screen and (min-width: -zf-bp-to-em(map-get($breakpoints, large) + 150px)) and (max-width: -zf-bp-to-em(map-get($breakpoints, xlarge))) {
           width: rem-calc(290 + 2 - ($callout-padding * 1.5)); 
-        }      
+        }   
+        @media print {
+          width: rem-calc(110 + 2);
+        }    
       }
     }
   }
-  &.image1-leads-blurb3 {  // thus image is inside of nth-child(2n+1)  
+  
+  &.image1-leads-blurb3 {  // thus image is inside of nth-child(2n+1) 
+    .media-object-section:nth-child(2n+1){      
+      img:not(.full) { 
+        width: rem-calc(210 + 2);    
+      }
+    }  
+    .callout.large & {
+      .media-object-section:nth-child(2n+1){ 
+        @include breakpoint (medium) { width: rem-calc(210 + 2 - ($callout-padding * 1.5)); } 
+      }
+    }
+    @media print {
+      .media-object-section:nth-child(2n+1) { width: rem-calc(110 + 2); }
+    } 
+  } 
+  &.image1-leads-blurb3:not(.stack-for-small) {  
     .media-object-section:nth-child(2n+1){
       width: rem-calc(210 + 2);
       @include breakpoint(small only) {
@@ -47,13 +69,8 @@
       @media screen and (max-width: 400px) {  //less than small
         width: rem-calc(110 + 2);
       }   
-    }
-    .callout.large & {
-      .media-object-section:nth-child(2n+1){ 
-        @include breakpoint (medium) { width: rem-calc(210 + 2 - ($callout-padding * 1.5)); } 
-      }
-    }
-  } 
+    } 
+  }
   .sidebar & {  
     &.image1-leads-blurb2 {
       .media-object-section:nth-child(2n+1) {
@@ -66,7 +83,10 @@
         @media screen and (min-width: -zf-bp-to-em(map-get($breakpoints, large))) and (max-width: -zf-bp-to-em(map-get($breakpoints, large) + 80px)) {
           width: rem-calc(98 + 2 + $gutter);
         }
-      }       
+        @media print {
+          width: 50px; 
+        } 
+      }
     }
   }
 }

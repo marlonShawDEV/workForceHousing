@@ -121,10 +121,25 @@
 
 .grid-2col-blog .two-column-row > aside {
   padding-top: 0;
-  @media print and #{breakpoint(large)} {
+  @media print {
     padding-top: 300px; // counteract the negative top margin inserted by css when printing
   }
 }
+
+
+@media print {
+  .two-column-layout,
+  .two-column-row,
+  .grid-2col-blog,
+  main,
+  aside  {
+    width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+  
+  }
+}
+
 .center-horizontally {
   @include horizontal-center;
 }

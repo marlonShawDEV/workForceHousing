@@ -1,6 +1,6 @@
 // faking the look of a 1px bottom border so that the active tab can just overlay without having to adjust all the other measurements.
 $ribbon-edge: adjust-hue(saturate(darken($offwhite, 7.3%), 51%), 77deg);
-$ribbon-background-desktop: linear-gradient(to bottom, $offwhite 0%, $offwhite 97.25%, $ribbon-edge 100%);
+$ribbon-background-desktop: linear-gradient(to bottom, $offwhite 0%, $offwhite 97.25%, $ribbon-edge 97.25%, $ribbon-edge 100%);
 
 #ribbon {display: none;}
 

@@ -1182,6 +1182,8 @@ Pair the callout with the [close button](#close-button) component and `data-clos
 Apply the `.overlay` class to the `<a>` that wraps an image to style the image with a blue overlay on hover and focus. 
 Refer to <a href="#modals">modals</a> for additional options if you are launching a modal from the link.
 
+If you need to force an overlay to always be full width, add class `.block` to the `<a>` and class `.full` to the image.
+
 ```html
 <a class="overlay" href="#"><img alt="photo of David Brickman" src="/images/exec_david_brickman.jpg"></a>
 ```
@@ -2067,6 +2069,103 @@ All items in the tertiary nav (including the heading) should be linked.  Add cla
 
 
 
+# Embedded Objects
+
+To make sure embedded content maintains its aspect ratio as the width of the screen changes, wrap the `iframe`, `object`, `embed`, or `video` in a container with the `.responsive-embed` class.  Add the attribute `allowfullscreen` to the iframe.
+
+For Youtube videos, make sure you include `?rel=0&amp;wmode=transparent` at the end of the url to disable the related videos and to prevent conflict with overlays/drop downs on out site.
+
+```html_example
+<div class="row">
+  <div class="columns medium-6 end">
+    <div class="responsive-embed">
+      <iframe width="420" height="315" src="https://www.youtube.com/embed/mM5_T-F1Yn4?rel=0&amp;wmode=transparent" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+```
+
+---
+
+## Aspect Ratios
+
+Add ratio classes to change the aspect ratio of responsive embeds. The default ratio is 4:3. The `.widescreen` class will change the container's aspect ratio to 16:9.
+
+Currently, these ratio classes exist:
+
+- default: 4 by 3
+- widescreen: 16 by 9
+- square: 1 by 1
+- portrait:1 by 2
+- tall: 1 by 3
+
+
+```html_example
+<div class="row">
+  <div class="columns medium-7 end">
+    <div class="responsive-embed widescreen">
+      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/tCg9285bJnY?rel=0&amp;wmode=transparent" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+```
+
+---
+
+## Iframes
+
+Any iframe wider than 300px will need to be responsive as well, otherwise the content can run off the screen on mobile, or may overlap the sidebar at in between sizes.  
+
+```html_example
+<div class="row">
+  <div class="columns medium-7 end">
+    <div class="responsive-embed">
+      <iframe src="http://investor.shareholder.com/fre/stocklookup.cfm" allowfullscreen="" frameborder="0" height="450" width="600"></iframe>
+    </div> 
+  </div>
+</div>
+```
+
+
+
+# Tableau Visuals
+
+Tableau visuals are often too large to be interacted with on a phone, or they require too much data/memory for some phones to be able to fully build out an embedded visual.  For tableau, the best choice is to only load the visual when the container is wide enough to hold it.
+
+- Create a custom container for the visual.
+- Include a static image of the visual (if you look at the `static_image` value in the embed function, you can get the url of an image of the visual) that is linked to the Tableau visual.
+- Add class `.overflow-horizontal` to the custom container to allow a horizontal scrollbar to display when the screen is narrower than the visual.  
+- Add custom javascript that tests that container's width before loading the visual.  <br>In this example, I've set the visual to display above 650 pixels, even though the visual is wider. There is a sideways scroll, but it is still usable because all the interactions are toe the left side.  Use your own judgement on when a visual is at a usable width.
+- You can omit the `<noscript>` portion of the embed code. Since it is being inserted via javscript, it will never display.
+
+```html_example
+<div class="row jut">
+  <div class="columns large-10 end">
+    <div id="tableau-viz" class="overflow-horizontal">
+      <p>
+        <a href="http://public.tableau.com/views/InvestmentIndex2016Q3/Dashboard1?:embed=n&:loadOrderID=0&:display_count=yes">
+          <img alt="Dashboard 1" src="https://public.tableau.com/static/images/In/InvestmentIndex2016Q3/Dashboard1/1_rss.png" />
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+ 
+<script type="text/javascript"> 
+// -----  this script would go in the custom js field ----- //
+function loadVis() {
+  if ($('#tableau-viz').width() > 650) { 
+    $.getScript("https://public.tableau.com/javascripts/api/viz_v1.js");
+    $("#tableau-viz").html("<div class='tableauPlaceholder' id='viz1482244640310' style='position: relative'><object class='tableauViz' width='854' height='1169' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='InvestmentIndex2016Q3&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;In&#47;InvestmentIndex2016Q3&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>");
+  }
+}
+
+window.onload = loadVis;
+</script>
+```
+
+
+
 #  Sidebar Modules
 
 <p class="lead">There are a variety of modules available for use in a side bar, when you are using the Two Column Layout.</p>
@@ -2924,7 +3023,7 @@ To swap the contents of the first cell between stacked and non-stacked displays,
 
 ## Scrolling Table
 
-Got a lot of tubular tabular data? Add a wrapper element with the class `.table-scroll` around your table to enable horizontal scrolling.
+Got a lot of tubular tabular data? Add a wrapper element with the class `.table-scroll` or `.overflow-horizontal` around your table to enable horizontal scrolling.
 
 <strong>Note:</strong> You can combine scrolling with stacking, but you may want to avoid doing so on tables with complex row and column spanning.
 
@@ -3705,6 +3804,84 @@ To disable the animation, set the `data-use-m-u-i` attribute to `false`.  To sto
 
 ```html
 <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit data-use-m-u-i="false" data-auto-play="false">
+</div>
+```
+
+
+
+
+# Media Objects
+
+A media object is a container with the class `.media-object`, and two sections with the class `.media-object-section`.  To control the width of the image in the media object, there are additional classes of `.image1-leads-blurb3`, `.image1-leads-blurb2`, and `blurb3-leads-image2`.
+
+There is an additional class `stacked-for-small` that overrides the ratio between the columns.
+
+## Image leading Blurb 1:3 ratio
+
+In the example, the first is not stacked for small sizes, but the second version is.  These are often used inside a list container, where each media object is an `<li>` in a longer list.
+
+```html_example
+<div class="media-object image1-leads-blurb3">
+  <div class="media-object-section text-center">  
+    <a class="overlay" href="#">
+      <img src="/images/about/AutismRibbon.jpg" alt="Autism Ribbon" />
+    </a>
+  </div>
+  <div class="media-object-section">
+    <h3 class="article-headline"><a href="#">Autism as an Asset in the Workplace</a></h3>
+    <p class="enlarge">Reaching into an untapped source of talent.</p>
+  </div>
+</div>
+<div class="media-object image1-leads-blurb3 stack-for-small">
+  <div class="media-object-section text-center">  
+    <a class="overlay" href="#">
+      <img src="/images/about/AutismRibbon.jpg" alt="Autism Ribbon" />
+    </a>
+  </div>
+  <div class="media-object-section">
+    <h3 class="article-headline"><a href="#">Autism as an Asset in the Workplace</a></h3>
+    <p class="enlarge">Reaching into an untapped source of talent.</p>
+  </div>
+</div>
+```
+
+---
+
+##  Blurb leading Image 3:2 ratio; Stacked for Small
+
+These are often used inside a list container, where each media object is an `<li>` in a longer list.
+
+```html_example
+<div class="media-object blurb3-leads-image2 stack-for-small">
+  <div class="media-object-section">
+    <div class="article-date-lg"><strong><span class="uppercase">Outlook</span></strong> | July 19, 2016</div>
+    <h3 class="article-headline"><a href="#">Fun After Fifty </a></h3>
+    <p>According to the common wisdom, Baby Boomers — like Peter Pan — refuse to grow older. Instead of retiring, they launch second — and third — careers. Instead of moving to seniors-oriented communities, they “age-in-place” or, even better, move into the heart of a walkable city. Human interest stories in the Sunday papers claim that 70 is the new 40 and 60 still has bad skin and trouble talking to girls. These clichés make great copy, but how accurate are they?  <a href="#">More</a></p>
+  </div>
+  <div class="media-object-section">
+    <a class="overlay" href="#"><img src="/images/research/201607-insight-exhibit_09_and_10_sm.jpg"></a>
+  </div>
+</li>
+```
+
+---
+
+## Image leading Blurb 1:2 ratio
+
+These are often used inside a sidebar list to contain its width, where each media object is an `<li>` in a longer list.   
+
+```html_example
+<div class="media-object image1-leads-blurb2">
+  <div class="media-object-section">  
+    <a class="overlay" href="#">
+      <img src="/images/blog/post-1.jpg" alt="image description" />
+    </a>
+  </div>
+  <div class="media-object-section">
+    <div class="article-date">May 9, 2016</div>
+    <h3 class="sidebar-headline"><a href="#">Homework and a Home Purchase</a></h3>
+    <div class="article-category">Homeownership</div>
+  </div>
 </div>
 ```
 

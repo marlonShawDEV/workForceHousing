@@ -8,7 +8,7 @@ function orbBulletMarkup(container){
   return orbBullets;
 }
 function preOrbit() {  
-  $(".orbit").each(function() {
+  $(".orbit").each(function(x) {
     var orb = $(this),
     orbContainer = $(this).children(".orbit-container:first"),
     btnPrev = $("<button />",{
@@ -25,7 +25,7 @@ function preOrbit() {
       "class": "orbit-bullets",
       "html" : orbBulletMarkup(orbContainer)
     });
-    if (orbContainer.find('.orbit-slide'),length>1){
+    if (orbContainer.find('.orbit-slide').length>1){   
       orbContainer.after(orbBulletContainer);
       orbContainer.find('.orbit-slide').eq(0).addClass('is-active'); 
       orb.find('nav').find('button').eq(0).addClass('is-active');
@@ -39,4 +39,6 @@ function preOrbit() {
   });
 }
 
-if($(".orbit").length){preOrbit();}
+if($(".orbit").length){ 
+  preOrbit();
+}

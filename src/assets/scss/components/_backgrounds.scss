@@ -1,17 +1,19 @@
-@each $name, $color in $orbit-palette {    
-  .background-#{$name} {  
-    color: $white;    
-    background-color: $color; 
+@media screen {
+  @each $name, $color in $orbit-palette {    
+    .background-#{$name} {  
+      color: $white;    
+      background-color: $color; 
+    }
+  } 
+  .background-concrete {
+    background-color: $light-gray;
   }
-} 
-.background-concrete {
-  background-color: $light-gray;
-}
-.background-white {
-  background: $white;
-  color: $body-font-color; // solves for when this is inside another background
-}
-.background-offwhite {
-  background: $offwhite;   // is this needed?
-  color: $body-font-color; 
+  .background-white {
+    background: $white;
+    color: $body-font-color; // solves for when this is inside another background
+  }
+  .background-offwhite {
+    background: $offwhite;   // is this needed?
+    color: $body-font-color; 
+  }
 }

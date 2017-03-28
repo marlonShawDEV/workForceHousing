@@ -1,7 +1,9 @@
 /// card
 .card {
   &:not(.no-border) {
-    border-bottom-width: 3px;
+    @media screen {
+      border-bottom-width: 3px;
+    }
   }  
   text-align: left;
 	.overlay,
@@ -10,12 +12,14 @@
 		width: 100%;
 	}
   .avatar {
-    color: $fm-gray;
-    position: absolute;
-    left: $gutter;
-    right: $gutter;
-    bottom: $gutter;
-    margin: 0;
+    @media screen {
+      color: $fm-gray;
+      position: absolute;
+      left: $gutter;
+      right: $gutter;
+      bottom: $gutter;
+      margin: 0;    
+    }
   } 
 }
 .card-section { 
@@ -30,34 +34,38 @@
   position: relative;
 }
 .perspectives {
-  .card { 
-    margin-top: $gutter * 2.5;
-    margin-bottom: 0;
-  }
-  .card-divider {
-    padding-bottom:  $gutter * 5.3;
-    border-bottom: $gutter solid $white;
+  @media screen {
+    .card { 
+      margin-top: $gutter * 2.5;
+      margin-bottom: 0;
+    }
+    .card-divider {
+      padding-bottom:  $gutter * 5.3;
+      border-bottom: $gutter solid $white;
+    }
   }
 } 
 
 .pre-footer-promo.background-concrete {
-  .card { 
-    margin-top: $gutter/2;
-    position: relative;
-    &::after {
-      content: " ";
-      display: block;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: $gutter;
-      background-color: $light-gray;
+  @media screen {
+    .card { 
+      margin-top: $gutter/2;
+      position: relative;
+      &::after {
+        content: " ";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: $gutter;
+        background-color: $light-gray;
+      }
     }
   }
 }
 
-@include breakpoint(medium) {
+@media screen and #{breakpoint(medium)} {
   &.medium-up-4 {
     @for $i from 1 through 4 {
       > div:nth-child(4n+#{$i}) > .card {
@@ -80,7 +88,7 @@
     }  
   }
 }
-@include breakpoint(large) {
+@media screen and #{breakpoint(large)} {
   &.large-up-4 {
     @for $i from 1 through 4 {
       > div:nth-child(4n+#{$i}) > .card {
@@ -104,7 +112,7 @@
   }
 }
 
-@include breakpoint(xlarge) {
+@media screen and #{breakpoint(xlarge)} {
   &.xlarge-up-4 {
     @for $i from 1 through 4 {
       > div:nth-child(4n+#{$i}) > .card {

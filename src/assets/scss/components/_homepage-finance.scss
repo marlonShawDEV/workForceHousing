@@ -24,7 +24,7 @@ $finance-bg3: desaturate(adjust-hue($pear,-0.21154), 1.69492);
 .finance-research-content {
   background: $finance-bg1;
   padding: $gutter $gutter * 1.5;
-  @include breakpoint(medium) {
+  @media screen and #{breakpoint(medium)} {
     padding: $gutter * 1.5;
   }
 	@include breakpoint(xlarge) {
@@ -42,7 +42,7 @@ $finance-bg3: desaturate(adjust-hue($pear,-0.21154), 1.69492);
 .finance-pmms-content {   
   background: $finance-bg2;
   padding: $gutter $gutter * 1.5;
-  @include breakpoint(medium) {
+  @media screen and #{breakpoint(medium)} {
     padding: $gutter * 1.5;
   }
 	@include breakpoint(xlarge) {
@@ -54,21 +54,24 @@ $finance-bg3: desaturate(adjust-hue($pear,-0.21154), 1.69492);
     background: linear-gradient(to right, color-shift($finance-bg2, $finance-bg3, 5, 2) 0%,color-shift($finance-bg2, $finance-bg3, 5, 2) 33.333%, color-shift($finance-bg2, $finance-bg3, 5, 3) 33.333%, color-shift($finance-bg2, $finance-bg3, 5, 3) 66.6667%, color-shift($finance-bg2, $finance-bg3, 5, 4) 66.6667%, color-shift($finance-bg2, $finance-bg3, 5, 4) 100%);	
   }
   .text-center {  
-    @include breakpoint(large) {
+    @media screen and #{breakpoint(large)} {
       @include absolute-center;
       .stat-sm {
         min-width: 6.25em;
       }
     }
   }
+  > .column {
+    position: relative;   
+    padding-top: $gutter * 1.75;
+    padding-bottom: $gutter * 1.75;
+  }  
   @for $i from 1 through 3 {
-    > .column {
-      position: relative;   
-      padding-top: $gutter * 1.75;
-      padding-bottom: $gutter * 1.75;
-    }
     > .column:nth-child(#{$i}) {
       background: color-shift($finance-bg2, $finance-bg3, 5, $i+1);
     }
   } 
+}
+@media print {
+  .finance-pmms .medium-12 { width: 100%; }
 }
