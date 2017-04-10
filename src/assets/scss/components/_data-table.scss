@@ -1,4 +1,20 @@
-// default th tag alignment
+// fix for table hover striping affecting header rows
+table.hover:not(.unstriped) {
+  thead {
+    tr:nth-of-type(n):hover    {
+      background-color: $table-head-row-hover;
+    }
+  }
+}
+
+table {
+  border-collapse:separate;  
+  border-spacing: 0; 
+  color: $table-foot-font-color; 
+  border-bottom: 2px solid scale-color($fm-blue, $lightness: 60%);
+  td, th {  border: 1px solid $white; }
+}
+
 tbody th:not([class]),
 tfoot th:not([class]) {
   text-align: #{$global-left};
@@ -22,18 +38,19 @@ table tfoot td {
 .research-table {
   color: $fm-gray;
   border-collapse:collapse;  
+  border-bottom-width: 0;
   th, 
   td {
     padding: 0.5rem 0.4rem;
   }
   thead {
     background: $primary-color;
+    
   }
   strong {
     font-weight: $global-weight-black;
   }
   tbody {
-    border-width: 0px;
     tr:nth-child(n) {  
       background: #fff;
       td {

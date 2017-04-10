@@ -461,6 +461,7 @@ There are several text and typography styles to choose from, although some style
         <h3 class="section-subtitle">This is class section-subtitle</h3> 
         <h2 class="page-subtitle">This is class page subtitle (also used for subtitles in <a href="#page-title">page titles</a>)</h2>
         <p class="flex-up">This is class flex-up</p>
+        <p>This is class <span class="accent-orange">accent-orange</span>, which can be combined with other classes to change weight or size, such as <span class="enlarge accent-orange weight-medium">accent-orange</span> which combines the accent with <code>.enlarge</code> and <code>.weight-medium</code>.</p>
       </div>
     </div>
   </li>
@@ -564,8 +565,9 @@ There are several text and typography styles to choose from, although some style
           <p class="grid-block-text">This is grid-block-text.</p>
           <p class="grid-block-text-small">This is grid-block-text-small</p>
           <p class="stat-lg">This is stat-lg</p>
-          <p class="stat-med">This is stat-med</p>
           <p class="stat">This is stat</p>
+          <p class="stat-med">This is stat-med</p>
+          <p class="stat-sm">This is stat-sm</p>
         </div>
       </div>
     </div>
@@ -648,9 +650,12 @@ There are several text and typography styles to choose from, although some style
       <div class="callout"> 
         <h5>Text Size</h5>
         <p>Use these styles you want to adjust the font size of an item up or down.</p>
-        <p>This is <span class="enlarge">class enlarge -- it bumps up the size</span> of the current text.</p>
-        <p>This is <span class="reduce">class reduce -- it bumps down the size</span> of the current text.</p>
-        <p>This is <span class="stat">class stat</span> it bumps up the size of a single data point to highlight it.</p>  
+        <p>This is <span class="enlarge">class enlarge -- it bumps up the size</span> of the current text.  This size increase is <strong>proportional</strong> -- it will be 112.5% of the element's text size.</p>
+        <p>This is <span class="reduce">class reduce -- it bumps down the size</span> of the current text.  This size decrease is <strong>proportional</strong> -- it will be 87.5% of the element's text size.</p>
+        <p>This is <span class="stat-sm">class stat-sm</span> it calls out a single data point to highlight it.</p>     
+        <p>This is <span class="stat-med">class stat-med</span> it calls out a single data point to highlight it.</p>     
+        <p>This is <span class="stat">class stat</span> it calls out a single data point to highlight it.</p>
+        <p>This is <span class="stat-lg">class stat-lg</span> it calls out a single data point to highlight it.</p>         
       </div>
     </div>
   </li>
@@ -1568,10 +1573,10 @@ Landing Pages are those pages that are linked from the primary navigation. Add o
 
 ## Blog Detail Heros
 
-Use this hero on Blog article pages.  Elements inside the hero include the date, the title, and the blog category.
+Use this hero on Blog article pages.  Elements inside the hero include the date, the title, and the blog category.  The class name (and thus the background image) should change based on the blog category chosen. (this example is homeownership)
 
 ```html
-<div class="hero-blended blog-detail-hero">
+<div class="hero-blended blog-detail-hero-homeownership">
   <div class="row">
 	  <div class="column">
 		  <div class="hero-blended-content">
@@ -2237,7 +2242,7 @@ If a sidebar contains multiple calls-to-action, set one button to be the `.prima
 
 ## Sidebar RSS
 
-For divided list items, include these classes on the `ul` tag: `.no-bullet` (to suppress list bullets), `.lead` (to increase the font size), `.list-divided-white` (to add white dividers between items), and `.list-rss` (to add the RSS icons).
+For divided list items, include these classes on the `ul` tags: `.no-bullet`, `.flex-up`, `.list-divided-white`, and `.list-rss`.
 
 ```html_example
 <!-- the template will provide the outer containers, to create these in a templated page, begin with the <section> tag. -->
@@ -2247,10 +2252,22 @@ For divided list items, include these classes on the `ul` tag: `.no-bullet` (to 
         <section class="sidebar background-gray">
           <div class="row">
             <h2>RSS Feeds</h2>
-            <ul class="list-divided-white no-bullet lead list-rss">
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
+            <ul class="list-divided-white flex-up no-bullet">
+              <li>
+                <ul class="no-bullet list-rss">
+                  <li><a href="#">Housing and Economic Research</a></li>
+                  <li><a href="#">Perspectives</a></li>
+                </ul>
+              </li>
+              <li><span class="uppercase weight-bold">Freddie Mac Blog</span>
+                <ul class="no-bullet list-rss">
+                  <li><a href="#">All Posts</a></li>
+                  <li><a href="#">Homeownership</a></li>
+                  <li><a href="#">Rental Housing</a></li>
+                  <li><a href="#">Research &amp; Analysis</a></li>
+                  <li><a href="#">Notable</a></li>
+                </ul>            
+              </li>
             </ul>
           </div>
         </section>
@@ -2923,7 +2940,7 @@ Once you put it all together, here's what you get for vertical tabs!
 
 - You can change a cell's horizontal alignment (default is left-aligned) by adding `.text-right`, or `.text-center` to the `<td>` or `<th>`.
 - You can change a cell's vertical alignment (default is center-aligned) by adding `.vertical-top`, `.vertical-bottom`, or `.vertical-baseline` to the `<td>` or `<th>`.
-- You can add a hover state to each row by adding class `.hover` to the `<table>`. 
+- For tables with *more* than 3 rows, add class `.hover` to the `<table>` so that each table row highlights on mouseover. 
 
 
 ## Stacking Tables
@@ -2934,8 +2951,11 @@ By default, *all* header rows are hidden when the table stacks.  You can make th
 
 To swap the contents of the first cell between stacked and non-stacked displays, use class `.hide-for-large` for content that should only display when stacked and class `.show-for-large` for content that should only show when not stacked.
 
+---
+
+<h3>Table (with hover class) that stacks and header does not display</h3>
+
 ```html_example
-<h3>Table that stacks and header does not display</h3>
 <table class="stack hover">
   <thead>
     <tr>
@@ -2952,43 +2972,6 @@ To swap the contents of the first cell between stacked and non-stacked displays,
       <td>Content Goes Here</td>
       <td>Content Goes Here</td>
     </tr>
-    <tr>
-      <th>Row Header</th>
-      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
-      <td>Content Goes Here</td>
-      <td>Content Goes Here</td>
-    </tr>
-    <tr>
-      <th>Row Header</th>
-      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
-      <td>Content Goes Here</td>
-      <td>Content Goes Here</td>
-    </tr>
-  </tbody>
-  <tfoot>
-    <tr>
-      <th>Footer Row Header</th>
-      <td>Footer content</td>
-      <td>Footer content</td>
-      <td>Footer content</td>
-    </tr>
-  </tfoot>
-</table>
-<br>
-<h3>Table that stacks and displays alternate header info</h3>
-<table class="stack hover show-header">
-  <thead>
-    <tr>
-      <th>
-        <span class="show-for-large">Table Header (desktop only, alternate content at mobile)</span>
-        <span class="hide-for-large">Alternate Header for Mobile Stacked Table</span>      
-      </th>
-      <th>Table Header (desktop only)</th>
-      <th>Table Header (desktop only)</th>
-      <th>Table Header (desktop only)</th>
-    </tr>
-  </thead>
-  <tbody>
     <tr>
       <th>Row Header</th>
       <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
@@ -3021,22 +3004,78 @@ To swap the contents of the first cell between stacked and non-stacked displays,
 
 ---
 
+<h3>Table (with hover class) that stacks and displays alternate header info</h3>
+
+```html_example
+<table class="stack hover show-header">
+  <thead>
+    <tr>
+      <th>
+        <span class="show-for-large">Table Header (desktop only, alternate content at mobile)</span>
+        <span class="hide-for-large">Alternate Header for Mobile Stacked Table</span>      
+      </th>
+      <th>Table Header (desktop only)</th>
+      <th>Table Header (desktop only)</th>
+      <th>Table Header (desktop only)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Row Header</th>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+    <tr>
+      <th>Row Header</th>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+    <tr>
+      <th>Row Header</th>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+    <tr>
+      <th>Row Header</th>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th>Footer Row Header</th>
+      <td>Footer content</td>
+      <td>Footer content</td>
+      <td>Footer content</td>
+    </tr>
+  </tfoot>
+</table>
+```
+
+---
+
 ## Scrolling Table
 
 Got a lot of tubular tabular data? Add a wrapper element with the class `.table-scroll` or `.overflow-horizontal` around your table to enable horizontal scrolling.
 
 <strong>Note:</strong> You can combine scrolling with stacking, but you may want to avoid doing so on tables with complex row and column spanning.
 
-```html_example
+```html
 <div class="table-scroll">
-  <table>
+  <table class="hover">
   // table markup
   </table>
 </div>
 ```
 
+<h3>Table with hover inside a container that scrolls when the table doesn't fit</h3>
+
 <div class="table-scroll">
-  <table>
+  <table class="hover">
     <thead>
       <tr>
         <th>This is the description!</th>
@@ -3140,17 +3179,18 @@ Got a lot of tubular tabular data? Add a wrapper element with the class `.table-
 
 ## Unstriped Tables
 
-By default, table rows are striped. There's an `.unstriped` class to remove the stripes. 
+By default, table rows are striped. There's an `.unstriped` class to remove the stripes. It can be helpful for very small tables, where its undesirable to have only one row striped.
 
 ```html
-<table class="unstriped">
+<table class="unstriped hover">
 </table>
 ```
 
-<table class="unstriped">
+<h3>Table (with hover class) that is unstriped</h3>
+
+<table class="unstriped hover">
   <thead>
     <tr>
-      <th>Table Header</th>
       <th>Table Header</th>
       <th>Table Header</th>
       <th>Table Header</th>
@@ -3159,31 +3199,20 @@ By default, table rows are striped. There's an `.unstriped` class to remove the 
   <tbody>
     <tr>
       <th>Row Header</th>
-      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
       <td>Content Goes Here</td>
       <td>Content Goes Here</td>
     </tr>
     <tr>
       <th>Row Header</th>
-      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
       <td>Content Goes Here</td>
       <td>Content Goes Here</td>
     </tr>
     <tr>
       <th>Row Header</th>
-      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
       <td>Content Goes Here</td>
       <td>Content Goes Here</td>
     </tr>
   </tbody>
-  <tfoot>
-    <tr>
-      <th>Footer Row Header</th>
-      <td>Footer content</td>
-      <td>Footer content</td>
-      <td>Footer content</td>
-    </tr>
-  </tfoot>
 </table>
 
 ---

@@ -177,7 +177,7 @@ $anchor-text-decoration: none;
 $anchor-text-decoration-hover: none;
 $hr-width: $global-width;
 $hr-border: 1px solid darken($light-gray, 15%);
-$hr-margin: rem-calc(30) auto;
+$hr-margin: rem-calc(18) auto;
 $list-lineheight: $paragraph-lineheight;
 $list-margin-bottom: $paragraph-margin-bottom;
 $list-style-type: disc;
@@ -580,20 +580,20 @@ $switch-paddle-transition: all 0.25s ease-out;
 // 32. Table
 // ---------
 
-$table-background: scale-color($fm-blue, $lightness: 99%);
+$table-background: scale-color($fm-blue, $lightness: 90%);
 $table-color-scale: 4%;
-$table-border: 1px solid smart-scale($table-background, $table-color-scale);
+$table-border: 0px solid $table-background;  //stripes below thead, tfoot and tbody
 $table-padding: rem-calc(8 10 10);
-$table-hover-scale: 2%;
-$table-row-hover: darken($table-background, $table-hover-scale);
-$table-row-stripe-hover: darken($table-background, $table-color-scale + $table-hover-scale);
-$table-is-striped: true;
-$table-striped-background: smart-scale($table-background, $table-color-scale);
+$table-striped-background: scale-color($fm-blue, $lightness: 95%);
+$table-hover-scale: 3%;
 $table-stripe: even;
+$table-row-hover: saturate(darken($table-background, $table-hover-scale), 15%);
+$table-row-stripe-hover: saturate(darken($table-striped-background, $table-hover-scale), 15%);
+$table-is-striped: true;
 $table-head-background: $fm-blue;
-$table-head-row-hover: darken($table-head-background, $table-hover-scale);
-$table-foot-background: smart-scale($table-background, $table-color-scale * 2);
-$table-foot-row-hover: darken($table-foot-background, $table-hover-scale);
+$table-head-row-hover: darken($fm-blue, 4%);
+$table-foot-background: scale-color($fm-blue, $lightness: 85%);
+$table-foot-row-hover: saturate(scale-color($fm-blue, $lightness: 80%), 15%);
 $table-head-font-color: $white;
 $table-foot-font-color: $body-font-color;
 $show-header-for-stacked: false;

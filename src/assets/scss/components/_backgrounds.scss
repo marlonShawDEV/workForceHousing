@@ -3,7 +3,8 @@
     .background-#{$name} {  
       color: $white;    
       background-color: $color; 
-    }
+      .accent-orange { color: $white; } 
+    }    
   } 
   .background-concrete {
     background-color: $light-gray;

@@ -39,7 +39,7 @@ $tertiary-border-color: scale-color($light-gray, $lightness: -5%);
       }
       &.active {
         color: $fm-green;
-        font-weight: $global-weight-black;
+        font-weight: $global-weight-bold;
       }     
     }
     li + li::before {     
@@ -52,9 +52,6 @@ $tertiary-border-color: scale-color($light-gray, $lightness: -5%);
         text-transform: initial;
         padding: $tertiary-gap/2 $tertiary-gap;
         font-weight: $global-weight-light;
-        &.active {
-          font-weight: $global-weight-bold;
-        }      
       }
       li + li::before {      
         margin: 0 $tertiary-gap; 

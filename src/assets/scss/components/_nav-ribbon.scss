@@ -44,7 +44,7 @@ $ribbon-background-desktop: linear-gradient(to bottom, $offwhite 0%, $offwhite 9
   .menu:not(.nested) {
     display: table-cell;
     &:not(:last-child) { padding-right: 5px; }
-    background: $ribbon-background-desktop;
+    background: none;
     .active > a {
       color: $fm-green;
       font-weight: $global-weight-medium;

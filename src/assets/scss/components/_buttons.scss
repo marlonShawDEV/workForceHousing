@@ -103,7 +103,7 @@ $button-transition: background-color 0.25s ease-out, color 0.25s ease-out !defau
   padding: 0.85em 2.25em;
   margin: $button-margin;
   @include breakpoint (small only) {
-    margin-bottom: 0.5em;
+    margin-bottom: 0.25em;
   }
   // Sizes
   @each $size, $value in map-remove($button-sizes, default) {  

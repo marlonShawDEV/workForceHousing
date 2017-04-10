@@ -149,3 +149,19 @@
 .center-absolute {
   @include absolute-center;
 }
+
+body.none {
+   min-width: rem-calc(150);
+   background: none;
+}
+body.none .half-col p { margin-bottom: 0.2rem; }
+body.none .half-col label { font-weight: 400; font-size: 0.875rem; }
+@media screen and (max-width: 28em) {
+  body.none hr { margin: 4px auto;}
+}
+@media screen and (min-width: 28em) { 
+  body.none .half-col { float: left; width: 50%; }
+  body.none .half-col p { margin-bottom: 0.9rem; }
+  body.none .half-col label { font-weight: 500; font-size: 1rem; }
+  body.none [type="email"] { width: 50%; }
+}

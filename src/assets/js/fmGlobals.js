@@ -61,10 +61,11 @@ FM.form = {
     if(FM.form.pathElements[0]=='search'){
       a=QueryParam['as_q']||"";b=QueryParam['q']||"";q=a!==""?a.toLowerCase():b.toLowerCase();
       q=q.replace(/\+inmeta:.+/ig,'').replace(/"/g,"").replace(/\+|\s+/g, " ").replace(/^\s|\s$/g,"");
-      if($lk.closest('.keyMatchTable').length){loc='search|';desc='keymatch:';}
-      else if($lk.closest('.main-results').length){loc='search|';desc='result:';}
-      else if($lk.closest('.dn-attr').length){loc='search|';desc=$(this).closest('#attr_1').size()>0?'category:':'filetype:';}
-      if(q.length && $lk.closest('#content').length){desc=q+'|'+desc;trig='search'}
+      if($lk.closest('.keyMatchTable').length){locale='search|';desc='keymatch:';}
+      else if($lk.closest('.main-results').length){locale='search|';desc='result:';}
+      else if($lk.closest('.dn-attr').length){locale='search|';desc=$(this).closest('#attr_1').size()>0?'category:':'filetype:';}
+      else if ($lk.closest('.search-stat-bar').length){locale='search|';desc='stat-bar:';}
+      if(q.length && $lk.closest('.content-band').length){desc=q+'|'+desc;trig='search';}
     }
     txt=txt.slice(0,100);
     txt=txt.toLowerCase();

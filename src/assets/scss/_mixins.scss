@@ -31,7 +31,7 @@
   }
 }
 @mixin list-divided($color: darken($light-gray, 5%), $padding-base: $global-padding, $last-border: false){      
-  li { 
+  > li { 
     padding-bottom: $padding-base;
     border-bottom: 1px solid $color;     
     + li {
@@ -79,6 +79,7 @@
 // mixin to add rss feed icon to links in a list
 @mixin rss-list($color: $white) {
   position: relative;
+  margin-bottom: 1rem;
   &::before {
     content: " ";
     display: inline-block;

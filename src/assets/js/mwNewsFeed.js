@@ -12,17 +12,26 @@ function tidyBlurb(str){
   var tidy = str.replace('(OTCQB: FMCC)','').replace(/\s*MCLEAN,\s*VA--/,'').replace(/Marketwired\s*-\s*/,'').replace(/\s*\(.{3}\s+\d\d?, \d{4}\)\s*-?\s*/,'').replace(/@*\s*Freddie\s+Mac/g, ' Freddie Mac').replace(/@/g, '&reg;');
   return tidy;
 }
+
 function getMediaRoomData() {
-  var mwReq = $.getJSON("//freddiemac.mwnewsroom.com/scripts/json/js?max=10", function(data) {
+  var fallback = '<div class="callout large background-primary release-featured"><h2><a href="http://freddiemac.mwnewsroom.com/">Press Release Archive</a></h2><p class="lead">Read the latest news and information about Freddie Mac\'s business.</p><p><a class="button hollow" href="http://freddiemac.mwnewsroom.com/">Read More</a></p></div>',
+      mwReq = $.getJSON("//freddiemac.mwnewsroom.com/scripts/json/js?max=10", function(data) {
       useMediaRoomData(data);      
-  }).fail(function( jqxhr, textStatus, error ) {
-    var err = textStatus + ", " + error;
-  });  
+    }).fail(function( jqxhr, textStatus, error ) {
+      $('.recent-headlines-container:first').html(fallback);
+      var err = textStatus + ", " + error;
+      console.log(err);
+    });
 }
   
 function getHomePageData() {
-  var jqxhr = $.getJSON("//freddiemac.mwnewsroom.com/scripts/json/js?max=1", function(data) {
+  var fallback = '<h2 class="homepage-headline icon-chevron-right-circle-blue"><a href="http://freddiemac.mwnewsroom.com/">Press Releases</a></h2><p>Read the latest news and information about Freddie Mac\'s business.</p>',
+      jqxhr = $.getJSON("//freddiemac.mwnewsroom.com/scripts/json/js?max=1", function(data) {
       useHomePageData(data);
+  }).fail(function( jqxhr, textStatus, error ) {
+    $('.recent-headline-home:first').html(fallback);   
+    var err = textStatus + ", " + error;
+    console.log(err);
   }); 
 }
 function useMediaRoomData(data) {
