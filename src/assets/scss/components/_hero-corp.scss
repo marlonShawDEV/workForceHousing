@@ -4,25 +4,52 @@ $hero-blend-color: $primary-color;
 // only apply color and backgrounds on screen, not in print
 @media screen {
   .hero {
-    background: transparent url('/images/hero/hero-mobile.jpg') no-repeat top center fixed;
+    background: transparent url('/images/hero/homepage_hero2_mobile.jpg') no-repeat bottom left;
     position: relative;
     color: $white;    
-    padding: rem-calc(30px 0);
+    padding: rem-calc(25 0 20);
     background-size: cover;
     @include breakpoint(medium) {
-      padding: rem-calc(100px 0 55px);
-      background-image: url('/images/hero/hero-desktop.jpg');
+      padding: rem-calc(35 0 30);
+    }
+    @media (min-width: -zf-bp-to-em(map-get($breakpoints, medium) + 100px)) {
+      padding: rem-calc(40 0 40);
+    }
+    @media (min-width: -zf-bp-to-em(map-get($breakpoints, medium) + 200px)) {
+      padding: rem-calc(30 0 25);
+      background: transparent url('/images/hero/homepage_hero4.jpg') no-repeat center center;
+      background-size: cover;
+    }
+    @media (min-width: -zf-bp-to-em(map-get($breakpoints, large) - 100px)) {
+      padding: rem-calc(40 0);
     }
     @include breakpoint(xlarge) {
-      padding: rem-calc(150px 0 85px);
+      padding: rem-calc(60 0 50);
+    }
+    @include breakpoint(xxlarge) {
+      padding: rem-calc(100 0 80);
+    }
+    @media (min-width: -zf-bp-to-em(map-get($breakpoints, xxlarge) + 200px)) {      
+      padding: rem-calc(120 0 100);
+      background-position: top left;
     }
   }    
   .hero-text {
     text-align: center;
-    margin: 0 auto;
-    @include breakpoint(medium) {
-      max-width: rem-calc(627);   
+    @include breakpoint(large) {
+       margin-bottom: 3rem;
     } 
+    span { display: block;}  
+  }
+  .hero-title {
+    font-size: rem-calc(24);
+    margin: 1.5rem auto;
+    @media screen and (min-width: -zf-bp-to-em(map-get($breakpoints, medium) - 90px)) {
+      font-size: calc(26px +  22 * (100vw - 320px)/1180); 
+    } 
+    @include breakpoint(xxlarge) {
+      font-size: rem-calc(48);
+    }
   }
   .hero-edge {
     height: rem-calc(14);  

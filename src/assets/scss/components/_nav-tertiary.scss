@@ -49,7 +49,7 @@ $tertiary-border-color: scale-color($light-gray, $lightness: -5%);
     }
     ul {
       a {
-        text-transform: initial;
+        text-transform: none;
         padding: $tertiary-gap/2 $tertiary-gap;
         font-weight: $global-weight-light;
       }
