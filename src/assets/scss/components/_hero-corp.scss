@@ -7,48 +7,59 @@ $hero-blend-color: $primary-color;
     background: transparent url('/images/hero/homepage_hero2_mobile.jpg') no-repeat bottom left;
     position: relative;
     color: $white;    
-    padding: rem-calc(25 0 20);
+    padding: rem-calc(20 0 15);
     background-size: cover;
-    @include breakpoint(medium) {
-      padding: rem-calc(35 0 30);
-    }
-    @media (min-width: -zf-bp-to-em(map-get($breakpoints, medium) + 100px)) {
-      padding: rem-calc(40 0 40);
-    }
-    @media (min-width: -zf-bp-to-em(map-get($breakpoints, medium) + 200px)) {
+    @media (min-width: -zf-bp-to-em(map-get($breakpoints, medium) - 120px)) {
       padding: rem-calc(30 0 25);
+    }    
+    @media (min-width: -zf-bp-to-em(map-get($breakpoints, medium) + 120px)) {
+      padding: rem-calc(30 0 35);
+    }
+    @media (min-width: -zf-bp-to-em(map-get($breakpoints, medium) + 180px)) {
+      
       background: transparent url('/images/hero/homepage_hero4.jpg') no-repeat center center;
       background-size: cover;
     }
-    @media (min-width: -zf-bp-to-em(map-get($breakpoints, large) - 100px)) {
-      padding: rem-calc(40 0);
-    }
-    @include breakpoint(xlarge) {
-      padding: rem-calc(60 0 50);
+    @media (min-width: -zf-bp-to-em(map-get($breakpoints, large) - 155px)) {
+      padding: rem-calc(70 0 60);
     }
     @include breakpoint(xxlarge) {
-      padding: rem-calc(100 0 80);
+      padding: rem-calc(115 0 90);
     }
-    @media (min-width: -zf-bp-to-em(map-get($breakpoints, xxlarge) + 200px)) {      
-      padding: rem-calc(120 0 100);
+    @media (min-width: -zf-bp-to-em(map-get($breakpoints, xxlarge) + 180px)) {      
+      padding: rem-calc(145 0 110);
       background-position: top left;
     }
-  }    
+  }
+  .button.hero-button { 
+    @include breakpoint (small only) {
+       padding: 0.5em 1.25em;       
+    }
+  }
   .hero-text {
     text-align: center;
-    @include breakpoint(large) {
-       margin-bottom: 3rem;
+    @include breakpoint(medium) {
+      text-align: left;
+      padding-left: 34%;
     } 
-    span { display: block;}  
+    @media (min-width: -zf-bp-to-em(map-get($breakpoints, medium) + 330px)) {
+      span { display: block;}  
+    }
+    @include breakpoint(large) {
+      margin-bottom: 3rem;      
+    }
   }
   .hero-title {
     font-size: rem-calc(24);
-    margin: 1.5rem auto;
+    font-size: calc(24px +  28 * (100vw - 320px)/1180); 
+    line-height: 1.23;
+    @media (min-width: -zf-bp-to-em(map-get($breakpoints, medium) - 120px)) {
+      margin: 1.5rem 0;
+    }
     @media screen and (min-width: -zf-bp-to-em(map-get($breakpoints, medium) - 90px)) {
-      font-size: calc(26px +  22 * (100vw - 320px)/1180); 
     } 
     @include breakpoint(xxlarge) {
-      font-size: rem-calc(48);
+      font-size: rem-calc(52);
     }
   }
   .hero-edge {

@@ -36,9 +36,11 @@ ol:not([class]) > li {
 .list-divided {
   @include list-divided(darken($light-gray, 5%), $gutter, false);
 }
-
 .list-divided-white {
   @include list-divided(rgba($white, 0.3), $global-padding/2, false);
+}
+.list-divided-gray {
+  @include list-divided(darken($light-gray, 5%), $global-padding/2, false);
 }
 .clipping-block {   // divides blog and news archive entries  
   @include list-divided(darken($light-gray, 5%), $gutter * 1.5, true);

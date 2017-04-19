@@ -72,11 +72,18 @@ function resetPages(done) {
 }
 
 // Generate a style guide from the Markdown content and HTML template in styleguide/
+
+function styleGuideGrid(done) {
+  return sherpa('src/styleguide/index_grid.md', {
+    output: PATHS.dist + '/styleguide/styleguide_grid.html',
+    template: 'src/styleguide/template_grid.html'
+  }, done); 
+}
 function styleGuide(done) {
   sherpa('src/styleguide/index_corp.md', {
     output: PATHS.dist + '/styleguide/styleguide_corp.html',
     template: 'src/styleguide/template_corp.html'
-  }, done); 
+  }, styleGuideGrid(done) ); 
 }
 function styleGuideSF(done) {
   sherpa('src/styleguide/index_sf.md', {

@@ -15,7 +15,16 @@
       padding: 0;
     } 
   }
-  
+  .card {
+    border-bottom-width: 0px;
+  }
+  .large-up-1 {
+    div:last-child > .card {
+      @include breakpoint(large) {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 .sidebar-txt {
   max-width: 83%;

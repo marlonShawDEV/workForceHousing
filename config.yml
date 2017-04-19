@@ -51,8 +51,8 @@ PATHS:
     # "bower_components/foundation-sites/js/foundation.magellan.js"
     # "bower_components/foundation-sites/js/foundation.offcanvas.js"
     - "bower_components/foundation-sites/js/foundation.orbit.js"
-    - "bower_components/foundation-sites/js/foundation.responsiveMenu.js"
-    - "bower_components/foundation-sites/js/foundation.responsiveToggle.js"
+    # "bower_components/foundation-sites/js/foundation.responsiveMenu.js"
+    # "bower_components/foundation-sites/js/foundation.responsiveToggle.js"
     - "bower_components/foundation-sites/js/foundation.reveal.js"
     # "bower_components/foundation-sites/js/foundation.slider.js"
     # "bower_components/foundation-sites/js/foundation.sticky.js"
@@ -72,7 +72,6 @@ PATHS:
     - "src/assets/js/tertiaryNav_corp.js"   
     - "src/assets/js/appCorp.js"
     #uncomment for prod if desired 
-    # "src/assets/js/jQueryUrlShortener.js"  
     - "src/assets/js/shareWidget.js"
     # Paths to JavaScript libraries, which are compined into one file
   javascriptsf:

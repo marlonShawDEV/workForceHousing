@@ -19,3 +19,14 @@
     margin-top: 2rem; 
 	}
 }
+
+
+.center-horizontally {
+  @include horizontal-center;
+}
+.center-vertically {
+  @include vertical-center;
+}  
+.center-absolute {
+  @include absolute-center;
+}

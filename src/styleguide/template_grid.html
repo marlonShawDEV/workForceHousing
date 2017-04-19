@@ -32,29 +32,38 @@
     #code-content {
       padding-top: 1rem;
     }
-    
-    .two-column-layout > .two-column-row {
-      padding-left: 0;
-      padding-right: 0;      
-    }
+    .row.display {
+      background: #eee;
+      font-size: 11px;
+      margin-bottom: 10px;
+      line-height: 2rem;
+      border: solid 1px #c6c6c6;
+      margin-left: 0 !important;
+      margin-right: 0 !important; }
+      .row.display .column:nth-child(2), .row.display .column.small-centered, .row.display .column.large-centered {
+        background: #e1e1e1; }
+      .row.display .column.color-end {
+        background: #d5d5d5; }
 
-    /* This styles the color blocks used in the color documentation. */
-    .color-block {
-      border-radius: 2px;
-      display: block;
-      padding: 8px 8px 6px;
-      color: #333;
-      text-transform: uppercase;
-      border: 1px solid #ddd;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
+    .row.display-end {
+      background: #fff;
+      font-size: 11px;
+      margin-bottom: 10px;
+      line-height: 2rem;
+      border: solid 1px #c6c6c6;
+      margin-left: 0 !important;
+      margin-right: 0 !important; }
+      .row.display-end .column {
+        background: #e1e1e1;
+        border-left: 1px solid #c6c6c6; }
+        .row.display-end .column.color-end {
+          background: #d5d5d5; }
+
+    .callout.secondary {
+        background-color: #eaeaea;
+        color: #0a0a0a;
+        border: 1px solid rgba(10, 10, 10, 0.25);
     }
-      .color-block span {
-        display: block;
-        width: 100%;
-        height: 100px;
-        margin-bottom: 0.42857rem;
-      }
     
     /* This styles code blocks used for examples. */
     .ss-code {
@@ -77,17 +86,11 @@
     .ss-code-live::after {
       clear: both;
     }  
-    .docs-code-toggle {
-        display: inline-block;
-        margin-bottom: 1rem;
-        font-weight: bold; 
-        color: #2199e8;
-    }
     code { 
       font-size: 0.875rem;
       opacity: 0.6;
     }
-    
+
     @media screen and (max-width: 35em) {
       #top h1 { float: left; font-size: 20px; }
       #top select { font-size: 14px; }
@@ -109,7 +112,7 @@
             {{/each}}
           </select>
         </form>
-        <h1>Corporate <span class="show-for-medium">Style Guide</span></h1>
+        <h1>The Grid</h1>
       </div>
     </div>
     
@@ -129,30 +132,15 @@
     </div> 
     
     <script src="/js/vendor/jquery-2.1.4.min.js"> </script>
-    <script src="/js/app_corp.js"></script>
+    <script src="/js/app_corp.js"></script>   
     <script>
     // suppress the code view blocks by default and hide them under a toggle.
-    var $ks = $('#code-content');
-    if ($ks.length) {
-      $ks.find('.ss-code').each(function() {
-        var $code = $(this).find('pre');
-
-        $link = $('<a class="docs-code-toggle" href="javascript:void(0);">&lt; Toggle Code Display &gt;</a>');
-        $link.on('click', function() {
-          $code.slideToggle(250);
-        });
-        $link.insertBefore(this);
-        $code.hide(0);
-      });
-    }
     $("#ssnav").change(function() { 
       var x = $(this).val(); 
       location.hash = '';
       location.hash = x;
     }); 
     </script>
-    
-    
 
   </body>
 </html>

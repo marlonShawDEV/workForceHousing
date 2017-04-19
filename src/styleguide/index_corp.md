@@ -1,15 +1,21 @@
 ﻿
-# The Templates
+# The Framework
 
-The corporate site has 2 primary templates: One-column content, and two-column content.
+<p class="lead">The framework behind our codebase is Foundation.</p>
 
-The templates are build using the Foundation grid -- which uses two key elements: rows and columns. Rows create a max-width and contain the columns, and columns create the final structure. Everything on your page that you don't give a specific structural style to should be within a row or column.
+The Foundation grid uses two key elements: rows and columns. Start by adding an element with a class of `.row`. This will create a horizontal block to contain vertical columns. Then add elements with a `.column` class within that row. Specify the widths of each column with the `.small-#`, `.medium-#`, and `.large-#` classes.
+
+<a class="button tertiary" href="styleguide_grid.html">Learn more about rows and columns</a> 
 
 ---
 
-## One Column Content
+## The Templates
 
-When you are creating a new page using the responsive template, the markup for the 1 column band is automatically wrapped around your content.
+The corporate site has 2 primary templates in Teamsite: Page and Article.  The page article supports both 1- and 2-column layouts and the article template supports only a 2-column layout.
+
+### One Column Content
+
+When you are creating a 1-column page using the responsive page template, the markup to create the 1-column band is automatically inserted by the TeamSite template.
 
 ```html
 <div class="content-band">
@@ -19,56 +25,11 @@ When you are creating a new page using the responsive template, the markup for t
 </div>
 ```
 
-<div class="row display">
-  <div class="column">  
-    <h3>Main Content Area</h3>
-    <p>This column can be further divided by using cards or inserting <a href="#rows-and-columns">rows of columns</a> (max of 12 columns per row).</p>    
-    <div class="row">
-      <div class="column small-1">
-        <div class="background-white callout small"></div>
-      </div>
-      <div class="column small-1">
-        <div class="background-white callout small"></div>
-      </div>
-      <div class="column small-1">
-        <div class="background-white callout small"></div>
-      </div>
-      <div class="column small-1">
-        <div class="background-white callout small"></div>
-      </div>
-      <div class="column small-1">
-        <div class="background-white callout small"></div>
-      </div>
-      <div class="column small-1">
-        <div class="background-white callout small"></div>
-      </div>
-      <div class="column small-1">
-        <div class="background-white callout small"></div>
-      </div>
-      <div class="column small-1">
-        <div class="background-white callout small"></div>
-      </div>
-      <div class="column small-1">
-        <div class="background-white callout small"></div>
-      </div>
-      <div class="column small-1">
-        <div class="background-white callout small"></div>
-      </div>
-      <div class="column small-1">
-        <div class="background-white callout small"></div>
-      </div>
-      <div class="column small-1">
-        <div class="background-white callout small"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
 ---
 
-## Two Column Content
+### Two Column Content
 
-When you are creating a new page using the responsive template, the markup for the 2 column band is automatically wrapped around your content.
+When you are creating a 2-column page using either the page or article templates, the markup to create the 2-column band is automatically inserted by the TeamSite template.
 
 ```html
 <div class="two-column-layout">
@@ -83,189 +44,6 @@ When you are creating a new page using the responsive template, the markup for t
 </div>
 ```
 
-<div class="two-column-layout">
-  <div class="row two-column-row display">
-    <main class="column">
-      <h3>Main Content Area</h3>
-      <p>This column can be further divided by using cards or inserting <a href="#rows-and-columns">rows of columns</a> (max of 12 columns per row).</p>   
-      <div class="row">
-        <div class="column small-1">
-          <div class="background-white callout small"></div>
-        </div>
-        <div class="column small-1">
-          <div class="background-white callout small"></div>
-        </div>
-        <div class="column small-1">
-          <div class="background-white callout small"></div>
-        </div>
-        <div class="column small-1">
-          <div class="background-white callout small"></div>
-        </div>
-        <div class="column small-1">
-          <div class="background-white callout small"></div>
-        </div>
-        <div class="column small-1">
-          <div class="background-white callout small"></div>
-        </div>
-        <div class="column small-1">
-          <div class="background-white callout small"></div>
-        </div>
-        <div class="column small-1">
-          <div class="background-white callout small"></div>
-        </div>
-        <div class="column small-1">
-          <div class="background-white callout small"></div>
-        </div>
-        <div class="column small-1">
-          <div class="background-white callout small"></div>
-        </div>
-        <div class="column small-1">
-          <div class="background-white callout small"></div>
-        </div>
-        <div class="column small-1">
-          <div class="background-white callout small"></div>
-        </div>
-      </div>
-    </main>
-    <aside class="column">
-      <section class="sidebar">
-        <div class="row">
-          <div class="column">
-            <h3>Aside Content Area</h3>
-            <p>This column can be further divided by using cards or inserting <a href="#rows-and-columns">rows of columns</a>.</p>
-            <div class="row">
-              <div class="small-3 column">
-                <div class="background-white callout small"></div>
-              </div>
-              <div class="small-3 column">
-                <div class="background-white callout small"></div>
-              </div>
-              <div class="column small-3">
-                <div class="background-white callout small"></div>
-              </div>
-              <div class="column small-3">
-                <div class="background-white callout small"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </aside>
-  </div>
-</div>
-
-
-
-# Rows and Columns
-
-When you need to divide your content into columns, start by adding an element with a class of `.row`. This will create a horizontal block to contain vertical columns. Then add elements with a `.column` class within that row. Specify the widths of each column with the `.small-#`, `.medium-#`, `.large-#`, and `.xlarge-#`.  Larger widths will inherit from smallers ones, so you only need to add an extra class if you are changing the layout at a larger breapoint.
-
-Move blocks up to 11 columns to the right by using classes like `.large-offset-1` and `.small-offset-3`. 
-
-In order to work around browsers' different rounding behaviors, Foundation will float the last column in a row to the right so the edge aligns. If your row doesn't have a count that adds up to 12 columns, you can tag the last column with a class of `.end` in order to override that behavior.
-
-Center your columns by adding a class of `.small-centered` to your column. Large will inherit small centering by default, but you can also center solely on large by applying a `.large-centered` class. To uncenter on large screens, use `.large-uncentered`.
-
-If you are looking for more advanced examples, refer to <a href="http://foundation.zurb.com/sites/docs/grid.html">Foundation Docs</a>.
-
-```html_example
-<div class="row">
-  <div class="small-2 large-4 column">
-    <p>small-2 large-4 column content</p>
-  </div>
-  <div class="small-4 large-4 column">
-    <p>small-4 large-4 column content</p>
-  </div>
-  <div class="small-6 large-4 column">
-    <p>small-6 large-4 column content</p>
-  </div>
-</div>
-<div class="row">
-  <div class="large-3 column">
-    <p>large-3 column content</p>
-  </div>
-  <div class="large-6 column">
-    <p>large-6 column content</p>
-  </div>
-  <div class="large-3 column">
-    <p>large-3 column content</p>
-  </div>
-</div>
-<div class="row">
-  <div class="small-6 large-2 column">
-    <p>small-6 large-2 column content</p>
-  </div>
-  <div class="small-6 large-8 column">
-    <p>small-6 large-8 column content</p>
-  </div>
-  <div class="small-12 large-2 column">
-    <p>small-12 large-2 column content</p>
-  </div>
-</div>
-<div class="row">
-  <div class="small-3 column">
-    <p>small-3 column content</p>
-  </div>
-  <div class="small-9 column">
-    <p>small-9 column content</p>
-  </div>
-</div>
-<div class="row">
-  <div class="large-4 column">
-    <p>large-4 column content</p>
-  </div>
-  <div class="large-8 column">
-    <p>large-8 column content</p>
-  </div>
-</div>
-<div class="row">
-  <div class="small-6 large-5 column">
-    <p>small-6 large-5 column content</p>
-  </div>
-  <div class="small-6 large-7 column">
-    <p>small-6 large-7 column content</p>
-  </div>
-</div>
-<div class="row">
-  <div class="large-6 column">
-    <p>large-6 column content</p>
-  </div>
-  <div class="large-6 column">
-    <p>large-6 column content</p>
-  </div>
-</div>
-```
-
----
-
-## Block Grids
-
-Block grids are a shorthand way to create equally-sized columns. Add a class of the format `.[size]-up-[n]` to change the number of columns within the row. Adding the `.column-block` class to columns will apply a bottom margin equal to the width of gutters.
-
-Block grids are used for most of the card displays.
-
-```html_example
-<div class="row small-up-2 medium-up-3 large-up-4">
-  <div class="column column-block">
-    <img src="//placehold.it/600x600" class="thumbnail" alt="">
-  </div>
-  <div class="column column-block">
-    <img src="//placehold.it/600x600" class="thumbnail" alt="">
-  </div>
-  <div class="column column-block">
-    <img src="//placehold.it/600x600" class="thumbnail" alt="">
-  </div>
-  <div class="column column-block">
-    <img src="//placehold.it/600x600" class="thumbnail" alt="">
-  </div>
-  <div class="column column-block">
-    <img src="//placehold.it/600x600" class="thumbnail" alt="">
-  </div>
-  <div class="column column-block">
-    <img src="//placehold.it/600x600" class="thumbnail" alt="">
-  </div>
-</div>
-```
 
 
 

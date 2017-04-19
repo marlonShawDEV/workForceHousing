@@ -1,0 +1,35 @@
+when generating for VFE - do these steps
+
+comment out these items in the app.scss
+  @include foundation-accordion-menu;
+  @include foundation-title-bar;
+  @include foundation-top-bar;
+  @include foundation-visibility-classes;
+  @include motion-ui-transitions;
+  @include motion-ui-animations;
+  @import 'components/page-layout';
+  @import 'components/hero-corp';
+  @import 'components/page-title';
+  @import 'components/nav-ribbon';
+  @import 'components/nav-footer';
+  @import 'components/nav-primary-corp';
+  @import 'components/nav-secondary-corp';
+  @import 'components/nav-search-mobile';
+  @import 'components/nav-tertiary';
+  @import 'components/share-widget';
+  @import 'components/footer-promos';
+  
+npm start (not a production build)
+
+save generated css as responsive.css
+
+delete source mapping string at end of file
+
+delete large chunks of @media print {
+
+Add tehse overrides to the end:
+    .tabs-panel {  display: block; }
+    .accordion-pointer .accordion-content, 
+    .accordion-faq .accordion-content,
+    .accordion-content {display: block; }
+    .reveal {display: block; }

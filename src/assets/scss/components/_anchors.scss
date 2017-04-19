@@ -66,7 +66,8 @@ a:hover {
     content: "";
     position: absolute;
     display: block;
-    background: transparent url("/images/control-play.3.3.1-x2.png") no-repeat top left / contain;
+   // background: transparent url("/images/control-play.3.3.1-x2.png") no-repeat top left / contain;
+    background: transparent icon(play, 'none', 28px, 28px, 0, 0, 200, 200, '#fff', '14') no-repeat top left / contain;
     width: 1.35em;
     height: 1.35em;
     left: rem-calc(9);

@@ -140,16 +140,6 @@
   }
 }
 
-.center-horizontally {
-  @include horizontal-center;
-}
-.center-vertically {
-  @include vertical-center;
-}  
-.center-absolute {
-  @include absolute-center;
-}
-
 body.none {
    min-width: rem-calc(150);
    background: none;

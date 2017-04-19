@@ -1,10 +1,6 @@
 /// card
 .card {
-  &:not(.no-border) {
-    @media screen {
-      border-bottom-width: 3px;
-    }
-  }  
+  border-bottom-width: 3px;
   text-align: left;
 	.overlay,
   .modal-launch,
@@ -60,6 +56,9 @@
         right: 0;
         height: $gutter;
         background-color: $light-gray;
+      }
+      > .card-divider:not([data-equalizer-watch]) {
+        margin-bottom: $gutter;
       }
     }
   }

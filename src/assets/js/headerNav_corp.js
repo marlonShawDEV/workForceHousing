@@ -49,4 +49,7 @@ $(window).on('changed.zf.mediaquery', function() {
 
 $(function(){
   $(".search-nav").addClass("has-transition");
+  $("#search-mobile").on('on.zf.toggler', function(){ 
+    $("#mobile-search").focus();
+  });
 });
