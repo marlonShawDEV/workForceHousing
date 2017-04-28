@@ -49,19 +49,6 @@ $hero-blend-color: $primary-color;
       margin-bottom: 3rem;      
     }
   }
-  .hero-title {
-    font-size: rem-calc(24);
-    font-size: calc(24px +  28 * (100vw - 320px)/1180); 
-    line-height: 1.23;
-    @media (min-width: -zf-bp-to-em(map-get($breakpoints, medium) - 120px)) {
-      margin: 1.5rem 0;
-    }
-    @media screen and (min-width: -zf-bp-to-em(map-get($breakpoints, medium) - 90px)) {
-    } 
-    @include breakpoint(xxlarge) {
-      font-size: rem-calc(52);
-    }
-  }
   .hero-edge {
     height: rem-calc(14);  
     background: $celery;

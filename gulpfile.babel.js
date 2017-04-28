@@ -25,7 +25,7 @@ function loadConfig() {
 
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
- gulp.series(clean, gulp.parallel(javascript, pages, sass, sassHomepage, images, copy), styleGuide));
+ gulp.series(clean, gulp.parallel(javascript, javascriptMFSBL, pages, sass, sassHomepage, sassMfSbl, images, copy), styleGuide));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -77,7 +77,7 @@ function styleGuideGrid(done) {
   return sherpa('src/styleguide/index_grid.md', {
     output: PATHS.dist + '/styleguide/styleguide_grid.html',
     template: 'src/styleguide/template_grid.html'
-  }, done); 
+  }, styleGuideMFSBL(done)); 
 }
 function styleGuide(done) {
   sherpa('src/styleguide/index_corp.md', {
@@ -95,6 +95,12 @@ function styleGuideMF(done) {
   sherpa('src/styleguide/index_mf.md', {
     output: PATHS.dist + '/styleguide/styleguide_mf.html',
     template: 'src/styleguide/template_mf.html'
+  }, done);
+}
+function styleGuideMFSBL(done) {
+  sherpa('src/styleguide/index_mfsbl.md', {
+    output: PATHS.dist + '/styleguide/styleguide_mfsbl.html',
+    template: 'src/styleguide/template_mfsbl.html'
   }, done);
 }
 function styleGuideCM(done) {
@@ -122,7 +128,24 @@ function sass() {
     .pipe(gulp.dest(PATHS.dist + '/ss'))
     .pipe(browser.reload({ stream: true }));
 }
-
+// Compile Sass into CSS
+function sassMfSbl() {
+  return gulp.src('src/assets/scss/app_mf_sbl.scss')
+    .pipe($.sourcemaps.init())
+    .pipe($.sass({
+      includePaths: PATHS.sass
+    })
+      .on('error', $.sass.logError))
+    .pipe($.autoprefixer({
+      browsers: COMPATIBILITY
+    }))
+    // Comment in the pipe below to run UnCSS in production
+    //.pipe($.if(PRODUCTION, $.uncss(UNCSS_OPTIONS)))
+    .pipe($.if(PRODUCTION, $.cssnano({safe: true, minifyGradients: false, calc:false, zindex:false, colormin:false, reduceInitial:false})))
+    .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
+    .pipe(gulp.dest(PATHS.dist + '/multifamily'))
+    .pipe(browser.reload({ stream: true }));
+}
 // Compile Sass into CSS
 // In production, the CSS is compressed
 function sassHomepage() {
@@ -155,7 +178,7 @@ function javascript(done) {
     ))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/js'));
-  done();
+    done();
 }
 
 function javascriptSF(done) {
@@ -181,6 +204,18 @@ function javascriptMF(done) {
     ))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/js'));
+  done();
+}
+function javascriptMFSBL(done) {
+  return gulp.src(PATHS.javascriptmfsbl)
+    .pipe($.sourcemaps.init())
+    .pipe($.babel())
+    .pipe($.concat('app_mf_sbl.js'))
+    .pipe($.if(PRODUCTION, $.uglify()
+      .on('error', e => { console.log(e); })
+    ))
+    .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
+    .pipe(gulp.dest(PATHS.dist + '/multifamily'));
   done();
 }
 
@@ -227,8 +262,8 @@ function watch() {
   gulp.watch(PATHS.assets, copy);
   gulp.watch('src/pages/**/*.html').on('change', gulp.series(pages, browser.reload));
   gulp.watch('src/{layouts,partials}/**/*.html').on('change', gulp.series(resetPages, pages, browser.reload));
-  gulp.watch('src/assets/scss/**/*.scss').on('change', gulp.series(sass, sassHomepage, browser.reload));
-  gulp.watch('src/assets/js/**/*.js').on('change', gulp.series(javascript, browser.reload));
+  gulp.watch('src/assets/scss/**/*.scss').on('change', gulp.series(sass, sassHomepage, sassMfSbl, browser.reload));
+  gulp.watch('src/assets/js/**/*.js').on('change', gulp.series(javascript, javascriptMFSBL, browser.reload));
   gulp.watch('src/assets/img/**/*').on('change', gulp.series(images, browser.reload));
   gulp.watch('src/styleguide/**').on('change', gulp.series(styleGuide, browser.reload));
 }

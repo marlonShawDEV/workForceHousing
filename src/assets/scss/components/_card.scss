@@ -38,6 +38,9 @@
     .card-divider {
       padding-bottom:  $gutter * 5.3;
       border-bottom: $gutter solid $white;
+      &.double-avatar { 
+        padding-bottom: 150px; 
+      } 
     }
   }
 } 
