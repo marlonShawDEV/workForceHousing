@@ -1,49 +1,127 @@
 ﻿
-# The Framework
-
-<p class="lead">The framework behind our codebase is Foundation.</p>
-
-The Foundation grid uses two key elements: rows and columns. Start by adding an element with a class of `.row`. This will create a horizontal block to contain vertical columns. Then add elements with a `.column` class within that row. Specify the widths of each column with the `.small-#`, `.medium-#`, and `.large-#` classes.
-
-<a class="button tertiary" href="styleguide_grid.html">Learn more about rows and columns</a> 
-
----
-
-## The Templates
+# The Templates
 
 The corporate site has 2 primary templates in Teamsite: Page and Article.  The page article supports both 1- and 2-column layouts and the article template supports only a 2-column layout.
 
-### One Column Content
+When you are creating a page using the TeamSite template, the following markup is **automatically inserted for you** by the TeamSite template.
 
-When you are creating a 1-column page using the responsive page template, the markup to create the 1-column band is automatically inserted by the TeamSite template.
-
-```html
-<div class="content-band">
-  <div class="row column">
-      <!-- content area -->
-  </div>
+<div class="row">
+<div class="column medium-6">
+  **One Column Content**
+  <pre>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"content-band"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row column"</span>&gt;</span>
+        <span class="hljs-comment">main content from template</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
 </div>
-```
+<div class="column medium-6">
+  **Two Column Content**
+  <pre>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"two-column-layout"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row two-column-row"</span>&gt;</span> 
+      <span class="hljs-tag">&lt;<span class="hljs-title">main</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column"</span>&gt;</span>
+        <span class="hljs-comment">main content from template</span>      
+      <span class="hljs-tag">&lt;/<span class="hljs-title">main</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">aside</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column"</span>&gt;</span>  
+        <span class="hljs-comment">sidebar content from template</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">aside</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+</div>
 
 ---
 
-### Two Column Content
+## Framework 
 
-When you are creating a 2-column page using either the page or article templates, the markup to create the 2-column band is automatically inserted by the TeamSite template.
+<p class="lead">The framework behind our codebase is Foundation.</p>
 
-```html
-<div class="two-column-layout">
-  <div class="row two-column-row"> 
-    <main class="column">
-      <!-- main content area -->      
-    </main>
-    <aside class="column">  
-      <!-- sidebar content area -->
-    </aside>
-  </div>
+The Foundation grid uses two key elements: rows and columns. When you need to create additional columns inside the initial ones added by the template, start by adding an element with a class of `.row`. This will create a horizontal block to contain vertical columns. Then add elements with a `.column` class within that row. Specify the widths of each column with the `.small-#`, `.medium-#`, and `.large-#` classes.
+
+<p class="text-center"><a class="button tertiary" href="styleguide_grid.html">Learn more about rows and columns</a></p>
+
+---
+
+### Framework Breakpoints
+
+There are 5 primary breakpoints for the corporate design.  If you need to write custom css for a page using this design, you will likely need to know these.
+
+| breakpoint | pixels |   ems    | details                      |
+|------------|-------:|---------:|------------------------------|
+| small      | 0px    | 0em      | we set a 320px min-width on the body element. At this width, almost all containers are full width |
+| medium     | 570px  | 35.625em | breakpoint where small cards first stack/unstack, and tabs and data tables typically stack/unstack |
+| large      | 980px  | 61.25em  | breakpoint where the 2-column layout stacks/unstacks, and large feature cards stack/unstack |
+| xlarge     | 1270px | 79.375em | breakpoint where the primary nav, ribbon and search bar collapse/uncollapse |
+| xxlarge    | 1500px | 93.75em  | max width for content area (1360px + 60px padding on each side) and max width for most responsive fonts |
+
+
+### Framework Components
+
+You can find documentation on all that Foundation offers at <a href="http://foundation.zurb.com/sites/docs/">http://foundation.zurb.com/sites/docs/</a>, but be aware that not all components are included in the corporate template build.
+
+The corporate template currently has these Foundation components enabled, disabled, and customized. You should familiarize yourself with the enabled and customized components.
+
+<div class="row">
+<div class="column large-6">
+<h5>Enabled</h5>
+<a href="http://foundation.zurb.com/sites/docs/abide.html">abide</a><br>
+<a href="http://foundation.zurb.com/sites/docs/accordion-menu.html">accordionMenu</a><br>
+<a href="http://foundation.zurb.com/sites/docs/button-group.html">button-group</a><br>
+<a href="http://foundation.zurb.com/sites/docs/card.html">card</a><br>
+<a href="http://foundation.zurb.com/sites/docs/close-button.html">close-button</a><br>
+<a href="http://foundation.zurb.com/sites/docs/equalizer.html">equalizer</a><br>
+<a href="http://foundation.zurb.com/sites/docs/float-classes.html">float-classes</a><br>
+<a href="http://foundation.zurb.com/sites/docs/forms.html">forms</a><br>
+<a href="http://foundation.zurb.com/sites/docs/menu.html">menu</a><br>
+<a href="http://foundation.zurb.com/sites/docs/motion-ui.html">motion-ui</a><br>
+<a href="http://foundation.zurb.com/sites/docs/responsive-embed.html">responsive-embed</a><br>
+<a href="http://foundation.zurb.com/sites/docs/responsive-navigation.html#responsive-toggle">responsive title-bar</a><br>
+<a href="http://foundation.zurb.com/sites/docs/toggler.html">toggler</a><br>
+<a href="http://foundation.zurb.com/sites/docs/tooltip.html">tooltip</a><br>
+<a href="http://foundation.zurb.com/sites/docs/top-bar.html">top-bar</a><br>
+<a href="http://foundation.zurb.com/sites/docs/typography-helpers.html">typography helpers</a><br>
+<a href="http://foundation.zurb.com/sites/docs/visibility.html">visibility classes</a><br>
+<br>
+<h5>Customized</h5>
+accordion	(styles are different, see <a href="#accordions">accordions</a> and <a href="#faqs">FAQs</a>)<br>
+callout	(styles are different, see <a href="#callouts">callouts</a>)<br>
+grid (the outermost row/column is inserted by <a href="#the-templates">the template</a>)	<br>
+media-object	(styles are different, see <a href="#media-objects">media objects</a>)<br>
+orbit	(buttons and slide nav is automated for you, see <a href="#carousels">carousels</a>) <br>
+reveal (buttons are automated for you, see <a href="#modals">modals</a>)<br>
+tabs (styles are different, see <a href="#tabs">tabs</a>)<br>
+table	(styles are different, see <a href="#data-tables">data tables</a>)
 </div>
-```
+<div class="column large-6">
+<h5>Disabled</h5>
+  <div class="callout background-concrete small">
+  <div>If you need to have a currently disabled component enabled, contact Sherry and Jon so that it can be added to the script bundle and properly styled.</div>
+  </div>  
+drilldown	<br>
+drilldown-menu	<br>
+dropdown	<br>
+dropdown-menu	<br>
+flex-classes	<br>
+flex-grid	<br>
+flex-video<br>
+interchange	<br>
+label	<br>
+magellan	<br>
+offcanvas	<br>
+pagination	<br>
+progress-bar	<br>
+progress-element 	<br>
+range-input	<br>
+responsiveMenu	<br>
+responsiveToggle	<br>
+slider	<br>
+sticky	<br>
+switch	<br>
+thumbnail	
 
+</div>
+</div>
 
 
 

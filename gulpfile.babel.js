@@ -171,7 +171,7 @@ function sassHomepage() {
 function javascript(done) {
   return gulp.src(PATHS.javascriptcorp)
     .pipe($.sourcemaps.init())
-    .pipe($.babel())
+    .pipe($.babel({ignore: ['what-input.js']}))
     .pipe($.concat('app_corp.js'))
     .pipe($.if(PRODUCTION, $.uglify()
       .on('error', e => { console.log(e); })
@@ -184,7 +184,7 @@ function javascript(done) {
 function javascriptSF(done) {
   return gulp.src(PATHS.javascriptsf)
     .pipe($.sourcemaps.init())
-    .pipe($.babel())
+    .pipe($.babel({ignore: ['what-input.js']}))
     .pipe($.concat('app_sf.js'))
     .pipe($.if(PRODUCTION, $.uglify()
       .on('error', e => { console.log(e); })
@@ -197,7 +197,7 @@ function javascriptSF(done) {
 function javascriptMF(done) {
   return gulp.src(PATHS.javascriptmf)
     .pipe($.sourcemaps.init())
-    .pipe($.babel())
+    .pipe($.babel({ignore: ['what-input.js']}))
     .pipe($.concat('app_mf.js'))
     .pipe($.if(PRODUCTION, $.uglify()
       .on('error', e => { console.log(e); })
@@ -209,7 +209,7 @@ function javascriptMF(done) {
 function javascriptMFSBL(done) {
   return gulp.src(PATHS.javascriptmfsbl)
     .pipe($.sourcemaps.init())
-    .pipe($.babel())
+    .pipe($.babel({ignore: ['what-input.js']}))
     .pipe($.concat('app_mf_sbl.js'))
     .pipe($.if(PRODUCTION, $.uglify()
       .on('error', e => { console.log(e); })
@@ -222,7 +222,7 @@ function javascriptMFSBL(done) {
 function javascriptCM(done) {
   return gulp.src(PATHS.javascriptcm)
     .pipe($.sourcemaps.init())
-    .pipe($.babel())
+    .pipe($.babel({ignore: ['what-input.js']}))
     .pipe($.concat('app_cm.js'))
     .pipe($.if(PRODUCTION, $.uglify()
       .on('error', e => { console.log(e); })
