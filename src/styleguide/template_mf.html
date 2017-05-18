@@ -33,5 +33,30 @@
 
       </div>
     </div>
+    
+    <script src="/js/vendor/jquery-2.1.4.min.js"> </script>
+    <script src="/multifamily/app_mf_sbl.js"></script>
+    <script>
+    // suppress the code view blocks by default and hide them under a toggle.
+    var $ks = $('#code-content');
+    if ($ks.length) {
+      $ks.find('.ss-code').each(function() {
+        var $code = $(this).find('pre');
+
+        $link = $('<a class="docs-code-toggle" href="javascript:void(0);">&lt; Toggle Code Display &gt;</a>');
+        $link.on('click', function() {
+          $code.slideToggle(250);
+        });
+        $link.insertBefore(this);
+        $code.hide(0);
+      });
+    }
+    $("#ssnav").change(function() { 
+      var x = $(this).val(); 
+      location.hash = '';
+      location.hash = x;
+    }); 
+    </script>
+    
   </body>
 </html>

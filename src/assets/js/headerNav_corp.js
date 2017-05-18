@@ -39,8 +39,8 @@ $(".nav-bus-section").on("mouseleave", function(){
     if($t.attr('aria-expanded') === "true"){$t.find('a').blur().triggerHandler('click');}
  }); 
  
-$("#primary-nav").on("on.zf.toggler", function(e) {
-});
+//$("#primary-nav").on("on.zf.toggler", function(e) {
+//});
 
 $(window).on('changed.zf.mediaquery', function() {    
   navHoverOff();

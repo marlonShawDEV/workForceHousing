@@ -28,10 +28,22 @@
   <body>
   
     {{> ribbon}}
-    
 
-    {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}   
-       {{> body}}
+
+<div class="primary-nav" id="primary-nav" data-toggler=".is-mobile-expanded" aria-expanded="false">
+  <div class="row column primarynav-buffer"> 
+    <div class="top-bar"> 
+      <div class="title-bar hide-for-xlarge" id="top-bar-title" data-hide-for="xlarge">
+          <a href="/" class="logo-mobile"><span>Freddie Mac Home</span><img class="no-border" src="/images/FreddieMacLogo.svg" alt="Freddie Mac logo"></a>
+      </div>
+      <div class="top-bar-left show-for-xlarge">
+        <a href="/" class="logo-desktop"><img alt="Freddie Mac logo" src="/images/FreddieMacLogo.svg" class="no-border"></a>
+      </div>
+    </div>
+  </div>
+</div>    
+
+    {{> body}}
  
 
 

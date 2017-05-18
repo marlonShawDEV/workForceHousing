@@ -129,7 +129,7 @@ $grid-column-gutter: (
 );
 $gutter: 20px;
 $grid-column-align-edge: true;
-$block-grid-max: 4;
+$block-grid-max: 6;
 
 // 4. Base Typography
 // ------------------
@@ -149,14 +149,6 @@ $header-styles: (
     'h4': ('font-size': 18),
     'h5': ('font-size': 16),
     'h6': ('font-size': 15),
-  ),
-  medium: (
-    'h1': ('font-size': 48),
-    'h2': ('font-size': 40),
-    'h3': ('font-size': 31),
-    'h4': ('font-size': 25),
-    'h5': ('font-size': 20),
-    'h6': ('font-size': 16),
   ),
 );
 $header-text-rendering: optimizeLegibility;
@@ -341,12 +333,12 @@ $closebutton-offset-vertical: (
   medium: 0.5rem,
 );
 $closebutton-size: (
-  small: 1.5em,
-  medium: 2em,
+  small: rem-calc(20),
+  medium: rem-calc(28),
 );
 $closebutton-lineheight: 1;
-$closebutton-color: $body-font-color;
-$closebutton-color-hover: $black;
+$closebutton-color: inherit;
+$closebutton-color-hover: inherit;
 
 // 16. Drilldown
 // -------------
@@ -409,8 +401,8 @@ $input-placeholder-color: rgba($body-font-color, 0.7);
 $input-font-family: inherit;
 $input-font-size: rem-calc(16);
 $input-font-weight: $global-weight-normal;
-$input-background: rgba($white, 0.7);
-$input-background-focus: inherit;
+$input-background: rgba($white, 0.75);
+$input-background-focus: rgba($white, 0.9);
 $input-background-disabled: $light-gray;
 $input-border: 1px solid rgba($fm-gray, 0.5);
 $input-border-focus: 1px solid rgba($fm-gray, 0.9);
@@ -541,7 +533,7 @@ $responsive-embed-ratios: (
 $reveal-background: none;
 $reveal-width: 100%;
 $reveal-max-width: 100%;
-$reveal-padding: 0;   // not used.
+$reveal-padding: 0;   
 $reveal-border: 0px solid $medium-gray;
 $reveal-radius: 0;
 $reveal-zindex: 1005;

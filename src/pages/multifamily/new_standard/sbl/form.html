@@ -1,0 +1,318 @@
+---
+layout: multifamily-sbl
+---
+<div class="form-wrapper background-primary">
+  <div class="modal-content">
+    <div class="row">
+      <div class="column xlarge-offset-1 xlarge-10 end">
+        <div class="modal-header">
+          <h1 class="white">Request a Quote</h1>
+          <p class="text-right"><a class="close-button-large" href="/multifamily/sbl/"><span class="show-for-sr">Close</span></a>          
+        </div>
+        <p class="page-subtitle">
+            Looking for a loan for <strong>$1 million to $6 million</strong> for an apartment building with <strong>5 or more units?</strong> Use the form below to request a quote from one of our experienced lenders.
+        
+        <p class="weight-medium">Elements Marked * are required
+        <div class="callout xlarge background-concrete">
+          <div class="row">
+            <div class="column large-10 large-centered">
+              <form id="FM_Form"  data-abide novalidate enctype="x-www-form-urlencoded" method="post" name="sbl_quote_request" action="https://s325135053.t.eloqua.com/e/f2">
+              <input type="hidden" value="sbl_quote_request" name="elqFormName" /> <input type="hidden" value="325135053" name="elqSiteID" /> 
+              <input type="hidden" name="elqCustomerGUID" /> <input type="hidden" value="0" name="elqCookieWrite" />
+                <div class="row">
+                  <div class="large-6 column">                        
+                    <label class="icon-required" for="fName">First Name</label> 
+                    <input id="fName" maxlength="20" name="first_name" required type="text" />
+                  </div>
+                  <div class="large-6 column">
+                    <label class="icon-required" for="lName">Last Name</label> 
+                    <input id="lName" name="last_name" required type="text" />
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="large-6 column">                    
+                      <label class="icon-required" for="Email">Email Address</label> 
+                      <input id="Email" name="Email" required autocapitalize="off" autocorrect="off" type="email" />
+                    </div>
+                    <div class="large-6 column">
+                      <label class="icon-required" for="email_confirmation">Confirm E-mail Address</label> 
+                      <input id="email_confirmation" required autocapitalize="off" autocorrect="off" equalto="#Email" type="email" />
+                    </div>
+                </div>
+                <label class="icon-required" for="phone">Phone Number</label>
+                <input id="phone" name="phone" required pattern="^\d{3}-\d{3}-\d{4}$" type="text" placeholder="xxx-xxx-xxxx" />
+                <p class="help-text">Your number must be 10 digits formatted as xxx-xxx-xxxx.</p>
+                
+                <hr class="light-green">
+                
+                <label class="icon-required" for="jobFunction">I am a...</label>                        
+                <select id="jobFunction" name="jobFunction" required>
+                    <option selected="selected" value="">Please Select</option>
+                    <option value="Borrower/guarantor">Borrower/guarantor</option>                                     
+                    <option value="Broker">Broker</option>                                    
+                    <option value="Agent">Agent</option>                                     
+                    <option value="Attorney">Attorney</option>                                     
+                    <option value="Accountant">Accountant</option>
+                    <option value="Realtor">Realtor</option>
+                    <option value="Other">Other</option>
+                </select>                    
+                  <label class="icon-required" for="multifamily_experience">
+                      Number of years of multifamily or commercial real estate experience?
+                  </label> 
+                  <input id="multifamily_experience" min="1" maxlength="2" name="multifamily_experience" required type="text" />
+
+                  <div class="row">
+                    <div class="large-6 column">                    
+                      <label class="icon-required" for="find_Method">How did you find us?</label>
+                      <select id="find_Method" name="find_Method" required>
+                          <option selected="selected" value="">Please Select</option>
+                          <option value="advertisement">Advertisement</option>
+                          <option value="broker_lender">Broker or lender</option>
+                          <option value="news_article">News article</option>
+                          <option value="web_search">Web search</option>
+                          <option value="other">Other</option>
+                      </select>                    
+                    </div>
+                    <div class="large-6 column">
+                      <label class="icon-required" for="loan_amount">Estimated Loan Amount</label>
+                      <select id="loan_amount" name="loan_amount" required>
+                          <option selected="selected" value="">Please Select</option>
+                          <option value="Less than $1 million">Less than $1 million</option>
+                          <option value="$1 million - $2 million">$1 million - $2 million</option>
+                          <option value="$2 million - $3 million">$2 million - $3 million</option>
+                          <option value="$3 million - $4 million">$3 million - $4 million</option>
+                          <option value="$4 million - $5 million">$4 million - $5 million</option>
+                          <option value="More than $5 million">More than $5 million</option>
+                      </select>
+                    </div>
+                  </div>
+                  <fieldset id="transactionTypes" class="checked-group" data-validator-abide-min="1">
+                    <legend class="icon-required">Transaction Type:</legend>
+                    <input id="transactionType_0" type="radio" value="Refinance" name="transactionType" data-validator="checked_required" /><label for="transactionType_0">Refinance</label> 
+                    <input id="transactionType_1" type="radio" value="Acquisition" name="transactionType" data-validator="checked_required" /><label for="transactionType_1">Acquisition</label>                      
+                  </fieldset>
+                  <label for="property_name">Property Name</label> 
+                  <input id="property_name" name="property_name" type="text" />
+                  <div class="row">
+                    <div class="large-6 column">                        
+                      <label class="icon-required" for="property_address">Property Address</label> 
+                      <input id="property_address" name="property_address" required type="text" />
+                    </div>
+                    <div class="large-6 column">
+                      <label class="icon-required" for="propertyCity">Property City</label> 
+                      <input id="propertyCity" name="property_city" required type="text" />                        
+                    </div>
+                  </div>
+                <div class="row">
+                  <div class="large-6 column">                      
+                    <label class="icon-required" for="propertyState">Property State</label>
+                    <select id="propertyState" name="property_state" required>
+                        <option selected="selected" value="">Please Select</option>
+                        <option value="AL">AL</option>
+                        <option value="AK">AK</option>
+                        <option value="AZ">AZ</option>
+                        <option value="AR">AR</option>
+                        <option value="CA">CA</option>
+                        <option value="CO">CO</option>
+                        <option value="CT">CT</option>
+                        <option value="DE">DE</option>
+                        <option value="DC">DC</option>
+                        <option value="FL">FL</option>
+                        <option value="GA">GA</option>
+                        <option value="GU">GU</option>
+                        <option value="HI">HI</option>
+                        <option value="ID">ID</option>
+                        <option value="IL">IL</option>
+                        <option value="IN">IN</option>
+                        <option value="IA">IA</option>
+                        <option value="KS">KS</option>
+                        <option value="KY">KY</option>
+                        <option value="LA">LA</option>
+                        <option value="ME">ME</option>
+                        <option value="MD">MD</option>
+                        <option value="MA">MA</option>
+                        <option value="MI">MI</option>
+                        <option value="MN">MN</option>
+                        <option value="MS">MS</option>
+                        <option value="MO">MO</option>
+                        <option value="MT">MT</option>
+                        <option value="NE">NE</option>
+                        <option value="NV">NV</option>
+                        <option value="NH">NH</option>
+                        <option value="NJ">NJ</option>
+                        <option value="NM">NM</option>
+                        <option value="NY">NY</option>
+                        <option value="NC">NC</option>
+                        <option value="ND">ND</option>
+                        <option value="OH">OH</option>
+                        <option value="OK">OK</option>
+                        <option value="OR">OR</option>
+                        <option value="PA">PA</option>
+                        <option value="PR">PR</option>
+                        <option value="RI">RI</option>
+                        <option value="SC">SC</option>
+                        <option value="SD">SD</option>
+                        <option value="TN">TN</option>
+                        <option value="TX">TX</option>
+                        <option value="UT">UT</option>
+                        <option value="VT">VT</option>
+                        <option value="VA">VA</option>
+                        <option value="VI">VI</option>
+                        <option value="WA">WA</option>
+                        <option value="WV">WV</option>
+                        <option value="WI">WI</option>
+                        <option value="WY">WY</option>
+                    </select>
+                  </div>
+                  <div class="large-6 column">
+                    <label class="icon-required" for="number_units">Number of Units</label>
+                    <select id="number_units" name="number_units" required>
+                        <option selected="selected" value="">Please Select</option>
+                        <option value="less than 5">Less than 5</option>
+                        <option value="5 - 50">5 - 50</option>
+                        <option value="51 - 100">51 - 100</option>
+                        <option value="101 - 200">101 - 200</option>
+                        <option value="200+">200+</option>
+                    </select>                    
+                  </div>
+                </div>
+                <hr class="light-green">
+                <fieldset class="checked-group" data-validator-abide-min="1" data-validator-abide-max="3">
+                  <legend class="icon-required">Select up to 3 lenders to call you and complete your quote request</legend>                 
+                  <div id="lenderWrap" class="row small-up-2 medium-up-3 large-up-4 collapse gutter-top gutter-bottom">            
+                    <div class="column text-center">
+                        <input id="lenders_0" type="checkbox" data-validator="checked_required" value="Arbor Commercial Mortgage, LLC" name="lenders" />
+                        <label for="lenders_0" class="no-box lender-label">
+                            <img alt="Arbor Commercial Mortgage, LLC" src="http://extcstage.fhlmc.com:8090/multifamily/images/sbl-form-arbor.png" /> 
+                        </label>                            
+                    </div>
+                    <div class="column text-center">
+                        <input id="lenders_1" type="checkbox" data-validator="checked_required" value="CBRE Capital Markets, Inc." name="lenders" />                       
+                        <label for="lenders_1"  class="no-box lender-label">
+                            <img alt="CBRE Capital Markets, Inc." src="http://extcstage.fhlmc.com:8090/multifamily/images/sbl-form-cbre.png" /> 
+                        </label>
+                        </div>
+                    <div class="column text-center">
+                        <input id="lenders_2" type="checkbox" data-validator="checked_required" value="Capital One Multifamily Finance, LLC " name="lenders" />
+                        <label for="lenders_2"  class="no-box lender-label">
+                            <img alt="Capital One Multifamily Finance, LLC" src="http://extcstage.fhlmc.com:8090/multifamily/images/sbl-form-capitalone.png" /> 
+                        </label>
+                    </div>
+                    <div class="column text-center">
+                        <input id="lenders_3" type="checkbox" data-validator="checked_required" value="The Community Preservation Corporation" name="lenders" />
+                        <label for="lenders_3" class="no-box lender-label">
+                            <img alt="The Community Preservation Corporation" src="http://extcstage.fhlmc.com:8090/multifamily/images/sbl-form-cpc.png" /> 
+                        </label>
+                    </div>
+                    <div class="column text-center">
+                        <input id="lenders_4" type="checkbox" data-validator="checked_required" value="Greystone Servicing Corporation, Inc." name="lenders" />
+                        <label for="lenders_4" class="no-box lender-label">
+                            <img alt="Greystone Servicing Corporation, Inc." src="http://extcstage.fhlmc.com:8090/multifamily/images/sbl-form-greystone.png" /> 
+                        </label>                            
+                    </div>
+                    <div class="column text-center">
+                        <input id="lenders_5" type="checkbox" data-validator="checked_required" value="Hunt Mortgage Partners, LLC" name="lenders" />
+                        <label for="lenders_5" class="no-box lender-label">
+                            <img alt="Hunt Mortgage Partners, LLC" src="http://extcstage.fhlmc.com:8090/multifamily/images/sbl-form-hunt.png" /> 
+                        </label>                            
+                    </div>
+                    <div class="column text-center">
+                        <input id="lenders_6" type="checkbox" data-validator="checked_required" value="PennyMac" name="lenders" />
+                        <label for="lenders_6" class="no-box lender-label">
+                            <img alt="PennyMac" src="http://extcstage.fhlmc.com:8090/multifamily/images/sbl-form-pennymac.png" /> 
+                        </label>
+                    </div>
+                    <div class="column text-center">
+                        <input id="lenders_7" type="checkbox" data-validator="checked_required" value="Pinnacle Bank" name="lenders" />
+                        <label for="lenders_7" class="no-box lender-label">
+                            <img alt="Pinnacle Bank" src="http://extcstage.fhlmc.com:8090/multifamily/images/sbl-form-pinnacle.png" /> 
+                        </label>                            
+                    </div>
+                    <div class="column text-center">
+                        <input id="lenders_8" type="checkbox" data-validator="checked_required" value="ReadyCap Commercial, LLC" name="lenders" />
+                        <label for="lenders_8" class="no-box lender-label">
+                            <img alt="ReadyCap Commercial, LLC" src="http://extcstage.fhlmc.com:8090/multifamily/images/sbl-form-readycap.png" /> 
+                        </label>
+                    </div>    
+                    <div class="column text-center">
+                        <input id="lenders_9" type="checkbox" data-validator="checked_required" value="Red Mortgage Capital, LLC" name="lenders" />
+                        <label for="lenders_9" class="no-box lender-label">
+                            <img alt="Red Mortgage Capital, LLC" src="http://extcstage.fhlmc.com:8090/multifamily/images/sbl-form-redcapital.png" /> 
+                        </label>
+                    </div>
+                    <div class="column text-center">
+                        <input id="lenders_10" type="checkbox" data-validator="checked_required" value="Sabal TL1, LLC, a wholly owned subsidiary of Sabal Capital Partners, LLC." name="lenders" />
+                        <label for="lenders_10" class="no-box lender-label">
+                            <img alt="Sabal TL1, LLC, a wholly owned subsidiary of Sabal Capital Partners, LLC." src="http://extcstage.fhlmc.com:8090/multifamily/images/sbl-form-sabal.png" /> 
+                        </label>                                
+                    </div>
+                  </div>
+                </fieldset>
+                <div class="row gutter-top">
+                  <div class="large-6 column">
+                    <div class="callout small background-red" style="display: none;" data-abide-error="" data-closable="">
+                      <button class="close-button" data-close="">
+                          <span aria-hidden="true">&times; </span>
+                      </button>
+                      <p class="enlarge">Please review your form for errors</p>
+                    </div>
+                  </div>
+                  <div class="large-6 column">
+                      <p class="gutter-top text-right"><button class="button" type="submit">Submit</button></p>
+                  </div>
+                </div>
+              </form> 
+            </div>
+          </div>              
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <script type='text/javascript'>
+  function randomize(a) {
+    for (var i = a.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var x = a[i];
+      a[i] = a[j];
+      a[j] = x;
+    }
+    return a;
+  }
+  
+function onLoad() {
+  // randomize lenders
+  var $wrapper = $('#lenderWrap'),
+    $tiles = $wrapper.children('.column'),
+    $randomTiles = randomize($tiles.slice(0));
+  $wrapper.html( $randomTiles ); 
+  // disable after 3 choices
+  var $checkBoxes = $wrapper.find('[type="checkbox"]'),
+    checkBoxMax =  parseInt($wrapper.closest('.checked-group').attr('data-validator-abide-max'));
+  $checkBoxes.on('click', function(){
+    if($checkBoxes.filter(':checked').length == checkBoxMax){
+      $checkBoxes.not(':checked').attr('disabled', 'disabled');
+    }
+    else{
+     $checkBoxes.filter('[disabled]').removeAttr('disabled');
+    } 
+  }); 
+  $('#FM_Form')
+  .on('forminvalid.zf.abide', function (ev,frm) {
+    var invalid_fields = $(this).find('[data-invalid]');
+    console.log("Form id "+ev.target.id+" failed validation.");
+  })
+  .on("formvalid.zf.abide", function(ev,frm) {
+    console.log("Form passes validation.");
+    $(frm).find("div[data-abide-error]").attr("style", "display: none;");
+  })
+  .on("submit", function(ev) {
+    ev.preventDefault();
+    console.log("Submit for form id "+ev.target.id+" intercepted");
+  });
+}  
+
+window.onload = onLoad;   
+
+</script>

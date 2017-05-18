@@ -23,10 +23,6 @@ function fakeNav(){
     else if (p.match(/governance|annual|agenda|board/)) {$('#subnav-about-governance').addClass('active');}
     else if (p.match(/investor/)) {$('#subnav-about-investors').addClass('active');}
   }
-  else if (p.match(/perspectives/)) {
-    $('#nav-perspectives').children('a').addClass('active');    
-    $('#subnav-perspectives').addClass('on').find('.no-bullet').removeClass('hide');   
-  }
   else if (p.match(/media-/)) {
     $('#nav-mediaroom').children('a').addClass('active');
     $('#subnav-mediaroom').addClass('on').find('.no-bullet').removeClass('hide');

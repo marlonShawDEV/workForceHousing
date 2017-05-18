@@ -1,11 +1,12 @@
 .reveal {  
+  color: $white;
   &.tiny,
   &.small,
   &.large {
-    @include reveal-modal-width($reveal-width);
+    @include reveal-modal-fullscreen;
   }
   &:not(.overlay-video):not(.overlay-image):not(.overlay-gallery) {
-    @include reveal-modal-width($reveal-width);
+    @include reveal-modal-fullscreen;
     padding-top: rem-calc(40);
     padding-top: calc(40px +  54 * (100vw - 320px)/1180); 
     @include breakpoint(xxlarge) {
@@ -18,27 +19,15 @@
       max-width: $global-width;
     }
   }
-  .close-button-medium {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    @include breakpoint (medium) {    
-      top: -0.9em;
-      right: -0.9em;
-    }
-  }  
  
   &.overlay-video,
   &.overlay-image,
-  &.overlay-gallery  {
-    color: $white;
+  &.overlay-gallery {
     background: transparent;
     @include reveal-modal-width(90%, 1360px);
     text-align: center;  
     overflow: visible;
-    @include breakpoint (xlarge) {
-      max-width: rem-calc(1360);
-    }
+    max-width: rem-calc(1360);
     a {
       @include anchor-on-dark;    
     } 
@@ -46,7 +35,7 @@
   &.overlay-video {
     padding: 2rem 2rem 0;
     @include breakpoint (small only) {
-      padding: 1rem 1rem 0;
+        padding: 1.25rem 1.25rem 0;
     }
     .responsive-embed {
       overflow: visible;
@@ -57,21 +46,28 @@
     .modal-content {
       max-width: 100%;
       padding: 2rem 2rem 0;
-      
+      @include breakpoint (xlarge only) {
+        padding: 3rem 1rem 0;
+      }
       @include breakpoint (small only) {
-        padding: 1rem 1rem 0;
+        padding: 1.25rem 1.25rem 0;
       }
     }
     figure {    
       display: inline-block; 
-      margin: 0 auto;
-      max-width: 100%;
+      margin: 1rem auto 0;
+      max-width: 90vw;
       position: relative;
+      &include breakpoint(medium) {
+        margin-top: 0;
+      }
+      &include breakpoint(xlarge) {
+        max-width: rem-calc(1360);
+      }
       img {        
-        max-width: 100%;
+        max-width: 90vw;
         max-height:90vh;
         min-height: rem-calc(200);
-        width: auto;
       }
     }
     figcaption {
@@ -83,10 +79,15 @@
         margin-bottom: 0;
       }     
       &:not(.reduce) {
-        font-size: rem-calc(20);
+        font-size: rem-calc(14);
         @include breakpoint(small only) {
-          font-size: rem-calc(14);
           padding: 0.5em;
+        }
+        @include breakpoint(medium){
+          font-size: rem-calc(16);
+        }
+        @include breakpoint(xlarge){
+          font-size: rem-calc(20);
         }
       }
     }
@@ -122,6 +123,7 @@
 }
 .modal-header {
   display: table;
+  width: 100%;
   margin-bottom: rem-calc(36);
   margin-bottom: calc(36px +  30 * (100vw - 320px)/1180); 
   @include breakpoint(xxlarge) {
@@ -130,13 +132,16 @@
   button { 
     display: table-cell;
     vertical-align: middle;
+    right: 0;
+    top: 0;
+    position: relative;
   }
   h2 { 
     display: table-cell;
     width:99%;
     vertical-align: middle;
-    font-size: rem-calc(20);
-    font-size: calc(20px +  12 * (100vw - 320px)/1180); 
+    font-size: rem-calc(22);
+    font-size: calc(22px +  10 * (100vw - 320px)/1180); 
     font-weight: $global-weight-bold;
     margin: 0.4em 0;  
     @include breakpoint(xxlarge) {

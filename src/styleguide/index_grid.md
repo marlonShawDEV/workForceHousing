@@ -1,13 +1,19 @@
 ﻿
-# Basics
+# Basics of Foundation Grid
 
-When you need to divide up a content area, start by adding an element with a class of `.row`. This will create a horizontal block to contain vertical columns. Then add elements with a `.column` class within that row. Specify the widths of each column with the `.small-#`, `.medium-#`, `.large-#`, and `.xlarge-#` classes.
+## Before You Begin ##
 
-**Foundation is mobile-first.** Code for small screens first, and larger devices will inherit those styles. Customize for larger screens as necessary. Thus, 
+* When you are creating a page using a **TeamSite template**, the outermost row and column are automatically inserted for you. You should only need to add rows with columns when you want to vertically divide the content area.
+* Be careful not to put a `.column` directly inside a `.column`, or a `.row` directly inside a `.row` --- when nesting you must alternate rows and columns.
 
-* There is no reason to add a class such as `.small-12` to a full width column.
-* There is no reason to repeat identical measurements for each breakpoint: a div with class="column small-6 medium-6 large-6 xlarge-6" is no different than a div with just class="column small-6".
-* Be careful not to put a `.column` directly inside a `.column`, or a `.row` directly inside a `.row` --- when nesting you alternate rows and columns.
+---
+
+## Getting Started ##
+
+1. When you need to divide up a content area, start by adding an element with a class of `.row`. This will create a full width horizontal block to contain vertical columns. Then add `.column` elements within the row. 
+2. Foundation is mobile-first. There is no reason to add a class of `.small-12` -- it does the same thing as class `.column`, because we are using a 12-column grid. 
+3. Code for small screens first, and larger devices will inherit those styles. There is no reason to repeat identical measurements for each breakpoint: a div with a class of `column small-6 medium-6 large-6 xlarge-6` is no different than a div with just a class of `column small-6`.
+
 
 ```html
 <div class="row">
@@ -213,7 +219,7 @@ Move blocks up to 11 column to the right by using classes like `.large-offset-1`
 
 ## Incomplete Rows
 
-In order to work around browsers' different rounding behaviors, Foundation will float the last column in a row to the right so the edge aligns. If your row doesn't have a count that adds up to 12 column, you can tag the last column with a class of `.end` in order to override that behavior. Alternatively, you can set the `$grid-column-align-edge` variable to `false` to turn off this behavior entirely.
+In order to work around browsers' different rounding behaviors, Foundation will float the last column in a row to the right so the edge aligns. If your row doesn't have a count that adds up to 12 column, you can tag the last column with a class of `.end` in order to override that behavior. 
 
 ```html
 <div class="row">
@@ -390,3 +396,4 @@ Block grids are a shorthand way to create equally-sized column. Add a class of t
 </div>
 ```
 
+---

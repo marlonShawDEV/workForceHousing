@@ -39,7 +39,7 @@ When you are creating a page using the TeamSite template, the following markup i
 
 The Foundation grid uses two key elements: rows and columns. When you need to create additional columns inside the initial ones added by the template, start by adding an element with a class of `.row`. This will create a horizontal block to contain vertical columns. Then add elements with a `.column` class within that row. Specify the widths of each column with the `.small-#`, `.medium-#`, and `.large-#` classes.
 
-<p class="text-center"><a class="button tertiary" href="styleguide_grid.html">Learn more about rows and columns</a></p>
+<p><a class="button tertiary large" href="styleguide_grid.html">Learn more about rows and columns</a></p>
 
 ---
 
@@ -64,15 +64,15 @@ The corporate template currently has these Foundation components enabled, disabl
 
 <div class="row">
 <div class="column large-6">
-<h5>Enabled</h5>
-<a href="http://foundation.zurb.com/sites/docs/abide.html">abide</a><br>
+<h5>Enabled</h5> 
 <a href="http://foundation.zurb.com/sites/docs/accordion-menu.html">accordionMenu</a><br>
+buttons	(styles are different, see <a href="#buttons">buttons</a>)<br>
 <a href="http://foundation.zurb.com/sites/docs/button-group.html">button-group</a><br>
 <a href="http://foundation.zurb.com/sites/docs/card.html">card</a><br>
 <a href="http://foundation.zurb.com/sites/docs/close-button.html">close-button</a><br>
 <a href="http://foundation.zurb.com/sites/docs/equalizer.html">equalizer</a><br>
 <a href="http://foundation.zurb.com/sites/docs/float-classes.html">float-classes</a><br>
-<a href="http://foundation.zurb.com/sites/docs/forms.html">forms</a><br>
+<a href="http://foundation.zurb.com/sites/docs/forms.html">forms</a> and <a href="http://foundation.zurb.com/sites/docs/abide.html">abide</a><br>
 <a href="http://foundation.zurb.com/sites/docs/menu.html">menu</a><br>
 <a href="http://foundation.zurb.com/sites/docs/motion-ui.html">motion-ui</a><br>
 <a href="http://foundation.zurb.com/sites/docs/responsive-embed.html">responsive-embed</a><br>
@@ -84,6 +84,7 @@ The corporate template currently has these Foundation components enabled, disabl
 <a href="http://foundation.zurb.com/sites/docs/visibility.html">visibility classes</a><br>
 <br>
 <h5>Customized</h5>
+abide (custom routines and patterns, see <a href="styleguide_abide.html">abide</a>)<br>
 accordion	(styles are different, see <a href="#accordions">accordions</a> and <a href="#faqs">FAQs</a>)<br>
 callout	(styles are different, see <a href="#callouts">callouts</a>)<br>
 grid (the outermost row/column is inserted by <a href="#the-templates">the template</a>)	<br>
@@ -130,6 +131,7 @@ thumbnail
 <p class="lead">Below you can find the different values we created that support the color variables you can change at any time in <code>\_settings.scss</code></p>
 
 ---
+
 <h2>Bolds</h2>
 <div class="row up-1 medium-up-3 large-up-4">
   <div class="column">
@@ -863,6 +865,14 @@ The default text alignment for most containers is left.
 
 
 
+# Embedded Objects
+
+Embedded objects (iframes, videos, Tableau visuals) were <a href="styleguide_embeds.html">moved to their own page</a> to speed up the load of the initial styleguide. 
+
+<a href="styleguide_embeds.html" class="button tertiary large">Learn about embeds</a>
+
+
+
 # Callouts
 
 <p class="lead">A callout is just a container with a `.callout` class applied. You can put any kind of content inside.</p>
@@ -976,7 +986,7 @@ To make the entire callout clickable, put an anchor tag around the `.callout` co
 ```html_example
 <div class="row">
   <div class="small-8 medium-6 end column">
-    <a href="/"><div class="callout background-blue">
+    <a href="#"><div class="callout background-blue">
     <p>This entire blue callout is inside an anchor tag and becomes 1 big link.</p>
     </div></a>
   </div>
@@ -1046,12 +1056,12 @@ Refer to <a href="#modals">modals</a> for additional options if you are launchin
 If you need to force an overlay to always be full width, add class `.block` to the `<a>` and class `.full` to the image.
 
 ```html
-<a class="overlay" href="#"><img alt="photo of David Brickman" src="/images/exec_david_brickman.jpg"></a>
+<a class="overlay" href="#"><img alt="photo of David Brickman" src="files/exec_david_brickman.jpg"></a>
 ```
 
 <div class="row">
   <div class="small-6 medium-3 column small-centered">
-    <a class="overlay" href="#"><img alt="photo of David Brickman" src="/images/exec_david_brickman.jpg"></a>
+    <a class="overlay" href="#"><img alt="photo of David Brickman" src="files/exec_david_brickman.jpg"></a>
   </div>
 </div>
 
@@ -1121,6 +1131,8 @@ Use the class `.show-on-focus` to hide an element, except when it has focus. Add
 
 You can change the float behavior of an element by adding the `.float-left` or `.float-right` classes to an element. To clear floats, add the class `.clearfix` to the parent element.
 
+If the container you are floating may wind up touching other content, add `.gutter-left` or `gutter-right` to create the same gap as typically shows between two columns.
+
 
 ```html_example
 <div class="callout clearfix">
@@ -1133,11 +1145,14 @@ You can change the float behavior of an element by adding the `.float-left` or `
 
 ## Float Center
 
-Okay, it's not *really* a float, but you can add the `.float-center` class to an element to engage the automatic margin centering trick. Note that this will only work on elements with an absolute width or a maximum width that is less than their containing element.
+Okay, it's not *really* a float, but you can add the `.float-center` class to an element to engage the automatic margin centering trick. Note that this will only work on elements with an absolute width or a maximum width that is less than their containing element.  If you just want to center text, use class `.text-center`.
 
 ```html_example
 <div class="gutter-bottom">
-  <img src="/images/blog/fm_blog_usda_returns.jpg" alt="Harp - act now!"  class="float-center">
+  <img src="files/fm_blog_usda_returns.jpg" alt="Harp - act now!"  class="float-center">
+</div>
+<div class="float-center background-green" style="width: 50%; padding: 1rem;">
+<p class="text-center">My container is always half of the available width.</p>
 </div>
 ```
 
@@ -1173,7 +1188,7 @@ Use class `.box-left-fixed300` to float content to the left at a fixed width of 
 <p class="lead">Example showing floated element inserted, with floated container set to a fixed-size width at medium breakpoint and higher.</p>
 <div class="box-left-fixed300">
   <figure>
-    <img src="/images/styleguide/bigkitty.jpg" alt="kitty">
+    <img src="files/bigkitty.jpg" alt="kitty">
   </figure>
 </div>
 <p>This content comes after a floated container, and thus can wrap around it if needed.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. This content comes after a floated container, and thus can wrap around it if needed.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. This content comes after a floated container, and thus can wrap around it if needed.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -1206,7 +1221,7 @@ Use class `.box-right-fixed300` to float content to the right at a fixed width o
 <p class="lead">Example showing floated element inserted, with floated container set to a fixed-size width at medium breakpoint and higher.</p>
 <div class="box-right-fixed300">
   <figure>
-    <img src="/images/styleguide/bigkitty.jpg" alt="kitty">
+    <img src="files/bigkitty.jpg" alt="kitty">
   </figure>
 </div>
 <p>This content comes after a floated container, and thus can wrap around it if needed.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. This content comes after a floated container, and thus can wrap around it if needed.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. This content comes after a floated container, and thus can wrap around it if needed.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -1415,11 +1430,9 @@ Landing Pages are those pages that are linked from the primary navigation. Add o
 ```html_example
 <div class="hero-blended about-landing-hero">
   <div class="row">
-    <div class="column">
-      <div class="hero-blended-content">
-        <h1 class="hero-title">About Us</h1>
-        <p>Our statutory mission is to provide liquidity, stability and affordability to the U.S. housing market.</p>
-      </div>
+    <div class="column hero-blended-content">
+      <h1 class="hero-title">About Us</h1>
+      <p>Our statutory mission is to provide liquidity, stability and affordability to the U.S. housing market.</p>
     </div>
   </div>
 </div>
@@ -1434,27 +1447,23 @@ Use this hero on Blog article pages.  Elements inside the hero include the date,
 ```html
 <div class="hero-blended blog-detail-hero-homeownership">
   <div class="row">
-	  <div class="column">
-		  <div class="hero-blended-content">
-		  	<div class="hero-date">May 9, 2016</div>
-		    <h1 class="hero-title">Take the Anxiety Out of Your First Home Offer</h1>
-		    <p><a href="#" class="hollow button small">Homeownership</a></p>
-		  </div>
-		</div>
+    <div class="column hero-blended-content">
+      <div class="hero-date">May 9, 2016</div>
+      <h1 class="hero-title">Take the Anxiety Out of Your First Home Offer</h1>
+      <div><a href="#" class="hollow button small">Homeownership</a></div>
+    </div>
 	</div>
   <!-- and a share widget -->
 </div>
 ```
 
 <div class="grid-2col-blog">
-  <div class="hero-blended blog-detail-hero">
+  <div class="hero-blended blog-detail-hero-homeownership">
     <div class="row">
-      <div class="column">
-        <div class="hero-blended-content">
-          <div class="hero-date">May 9, 2016</div>
-          <h1 class="hero-title">Take the Anxiety Out of Your First Home Offer</h1>
-          <p><a href="#" class="hollow button small">Homeownership</a></p>
-        </div>
+      <div class="column hero-blended-content">
+        <div class="hero-date">May 9, 2016</div>
+        <h1 class="hero-title">Take the Anxiety Out of Your First Home Offer</h1>
+        <div><a href="#" class="hollow button small">Homeownership</a></div>
       </div>
     </div>
     <!-- and a share widget -->
@@ -1476,10 +1485,10 @@ Use this hero on Perspectives article pages.  Elements include the label "Perspe
       <h1 class="hero-title">Three Reasons Why Baby Boomer Homeowners are a Market to Watch</h1>
       <figure class="avatar">
         <div>
-          <img src="/images/exec_david_brickman.jpg" alt="Avatar img" />
+          <img src="files/exec_david_brickman.jpg" alt="Avatar img" />
         </div>
         <div>
-          <figcaption class="reduce">Article By<br><strong>David Brickman, EVP Multifamily Business</strong></figcaption>
+          <figcaption class="reduce">By<br><strong>David Brickman, EVP Multifamily Business</strong></figcaption>
         </div>
       </figure>
     </div>
@@ -1497,10 +1506,10 @@ Use this hero on Perspectives article pages.  Elements include the label "Perspe
         <h1 class="hero-title">Three Reasons Why Baby Boomer Homeowners are a Market to Watch</h1>
         <figure class="avatar">
           <div>
-            <img src="/images/exec_david_brickman.jpg" alt="Avatar img" />
+            <img src="files/exec_david_brickman.jpg" alt="Avatar img" />
           </div>
           <div>
-            <figcaption class="reduce">Article By<br><strong>David Brickman, EVP Multifamily Business</strong></figcaption>
+            <figcaption class="reduce">By<br><strong>David Brickman, EVP Multifamily Business</strong></figcaption>
           </div>
         </figure>
       </div>
@@ -1553,8 +1562,8 @@ For pages that include a subtitle, it will appear directly below the H1.
 
 ```html_example
 <div class="page-title">
-  <div class="row column">
-    <div class="">
+  <div class="row">
+    <div class="column">
       <p class="intro"><span class="uppercase weight-bold">Outlook</span> | December 12, 2016</p>
       <h1>After housing's best year in a decade, what is next?</h1>
     </div>
@@ -1582,16 +1591,16 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
 - If the cards should have a gray background (when displayed on a white background) add class `.background-gray` to each card.
 
 ```html_example
-<div class="row medium-up-2 xlarge-up-4 perspectives" data-equalizer data-equalize-by-row="true">
+<div class="row medium-up-2 large-up-3 xlarge-up-4 perspectives" data-equalizer data-equalize-by-row="true">
   <div class="column">
-    <div class="card">
+    <div class="card background-concrete">
       <div class="card-divider" data-equalizer-watch>
         <div class="article-date">August 13, 2016</div>
         <h3 class="card-title-large"><a href="#">Multifamily Is On a Roll</a></h3>
         <p class="card-blurb-large">2016 was a very good year. Freddie Mac Multifamily is on track to purchase approximately $55 billion and securitize over $50 billion in loans – both new records. Barring any surprises, we believe the multifamly industry – and our business -- can grow another five to ten percent next year. </p>
         <figure class="avatar">
           <div>
-            <img src="/images/perspectives/brickman-sm.jpg" alt="Avatar image" />
+            <img src="files/brickman-sm.jpg" alt="Avatar image" />
           </div>
           <div>
             <figcaption class="reduce"><strong class="uppercase">David Brickman</strong><br>EVP Multifamily Business</figcaption>
@@ -1601,14 +1610,14 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
     </div>
   </div>
   <div class="column">
-    <div class="card">
+    <div class="card background-concrete">
       <div class="card-divider" data-equalizer-watch>
         <div class="article-date">June 27, 2016</div>
         <h3 class="card-title-large"><a href="#">Homeownership: Where We Are Now, Where We Are Headed</a></h3>
         <p class="card-blurb-large">The second half of the 20th century brought with it remarkable growth in homeownership.  For the first four decades of the century, homeownership rates were relatively stable and remained below 50 percent, dropping as low as 44 percent in 1940. </p>
         <figure class="avatar">
           <div>
-            <img src="/images/perspectives/gilmore-sm.jpg" alt="Avatar image" />
+            <img src="files/gilmore-sm.jpg" alt="Avatar image" />
           </div>
           <div>
             <figcaption class="reduce"><strong class="uppercase">Yvette Gilmore</strong><br>VP Single-Family Servicer Performance Management </figcaption>
@@ -1618,14 +1627,14 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
     </div>
   </div>
   <div class="column">
-    <div class="card">
+    <div class="card background-concrete">
       <div class="card-divider" data-equalizer-watch>
         <div class="article-date">May 13, 2016</div>
         <h3 class="card-title-large"><a href="#">This is the Week to Learn About Mortgage Fraud</a></h3>
         <p class="card-blurb-large">Fraud continues to threaten homebuyers, renters and the mortgage industry. The latest report from CoreLogic, a real estate information company, says fraud is on an upward trajectory and estimates that some 13,000 mortgage applications made during the second quarter had indications of fraud.</p>
         <figure class="avatar">
           <div>
-            <img src="/images/perspectives/layton-sm.jpg" alt="Avatar image" />
+            <img src="files/layton-sm.jpg" alt="Avatar image" />
           </div>
           <div>
             <figcaption class="reduce"><strong class="uppercase">Donald H. Layton</strong><br>CEO</figcaption>
@@ -1635,14 +1644,14 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
     </div>
   </div>
   <div class="column">
-    <div class="card">
+    <div class="card background-concrete">
       <div class="card-divider" data-equalizer-watch>
         <div class="article-date">April 30, 2016</div>
         <h3 class="card-title-large"><a href="#">Freddie Mac Reports Another Quarter of Solid Financial Results</a></h3>
         <p class="card-blurb-large">Today Freddie  Mac reported net income and comprehensive income of $2.3 billion for the third quarter  of 2016. Our results strongly reflect our improving business fundamentals and  competitiveness &ndash; higher purchase volumes.</p>
         <figure class="avatar">
           <div>
-            <img src="/images/perspectives/hanson-sm.jpg" alt="Avatar image" />
+            <img src="files/hanson-sm.jpg" alt="Avatar image" />
           </div>
           <div>
             <figcaption class="reduce"><strong class="uppercase">Mark Hanson</strong><br>SVP Securitization</figcaption>
@@ -1666,8 +1675,8 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
 <div class="row small-up-2 medium-up-3 large-up-4" data-equalizer data-equalize-by-row="true">
   <div class="column">
     <div class="card" data-equalizer-watch>
-      <a class="overlay" href="/">
-        <img src="/images/blog/blog-2.jpg" alt="Blog Img" />
+      <a class="overlay" href="#">
+        <img src="files/blog-2.jpg" alt="Blog Img" />
       </a>
       <div class="card-section">
         <p class="article-date">May 13, 2016</p>
@@ -1679,8 +1688,8 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
   </div>
   <div class="column">
     <div class="card" data-equalizer-watch>
-      <a class="overlay" href="/">
-        <img src="/images/blog/blog-3.jpg" alt="Blog Img" />
+      <a class="overlay" href="#">
+        <img src="files/blog-3.jpg" alt="Blog Img" />
       </a>
       <div class="card-section">
         <p class="article-date">May 27, 2016</p>
@@ -1692,8 +1701,8 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
   </div>
   <div class="column">
     <div class="card" data-equalizer-watch>
-      <a class="overlay" href="/">
-        <img src="/images/blog/blog-1.jpg" alt="Blog Img" />
+      <a class="overlay" href="#">
+        <img src="files/blog-1.jpg" alt="Blog Img" />
       </a>
       <div class="card-section">
         <p class="article-date">May 30, 2016</p>
@@ -1705,8 +1714,8 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
   </div>
   <div class="column">
     <div class="card" data-equalizer-watch>
-      <a class="overlay" href="/">
-        <img src="/images/blog/blog-4.jpg" alt="Blog Img" />
+      <a class="overlay" href="#">
+        <img src="files/blog-4.jpg" alt="Blog Img" />
       </a>
       <div class="card-section">
         <p class="article-date">June 2, 2016</p>
@@ -1726,12 +1735,13 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
 - If the cards have the same background as the content contaienr they are in, add no extra color class.
 - If the cards should have a white background (when displayed on a darker color) add class `.background-white` to each card.
 - If the cards should have a gray background (when displayed on a white background) add class `.background-gray` to each card.
+- You will need to view each video on Youtube to get the accurate length of the video to put in the `.video-length` span.
 
 ```html_example
 <div class="row medium-up-2 large-up-3" data-equalizer data-equalize-by-row="true">
   <div class="column">
     <div class="card"  data-equalizer-watch>
-      <a class="overlay video-modal widescreen-video" href="https://www.youtube.com/watch?v=QcthGnwJRsk" data-src="//www.youtube-nocookie.com/embed/QcthGnwJRsk?rel=0&amp;wmode=transparent"><span class="video-length" area-label="video length in minutes">2:11</span><img src="/images/media/video-1.jpg" alt="description of video"></a>
+      <a class="overlay video-modal widescreen-video" href="https://www.youtube.com/watch?v=QcthGnwJRsk" data-src="//www.youtube-nocookie.com/embed/QcthGnwJRsk?rel=0&amp;wmode=transparent"><span class="video-length" area-label="video length in minutes">2:11</span><img src="files/video-1.jpg" alt="description of video"></a>
       <div class="card-section">
         <p class="card-title">Why Freddie Mac</p>
         <p class="card-subtitle">Early reports are showing first-time homebuyers coming back into the market.</p>
@@ -1740,7 +1750,7 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
   </div>
   <div class="column">
     <div class="card"  data-equalizer-watch>
-      <a class="overlay video-modal widescreen-video" href="https://www.youtube.com/watch?v=vNPl4CS4nnQ" data-src="//www.youtube-nocookie.com/embed/vNPl4CS4nnQ?rel=0&amp;wmode=transparent"><span class="video-length" area-label="video length in minutes">4:48</span><img src="/images/media/video-2.jpg" alt="description of video"></a>
+      <a class="overlay video-modal widescreen-video" href="https://www.youtube.com/watch?v=vNPl4CS4nnQ" data-src="//www.youtube-nocookie.com/embed/vNPl4CS4nnQ?rel=0&amp;wmode=transparent"><span class="video-length" area-label="video length in minutes">4:48</span><img src="files/video-2.jpg" alt="description of video"></a>
       <div class="card-section">
         <h4 class="card-title">Freddie Mac and Your Mortgage</h4>
         <p class="card-subtitle">During National Volunteer Week we celebrate all volunteers who give back to make our communities better and improve the lives of others</p>
@@ -1749,7 +1759,7 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
   </div>
   <div class="column">
     <div class="card"  data-equalizer-watch>
-      <a class="overlay video-modal widescreen-video" href="https://www.youtube.com/watch?v=kkHyUX40NxE" data-src="//www.youtube-nocookie.com/embed/kkHyUX40NxE?rel=0&amp;wmode=transparent"><span class="video-length" area-label="video length in minutes">3:45</span><img src="/images/media/video-3.jpg" alt="description of video"></a>    
+      <a class="overlay video-modal widescreen-video" href="https://www.youtube.com/watch?v=kkHyUX40NxE" data-src="//www.youtube-nocookie.com/embed/kkHyUX40NxE?rel=0&amp;wmode=transparent"><span class="video-length" area-label="video length in minutes">3:45</span><img src="files/video-3.jpg" alt="description of video"></a>    
       <div class="card-section">
         <h4 class="card-title">Avoiding Mortgage Fraud</h4>
         <p class="card-subtitle">McLean ,VA</p>
@@ -1761,15 +1771,15 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
 
 ## People Cards
 
-- If the cards have the same background as the content contaienr they are in, add no extra color class.
+- If the cards have the same background as the content container they are in, add no extra color class.
 - If the cards should have a white background (when displayed on a darker color) add class `.background-white` to each card.
 - If the cards should have a gray background (when displayed on a white background) add class `.background-gray` to each card.
 
 ```html_example
 <div class="row small-up-1 medium-up-2 large-up-4" data-equalizer data-equalize-by-row="true">
   <div class="column">
-    <div class="card"  data-equalizer-watch>
-      <img alt="photo of Donald Layton" src="/images/exec_donald_layton.jpg">
+    <div class="card" data-equalizer-watch>
+      <img alt="photo of Donald Layton" src="files/exec_donald_layton.jpg">
       <div class="card-section text-center">
         <p class="card-title"><strong>Donald H. Layton</strong></p>
         <p class="card-subtitle">Chief Executive Officer</p>
@@ -1777,8 +1787,8 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
     </div>
   </div>
   <div class="column">
-    <div class="card"  data-equalizer-watch>
-      <img alt="photo of David Brickman" src="/images/exec_david_brickman.jpg">
+    <div class="card" data-equalizer-watch>
+      <img alt="photo of David Brickman" src="files/exec_david_brickman.jpg">
       <div class="card-section text-center">
         <p class="card-title"><strong>David M. Brickman</strong></p>
         <p class="card-subtitle">Executive Vice President, Multifamily Business</p>
@@ -1786,8 +1796,8 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
     </div>
   </div>
   <div class="column">
-    <div class="card"  data-equalizer-watch>
-      <img alt="photo of James Mackey" src="/images/exec_james_mackey.jpg">
+    <div class="card" data-equalizer-watch>
+      <img alt="photo of James Mackey" src="files/exec_james_mackey.jpg">
       <div class="card-section text-center">
         <p class="card-title"><strong>James G. Mackey</strong></p>
         <p class="card-subtitle">Executive Vice President and Chief Financial Officer</p>
@@ -1795,8 +1805,8 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
     </div>
   </div>
   <div class="column">
-    <div class="card"  data-equalizer-watch>
-      <img alt="photo of Dwight Robinson" src="/images/exec_dwight_robinson.jpg">
+    <div class="card" data-equalizer-watch>
+      <img alt="photo of Dwight Robinson" src="files/exec_dwight_robinson.jpg">
       <div class="card-section text-center">
         <p class="card-title"><strong>Dwight Robinson</strong></p>
         <p class="card-subtitle">Senior Vice President of Human Resources, Diversity &amp; Inclusion and Chief Diversity Officer</p>
@@ -1812,14 +1822,14 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
 
 ## Featured Blogs
 
-On the blog landing page, the first 2 entries are featured with large images and different styling to make them more prominent.
+On the blog landing page, the first 2 entries are featured with large images and different styling to make them more prominent.  The featured posts are generated dynamically.
 
 ```html_example
 <div class="row large-up-2">
   <div class="column">
     <div class="card feature-block">
-      <a href="/corporate/blog-detail.html" class="overlay overlay-dark">
-        <img src="/images/blog/feature-1.jpg" alt="Blog Img"/>
+      <a href="#" class="overlay overlay-dark">
+        <img src="files/feature-1.jpg" alt="Blog Img"/>
         <div class="overlay-contents">
           <div class="article-date-lg">October 18, 2016</div>
           <h3 class="subtitle">Baby Boomer Myths: Up-Close and Personal with Sean Becketti, Chief Economist</h3>
@@ -1830,8 +1840,8 @@ On the blog landing page, the first 2 entries are featured with large images and
   </div>
   <div class="column">
     <div class="card feature-block">
-      <a href="/corporate/blog-detail.html" class="overlay overlay-dark">
-        <img src="/images/blog/feature-2.jpg" alt="Blog Img"/>
+      <a href="#" class="overlay overlay-dark">
+        <img src="files/feature-2.jpg" alt="Blog Img"/>
         <div class="overlay-contents">
           <div class="article-date-lg">Oct 13, 2016</div>
           <h3 class="subtitle">Don't Be Spoofed</h3>
@@ -1847,12 +1857,14 @@ On the blog landing page, the first 2 entries are featured with large images and
 
 ## Featured Perspectives
 
+On the perspectives landing page, the first 2 entries are featured with large images and different styling to make them more prominent. The featured posts are generated dynamically.
+
 ```html_example
 <div class="row xlarge-up-2">
   <div class="column">
     <div class="card feature-block">
-      <a href="/corporate/perspectives-detail.html" class="overlay overlay-gradient">
-        <img src="/images/perspectives/gilmore-lg.jpg" alt="Yvette Gilmore"/>
+      <a href="#" class="overlay overlay-gradient">
+        <img src="files/gilmore-lg.jpg" alt="Yvette Gilmore"/>
         <div class="overlay-contents">
           <div class="article-date-lg">August 22, 2016</div>
           <h3 class="subtitle">The New Normal: Servicing in a Post-Crisis World</h3>
@@ -1864,8 +1876,8 @@ On the blog landing page, the first 2 entries are featured with large images and
   </div>
   <div class="column">
     <div class="card feature-block">
-      <a href="/corporate/perspectives-detail.html" class="overlay overlay-gradient">
-        <img src="/images/perspectives/hanson-lg.jpg" alt="Mark Hanson"/>
+      <a href="#" class="overlay overlay-gradient">
+        <img src="files/hanson-lg.jpg" alt="Mark Hanson"/>
         <div class="overlay-contents">
           <div class="article-date-lg">Jul 11, 2016</div>
           <h3 class="subtitle">The Single Security: Testing the Pipes</h3>
@@ -1908,13 +1920,13 @@ All items in the tertiary nav (including the heading) should be linked.  Add cla
 <div class="two-column-layout content-band">
   <div class="row two-column-row"> 
     <aside class="column">
-      <div class="tertiary-nav">
+      <div class="tertiary-nav demo">
         <h2><a href="#">Level Two Link</a></h2> 
         <nav>
           <ul class="no-bullet">
-            <li><a href="#">Level Three Link</a>
-              <ul class="no-bullet">
-                <li><a href="/styleguide/styleguide_corp.html">Level Four Link</a></li>
+            <li class="parent data-expanded"><a class="active" href="#">Level Three Link</a>
+              <ul class="no-bullet" style="display: block !important;">
+                <li><a href="#">Level Four Link</a></li>
                 <li><a href="#">Level Four Link</a></li>
               </ul> 
             </li>
@@ -1927,103 +1939,6 @@ All items in the tertiary nav (including the heading) should be linked.  Add cla
     </aside>
   </div>
 </div>
-
-
-
-# Embedded Objects
-
-To make sure embedded content maintains its aspect ratio as the width of the screen changes, wrap the `iframe`, `object`, `embed`, or `video` in a container with the `.responsive-embed` class.  Add the attribute `allowfullscreen` to the iframe.
-
-For Youtube videos, make sure you include `?rel=0&amp;wmode=transparent` at the end of the url to disable the related videos and to prevent conflict with overlays/drop downs on out site.
-
-```html_example
-<div class="row">
-  <div class="columns medium-6 end">
-    <div class="responsive-embed">
-      <iframe width="420" height="315" src="https://www.youtube.com/embed/mM5_T-F1Yn4?rel=0&amp;wmode=transparent" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </div>
-</div>
-```
-
----
-
-## Aspect Ratios
-
-Add ratio classes to change the aspect ratio of responsive embeds. The default ratio is 4:3. The `.widescreen` class will change the container's aspect ratio to 16:9.
-
-Currently, these ratio classes exist:
-
-- default: 4 by 3
-- widescreen: 16 by 9
-- square: 1 by 1
-- portrait:1 by 2
-- tall: 1 by 3
-
-
-```html_example
-<div class="row">
-  <div class="columns medium-7 end">
-    <div class="responsive-embed widescreen">
-      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/tCg9285bJnY?rel=0&amp;wmode=transparent" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </div>
-</div>
-```
-
----
-
-## Iframes
-
-Any iframe wider than 300px will need to be responsive as well, otherwise the content can run off the screen on mobile, or may overlap the sidebar at in between sizes.  
-
-```html_example
-<div class="row">
-  <div class="columns medium-7 end">
-    <div class="responsive-embed">
-      <iframe src="http://investor.shareholder.com/fre/stocklookup.cfm" allowfullscreen="" frameborder="0" height="450" width="600"></iframe>
-    </div> 
-  </div>
-</div>
-```
-
-
-
-# Tableau Visuals
-
-Tableau visuals are often too large to be interacted with on a phone, or they require too much data/memory for some phones to be able to fully build out an embedded visual.  For tableau, the best choice is to only load the visual when the container is wide enough to hold it.
-
-- Create a custom container for the visual.
-- Include a static image of the visual (if you look at the `static_image` value in the embed function, you can get the url of an image of the visual) that is linked to the Tableau visual.
-- Add class `.overflow-horizontal` to the custom container to allow a horizontal scrollbar to display when the screen is narrower than the visual.  
-- Add custom javascript that tests that container's width before loading the visual.  <br>In this example, I've set the visual to display above 650 pixels, even though the visual is wider. There is a sideways scroll, but it is still usable because all the interactions are toe the left side.  Use your own judgement on when a visual is at a usable width.
-- You can omit the `<noscript>` portion of the embed code. Since it is being inserted via javscript, it will never display.
-
-```html_example
-<div class="row jut">
-  <div class="columns large-10 end">
-    <div id="tableau-viz" class="overflow-horizontal">
-      <p>
-        <a href="http://public.tableau.com/views/InvestmentIndex2016Q3/Dashboard1?:embed=n&:loadOrderID=0&:display_count=yes">
-          <img alt="Dashboard 1" src="https://public.tableau.com/static/images/In/InvestmentIndex2016Q3/Dashboard1/1_rss.png" />
-        </a>
-      </p>
-    </div>
-  </div>
-</div>
- 
-<script type="text/javascript"> 
-// -----  this script would go in the custom js field ----- //
-function loadVis() {
-  if ($('#tableau-viz').width() > 650) { 
-    $.getScript("https://public.tableau.com/javascripts/api/viz_v1.js");
-    $("#tableau-viz").html("<div class='tableauPlaceholder' id='viz1482244640310' style='position: relative'><object class='tableauViz' width='854' height='1169' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='InvestmentIndex2016Q3&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;In&#47;InvestmentIndex2016Q3&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>");
-  }
-}
-
-window.onload = loadVis;
-</script>
-```
 
 
 
@@ -2085,7 +2000,7 @@ If a sidebar contains multiple calls-to-action, set one button to be the `.prima
               <h2 class="sidebar-title">Connect with Us</h2>
               <p>Sign up to get the latest <strong>Lorem Ipsum updates</strong> in your inbox.</p>      
             </div>
-            <p><a class="primary button" href="#">CTA</a> <a class="hollow button" href="#">CTA</a></p>
+            <p><a class="primary button" href="#">Subscribe</a> <a class="hollow button" href="#">Unsubscribe</a></p>
           </div>
         </div>
       </section>
@@ -2144,7 +2059,7 @@ For divided list items, include these classes on the `ul` tags: `.no-bullet`, `.
   <div class="row two-column-row"> 
     <aside class="column">
       <section class="sidebar background-primary sidebar-feature">
-        <div class="feature-background" style="background-image: url('/images/feature-bg.jpg')"></div>
+        <div class="feature-background" style="background-image: url('files/feature-bg.jpg')"></div>
         <div class="row">
           <div class="sidebar-txt">
             <p class="article-category">Insight <span class="weight-light">| November 30, 2016</span></p>
@@ -2155,7 +2070,7 @@ For divided list items, include these classes on the `ul` tags: `.no-bullet`, `.
         </div>
       </section>
       <section class="sidebar background-purple sidebar-feature">
-        <div class="feature-background" style="background-image: url('/images/research/featured-background.jpg')"></div>
+        <div class="feature-background" style="background-image: url('files/featured-background.jpg')"></div>
         <div class="row">
           <div class="column">
             <div class="sidebar-txt">
@@ -2191,7 +2106,7 @@ Refer to the Media Object section for more details about this markup.
               <li class="media-object image1-leads-blurb2">
                 <div class="media-object-section">  
                   <a class="overlay" href="#">
-                    <img src="/images/blog/post-1.jpg" alt="Post Img" />
+                    <img src="files/post-1.jpg" alt="Post Img" />
                   </a>
                 </div>
                 <div class="media-object-section">
@@ -2203,7 +2118,7 @@ Refer to the Media Object section for more details about this markup.
               <li class="media-object image1-leads-blurb2">
                 <div class="media-object-section">  
                   <a class="overlay" href="#">
-                    <img src="/images/blog/post-2.jpg" alt="Post Img" />
+                    <img src="files/post-2.jpg" alt="Post Img" />
                   </a>
                 </div>
                 <div class="media-object-section">  
@@ -2215,7 +2130,7 @@ Refer to the Media Object section for more details about this markup.
               <li class="media-object image1-leads-blurb2">
                 <div class="media-object-section">
                   <a class="overlay" href="#">
-                    <img src="/images/blog/post-3.jpg" alt="Post Img" />
+                    <img src="files/post-3.jpg" alt="Post Img" />
                   </a>
                 </div>
                 <div class="media-object-section">
@@ -2346,6 +2261,14 @@ Make forms easy to use with the following rules:
 
 ---
 
+## Form Validation ##
+
+<p>Validation is done through the <a href="styleguide_abide.html">Abide</a> form validation library.</p>
+
+<p><a class="button primary large" href="styleguide_abide.html">Learn About Form Validation</a></p>
+
+---
+
 ## Form Layouts
 
 Form elements are styled based on their type attribute rather than a class. Inputs have another major advantage — they are full width by default. That means that inputs will run as wide as the column that contains them. However, you have two options which make these forms extremely versatile:
@@ -2389,12 +2312,12 @@ Form elements are styled based on their type attribute rather than a class. Inpu
   <div class="row">
     <div class="small-12 column">
       <label for="">Select Box</label>
-      <select>
+      <select aria-describedby="helpText2">
         <option value="good">Good</option>
         <option value="better">Better</option>
         <option value="best">Best</option>
       </select> 
-      <p class="help-text" id="">Browsers apply their own design to the drop down on select boxes.</p>
+      <p class="help-text" id="helpText2">Browsers apply their own design to the drop down on select boxes.</p>
     </div>
   </div>
   <div class="row"> 
@@ -2675,7 +2598,7 @@ Once you put it all together, here's what you get for standard horizontal tabs!
     </div>
     <div class="tabs-panel" id="panelh4">
       <p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
-      <p><img src="/images/blog/fm_blog_usda_returns.jpg" alt="Harp - act now!"></p>
+      <p><img src="files/kitten160.jpg" alt="kitty"></p>
     </div>
   </div>
 </div>
@@ -2777,7 +2700,7 @@ Once you put it all together, here's what you get for vertical tabs!
       </div>
       <div class="tabs-panel" id="panel3vB">
         <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
-        <img src= "/images/sean_becketti_md.jpg" alt="sean Becketti">
+        <img src= "files/kitten160.jpg" alt="cat">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <div class="clearfix"></div>
@@ -3198,8 +3121,8 @@ A standard modal dialog is just an empty container, so you can put any kind of c
               <h2 id="Modal1-label">Modal Label</h2>
             </div>
               <p>I can contain a callout with a white background to great a framed area.</p>
-              <p>I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
-              <img src="/images/styleguide/kitten160.jpg" alt="kitty">
+              <p>I can contain any normal markup, from <a href="#">links</a> and images, to a responsive grid of items. </p>
+              <img src="files/kitten160.jpg" alt="kitty">
           </div>
         </div>
       </div>
@@ -3215,8 +3138,8 @@ A standard modal dialog is just an empty container, so you can put any kind of c
             </div>
             <div class="callout xlarge background-white">
               <p>I can contain a callout with a white background to great a framed area.</p>
-              <p>I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
-              <img src="/images/styleguide/kitten160.jpg" alt="kitty">
+              <p>I can contain any normal markup, from <a href="#">links</a> and images, to a responsive grid of items. </p>
+              <img src="files/kitten160.jpg" alt="kitty">
             </div>
           </div>
         </div>
@@ -3237,8 +3160,8 @@ A standard modal dialog is just an empty container, so you can put any kind of c
             </div>
             <div class="callout xlarge background-white">
               <p>I can contain a callout with a white background to great a framed area.</p>
-              <p>I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
-              <img src="/images/styleguide/kitten160.jpg" alt="kitty">
+              <p>I can contain any normal markup, from <a href="#">links</a> and images, to a responsive grid of items. </p>
+              <img src="files/kitten160.jpg" alt="kitty">
             </div>
           </div>
         </div>
@@ -3253,8 +3176,8 @@ A standard modal dialog is just an empty container, so you can put any kind of c
             <div class="modal-header">
               <h2 id="Modal4-label">Modal Label</h2>
             </div>
-            <p>I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
-            <img src="/images/styleguide/kitten160.jpg" alt="kitty">
+            <p>I can contain any normal markup, from <a href="#">links</a> and images, to a responsive grid of items. </p>
+            <img src="files/kitten160.jpg" alt="kitty">
           </div>
         </div>
       </div>
@@ -3266,8 +3189,8 @@ A standard modal dialog is just an empty container, so you can put any kind of c
         <div class="modal-header">
           <h2 id="Modal5-label">Modal Label</h2>
         </div>
-        <p>I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
-        <img src="/images/styleguide/kitten160.jpg" alt="kitty">
+        <p>I can contain any normal markup, from <a href="#">links</a> and images, to a responsive grid of items. </p>
+        <img src="files/kitten160.jpg" alt="kitty">
       </div>
     </div>
   </li>
@@ -3277,8 +3200,8 @@ A standard modal dialog is just an empty container, so you can put any kind of c
         <div class="modal-header">
           <h2 id="Modal6-label">Modal Label</h2>
         </div>
-        <p>I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
-        <img src="/images/styleguide/kitten160.jpg" alt="kitty">
+        <p>I can contain any normal markup, from <a href="#">links</a> and images, to a responsive grid of items. </p>
+        <img src="files/kitten160.jpg" alt="kitty">
       </div>
     </div>
   </li>
@@ -3288,8 +3211,8 @@ A standard modal dialog is just an empty container, so you can put any kind of c
         <div class="modal-header">
           <h2 id="Modal7-label">Modal Label</h2>
         </div>
-        <p>I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
-        <img src="/images/styleguide/kitten160.jpg" alt="kitty">
+        <p>I can contain any normal markup, from <a href="#">links</a> and images, to a responsive grid of items. </p>
+        <img src="files/kitten160.jpg" alt="kitty">
       </div>
   </li>
 </ol>
@@ -3377,13 +3300,13 @@ Image modals are intended to contain ONLY an image and a optional caption -- if 
 
 ```html_example
 <ul>
-  <li><a data-open="exampleModalE" href="/images/styleguide/bigkitty.jpg" aria-controls="exampleModalE">View an image modal</a>.</li>
+  <li><a data-open="exampleModalE" href="files/bigkitty.jpg" aria-controls="exampleModalE">View an image modal</a>.</li>
 </ul>
 
 <div class="reveal overlay-image" id="exampleModalE" data-reveal>
   <div class="modal-content">
     <figure>
-      <img src="/images/styleguide/bigkitty.jpg" alt="kitty">
+      <img src="files/bigkitty.jpg" alt="kitty">
       <figcaption>What a pretty kitty!</figcaption>
     </figure>
   </div>
@@ -3391,13 +3314,13 @@ Image modals are intended to contain ONLY an image and a optional caption -- if 
 
 <ul>
   <li>View an image modal by clicking the following image.<br><a data-open="exampleModalF" class="modal-launch"
-  href="/images/styleguide/kitty1600.jpg" aria-controls="exampleModalF"><img src="/images/styleguide/kitten160.jpg" alt="kitty"></a></li>
+  href="files/kitty1600.jpg" aria-controls="exampleModalF"><img src="files/kitten160.jpg" alt="kitty"></a></li>
 </ul>
 
 <div class="reveal overlay-image" id="exampleModalF" data-reveal>
   <div class="modal-content">
     <figure>
-      <img src="/images/styleguide/kitty1600.jpg" alt="kitty">
+      <img src="files/kitty1600.jpg" alt="kitty">
       <figcaption>Who Doesn't Love Kitties?</figcaption>
     </figure>
   </div>
@@ -3417,11 +3340,11 @@ Combine the concept of the nested modal with the image modal to achieve an image
 
 ```html_example
 <ul>
-  <li><a data-open="galleryModalA" aria-controls="galleryModalA" href="/images/styleguide/plant1.jpg">View a modal</a> that launches an image gallery</li>
+  <li><a data-open="galleryModalA" aria-controls="galleryModalA" href="files/plant1.jpg">View a modal</a> that launches an image gallery</li>
 </ul>
 <ul>
   <li>View the same gallery, launched from an image instead<br>
-  <a class="modal-launch" data-open="galleryModalA" aria-controls="galleryModalA" href="/images/styleguide/plant1.jpg"><img src="/images/styleguide/plant1-thumb.jpg" alt="flowers"></a></li>
+  <a class="modal-launch" data-open="galleryModalA" aria-controls="galleryModalA" href="files/plant1.jpg"><img src="files/plant1-thumb.jpg" alt="flowers"></a></li>
 </ul>
 
 
@@ -3429,7 +3352,7 @@ Combine the concept of the nested modal with the image modal to achieve an image
 <div class="reveal overlay-gallery" rel="gallery1" id="galleryModalA" data-reveal>
   <div class="modal-content">
     <figure>
-      <img src="/images/styleguide/plant1.jpg" alt="plant 1">
+      <img src="files/plant1.jpg" alt="plant 1">
       <figcaption>Default - center aligned caption.</figcaption>
     </figure>
   </div>
@@ -3439,7 +3362,7 @@ Combine the concept of the nested modal with the image modal to achieve an image
 <div class="reveal overlay-gallery" rel="gallery1" id="galleryModalB" data-reveal>
   <div class="modal-content">
     <figure>
-      <img src="/images/styleguide/plant2.jpg" alt="plant 2">
+      <img src="files/plant2.jpg" alt="plant 2">
       <figcaption><p class="text-left">Left-aligned caption.</p><p class="text-left">With more than one paragraph.</p></figcaption>
     </figure>
   </div>
@@ -3449,7 +3372,7 @@ Combine the concept of the nested modal with the image modal to achieve an image
 <div class="reveal overlay-gallery" rel="gallery1" id="galleryModalC" data-reveal>
   <div class="modal-content">
     <figure>
-      <img src="/images/styleguide/plant3.jpg" alt="plant 3">
+      <img src="files/plant3.jpg" alt="plant 3">
       <figcaption>
         <p class="text-left show-for-medium">The lights burn blue. It is now dead midnight.</p>
       </figcaption>
@@ -3461,7 +3384,7 @@ Combine the concept of the nested modal with the image modal to achieve an image
 <div class="reveal overlay-gallery" rel="gallery1" id="galleryModalD" data-reveal>
   <div class="modal-content">
     <figure>
-      <img src="/images/styleguide/plant4.jpg" alt="plant 4">
+      <img src="files/plant4.jpg" alt="plant 4">
       <figcaption>This caption is longer than the others to show how things look when the caption is very long, and it contains a <a href="#">hyperlink</a> and formatting such as  <em>emphasis</em> and <strong>strong</strong>, so we can see how they look in a caption.
       </figcaption>
     </figure>
@@ -3511,28 +3434,28 @@ To select a specific background, include `.background-xxx` class (where xxx is g
     <li class="orbit-slide background-yellow">
       <div>
         <h3>Slide One</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <p class="text-right"><a class="button hollow">Button Link</a></p>
       </div>
     </li>
     <li class="orbit-slide background-green">
       <div>
         <h3>Slide Two</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <p class="text-center"><a class="button hollow">Button Link</a></p>
       </div>
     </li>
     <li class="orbit-slide background-orange">
       <div>
         <h3>Slide Three</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <p class="text-right"><a class="button hollow large">Button Link</a></p>
       </div>
     </li>
     <li class="orbit-slide background-red">
       <div>
         <h3>Slide Four</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <ul>
         <li>Duis aute irure dolor in reprehenderit in voluptate.</li>
         <li>Velit esse cillum dolore eu fugiat nulla pariatur.</li>
@@ -3543,27 +3466,27 @@ To select a specific background, include `.background-xxx` class (where xxx is g
     <li class="orbit-slide background-purple">
       <div>
         <h3>Slide Five</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <p class="text-right"><a class="button hollow">Button Link</a></p>
       </div>
     </li>
     <li class="orbit-slide background-blue">
       <div>
         <h3>Slide Six - Example Without a Button</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
     </li>
     <li class="orbit-slide background-teal">
       <div>
         <h3>Slide Seven</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
         <p class="text-right"><a class="button hollow">Button Link</a></p>
       </div>
     </li>
     <li class="orbit-slide background-gray">
       <div>
         <h3>Slide Nine</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <p class="text-right"><a class="button hollow">Button Link</a></p>
       </div>
     </li>
@@ -3589,19 +3512,19 @@ For an image carousel, each `orbit-slide` contains a `figure`, with an `img` and
       <ul class="orbit-container">
         <li class="orbit-slide">
           <figure>
-            <img class="full" src="/images/styleguide/plant1.jpg" alt="plant 1">
+            <img class="full" src="files/plant1.jpg" alt="plant 1">
             <figcaption>Default - center aligned caption.</figcaption>
           </figure>
         </li>
         <li class="orbit-slide">
           <figure>
-            <img class="full" src="/images/styleguide/plant2.jpg" alt="plant 2">
+            <img class="full" src="files/plant2.jpg" alt="plant 2">
             <figcaption><p class="text-left">Left-aligned caption.</p><p class="text-left">With more than one paragraph.</p></figcaption>
           </figure>
         </li>
         <li class="orbit-slide">
           <figure>
-            <img class="full" src="/images/styleguide/plant3.jpg" alt="plant 3">
+            <img class="full" src="files/plant3.jpg" alt="plant 3">
             <figcaption>
               <p class="text-left show-for-medium">(example below is how a blockquote would appear - borrowed the idea from My Home.) </p>
               <blockquote>
@@ -3613,7 +3536,7 @@ For an image carousel, each `orbit-slide` contains a `figure`, with an `img` and
         </li>
         <li class="orbit-slide">
           <figure>
-            <img class="full" src="/images/styleguide/plant4.jpg" alt="plant 4">
+            <img class="full" src="files/plant4.jpg" alt="plant 4">
             <figcaption>This caption is longer than the others to show how things look when the caption is very long, and it contains a <a href="#">hyperlink</a> and formatting such as  <em>emphasis</em> and <strong>strong</strong>, so we can see how they look in a caption. </figcaption>
           </figure>
         </li>
@@ -3648,19 +3571,19 @@ Below is an example of the same image carousel shown above, but with a fade-in/f
       <ul class="orbit-container">
         <li class="orbit-slide">
           <figure>
-            <img class="full" src="/images/styleguide/plant1.jpg" alt="plant 1">
+            <img class="full" src="files/plant1.jpg" alt="plant 1">
             <figcaption>Default - center aligned caption.</figcaption>
           </figure>
         </li>
         <li class="orbit-slide">
           <figure>
-            <img class="full" src="/images/styleguide/plant2.jpg" alt="plant 2">
+            <img class="full" src="files/plant2.jpg" alt="plant 2">
             <figcaption><p class="text-left">Left-aligned caption.</p><p class="text-left">With more than one paragraph.</p></figcaption>
           </figure>
         </li>
         <li class="orbit-slide">
           <figure>
-            <img class="full" src="/images/styleguide/plant3.jpg" alt="plant 3">
+            <img class="full" src="files/plant3.jpg" alt="plant 3">
             <figcaption>
               <p class="text-left show-for-medium">(example below is how a blockquote would appear - borrowed the idea from My Home.) </p>
               <blockquote>
@@ -3672,7 +3595,7 @@ Below is an example of the same image carousel shown above, but with a fade-in/f
         </li>
         <li class="orbit-slide">
           <figure>
-            <img class="full" src="/images/styleguide/plant4.jpg" alt="plant 4">
+            <img class="full" src="files/plant4.jpg" alt="plant 4">
             <figcaption>This caption is longer than the others to show how things look when the caption is very long, and it contains a <a href="#">hyperlink</a> and formatting such as  <em>emphasis</em> and <strong>strong</strong>, so we can see how they look in a caption. </figcaption>
           </figure>
         </li>
@@ -3703,13 +3626,13 @@ There is an additional class `stacked-for-small` that overrides the ratio betwee
 
 ## Image leading Blurb 1:3 ratio
 
-In the example, the first is not stacked for small sizes, but the second version is.  These are often used inside a list container, where each media object is an `<li>` in a longer list.
+In the example, the first is not stacked for small sizes, but the second version is. (You can view the difference by resizing your browser to it is less than 580px wide). These are often used inside a list container, where each media object is an `<li>` in a longer list.
 
 ```html_example
 <div class="media-object image1-leads-blurb3">
   <div class="media-object-section text-center">  
     <a class="overlay" href="#">
-      <img src="/images/about/AutismRibbon.jpg" alt="Autism Ribbon" />
+      <img src="files/ribbon.jpg" alt="Autism Ribbon" />
     </a>
   </div>
   <div class="media-object-section">
@@ -3720,7 +3643,7 @@ In the example, the first is not stacked for small sizes, but the second version
 <div class="media-object image1-leads-blurb3 stack-for-small">
   <div class="media-object-section text-center">  
     <a class="overlay" href="#">
-      <img src="/images/about/AutismRibbon.jpg" alt="Autism Ribbon" />
+      <img src="files/ribbon.jpg" alt="Autism Ribbon" />
     </a>
   </div>
   <div class="media-object-section">
@@ -3744,7 +3667,7 @@ These are often used inside a list container, where each media object is an `<li
     <p>According to the common wisdom, Baby Boomers — like Peter Pan — refuse to grow older. Instead of retiring, they launch second — and third — careers. Instead of moving to seniors-oriented communities, they “age-in-place” or, even better, move into the heart of a walkable city. Human interest stories in the Sunday papers claim that 70 is the new 40 and 60 still has bad skin and trouble talking to girls. These clichés make great copy, but how accurate are they?  <a href="#">More</a></p>
   </div>
   <div class="media-object-section">
-    <a class="overlay" href="#"><img src="/images/research/201607-insight-exhibit_09_and_10_sm.jpg"></a>
+    <a class="overlay" href="#"><img src="files/insight-chart.jpg"></a>
   </div>
 </li>
 ```
@@ -3755,11 +3678,11 @@ These are often used inside a list container, where each media object is an `<li
 
 These are often used inside a sidebar list to contain its width, where each media object is an `<li>` in a longer list.   
 
-```html_example
+```html
 <div class="media-object image1-leads-blurb2">
   <div class="media-object-section">  
     <a class="overlay" href="#">
-      <img src="/images/blog/post-1.jpg" alt="image description" />
+      <img src="files/post-1.jpg" alt="image description" />
     </a>
   </div>
   <div class="media-object-section">
@@ -3769,6 +3692,22 @@ These are often used inside a sidebar list to contain its width, where each medi
   </div>
 </div>
 ```
+
+<div class="row gutter-bottom">
+  <div class="column medium-6 large-5 xlarge-4 end">
+    <div class="media-object image1-leads-blurb2">
+      <div class="media-object-section">  
+        <a class="overlay" href="#">
+          <img src="files/hanson-sm.jpg" alt="image description" />
+        </a>
+      </div>
+      <div class="media-object-section">
+        <div class="article-date">May 9, 2016</div>
+        <h3 class="sidebar-headline"><a href="#">Homework and a Home Purchase</a></h3>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
@@ -3828,7 +3767,7 @@ Avoid using the same background color for the prefooter as you do for the last s
 
 # Footer
 
-**Note:** The footer will automatically be inserted via the template - do not include this code in your page.
+**Note:** The footer will automatically be inserted via the template - and will be unique for each of the 4 business lines. Do not include this code in your page.
 
 ```html_example
 <footer class="footer hide-for-print">
@@ -3836,8 +3775,6 @@ Avoid using the same background color for the prefooter as you do for the last s
 		<div class="footer-top">
         <ul class="no-bullet enlarge">
           <li><a href="#">Careers</a></li>
-          <li><a href="#">Investor Relations</a></li>
-          <li><a href="#">Suppliers</a></li>
           <li><a href="#">Contact Us</a></li>
           <li><span class="show-for-sr">Follow us on social media</span>
             <a aria-label="YouTube" href="https://www.youtube.com/freddiemac" class="connect-link"><svg viewBox="8 8 125 125" xmlns="http://www.w3.org/2000/svg"><path d="M72 14.2C40.1 14.2 14.2 40.1 14.2 72c0 31.9 25.9 57.8 57.8 57.8 31.9 0 57.8-25.9 57.8-57.8C129.9 40.1 104 14.2 72 14.2zM104.4 85c0 4.4-3.6 8.1-8 8.1 0 0-6.9 1-24.7 1 -18 0-24.3-1-24.3-1 -4.4 0-8.1-3.6-8.1-8V58.5c0-4.4 3.6-8 8.1-8 0 0 6.3-1 24.3-1 17.9 0 24.8 1 24.8 1 4.4 0 8 3.6 8 8.1V85z" fill="#fff"/><polygon points="62 84.5 84 71.8 62 59.1 " fill="#fff"/></svg></a>

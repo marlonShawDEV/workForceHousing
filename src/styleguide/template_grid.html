@@ -90,6 +90,9 @@
       font-size: 0.875rem;
       opacity: 0.6;
     }
+    .content-band {
+      margin-top: 0;
+    }
 
     @media screen and (max-width: 35em) {
       #top h1 { float: left; font-size: 20px; }
@@ -99,25 +102,30 @@
      /* from href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css" */
     .hljs{display:block;overflow-x:auto;padding:0.5em;color:#333;background:#f8f8f8;-webkit-text-size-adjust:none}.hljs-comment,.diff .hljs-header{color:#998;font-style:italic}.hljs-keyword,.css .rule .hljs-keyword,.hljs-winutils,.nginx .hljs-title,.hljs-subst,.hljs-request,.hljs-status{color:#333;font-weight:bold}.hljs-number,.hljs-hexcolor,.ruby .hljs-constant{color:#008080}.hljs-string,.hljs-tag .hljs-value,.hljs-doctag,.tex .hljs-formula{color:#d14}.hljs-title,.hljs-id,.scss .hljs-preprocessor{color:#900;font-weight:bold}.hljs-list .hljs-keyword,.hljs-subst{font-weight:normal}.hljs-class .hljs-title,.hljs-type,.vhdl .hljs-literal,.tex .hljs-command{color:#458;font-weight:bold}.hljs-tag,.hljs-tag .hljs-title,.hljs-rule .hljs-property,.django .hljs-tag .hljs-keyword{color:#000080;font-weight:normal}.hljs-attribute,.hljs-variable,.lisp .hljs-body,.hljs-name{color:#008080}.hljs-regexp{color:#009926}.hljs-symbol,.ruby .hljs-symbol .hljs-string,.lisp .hljs-keyword,.clojure .hljs-keyword,.scheme .hljs-keyword,.tex .hljs-special,.hljs-prompt{color:#990073}.hljs-built_in{color:#0086b3}.hljs-preprocessor,.hljs-pragma,.hljs-pi,.hljs-doctype,.hljs-shebang,.hljs-cdata{color:#999;font-weight:bold}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.diff .hljs-change{background:#0086b3}.hljs-chunk{color:#aaa}
     </style>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900' rel='stylesheet' type='text/css'>    
-  </head>
-  <body>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900' rel='stylesheet' type='text/css'>
+    <script>
+    // suppress the code view blocks by default and hide them under a toggle.
+    function codeCollapse(){
+      var $ks = $('#code-content');
+      if ($ks.length) {
+        $ks.find('.ss-code').each(function() {
+          var $code = $(this).find('pre');
 
-    <div id="top" class="page-title">
-      <div class="row column">
-        <form class="form float-right">
-          <select id="ssnav">
-            {{#each pages}}
-              <option value="#{{ anchor }}">{{ title }}</option>
-            {{/each}}
-          </select>
-        </form>
-        <h1>The Grid</h1>
-      </div>
-    </div>
-    
-    <div class="content-band">    
-      <div class="row column" id="code-content">
+          $link = $('<a class="docs-code-toggle" href="javascript:void(0);">&lt; Toggle Code Display &gt;</a>');
+          $link.on('click', function() {
+            $code.slideToggle(250);
+          });
+          $link.insertBefore(this);
+          $code.hide(0);
+        });
+      }
+    }
+    </script>
+  </head>
+  <body>   
+    <div class="content-band"> 
+      <div class="row" id="code-content">
+        <div class="column xlarge-9 xlarge-centered">
           {{#each pages}}
           <div class="ss-section" id="{{ anchor }}">
             <div class="row">
@@ -127,20 +135,16 @@
             </div>
           </div>
           {{/each}}
-       
+        </div>
+      </div>
+      <div class="row">
+        <div class="column xlarge-9 xlarge-centered">
+          <p class="text-center"><a class="button small" href="/styleguide/">Back to Style Guides</a></p>
+        </div>
       </div>
     </div> 
     
     <script src="/js/vendor/jquery-2.1.4.min.js"> </script>
     <script src="/js/app_corp.js"></script>   
-    <script>
-    // suppress the code view blocks by default and hide them under a toggle.
-    $("#ssnav").change(function() { 
-      var x = $(this).val(); 
-      location.hash = '';
-      location.hash = x;
-    }); 
-    </script>
-
   </body>
 </html>

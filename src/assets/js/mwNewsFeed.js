@@ -23,10 +23,21 @@ function getMediaRoomData() {
       console.log(err);
     });
 }
-  
+
+function getInvestorData() {
+  var fallback = '<li><h3 class="article-headline"><a href="http://freddiemac.mwnewsroom.com/">Press Releases</a></h3><p>Read the latest news and information about Freddie Mac\'s business.</p></li>',
+      mwReq = $.getJSON("//freddiemac.mwnewsroom.com/scripts/json/js?cat=investors&max=3", function(data) {
+      useInvestorData(data);         
+  }).fail(function( jqxhr, textStatus, error ) {
+    $('.investor-headlines-container:first').html(fallback);  
+    var err = textStatus + ", " + error;
+    console.log(err);
+  });  
+}
+
 function getHomePageData() {
   var fallback = '<h2 class="homepage-headline icon-chevron-right-circle-blue"><a href="http://freddiemac.mwnewsroom.com/">Press Releases</a></h2><p>Read the latest news and information about Freddie Mac\'s business.</p>',
-      jqxhr = $.getJSON("//freddiemac.mwnewsroom.com/scripts/json/js?max=1", function(data) {
+      mwReq = $.getJSON("//freddiemac.mwnewsroom.com/scripts/json/js?max=1", function(data) {
       useHomePageData(data);
   }).fail(function( jqxhr, textStatus, error ) {
     $('.recent-headline-home:first').html(fallback);   
@@ -34,6 +45,8 @@ function getHomePageData() {
     console.log(err);
   }); 
 }
+
+
 function useMediaRoomData(data) {
   var $html = '', $feature = '', $curr = '', $blurb;
   for (var i = 0,len = data.releases.length; i < len; i++) {
@@ -50,6 +63,16 @@ function useMediaRoomData(data) {
   $('.recent-headlines-container:first').html($html);   
 }
 
+function useInvestorData(data) {
+  var $html = '', $feature = '', $curr = '', $blurb;
+  for (var i = 0,len = data.releases.length; i < len; i++) {
+    $curr = data.releases[i];
+    $blurb = tidyBlurb($curr.intro); 
+    $html += '<li><div class="article-date-lg">' + convertDate($curr.date) + '</div><h3 class="article-headline"><a href="' + $curr.url + '">' + $curr.title + '</a></h3><p>' + $blurb + ' <a href="' + $curr.url + '">More</a></p></li>';    
+  }
+  $('.investor-headlines-container:first').html($html);   
+}
+
 function useHomePageData(data) {
   var $html = '', $curr = '', $blurb;
   for (var i = 0,len = data.releases.length; i < len; i++) {
@@ -62,6 +85,20 @@ function useHomePageData(data) {
   }
 }
 
+
+function dtText(dt) {
+  var  monthNames = ["", "January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"],
+    dtParts = dt.split("/"),      
+    mm = Number(dtParts[0]), 
+    dd = dtParts[1].replace(/^0/, ''),
+    str = monthNames[mm] + " " + dd +", 20" + dtParts[2];
+  return str;
+}
+  
+
+if ($('.investor-headlines-container').length)  {  
+  getInvestorData();
+}
 if ($('.recent-headlines-container').length)  {  
   getMediaRoomData();
 }

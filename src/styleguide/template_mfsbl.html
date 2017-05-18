@@ -1,19 +1,41 @@
-﻿<!doctype html>
-<html lang="en">
+﻿ <!doctype html>
+<html class="no-js" lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Style Guide</title>
-    <meta property="og:type" content="" />
-    <meta property="og:image" content="" />
-    <meta property="og:url" content="" />
-    <meta name="theme-color" content="#88BD45">
-    <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
-    <link rel="icon" type="image/png" href="/images/favicon.png" />
-    <link rel="stylesheet" href="/ss/app_mf_sbl.css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet" />
+    <title>MF SBL Style Guide</title>
+    <link rel="stylesheet" href="/multifamily/new_standard/sbl/app_mf_sbl.css">
+
     <!-- Style guide-specific CSS goes here. -->
     <style>
+      .logo { padding-top: 10px; }  
+      .financeNeeds h3{  color: #88BD45;  }           
+      .difference p {color:#777874;}
+     .box-line {
+       border: 2px solid #CECECE;
+       border-top-width:0; 
+       position: absolute; 
+       top: 0; 
+       left: 0; 
+       height: 224px;
+       width: 100%;
+     } 
+    .page-title {
+  background: #f9f9f9;
+  color: #777874;
+  line-height: 1.2;
+  padding: 44px 0 44px;
+  position: relative; }
+  .page-title p {
+    margin: 0; }
+  .page-title h1 {
+    color: #88BD45;
+    margin: 0.6rem 0;
+padding: 0;    }
+  @media screen and (min-width: 61.25em) {
+    .page-title p, .page-title h1 {
+      max-width: 59%; } }
+
     #top {
       width:100%;
       position:fixed;
@@ -101,10 +123,10 @@
      /* from href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css" */
     .hljs{display:block;overflow-x:auto;padding:0.5em;color:#333;background:#f8f8f8;-webkit-text-size-adjust:none}.hljs-comment,.diff .hljs-header{color:#998;font-style:italic}.hljs-keyword,.css .rule .hljs-keyword,.hljs-winutils,.nginx .hljs-title,.hljs-subst,.hljs-request,.hljs-status{color:#333;font-weight:bold}.hljs-number,.hljs-hexcolor,.ruby .hljs-constant{color:#008080}.hljs-string,.hljs-tag .hljs-value,.hljs-doctag,.tex .hljs-formula{color:#d14}.hljs-title,.hljs-id,.scss .hljs-preprocessor{color:#900;font-weight:bold}.hljs-list .hljs-keyword,.hljs-subst{font-weight:normal}.hljs-class .hljs-title,.hljs-type,.vhdl .hljs-literal,.tex .hljs-command{color:#458;font-weight:bold}.hljs-tag,.hljs-tag .hljs-title,.hljs-rule .hljs-property,.django .hljs-tag .hljs-keyword{color:#000080;font-weight:normal}.hljs-attribute,.hljs-variable,.lisp .hljs-body,.hljs-name{color:#008080}.hljs-regexp{color:#009926}.hljs-symbol,.ruby .hljs-symbol .hljs-string,.lisp .hljs-keyword,.clojure .hljs-keyword,.scheme .hljs-keyword,.tex .hljs-special,.hljs-prompt{color:#990073}.hljs-built_in{color:#0086b3}.hljs-preprocessor,.hljs-pragma,.hljs-pi,.hljs-doctype,.hljs-shebang,.hljs-cdata{color:#999;font-weight:bold}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.diff .hljs-change{background:#0086b3}.hljs-chunk{color:#aaa}
     </style>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900' rel='stylesheet' type='text/css'>  
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900' rel='stylesheet' type='text/css'>    
   </head>
   <body>
-    
+
     <div id="top" class="page-title">
       <div class="row column">
         <form class="form float-right">
@@ -114,12 +136,13 @@
             {{/each}}
           </select>
         </form>
-        <h1>SBL <span class="show-for-medium">Style Guide</span></h1>
+        <h1>MF SBL <span class="show-for-medium">Style Guide</span></h1>
       </div>
     </div>
     
     <div class="content-band">    
-      <div class="row column" id="code-content">
+      <div class="row" id="code-content">
+        <div class="column large-10 large-centered">
           {{#each pages}}
           <div class="ss-section" id="{{ anchor }}">
             <div class="row">
@@ -129,14 +152,13 @@
             </div>
           </div>
           {{/each}}
-       
+        </div>
       </div>
     </div> 
     
-
     <script src="/js/vendor/jquery-2.1.4.min.js"> </script>
-    <script src="/js/app_mf_sbl.js"></script>
-        <script>
+    <script src="/multifamily/new_standard/sbl/app_mf_sbl.js"></script>
+    <script>
     // suppress the code view blocks by default and hide them under a toggle.
     var $ks = $('#code-content');
     if ($ks.length) {
@@ -157,5 +179,8 @@
       location.hash = x;
     }); 
     </script>
+    
+    
+
   </body>
 </html>

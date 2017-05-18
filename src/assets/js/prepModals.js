@@ -8,68 +8,42 @@ function closestBlockParent(item) {
 
 //  prep content for modals by adding buttons
 function preReveal() {
-  //automate insertion of Close Buttons
-  $(".reveal[id][data-reveal]").not('.overlay-gallery, .overlay-image, .overlay-video').each(function(){
+  $(".reveal[id][data-reveal]").not('.overlay-video').each(function(){
     var  obj = $(this), 
     i = obj.attr('id'),
-    btnCloseLg = $("<button />",{
-    "class": "close-button-large",
-    "aria-label": "Close modal",
-    "data-close": "",
-    "type": "button",
-    "html": "<span class='show-for-sr'>Close</span>"
-    });
-    obj.find('.modal-header:first').append(btnCloseLg);
-    obj.attr('data-animation-in', "scale-in-up").attr('data-animation-out', "scale-out-down").addClass('fast');
-  }); 
-}
-
-
-function preRevealImage() {
-  var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth; 
-  if (w <= 470) { return; }
-  $(".reveal[id][data-reveal]").filter('.overlay-image').each(function(){
-    var  obj = $(this), 
-    i = obj.attr('id'),
+    svgClose = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 167.39 167.39"><path fill="#fff" d="M83.7 0a83.7 83.7 0 1 0 83.7 83.7A83.7 83.7 0 0 0 83.7 0zm42.67 127.06a6.13 6.13 0 0 1-8.67-.07l-34-34.55L49.69 127a6.13 6.13 0 1 1-8.74-8.6L75.1 83.7 41 49a6.13 6.13 0 1 1 8.74-8.6L83.7 75l34-34.55a6.13 6.13 0 1 1 8.74 8.6L92.29 83.7l34.14 34.69a6.13 6.13 0 0 1-.06 8.67z"/></svg>',    
     btnClose = $("<button />",{
-    "class": "close-button-medium",
+    "class": "close-button",
     "aria-label": "Close modal",
     "data-close": "",
     "type": "button",
-    "html": "<span class='show-for-sr'>Close</span>"
+    "html": "<span aria-hidden='true'>"+svgClose+"</span>"
     });
-    obj.find('img:first').after(btnClose);
-    obj.attr('data-animation-in', "scale-in-up").attr('data-animation-out', "scale-out-down").addClass('fast');
-    $('a[data-open="'+i+'"][href]').on("click",function(e){ 
-      var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth; 
-      if (w > 470) { e.preventDefault(); }      
-    });    
+    if($(this).filter('.overlay-image, .overlay-gallery').length){  
+      obj.find('img:first').after(btnClose); 
+      $('a[data-open="'+i+'"][href]').on("click",function(e){ e.preventDefault(); });      
+    }
+    else {
+      obj.find('.modal-header:first').append(btnClose);
+    }
+    obj.not('.overlay-gallery').attr('data-animation-in', "scale-in-up").attr('data-animation-out', "scale-out-down").addClass('fast');
   }); 
 }
+
 function preRevealGallery() {
-  //automate insertion of gallery navigation Buttons
-  var galleryRel = [], w = window.innerWidth|| document.documentElement.clientWidth|| document.body.clientWidth; 
-  if (w <= 470) { return; }
+  var galleryRel = [];
   $(".reveal[id][data-reveal]").filter('.overlay-gallery[rel]').each(function(){
     var rel=$(this).attr('rel');
-    if ($.inArray(rel,galleryRel)< 0){galleryRel.push(rel);}
+    if ($.inArray(rel,galleryRel) < 0){galleryRel.push(rel);}
   });
   while (galleryRel.length > 0) {
     var $r = galleryRel.shift(), galleryCount = $(".reveal[id][data-reveal]").filter("[rel=" + $r + "]").length;
     $(".reveal[id][data-reveal]").filter("[rel=" + $r + "]").each(function(x){ 
       var  obj = $(this), 
-      i = obj.attr('id'),
       prevItem = (x == 0) ? (galleryCount - 1) : (x - 1),
       nextItem = (x == galleryCount - 1) ? 0 : (x + 1),
       prevID = $("[rel=" + $r + "]").eq(prevItem).attr('id'),
       nextID = $("[rel=" + $r + "]").eq(nextItem).attr('id'),
-      btnClose = $("<button />",{
-      "class": "close-button-medium",
-      "aria-label": "Close modal",
-      "data-close": "",
-      "type": "button",
-      "html": "<span class='show-for-sr'>Close</span>"
-      }),
       btnPrev = $("<button />",{
         "class": "orbit-previous",
         "aria-hidden": true,
@@ -83,38 +57,35 @@ function preRevealGallery() {
         "html": '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewbox="0 0 24 24"><path d="M4 1h6l10 11-10 11H4l10-11z" fill="#ffffff"/></svg>'
       });
       obj.find('figure').append(btnNext, btnPrev);
-      obj.find('img:first').after(btnClose);
-      $('[data-open="'+i+'"][href]').on("click",function(e){ 
-        var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth; 
-        if (w > 470) { e.preventDefault(); }      
-      });  
+      obj.attr('data-animation-in', "fade-in").attr('data-animation-out', "fade-out").addClass('fast');
     });
   }   
 }
 function preRevealVideo() {  
   var w = window.innerWidth|| document.documentElement.clientWidth|| document.body.clientWidth; 
-  if (w <= 470) { return; }
+  if (w <= 450) { return; }
   $(".video-modal[data-src]").each(function(x){    
     var $lnk = $(this),
     $src = $lnk.attr('data-src'),
     i = 'videoModal' + x,
+    svgClose = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 167.39 167.39"><path fill="#fff" d="M83.7 0a83.7 83.7 0 1 0 83.7 83.7A83.7 83.7 0 0 0 83.7 0zm42.67 127.06a6.13 6.13 0 0 1-8.67-.07l-34-34.55L49.69 127a6.13 6.13 0 1 1-8.74-8.6L75.1 83.7 41 49a6.13 6.13 0 1 1 8.74-8.6L83.7 75l34-34.55a6.13 6.13 0 1 1 8.74 8.6L92.29 83.7l34.14 34.69a6.13 6.13 0 0 1-.06 8.67z"/></svg>',    
     $frameId = 'videoFrame' + x,
     $wrapperClass = $lnk.hasClass('widescreen-video') ?  'responsive-embed widescreen' : 'responsive-embed',
     $parent = closestBlockParent($lnk) || $('body'),
     btnClose = $("<button />",{
-    "class": "close-button-medium",
+    "class": "close-button",
     "aria-label": "Close modal",
     "data-close": "",
     "type": "button",
-    "html": "<span class='show-for-sr'>Close</span>"
+    "html": "<span aria-hidden='true'>"+svgClose+"</span>"
     }),
     modal = $("<div />",{
       "class": "reveal overlay-video fast",
       "data-reveal": "",
       "data-reset-on-close": true,
       "id": i,
-      "data-animation-in" : "scale-in-up",
-      "data-animation-out" : "scale-out-down",
+      "data-animation-in" : "scale-in-down",
+      "data-animation-out" : "scale-out-up",
       "html": '<div class="' + $wrapperClass + '"><iframe id="'+ $frameId +'" frameborder="0" src="" allowfullscreen></iframe></div>'
     });
     $parent.prepend(modal); 
@@ -123,15 +94,17 @@ function preRevealVideo() {
     $('#'+i).on('open.zf.reveal', function(){$('#'+$frameId).attr('src',$src+'&autoplay=1');}).on('closed.zf.reveal', function(){$('#'+$frameId).attr('src','')});
     $('#'+i).on("click",function(){$(this).find('[data-close]').click()});    
     $lnk.on("click",function(e){ 
-      var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth; 
-      if (w > 470) { e.preventDefault(); }      
+      w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth; 
+      if (w > 450) { e.preventDefault(); }      
     });   
   });
 } 
 
-if($(".reveal").length){ preReveal();}
-if($(".overlay-image").length) {preRevealImage();}
+if($(".reveal").length){ 
+  preReveal();
+}
 if($(".overlay-gallery").length){preRevealGallery();}
 if($(".video-modal").length) { preRevealVideo();}
+
 
  

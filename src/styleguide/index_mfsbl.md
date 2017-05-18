@@ -1,29 +1,99 @@
 ﻿
-# The Framework
+# The Templates
 
-<p class="lead">The framework behind our codebase is Foundation.</p>
-
-The Foundation grid uses two key elements: rows and columns. Start by adding an element with a class of `.row`. This will create a horizontal block to contain vertical columns. Then add elements with a `.column` class within that row. Specify the widths of each column with the `.small-#`, `.medium-#`, and `.large-#` classes.
-
-<a class="button tertiary" href="styleguide_grid.html">Learn more about rows and columns</a> 
+Unlike the templates in Teamsite, the MFSBL pages are all free-hand code.  The developer will need to create the approriate containers to house thepage copntents.
 
 ---
 
-## The Templates
+## Framework 
 
-The corporate site has 2 primary templates in Teamsite: Page and Article.  The page article supports both 1- and 2-column layouts and the article template supports only a 2-column layout.
+<p class="lead">The framework behind our codebase is Foundation.</p>
 
-### One Column Content
+The Foundation grid uses two key elements: rows and columns. When you need to create additional columns inside the initial ones added by the template, start by adding an element with a class of `.row`. This will create a horizontal block to contain vertical columns. Then add elements with a `.column` class within that row. Specify the widths of each column with the `.small-#`, `.medium-#`, and `.large-#` classes.
 
-When you are creating a 1-column page using the responsive page template, the markup to create the 1-column band is automatically inserted by the TeamSite template.
+<p><a class="button tertiary large" href="styleguide_grid.html">Learn more about rows and columns</a></p>
 
-```html
-<div class="content-band">
-  <div class="row column">
-      <!-- content area -->
-  </div>
+---
+
+### Framework Breakpoints
+
+There are 5 primary breakpoints for the corporate design.  If you need to write custom css for a page using this design, you will likely need to know these.
+
+| breakpoint | pixels |   ems    | details                      |
+|------------|-------:|---------:|------------------------------|
+| small      | 0px    | 0em      | we set a 350px min-width on the body element. |
+| medium     | 620px  | 38.725em |  |
+| large      | 980px  | 61.25em  |  |
+| xlarge     | 1280px | 80em     |  |
+| xxlarge    | 1500px | 93.75em  |  |
+
+
+### Framework Components
+
+You can find documentation on all that Foundation offers at <a href="http://foundation.zurb.com/sites/docs/">http://foundation.zurb.com/sites/docs/</a>, but be aware that not all components are included in the corporate template build.
+
+The corporate template currently has these Foundation components enabled, disabled, and customized. You should familiarize yourself with the enabled and customized components.
+
+<div class="row">
+<div class="column large-6">
+<h5>Enabled</h5>
+<a href="http://foundation.zurb.com/sites/docs/accordion.html">accordion</a><br>
+<a href="http://foundation.zurb.com/sites/docs/card.html">card</a><br>
+<a href="http://foundation.zurb.com/sites/docs/close-button.html">close-button</a><br>
+<a href="http://foundation.zurb.com/sites/docs/dropdown.html">dropdowns</a><br>
+<a href="http://foundation.zurb.com/sites/docs/equalizer.html">equalizer</a><br>
+<a href="http://foundation.zurb.com/sites/docs/float-classes.html">float-classes</a><br>
+<a href="http://foundation.zurb.com/sites/docs/forms.html">forms</a><br>
+<a href="http://foundation.zurb.com/sites/docs/motion-ui.html">motion-ui</a><br>
+<a href="http://foundation.zurb.com/sites/docs/orbit.html">orbit</a><br>
+<a href="http://foundation.zurb.com/sites/docs/responsive-embed.html">responsive-embed</a><br>
+<a href="http://foundation.zurb.com/sites/docs/responsive-navigation.html#responsive-toggle">responsive title-bar</a><br>
+<a href="http://foundation.zurb.com/sites/docs/toggler.html">toggler</a><br>
+<a href="http://foundation.zurb.com/sites/docs/tooltip.html">tooltip</a><br>
+<a href="http://foundation.zurb.com/sites/docs/top-bar.html">top-bar</a><br>
+<a href="http://foundation.zurb.com/sites/docs/typography-helpers.html">typography helpers</a><br>
+<a href="http://foundation.zurb.com/sites/docs/visibility.html">visibility classes</a><br>
+<br>
+<h5>Customized</h5>
+abide (custom routines and patterns, see <a href="styleguide_abide.html">abide</a>)<br>
+buttons	(styles are different, see <a href="#buttons">buttons</a>)<br>
+callout	(styles are different, see <a href="#callouts">callouts</a>)<br>
+reveal (buttons are automated for you, see <a href="#modals">modals</a>)<br>
+table	(styles are different, see <a href="#data-tables">data tables</a>)
 </div>
-```
+<div class="column large-6">
+<h5>Disabled</h5>
+  <div class="callout background-concrete small">
+  <div>If you need to have a currently disabled component enabled, contact Sherry and Jon so that it can be added to the script bundle and properly styled.</div>
+  </div>  
+accordionMenu <br>
+button-group<br>
+drilldown	<br>
+drilldown-menu	<br>
+dropdown-menu	<br>
+flex-classes	<br>
+flex-grid	<br>
+flex-video<br>
+interchange	<br>
+label	<br>
+magellan	<br>
+media-object <br>
+menu<br>
+offcanvas	<br>
+pagination	<br>
+progress-bar	<br>
+progress-element 	<br>
+range-input	<br>
+responsiveMenu	<br>
+responsiveToggle	<br>
+slider	<br>
+sticky	<br>
+switch	<br>
+tabs<br>
+thumbnail	
+
+</div>
+</div>
 
 
 
@@ -190,7 +260,7 @@ There are several text and typography styles to choose from, although some style
 </div>
 
 ```html_example
-<ul class="accordion-pointer" data-accordion>
+<ul class="accordion" data-accordion>
   <li class="accordion-item" data-accordion-item>
     <a class="accordion-title" href="#typography1" id="typography1-heading" aria-controls="typography1" role="tab">Generic Headings</a>
     <div class="accordion-content" data-tab-content id="typography1" aria-labelledby="typography1-heading" role="tabpanel">
@@ -235,43 +305,6 @@ There are several text and typography styles to choose from, although some style
       </div>
   </li>
   <li class="accordion-item" data-accordion-item>
-    <a class="accordion-title" href="#typography4" id="typography-heading4" aria-controls="typography4" role="tab">Sidebar (aside) classes</a>
-    <div class="accordion-content" data-tab-content id="typography4" aria-labelledby="typography-heading4" role="tabpanel">
-      <p>In addition to these styles, sidebars can also use any of the basic content styles.</p>
-      <hr>
-      <div class="callout">
-        <h3 class="sidebar-title">This is a sidebar-title</h3>
-        <h3 class="sidebar-subtitle">This is a sidebar-subtitle (use in research landing)</h3>
-        <h3 class="sidebar-headline">This is a sidebar-headline</h3>
-      </div>
-    </div>
-  </li>
-  <li class="accordion-item" data-accordion-item>
-    <a class="accordion-title" href="#typography5" id="typography-heading5" aria-controls="typography5" role="tab">Article Promo classes</a>
-    <div class="accordion-content" data-tab-content id="typography5" aria-labelledby="typography-heading5" role="tabpanel">
-      <p>These styles are for article promotions via article lists and cards. These are not for use in actual article content.</p>
-      <hr>
-      <div class="callout">
-      <h5>Article Data for Lists and Cards</h5>
-        <h3 class="article-headline">This is class article-headline (use in news, blog)</h3>
-        <h3 class="card-title-large">This is class card-title-large (variation of above, used for EP cards only)</h3>
-        <div class="article-category">This is class article-category</div>
-        <div class="article-date">This is class article-date (used in blog, perspectives)</div>
-        <div class="article-date-lg">This is class article-date-lg <span class="uppercase"><strong>Partial Uppercase/Strong</strong></span> (used in media, research)</div>
-        <div class="article-date-feature">This is class article-date-feature <span class="uppercase">Partial Uppercase</span> (used in featured blog/EP)</div>
-        <div class="article-byline">This is class article-byline <span class="uppercase">Partial Uppercase</span> <span class="reduce">Partial Reduced</span> (used in featured EP)</div> 
-      </div>
-      <hr>
-      <div class="callout">
-      <h5>Promo Blurbs</h5>
-      <p>These styles are limited just to promo blurbs -- all of these styles <strong>hide</strong> at smallest screen sizes, to allow more room for their accompanying headline.</p> 
-        <div class="article-blurb">This is class article-blurb (used in news, EP).</div>
-        <div class="article-blurb-blog">This is class article-blurb-blog (used only in blog).</div>
-        <div class="article-blurb-lg">This is class article-blurb-lg (used only in featured EP).</div> 
-      </div>
-    </div>
-  </li>
-  <li class="accordion-item" data-accordion-item>
     <a class="accordion-title" href="#typography6" id="typography6-heading" aria-controls="typography6" role="tab">Capitalization</a>
     <div class="accordion-content" data-tab-content id="typography6" aria-labelledby="typography6-heading" role="tabpanel">
       <p>Use these styles when the choice to display some text is merely a stylistic choice. When using these styles, keep your markup in standard case, and use this class to visually change the displayed case.</p>
@@ -280,70 +313,6 @@ There are several text and typography styles to choose from, although some style
       <div class="callout">
         <p><span class="uppercase">This is class uppercase</span>, which makes every letter appear capitalized.</p>
         <p><span class="smallcaps">This is Class smallcaps</span>, which makes every lowercased letter appear as small capital letters.</p>
-      </div>
-    </div>
-  </li>
-  <li class="accordion-item" data-accordion-item>
-    <a class="accordion-title" href="#typography7" id="typography-heading7" aria-controls="typography7" role="tab">Footer Promo classes</a>
-    <div class="accordion-content" data-tab-content id="typography7" aria-labelledby="typography-heading7" role="tabpanel">
-      <p>This style should only be used inside a Footer Promo.</p>
-      <hr>
-      <div class="callout">
-        <div class="callout background-primary footer-promo">
-          <h3 class="callout-footer-title">This is callout-footer-title</h3>
-        </div>  
-      </div>      
-    </div>
-  </li>
-  <li class="accordion-item" data-accordion-item>
-    <a class="accordion-title" href="#typography8" id="typography-heading8" aria-controls="typography8" role="tab">Hero classes</a>
-    <div class="accordion-content" data-tab-content id="typography8" aria-labelledby="typography-heading8" role="tabpanel">
-      <p>These should only be used inside HERO elements.</p>
-      <hr>
-      <div class="callout">
-        <div class="callout background-primary">
-          <div class="hero-date">This is hero-date</div>
-          <h1 class="hero-title">This is hero-title</h1>
-          <div class="hero-subtitle">This is hero-subtitle (homepage only)</div>
-        </div>
-      </div>
-    </div>
-  </li>
-  <li class="accordion-item" data-accordion-item>
-    <a class="accordion-title" href="#typography9" id="typography-heading9" aria-controls="typography9" role="tab">Grid-block classes</a>
-    <div class="accordion-content" data-tab-content id="typography9" aria-labelledby="typography-heading9" role="tabpanel">
-      <p>These are intended for use in the colorful grid layouts like the About page and media resources.  Be careful using them elsewhere, as they have a more dramatic size variation from small screen to large screen than most other text styles.</p>
-      <hr>
-      <div class="callout">
-        <div class="callout background-teal">
-          <p class="grid-block-label">This is grid-block-label</p>
-          <p class="grid-block-title-large">This is grid-block-title-large</p>
-          <p class="grid-block-title">This is grid-block-title</p>
-          <p class="grid-block-title-medium">This is grid-block-title-medium</p>
-          <p class="grid-block-text">This is grid-block-text.</p>
-          <p class="grid-block-text-small">This is grid-block-text-small</p>
-          <p class="stat-lg">This is stat-lg</p>
-          <p class="stat">This is stat</p>
-          <p class="stat-med">This is stat-med</p>
-          <p class="stat-sm">This is stat-sm</p>
-        </div>
-      </div>
-    </div>
-  </li>
-  <li class="accordion-item" data-accordion-item>
-    <a class="accordion-title" href="#typography10" id="typography-heading10" aria-controls="typography10" role="tab">Homepage classes</a>
-    <div class="accordion-content" data-tab-content id="typography10" aria-labelledby="typography-heading10" role="tabpanel">
-      <p>These styles should only be used on the corporate homepage.</p>
-      <hr>
-      <div class="callout">
-        <h2 class="homepage-headline">This is homepage-headline</h2>
-        <h3 class="finance-category">This is finance-category</h3>
-        <h3 class="finance-research-title">This is finance-research-title</h3>
-        <p class="finance-research-category">This is finance-research-category</p>
-        <p class="stat-med">This is stat-med</p>
-        <p class="stat-sm">This is stat-sm</p>
-        <p class="stat-points">This is stat-points</p>
-        <p class="title-testimonial">This is title-testimonial</p>  
       </div>
     </div>
   </li>
@@ -450,7 +419,7 @@ The default text alignment for most containers is left.
 # Lists
 
 ```html_example
-<ul class="accordion-pointer" data-accordion>
+<ul class="accordion" data-accordion>
   <li class="accordion-item" data-accordion-item>
     <a class="accordion-title" href="#lists3" id="list-heading3" aria-controls="lists3" role="tab">Ordered Lists</a>
     <div class="accordion-content" data-tab-content id="lists3" aria-labelledby="list-heading3" role="tabpanel">      
@@ -765,6 +734,14 @@ The default text alignment for most containers is left.
 
 
 
+# Embedded Objects
+
+Embedded objects (iframes, videos, Tableau visuals) were <a href="styleguide_embeds.html">moved to their own page</a> to speed up the load of the initial styleguide. 
+
+<a href="styleguide_embeds.html" class="button tertiary large">Learn about embeds</a>
+
+
+
 # Callouts
 
 <p class="lead">A callout is just a container with a `.callout` class applied. You can put any kind of content inside.</p>
@@ -878,7 +855,7 @@ To make the entire callout clickable, put an anchor tag around the `.callout` co
 ```html_example
 <div class="row">
   <div class="small-8 medium-6 end column">
-    <a href="/"><div class="callout background-blue">
+    <a href="#"><div class="callout background-blue">
     <p>This entire blue callout is inside an anchor tag and becomes 1 big link.</p>
     </div></a>
   </div>
@@ -948,12 +925,12 @@ Refer to <a href="#modals">modals</a> for additional options if you are launchin
 If you need to force an overlay to always be full width, add class `.block` to the `<a>` and class `.full` to the image.
 
 ```html
-<a class="overlay" href="#"><img alt="photo of David Brickman" src="/images/exec_david_brickman.jpg"></a>
+<a class="overlay" href="#"><img alt="photo of David Brickman" src="files/exec_david_brickman.jpg"></a>
 ```
 
 <div class="row">
   <div class="small-6 medium-3 column small-centered">
-    <a class="overlay" href="#"><img alt="photo of David Brickman" src="/images/exec_david_brickman.jpg"></a>
+    <a class="overlay" href="#"><img alt="photo of David Brickman" src="files/exec_david_brickman.jpg"></a>
   </div>
 </div>
 
@@ -1023,11 +1000,13 @@ Use the class `.show-on-focus` to hide an element, except when it has focus. Add
 
 You can change the float behavior of an element by adding the `.float-left` or `.float-right` classes to an element. To clear floats, add the class `.clearfix` to the parent element.
 
+If the container you are floating may wind up touching other content, add `.gutter-left` or `gutter-right` to create the same gap as typically shows between two columns.
+
 
 ```html_example
 <div class="callout clearfix">
-  <a class="button secondary float-left">Left</a>
-  <a class="button secondary float-right">Right</a>
+  <a class="button float-left">Left</a>
+  <a class="button float-right">Right</a>
 </div>
 ```
 
@@ -1035,83 +1014,15 @@ You can change the float behavior of an element by adding the `.float-left` or `
 
 ## Float Center
 
-Okay, it's not *really* a float, but you can add the `.float-center` class to an element to engage the automatic margin centering trick. Note that this will only work on elements with an absolute width or a maximum width that is less than their containing element.
+Okay, it's not *really* a float, but you can add the `.float-center` class to an element to engage the automatic margin centering trick. Note that this will only work on elements with an absolute width or a maximum width that is less than their containing element.  If you just want to center text, use class `.text-center`.
 
 ```html_example
 <div class="gutter-bottom">
-  <img src="/images/blog/fm_blog_usda_returns.jpg" alt="Harp - act now!"  class="float-center">
+  <img src="files/fm_blog_usda_returns.jpg" alt="Harp - act now!"  class="float-center">
 </div>
-```
-
----
-
-## Content Section Floats
-
-There are four options for creating floated content columns within a content area: left and right variations that are proportionate or fixed.  All will only float at medium breakpoint and above -- the content will stack at small screen sizes.  Only use floated containers when ther eis sufficient content to wrap around them -- if there isn't sufficient content use a row that splits content into columns at specific breakpoints to create a similar concept.
-
-### Left Float, Proportionate Width
-
-Use class `.box-left-40` to float content to the left at 40% of the content area's width (content will stack below medium breakpoint).  The floated content can contain a callout, figure, or other design elements.
-
-```html_example
-<p class="lead">Example showing floated element inserted, with floated container set to percentage-based width at medium breakpoint and higher.</p>
-<div class="box-left-40">
-  <div class="callout background-teal">
-    <h3>Related Items</h3>
-    <ul>
-      <li><a href="#">Link to some supporting material</a></li>
-      <li><a href="#">Link to some other supporting material</a></li>
-    </ul>
-  </div>
+<div class="float-center background-green" style="width: 50%; padding: 1rem;">
+<p class="text-center">My container is always half of the available width.</p>
 </div>
-<p>This content comes after a floated container, and thus can wrap around it if needed.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. This content comes after a floated container, and thus can wrap around it if needed.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. This content comes after a floated container, and thus can wrap around it if needed.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-```
-
-### Left Float, Fixed Width 
-
-Use class `.box-left-fixed300` to float content to the left at a fixed width of 300px (content will stack below medium breakpoint).  The floated content can contain a callout, figure, or other design elements.
-
-```html_example
-<p class="lead">Example showing floated element inserted, with floated container set to a fixed-size width at medium breakpoint and higher.</p>
-<div class="box-left-fixed300">
-  <figure>
-    <img src="/images/styleguide/bigkitty.jpg" alt="kitty">
-  </figure>
-</div>
-<p>This content comes after a floated container, and thus can wrap around it if needed.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. This content comes after a floated container, and thus can wrap around it if needed.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. This content comes after a floated container, and thus can wrap around it if needed.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-```
-
-### Right Float, Proportionate Width 
-
-Use class `.box-right-40` to float content to the right at 40% of the content area's width (content will stack below medium breakpoint).  The floated content can contain a callout, figure, or other design elements.
-
-```html_example
-<p class="lead">Example showing floated element inserted, with floated container set to percentage-based width at medium breakpoint and higher.</p>
-<div class="box-right-40">
-  <div class="callout background-yellow">
-    <h3>Related Items</h3>
-    <ul class="list-divided no-bullet">
-      <li><a href="#">Link to some supporting material</a></li>
-      <li><a href="#">Link to some other supporting material</a></li>
-      <li><a href="#">Link to some other supporting material</a></li>
-    </ul>
-  </div>
-</div>
-<p>This content comes after a floated container, and thus can wrap around it if needed.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. This content comes after a floated container, and thus can wrap around it if needed.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. This content comes after a floated container, and thus can wrap around it if needed.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-```
-
-### Right Float, Fixed Width 
-
-Use class `.box-right-fixed300` to float content to the right at a fixed width of 300px (content will stack below medium breakpoint).  The floated content can contain a callout, figure, or other design elements.
-
-```html_example
-<p class="lead">Example showing floated element inserted, with floated container set to a fixed-size width at medium breakpoint and higher.</p>
-<div class="box-right-fixed300">
-  <figure>
-    <img src="/images/styleguide/bigkitty.jpg" alt="kitty">
-  </figure>
-</div>
-<p>This content comes after a floated container, and thus can wrap around it if needed.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. This content comes after a floated container, and thus can wrap around it if needed.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. This content comes after a floated container, and thus can wrap around it if needed.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 ```
 
 
@@ -1136,34 +1047,6 @@ Use default buttons for minor actions like resetting a form or cancelling a requ
 
 ---
 
-## Primary Buttons
-
-Use class `.primary`, for buttons used for primary calls-to-action, like submitting a form.  Use sparingly; there shouldn't be multiple calls-to-action on most web pages.
-
-```html_example
-<p>
-  <a href="#" class="primary large button">Button (large)</a>
-  <a href="#" class="primary button">Button (default)</a>
-  <a href="#" class="primary small button">Button (small)</a>
-</p>
-```
-
----
-
-## Secondary Buttons
-
-Use class `.secondary` for buttons used for less important, secondary actions on a page.
-
-```html_example
-<p>
-  <a href="#" class="secondary large button">Button (large)</a>
-  <a href="#" class="secondary button">Button (default)</a>
-  <a href="#" class="secondary small button">Button (small)</a>
-</p>
-```
-
----
-
 ## Tertiary Buttons
 
 Use class `.tertiary` for buttons for logins.  See below section on buttons with icons to include a padlock.
@@ -1178,49 +1061,18 @@ Use class `.tertiary` for buttons for logins.  See below section on buttons with
 
 ---
 
-## Hollow Buttons
+## Inverted Buttons
 
-Use class `.hollow` for buttons that aren't a call-to-action which are on a dark background, such as in carousels or modals. 
-
-```html_example
-<div class="callout background-purple">
-  <p>
-    <a href="#" class="hollow large button">Button (large)</a>
-    <a href="#" class="hollow button">Button (default)</a>
-    <a href="#" class="hollow small button">Button (small)</a>
-  </p>
-</div>
-<div class="callout background-teal">
-  <p>
-    <a href="#" class="hollow large button">Button (large)</a>
-    <a href="#" class="hollow button">Button (default)</a>
-    <a href="#" class="hollow small button">Button (small)</a>
-  </p>
-</div>
-<div class="callout background-primary">
-  <p>
-    <a href="#" class="hollow large button">Button (large)</a>
-    <a href="#" class="hollow button">Button (default)</a>
-    <a href="#" class="hollow small button">Button (small)</a>
-  </p>
-</div>
-```
-
----
-
-## Buttons with Icons
-
-If your svg icon includes a fill color (as in the third example), it will maintain that color on hover, focus, and active states.
-If you use a one-color svg icon without a fill color, css will allow it to inherit the current TEXT color as it's fill color, and will adjust to match the text's color on hover, focus, and active states.  Use a tool like <a href="https://jakearchibald.github.io/svgomg/">SVGOMG</a> to optimize the svg markup.
+Use class `.invert` for buttons that aren't a call-to-action which are on a dark background, such as in carousels or modals. 
 
 ```html_example
-<p>
-  <a class="button secondary"><svg xmlns="http://www.w3.org/2000/svg" viewBox="40 40 400 400"><path d="M189.3 128.4L89 233.4c-6 5.8-9 13.7-9 22.4s3 16.5 9 22.4l100.3 105.4c11.9 12.5 31.3 12.5 43.2 0 11.9-12.5 11.9-32.7 0-45.2L184.4 288h217c16.9 0 30.6-14.3 30.6-32s-13.7-32-30.6-32h-217l48.2-50.4c11.9-12.5 11.9-32.7 0-45.2-12-12.5-31.3-12.5-43.3 0z"/></svg> Previous</a>
-   
-  <a href="#" class="button tertiary">Log In <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 450"><path d="M86.4 480h339.2c12.3 0 22.4-9.9 22.4-22.1V246c0-12.2-10-22-22.4-22H404v-30.9c0-41.5-16.2-87.6-42.6-115.4-26.3-27.8-64-45.7-105.3-45.7h-.2c-41.3 0-79 17.9-105.3 45.6C124.2 105.4 108 151.5 108 193v31H86.4C74 224 64 233.9 64 246v211.9c0 12.2 10 22.1 22.4 22.1zM161 193.1c0-27.3 9.9-61.1 28.1-80.3v-.3C206.7 93.9 231 83 255.9 83h.2c24.9 0 49.2 10.9 66.8 29.5v.2l-.1.1c18.3 19.2 28.1 53 28.1 80.3V224H161v-30.9z" /></svg></a>
-   
-  <a class="button secondary">Next <svg xmlns="http://www.w3.org/2000/svg" viewBox="40 40 400 400"><path d="M322.7 128.4l100.3 105c6 5.8 9 13.7 9 22.4s-3 16.5-9 22.4L322.7 383.6c-11.9 12.5-31.3 12.5-43.2 0-11.9-12.5-11.9-32.7 0-45.2l48.2-50.4h-217c-17 0-30.7-14.3-30.7-32s13.7-32 30.6-32h217l-48.2-50.4c-11.9-12.5-11.9-32.7 0-45.2 12-12.5 31.3-12.5 43.3 0z"/></svg></a>
-</p>
+<div class="callout background-gray">
+  <p>
+    <a href="#" class="invert large button">Button (large)</a>
+    <a href="#" class="invert button">Button (default)</a>
+    <a href="#" class="invert small button">Button (small)</a>
+  </p>
+</div>
 ```
 
 ---
@@ -1277,303 +1129,54 @@ The below example pairs the callout with the close button component and `data-cl
 
 
 
-# Button Group
-
-<p class="lead">Button groups are containers for related action items. They're great when you need to display a group of actions in a bar. </p>
-
-Add the `.button-group` class to a container, and inside it place any number of buttons. The buttons are separated by a small border.
-
-Add the `.expanded` class to the container to make a full-width button group. Each item will automatically size itself based on how many buttons there are, up to a maximum of four.
-
-```html_example
-<div class="button-group">
-  <a class="button">View</a>
-  <a class="primary button">Edit</a>
-  <a class="secondary button">Share</a>
-  <a class="tertiary button">Delete</a>
-</div>
-<br>
-<div class="expanded button-group">
-  <a class="button">View</a>
-  <a class="primary button">Edit</a>
-  <a class="secondary button">Share</a>
-  <a class="tertiary button">Delete</a>
-</div>
-```
-
-
-
-# Heros
-
-<p class="lead">There are several different hero styles, depending upon page type.  For pages that aren't landing pages or relying on a blog-like format, you should use a [page title](#page-title) instead of a hero.</p>
-
----
-
-## Landing Page Heros
-
-Landing Pages are those pages that are linked from the primary navigation. Add one of the following classes to the `.hero-blended` container to specify the background for a particular landing page: `.perspectives-landing-hero`, `.research-landing-hero`, `.blog-landing-hero`, `.media-landing-hero`, `.about-landing-hero`.
-
-
-```html_example
-<div class="hero-blended about-landing-hero">
-  <div class="row">
-    <div class="column">
-      <div class="hero-blended-content">
-        <h1 class="hero-title">About Us</h1>
-        <p>Our statutory mission is to provide liquidity, stability and affordability to the U.S. housing market.</p>
-      </div>
-    </div>
-  </div>
-</div>
-```
-
----
-
-## Blog Detail Heros
-
-Use this hero on Blog article pages.  Elements inside the hero include the date, the title, and the blog category.  The class name (and thus the background image) should change based on the blog category chosen. (this example is homeownership)
-
-```html
-<div class="hero-blended blog-detail-hero-homeownership">
-  <div class="row">
-	  <div class="column">
-		  <div class="hero-blended-content">
-		  	<div class="hero-date">May 9, 2016</div>
-		    <h1 class="hero-title">Take the Anxiety Out of Your First Home Offer</h1>
-		    <p><a href="#" class="hollow button small">Homeownership</a></p>
-		  </div>
-		</div>
-	</div>
-  <!-- and a share widget -->
-</div>
-```
-
-<div class="grid-2col-blog">
-  <div class="hero-blended blog-detail-hero">
-    <div class="row">
-      <div class="column">
-        <div class="hero-blended-content">
-          <div class="hero-date">May 9, 2016</div>
-          <h1 class="hero-title">Take the Anxiety Out of Your First Home Offer</h1>
-          <p><a href="#" class="hollow button small">Homeownership</a></p>
-        </div>
-      </div>
-    </div>
-    <!-- and a share widget -->
-  </div>
-</div>
-
-
-
 # Cards
 
 <p class="lead">Cards are a are a popular and flexible UI component, typically used to group article entries. </p>
 
 <p>A card is just an element with a `.card` class applied. You can put any kind of content inside.
 Make sure you wrap your content in a `.card-section` element in order to achieve the traditional card look.</p>
-<p>A card container has no padding, allowing you to place full-bleed images inside. Use the `.card-divider` and `.card-section` classes to sub-divide a card. To center the text content (for people cards, for example) simply add class `.text-center` to the `.card-section` container.</p>
-
-## Perspective Cards
-
-<p>This style of card is used for Perspectives articles. </p>
+<p>A card container has no padding, allowing you to place full-bleed images inside. Use the `.card-divider` and `.card-section` classes to sub-divide a card. </p>
 
 - If the cards have the same background as the content contaienr they are in, add no extra color class.
 - If the cards should have a white background (when displayed on a darker color) add class `.background-white` to each card.
 - If the cards should have a gray background (when displayed on a white background) add class `.background-gray` to each card.
 
 ```html_example
-<div class="row medium-up-2 xlarge-up-4 perspectives" data-equalizer data-equalize-by-row="true">
+<div class="row small-up-1 large-up-3" data-equalizer-watch="fmDifference">
   <div class="column">
-    <div class="card">
-      <div class="card-divider" data-equalizer-watch>
-        <div class="article-date">August 13, 2016</div>
-        <h3 class="card-title-large"><a href="#">Multifamily Is On a Roll</a></h3>
-        <p class="card-blurb-large">2016 was a very good year. Freddie Mac Multifamily is on track to purchase approximately $55 billion and securitize over $50 billion in loans – both new records. Barring any surprises, we believe the multifamly industry – and our business -- can grow another five to ten percent next year. </p>
-        <figure class="avatar">
-          <div>
-            <img src="/images/perspectives/brickman-sm.jpg" alt="Avatar image" />
-          </div>
-          <div>
-            <figcaption class="reduce"><strong class="uppercase">David Brickman</strong><br>EVP Multifamily Business</figcaption>
-          </div>
-        </figure>
+    <div class="card no-border" data-equalizer-watch="fmDifference">
+      <div class="card-section text-center">
+        <img src="http://www.freddiemac.com/multifamily/images/sbl_icon_strength.svg" alt="Strength">
+      </div>
+      <div class="card-section text-center difference">
+        <h3 style="color:#333333;">Strength</h3>
+        <p class="card-subtitle">We've funded over $6 billion in small loans, offering the best terms and choice nationwide.</p>
       </div>
     </div>
   </div>
   <div class="column">
-    <div class="card">
-      <div class="card-divider" data-equalizer-watch>
-        <div class="article-date">June 27, 2016</div>
-        <h3 class="card-title-large"><a href="#">Homeownership: Where We Are Now, Where We Are Headed</a></h3>
-        <p class="card-blurb-large">The second half of the 20th century brought with it remarkable growth in homeownership.  For the first four decades of the century, homeownership rates were relatively stable and remained below 50 percent, dropping as low as 44 percent in 1940. </p>
-        <figure class="avatar">
-          <div>
-            <img src="/images/perspectives/gilmore-sm.jpg" alt="Avatar image" />
-          </div>
-          <div>
-            <figcaption class="reduce"><strong class="uppercase">Yvette Gilmore</strong><br>VP Single-Family Servicer Performance Management </figcaption>
-          </div>
-        </figure>
+    <div class="card no-border" data-equalizer-watch="fmDifference">
+      <div class="card-section text-center">
+        <img src="http://www.freddiemac.com/multifamily/images/sbl_icon_reliability.svg" alt="Reliability">
+      </div>
+      <div class="card-section text-center difference">
+          <h3 style="color:#333333;">Reliability</h3>
+            <p class="card-subtitle">We oversee servicing on each loan to ensure you get the attention you deserve.</p>
       </div>
     </div>
   </div>
   <div class="column">
-    <div class="card">
-      <div class="card-divider" data-equalizer-watch>
-        <div class="article-date">May 13, 2016</div>
-        <h3 class="card-title-large"><a href="#">This is the Week to Learn About Mortgage Fraud</a></h3>
-        <p class="card-blurb-large">Fraud continues to threaten homebuyers, renters and the mortgage industry. The latest report from CoreLogic, a real estate information company, says fraud is on an upward trajectory and estimates that some 13,000 mortgage applications made during the second quarter had indications of fraud.</p>
-        <figure class="avatar">
-          <div>
-            <img src="/images/perspectives/layton-sm.jpg" alt="Avatar image" />
-          </div>
-          <div>
-            <figcaption class="reduce"><strong class="uppercase">Donald H. Layton</strong><br>CEO</figcaption>
-          </div>
-        </figure>
+    <div class="card no-border" data-equalizer-watch="fmDifference">
+      <div class="card-section text-center">
+        <img src="http://www.freddiemac.com/multifamily/images/sbl_icon_commitment.svg" alt="Commitment">
       </div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <div class="card-divider" data-equalizer-watch>
-        <div class="article-date">April 30, 2016</div>
-        <h3 class="card-title-large"><a href="#">Freddie Mac Reports Another Quarter of Solid Financial Results</a></h3>
-        <p class="card-blurb-large">Today Freddie  Mac reported net income and comprehensive income of $2.3 billion for the third quarter  of 2016. Our results strongly reflect our improving business fundamentals and  competitiveness &ndash; higher purchase volumes.</p>
-        <figure class="avatar">
-          <div>
-            <img src="/images/perspectives/hanson-sm.jpg" alt="Avatar image" />
-          </div>
-          <div>
-            <figcaption class="reduce"><strong class="uppercase">Mark Hanson</strong><br>SVP Securitization</figcaption>
-          </div>
-        </figure>
+      <div class="card-section text-center difference">
+          <h3 style="color:#333333;">Commitment</h3>
+            <p class="card-subtitle">Once approved, you sign a commitment letter that outlines terms. Then, set a date to close.</p>
       </div>
     </div>
   </div>
 </div>
-```
-
-
-
-# Embedded Objects
-
-To make sure embedded content maintains its aspect ratio as the width of the screen changes, wrap the `iframe`, `object`, `embed`, or `video` in a container with the `.responsive-embed` class.  Add the attribute `allowfullscreen` to the iframe.
-
-For Youtube videos, make sure you include `?rel=0&amp;wmode=transparent` at the end of the url to disable the related videos and to prevent conflict with overlays/drop downs on out site.
-
-```html_example
-<div class="row">
-  <div class="columns medium-6 end">
-    <div class="responsive-embed">
-      <iframe width="420" height="315" src="https://www.youtube.com/embed/mM5_T-F1Yn4?rel=0&amp;wmode=transparent" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </div>
-</div>
-```
-
----
-
-## Aspect Ratios
-
-Add ratio classes to change the aspect ratio of responsive embeds. The default ratio is 4:3. The `.widescreen` class will change the container's aspect ratio to 16:9.
-
-Currently, these ratio classes exist:
-
-- default: 4 by 3
-- widescreen: 16 by 9
-- square: 1 by 1
-- portrait:1 by 2
-- tall: 1 by 3
-
-
-```html_example
-<div class="row">
-  <div class="columns medium-7 end">
-    <div class="responsive-embed widescreen">
-      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/tCg9285bJnY?rel=0&amp;wmode=transparent" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </div>
-</div>
-```
-
----
-
-## Iframes
-
-Any iframe wider than 300px will need to be responsive as well, otherwise the content can run off the screen on mobile, or may overlap the sidebar at in between sizes.  
-
-```html_example
-<div class="row">
-  <div class="columns medium-7 end">
-    <div class="responsive-embed">
-      <iframe src="http://investor.shareholder.com/fre/stocklookup.cfm" allowfullscreen="" frameborder="0" height="450" width="600"></iframe>
-    </div> 
-  </div>
-</div>
-```
-
-
-
-# Accordions
-
-<p class="lead">Accordions are elements that help you organize and navigate multiple panes of content in a single container.</p>
-
----
-
-## Basics
-
-### Accordion Container
-
-The container for an accordion needs the class `.accordion-pointer`, and the attribute `data-accordion`. Note that in these examples, we use a `<ul>`, but you can use any element you want.
-
-
-```html
-<ul class="accordion-pointer" data-accordion>
-</ul>
-```
-
-### Accordion Content Panes
-
-Inside the accordion, place a series of content panes with the class `.accordion-item` and the attribute `data-accordion-item`. To mark which pane should be open by default, add the class `.is-active` to that pane. Omit this class if all panes should be closed by default.
-
-Each pane has 2 parts: a **title** and a **content area**.
--    The **title** is an `<a>` with the class `.accordion-title`. 
--    The **content area**, is a `<div>` with the class `.accordion-content`, and the attribute `data-tab-content`.
-
-
-```html
-  <li class="accordion-item is-active" data-accordion-item>
-    <a class="accordion-title" href="#">Accordion A: Title</a>
-    <div class="accordion-content" data-tab-content>
-      Panel A: I start in the open state.
-    </div>
-  </li>
-```
-
-Once you put it all together, here's what you get!
-
-```html_example
-<ul class="accordion-pointer" data-accordion>
-  <li class="accordion-item is-active" data-accordion-item>
-    <a class="accordion-title" href="#">Panel One Title</a>
-    <div class="accordion-content" data-tab-content>
-      Panel 1. Lorem ipsum dolor.
-    </div>
-  </li>
-  <li class="accordion-item" data-accordion-item>
-    <a class="accordion-title" href="#">Panel Two Title</a>
-    <div class="accordion-content" data-tab-content>
-      Panel 2. Lorem ipsum dolor.
-    </div>
-  </li>
-  <li class="accordion-item" data-accordion-item>
-    <a class="accordion-title" href="#">Panel Three Title</a>
-    <div class="accordion-content" data-tab-content>
-      Panel 3. Lorem ipsum dolor.
-    </div>
-  </li>
-</ul>
 ```
 
 
@@ -1586,6 +1189,14 @@ Make forms easy to use with the following rules:
 * Wrap checkboxes and radio buttons within labels for larger hit areas, and be sure to set the <code>for</code>, <code>name</code>, and <code>id</code> attributes for all applicable elements.
 * Series of checkboxes and radio buttons below within a `<ul class="inline-list">`.
 * Required content should include <code>required</code>.
+
+---
+
+## Form Validation ##
+
+<p>Validation is done through the <a href="styleguide_abide.html">Abide</a> form validation library.</p>
+
+<p><a class="button tertiary large" href="styleguide_abide.html">Learn About Form Validation</a></p>
 
 ---
 
@@ -1632,12 +1243,12 @@ Form elements are styled based on their type attribute rather than a class. Inpu
   <div class="row">
     <div class="small-12 column">
       <label for="">Select Box</label>
-      <select>
+      <select aria-describedby="helpText2">
         <option value="good">Good</option>
         <option value="better">Better</option>
         <option value="best">Best</option>
       </select> 
-      <p class="help-text" id="">Browsers apply their own design to the drop down on select boxes.</p>
+      <p class="help-text" id="helpText2">Browsers apply their own design to the drop down on select boxes.</p>
     </div>
   </div>
   <div class="row"> 
@@ -1689,7 +1300,7 @@ Form elements are styled based on their type attribute rather than a class. Inpu
   </div>
   <div class="row">
     <div class="small-12 column">
-      <button class="button primary" type="submit">Submit</button>
+      <button class="button" type="submit">Submit</button>
     </div>
   </div>
 </form>
@@ -1723,8 +1334,8 @@ Sometimes you want a form with labels to the left of your inputs. Piece of cake!
       </div>
       <div class="row">
         <div class="medium-9 medium-push-3 column">
-          <button class="button primary" type="submit">Submit</button>
-          <button class="button" type="button">Cancel</button>
+          <button class="button" type="submit">Submit</button>
+          <button class="button tertiary" type="button">Cancel</button>
         </div>
       </div>
     </form>
@@ -1747,7 +1358,7 @@ If a form has only a single field, you can combine the label, field, and submit 
           <label for="emailxx" class="input-group-label">Get Notified</label>
           <input id="emailxx" class="input-group-field" type="email" placeholder="name@company.com">
           <div class="input-group-button">
-            <button class="button tertiary" type="submit">Subscribe</button>
+            <button class="button" type="submit">Subscribe</button>
           </div>
         </div> 
       </div>
@@ -1755,92 +1366,6 @@ If a form has only a single field, you can combine the label, field, and submit 
   </div>
 </div>
 ```
-
----
-
-### Example on different background colors
-
-When the form appears on a darker background, add the class `.outline` to invert the borders to white. Avoid putting forms inside a container that is red, green or orange to avoid conflicting with error/success messages and primary buttons.
-
-```html
-<form action="#" class="form outline">
-  <label for="">Label</label>
-  <input type="text" placeholder="placeholder">
-  <button class="button primary">Submit</button>
-</form>
-```
-
-<div class="row">
-  <div class="medium-6 column">
-    <div class="callout background-primary">
-      <form action="#" class="form outline">
-        <label for="">Label</label>
-        <input type="text" placeholder="placeholder">
-        <button class="button primary">Submit</button>
-      </form>
-    </div>
-  </div>
-  <div class="medium-6 column">
-    <div class="callout background-yellow">
-      <form action="#" class="form outline">
-        <label for="">Select One</label>
-        <select>
-          <option value="good">Good</option>
-          <option value="better">Better</option>
-          <option value="best">Best</option>
-        </select>
-        <button class="button primary">Submit</button>
-      </form>
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div class="medium-6 column">
-    <div class="callout background-teal">
-      <form action="#" class="form outline">
-        <fieldset>
-          <legend>Check a box or two</legend>
-          <input id="checkbox13" type="checkbox"><label for="checkbox13">Checkbox 1</label>
-          <input id="checkbox23" type="checkbox"><label for="checkbox23">Checkbox 2</label>
-        </fieldset>
-        <button class="button primary">Submit</button>
-      </form>
-    </div>
-  </div>
-  <div class="medium-6 column">
-    <div class="callout background-purple">
-      <form action="#" class="form outline">
-        <fieldset>
-          <legend>Choose Your Favorite</legend>
-          <input type="radio" name="coloropt" value="Red" id="colorRed"><label for="colorRed">Red</label>
-          <input type="radio" name="coloropt" value="Blue" id="colorBlue"><label for="colorBlue">Blue</label>
-          <input type="radio" name="coloropt" value="Yellow" id="colorYellow"><label for="colorYellow">Yellow</label>
-        </fieldset>
-        <button class="button primary">Submit</button>
-      </form>
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div class="medium-6 column">
-    <div class="callout background-blue">
-      <form action="#" class="form outline">
-        <label for="">Email</label>
-        <input id="" type="email" placeholder="name@company.com">
-        <button class="button primary">Submit</button>
-      </form>
-    </div>
-  </div>
-  <div class="medium-6 column">
-    <div class="callout background-gray">
-      <form action="#" class="form outline">
-        <label for="">Keyword</label>
-        <input id="" type="search" placeholder="search" class="icon">
-        <button class="button primary">Submit</button>
-      </form>
-    </div>
-  </div>
-</div>
 
 
 
@@ -2125,8 +1650,6 @@ By default, table rows are striped. There's an `.unstriped` class to remove the 
   </tbody>
 </table>
 
----
-
 
 
 # Tooltip
@@ -2175,8 +1698,8 @@ A standard modal dialog is just an empty container, so you can put any kind of c
               <h2 id="Modal1-label">Modal Label</h2>
             </div>
               <p>I can contain a callout with a white background to great a framed area.</p>
-              <p>I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
-              <img src="/images/styleguide/kitten160.jpg" alt="kitty">
+              <p>I can contain any normal markup, from <a href="#">links</a> and images, to a responsive grid of items. </p>
+              <img src="files/kitten160.jpg" alt="kitty">
           </div>
         </div>
       </div>
@@ -2192,8 +1715,8 @@ A standard modal dialog is just an empty container, so you can put any kind of c
             </div>
             <div class="callout xlarge background-white">
               <p>I can contain a callout with a white background to great a framed area.</p>
-              <p>I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
-              <img src="/images/styleguide/kitten160.jpg" alt="kitty">
+              <p>I can contain any normal markup, from <a href="#">links</a> and images, to a responsive grid of items. </p>
+              <img src="files/kitten160.jpg" alt="kitty">
             </div>
           </div>
         </div>
@@ -2214,8 +1737,8 @@ A standard modal dialog is just an empty container, so you can put any kind of c
             </div>
             <div class="callout xlarge background-white">
               <p>I can contain a callout with a white background to great a framed area.</p>
-              <p>I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
-              <img src="/images/styleguide/kitten160.jpg" alt="kitty">
+              <p>I can contain any normal markup, from <a href="#">links</a> and images, to a responsive grid of items. </p>
+              <img src="files/kitten160.jpg" alt="kitty">
             </div>
           </div>
         </div>
@@ -2230,8 +1753,8 @@ A standard modal dialog is just an empty container, so you can put any kind of c
             <div class="modal-header">
               <h2 id="Modal4-label">Modal Label</h2>
             </div>
-            <p>I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
-            <img src="/images/styleguide/kitten160.jpg" alt="kitty">
+            <p>I can contain any normal markup, from <a href="#">links</a> and images, to a responsive grid of items. </p>
+            <img src="files/kitten160.jpg" alt="kitty">
           </div>
         </div>
       </div>
@@ -2243,8 +1766,8 @@ A standard modal dialog is just an empty container, so you can put any kind of c
         <div class="modal-header">
           <h2 id="Modal5-label">Modal Label</h2>
         </div>
-        <p>I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
-        <img src="/images/styleguide/kitten160.jpg" alt="kitty">
+        <p>I can contain any normal markup, from <a href="#">links</a> and images, to a responsive grid of items. </p>
+        <img src="files/kitten160.jpg" alt="kitty">
       </div>
     </div>
   </li>
@@ -2254,8 +1777,8 @@ A standard modal dialog is just an empty container, so you can put any kind of c
         <div class="modal-header">
           <h2 id="Modal6-label">Modal Label</h2>
         </div>
-        <p>I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
-        <img src="/images/styleguide/kitten160.jpg" alt="kitty">
+        <p>I can contain any normal markup, from <a href="#">links</a> and images, to a responsive grid of items. </p>
+        <img src="files/kitten160.jpg" alt="kitty">
       </div>
     </div>
   </li>
@@ -2265,8 +1788,8 @@ A standard modal dialog is just an empty container, so you can put any kind of c
         <div class="modal-header">
           <h2 id="Modal7-label">Modal Label</h2>
         </div>
-        <p>I can contain any normal markup, from <a href="/">links</a> and images, to a responsive grid of items. </p>
-        <img src="/images/styleguide/kitten160.jpg" alt="kitty">
+        <p>I can contain any normal markup, from <a href="#">links</a> and images, to a responsive grid of items. </p>
+        <img src="files/kitten160.jpg" alt="kitty">
       </div>
   </li>
 </ol>
@@ -2354,13 +1877,13 @@ Image modals are intended to contain ONLY an image and a optional caption -- if 
 
 ```html_example
 <ul>
-  <li><a data-open="exampleModalE" href="/images/styleguide/bigkitty.jpg" aria-controls="exampleModalE">View an image modal</a>.</li>
+  <li><a data-open="exampleModalE" href="files/bigkitty.jpg" aria-controls="exampleModalE">View an image modal</a>.</li>
 </ul>
 
 <div class="reveal overlay-image" id="exampleModalE" data-reveal>
   <div class="modal-content">
     <figure>
-      <img src="/images/styleguide/bigkitty.jpg" alt="kitty">
+      <img src="files/bigkitty.jpg" alt="kitty">
       <figcaption>What a pretty kitty!</figcaption>
     </figure>
   </div>
@@ -2368,13 +1891,13 @@ Image modals are intended to contain ONLY an image and a optional caption -- if 
 
 <ul>
   <li>View an image modal by clicking the following image.<br><a data-open="exampleModalF" class="modal-launch"
-  href="/images/styleguide/kitty1600.jpg" aria-controls="exampleModalF"><img src="/images/styleguide/kitten160.jpg" alt="kitty"></a></li>
+  href="files/kitty1600.jpg" aria-controls="exampleModalF"><img src="files/kitten160.jpg" alt="kitty"></a></li>
 </ul>
 
 <div class="reveal overlay-image" id="exampleModalF" data-reveal>
   <div class="modal-content">
     <figure>
-      <img src="/images/styleguide/kitty1600.jpg" alt="kitty">
+      <img src="files/kitty1600.jpg" alt="kitty">
       <figcaption>Who Doesn't Love Kitties?</figcaption>
     </figure>
   </div>
@@ -2394,11 +1917,11 @@ Combine the concept of the nested modal with the image modal to achieve an image
 
 ```html_example
 <ul>
-  <li><a data-open="galleryModalA" aria-controls="galleryModalA" href="/images/styleguide/plant1.jpg">View a modal</a> that launches an image gallery</li>
+  <li><a data-open="galleryModalA" aria-controls="galleryModalA" href="files/plant1.jpg">View a modal</a> that launches an image gallery</li>
 </ul>
 <ul>
   <li>View the same gallery, launched from an image instead<br>
-  <a class="modal-launch" data-open="galleryModalA" aria-controls="galleryModalA" href="/images/styleguide/plant1.jpg"><img src="/images/styleguide/plant1-thumb.jpg" alt="flowers"></a></li>
+  <a class="modal-launch" data-open="galleryModalA" aria-controls="galleryModalA" href="files/plant1.jpg"><img src="files/plant1-thumb.jpg" alt="flowers"></a></li>
 </ul>
 
 
@@ -2406,7 +1929,7 @@ Combine the concept of the nested modal with the image modal to achieve an image
 <div class="reveal overlay-gallery" rel="gallery1" id="galleryModalA" data-reveal>
   <div class="modal-content">
     <figure>
-      <img src="/images/styleguide/plant1.jpg" alt="plant 1">
+      <img src="files/plant1.jpg" alt="plant 1">
       <figcaption>Default - center aligned caption.</figcaption>
     </figure>
   </div>
@@ -2416,7 +1939,7 @@ Combine the concept of the nested modal with the image modal to achieve an image
 <div class="reveal overlay-gallery" rel="gallery1" id="galleryModalB" data-reveal>
   <div class="modal-content">
     <figure>
-      <img src="/images/styleguide/plant2.jpg" alt="plant 2">
+      <img src="files/plant2.jpg" alt="plant 2">
       <figcaption><p class="text-left">Left-aligned caption.</p><p class="text-left">With more than one paragraph.</p></figcaption>
     </figure>
   </div>
@@ -2426,7 +1949,7 @@ Combine the concept of the nested modal with the image modal to achieve an image
 <div class="reveal overlay-gallery" rel="gallery1" id="galleryModalC" data-reveal>
   <div class="modal-content">
     <figure>
-      <img src="/images/styleguide/plant3.jpg" alt="plant 3">
+      <img src="files/plant3.jpg" alt="plant 3">
       <figcaption>
         <p class="text-left show-for-medium">The lights burn blue. It is now dead midnight.</p>
       </figcaption>
@@ -2438,7 +1961,7 @@ Combine the concept of the nested modal with the image modal to achieve an image
 <div class="reveal overlay-gallery" rel="gallery1" id="galleryModalD" data-reveal>
   <div class="modal-content">
     <figure>
-      <img src="/images/styleguide/plant4.jpg" alt="plant 4">
+      <img src="files/plant4.jpg" alt="plant 4">
       <figcaption>This caption is longer than the others to show how things look when the caption is very long, and it contains a <a href="#">hyperlink</a> and formatting such as  <em>emphasis</em> and <strong>strong</strong>, so we can see how they look in a caption.
       </figcaption>
     </figure>
@@ -2472,201 +1995,188 @@ Embedded videos **won't** maintain their aspect ratio as the width of the screen
 
 <p class="lead">Each carousel is made up of multiple slides.</p>
 
-- The default animation for the carousel is slide out the existing slide while sliding in the replacement slide (direction based on whether you are moving forward or backward through the slides).  See below for [other animation options](#slide_animation).
-- The wrapper for the carousel should use the `.orbit` class and contain a `data-orbit` attribute and a `role="region"` attribute.  For assistive technology, provide an `aria-label` attribute that describes the carousel contents.  The wrapper groups the slides and the slide navigation together.
-- The container for the slides is a `ul` with the class `.orbit-container`.
-- Each slide is an `li` with the class `.orbit-slide`.
-- By default, slides transition every 5 seconds.  That is typically sufficient for images, but if the slides contain very much text, you will likely want to stop the auto-play functionality by adding the attribute `data-auto-play="false"`.
-- To shift the dot navigation so that it appears inside the panel, add class `.bullets-overlay` to the `.orbit` element.
-
-To select a specific background, include `.background-xxx` class (where xxx is green, orange, primary, blue, teal, gray, yellow, red, purple) on the <code>.orbit-slide</code> container.
-
-
 ```html_example
-<div class="orbit bullets-overlay" role="region" aria-label="Favorite Text Ever" data-orbit data-auto-play="false">
-  <ul class="orbit-container">
-    <li class="orbit-slide background-yellow">
-      <div>
-        <h3>Slide One</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="text-right"><a class="button hollow">Button Link</a></p>
+<div class="orbit gutter-bottom show-for-large" role="region" aria-label="Recent Deals" data-orbit data-auto-play="false">   
+  <!--// SLIDER BUTTONS -->
+  <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <path d="M213.7 256L213.7 256 213.7 256 380.9 81.9c4.2-4.3 4.1-11.4-0.2-15.8l-29.9-30.6c-4.3-4.4-11.3-4.5-15.5-0.2L131.1 247.9c-2.2 2.2-3.2 5.2-3 8.1 -0.1 3 0.9 5.9 3 8.1l204.2 212.7c4.2 4.3 11.2 4.2 15.5-0.2l29.9-30.6c4.3-4.4 4.4-11.5 0.2-15.8L213.7 256z"/>
+  </svg>
+  </button>
+  <button class="orbit-next"><span class="show-for-sr">Next Slide</span>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <path d="M298.3 256L131.1 81.9c-4.2-4.3-4.1-11.4.2-15.8l29.9-30.6c4.3-4.4 11.3-4.5 15.5-.2L380.9 248c2.2 2.2 3.2 5.2 3 8.1.1 3-.9 5.9-3 8.1L176.7 476.8c-4.2 4.3-11.2 4.2-15.5-.2L131.3 446c-4.3-4.4-4.4-11.5-.2-15.8L298.3 256z"/>
+  </svg>
+  </button>
+  <!--// END SLIDER BUTTONS -->                           
+  <ul class="orbit-container"> 
+    <!-- ROTATOR DESKTOP SLIDES-->             
+    <li class="orbit-slide">
+      <div class="dealSlide row medium-up-3">                                    
+        <div class="column">
+          <div class="product-card">
+             <figure>
+                <img src="http://www.freddiemac.com/multifamily/images/sbl_deal_the-curtis.jpg" alt="The Curtis" />
+                <figcaption class="product-card-title">13 Units - Minneapolis, MN<br>
+                  <strong>$2.45 million</strong><br><span class="reduce">LENDER: ReadyCap</span>
+                </figcaption>  
+            </figure>                               
+          </div>
+        </div>
+        <div class="column">
+          <div class="product-card">
+             <figure>
+                <img src="http://www.freddiemac.com/multifamily/images/sbl_deal_soco-flats.jpg" alt="Soco Flats" />
+                <figcaption class="product-card-title">20 units - Austin, TX<br>
+                  <strong>$1.439 million</strong><br><span class="reduce">LENDER: CBRE</span>
+                </figcaption>                            
+            </figure>                               
+          </div>
+        </div>
+        <div class=" column">
+          <div class="product-card">
+             <figure>
+                <img src="http://www.freddiemac.com/multifamily/images/sbl_deal_soco-flats.jpg" alt="Soco Flats" />
+                <figcaption class="product-card-title">25 Units - Denver, CO<br>
+                  <strong>$2.425 million</strong><br><span class="reduce">LENDER: Greystone</span>
+                </figcaption>                            
+            </figure>                               
+          </div>
+        </div>                                    
       </div>
     </li>
-    <li class="orbit-slide background-green">
-      <div>
-        <h3>Slide Two</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="text-center"><a class="button hollow">Button Link</a></p>
+    <li class="orbit-slide">
+      <div class="dealSlide row medium-up-3">
+        <div class=" column">
+          <div class="product-card">
+            <figure>
+                <img src="http://www.freddiemac.com/multifamily/images/sbl_deal_magnolia-eastgate-gardens.jpg" alt="Magnolia Eastgate Gardens" />
+                <figcaption class="product-card-title">170 Units - Cincinnati, OH<br>
+                  <strong>$5.999 million</strong><br><span class="reduce">LENDER: Hunt</span>
+                </figcaption>   
+            </figure>                               
+          </div>
+        </div>
+        <div class=" column">
+          <div class="product-card">
+             <figure>
+                <img src="http://www.freddiemac.com/multifamily/images/sbl_deal_magnolia-eastgate-gardens.jpg" alt="Magnolia Eastgate Gardens" />
+                <figcaption class="product-card-title">56 Units - Greenwood, IN<br>
+                  <strong>$2.796 million</strong><br><span class="reduce">LENDER: Sabal</span>
+                </figcaption>                            
+            </figure>                               
+          </div>
+        </div>
+        <div class=" column">
+          <div class="product-card">
+             <figure>
+                <img src="http://www.freddiemac.com/multifamily/images/sbl_deal_marquita-court.jpg" alt="Marquita Court" />
+                <figcaption class="product-card-title">24 Units -Dallas, TX<br>
+                  <strong>$2.197 million</strong><br><span class="reduce">LENDER: Arbor</span>
+                </figcaption>                            
+            </figure>                               
+          </div>
+        </div>                                    
       </div>
-    </li>
-    <li class="orbit-slide background-orange">
-      <div>
-        <h3>Slide Three</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="text-right"><a class="button hollow large">Button Link</a></p>
-      </div>
-    </li>
-    <li class="orbit-slide background-red">
-      <div>
-        <h3>Slide Four</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <ul>
-        <li>Duis aute irure dolor in reprehenderit in voluptate.</li>
-        <li>Velit esse cillum dolore eu fugiat nulla pariatur.</li>
-        </ul>
-        <p><a class="button hollow">Button Link</a></p>
-      </div>
-    </li>
-    <li class="orbit-slide background-purple">
-      <div>
-        <h3>Slide Five</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="text-right"><a class="button hollow">Button Link</a></p>
-      </div>
-    </li>
-    <li class="orbit-slide background-blue">
-      <div>
-        <h3>Slide Six - Example Without a Button</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-    </li>
-    <li class="orbit-slide background-teal">
-      <div>
-        <h3>Slide Seven</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-        <p class="text-right"><a class="button hollow">Button Link</a></p>
-      </div>
-    </li>
-    <li class="orbit-slide background-gray">
-      <div>
-        <h3>Slide Nine</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="/">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <p class="text-right"><a class="button hollow">Button Link</a></p>
-      </div>
-    </li>
+    </li>  
   </ul>
 </div>
-```
-
----
-
-## Image Carousel
-
-For an image carousel, each `orbit-slide` contains a `figure`, with an `img` and optional `figcaption`.
-
-- Try to make sure your images are all similar in size and proportion.
-- Each image should still have an `alt` attribute, even if it has an associated caption.
-- Captions can contain additional markup -- from blockquotes to paragraphs to text formatting.
-- Image carousels **cannot** be used inside a modal window -- instead refer to [Image Gallery Modal](#igallery).
-
-```html_example
-<div class="row">
-  <div class="medium-8 column">
-    <div class="orbit" role="region" aria-label="Favorite Flower Pictures" data-orbit>
-      <ul class="orbit-container">
-        <li class="orbit-slide">
-          <figure>
-            <img class="full" src="/images/styleguide/plant1.jpg" alt="plant 1">
-            <figcaption>Default - center aligned caption.</figcaption>
-          </figure>
-        </li>
-        <li class="orbit-slide">
-          <figure>
-            <img class="full" src="/images/styleguide/plant2.jpg" alt="plant 2">
-            <figcaption><p class="text-left">Left-aligned caption.</p><p class="text-left">With more than one paragraph.</p></figcaption>
-          </figure>
-        </li>
-        <li class="orbit-slide">
-          <figure>
-            <img class="full" src="/images/styleguide/plant3.jpg" alt="plant 3">
-            <figcaption>
-              <p class="text-left show-for-medium">(example below is how a blockquote would appear - borrowed the idea from My Home.) </p>
-              <blockquote>
-                <p>"The lights burn blue. It is now dead midnight."</p>
-                <footer><cite>William Shakespeare</cite> in <cite>King Henry the Sixth</cite></footer>
-              </blockquote>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="orbit-slide">
-          <figure>
-            <img class="full" src="/images/styleguide/plant4.jpg" alt="plant 4">
-            <figcaption>This caption is longer than the others to show how things look when the caption is very long, and it contains a <a href="#">hyperlink</a> and formatting such as  <em>emphasis</em> and <strong>strong</strong>, so we can see how they look in a caption. </figcaption>
-          </figure>
-        </li>
-      </ul>
-    </div>
+<div class="orbit gutter-bottom hide-for-large" role="region" aria-label="Recent Deals" data-orbit data-auto-play="false">   
+  <!--// SLIDER BUTTONS -->
+  <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <path d="M213.7 256L213.7 256 213.7 256 380.9 81.9c4.2-4.3 4.1-11.4-0.2-15.8l-29.9-30.6c-4.3-4.4-11.3-4.5-15.5-0.2L131.1 247.9c-2.2 2.2-3.2 5.2-3 8.1 -0.1 3 0.9 5.9 3 8.1l204.2 212.7c4.2 4.3 11.2 4.2 15.5-0.2l29.9-30.6c4.3-4.4 4.4-11.5 0.2-15.8L213.7 256z"/>
+  </svg>
+  </button>
+  <button class="orbit-next"><span class="show-for-sr">Next Slide</span>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <path d="M298.3 256L131.1 81.9c-4.2-4.3-4.1-11.4.2-15.8l29.9-30.6c4.3-4.4 11.3-4.5 15.5-.2L380.9 248c2.2 2.2 3.2 5.2 3 8.1.1 3-.9 5.9-3 8.1L176.7 476.8c-4.2 4.3-11.2 4.2-15.5-.2L131.3 446c-4.3-4.4-4.4-11.5-.2-15.8L298.3 256z"/>
+  </svg>
+  </button>
+  <!--// END SLIDER BUTTONS -->  
+  <ul class="orbit-container"> 
+    <!-- ROTATOR MOBILE SLIDES -->            
+    <li class="orbit-slide">
+          <div class="product-card">
+             <figure>
+                <img src="http://www.freddiemac.com/multifamily/images/sbl_deal_the-curtis.jpg" alt="The Curtis" />
+                <figcaption class="product-card-title weight-normal">13 Units - Minneapolis, MN<br>
+                  <span class="weight-bold">$2.45 million</span><br>
+                  LENDER: ReadyCap
+                </figcaption>                            
+            </figure>                               
+          </div>
+    </li>
+    <li class="orbit-slide">
+          <div class="product-card">
+             <figure>
+                <img src="http://www.freddiemac.com/multifamily/images/sbl_deal_soco-flats.jpg" alt="Soco Flats" />
+                <figcaption class="product-card-title weight-normal">20 units - Austin, TX<br>
+                  <span class="weight-bold">$1.439 million</span><br>
+                    LENDER: CBRE
+                </figcaption>                            
+            </figure>                               
+          </div>
+    </li>
+    <!--
+    <li class="orbit-slide">
+          <div class="product-card">
+             <figure>
+                <img src="http://www.freddiemac.com/multifamily/images/sbl_deal_hubbard.jpg" alt="Hubbard" />
+                <figcaption class="product-card-title">5 Units - Chicago, IL<br>
+                  <strong>$1.646 million</strong><br>
+                  LENDER: Capital One
+                </figcaption>
+            </figure>                               
+          </div>
+    </li>
+    -->
+    <li class="orbit-slide">
+          <div class="product-card">
+             <figure>
+                <img src="http://www.freddiemac.com/multifamily/images/sbl_deal_the-marianne.jpg" alt="Marianne" />
+                <figcaption class="product-card-title weight-normal">25 Units - Denver, CO<br>
+                  <span class="weight-bold">$2.425 million</span><br>
+                  LENDER: Greystone
+                </figcaption>
+            </figure>                               
+          </div>
+    </li>
+    <li class="orbit-slide">
+          <div class="product-card">
+            <figure>
+                <img src="http://www.freddiemac.com/multifamily/images/sbl_deal_magnolia-eastgate-gardens.jpg" alt="Magnolia Eastgate Gardens" />
+                <figcaption class="product-card-title weight-normal">170 Units - Cincinnati, OH<br>
+                  <span class="weight-bold">$5.999 million</span><br>
+                  LENDER: Hunt
+                </figcaption>     
+            </figure>                               
+          </div>
+    </li>
+    <li class="orbit-slide">
+          <div class="product-card">
+             <figure>
+                <img src="http://www.freddiemac.com/multifamily/images/sbl_deal_park-madison.jpg" alt="Park Madison" />
+                <figcaption class="product-card-title weight-normal">56 Units - Greenwood, IN<br>
+                  <span class="weight-bold">$2.796 million</span><br>
+                  LENDER: Sabal
+                </figcaption>                            
+            </figure>                               
+          </div>
+    </li>
+    <li class="orbit-slide">
+          <div class="product-card">
+             <figure>
+                <img src="http://www.freddiemac.com/multifamily/images/sbl_deal_marquita-court.jpg" alt="Marquita Court" />
+                <figcaption class="product-card-title weight-normal">24 Units -Dallas, TX<br>
+                  <span class="weight-bold">$2.197 million</span><br>
+                  LENDER: Arbor
+                </figcaption>                            
+            </figure>                               
+          </div>
+    </li>           
+  </ul>
   </div>
-</div>
-```
-
----
-
-## Changing the Slide Animation <span id="slide_animation"></span>
-
-Orbit uses [Motion UI](http://foundation.zurb.com/sites/docs/motion-ui.html) CSS classes to animate slides around.  There are four plugin options you can set to change the default effects:
-
-- `data-anim-in-from-left`: transition to play when a slide comes *in from the left*.
-- `data-anim-in-from-right`: transition to play when a slide comes *in from the right*.
-- `data-anim-out-from-left`: transition to play when a slide comes *out from the left*.
-- `data-anim-out-from-right`: transition to play when a slide comes *out from the right*.
-
-Since those option names are pretty *long*, you can also set them all in one HTML attribute, using `data-options`:
-
-```html
-<div class="orbit" role="region" aria-label="Favorite Flower Pictures" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
-```
-
-Below is an example of the same image carousel shown above, but with a fade-in/fade-out animation.
-
-<div class="row">
-  <div class="medium-8 column">
-    <div class="orbit" role="region" aria-label="Favorite Flower Pictures" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
-      <ul class="orbit-container">
-        <li class="orbit-slide">
-          <figure>
-            <img class="full" src="/images/styleguide/plant1.jpg" alt="plant 1">
-            <figcaption>Default - center aligned caption.</figcaption>
-          </figure>
-        </li>
-        <li class="orbit-slide">
-          <figure>
-            <img class="full" src="/images/styleguide/plant2.jpg" alt="plant 2">
-            <figcaption><p class="text-left">Left-aligned caption.</p><p class="text-left">With more than one paragraph.</p></figcaption>
-          </figure>
-        </li>
-        <li class="orbit-slide">
-          <figure>
-            <img class="full" src="/images/styleguide/plant3.jpg" alt="plant 3">
-            <figcaption>
-              <p class="text-left show-for-medium">(example below is how a blockquote would appear - borrowed the idea from My Home.) </p>
-              <blockquote>
-                <p>&quot;The lights burn blue. It is now dead midnight.&quot;</p>
-                <footer><cite>William Shakespeare</cite> in <cite>King Henry the Sixth</cite></footer>
-              </blockquote>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="orbit-slide">
-          <figure>
-            <img class="full" src="/images/styleguide/plant4.jpg" alt="plant 4">
-            <figcaption>This caption is longer than the others to show how things look when the caption is very long, and it contains a <a href="#">hyperlink</a> and formatting such as  <em>emphasis</em> and <strong>strong</strong>, so we can see how they look in a caption. </figcaption>
-          </figure>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
----
-
-### Disabling Transition Animation
-
-To disable the animation, set the `data-use-m-u-i` attribute to `false`.  To stop the auto-play functionality, add the attribute `data-auto-play="false"`.
-
-```html
-<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit data-use-m-u-i="false" data-auto-play="false">
-</div>
 ```
 
 ---

@@ -6,6 +6,7 @@ svg {
   box-sizing: content-box;
   vertical-align: middle;
 }
+.is-reveal-open #top { position: relative; }
 figure { 
   margin: 0; // reseting odd margins that are part of Foundation default
   @include breakpoint (small only) {

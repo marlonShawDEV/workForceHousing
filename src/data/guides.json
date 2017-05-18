@@ -1,35 +1,35 @@
 ﻿{ "page": [
-   {  
+   {
       "name":"Corporate Site (Responsive)",
-      "url":"/styleguide/styleguide_corp.html"
+      "url":"styleguide_corp.html"
    },
-   {  
+   {
       "name":"Foundation Grid (Responsive)",
-      "url":"/styleguide/styleguide_grid.html"
+      "url":"styleguide_grid.html"
    },
-   {  
-       "name":"Multifamily SBL",
-       "url":"/styleguide/styleguide_mfsbl.html"
+   {
+       "name":"Foundation Abide (Form Validation for Responsive)",
+       "url":"styleguide_abide.html"
    },
-   {  
-       "name":"Multifamily Site",
+   {
+      "name":"MF SBL",
+      "url":"styleguide_mfsbl.html"
+   },
+   {
+       "name":"Multifamily Site (MF version of old Corp template)",
        "url":"http://www.freddiemac.com/special/style_guide/mf/"
    },
-   {  
-       "name":"Single-family Site (old Corp template)",
+   {
+       "name":"Single-family and Capital Markets  (old Corp template)",
        "url":"http://www.freddiemac.com/special/style_guide/fm/"
    },
-   {  
-       "name":"Capital Markets (old Corp template)",
-       "url":"http://www.freddiemac.com/special/style_guide/fm/"
-   },
-   {  
+   {
        "name":"My Home by Freddie Mac",
        "url":"http://myhome.freddiemac.com/style_guide/"
    },
-   {  
+   {
        "name":"Web Based Applications Template",
        "url":"http://www.freddiemac.com/terms/brand_standards/"
    }
-  ] 
-} 
+  ]
+}

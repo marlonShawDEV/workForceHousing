@@ -5,4 +5,7 @@ img {
   &.no-border {
     border-width: 0;
   }
+  &.full {
+    width: 100%;
+  }
 }

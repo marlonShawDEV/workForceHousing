@@ -186,6 +186,21 @@ b {
 		font-size: rem-calc(32);
 	}
 }
+.feature-subtitle {
+  font-size: rem-calc(18);
+  font-weight: $global-weight-bold;
+  margin: 0.25em 0 0.375em;     
+  @include breakpoint(medium) {		
+  font-size: calc(20px +  26 * (100vw - 320px)/1180); 
+	}
+  @include breakpoint(xlarge) {
+		font-size: rem-calc(26);
+    font-size: calc(26px +  4 * (100vw - 1270px)/230); 
+	}
+  @include breakpoint(xxlarge) {
+		font-size: rem-calc(30);
+	}
+}
 .sidebar-title {
   font-size: rem-calc(18);
   font-size: calc(18px +  12 * (100vw - 320px)/1180); 
@@ -377,14 +392,33 @@ b {
 }
 .article-blurb-lg {
   @include show-for(medium);
-  font-size: calc(14px +  4 * (100vw - 320px)/1180);
+  font-size: rem-calc(14);
+  font-size: calc(14px +  2 * (100vw - 320px)/1180);
   font-weight: inherit;
   line-height: 1.3; 
-  margin: 0.8em 0;
+  margin: 0.8em 0;  
+  @media screen and (min-width: -zf-bp-to-em(map-get($breakpoints, medium))) and (max-width: -zf-bp-to-em(map-get($breakpoints, medium) + 80px)) {
+    overflow: hidden;
+    max-height: 3.9em; /* (Number of lines you want visible) * (line-height) */ 
+  }
+  @media screen and (min-width: -zf-bp-to-em(map-get($breakpoints, medium) + 120px)) {
+    font-size: rem-calc(17);
+    line-height: 1.4;
+  }
+  @include breakpoint(large) {
+    font-size: rem-calc(16);
+    font-size: calc(16px +  4 * (100vw - 320px)/1180);
+  }
+  @include breakpoint(xlarge) {
+    font-size: rem-calc(14);
+    font-size: calc(14px +  4 * (100vw - 320px)/1180);
+    line-height: 1.3; 
+  }
   @include breakpoint(xxlarge) {
     font-size: rem-calc(18);
   }
 }
+
 .article-date-feature {
   font-size: rem-calc(14);
   font-size: calc(14px +  4 * (100vw - 320px)/1180);

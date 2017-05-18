@@ -3,7 +3,7 @@ PORT: 8000
 
 # Autoprefixer will make sure your CSS works with these browsers
 COMPATIBILITY:
-  - "last 2 versions"
+  - "last 4 versions"
   - "ie >= 9"
   - "and_chr >= 2.3"
 
@@ -22,6 +22,7 @@ PATHS:
   # Paths to static assets that aren't images, CSS, or JavaScript
   assets:
     # "src/assets/**/**/*"
+    - "src/assets/docs/**/*"
     - "src/assets/**/vendor/*"
   # Paths to Sass libraries, which can then be loaded with @import
   sass:
@@ -67,7 +68,7 @@ PATHS:
     - "src/assets/js/prepModals.js"
     - "src/assets/js/prepRotators.js" 
     # comment for prod code. this is just for local site
-    - "src/assets/js/fakeNav_corp.js"  
+    # "src/assets/js/fakeNav_corp.js"  
     - "src/assets/js/mwNewsFeed.js"
     - "src/assets/js/tertiaryNav_corp.js"   
     - "src/assets/js/appCorp.js"
@@ -77,21 +78,21 @@ PATHS:
   javascriptsf:
     # Libraries requried by Foundation
     #- "bower_components/jquery/dist/jquery.js"
-    - "bower_components/what-input/what-input.js"
+    - "bower_components/what-input/dist/what-input.js"
     # Core Foundation files
     - "bower_components/foundation-sites/js/foundation.core.js"
     - "bower_components/foundation-sites/js/foundation.util.*.js"
   javascriptmf:
     # Libraries requried by Foundation
     #- "bower_components/jquery/dist/jquery.js"
-    - "bower_components/what-input/what-input.js"
+    - "bower_components/what-input/dist/what-input.js"
     # Core Foundation files
     - "bower_components/foundation-sites/js/foundation.core.js"
     - "bower_components/foundation-sites/js/foundation.util.*.js"
   javascriptmfsbl:
     # Libraries requried by Foundation
     #- "bower_components/jquery/dist/jquery.js"
-    - "bower_components/what-input/what-input.js"
+    - "bower_components/what-input/dist/what-input.js"
     # Core Foundation files
     - "bower_components/foundation-sites/js/foundation.core.js"
     - "bower_components/foundation-sites/js/foundation.util.*.js"
@@ -99,7 +100,7 @@ PATHS:
     # If you aren't using a component, just remove it from the list
     - "bower_components/foundation-sites/js/foundation.abide.js"
     - "bower_components/foundation-sites/js/foundation.accordion.js"
-    - "bower_components/foundation-sites/js/foundation.accordionMenu.js"
+    # "bower_components/foundation-sites/js/foundation.accordionMenu.js"
     # "bower_components/foundation-sites/js/foundation.drilldown.js"
     # "bower_components/foundation-sites/js/foundation.dropdownMenu.js"
     - "bower_components/foundation-sites/js/foundation.equalizer.js"
@@ -112,7 +113,7 @@ PATHS:
     - "bower_components/foundation-sites/js/foundation.reveal.js"
     # "bower_components/foundation-sites/js/foundation.slider.js"
     # "bower_components/foundation-sites/js/foundation.sticky.js"
-    - "bower_components/foundation-sites/js/foundation.tabs.js"
+    # "bower_components/foundation-sites/js/foundation.tabs.js"
     - "bower_components/foundation-sites/js/foundation.toggler.js"
     - "bower_components/foundation-sites/js/foundation.tooltip.js"
     # "bower_components/foundation-sites/js/foundation.zf.responsiveAccordionTabs.js"
@@ -126,7 +127,7 @@ PATHS:
   javascriptcm:
     # Libraries requried by Foundation
     #- "bower_components/jquery/dist/jquery.js"
-    - "bower_components/what-input/what-input.js"
+    - "bower_components/what-input/dist/what-input.js"
     # Core Foundation files
     - "bower_components/foundation-sites/js/foundation.core.js"
     - "bower_components/foundation-sites/js/foundation.util.*.js"

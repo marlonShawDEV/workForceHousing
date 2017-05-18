@@ -1,39 +1,64 @@
-﻿<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Style Guide</title>
-    <link rel="stylesheet" href="/ss/app_corp.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
-	  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&subset=latin-ext" type="text/css">
-    <!-- Style guide-specific CSS goes here. -->
-    <style>
-    header {display: none;}
-    </style>
-  </head>
-  <body>
+﻿---
+title: Style Guides and Tools
+layout: default
+---
 
-    <div class="column row">
-      <h1 class="hero-title">Style Guides for Freddie Mac Sites</h1>
-          {{#if guides}}    
-           <ul>
-            {{#each guides.page}}
-              <li class="item-name"><a href="{{url}}">{{name}}</a></li> 
-            {{/each}}
-          </ul>
-          {{/if}}
+<div class="page-title">
+  <div class="row column">
+    <h1>Style Guides and Tools</h1>
+  </div>
+</div>
+<div class="content-band"> 
+  <div class="row">
+    <div class="column medium-5">
+      <h2>Style Guides</h2>
+        {{#if guides}}    
+         <ul>
+          {{#each guides.page}}
+            <li class="item-name"><a href="{{url}}">{{name}}</a></li> 
+          {{/each}}
+        </ul>
+        {{/if}}
+        
+        <h2>Responsive Page Viewer</h2>
+        <ul>
+          <li><a href="http://extcstage.fhlmc.com:8090/cgi-bin/ish/viewer.cgi?url=http://extcstage.fhlmc.com:8090/blog">FM Staging</a></li>
+          <li><a href="http://www.freddiemac.com/cgi-bin/ish/viewer.cgi?url=http://www.freddiemac.com/blog">FM Production</a></li>
+          <li><a href="http://extcstage.fhlmc.com:9030/cgi-bin/ish/viewer.cgi?url=http://extcstage.fhlmc.com:9030/">My Home Staging</a></li>
+          <li><a href="http://myhome.freddiemac.com/cgi-bin/ish/viewer.cgi?url=http://myhome.freddiemac.com/">My Home Production</a></li>
+        </ul>
+        
+        <h2>Analytics</h2>
+        <ul>
+          <li><a href="https://my.omniture.com/login/">Adobe Analytics Login</a></li>
+          <li>View <a href="files/navigation-links-naming-scheme.docx">Navigation Link Tracking Map</a></li>
+        </ul>
     </div>
-
-
-    <!--[if lt IE 9]>
-    <script>window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"><\/'+'script>')</script>
-    <![endif]-->
-    <!--[if gte IE 9]><!-->
-    <script>window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"><\/'+'script>')</script>
-    <!--<![endif]-->
-    <script>window.jQuery || document.write('<script src="{{root}}/js/vendor/jquery-2.1.4.min.js"><\/'+'script>')</script>
-    <script src="/js/app_corp.js"></script>
-
-  </body>
-</html>
+    
+    <div class="column medium-7">
+      <h2>Additional Tools</h2>
+      <em>These links will only work if you are behind our firewall.</em>
+      <ul>
+      <li><a href="http://wiki.fhlmc.com/display/WIO/Diagrams">Server Diagrams</a></li>
+      <li><a href="http://wiki.fhlmc.com/display/WIO/">WIO (Web Infrastructure &amp; Operations)</a></li>
+      </ul>        
+      <h3>Tools for FreddieMac.com</h3>
+      <ul>
+      <li>View a <a href="http://extcstage.fhlmc.com:8090/cgi-bin/crawl/dir_crawl.cgi">Directory Listing</a> with time/date stamp</li>
+      <li>View a <a href="http://extcstage.fhlmc.com:8090/cgi-bin/crawl/filelist.cgi">File list</a> for a particular directory/site</li>
+      <li><a href="http://extcstage.fhlmc.com:8090/cgi-bin/crawl/string_crawl.cgi">String Search</a> - locate all files that contain a string of text in their content.</li>
+      <li><a href="http://extcstage.fhlmc.com:8090/cgi-bin/crawl/file_find.cgi">File Finder</a> - locate all files with a particular string in their file name.</li>
+      <li>View a list of all <a href="http://extcstage.fhlmc.com:8090/cgi-bin/expand_symlinks.cgi">symbolic links</a> and the server path they represent</li>
+      <li>View <a href="http://extcstage.fhlmc.com:8090/cgi-bin/crawl/logfile.cgi">recent errors in FM logfile</a></li>
+      </ul>
+      <h3>Tools for MyHome.FreddieMac.com</h3>
+      <ul>
+      <li>View a <a href="http://extcstage.fhlmc.com:9030/cgi-bin/crawl/dir_crawl.cgi">Directory Listing</a> with time/date stamp</li>
+      <li>View a <a href="http://extcstage.fhlmc.com:9030/cgi-bin/crawl/filelist.cgi">File list</a> for a particular directory/site</li>
+      <li><a href="http://extcstage.fhlmc.com:9030/cgi-bin/crawl/string_crawl.cgi">String Search</a> - locate all files that contain a string of text in their content.</li>
+      <li><a href="http://extcstage.fhlmc.com:9030/cgi-bin/crawl/file_find.cgi">File Finder</a> - locate all files with a particular string in their file name.</li>
+      <li>View <a href="http://extcstage.fhlmc.com:9030/cgi-bin/crawl/logfile.cgi">recent errors in My Home logfile</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

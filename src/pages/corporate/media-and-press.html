@@ -31,28 +31,35 @@ layout: corporate-1col
     <div class="row">
       <div class="column small-12">
         <div class="tab-wrapper" id="resource-tabs" data-equalizer="tabs" data-equalize-on="small">
-          <ul class="tabs small-up-2 medium-up-4 horizontal">
-            <li class="tabs-title is-active"><a href="#" data-equalizer-watch="tabs">Corporate Information</a></li>
-            <li class="tabs-title"><a href="/corporate/media-and-press2.html" data-equalizer-watch="tabs">Video</a></li>
-            <li class="tabs-title"><a href="/corporate/media-and-press3.html" data-equalizer-watch="tabs">Images</a></li>
-            <li class="tabs-title"><a href="/corporate/media-and-press4.html" data-equalizer-watch="tabs">Executive Photos &amp; Bios</a></li>
+          <ul class="tabs small-up-2 medium-up-4 horizontal" data-tabs id="corp-info-tabs">
+            <li class="tabs-title is-active"><a href="#infoTab" data-equalizer-watch="tabs">Corporate Information</a></li>
+            <li class="tabs-title"><a href="#videoTab" data-equalizer-watch="tabs">Video</a></li>
+            <li class="tabs-title"><a href="#imageTab" data-equalizer-watch="tabs">Images</a></li>
+            <li class="tabs-title"><a href="#execTab" data-equalizer-watch="tabs">Executive Photos &amp; Bios</a></li>
           </ul>
-          <div class="tabs-content">
-            <div class="tabs-panel is-active">
-              <div class="row">
-                <div class="column">
-                  <h2 class="subtitle gutter-bottom">Corporate Information</h2>
-                </div>
-              </div>
-              {{> corp-info-grid}}
-   
+          <div class="tabs-content" data-tabs-content="corp-info-tabs">
+            <div class="tabs-panel is-active" id="infoTab">
+              <h2 class="subtitle gutter-bottom">Corporate Information</h2>
+              {{> corp-info-grid}}   
+            </div>
+            <div class="tabs-panel" id="videoTab">
+              <h2 class="subtitle gutter-bottom">Video</h2>
+              {{> corp-video-cards}}              
+            </div>
+            <div class="tabs-panel" id="imageTab">
+              <h2 class="subtitle gutter-bottom">Images</h2>
+              {{>corp-image-cards}}                   
+            </div>
+            <div class="tabs-panel" id="execTab">
+              <h2 class="subtitle gutter-bottom">Executive Photos &amp; Bios</h2>  
+              {{> corp-exec-cards}}
             </div>
           </div>
         </div>    
       </div>
     </div>
     <!-- end of tabs -->
- {{> gradient-promo}}
+ {{> corp-gradient-promo}}
   </div>
 </div>
 

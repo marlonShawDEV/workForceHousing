@@ -175,12 +175,21 @@ a:hover {
   
   &.overlay-gradient {
     .overlay-contents { 
-      @media screen and #{breakpoint(medium)} {    
+      @include breakpoint(medium) {    
         top: 0;
-        padding-right: 40%; 
+        padding-right: 33%; 
       }  
-      @include breakpoint(xlarge only) {   
+      @media screen and (min-width: -zf-bp-to-em(map-get($breakpoints, medium) + 60px)) {
+        padding-right: 40%; 
+      }
+      @media screen and (min-width: -zf-bp-to-em(map-get($breakpoints, medium) + 300px)) {
+        padding-right: 45%; 
+      }
+      @include breakpoint(large) {   
         padding-right: 38%;
+      } 
+      @include breakpoint(xlarge only) {   
+        padding-right: 33%;
       }  
     }
     @media screen and #{breakpoint(medium)} {    

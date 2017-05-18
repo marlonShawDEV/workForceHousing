@@ -48,28 +48,6 @@ layout: homepage
   </div>
 </div>
 
-
-{{> homepage-careers}}
- 
-{{>footer-promo-about}}
-
-<script type="text/javascript"> 
-function triggerTestimonial(i) {       
-  $(".testimonials-thumbnail").find('.is-active').removeClass('is-active');
-  $(".testimonials-thumbnail").eq(i).find('a').addClass('is-active');
-  $('.testimonials-quote-container').not('.hide').addClass('hide');
-  $('.testimonials-quote-container').eq(i).removeClass('hide');
-  $('.testimonial-image-offset').not('.hide').addClass('hide');
-  $('.testimonial-image-offset').eq(i).removeClass('hide');
-}
-
-function findTestimonials() {
-  if($(".testimonials-thumbnails").length){
-    $(".testimonials-thumbnails").find(".testimonials-thumbnail").each(function(i){
-      $(this).find('a:first').on("click", function(e){e.preventDefault(); triggerTestimonial(i);});
-    }); 
-  }
-}
-
-window.onload = findTestimonials;
-</script>
+{{> homepage-testimonials}}
+{{> share-widget}} 
+{{>footer-promo-about-fm}}

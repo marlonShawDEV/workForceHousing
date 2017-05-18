@@ -21,7 +21,7 @@ s_somni.eVar73='FM v2.0-20141215|SC H27.4'
 
 /************************** PLUGINS SECTION *************************/
 /* You may insert any plugins you wish to use here.                 */
-s_somni._tpDST={2016:'3/13,11/6',2017:'3/12,11/5',2018:'3/11,11/4',2019:'3/10,11/3',2020:'3/8,11/1'}
+s_somni._tpDST={2017:'3/12,11/5',2018:'3/11,11/4',2019:'3/10,11/3',2020:'3/8,11/1'}
 /********************************************************************/
 /* Plugin: getQueryParam 2.3 */
 s_somni.getQueryParam=new Function("p","d","u",""
@@ -63,38 +63,31 @@ s_somni.split=new Function("l","d",""
 +"++]=l.substring(0,i);l=l.substring(i+d.length);}return a");
 
 s_somni.busUnit={
-  bios:"corporate",
   blog:"corporate",
   corporate:"corporate",
   perspectives:"corporate",
   about:"corporate",
   research:"corporate",
   'media-room':"corporate",
-  calculadoras:"corporate consumers",
-  homeownership:"corporate consumers",
-  loanlookup:"corporate consumers",
-  mortgage_help:"corporate consumers",
-  avoidforeclosure:"corporate consumers",  
-  finance:"finance",
-  mimi:"finance",
-  pmms:"finance",
-  smm:"finance",
-  creditsmart:"housing professionals",
-  creditsmartespanol:"housing professionals", 
-  realestatepros:"housing professionals",
-  governance:"investors",
-  investors:"investors",
+  loanlookup:"corporate",
+  finance:"corporate",
+  mimi:"corporate",
+  pmms:"corporate",
+  governance:"corporate",
+  investors:"corporate",
+  terms:"corporate",
+  homepage:"corporate",
   multifamily:"multifamily",
   'small-loans':"multifamily",
-  news:"pr",
-  speeches:"pr",
-  'capital-markets':"securities",
-  debt:"securities",
-  freddienotes:"securities",
-  npl:"securities",
-  seasonedloanofferings:"securities", 
-  mbs:"securities",
-  creditriskofferings:"securities",
+  'capital-markets':"capital-markets",
+  debt:"capital-markets",
+  freddienotes:"capital-markets",
+  seasonedloanofferings:"capital-markets", 
+  mbs:"capital-markets",
+  creditriskofferings:"capital-markets",
+  creditsmart:"singlefamily",
+  creditsmartespanol:"singlefamily", 
+  realestatepros:"singlefamily",
   cim:"singlefamily",
   forms:"singlefamily",
   help:"singlefamily",
@@ -112,10 +105,8 @@ s_somni.busUnit={
   service:"singlefamily",
   slearnctr:"singlefamily",
   uniform:"singlefamily",
-  terms:"other",
-  'search':"other",
-  homepage:"other"
-};
+  'search':"other"
+}; 
 s_somni.events = '';
 
 var somniTL = function(obj,lType,hrf,trig,name1,persona){
@@ -126,7 +117,8 @@ var somniTL = function(obj,lType,hrf,trig,name1,persona){
  if(lType=='o'&&name1){s_somni.eVar2=name1;s_somni.linkTrackVars+=',prop2,eVar2';s_somni.events+=',event2'} 
  if(lType=='e'&&hrf){s_somni.eVar15=hrf;s_somni.linkTrackVars+=',prop15,eVar15';s_somni.events+=',event15'}
  else if(lType=='d'&&hrf){s_somni.eVar10=hrf;s_somni.linkTrackVars+=',prop10,eVar10';s_somni.events+=',event10'}
- if(trig=='search'){s_somni.eVar6=name1;s_somni.linkTrackVars+=',eVar6';s_somni.events+=',event5';}
+ if(trig=='share'){s_somni.eVar8=name1;s_somni.linkTrackVars+=',eVar8';s_somni.events+=',event8';}
+ else if(trig=='search'){s_somni.eVar6=name1;s_somni.linkTrackVars+=',eVar6';s_somni.events+=',event5';}
  if(lType=='e'&&name1){s_somni.eVar15=name1;}
  if(persona){s_somni.eVar27=persona; s_somni.linkTrackVars+=',prop27,eVar27'}
  s_somni.linkTrackEvents=s_somni.events;s_somni.linkTrackVars=s_somni.linkTrackVars+',events'; 
@@ -148,11 +140,11 @@ s_somni.usePlugins=true
  if(s_somni.pageType&&s_somni.pageType=="errorPage"){s_somni.eVar1="404|"+s_wlp;s_somni.eVar5=s_abbr+'error pages'}  
  else if(!s_somni.eVar1){s_somni.eVar1=s_abbr+s_path+(s_path.length<1?"":s_fil.length>1?":":"")+s_fil} 
  if(!s_somni.eVar5){s_somni.eVar5=s_abbr+s_chn}
- if(!s_somni.eVar7){s_somni.eVar7=s_chn=="blog"?"responsive":"website"}
- /* s_somni.eVar11 defined at page level */
  if(!s_somni.eVar12){s_somni.eVar12="other";if(s_somni.busUnit[s_chn]){s_somni.eVar12=s_somni.busUnit[s_chn]}
   if(s_chn=="search"&&s_somni.getQueryParam('proxystylesheet')=="multifamily"){s_somni.eVar12="multifamily"}
  }
+ if(s_chn=="search"){s_somni.eVar7="responsive"}
+ else if(!s_somni.eVar7){s_somni.eVar7=s_somni.busUnit[s_chn]=="corporate"?"responsive":"website"}
  if(s_somni.fmSuccess){var drch=document.referrer.replace(/https?:\/\//,'').replace(/\/\/+/g,'/').split('/')[1];
    s_somni.events=s_somni.apl(s_somni.events,"event12",",",1); if(s_somni.busUnit[drch]){s_somni.eVar12=s_somni.busUnit[drch]}
  }
@@ -172,7 +164,6 @@ s_somni.usePlugins=true
  else if(s_wlp.match(/help:ss/)){ s_somni.eVar27="selling system user"}
  else if(s_wlp.match(/singlefamily:doingbusiness:checklist/)){s_somni.eVar27="sf new customer"}
  else if(s_wlp.match(/purchasemarket/)){s_somni.eVar27="sf pmrc user"}
- else if(s_wlp.match(/finance/)){s_somni.eVar27="public policy market commentary user"}
  else if(s_wlp.match(/community_lenders/)){s_somni.eVar27="sf clrc user"}
  else if(s_wlp.match(/multifamily:investors:securities/)){s_somni.eVar27="mf securities investors"}
  else if(s_wlp.match(/multifamily:investors:kcerts/)){s_somni.eVar27="mf securities investors"}
@@ -189,6 +180,7 @@ s_somni.usePlugins=true
  if(s_somni.eVar6){s_somni.prop6=s_somni.eVar6}
  if(s_somni.eVar5=="fm|search"&&s_somni.searchNull){s_somni.events=s_somni.apl(s_somni.events,"event6",",",1)}
  s_somni.eVar9=s_somni.getQueryParam('extcmp');
+ if(s_somni.eVar8){s_somni.prop8=s_somni.eVar8;s_somni.events=s_somni.apl(s_somni.events,"event8",",",1)} 
  if(s_somni.eVar9){s_somni.prop9=s_somni.eVar9;s_somni.events=s_somni.apl(s_somni.events,"event9",",",1)}  
  if(s_somni.eVar10){s_somni.prop10=s_somni.eVar10;s_somni.events=s_somni.apl(s_somni.events,"event10",",",1)}  
  if(s_somni.getQueryParam('attr').match(/^rss/i)){s_somni.eVar23=s_somni.getQueryParam('attr')}
@@ -404,4 +396,3 @@ w.s_ft=new Function("c","c+='';var s,e,o,a,d,q,f,h,x;s=c.indexOf('=function(');w
 +"'+c.substring(e+1);s=c.indexOf('=function(')}return c;");
 c=s_d(c);if(e>0){a=parseInt(i=v.substring(e+5));if(a>3)a=parseFloat(i)}else if(m>0)a=parseFloat(u.substring(m+10));else a=parseFloat(v);if(a<5||v.indexOf('Opera')>=0||u.indexOf('Opera')>=0)c=s_ft(c);if(!s){s=new Object;if(!w.s_c_in){w.s_c_il=new Array;w.s_c_in=0}s._il=w.s_c_il;s._in=w.s_c_in;s._il[s._in]=s;w.s_c_in++;}s._c='s_c';(new Function("s","un","pg","ss",c))(s,un,pg,ss);return s}
 function s_giqf(){var w=window,q=w.s_giq,i,t,s;if(q)for(i=0;i<q.length;i++){t=q[i];s=s_gi(t.oun);s.sa(t.un);s.setTagContainer(t.tagContainerName)}w.s_giq=0}s_giqf()
-

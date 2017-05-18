@@ -92,6 +92,12 @@ fieldset {
       float: left;
     }
   }
+  
+  &[disabled] { 
+    + label::before {  
+        background: $fm-gray;
+    }
+  }
 }
 [type="radio"]:checked + label::before {
     background: $fm-green;
@@ -105,6 +111,9 @@ fieldset {
     background: $fm-green;
 }  
 .outline { 
+  select:not(:active):not(:focus) {
+   color: $white;
+  }
   [type="text"], 
   [type="password"], 
   [type="date"], 

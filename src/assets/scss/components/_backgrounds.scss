@@ -8,6 +8,7 @@
   } 
   .background-concrete {
     background-color: $light-gray;
+    color: $body-font-color; // solves for when this is inside another background
   }
   .background-white {
     background: $white;

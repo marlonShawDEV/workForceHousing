@@ -298,6 +298,7 @@ h1 {
   width: 3rem; 
   height: 3rem;
   background: none;
+  top: 32%;
   svg {
     fill: #ccc;
     stroke: none;
@@ -358,7 +359,7 @@ h1 {
   &:hover,
   &[aria-expanded="true"]  {
     &::after {
-      background: transparent url("/multifamily/images/sbl_more_info_hover.svg ") no-repeat center center; 
+      background: transparent url("/multifamily/images/sbl_more_info_hover.svg") no-repeat center center; 
     }
   }
 }
@@ -394,4 +395,77 @@ h1 {
     li { text-align: center; margin: 0.25rem 1rem;}
     img { padding: $gutter * 2 $gutter; }
   }
-}     
+} 
+
+.form-wrapper {
+  right: auto;
+  left: auto;
+  margin: 0 auto;
+  width: 100%;
+  padding-top: rem-calc(40);
+  padding-top: calc(40px +  54 * (100vw - 320px)/1180); 
+  @include breakpoint(xxlarge) {
+    padding-top: rem-cal(94);
+  }
+  > div { 
+    position: relative;
+  }
+  > .row {
+    max-width: $global-width;
+  }
+} 
+.modal-header {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  > * {  
+    display: table-cell;
+    vertical-align: middle;
+  }
+}   
+[type="checkbox"] + label.no-box {
+  border:1px solid $fm-green;
+  padding: 25px 10px 22px;
+  min-height: 85px; 
+  display: block;
+  margin: 1px;    
+  &:hover {
+   background: rgba($white, 0.2);
+  }
+  &.is-invalid-label {
+    border-color: $fm-red;
+  }
+}
+[type="checkbox"] + label.no-box::before {
+  display: none;
+  content: '';
+}
+[type="checkbox"]:checked {
+  + label.no-box {
+    background: $white;
+  }
+}  
+[type="checkbox"][disabled] {
+  + label.no-box {
+    opacity: 0.5;
+  }
+}  
+hr.light-green {
+  border-color: rgba($fm-green, 0.33);
+  border-width: 0 0 4px;
+}
+
+.tips-landing-hero{
+    position: relative;
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(/multifamily/images/sbl_hero_image.jpg);
+    background-repeat: no-repeat;
+    background-color: #502020;
+    background-position: top;
+    background-size: cover;
+    min-height: 300px;
+}
+.tips-landing-hero>div {
+    width: 90%;
+    max-width: 1000px;
+}
