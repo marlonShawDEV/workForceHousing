@@ -1,4 +1,4 @@
-﻿{{!-- This is the base layout for your project, and will be used on every page. --}}
+﻿{{!-- This is the base layout for full width corporate pages --}}
 
 <!doctype html>
 <html class="no-js" lang="en">
@@ -25,20 +25,15 @@
     <meta name="theme-color" content="#88BD45">
     <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
     <link rel="icon" type="image/png" href="/images/favicon.png" />
-    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900' rel='stylesheet' type='text/css' />
-    <link rel="stylesheet" href="/ss/app_sf.css" />
+    <link rel="stylesheet" href="/ss/app_nhm.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet" />
   </head>
   <body>
+  <div class="show-for-print">FreddieMac.com</div>
+  <header id="header-nav" class="hide-for-print"> 
     {{> ribbon}}
-    {{> header-sf}}
-
-    {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+  </header>      
     {{> body}}
-
-    {{> footer-sf}}
-
-
-
 
     <!--[if lt IE 9]>
     <script>window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"><\/'+'script>')</script>
@@ -46,7 +41,9 @@
     <!--[if gte IE 9]><!-->
     <script>window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"><\/'+'script>')</script>
     <!--<![endif]-->
-    <script>window.jQuery || document.write('<script src="{{root}}/js/vendor/jquery-2.1.4.min.js"><\/'+'script>')</script>
-    <script src="/js/app_sf.js"></script>
+    <script>window.jQuery || document.write('<script src="/js/vendor/jquery-2.1.4.min.js"><\/'+'script>')</script>
+    
+    <script src="/js/app_nhm.js"></script>
+    
   </body>
 </html>

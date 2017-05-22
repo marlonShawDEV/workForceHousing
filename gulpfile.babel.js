@@ -23,9 +23,11 @@ function loadConfig() {
   return yaml.load(ymlFile);
 }
 
-// Build the "dist" folder by running all of the below tasks -- add in javascriptMFSBL, sassMfSbl, styleGuideMFSBL, if building for SBL
+// Build the "dist" folder by running all of the below tasks
+// add in javascriptMFSBL, sassMfSbl, styleGuideMFSBL, if building for SBL
+// add in javascriptNHM, sassNHM, styleGuideNHM, if building for NHM
 gulp.task('build',
- gulp.series(clean, gulp.parallel(pages, javascript, javascriptMFSBL, sassMfSbl, sass, sassHomepage, images, copy), styleGuideMFSBL, styleGuide));
+ gulp.series(clean, gulp.parallel(pages, javascript, javascriptMFSBL, javascriptNHM, sassNHM, sassMfSbl, sass, sassHomepage, images, copy), styleGuideMFSBL, styleGuideNHM, styleGuide));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -115,6 +117,12 @@ function styleGuideMFSBL(done) {
     template: 'src/styleguide/template_mfsbl.html'
   }, done);
 }
+function styleGuideNHM(done) {
+  sherpa('src/styleguide/index_mfsbl.md', {
+    output: PATHS.dist + '/styleguide/styleguide_nhm.html',
+    template: 'src/styleguide/template_nhm.html'
+  }, done);
+}
 function styleGuideCM(done) {
   sherpa('src/styleguide/index_cm.md', {
     output: PATHS.dist + '/styleguide/styleguide_cm.html',
@@ -173,7 +181,22 @@ function sassHomepage() {
     .pipe(gulp.dest(PATHS.dist + '/ss'))
     .pipe(browser.reload({ stream: true }));
 }
-
+// Compile Sass into CSS for NHM
+function sassNHM() {
+  return gulp.src('src/assets/scss/app_nhm.scss')
+    .pipe($.sourcemaps.init())
+    .pipe($.sass({
+      includePaths: PATHS.sass
+    })
+      .on('error', $.sass.logError))
+    .pipe($.autoprefixer({
+      browsers: COMPATIBILITY
+    }))
+    .pipe($.if(PRODUCTION, $.cssnano({safe: true, minifyGradients: false, calc:false, zindex:false, colormin:false, reduceInitial:false})))
+    .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
+    .pipe(gulp.dest(PATHS.dist + '/ss'))
+    .pipe(browser.reload({ stream: true }));
+}
 // Combine JavaScript into one file
 // In production, the file is minified
 function javascript(done) {
@@ -226,7 +249,18 @@ function javascriptMFSBL(done) {
     .pipe(gulp.dest(PATHS.dist + '/multifamily/new_standard/sbl/'));
   done();
 }
-
+function javascriptNHM(done) {
+  return gulp.src(PATHS.javascriptmf)
+    .pipe($.sourcemaps.init())
+    .pipe($.babel({ignore: ['what-input.js']}))
+    .pipe($.concat('app_nhm.js'))
+    .pipe($.if(PRODUCTION, $.uglify()
+      .on('error', e => { console.log(e); })
+    ))
+    .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
+    .pipe(gulp.dest(PATHS.dist + '/js'));
+  done();
+}
 function javascriptCM(done) {
   return gulp.src(PATHS.javascriptcm)
     .pipe($.sourcemaps.init())
@@ -266,13 +300,14 @@ function reload(done) {
 }
 
 // Watch for changes to static assets, pages, Sass, and JavaScript
-// If running for SBL, add in sassMfSbl, styleGuideMFSBL, javascriptMFSBL,
+// If running for SBL, add in sassMfSbl, styleGuideMFSBL, javascriptMFSBL, into appropriate processes
+// If running for NHM, add in sassNHM, styleGuideNHM, javascriptNHM, into appropriate processes
 function watch() {
   gulp.watch(PATHS.assets, copy);
   gulp.watch('src/pages/**/*.html').on('change', gulp.series(pages, browser.reload));
   gulp.watch('src/{layouts,partials}/**/*.html').on('change', gulp.series(resetPages, pages, browser.reload));
-  gulp.watch('src/assets/scss/**/*.scss').on('change', gulp.series(sass, sassHomepage, sassMfSbl, browser.reload));
-  gulp.watch('src/assets/js/**/*.js').on('change', gulp.series(javascript, javascriptMFSBL, browser.reload));
+  gulp.watch('src/assets/scss/**/*.scss').on('change', gulp.series(sass, sassHomepage, sassNHM, sassMfSbl, browser.reload));
+  gulp.watch('src/assets/js/**/*.js').on('change', gulp.series(javascript, javascriptNHM, javascriptMFSBL, browser.reload));
   gulp.watch('src/assets/img/**/*').on('change', gulp.series(images, browser.reload));
-  gulp.watch('src/styleguide/**').on('change', gulp.series(styleGuide, styleGuideMFSBL, browser.reload));
+  gulp.watch('src/styleguide/**').on('change', gulp.series(styleGuide, styleGuideNHM, styleGuideMFSBL, browser.reload));
 }
