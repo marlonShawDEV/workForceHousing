@@ -39,11 +39,17 @@ npm install
 bower install
 ```
 
-If you have trouble with admin privileges on your computer try the commands below instead.
+If you have trouble with admin privileges on your computer try the commands below instead. 
 
 ```bash
 sudo npm install
 bower install --allow-root
+```
+
+Before you start making asny changes, create your own git branch for version control.
+
+```bash
+git checkout -b branchname
 ```
 
 Finally, run `npm start` to run Gulp. Your finished site will be created in a folder called `dist`, viewable at this URL:
