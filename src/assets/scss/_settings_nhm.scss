@@ -109,10 +109,10 @@ $print-transparent-backgrounds: true;
 
 $breakpoints: (
   small: 0,
-  medium: 620px,
-  large: 980px,  
-  xlarge: 1280px,  
-  xxlarge: 1500px,
+  medium: 550px,
+  large: 800px,  
+  xlarge: 1080px,  
+  xxlarge: 1340px,
 );
 $print-breakpoint: medium;
 $breakpoint-classes: (small medium large xlarge);

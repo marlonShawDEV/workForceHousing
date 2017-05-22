@@ -1,6 +1,6 @@
 @charset 'utf-8';
 
-@import 'settings_mf_sbl';
+@import 'settings_nhm';
 @import 'foundation';
 @import 'motion-ui';
 @import 'components/breakpoint';
@@ -60,7 +60,7 @@
 // custom styles //
 @import 'components/icons';
 @import 'components/globals';
-@import 'components/page-layout';
+// @import 'components/page-layout';
 @import 'components/shims';
 @import 'components/reveal';
 @import 'components/text';
@@ -98,6 +98,6 @@
 //@import 'components/media-object';
 //@import 'components/banners';
 //@import 'components/testimonial-block';
-// @import 'components/orbit';
+//@import 'components/orbit';
 @import 'components/nhm-overrides';
 
