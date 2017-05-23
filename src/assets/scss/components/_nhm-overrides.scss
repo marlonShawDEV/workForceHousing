@@ -1,52 +1,42 @@
-.content-inner-band { 
-  float: left;
+.content-band,
+.content-inner-band,
+.footer { 
+  clear: left;
   width: 100%;
+  position: relative;
+  padding-left: rem-calc(20);
+  padding-right: rem-calc(20);
+  @include breakpoint(medium) {
+    padding-left: rem-calc(40);
+    padding-right: rem-calc(40);    
+  }
+  @include breakpoint(xlarge) {
+    padding-left: rem-calc(60);
+    padding-right: rem-calc(60);    
+  }
+  @include breakpoint(xxlarge) {  
+    padding-left: rem-calc(100);
+    padding-right: rem-calc(100);    
+  }  
   > .row  {
-    max-width: rem-calc(1340);
-    padding-left: rem-calc(20);
-    padding-right: rem-calc(20);
-    margin-top: $gutter * 2.5;
-    margin-bottom: $gutter * 2.5;
-    @include breakpoint(large) {
-      margin-top: $gutter * 3;
-      margin-bottom: $gutter * 3;   
-    }    
-    @include breakpoint(xlarge) {
-      margin-top: $gutter * 4;
-      margin-bottom: $gutter * 4;   
-      padding-left: rem-calc(40);
-      padding-right: rem-calc(40);    
-    }
-    @include breakpoint(xxlarge) {
-      margin-top: $gutter * 4.5;
-      margin-bottom: $gutter * 4.5;   
-      padding-left: rem-calc(60);
-      padding-right: rem-calc(60);    
-    }
-    &.column,
-    &.collapse {
-      padding-left: rem-calc(30);
-      padding-right: rem-calc(30); 
-      @include breakpoint(xlarge) {
-        padding-left: rem-calc(50);
-        padding-right: rem-calc(50);      
-      }
-      @include breakpoint(xxlarge) {
-        padding-left: rem-calc(70);
-        padding-right: rem-calc(70); 
-      }
-    }  
+    max-width: rem-calc(1200);
   }   
 }
-.footer {
-  clear: left;
-  > .row  {
-    max-width: rem-calc(1340);
-  }  
-}
-.stripes{
-  background-image: linear-gradient(to right top, transparent 46%, rgba(0, 0, 0, 0.07) 0px, rgba(0, 0, 0, 0.07) 54%, transparent 0px);
-  background-size: 10px 10px;
+.content-band {
+  padding-top: $gutter * 2.5;
+  padding-bottom: $gutter * 2.5;
+  @include breakpoint(large) {
+    padding-top: $gutter * 3;
+    padding-bottom: $gutter * 3;   
+  }    
+  @include breakpoint(xlarge) {
+    padding-top: $gutter * 4;
+    padding-bottom: $gutter * 4;    
+  }
+  @include breakpoint(xxlarge) {
+    padding-top: $gutter * 4.5;
+    padding-bottom: $gutter * 4.5;   
+  }
 }
 .logo-mobile { 
   padding: $gutter $gutter/2 0 $gutter * 1.5;
@@ -64,12 +54,12 @@
     height: rem-calc(67.13);
   }
 }
-
-
+body {
+  min-width: rem-calc(350);
+}
 
 h1 { 
   margin: 0;
-  padding: 10px 0 30px;
   color: #4d4d4d;
   &.white {
     color: #fff;
@@ -141,11 +131,126 @@ h1 {
 }
 .card-title{font-weight: 700;color:#333;font-size: 2rem;}
 .card-blurb-large { color: #333;} 
-
-img.image-shadow {
-  box-shadow: 10px 10px 20px 0 rgba(0,0,0,0.3);
-  border-width: 0;
+.stripes{
+  background-image: linear-gradient(to right top, transparent 46%, rgba(0, 0, 0, 0.07) 0px, rgba(0, 0, 0, 0.07) 54%, transparent 0px);
+  background-size: 10px 10px;
 }
+.financeNeeds {
+  position: relative;
+}
+.unbeatableTerms {
+  padding-top: 2rem;
+  position: relative;
+  text-align: center;
+  h3 { 
+    color: $fm-green;
+    margin-top: rem-calc(20);
+    margin-bottom: auto;
+    height: rem-calc(48); 
+  }
+}
+
+.sbl-landing-hero {
+  position: relative;
+  text-align: center;
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/multifamily/images/sbl_hero-apartments.jpg");
+  background-repeat: no-repeat;
+  background-color: #502020;
+  background-position: top center;
+  background-size: cover;
+  min-height: 594px;
+  > div {  
+    width: 90%; 
+    max-width: 1000px; 
+  }
+  .header-button {  
+    padding: $gutter * 1.25 0;
+  }
+  @include breakpoint(medium) {  
+    .header-button { padding: $gutter * 2.5 0; }  
+  }
+  @include breakpoint(large) {  
+    .header-button { padding: $gutter * 3 0 $gutter * 4; }  
+  }
+}
+
+.fastEasy-landing-hero{
+  position: relative;
+  text-align: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/multifamily/images/sbl_hero_shackinghands.jpg");
+  background-repeat: no-repeat;    
+  background-position: top center;   
+  border-bottom: none;
+  background-size: cover;
+  color: #fff;  
+}
+.financeNeeds{
+  max-width: 360px;
+  margin: auto;
+  padding:20px 15px 10px;
+  background: $white; 
+  color:#000;
+  border: 10px solid #D7D7D7;
+  @include breakpoint(medium){
+    max-width: rem-calc(360);
+  }
+}
+.center-connectors {
+  margin: auto;
+  padding: 0 1rem;
+  position: relative;
+  @include breakpoint(medium) {
+    max-width: 332px;
+  }
+  @include breakpoint(large) {
+    max-width: 392px;
+  }
+}
+@include breakpoint(medium) {
+  .center-connectors::after {
+    height: 1rem;
+    width: 1rem;      
+    content: ""; 
+    border: 4px solid #CECECE;
+    border-radius: 50%;
+    background: #f4f4f4; 
+    position: absolute; 
+    top: calc(50% - 0.5rem);
+    right: 0; 
+  }
+  .center-connectors::before {
+    height: 1rem;
+    width: 1rem;      
+    content: ""; 
+    border: 4px solid #CECECE;
+    border-radius: 50%;
+    background: #f4f4f4; 
+    position: absolute; 
+    top: calc(50% - 0.5rem); 
+    left: 0;
+  } 
+}
+
+
+.loanDivider { 
+  width: 200px; 
+  border-bottom: 2px solid $offwhite; 
+  margin: 0 auto 1rem; 
+  height: 1rem; 
+  position: relative;
+}  
+.loanDivider::before {
+  height: 1rem;
+  width: 1rem;      
+  content: ""; 
+  border: 4px solid $offwhite;
+  border-radius: 50%;
+  background: $white; 
+  position: absolute; 
+  top: 50%; 
+  left: calc(50% - 0.5rem);
+}    
 .callout-at-large {
   padding: $gutter/5;
   @include breakpoint(xlarge) {
@@ -178,6 +283,56 @@ img.image-shadow {
   }
 }
 
+.card {
+  text-align: left;
+	.overlay {
+		display: block;
+    width: 100%;
+    max-width: auto;
+    img {
+      max-width: auto;
+      width: 100%;
+    } 
+	}
+}  
+.card-section {
+  @include breakpoint(xlarge) {
+    padding: $gutter * 1.5; 
+  }
+}
+.card-section + .card-section {
+  padding-top: 0;
+}
+
+.triangle_out {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;  
+  height: 80px;
+  background: linear-gradient(to top right, #fff 50%, transparent 50%) no-repeat left bottom / 50% 100%,
+    linear-gradient(to top left, #fff 50%, transparent 50%) no-repeat right bottom / 50% 100%;
+  + .row {
+    padding-bottom: 60px;
+  }  
+}
+.triangle_in {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;  
+  height: 80px;
+  z-index:300;
+  background: linear-gradient(to top right, transparent 50%, #fff 50%) no-repeat left bottom / 50% 100%,
+    linear-gradient(to top left,transparent 50%, #fff 50%) no-repeat right bottom / 50% 100%;
+  + .row,
+  + .triangle_out + .row {
+    padding-top: 60px;
+    margin-bottom: -40px;
+  }
+ 
+}
+
 .no-border { border-width: 0 !important; }
 .orbit-container { padding: 0 2rem;}
 .orbit {
@@ -207,6 +362,70 @@ img.image-shadow {
   .orbit-next { right: -1rem; }
 }
 
+.lender-block {
+  padding-right: $gutter * 2.5;
+  @include clearfix;
+  margin: 0 auto;
+  width: 250px + $gutter * 2.5;
+  @include breakpoint(medium) {
+    width: 250px * 2 + $gutter * 2.5;
+  }
+  @include breakpoint(large) {
+    width: 250px * 3 + $gutter * 2.5;
+  }
+  @include breakpoint(xlarge) {
+    width: 250px * 4 + $gutter * 2.5;
+  }
+  @include breakpoint(xxlarge) {
+    width: 250px * 5 + $gutter * 2.5;
+  }
+}
+.drop-block { 
+  text-align: center;
+  width: 250px;
+  float: left;
+}
+
+.dropdown-trigger {
+  padding: $gutter $gutter $gutter*2 $gutter * 3.5;
+  text-align: center;
+  position: relative;
+  &::after {
+    content: "";
+    display: block; 
+    margin:auto 0;
+    position: absolute;
+    bottom: 1px;
+    left: $gutter * 3.5 + 80px - 11px;
+    width:22px; 
+    height:22px; 
+    background: transparent url("/multifamily/images/sbl_more_info.svg") no-repeat center center; 
+  }
+  &:hover,
+  &[aria-expanded="true"]  {
+    &::after {
+      background: transparent url("/multifamily/images/sbl_more_info_hover.svg") no-repeat center center; 
+    }
+  }
+}
+.dropdown-pane {
+  color: $medium-gray;
+  &::after {
+    content: "";
+    width: 0; 
+    height: 0; 
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid white;
+    position: absolute;
+    top: -8px;
+    left: calc(50% - 9px);
+  }
+  p {
+    text-align: left;
+  }
+}
+
 .footer {
   li  {
     display: inline-block;
@@ -222,3 +441,69 @@ img.image-shadow {
     img { padding: $gutter * 2 $gutter; }
   }
 } 
+
+.form-wrapper {
+  right: auto;
+  left: auto;
+  margin: 0 auto;
+  width: 100%;
+  padding-top: rem-calc(40);
+  padding-top: calc(40px +  54 * (100vw - 320px)/1180); 
+  @include breakpoint(xxlarge) {
+    padding-top: rem-cal(94);
+  }
+  > div { 
+    position: relative;
+  }
+  > .row {
+    max-width: $global-width;
+  }
+} 
+
+[type="checkbox"] + label.no-box {
+  border:1px solid $fm-green;
+  padding: 25px 10px 22px;
+  min-height: 85px; 
+  display: block;
+  margin: 1px;    
+  &:hover {
+   background: rgba($white, 0.2);
+  }
+  &.is-invalid-label {
+    border-color: $fm-red;
+  }
+}
+[type="checkbox"] + label.no-box::before {
+  display: none;
+  content: '';
+}
+[type="checkbox"]:checked {
+  + label.no-box {
+    background: $white;
+  }
+}  
+[type="checkbox"][disabled] {
+  + label.no-box {
+    opacity: 0.5;
+  }
+}  
+hr.light-green {
+  border-color: rgba($fm-green, 0.33);
+  border-width: 0 0 4px;
+}
+
+.tips-landing-hero{
+    position: relative;
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(/multifamily/images/sbl_hero_image.jpg);
+    background-repeat: no-repeat;
+    background-color: #502020;
+    background-position: top;
+    background-size: cover;
+    min-height: 300px;
+}
+.tips-landing-hero>div {
+    width: 90%;
+    max-width: 1000px;
+}

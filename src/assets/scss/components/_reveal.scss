@@ -1,22 +1,29 @@
+.reveal.without-overlay[style], 
+.reveal.without-overlay[data-events='resize'] { 
+top: 0 !important;
+} 
+
 .reveal {  
-  color: $white;
-  &.tiny,
-  &.small,
-  &.large {
-    @include reveal-modal-fullscreen;
-  }
-  &:not(.overlay-video):not(.overlay-image):not(.overlay-gallery) {
-    @include reveal-modal-fullscreen;
-    padding-top: rem-calc(40);
-    padding-top: calc(40px +  54 * (100vw - 320px)/1180); 
-    @include breakpoint(xxlarge) {
-      padding-top: rem-cal(94);
+  @media screen {
+    color: $white;
+    &.tiny,
+    &.small,
+    &.large {
+      @include reveal-modal-fullscreen;
     }
-    > div { 
-      position: relative;
-    }
-    > .row {
-      max-width: $global-width;
+    &:not(.overlay-video):not(.overlay-image):not(.overlay-gallery) {    
+      @include reveal-modal-fullscreen;    
+      padding-top: rem-calc(40);
+      padding-top: calc(40px +  54 * (100vw - 320px)/1180); 
+      @include breakpoint(xxlarge) {
+        padding-top: rem-cal(94);
+      }
+      > div { 
+        position: relative;
+      }
+      > .row {
+        max-width: $global-width;
+      }
     }
   }
  
@@ -150,14 +157,28 @@
     }
   }
 }
-.modal-page-header {
-  background: $light-gray;
-  text-align: center;
-  padding: 4rem 2rem 3rem;
-  h1 {
-    color: $fm-green;
+@media screen {
+  .modal-page-header {
+    background: $light-gray;
+    text-align: center;
+    padding: 4rem 2rem 3rem;
+    h1 {
+      color: $fm-green;
+    }
+    :last-child:not(:first-child) {
+      margin-bottom: 0;
+    }
   }
-  :last-child:not(:first-child) {
-    margin-bottom: 0;
-  }
+}
+
+@media print {
+  .is-reveal-open .content-band,
+  .is-reveal-open .page-title,
+  .is-reveal-open .pre-footer-promo  { display: none; }
+  body.is-reveal-open,
+  html.is-reveal-open body  { overflow: visible !important; height: auto; position: static; }
+  .reveal.without-overlay { position: static; overflow: visible !important; }
+  .reveal { height: auto; padding-top: 0; max-height: none; }
+  .card-section.text-center { text-align: left; }
+  .reveal .column { width: 100%; }
 }

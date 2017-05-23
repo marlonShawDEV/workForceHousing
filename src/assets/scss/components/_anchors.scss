@@ -175,7 +175,7 @@ a:hover {
   
   &.overlay-gradient {
     .overlay-contents { 
-      @include breakpoint(medium) {    
+      @media screen and #{breakpoint(medium)} {    
         top: 0;
         padding-right: 33%; 
       }  
@@ -217,5 +217,11 @@ a:hover {
 
 @media print { 
   .overlay-gradient > img { padding-right: 50%; }
-  .video-length { display: none; }
+  .video-length { display: none; }  
+    @if $print-hrefs {
+      a[href] { -moz-text-decoration-color: #ccc; text-decoration-color: #ccc; }
+      .feature-block a[href] { text-decoration: none; }
+      a[href]:after { font-size: 11pt; font-weight: 400; text-transform: none;}
+      a[href^='/']:after { content: ' (http://www.freddiemac.com' attr(href) ')'; }
+    }
 }

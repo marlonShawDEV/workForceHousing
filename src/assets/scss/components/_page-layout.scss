@@ -1,142 +1,126 @@
-.ribbon,
-.primary-nav,
-.secondary-nav,
-.page-title,
-.content-band,
-.share-wrapper,
-.footer-promo,
-.pre-footer-promo,
-.footer,
-.hero-blended,
-.hero {  
-  > .row  {
-    padding-left: rem-calc(20);
-    padding-right: rem-calc(20);
-    @include breakpoint(xlarge) {
-      padding-left: rem-calc(40);
-      padding-right: rem-calc(40);    
-    }
-    @include breakpoint(xxlarge) {
-      padding-left: rem-calc(60);
-      padding-right: rem-calc(60);    
-    }
-    &.column,
-    &.collapse {
-      padding-left: rem-calc(30);
-      padding-right: rem-calc(30); 
+@media screen {
+  .ribbon,
+  .primary-nav,
+  .secondary-nav,
+  .page-title,
+  .content-band,
+  .share-wrapper,
+  .footer-promo,
+  .pre-footer-promo,
+  .footer,
+  .hero-blended,
+  .hero {  
+    > .row  {
+      padding-left: rem-calc(20);
+      padding-right: rem-calc(20);
       @include breakpoint(xlarge) {
-        padding-left: rem-calc(50);
-        padding-right: rem-calc(50);      
+        padding-left: rem-calc(40);
+        padding-right: rem-calc(40);    
       }
       @include breakpoint(xxlarge) {
-        padding-left: rem-calc(70);
-        padding-right: rem-calc(70); 
+        padding-left: rem-calc(60);
+        padding-right: rem-calc(60);    
       }
-    }  
-  }   
-}
-.content-band {
-  margin-top: 2rem;
-  margin-bottom: $gutter * 1.5; 
-	@include breakpoint(large) {
-    margin-bottom: 4rem; 
-	}
-	@include breakpoint(xlarge) {
-     margin-top: rem-calc(55);
-    margin-bottom: rem-calc(100); 
-	}
-}
-.two-column-layout{
-  > .two-column-row {
+      &.column,
+      &.collapse {
+        padding-left: rem-calc(30);
+        padding-right: rem-calc(30); 
+        @include breakpoint(xlarge) {
+          padding-left: rem-calc(50);
+          padding-right: rem-calc(50);      
+        }
+        @include breakpoint(xxlarge) {
+          padding-left: rem-calc(70);
+          padding-right: rem-calc(70); 
+        }
+      }  
+    }   
+  }
+  .content-band {
+    margin-top: 2rem;
+    margin-bottom: $gutter * 1.5; 
     @include breakpoint(large) {
       margin-bottom: 4rem; 
     }
     @include breakpoint(xlarge) {
+       margin-top: rem-calc(55);
       margin-bottom: rem-calc(100); 
     }
-    @include breakpoint(large) {
-      padding-left: rem-calc(20);
-      padding-right: rem-calc(20);
-    }
-    @include breakpoint(xlarge) {
-      padding-left: rem-calc(40);
-      padding-right: rem-calc(40);
-    }
-    @include breakpoint(xxlarge) {
-      padding-left: rem-calc(60);
-      padding-right: rem-calc(60);
-    }  
   }
-}
-.two-column-row {
-  @include clearfix; 
-  > main {
-    position: relative;
-    z-index: 3;
-    padding-top: $gutter * 2.5; 
-    @include breakpoint(medium down){
-      padding-left: rem-calc(30);
-      padding-right: rem-calc(30);    
-    }
-    @include breakpoint(large) {
-      @include grid-column(7 of 12);
-    }
-    > .jut {
-      margin-bottom: 1.5rem;
-      @include breakpoint(large) { 
-        width: 106%; 
+  .two-column-layout{
+    > .two-column-row {
+      @include breakpoint(large) {
+        margin-bottom: 4rem; 
       }
-      @include breakpoint(xlarge) { 
-        width: 112%; 
-      }        
+      @include breakpoint(xlarge) {
+        margin-bottom: rem-calc(100); 
+      }
+      @include breakpoint(large) {
+        padding-left: rem-calc(20);
+        padding-right: rem-calc(20);
+      }
+      @include breakpoint(xlarge) {
+        padding-left: rem-calc(40);
+        padding-right: rem-calc(40);
+      }
+      @include breakpoint(xxlarge) {
+        padding-left: rem-calc(60);
+        padding-right: rem-calc(60);
+      }  
+    }
+  }
+  .two-column-row {
+    @include clearfix; 
+    > main {
+      position: relative;
+      z-index: 3;
+      padding-top: $gutter * 2.5; 
+      @include breakpoint(medium down){
+        padding-left: rem-calc(30);
+        padding-right: rem-calc(30);    
+      }
+      @include breakpoint(large) {
+        @include grid-column(7 of 12);
+      }
+      > .jut {
+        margin-bottom: 1.5rem;
+        @include breakpoint(large) { 
+          width: 106%; 
+        }
+        @include breakpoint(xlarge) { 
+          width: 112%; 
+        }        
+      } 
+    }
+    > aside {
+      position: relative;
+      z-index: 4;
+      padding-top: $gutter * 2.5;
+      @include breakpoint (medium down) {
+        @include grid-column-collapse;
+        clear: both;
+        float: none;
+      }
+      @include breakpoint(large) {
+          @include grid-column(4.5 of 12);
+      }
+      @include breakpoint(xlarge) {
+          @include grid-column(4 of 12);
+      }
+      section {    
+        margin: 0;
+        padding: $gutter * 1.5;      
+        @include breakpoint(large) {
+          padding: $gutter;
+        }  
+        @include breakpoint(xlarge) {
+          padding: $global-padding * 1.9 $global-padding * 2;
+        }
+      }
     } 
   }
-  > aside {
-    position: relative;
-    z-index: 4;
-    padding-top: $gutter * 2.5;
-    @include breakpoint (medium down) {
-      @include grid-column-collapse;
-      clear: both;
-      float: none;
-    }
-    @include breakpoint(large) {
-        @include grid-column(4.5 of 12);
-    }
-    @include breakpoint(xlarge) {
-        @include grid-column(4 of 12);
-    }
-    section {    
-      margin: 0;
-      padding: $gutter * 1.5;      
-      @include breakpoint(large) {
-        padding: $gutter;
-      }  
-      @include breakpoint(xlarge) {
-        padding: $global-padding * 1.9 $global-padding * 2;
-      }
-    }
-  } 
-}
-
-.grid-2col-blog .two-column-row > aside {
-  padding-top: 0;
-  @media print {
-    padding-top: 300px; // counteract the negative top margin inserted by css when printing
-  }
-}
-
-
-@media print {
-  .two-column-layout,
-  .two-column-row,
-  .grid-2col-blog,
-  main,
-  aside  {
-    width: 100% !important;
-    height: auto !important;
-    min-height: auto !important;
-  
+  .grid-2col-blog .two-column-row > aside {
+    padding-top: 0;
   }
 }
 
@@ -154,4 +138,19 @@ body.none .half-col label { font-weight: 400; font-size: 0.875rem; }
   body.none .half-col p { margin-bottom: 0.9rem; }
   body.none .half-col label { font-weight: 500; font-size: 1rem; }
   body.none [type="email"] { width: 50%; }
+}
+@media print {
+  .two-column-layout,
+  .two-column-row,
+  .grid-2col-blog,
+  .two-column-row > .column,
+  main,
+  aside  {
+    width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;  
+  }
+  aside[style] {
+   margin-top: 0 !important;
+  }
 }

@@ -122,8 +122,9 @@ $(function(){
       FM.form.resetReveal;
       FM.form.setTimer = setTimeout(FM.form.resetReveal, 400);
   }).on('open.zf.reveal', function() { 
-      FM.form.setTimer = setTimeout(FM.form.offsetReveal, 350);
-      
+      FM.form.setTimer = setTimeout(FM.form.offsetReveal, 350);  
+  }).on('resizeme.zf.trigger', function() { 
+      FM.form.setTimer = setTimeout(FM.form.offsetReveal, 300);  
   });
   // Site Catalyst trigger
   if (FM.form.useOmni()){
