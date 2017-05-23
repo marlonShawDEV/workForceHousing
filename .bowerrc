@@ -1,5 +1,0 @@
-{
-  "directory": "bower_components", 
-  "proxy": "http://f111111:my16charPassword@bproxy.fhlmc.com:8080",
-  "https-proxy": "http://f111111:my16charPassword@bproxy.fhlmc.com:8080"
-}

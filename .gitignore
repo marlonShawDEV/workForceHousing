@@ -1,8 +1,0 @@
-.gitignore
-.bowerrc
-.DS_Store
-node_modules
-npm-debug.log
-bower_components
-dist
-*.swp
