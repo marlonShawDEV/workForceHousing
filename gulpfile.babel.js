@@ -27,7 +27,7 @@ function loadConfig() {
 // add in javascriptMFSBL, sassMfSbl, styleGuideMFSBL, if building for SBL
 // add in javascriptNHM, sassNHM, styleGuideNHM, if building for NHM
 gulp.task('build',
- gulp.series(clean, gulp.parallel(pages, javascript, javascriptMFSBL, javascriptNHM, sassNHM, sassMfSbl, sass, sassHomepage, images, copy), styleGuideMFSBL, styleGuideNHM, styleGuide));
+ gulp.series(clean, gulp.parallel(pages, javascript, javascriptMFSBL, javascriptNHM, sassNHM, sassMfSbl, sassMfInnovate,  sass, sassHomepage, images, copy), styleGuideMFSBL, styleGuideNHM, styleGuide));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -162,6 +162,22 @@ function sassMfSbl() {
     .pipe($.if(PRODUCTION, $.cssnano({safe: true, minifyGradients: false, calc:false, zindex:false, colormin:false, reduceInitial:false})))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/multifamily/new_standard/sbl/'))
+    .pipe(browser.reload({ stream: true }));
+}
+// Compile Sass into CSS
+function sassMfInnovate() {
+  return gulp.src('src/assets/scss/app_mf_innovate.scss')
+    .pipe($.sourcemaps.init())
+    .pipe($.sass({
+      includePaths: PATHS.sass
+    })
+      .on('error', $.sass.logError))
+    .pipe($.autoprefixer({
+      browsers: COMPATIBILITY
+    }))
+    .pipe($.if(PRODUCTION, $.cssnano({safe: true, minifyGradients: false, calc:false, zindex:false, colormin:false, reduceInitial:false})))
+    .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
+    .pipe(gulp.dest(PATHS.dist + '/multifamily/new_standard/innovate/'))
     .pipe(browser.reload({ stream: true }));
 }
 // Compile Sass into CSS
