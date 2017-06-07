@@ -1,0 +1,503 @@
+﻿<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Style Guide: Grid</title>
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@FreddieMac" />
+    <meta property="og:title" content="Style Guide: Freddie Mac Grid" />
+    <meta name="twitter:title" content="Style Guide: Freddie Mac Grid"/>
+    <meta name="Description" content="The styleguide is based on the Foundation framework." />
+    <meta property="og:description" content="The styleguide is based on the Foundation framework." />
+    <meta name="twitter:description" content="The styleguide is based on the Foundation framework." />
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="files/styleguide.jpg" />
+    <meta name="twitter:image" content="files/styleguide.jpg" />
+    <meta name="theme-color" content="#88BD45">
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="stylesheet" href="/ss/app_corp.css">
+    <link rel="stylesheet" href="/ss/homepage.css" />
+
+    <!-- Style guide-specific CSS goes here. -->
+    <style>
+    #top {
+      width:100%;
+      position:fixed;
+      top: 0;   
+      padding: 0.5rem 0; 
+      z-index: 1001;      
+    }
+    /* This styles individual sections of the style guide */
+    .ss-section:not(:last-child) {
+      padding-bottom: 3rem;
+      clear: both;
+    }
+    .ss-section + .ss-section  {
+      padding-top: 4rem;    
+    }
+    .markup-wrapper > h1 {
+      padding: 1.5rem;
+      color: #ff6c00;
+      background: rgba(255,108,0,0.15);
+    }
+    #code-content {
+      padding-top: 1rem;
+    }
+    .row.display {
+      background: #eee;
+      font-size: 11px;
+      margin-bottom: 10px;
+      line-height: 2rem;
+      border: solid 1px #c6c6c6;
+      margin-left: 0 !important;
+      margin-right: 0 !important; }
+      .row.display .column:nth-child(2), .row.display .column.small-centered, .row.display .column.large-centered {
+        background: #e1e1e1; }
+      .row.display .column.color-end {
+        background: #d5d5d5; }
+
+    .row.display-end {
+      background: #fff;
+      font-size: 11px;
+      margin-bottom: 10px;
+      line-height: 2rem;
+      border: solid 1px #c6c6c6;
+      margin-left: 0 !important;
+      margin-right: 0 !important; }
+      .row.display-end .column {
+        background: #e1e1e1;
+        border-left: 1px solid #c6c6c6; }
+        .row.display-end .column.color-end {
+          background: #d5d5d5; }
+
+    .callout.secondary {
+        background-color: #eaeaea;
+        color: #0a0a0a;
+        border: 1px solid rgba(10, 10, 10, 0.25);
+    }
+    
+    /* This styles code blocks used for examples. */
+    .ss-code {
+        margin-bottom: 1rem; 
+      }
+      .ss-code code {
+        max-height: 900px;
+        overflow: scroll;
+        display: block;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        opacity: 1;
+      }
+    
+    .ss-code-live::before,
+    .ss-code-live::after {
+      content: ' ';
+      display: table;
+    }
+    .ss-code-live::after {
+      clear: both;
+    }  
+    code { 
+      font-size: 0.875rem;
+      opacity: 0.6;
+    }
+    .content-band {
+      margin-top: 0;
+    }
+
+    @media screen and (max-width: 35em) {
+      #top h1 { float: left; font-size: 20px; }
+      #top select { font-size: 14px; }
+    }
+
+     /* from href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css" */
+    .hljs{display:block;overflow-x:auto;padding:0.5em;color:#333;background:#f8f8f8;-webkit-text-size-adjust:none}.hljs-comment,.diff .hljs-header{color:#998;font-style:italic}.hljs-keyword,.css .rule .hljs-keyword,.hljs-winutils,.nginx .hljs-title,.hljs-subst,.hljs-request,.hljs-status{color:#333;font-weight:bold}.hljs-number,.hljs-hexcolor,.ruby .hljs-constant{color:#008080}.hljs-string,.hljs-tag .hljs-value,.hljs-doctag,.tex .hljs-formula{color:#d14}.hljs-title,.hljs-id,.scss .hljs-preprocessor{color:#900;font-weight:bold}.hljs-list .hljs-keyword,.hljs-subst{font-weight:normal}.hljs-class .hljs-title,.hljs-type,.vhdl .hljs-literal,.tex .hljs-command{color:#458;font-weight:bold}.hljs-tag,.hljs-tag .hljs-title,.hljs-rule .hljs-property,.django .hljs-tag .hljs-keyword{color:#000080;font-weight:normal}.hljs-attribute,.hljs-variable,.lisp .hljs-body,.hljs-name{color:#008080}.hljs-regexp{color:#009926}.hljs-symbol,.ruby .hljs-symbol .hljs-string,.lisp .hljs-keyword,.clojure .hljs-keyword,.scheme .hljs-keyword,.tex .hljs-special,.hljs-prompt{color:#990073}.hljs-built_in{color:#0086b3}.hljs-preprocessor,.hljs-pragma,.hljs-pi,.hljs-doctype,.hljs-shebang,.hljs-cdata{color:#999;font-weight:bold}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.diff .hljs-change{background:#0086b3}.hljs-chunk{color:#aaa}
+    </style>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900' rel='stylesheet' type='text/css'>
+    <script>
+    // suppress the code view blocks by default and hide them under a toggle.
+    function codeCollapse(){
+      var $ks = $('#code-content');
+      if ($ks.length) {
+        $ks.find('.ss-code').each(function() {
+          var $code = $(this).find('pre');
+
+          $link = $('<a class="docs-code-toggle" href="javascript:void(0);">&lt; Toggle Code Display &gt;</a>');
+          $link.on('click', function() {
+            $code.slideToggle(250);
+          });
+          $link.insertBefore(this);
+          $code.hide(0);
+        });
+      }
+    }
+    </script>
+  </head>
+  <body>   
+    <div class="content-band"> 
+      <div class="row" id="code-content">
+        <div class="column xlarge-9 xlarge-centered">
+          <div class="ss-section" id="basics-of-foundation-grid">
+            <div class="row">
+              <div class="column markup-wrapper">
+              <p>﻿</p>
+<h1>Basics of Foundation Grid</h1><h2>Before You Begin</h2><ul>
+<li>When you are creating a page using a <strong>TeamSite template</strong>, the outermost row and column are automatically inserted for you. You should only need to add rows with columns when you want to vertically divide the content area.</li>
+<li>Be careful not to put a <code>.column</code> directly inside a <code>.column</code>, or a <code>.row</code> directly inside a <code>.row</code> --- when nesting you must alternate rows and columns.</li>
+</ul>
+<hr>
+<h2>Getting Started</h2><ol>
+<li>When you need to divide up a content area, start by adding an element with a class of <code>.row</code>. This will create a full width horizontal block to contain vertical columns. Then add <code>.column</code> elements within the row. </li>
+<li>Foundation is mobile-first. There is no reason to add a class of <code>.small-12</code> -- it does the same thing as class <code>.column</code>, because we are using a 12-column grid. </li>
+<li>Code for small screens first, and larger devices will inherit those styles. There is no reason to repeat identical measurements for each breakpoint: a div with a class of <code>column small-6 medium-6 large-6 xlarge-6</code> is no different than a div with just a class of <code>column small-6</code>.</li>
+</ol>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-2 large-4 column"</span>&gt;</span><span class="hljs-comment">&lt;!-- ... --&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-4 large-4 column"</span>&gt;</span><span class="hljs-comment">&lt;!-- ... --&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-6 large-4 column"</span>&gt;</span><span class="hljs-comment">&lt;!-- ... --&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-3 column"</span>&gt;</span><span class="hljs-comment">&lt;!-- ... --&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-6 column"</span>&gt;</span><span class="hljs-comment">&lt;!-- ... --&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-3 column"</span>&gt;</span><span class="hljs-comment">&lt;!-- ... --&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-6 large-2 column"</span>&gt;</span><span class="hljs-comment">&lt;!-- ... --&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-6 large-8 column"</span>&gt;</span><span class="hljs-comment">&lt;!-- ... --&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-12 large-2 column"</span>&gt;</span><span class="hljs-comment">&lt;!-- ... --&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-3 column"</span>&gt;</span><span class="hljs-comment">&lt;!-- ... --&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-9 column"</span>&gt;</span><span class="hljs-comment">&lt;!-- ... --&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-4 column"</span>&gt;</span><span class="hljs-comment">&lt;!-- ... --&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-8 column"</span>&gt;</span><span class="hljs-comment">&lt;!-- ... --&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-6 large-5 column"</span>&gt;</span><span class="hljs-comment">&lt;!-- ... --&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-6 large-7 column"</span>&gt;</span><span class="hljs-comment">&lt;!-- ... --&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-6 column"</span>&gt;</span><span class="hljs-comment">&lt;!-- ... --&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-6 column"</span>&gt;</span><span class="hljs-comment">&lt;!-- ... --&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div><div class="row display">
+  <div class="small-2 large-4 column"><span class="hide-for-large">2</span><span class="show-for-large">4</span></div>
+  <div class="small-4 large-4 column">4</div>
+  <div class="small-6 large-4 column"><span class="hide-for-large">6</span><span class="show-for-large">4</span></div>
+</div>
+<div class="row display">
+  <div class="large-3 column"><span class="hide-for-large">full</span><span class="show-for-large">3</span></div>
+  <div class="large-6 column"><span class="hide-for-large">full</span><span class="show-for-large">6</span></div>
+  <div class="large-3 column"><span class="hide-for-large">full</span><span class="show-for-large">3</span></div>
+</div>
+<div class="row display">
+  <div class="small-6 large-2 column"><span class="hide-for-large">6</span><span class="show-for-large">2</span></div>
+  <div class="small-6 large-8 column"><span class="hide-for-large">6</span><span class="show-for-large">8</span></div>
+  <div class="small-12 large-2 column"><span class="hide-for-large">full</span><span class="show-for-large">2</span></div>
+</div>
+<div class="row display">
+  <div class="small-3 column">3</div>
+  <div class="small-9 column">9</div>
+</div>
+<div class="row display">
+  <div class="large-4 column"><span class="hide-for-large">full</span><span class="show-for-large">4</span></div>
+  <div class="large-8 column"><span class="hide-for-large">full</span><span class="show-for-large">8</span></div>
+</div>
+<div class="row display">
+  <div class="small-6 large-5 column"><span class="hide-for-large">6</span><span class="show-for-large">5</span></div>
+  <div class="small-6 large-7 column"><span class="hide-for-large">6</span><span class="show-for-large">7</span></div>
+</div>
+<div class="row display">
+  <div class="large-6 column"><span class="hide-for-large">full</span><span class="show-for-large">6</span></div>
+  <div class="large-6 column"><span class="hide-for-large">full</span><span class="show-for-large">6</span></div>
+</div>
+
+<hr>
+<h2>Small Grids</h2><p>Small grids expand to large screens easier than large grids cram into small screens.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-2 column"</span>&gt;</span>2 <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"hide-for-small-only"</span>&gt;</span>column<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-10 column"</span>&gt;</span>10 column<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-3 column"</span>&gt;</span>3 column<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-9 column"</span>&gt;</span>9 column<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div><div class="row display">
+  <div class="small-2 column">2 column</div>
+  <div class="small-10 column">10 column</div>
+</div>
+<div class="row display">
+  <div class="small-3 column">3 column</div>
+  <div class="small-9 column">9 column</div>
+</div>
+
+<hr>
+<h2>Medium Grid</h2><p>Medium sized screens will inherit styles from small, unless you specify a different layout using the medium grid classes.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"medium-2 column"</span>&gt;</span>2 column<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"medium-10 column"</span>&gt;</span>10 column<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"medium-3 column"</span>&gt;</span>3 column<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"medium-9 column"</span>&gt;</span>9 column<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div><div class="row display">
+  <div class="medium-2 column">2 column</div>
+  <div class="medium-10 column">10 column</div>
+</div>
+<div class="row display">
+  <div class="medium-3 column">3 column</div>
+  <div class="medium-9 column">9 column</div>
+</div>
+              </div>
+            </div>
+          </div>
+          <div class="ss-section" id="advanced">
+            <div class="row">
+              <div class="column markup-wrapper">
+              <h1>Advanced</h1><h2>Nesting</h2><p>You can nest the grids indefinitely, though at a certain point it will get absurd.  When nesting you must <em>always</em> put columns inside rows and rows inside of columns.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-8 column"</span>&gt;</span>8
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-8 column"</span>&gt;</span>8 Nested
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-8 column"</span>&gt;</span>8 Nested Again<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-4 column"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-4 column"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-4 column"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div><div class="row display">
+  <div class="small-8 column">8
+    <div class="row">
+      <div class="small-8 column">8 Nested
+        <div class="row">
+          <div class="small-8 column">8 Nested Again</div>
+          <div class="small-4 column">4</div>
+        </div>
+      </div>
+      <div class="small-4 column">4</div>
+    </div>
+  </div>
+  <div class="small-4 column">4</div>
+</div>
+
+<hr>
+<h2>Offsets</h2><p>Move blocks up to 11 column to the right by using classes like <code>.large-offset-1</code> and <code>.small-offset-3</code>.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-1 column"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-11 column"</span>&gt;</span>11<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-1 column"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-10 large-offset-1 column"</span>&gt;</span>10, offset 1<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-1 column"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-9 large-offset-2 column"</span>&gt;</span>9, offset 2<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-1 column"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-8 large-offset-3 column"</span>&gt;</span>8, offset 3<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div><div class="row display">
+  <div class="large-1 column">1</div>
+  <div class="large-11 column">11</div>
+</div>
+<div class="row display">
+  <div class="large-1 column">1</div>
+  <div class="large-10 large-offset-1 column">10, offset 1</div>
+</div>
+<div class="row display">
+  <div class="large-1 column">1</div>
+  <div class="large-9 large-offset-2 column">9, offset 2</div>
+</div>
+<div class="row display">
+  <div class="large-1 column">1</div>
+  <div class="large-8 large-offset-3 column">8, offset 3</div>
+</div>
+
+<hr>
+<h2>Incomplete Rows</h2><p>In order to work around browsers&#39; different rounding behaviors, Foundation will float the last column in a row to the right so the edge aligns. If your row doesn&#39;t have a count that adds up to 12 column, you can tag the last column with a class of <code>.end</code> in order to override that behavior. </p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"medium-3 column"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"medium-3 column"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"medium-3 column"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"medium-3 column"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"medium-3 column"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"medium-3 column end"</span>&gt;</span>3 end<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div><div class="row display-end">
+  <div class="medium-3 column">3</div>
+  <div class="medium-3 column">3</div>
+  <div class="medium-3 column">3</div>
+</div>
+<div class="row display-end">
+  <div class="medium-3 column">3</div>
+  <div class="medium-3 column">3</div>
+  <div class="medium-3 column end">3 end</div>
+</div>
+
+<hr>
+<h2>Collapse/Uncollapse Rows</h2><p>The <code>.collapse</code> class lets you remove column gutters (padding).</p>
+<p>There are times when you won&#39;t want each media query to be collapsed or uncollapsed. In this case, use the media query size you want and collapse or uncollapse and add that to your row element. Example shows no gutter at small media size and then adds the gutter to column at medium.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row medium-uncollapse large-collapse"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-6 column"</span>&gt;</span>
+    Removes gutter at large media query
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-6 column"</span>&gt;</span>
+    Removes gutter at large media query
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div><p class="lead">Scale the browser down to a medium size to see the difference.</p>
+
+<div class="row medium-uncollapse large-collapse">
+  <div class="small-6 column">
+    <div class="callout secondary">
+      <p class="show-for-small-only">On a small screen, I have gutters!</p>
+      <p class="show-for-medium-only">On a medium screen, I have gutters!</p>
+      <p class="show-for-large">On a large screen, I have no gutters!</p>
+    </div>
+  </div>
+  <div class="small-6 column">
+    <div class="callout secondary">
+      <p class="show-for-small-only">On a small screen, I have gutters!</p>
+      <p class="show-for-medium-only">On a medium screen, I have gutters!</p>
+      <p class="show-for-large">On a large screen, I have no gutters!</p>
+    </div>
+  </div>
+</div>
+
+<hr>
+<h2>Centered column</h2><p>Center your column by adding a class of <code>.small-centered</code> to your column. Large will inherit small centering by default, but you can also center solely on large by applying a <code>.large-centered</code> class. To uncenter on large screens, use <code>.large-uncentered</code>.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-3 small-centered column"</span>&gt;</span>3 centered<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-6 large-centered column"</span>&gt;</span>6 centered<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-9 small-centered large-uncentered column"</span>&gt;</span>9 centered<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-11 small-centered column"</span>&gt;</span>11 centered<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div><div class="row display">
+  <div class="small-3 small-centered column">3 centered</div>
+</div>
+<div class="row display">
+  <div class="small-6 large-centered column">6 centered, large</div>
+</div>
+<div class="row display">
+  <div class="small-9 small-centered large-uncentered column">9 centered small</div>
+</div>
+<div class="row display">
+  <div class="small-11 small-centered column">11 centered</div>
+</div>
+
+<hr>
+<h2>Source Ordering</h2><p>Using these source ordering classes, you can shift column around between our breakpoints. This means if you place sub-navigation below main content on small displays, you have the option to position the sub-navigation on either the left or right of the page for large displays. Prefix push/pull with the size of the device you want to apply the styles to. <code>.medium-push-#</code>, <code>.large-push-#</code> is the syntax you&#39;ll use. Use the number 0 instead to reset a push/pull, such as <code>.medium-push-0</code> or <code>.large-pull-0</code>.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-10 small-push-2 column"</span>&gt;</span>10<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-2 small-pull-10 column"</span>&gt;</span>2, last<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-9 large-push-3 column"</span>&gt;</span>9<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-3 large-pull-9 column"</span>&gt;</span>3, last<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-8 large-push-4 column"</span>&gt;</span>8<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-4 large-pull-8 column"</span>&gt;</span>4, last<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-5 small-push-7 medium-7 medium-push-5 column"</span>&gt;</span>7<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-7 small-pull-5 medium-5 medium-pull-7 column"</span>&gt;</span>5, last<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"medium-6 medium-push-6 column"</span>&gt;</span>6<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"medium-6 medium-pull-6 column"</span>&gt;</span>6, last<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div><div class="row display">
+  <div class="small-10 small-push-2 column">10</div>
+  <div class="small-2 small-pull-10 column">2, last</div>
+</div>
+<div class="row display">
+  <div class="large-9 large-push-3 column">9</div>
+  <div class="large-3 large-pull-9 column">3, last</div>
+</div>
+<div class="row display">
+  <div class="large-8 large-push-4 column">8</div>
+  <div class="large-4 large-pull-8 column">4, last</div>
+</div>
+<div class="row display">
+  <div class="small-5 small-push-7 medium-7 medium-push-5 column">7</div>
+  <div class="small-7 small-pull-5 medium-5 medium-pull-7 column">5, last</div>
+</div>
+<div class="row display">
+  <div class="medium-6 medium-push-6 column">6</div>
+  <div class="medium-6 medium-pull-6 column">6, last</div>
+</div>
+
+<hr>
+<h2>Block Grids</h2><p>Block grids are a shorthand way to create equally-sized column. Add a class of the format <code>.[size]-up-[n]</code> to change the number of column within the row. By default, the max number of column you can use with block grid are 8. Adding the <code>.column-block</code> class to column will apply a bottom margin equal to the width of gutters.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row small-up-2 medium-up-3 large-up-4"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column column-block"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"//placehold.it/600x600"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"thumbnail"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">""</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column column-block"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"//placehold.it/600x600"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"thumbnail"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">""</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column column-block"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"//placehold.it/600x600"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"thumbnail"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">""</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column column-block"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"//placehold.it/600x600"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"thumbnail"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">""</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column column-block"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"//placehold.it/600x600"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"thumbnail"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">""</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column column-block"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"//placehold.it/600x600"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"thumbnail"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">""</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><div class="row small-up-2 medium-up-3 large-up-4">
+  <div class="column column-block">
+    <img src="//placehold.it/600x600" class="thumbnail" alt="">
+  </div>
+  <div class="column column-block">
+    <img src="//placehold.it/600x600" class="thumbnail" alt="">
+  </div>
+  <div class="column column-block">
+    <img src="//placehold.it/600x600" class="thumbnail" alt="">
+  </div>
+  <div class="column column-block">
+    <img src="//placehold.it/600x600" class="thumbnail" alt="">
+  </div>
+  <div class="column column-block">
+    <img src="//placehold.it/600x600" class="thumbnail" alt="">
+  </div>
+  <div class="column column-block">
+    <img src="//placehold.it/600x600" class="thumbnail" alt="">
+  </div>
+</div></div><hr>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column xlarge-9 xlarge-centered">
+          <p class="text-center"><a class="button small" href="/styleguide/">Back to Style Guides</a></p>
+        </div>
+      </div>
+    </div> 
+    
+    <script src="/js/vendor/jquery-2.1.4.min.js"> </script>
+    <script src="/js/app_corp.js"></script>   
+  </body>
+</html>

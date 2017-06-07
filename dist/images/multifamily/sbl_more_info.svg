@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>More info</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="11" cy="11" r="11"/>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="22" height="22" fill="white">
+            <use xlink:href="#path-1"/>
+        </mask>
+    </defs>
+    <g id="Landing" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="sbl-Landing" transform="translate(-409.000000, -5664.000000)">
+            <g id="Section-7---Lenders" transform="translate(0.000000, 5271.000000)">
+                <g id="Logos" transform="translate(347.000000, 315.000000)">
+                    <g id="More-info" transform="translate(62.000000, 78.000000)">
+                        <g id="Group-2">
+                            <text id="+" font-family="Roboto-Regular, Roboto" font-size="14" font-weight="normal" fill="#FFFFFF">
+                                <tspan x="7" y="16">+</tspan>
+                            </text>
+                            <use id="Oval-4" stroke="#F1F1F1" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,281 @@
+﻿<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Style Guide: Grid</title>
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@FreddieMac" />
+    <meta property="og:title" content="Style Guide: Freddie Mac Grid" />
+    <meta name="twitter:title" content="Style Guide: Freddie Mac Grid"/>
+    <meta name="Description" content="The styleguide is based on the Foundation framework." />
+    <meta property="og:description" content="The styleguide is based on the Foundation framework." />
+    <meta name="twitter:description" content="The styleguide is based on the Foundation framework." />
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="files/styleguide.jpg" />
+    <meta name="twitter:image" content="files/styleguide.jpg" />
+    <meta name="theme-color" content="#88BD45">
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="stylesheet" href="/ss/app_corp.css">
+    <link rel="stylesheet" href="/ss/homepage.css" />
+
+    <!-- Style guide-specific CSS goes here. -->
+    <style>
+    #top {
+      width:100%;
+      position:fixed;
+      top: 0;   
+      padding: 0.5rem 0; 
+      z-index: 1001;      
+    }
+    /* This styles individual sections of the style guide */
+    .ss-section:not(:last-child) {
+      padding-bottom: 3rem;
+      clear: both;
+    }
+    .ss-section + .ss-section  {
+      padding-top: 4rem;    
+    }
+    .markup-wrapper > h1 {
+      padding: 1.5rem;
+      color: #ff6c00;
+      background: rgba(255,108,0,0.15);
+    }
+    #code-content {
+      padding-top: 1rem;
+    }
+    .row.display {
+      background: #eee;
+      font-size: 11px;
+      margin-bottom: 10px;
+      line-height: 2rem;
+      border: solid 1px #c6c6c6;
+      margin-left: 0 !important;
+      margin-right: 0 !important; }
+      .row.display .column:nth-child(2), .row.display .column.small-centered, .row.display .column.large-centered {
+        background: #e1e1e1; }
+      .row.display .column.color-end {
+        background: #d5d5d5; }
+
+    .row.display-end {
+      background: #fff;
+      font-size: 11px;
+      margin-bottom: 10px;
+      line-height: 2rem;
+      border: solid 1px #c6c6c6;
+      margin-left: 0 !important;
+      margin-right: 0 !important; }
+      .row.display-end .column {
+        background: #e1e1e1;
+        border-left: 1px solid #c6c6c6; }
+        .row.display-end .column.color-end {
+          background: #d5d5d5; }
+
+    .callout.secondary {
+        background-color: #eaeaea;
+        color: #0a0a0a;
+        border: 1px solid rgba(10, 10, 10, 0.25);
+    }
+    
+    /* This styles code blocks used for examples. */
+    .ss-code {
+        margin-bottom: 1rem; 
+      }
+      .ss-code code {
+        max-height: 900px;
+        overflow: scroll;
+        display: block;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        opacity: 1;
+      }
+    
+    .ss-code-live::before,
+    .ss-code-live::after {
+      content: ' ';
+      display: table;
+    }
+    .ss-code-live::after {
+      clear: both;
+    }  
+    code { 
+      font-size: 0.875rem;
+      opacity: 0.6;
+    }
+    .content-band {
+      margin-top: 0;
+    }
+
+    @media screen and (max-width: 35em) {
+      #top h1 { float: left; font-size: 20px; }
+      #top select { font-size: 14px; }
+    }
+
+     /* from href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css" */
+    .hljs{display:block;overflow-x:auto;padding:0.5em;color:#333;background:#f8f8f8;-webkit-text-size-adjust:none}.hljs-comment,.diff .hljs-header{color:#998;font-style:italic}.hljs-keyword,.css .rule .hljs-keyword,.hljs-winutils,.nginx .hljs-title,.hljs-subst,.hljs-request,.hljs-status{color:#333;font-weight:bold}.hljs-number,.hljs-hexcolor,.ruby .hljs-constant{color:#008080}.hljs-string,.hljs-tag .hljs-value,.hljs-doctag,.tex .hljs-formula{color:#d14}.hljs-title,.hljs-id,.scss .hljs-preprocessor{color:#900;font-weight:bold}.hljs-list .hljs-keyword,.hljs-subst{font-weight:normal}.hljs-class .hljs-title,.hljs-type,.vhdl .hljs-literal,.tex .hljs-command{color:#458;font-weight:bold}.hljs-tag,.hljs-tag .hljs-title,.hljs-rule .hljs-property,.django .hljs-tag .hljs-keyword{color:#000080;font-weight:normal}.hljs-attribute,.hljs-variable,.lisp .hljs-body,.hljs-name{color:#008080}.hljs-regexp{color:#009926}.hljs-symbol,.ruby .hljs-symbol .hljs-string,.lisp .hljs-keyword,.clojure .hljs-keyword,.scheme .hljs-keyword,.tex .hljs-special,.hljs-prompt{color:#990073}.hljs-built_in{color:#0086b3}.hljs-preprocessor,.hljs-pragma,.hljs-pi,.hljs-doctype,.hljs-shebang,.hljs-cdata{color:#999;font-weight:bold}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.diff .hljs-change{background:#0086b3}.hljs-chunk{color:#aaa}
+    </style>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900' rel='stylesheet' type='text/css'>
+    <script>
+    // suppress the code view blocks by default and hide them under a toggle.
+    function codeCollapse(){
+      var $ks = $('#code-content');
+      if ($ks.length) {
+        $ks.find('.ss-code').each(function() {
+          var $code = $(this).find('pre');
+
+          $link = $('<a class="docs-code-toggle" href="javascript:void(0);">&lt; Toggle Code Display &gt;</a>');
+          $link.on('click', function() {
+            $code.slideToggle(250);
+          });
+          $link.insertBefore(this);
+          $code.hide(0);
+        });
+      }
+    }
+    </script>
+  </head>
+  <body>   
+    <div class="content-band"> 
+      <div class="row" id="code-content">
+        <div class="column xlarge-9 xlarge-centered">
+          <div class="ss-section" id="embedded-objects">
+            <div class="row">
+              <div class="column markup-wrapper">
+              <p>﻿</p>
+<h1>Embedded Objects</h1><p>To make sure embedded content maintains its aspect ratio as the width of the screen changes, wrap the <code>iframe</code>, <code>object</code>, <code>embed</code>, or <code>video</code> in a container with the <code>.responsive-embed</code> class.  Add the attribute <code>allowfullscreen</code> to the iframe.</p>
+<p>For Youtube videos, make sure you include <code>?rel=0&amp;amp;wmode=transparent</code> at the end of the url to disable the related videos and to prevent conflict with overlays/drop downs on out site.</p>
+<hr>
+<h2>Aspect Ratios</h2><p>Add ratio classes to change the aspect ratio of responsive embeds. The default ratio is 4:3. The <code>.widescreen</code> class will change the container&#39;s aspect ratio to 16:9.</p>
+<p>Currently, these ratio classes exist:</p>
+<ul>
+<li>default: 4 by 3</li>
+<li>widescreen: 16 by 9</li>
+<li>square: 1 by 1</li>
+<li>portrait:1 by 2</li>
+<li>tall: 1 by 3</li>
+</ul>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>Widescreen (16/9) ratio video<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"columns medium-7 end"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"responsive-embed widescreen"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">iframe</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"560"</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">"315"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"https://www.youtube-nocookie.com/embed/tCg9285bJnY?rel=0&amp;amp;wmode=transparent"</span> <span class="hljs-attribute">frameborder</span>=<span class="hljs-value">"0"</span> <span class="hljs-attribute">allowfullscreen</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">iframe</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>Default (4/3) ratio video<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"columns medium-6 end"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"responsive-embed"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">iframe</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"420"</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">"315"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"https://www.youtube.com/embed/mM5_T-F1Yn4?rel=0&amp;amp;wmode=transparent"</span> <span class="hljs-attribute">frameborder</span>=<span class="hljs-value">"0"</span> <span class="hljs-attribute">allowfullscreen</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">iframe</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><h3>Widescreen (16/9) ratio video</h3>
+<div class="row">
+  <div class="columns medium-7 end">
+    <div class="responsive-embed widescreen">
+      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/tCg9285bJnY?rel=0&amp;wmode=transparent" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+<h3>Default (4/3) ratio video</h3>
+<div class="row">
+  <div class="columns medium-6 end">
+    <div class="responsive-embed">
+      <iframe width="420" height="315" src="https://www.youtube.com/embed/mM5_T-F1Yn4?rel=0&amp;wmode=transparent" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</div></div><hr>
+<h2>Iframes</h2><p>Any iframe wider than 300px will need to be responsive as well, otherwise the content can run off the screen on mobile, or may overlap the sidebar at in between sizes.  </p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"columns large-8 end"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"responsive-embed"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">iframe</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"http://investor.shareholder.com/fre/stocklookup.cfm"</span> <span class="hljs-attribute">allowfullscreen</span>=<span class="hljs-value">""</span> <span class="hljs-attribute">frameborder</span>=<span class="hljs-value">"0"</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">"450"</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"600"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">iframe</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span> 
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><div class="row">
+  <div class="columns large-8 end">
+    <div class="responsive-embed">
+      <iframe src="http://investor.shareholder.com/fre/stocklookup.cfm" allowfullscreen="" frameborder="0" height="450" width="600"></iframe>
+    </div> 
+  </div>
+</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="ss-section" id="tableau-visuals">
+            <div class="row">
+              <div class="column markup-wrapper">
+              <h1>Tableau Visuals</h1><p>Tableau visuals are often too large to be interacted with on a phone, or they require too much data/memory for some phones to be able to fully build out an embedded visual. 
+For tableau, the best choice is to only load the visual when the container is wide enough to hold it. 
+Refer to the <a href="http://onlinehelp.tableau.com/samples/en-us/js_api/tutorial.htm">Tableau API Tutorial</a> if you need to put additional hooks into the visual.</p>
+<ul>
+<li>Do not paste in the embed code provided by Tableau - use the embed code to get the url for hte static image, and the url for the tableau visual.</li>
+<li>Create a custom container for the visual and give it a unique <code>id</code>, and class <code>.overflow-horizontal</code>. </li>
+<li>Inside the container, include the static image of the visual and link it to the Tableau visual url.</li>
+<li>Add custom javascript that tests that container&#39;s width before loading the visual, and </li>
+<li>In this example, we are using vanilla javascript, so that the embed code can be start to load without waiting on all the other content and scripts to complete. <ul>
+<li>Define the placholder div by its id.</li>
+<li>Define the url for the visual (the logic shown below will toggle between http and https versions of the visual, which allows it to virtualize in TeamSite).</li>
+<li>Define the options for the visual. At a minimum define the width and height. Refer to the TAbleau API for additional options you may want.</li>
+</ul>
+</li>
+</ul>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"tableau-viz1"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"overflow-horizontal  text-center"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"margin: 0 auto; max-width: 854px;"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">'tableauPlaceholder'</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">'position: relative'</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">'http://public.tableau.com/views/InvestmentIndex2016Q3/Dashboard1'</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"Dashboard"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"http://public.tableau.com/static/images/In/InvestmentIndex2016Q3/Dashboard1/1_rss.png"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/javascript"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"https://public.tableau.com/javascripts/api/tableau-2.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/javascript"</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">var</span> viz, 
+      placeholderDiv = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"tableau-viz1"</span>),
+      vizUrl = location.protocol ==<span class="hljs-string">'http'</span> ? <span class="hljs-string">"http://public.tableau.com/views/InvestmentIndex2016Q3/Dashboard1"</span> : <span class="hljs-string">"https://public.tableau.com/views/InvestmentIndex2016Q3/Dashboard1"</span>,
+      vizOptions = {hideTabs: <span class="hljs-literal">true</span>, width: <span class="hljs-string">'854px'</span>, height: <span class="hljs-string">'1169px'</span>};
+  <span class="hljs-keyword">if</span> (placeholderDiv.clientWidth &gt; <span class="hljs-number">600</span>) {
+    placeholderDiv.innerHTML = <span class="hljs-string">""</span>;
+    viz = <span class="hljs-keyword">new</span> tableau.Viz(placeholderDiv, vizUrl, vizOptions); 
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><div id="tableau-viz1" class="overflow-horizontal  text-center" style="margin: 0 auto; max-width: 854px;">
+  <div class='tableauPlaceholder' style='position: relative'>
+    <a href='http://public.tableau.com/views/InvestmentIndex2016Q3/Dashboard1'><img alt="Dashboard" src="http://public.tableau.com/static/images/In/InvestmentIndex2016Q3/Dashboard1/1_rss.png"/></a>
+  </div>
+</div>
+<script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.js"></script>
+<script type="text/javascript">
+  var viz, 
+      placeholderDiv = document.getElementById("tableau-viz1"),
+      vizUrl = location.protocol =='http' ? "http://public.tableau.com/views/InvestmentIndex2016Q3/Dashboard1" : "https://public.tableau.com/views/InvestmentIndex2016Q3/Dashboard1",
+      vizOptions = {hideTabs: true, width: '854px', height: '1169px'};
+  if (placeholderDiv.clientWidth > 600) {
+    placeholderDiv.innerHTML = "";
+    viz = new tableau.Viz(placeholderDiv, vizUrl, vizOptions); 
+  }
+</script></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column xlarge-9 xlarge-centered">
+          <p class="text-center"><a class="button small" href="/styleguide/">Back to Style Guides</a></p>
+        </div>
+      </div>
+    </div> 
+    
+    <script src="/js/vendor/jquery-2.1.4.min.js"> </script>
+    <script src="/js/app_corp.js"></script>   
+  </body>
+</html>

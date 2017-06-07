@@ -1,0 +1,680 @@
+﻿<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Style Guide: Grid</title>
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@FreddieMac" />
+    <meta property="og:title" content="Style Guide: Freddie Mac Grid" />
+    <meta name="twitter:title" content="Style Guide: Freddie Mac Grid"/>
+    <meta name="Description" content="The styleguide is based on the Foundation framework." />
+    <meta property="og:description" content="The styleguide is based on the Foundation framework." />
+    <meta name="twitter:description" content="The styleguide is based on the Foundation framework." />
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="files/styleguide.jpg" />
+    <meta name="twitter:image" content="files/styleguide.jpg" />
+    <meta name="theme-color" content="#88BD45">
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="stylesheet" href="/ss/app_corp.css">
+    <link rel="stylesheet" href="/ss/homepage.css" />
+
+    <!-- Style guide-specific CSS goes here. -->
+    <style>
+    #top {
+      width:100%;
+      position:fixed;
+      top: 0;   
+      padding: 0.5rem 0; 
+      z-index: 1001;      
+    }
+    /* This styles individual sections of the style guide */
+    .ss-section:not(:last-child) {
+      padding-bottom: 3rem;
+      clear: both;
+    }
+    .ss-section + .ss-section  {
+      padding-top: 4rem;    
+    }
+    .markup-wrapper > h1 {
+      padding: 1.5rem;
+      color: #ff6c00;
+      background: rgba(255,108,0,0.15);
+    }
+    #code-content {
+      padding-top: 1rem;
+    }
+    .row.display {
+      background: #eee;
+      font-size: 11px;
+      margin-bottom: 10px;
+      line-height: 2rem;
+      border: solid 1px #c6c6c6;
+      margin-left: 0 !important;
+      margin-right: 0 !important; }
+      .row.display .column:nth-child(2), .row.display .column.small-centered, .row.display .column.large-centered {
+        background: #e1e1e1; }
+      .row.display .column.color-end {
+        background: #d5d5d5; }
+
+    .row.display-end {
+      background: #fff;
+      font-size: 11px;
+      margin-bottom: 10px;
+      line-height: 2rem;
+      border: solid 1px #c6c6c6;
+      margin-left: 0 !important;
+      margin-right: 0 !important; }
+      .row.display-end .column {
+        background: #e1e1e1;
+        border-left: 1px solid #c6c6c6; }
+        .row.display-end .column.color-end {
+          background: #d5d5d5; }
+
+    .callout.secondary {
+        background-color: #eaeaea;
+        color: #0a0a0a;
+        border: 1px solid rgba(10, 10, 10, 0.25);
+    }
+    
+    /* This styles code blocks used for examples. */
+    .ss-code {
+        margin-bottom: 1rem; 
+      }
+      .ss-code code {
+        max-height: 900px;
+        overflow: scroll;
+        display: block;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        opacity: 1;
+      }
+    
+    .ss-code-live::before,
+    .ss-code-live::after {
+      content: ' ';
+      display: table;
+    }
+    .ss-code-live::after {
+      clear: both;
+    }  
+    code { 
+      font-size: 0.875rem;
+      opacity: 0.6;
+    }
+    .content-band {
+      margin-top: 0;
+    }
+
+    @media screen and (max-width: 35em) {
+      #top h1 { float: left; font-size: 20px; }
+      #top select { font-size: 14px; }
+    }
+
+     /* from href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css" */
+    .hljs{display:block;overflow-x:auto;padding:0.5em;color:#333;background:#f8f8f8;-webkit-text-size-adjust:none}.hljs-comment,.diff .hljs-header{color:#998;font-style:italic}.hljs-keyword,.css .rule .hljs-keyword,.hljs-winutils,.nginx .hljs-title,.hljs-subst,.hljs-request,.hljs-status{color:#333;font-weight:bold}.hljs-number,.hljs-hexcolor,.ruby .hljs-constant{color:#008080}.hljs-string,.hljs-tag .hljs-value,.hljs-doctag,.tex .hljs-formula{color:#d14}.hljs-title,.hljs-id,.scss .hljs-preprocessor{color:#900;font-weight:bold}.hljs-list .hljs-keyword,.hljs-subst{font-weight:normal}.hljs-class .hljs-title,.hljs-type,.vhdl .hljs-literal,.tex .hljs-command{color:#458;font-weight:bold}.hljs-tag,.hljs-tag .hljs-title,.hljs-rule .hljs-property,.django .hljs-tag .hljs-keyword{color:#000080;font-weight:normal}.hljs-attribute,.hljs-variable,.lisp .hljs-body,.hljs-name{color:#008080}.hljs-regexp{color:#009926}.hljs-symbol,.ruby .hljs-symbol .hljs-string,.lisp .hljs-keyword,.clojure .hljs-keyword,.scheme .hljs-keyword,.tex .hljs-special,.hljs-prompt{color:#990073}.hljs-built_in{color:#0086b3}.hljs-preprocessor,.hljs-pragma,.hljs-pi,.hljs-doctype,.hljs-shebang,.hljs-cdata{color:#999;font-weight:bold}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.diff .hljs-change{background:#0086b3}.hljs-chunk{color:#aaa}
+    </style>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900' rel='stylesheet' type='text/css'>
+    <script>
+    // suppress the code view blocks by default and hide them under a toggle.
+    function codeCollapse(){
+      var $ks = $('#code-content');
+      if ($ks.length) {
+        $ks.find('.ss-code').each(function() {
+          var $code = $(this).find('pre');
+
+          $link = $('<a class="docs-code-toggle" href="javascript:void(0);">&lt; Toggle Code Display &gt;</a>');
+          $link.on('click', function() {
+            $code.slideToggle(250);
+          });
+          $link.insertBefore(this);
+          $code.hide(0);
+        });
+      }
+    }
+    </script>
+  </head>
+  <body>   
+    <div class="content-band"> 
+      <div class="row" id="code-content">
+        <div class="column xlarge-9 xlarge-centered">
+          <div class="ss-section" id="abide-form-validation">
+            <div class="row">
+              <div class="column markup-wrapper">
+              <h1>Abide Form Validation</h1><h2>The Basics</h2><p>To have a form validate with abide, simple add the attribute <code>data-abide</code> to the <code>form</code> tag.  You should also use the <code>novalidate</code> attribute to disable any browser validation that could conflict with Abide.</p>
+<pre><span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">data-abide</span> <span class="hljs-attribute">novalidate</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
+ </pre>
+
+<p>Then build your form fields:</p>
+<ul>
+<li>Each field should have a clear label that is associated with the field via the <code>for</code> attribute.</li>
+<li>Each field should have an id and a name, and <code>input</code> fields should have a declared type (email, url, text, tel, password, number, hidden).</li>
+</ul>
+<p>There are additional details below on requiring different field types, validating against specific patterns, omitting some fields from validation, and customizing error messages.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">data-abide</span> <span class="hljs-attribute">novalidate</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-required"</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"Name"</span>&gt;</span>Full Name<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span> 
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"Name"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"Name"</span> <span class="hljs-attribute">required</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> /&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"URL"</span>&gt;</span>URL<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"URL"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"webaddress"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"url"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"http://www.freddiemac.com"</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-6 column"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-required"</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"Phone"</span>&gt;</span>Phone Number<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span> 
+      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"Phone"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"Phone"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"xxx-xxx-xxxx"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"tel"</span> <span class="hljs-attribute">pattern</span>=<span class="hljs-value">"tel"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-6 column"</span>&gt;</span>                      
+      <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-required"</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"State"</span>&gt;</span>State<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">select</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"State"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"state"</span> <span class="hljs-attribute">required</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">selected</span>=<span class="hljs-value">"selected"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">""</span>&gt;</span>Select State<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"AL"</span>&gt;</span>AL<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"AK"</span>&gt;</span>AK<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"AZ"</span>&gt;</span>AZ<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"AR"</span>&gt;</span>AR<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"CA"</span>&gt;</span>CA<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"CO"</span>&gt;</span>CO<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"CT"</span>&gt;</span>CT<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"DE"</span>&gt;</span>DE<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"DC"</span>&gt;</span>DC<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"FL"</span>&gt;</span>FL<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"GA"</span>&gt;</span>GA<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"GU"</span>&gt;</span>GU<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"HI"</span>&gt;</span>HI<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"ID"</span>&gt;</span>ID<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"IL"</span>&gt;</span>IL<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"IN"</span>&gt;</span>IN<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"IA"</span>&gt;</span>IA<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"KS"</span>&gt;</span>KS<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"KY"</span>&gt;</span>KY<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"LA"</span>&gt;</span>LA<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"ME"</span>&gt;</span>ME<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"MD"</span>&gt;</span>MD<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"MA"</span>&gt;</span>MA<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"MI"</span>&gt;</span>MI<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"MN"</span>&gt;</span>MN<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"MS"</span>&gt;</span>MS<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"MO"</span>&gt;</span>MO<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"MT"</span>&gt;</span>MT<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"NE"</span>&gt;</span>NE<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"NV"</span>&gt;</span>NV<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"NH"</span>&gt;</span>NH<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"NJ"</span>&gt;</span>NJ<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"NM"</span>&gt;</span>NM<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"NY"</span>&gt;</span>NY<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"NC"</span>&gt;</span>NC<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"ND"</span>&gt;</span>ND<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"OH"</span>&gt;</span>OH<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"OK"</span>&gt;</span>OK<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"OR"</span>&gt;</span>OR<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"PA"</span>&gt;</span>PA<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"PR"</span>&gt;</span>PR<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"RI"</span>&gt;</span>RI<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"SC"</span>&gt;</span>SC<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"SD"</span>&gt;</span>SD<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"TN"</span>&gt;</span>TN<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"TX"</span>&gt;</span>TX<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"UT"</span>&gt;</span>UT<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"VT"</span>&gt;</span>VT<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"VA"</span>&gt;</span>VA<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"VI"</span>&gt;</span>VI<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"WA"</span>&gt;</span>WA<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"WV"</span>&gt;</span>WV<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"WI"</span>&gt;</span>WI<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"WY"</span>&gt;</span>WY<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">select</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>  
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"medium-3 column"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button primary"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"submit"</span>&gt;</span>Submit<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"medium-9 column"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"callout small background-red"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"display: none;"</span> <span class="hljs-attribute">data-abide-error</span> <span class="hljs-attribute">data-closable</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"close-button"</span> <span class="hljs-attribute">data-close</span>=<span class="hljs-value">""</span> <span class="hljs-attribute">aria-label</span>=<span class="hljs-value">"Dismiss alert"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">aria-hidden</span>=<span class="hljs-value">"true"</span>&gt;</span>&amp;times;<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"enlarge"</span>&gt;</span>Please review your form for errors.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>    
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><form data-abide novalidate>
+  <label class="icon-required" for="Name">Full Name</label> 
+  <input id="Name" name="Name" required type="text" />
+
+  <label for="URL">URL</label>
+  <input id="URL" name="webaddress" type="url" placeholder="http://www.freddiemac.com">
+
+  <div class="row">
+    <div class="large-6 column">
+      <label class="icon-required" for="Phone">Phone Number</label> 
+      <input id="Phone" name="Phone" placeholder="xxx-xxx-xxxx" type="tel" pattern="tel" />
+    </div>
+    <div class="large-6 column">                      
+      <label class="icon-required" for="State">State</label>
+      <select id="State" name="state" required>
+          <option selected="selected" value="">Select State</option>
+          <option value="AL">AL</option>
+          <option value="AK">AK</option>
+          <option value="AZ">AZ</option>
+          <option value="AR">AR</option>
+          <option value="CA">CA</option>
+          <option value="CO">CO</option>
+          <option value="CT">CT</option>
+          <option value="DE">DE</option>
+          <option value="DC">DC</option>
+          <option value="FL">FL</option>
+          <option value="GA">GA</option>
+          <option value="GU">GU</option>
+          <option value="HI">HI</option>
+          <option value="ID">ID</option>
+          <option value="IL">IL</option>
+          <option value="IN">IN</option>
+          <option value="IA">IA</option>
+          <option value="KS">KS</option>
+          <option value="KY">KY</option>
+          <option value="LA">LA</option>
+          <option value="ME">ME</option>
+          <option value="MD">MD</option>
+          <option value="MA">MA</option>
+          <option value="MI">MI</option>
+          <option value="MN">MN</option>
+          <option value="MS">MS</option>
+          <option value="MO">MO</option>
+          <option value="MT">MT</option>
+          <option value="NE">NE</option>
+          <option value="NV">NV</option>
+          <option value="NH">NH</option>
+          <option value="NJ">NJ</option>
+          <option value="NM">NM</option>
+          <option value="NY">NY</option>
+          <option value="NC">NC</option>
+          <option value="ND">ND</option>
+          <option value="OH">OH</option>
+          <option value="OK">OK</option>
+          <option value="OR">OR</option>
+          <option value="PA">PA</option>
+          <option value="PR">PR</option>
+          <option value="RI">RI</option>
+          <option value="SC">SC</option>
+          <option value="SD">SD</option>
+          <option value="TN">TN</option>
+          <option value="TX">TX</option>
+          <option value="UT">UT</option>
+          <option value="VT">VT</option>
+          <option value="VA">VA</option>
+          <option value="VI">VI</option>
+          <option value="WA">WA</option>
+          <option value="WV">WV</option>
+          <option value="WI">WI</option>
+          <option value="WY">WY</option>
+      </select>
+    </div>
+  </div>  
+
+  <div class="row">
+    <div class="medium-3 column">
+      <button class="button primary" type="submit">Submit</button>
+    </div>
+    <div class="medium-9 column">
+      <div class="callout small background-red" style="display: none;" data-abide-error data-closable>
+        <button class="close-button" data-close="" aria-label="Dismiss alert"><span aria-hidden="true">&times;</span></button>
+        <p class="enlarge">Please review your form for errors.</p>
+      </div>
+    </div>    
+  </div>
+</form></div><hr>
+<h2>Required Fields</h2><p>To visually alert the user that a field is required, add class <code>.icon-required</code> to the field&#39;s label or to the fieldset&#39;s legend.</p>
+<p>Then, for most fields, all you need to do is to add the attribute <code>required</code> to the form field and Abide will disallow null values.  </p>
+<ul>
+<li>For radio buttons, as long as one button in a set with a shared name attribute has the <code>required</code> attribute, the set will be required.</li>
+<li>For a single checkbox, just include the  <code>required</code> attribute.</li>
+<li>For multiple checkboxes, where one or more is required, add <code>data-validator=&quot;checked_required&quot;</code> to each input element. Then on the fieldset, add class <code>.checked-group</code> to the fieldset and provide the minimum number to attribute <code>data-validator-abide-min</code>. If a maximum number should also be enforced, add that value to the attribute <code>data-validator-abide-max</code>. </li>
+</ul>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">data-abide</span> <span class="hljs-attribute">novalidate</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-required"</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"req1"</span>&gt;</span>Example of a <span class="hljs-tag">&lt;<span class="hljs-title">strong</span>&gt;</span>required<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span> text field<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span> 
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"req1"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"field"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">required</span>  <span class="hljs-attribute">aria-describedby</span>=<span class="hljs-value">"reqHelp1"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"help-text"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"reqHelp1"</span>&gt;</span>This mothod works for inputs with any text-based type: text, email, url, password, tel, etc.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">legend</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-required"</span>&gt;</span>Example of a group of <span class="hljs-tag">&lt;<span class="hljs-title">strong</span>&gt;</span>required<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span> radio buttons<span class="hljs-tag">&lt;/<span class="hljs-title">legend</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"pokemon"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"Red"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"pokemonRed"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"pokemonRed"</span>&gt;</span>Red<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"pokemon"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"Blue"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"pokemonBlue"</span> <span class="hljs-attribute">required</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"pokemonBlue"</span>&gt;</span>Blue<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"pokemon"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"Yellow"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"pokemonYellow"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"pokemonYellow"</span>&gt;</span>Yellow<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">fieldset</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-required"</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"comments"</span>&gt;</span>Example of a <span class="hljs-tag">&lt;<span class="hljs-title">strong</span>&gt;</span>required<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span> Textarea<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">textarea</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"comments"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"comments"</span> <span class="hljs-attribute">rows</span>=<span class="hljs-value">"3"</span> <span class="hljs-attribute">required</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">textarea</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">legend</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-required"</span>&gt;</span>Example of a single <span class="hljs-tag">&lt;<span class="hljs-title">strong</span>&gt;</span>required<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span> checkbox<span class="hljs-tag">&lt;/<span class="hljs-title">legend</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"checkbox3"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"I agree"</span> <span class="hljs-attribute">required</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"checkbox3"</span>&gt;</span>Checkbox 3<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">fieldset</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"checked-group"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">legend</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-required"</span>&gt;</span>Example of a group of checkboxes, where one (or more) is <span class="hljs-tag">&lt;<span class="hljs-title">strong</span>&gt;</span>required<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">legend</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"checkbox1req"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">data-validator</span>=<span class="hljs-value">"checked_required"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"checkbox1req"</span>&gt;</span>Checkbox 1<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"checkbox2req"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">data-validator</span>=<span class="hljs-value">"checked_required"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"checkbox2req"</span>&gt;</span>Checkbox 2<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"checkbox3req"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">data-validator</span>=<span class="hljs-value">"checked_required"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"checkbox3req"</span>&gt;</span>Checkbox 3<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>        
+  <span class="hljs-tag">&lt;/<span class="hljs-title">fieldset</span>&gt;</span> 
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"checked-group"</span> <span class="hljs-attribute">data-validator-abide-min</span>=<span class="hljs-value">"2"</span> <span class="hljs-attribute">data-validator-abide-max</span>=<span class="hljs-value">"4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">legend</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-required"</span>&gt;</span>Example of a group of checkboxes, where two-four are <span class="hljs-tag">&lt;<span class="hljs-title">strong</span>&gt;</span>required<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">legend</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row medium-up-2 large-up-3 xlarge-up-6"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"checkbox4"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"4"</span> <span class="hljs-attribute">data-validator</span>=<span class="hljs-value">"checked_required"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"checkbox4"</span>&gt;</span>Checkbox 4<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"checkbox5"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"5"</span> <span class="hljs-attribute">data-validator</span>=<span class="hljs-value">"checked_required"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"checkbox5"</span>&gt;</span>Checkbox 5<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"checkbox6"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"6"</span> <span class="hljs-attribute">data-validator</span>=<span class="hljs-value">"checked_required"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"checkbox6"</span>&gt;</span>Checkbox 6<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"checkbox7"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"7"</span> <span class="hljs-attribute">data-validator</span>=<span class="hljs-value">"checked_required"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"checkbox7"</span>&gt;</span>Checkbox 7<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span> 
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"checkbox8"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"8"</span> <span class="hljs-attribute">data-validator</span>=<span class="hljs-value">"checked_required"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"checkbox8"</span>&gt;</span>Checkbox 8<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"checkbox9"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"9"</span> <span class="hljs-attribute">data-validator</span>=<span class="hljs-value">"checked_required"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"checkbox9"</span>&gt;</span>Checkbox 9<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">fieldset</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-required"</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"reqSelect"</span>&gt;</span>Example of a <span class="hljs-tag">&lt;<span class="hljs-title">strong</span>&gt;</span>required<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span> single-select list<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">select</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"reqSelect"</span> <span class="hljs-attribute">required</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">""</span> <span class="hljs-attribute">selected</span>&gt;</span>Select One<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"showboat"</span>&gt;</span>Showboat<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"redwing"</span>&gt;</span>Redwing<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"narcho"</span>&gt;</span>Narcho<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"hardball"</span>&gt;</span>Hardball<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">select</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-required"</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"car_select"</span>&gt;</span>Example of a <span class="hljs-tag">&lt;<span class="hljs-title">strong</span>&gt;</span>required<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span> multi-select list<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">select</span> <span class="hljs-attribute">multiple</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"car_select"</span> <span class="hljs-attribute">required</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"7"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"aston"</span>&gt;</span>Aston Martin<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"audi"</span>&gt;</span>Audi<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"bmw"</span>&gt;</span>BMW<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"saab"</span>&gt;</span>Saab<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"mercedes"</span>&gt;</span>Mercedes<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"maserati"</span>&gt;</span>Maserati<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"volvo"</span>&gt;</span>Volvo<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">select</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"medium-3 column"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button primary"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"submit"</span>&gt;</span>Submit<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"medium-9 column"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"callout small background-red"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"display: none;"</span> <span class="hljs-attribute">data-abide-error</span> <span class="hljs-attribute">data-closable</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"close-button"</span> <span class="hljs-attribute">data-close</span>=<span class="hljs-value">""</span> <span class="hljs-attribute">aria-label</span>=<span class="hljs-value">"Dismiss alert"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">aria-hidden</span>=<span class="hljs-value">"true"</span>&gt;</span>&amp;times;<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"enlarge"</span>&gt;</span>Please review your form for errors.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><form data-abide novalidate>
+  <label class="icon-required" for="req1">Example of a <strong>required</strong> text field</label> 
+  <input id="req1" name="field" type="text" required  aria-describedby="reqHelp1" />
+  <p class="help-text" id="reqHelp1">This mothod works for inputs with any text-based type: text, email, url, password, tel, etc.</p>
+
+  <fieldset>
+    <legend class="icon-required">Example of a group of <strong>required</strong> radio buttons</legend>
+    <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Red</label>
+    <input type="radio" name="pokemon" value="Blue" id="pokemonBlue" required><label for="pokemonBlue">Blue</label>
+    <input type="radio" name="pokemon" value="Yellow" id="pokemonYellow"><label for="pokemonYellow">Yellow</label>
+  </fieldset>
+
+  <label class="icon-required" for="comments">Example of a <strong>required</strong> Textarea</label>
+  <textarea id="comments" name="comments" rows="3" required></textarea>
+
+  <fieldset>
+    <legend class="icon-required">Example of a single <strong>required</strong> checkbox</legend>
+    <input id="checkbox3" type="checkbox" value="I agree" required><label for="checkbox3">Checkbox 3</label>
+  </fieldset>
+
+  <fieldset class="checked-group">
+    <legend class="icon-required">Example of a group of checkboxes, where one (or more) is <strong>required</strong></legend>
+    <input id="checkbox1req" type="checkbox" data-validator="checked_required"><label for="checkbox1req">Checkbox 1</label>
+    <input id="checkbox2req" type="checkbox" data-validator="checked_required"><label for="checkbox2req">Checkbox 2</label>
+    <input id="checkbox3req" type="checkbox" data-validator="checked_required"><label for="checkbox3req">Checkbox 3</label>        
+  </fieldset> 
+
+  <fieldset class="checked-group" data-validator-abide-min="2" data-validator-abide-max="4">
+    <legend class="icon-required">Example of a group of checkboxes, where two-four are <strong>required</strong></legend>
+    <div class="row medium-up-2 large-up-3 xlarge-up-6">
+      <div class="column"><input id="checkbox4" type="checkbox" value="4" data-validator="checked_required"><label for="checkbox4">Checkbox 4</label></div>
+      <div class="column"><input id="checkbox5" type="checkbox" value="5" data-validator="checked_required"><label for="checkbox5">Checkbox 5</label></div>
+      <div class="column"><input id="checkbox6" type="checkbox" value="6" data-validator="checked_required"><label for="checkbox6">Checkbox 6</label></div>
+      <div class="column"><input id="checkbox7" type="checkbox" value="7" data-validator="checked_required"><label for="checkbox7">Checkbox 7</label></div> 
+      <div class="column"><input id="checkbox8" type="checkbox" value="8" data-validator="checked_required"><label for="checkbox8">Checkbox 8</label></div>
+      <div class="column"><input id="checkbox9" type="checkbox" value="9" data-validator="checked_required"><label for="checkbox9">Checkbox 9</label></div>
+    </div>
+  </fieldset>
+
+  <label class="icon-required" for="reqSelect">Example of a <strong>required</strong> single-select list</label>
+  <select id="reqSelect" required>
+    <option value="" selected>Select One</option>
+    <option value="showboat">Showboat</option>
+    <option value="redwing">Redwing</option>
+    <option value="narcho">Narcho</option>
+    <option value="hardball">Hardball</option>
+  </select>
+
+  <label class="icon-required" for="car_select">Example of a <strong>required</strong> multi-select list</label>
+  <select multiple id="car_select" required size="7">
+    <option value="aston">Aston Martin</option>
+    <option value="audi">Audi</option>
+    <option value="bmw">BMW</option>
+    <option value="saab">Saab</option>
+    <option value="mercedes">Mercedes</option>
+    <option value="maserati">Maserati</option>
+    <option value="volvo">Volvo</option>
+  </select>
+
+  <div class="row">
+    <div class="medium-3 column">
+      <button class="button primary" type="submit">Submit</button>
+    </div>
+    <div class="medium-9 column">
+      <div class="callout small background-red" style="display: none;" data-abide-error data-closable>
+        <button class="close-button" data-close="" aria-label="Dismiss alert"><span aria-hidden="true">&times;</span></button>
+        <p class="enlarge">Please review your form for errors.</p>
+      </div>
+    </div>
+  </div>
+</form></div><hr>
+<h2>Equal Fields</h2><p>Sometimes you need to make a user enter data twice to validate that it is accurate.  In such cases, use the <code>data-equalto</code> attribute and give it a value of the matching fields ID.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Test the form to see how the validation works for equal fields, and how to provide custom error messages.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">data-abide</span> <span class="hljs-attribute">novalidate</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"medium-6 column"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-required"</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"password"</span>&gt;</span>Create a New Password<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"password"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"password"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"new_password"</span> <span class="hljs-attribute">required</span> &gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"medium-6 column"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-required"</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"password_confirmation"</span>&gt;</span>Re-enter Password<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"password"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"password_confirmation"</span> <span class="hljs-attribute">required</span> <span class="hljs-attribute">data-equalto</span>=<span class="hljs-value">"password"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-error"</span>&gt;</span>
+        Your passwords do not match.
+      <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"medium-6 large-12 xlarge-6 column"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-required"</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"Email"</span>&gt;</span>Email Address<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span> 
+      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"Email"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"user-email"</span> <span class="hljs-attribute">required</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"email"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"medium-6 large-12 xlarge-6 column"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-required"</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"email_confirmation"</span>&gt;</span>Confirm Email Address<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span> 
+      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"email_confirmation"</span> <span class="hljs-attribute">required</span> <span class="hljs-attribute">data-equalto</span>=<span class="hljs-value">"Email"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"email"</span> /&gt;</span>      
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-error"</span>&gt;</span>
+        Your email addresses do not match.
+      <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"medium-3 column"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button primary"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"submit"</span>&gt;</span>Submit<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"medium-9 column"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"callout small background-red"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"display: none;"</span> <span class="hljs-attribute">data-abide-error</span> <span class="hljs-attribute">data-closable</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"close-button"</span> <span class="hljs-attribute">data-close</span>=<span class="hljs-value">""</span> <span class="hljs-attribute">aria-label</span>=<span class="hljs-value">"Dismiss alert"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">aria-hidden</span>=<span class="hljs-value">"true"</span>&gt;</span>&amp;times;<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"enlarge"</span>&gt;</span>Please review your form for errors.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>    
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><p>Test the form to see how the validation works for equal fields, and how to provide custom error messages.</p>
+<form data-abide novalidate>
+  <div class="row">
+    <div class="medium-6 column">
+      <label class="icon-required" for="password">Create a New Password</label>
+      <input type="password" id="password" name="new_password" required >
+    </div>
+    <div class="medium-6 column">
+      <label class="icon-required" for="password_confirmation">Re-enter Password</label>
+      <input type="password" id="password_confirmation" required data-equalto="password">
+      <span class="form-error">
+        Your passwords do not match.
+      </span>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="medium-6 large-12 xlarge-6 column">
+      <label class="icon-required" for="Email">Email Address</label> 
+      <input id="Email" name="user-email" required type="email" />
+    </div>
+    <div class="medium-6 large-12 xlarge-6 column">
+      <label class="icon-required" for="email_confirmation">Confirm Email Address</label> 
+      <input id="email_confirmation" required data-equalto="Email" type="email" />      
+      <span class="form-error">
+        Your email addresses do not match.
+      </span>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="medium-3 column">
+      <button class="button primary" type="submit">Submit</button>
+    </div>
+    <div class="medium-9 column">
+      <div class="callout small background-red" style="display: none;" data-abide-error data-closable>
+        <button class="close-button" data-close="" aria-label="Dismiss alert"><span aria-hidden="true">&times;</span></button>
+        <p class="enlarge">Please review your form for errors.</p>
+      </div>
+    </div>    
+  </div>
+</form></div><hr>
+<h2>Validation and Patterns</h2><p>Input fields with the following types will validate agaisnt their type&#39;s pattern.</p>
+<ul>
+<li>type=&quot;email&quot;  (properly formated email address including <code>@</code> and <code>.</code>)</li>
+<li>type=&quot;url&quot;  (full url including http:// or https:// )</li>
+<li>type=&quot;number&quot; (+/- floating point numbers:  -2,330.21 -- not intended for phone numbers or zip codes)</li>
+</ul>
+<p>In addition, these following patterns can be combine with a type=&quot;text&quot; to restrict the provided value.</p>
+<ul>
+<li>pattern=&quot;alpha&quot;  (letters only -- no numbers, spaces, or punctuation)</li>
+<li>pattern=&quot;alpha_numeric&quot;  (letters and numbers only -- no spaces or punctuation)</li>
+<li>pattern=&quot;integer&quot;  (+/- numbers, no decimal)</li>
+<li>pattern=&quot;[0-9]*&quot;  (string of numbers only, but allows for leading 0 such as zipcodes)</li>
+<li>pattern=&quot;tel&quot;   (10 digits, formatted as phone number: (###) ###-#### or ###-###-#### or ########## followed by any text, ext #, etc.)</li>
+<li>pattern=&quot;month_day_year&quot; (preferred American style date format: MM/DD/YYYY, MM-DD-YYYY)</li>
+<li>pattern=&quot;domain&quot;   (website.com -- kinder than url, since it doesn&#39;t require http:// or https://)</li>
+</ul>
+<hr>
+<h2>Field Error Examples</h2><p>When a field fails validation, the label gains a class of <code>.is-invalid-label</code> and the form field gains a class of <code>.is-invalid-input</code>. If you include a <code>.form-error</code> to provide more context, it will gain class <code>.is-visible</code> when the field fails validation. </p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-required is-invalid-label"</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"error-example2"</span>&gt;</span>Required Thing<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">textarea</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"is-invalid-input"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"error-example2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">textarea</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-required is-invalid-label"</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"error-example"</span>&gt;</span>Required Thing<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"error-example"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"is-invalid-input"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-error is-visible"</span>&gt;</span>Error with extra message. This field was required!<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><label class="icon-required is-invalid-label" for="error-example2">Required Thing</label>
+<textarea type="text" class="is-invalid-input" id="error-example2"></textarea>
+
+<label class="icon-required is-invalid-label" for="error-example">Required Thing</label>
+<input id="error-example" type="text" class="is-invalid-input">
+<span class="form-error is-visible">Error with extra message. This field was required!</span></div><hr>
+<h2>Block Error Examples</h2><p>If you want to provide an error that isn&#39;t tied to a specific form field, you can use a <code>data-abide-error</code> block. When the form fails validation, the  <code>display: none</code> style is removed.  Ideally these types of message should go near the submit button, otherwise users on smaller screens may not see the error, and not understand why their form didn&#39;t submit.</p>
+<p>For complex forms, make the error message closable.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"alert callout"</span> <span class="hljs-attribute">data-abide-error</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>There are some errors in your form.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"background-red callout small"</span> <span class="hljs-attribute">data-abide-error</span> <span class="hljs-attribute">data-closable</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"close-button"</span> <span class="hljs-attribute">data-close</span>=<span class="hljs-value">""</span> <span class="hljs-attribute">aria-label</span>=<span class="hljs-value">"Dismiss alert"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">aria-hidden</span>=<span class="hljs-value">"true"</span>&gt;</span>&amp;times;<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"enlarge"</span>&gt;</span>Please review your form for errors.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><div class="alert callout" data-abide-error>
+  <p>There are some errors in your form.</p>
+</div>
+
+<div class="background-red callout small" data-abide-error data-closable>
+  <button class="close-button" data-close="" aria-label="Dismiss alert"><span aria-hidden="true">&times;</span></button>
+  <p class="enlarge">Please review your form for errors.</p>
+</div></div><hr>
+<h2>Ignored Inputs</h2><p>Abide will not validate form fields that are disabled, hidden, or that contain the attribute <code>data-abide-ignore</code>.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">data-abide</span> <span class="hljs-attribute">novalidate</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"disabledExample"</span>&gt;</span>Disabled Field<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"Disabled fields are not validated"</span> <span class="hljs-attribute">disabled</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"disabledExample"</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"hidden"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"Hidden input fields are not validated"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"hiddenExample"</span>&gt;</span>      
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"ignoredExample"</span>&gt;</span>Fields using `data-abide-ignore` are not validated<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"Use me, or don't"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"ignoredExample"</span> <span class="hljs-attribute">data-abide-ignore</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span></code></pre></div><hr>
+<h2>Event Listener</h2><p>Most forms require <strong>no additional javascript</strong> to validate and submit.  Refer to the following if you need to run additional code as part of the validation.</p>
+<p>Setup event listener after foundation is initialized (especially for formvalid/forminvalid). Easier to chain via document selector.</p>
+<ul>
+<li>valid.zf.abide and invalid.zf.abide are field level events, triggered in validateInput function <ul>
+<li>ev.target is the DOM field element, </li>
+<li>elem is jQuery selector for field element</li>
+</ul>
+</li>
+<li>formvalid.zf.abide and forminvalid.zf.abide are form events, triggered in validateForm function<ul>
+<li>ev.target is the DOM form element, </li>
+<li>frm is jQuery selector for form element</li>
+</ul>
+</li>
+</ul>
+<div class="ss-code"><pre><code class="javascript">$(<span class="hljs-built_in">document</span>)
+.on(<span class="hljs-string">"forminvalid.zf.abide"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">ev,frm</span>) </span>{  
+  <span class="hljs-comment">// custom code for when form fails validation</span>
+})
+.on(<span class="hljs-string">"formvalid.zf.abide"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">ev,frm</span>) </span>{    <span class="hljs-comment">// form validation passed, form will submit if submit event not returned false</span>
+  <span class="hljs-comment">// custom code for when form passes validation, ajax calls should go here</span>
+})
+.on(<span class="hljs-string">"submit"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">ev</span>) </span>{   <span class="hljs-comment">// submit happens afer successful validation</span>
+  <span class="hljs-comment">// custom code for when form submits </span>
+  <span class="hljs-comment">//  to prevent submit use  ev.preventDefault();</span>
+});
+
+<span class="hljs-comment">// You can also bind field or form event selectively</span>
+$(<span class="hljs-string">"#foo"</span>).on(<span class="hljs-string">"invalid.zf.abide"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">ev,el</span>) </span>{
+  alert(<span class="hljs-string">"Input field foo is invalid"</span>);
+});
+$(<span class="hljs-string">"#bar"</span>).on(<span class="hljs-string">"formvalid.zf.abide"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">ev,frm</span>) </span>{
+  alert(<span class="hljs-string">"Form is valid, finally!"</span>);
+  <span class="hljs-comment">// do something perhaps</span>
+});</code></pre></div><hr>
+<script>
+window.onload = codeCollapse;
+</script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column xlarge-9 xlarge-centered">
+          <p class="text-center"><a class="button small" href="/styleguide/">Back to Style Guides</a></p>
+        </div>
+      </div>
+    </div> 
+    
+    <script src="/js/vendor/jquery-2.1.4.min.js"> </script>
+    <script src="/js/app_corp.js"></script>   
+  </body>
+</html>
