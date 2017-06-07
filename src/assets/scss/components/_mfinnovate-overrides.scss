@@ -98,8 +98,6 @@ div.column.gutter-bottom{padding-bottom:30px;}
 
 .innovationResults{
   max-width: 360px;
-  padding: 0;
-  border: 5px solid #fff;
   margin: auto;
   padding:20px 15px 10px;
   @include breakpoint(medium){
@@ -107,11 +105,12 @@ div.column.gutter-bottom{padding-bottom:30px;}
   }
 }
 .innovationBkgd{
-    background-color: #88BD45;    
-    opacity: 0.6;
-    filter: alpha(opacity=20);
+    /*background-color: #88BD45;*/   
+    /*opacity: 0.6;*/
+    /*filter: alpha(opacity=20);*/
     padding:0;
     margin:0;
+    border: 5px solid #fff;
   }
 
 .unbeatableTerms {
