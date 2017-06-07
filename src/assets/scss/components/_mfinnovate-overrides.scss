@@ -43,7 +43,7 @@ h1 {
   margin: 0.25em 0;  
   line-height: 1.3;
   @include breakpoint(xxlarge) {
-		font-size: rem-calc(42);
+		font-size: rem-calc(32);
 	}
   strong {font-weight: $global-weight-bold; }
 }  
