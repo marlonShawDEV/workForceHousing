@@ -10,6 +10,7 @@ h1 {
     color: #fff;
   }
 }
+
 .stat-xl {
   @include breakpoint(xxlarge) { 
     font-size: rem-calc(65);
@@ -33,6 +34,7 @@ h1 {
     font-size: rem-calc(52);
   }
 }
+.hero-subtitle{}
 .sub-h1 {
   font-size: rem-calc(22);
   font-size: calc(16px +  20 * (100vw - 320px)/1180); 
@@ -69,7 +71,7 @@ h1 {
   font-size: rem-calc(16);
   margin-top: 0.8em;
   line-height: 1.5;
-  font-size: calc(16px +  4 * (100vw - 320px)/1180); 
+  font-size: calc(14px +  4 * (100vw - 320px)/1180); 
   @include breakpoint(xxlarge) {
 		font-size: rem-calc(20);
 	}
@@ -90,6 +92,8 @@ h1 {
     padding: $gutter*3 0 $gutter*2;  
   }
 }
+div.stripes.content-inner-band{padding-bottom:50px;}
+div.column.gutter-bottom{padding-bottom:30px;}
 
 .innovationResults{
   max-width: 360px;
@@ -118,11 +122,11 @@ h1 {
   }
 }
 
-.sbl-landing-hero {
+.innovate-landing-hero {
   position: relative;
   text-align: center;
   color: white;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/multifamily/images/sbl_hero-apartments.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("www.freddiemac.com/multifamily/images/innovation-hero-image.jpg");
   background-repeat: no-repeat;
   background-color: #502020;
   background-position: top center;
